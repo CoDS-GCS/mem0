@@ -54,7 +54,7 @@ def normalize_bm25(raw_score: float, midpoint: float, steepness: float) -> float
     return 1.0 / (1.0 + math.exp(-steepness * (raw_score - midpoint)))
 
 
-ENTITY_BOOST_WEIGHT = 0.5
+ENTITY_BOOST_WEIGHT = 0.0
 
 
 def score_and_rank(
