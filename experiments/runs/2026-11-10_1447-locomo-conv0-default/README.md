@@ -67,3 +67,15 @@ Per-category at top_200:
 ```
 experiments/run_locomo_conv0.sh default v2.2.1
 ```
+
+## 7. Derived outputs
+
+Snapshot taken from the live Qdrant store on 2026-11-10T20:52:30Z (UTC), filtered to this run's user id (`locomo_0_0ff46ffe`), read-only (scroll/count only, no writes).
+
+| Output | Script | Command |
+|---|---|---|
+| `store_snapshot/memories.jsonl`, `store_snapshot/entities.jsonl`, `store_snapshot/README.md` | `experiments/scripts/export_store.py` | `experiments/scripts/export_store.py experiments/runs/2026-11-10_1447-locomo-conv0-default/` |
+| `storage_profile.md` | `experiments/scripts/profile_storage.py` | `experiments/scripts/profile_storage.py experiments/runs/2026-11-10_1447-locomo-conv0-default/` |
+| `trace_facts/<question_id>.md` (43 files, all questions judged WRONG at top_200) and `trace_facts/INDEX.md` | `experiments/scripts/trace_question.py` | `experiments/scripts/trace_question.py experiments/runs/2026-11-10_1447-locomo-conv0-default/ --all-failures` |
+
+All three were run with `/shared_mnt/loubna/venv-analysis/bin/python` (a venv outside the repo, not `experiments/memory-benchmarks/.venv`).
