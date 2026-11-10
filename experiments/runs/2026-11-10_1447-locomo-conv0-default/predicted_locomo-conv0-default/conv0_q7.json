@@ -1,0 +1,2651 @@
+{
+  "question_id": "conv0_q7",
+  "conversation_idx": 0,
+  "category": 1,
+  "category_name": "multi-hop",
+  "question": "What is Caroline's relationship status?",
+  "ground_truth_answer": "Single",
+  "evidence": [
+    "D3:13",
+    "D2:14"
+  ],
+  "user_id": "locomo_0_0ff46ffe",
+  "reference_date": "9:55 am on 22 October, 2023",
+  "retrieval": {
+    "search_query": "What is Caroline's relationship status?",
+    "search_results": [
+      {
+        "memory": "Caroline's relationships have changed during her transition; some friends have continued to support her while others could not handle the changes, leading her to feel happier around those who accept her.",
+        "score": 0.6465247205133993,
+        "id": "968ae5ef-277a-4da6-9d4c-ea42f4e24b36",
+        "created_at": "2026-11-10T15:05:17.029792+00:00",
+        "updated_at": "2026-11-10T15:05:17.029792+00:00",
+        "score_debug": {
+          "combined_score": 0.6465247205133993,
+          "semantic_score": 0.6158093,
+          "bm25_score": 0.9987746040312012,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's journey as a trans woman has changed her relationships, with some friends continuing to support her while others could not handle the transition. She feels much happier being around those who accept and love her, leading to more genuine relationships.",
+        "score": 0.6303986024182275,
+        "id": "13c84afb-185b-4a9f-810c-f6517a9a0de2",
+        "created_at": "2026-11-10T15:05:27.604220+00:00",
+        "updated_at": "2026-11-10T15:05:27.604220+00:00",
+        "score_debug": {
+          "combined_score": 0.6303986024182275,
+          "semantic_score": 0.57458997,
+          "bm25_score": 0.9996786387932719,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels much happier being around friends who accept and love her, noting that her relationships have changed during her transition.",
+        "score": 0.6214054780755427,
+        "id": "45735e0d-3bf0-499a-9736-2ff3a9d38073",
+        "created_at": "2026-11-10T15:05:20.747086+00:00",
+        "updated_at": "2026-11-10T15:05:20.747086+00:00",
+        "score_debug": {
+          "combined_score": 0.6214054780755427,
+          "semantic_score": 0.55291665,
+          "bm25_score": 0.9988691479365596,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Melanie expressed pride in Caroline's progress and encouraged her for being her true self, asking about the journey's effect on her relationships.",
+        "score": 0.6162574381892402,
+        "id": "5e494312-b4af-4e62-90c9-0ac796d80c78",
+        "created_at": "2026-11-10T15:05:09.612425+00:00",
+        "updated_at": "2026-11-10T15:05:09.612425+00:00",
+        "score_debug": {
+          "combined_score": 0.6162574381892402,
+          "semantic_score": 0.5401089,
+          "bm25_score": 0.9988067982208032,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline shared that her journey has changed her relationships, noting that while some close friends continued to support her, a few were unable to handle her transition. She expressed that being around those who accept and love her has made her much happier, leading to more genuine relationships.",
+        "score": 0.6076450581270304,
+        "id": "f59ec038-9aba-482d-883e-f172f690fbfd",
+        "created_at": "2026-11-10T15:05:12.061814+00:00",
+        "updated_at": "2026-11-10T15:05:12.061814+00:00",
+        "score_debug": {
+          "combined_score": 0.6076450581270304,
+          "semantic_score": 0.5177176,
+          "bm25_score": 0.9996671480652788,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline values having supportive people around her and is committed to promoting LGBTQ rights and living authentically.",
+        "score": 0.40453986316388874,
+        "id": "d838f4a1-ab0b-456e-8874-54dff5e7368b",
+        "created_at": "2026-11-10T15:01:15.666114+00:00",
+        "updated_at": "2026-11-10T15:01:15.666114+00:00",
+        "score_debug": {
+          "combined_score": 0.40453986316388874,
+          "semantic_score": 0.58793324,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.3769899900891973
+        }
+      },
+      {
+        "memory": "Caroline values having supportive people around and is committed to promoting LGBTQ rights and living authentically, aiming to help others do the same.",
+        "score": 0.40098409110331606,
+        "id": "d709d1a8-d587-4435-87c3-89b066a07ef7",
+        "created_at": "2026-11-10T15:01:24.014974+00:00",
+        "updated_at": "2026-11-10T15:01:24.014974+00:00",
+        "score_debug": {
+          "combined_score": 0.40098409110331606,
+          "semantic_score": 0.5792084,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.3769899900891973
+        }
+      },
+      {
+        "memory": "Caroline values having supportive people around her and is committed to promoting LGBTQ rights, aiming to live authentically and help others do the same.",
+        "score": 0.40006373787632077,
+        "id": "bcd108a5-72c4-4af6-b716-16911381818c",
+        "created_at": "2026-11-10T15:01:07.418426+00:00",
+        "updated_at": "2026-11-10T15:01:07.418426+00:00",
+        "score_debug": {
+          "combined_score": 0.40006373787632077,
+          "semantic_score": 0.576853,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.3769899900891973
+        }
+      },
+      {
+        "memory": "Caroline mentors a transgender teen, focusing on building confidence and positive strategies, and they attended an LGBT pride event together in October 2026.",
+        "score": 0.3675314896255105,
+        "id": "7ddb07f7-85d3-486f-bb74-5d798b5fef24",
+        "created_at": "2026-11-10T14:57:30.502889+00:00",
+        "updated_at": "2026-11-10T14:57:30.502889+00:00",
+        "score_debug": {
+          "combined_score": 0.3675314896255105,
+          "semantic_score": 0.5104689,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.36220599400599407
+        }
+      },
+      {
+        "memory": "Caroline values representing inclusivity and diversity in her art, using it to advocate for the LGBTQ+ community and promote acceptance.",
+        "score": 0.3595323052310732,
+        "id": "d84c4c8d-a41b-4f58-a10a-c02f9bddc951",
+        "created_at": "2026-11-10T14:59:13.081740+00:00",
+        "updated_at": "2026-11-10T14:59:13.081740+00:00",
+        "score_debug": {
+          "combined_score": 0.3595323052310732,
+          "semantic_score": 0.47535878,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.3769899900891973
+        }
+      },
+      {
+        "memory": "Caroline mentors a transgender teen who is similar to her, focusing on building confidence and finding positive strategies, which has been effective.",
+        "score": 0.3453103926700347,
+        "id": "a93eb7d4-3c5f-4813-9aa4-9f52b0387d6f",
+        "created_at": "2026-11-10T14:57:02.482714+00:00",
+        "updated_at": "2026-11-10T14:57:02.482714+00:00",
+        "score_debug": {
+          "combined_score": 0.3453103926700347,
+          "semantic_score": 0.45480815,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.36220599400599407
+        }
+      },
+      {
+        "memory": "Caroline learned from 'Becoming Nicole' the importance of self-acceptance, finding support, and that tough times don't last, emphasizing that hope and love exist.",
+        "score": 0.2996560685087367,
+        "id": "4bee87e4-44ac-4861-815e-1350e8ac4071",
+        "created_at": "2026-11-10T14:54:36.843679+00:00",
+        "updated_at": "2026-11-10T14:54:36.843679+00:00",
+        "score_debug": {
+          "combined_score": 0.2996560685087367,
+          "semantic_score": 0.45406428,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "Caroline's favorite book is 'Becoming Nicole' by Amy Ellis Nutt, which is an inspiring true story about a trans girl and her family that gave her hope for her own path.",
+        "score": 0.2937510627762111,
+        "id": "92ad7617-c1a9-41d8-b874-30150fd21fdb",
+        "created_at": "2026-11-10T14:54:21.756563+00:00",
+        "updated_at": "2026-11-10T14:54:21.756563+00:00",
+        "score_debug": {
+          "combined_score": 0.2937510627762111,
+          "semantic_score": 0.4393556,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "Caroline's favorite book is 'Becoming Nicole' by Amy Ellis Nutt, which she found inspiring as it tells the true story of a trans girl and her family, giving her hope for her own path.",
+        "score": 0.29175920282162593,
+        "id": "bd83c33a-500a-4c86-a31b-b89fdbf981eb",
+        "created_at": "2026-11-10T14:54:31.484507+00:00",
+        "updated_at": "2026-11-10T14:54:31.484507+00:00",
+        "score_debug": {
+          "combined_score": 0.29175920282162593,
+          "semantic_score": 0.43453544,
+          "bm25_score": 0.045994340171319245,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "From 'Becoming Nicole', Caroline learned about self-acceptance, finding support, and that tough times don't last, emphasizing the existence of hope and love.",
+        "score": 0.2849897338207353,
+        "id": "04ddc9ec-18f7-4b14-b9d2-d545f53f7d8f",
+        "created_at": "2026-11-10T14:54:31.487090+00:00",
+        "updated_at": "2026-11-10T14:54:31.487090+00:00",
+        "score_debug": {
+          "combined_score": 0.2849897338207353,
+          "semantic_score": 0.41734427,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "Caroline learned about self-acceptance and finding support from 'Becoming Nicole' by Amy Ellis Nutt, which also taught her that tough times don't last and that hope and love exist.",
+        "score": 0.2836230707762111,
+        "id": "a1d0c0e0-b9d0-4a71-99dc-92968fe61797",
+        "created_at": "2026-11-10T14:54:25.278261+00:00",
+        "updated_at": "2026-11-10T14:54:25.278261+00:00",
+        "score_debug": {
+          "combined_score": 0.2836230707762111,
+          "semantic_score": 0.41403562,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "Caroline learned the importance of self-acceptance and finding support from the book 'Becoming Nicole' by Amy Ellis Nutt, which tells the inspiring true story of a trans girl and her family.",
+        "score": 0.2817805053548778,
+        "id": "80d11875-1a79-41be-8f3e-8be1018ba058",
+        "created_at": "2026-11-10T14:54:41.477997+00:00",
+        "updated_at": "2026-11-10T14:54:41.477997+00:00",
+        "score_debug": {
+          "combined_score": 0.2817805053548778,
+          "semantic_score": 0.4096412,
+          "bm25_score": 0.04594183650444913,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "Caroline loved the book 'Becoming Nicole' by Amy Ellis Nutt, which is an inspiring true story about a trans girl and her family, and it gave her hope for her own path.",
+        "score": 0.26353027477621105,
+        "id": "2e57daf6-9433-4bf9-9604-99a8092c3e6c",
+        "created_at": "2026-11-10T14:54:36.841135+00:00",
+        "updated_at": "2026-11-10T14:54:36.841135+00:00",
+        "score_debug": {
+          "combined_score": 0.26353027477621105,
+          "semantic_score": 0.36380363,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "Caroline has a strong support system consisting of friends, family, and mentors who have been there for her for 4 years since she moved from her home country, especially after a tough breakup.",
+        "score": 0.25180569092403177,
+        "id": "bc80113b-4196-4303-aa14-9d655a8648a7",
+        "created_at": "2026-11-10T14:50:44.839063+00:00",
+        "updated_at": "2026-11-10T14:50:44.839063+00:00",
+        "score_debug": {
+          "combined_score": 0.25180569092403177,
+          "semantic_score": 0.5816325,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline has come a long way in her journey and feels proud of her progress.",
+        "score": 0.23998636064155426,
+        "id": "701fa001-e5eb-4d6b-8e50-3687d68a8b5b",
+        "created_at": "2026-11-10T14:56:27.650042+00:00",
+        "updated_at": "2026-11-10T14:56:27.650042+00:00",
+        "score_debug": {
+          "combined_score": 0.23998636064155426,
+          "semantic_score": 0.55158716,
+          "bm25_score": 0.04665084435158841,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is dedicated to continuing her volunteering at the LGBTQ+ youth center, which she considers an important part of her life and has helped her make strong connections with people there.",
+        "score": 0.23969386074156077,
+        "id": "61bdb3ea-a712-475f-9e5e-734fa7cf2b30",
+        "created_at": "2026-11-10T15:03:27.619980+00:00",
+        "updated_at": "2026-11-10T15:03:27.619980+00:00",
+        "score_debug": {
+          "combined_score": 0.23969386074156077,
+          "semantic_score": 0.5511904,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline plans to continue her education and explore career options, which she finds exciting.",
+        "score": 0.23948439975792607,
+        "id": "3550f232-a54a-43cc-a2b3-66b5b0ede1af",
+        "created_at": "2026-11-10T14:48:19.464588+00:00",
+        "updated_at": "2026-11-10T14:48:19.464588+00:00",
+        "score_debug": {
+          "combined_score": 0.23948439975792607,
+          "semantic_score": 0.5521168,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has known her friends for 4 years since moving from her home country, and their love and support have been crucial for her, especially after a tough breakup.",
+        "score": 0.23811873396855604,
+        "id": "6aaa8865-0d8d-4160-9b7f-bc7f13a6eee0",
+        "created_at": "2026-11-10T14:50:31.206393+00:00",
+        "updated_at": "2026-11-10T14:50:31.206393+00:00",
+        "score_debug": {
+          "combined_score": 0.23811873396855604,
+          "semantic_score": 0.5473071,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is thrilled about the prospect of creating a family for children in need and acknowledges that being a single parent will be tough, but she is ready for the challenge.",
+        "score": 0.23718788074156077,
+        "id": "406ff13a-8213-4d2f-afdd-2965146ea48e",
+        "created_at": "2026-11-10T14:49:13.393200+00:00",
+        "updated_at": "2026-11-10T14:49:13.393200+00:00",
+        "score_debug": {
+          "combined_score": 0.23718788074156077,
+          "semantic_score": 0.54492545,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline reached out to Melanie, mentioning that a lot has been going on since they last talked.",
+        "score": 0.23672991865884502,
+        "id": "de4a8ab0-963e-4a56-af38-2c18142851c6",
+        "created_at": "2026-11-10T14:52:45.692889+00:00",
+        "updated_at": "2026-11-10T14:52:45.692889+00:00",
+        "score_debug": {
+          "combined_score": 0.23672991865884502,
+          "semantic_score": 0.5435027,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's friends, family, and mentors are her support system, providing her with motivation and strength to push on.",
+        "score": 0.2366983960963132,
+        "id": "f8ff052e-98cd-4a99-97ed-698343ecbf4e",
+        "created_at": "2026-11-10T14:50:22.010960+00:00",
+        "updated_at": "2026-11-10T14:50:22.010960+00:00",
+        "score_debug": {
+          "combined_score": 0.2366983960963132,
+          "semantic_score": 0.5435361,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline highly recommends 'Becoming Nicole' by Amy Ellis Nutt for its inspirational message and connection to her own journey.",
+        "score": 0.2365267399484925,
+        "id": "246d1049-0df8-4e76-a132-843ca179c59e",
+        "created_at": "2026-11-10T14:54:41.480524+00:00",
+        "updated_at": "2026-11-10T14:54:41.480524+00:00",
+        "score_debug": {
+          "combined_score": 0.2365267399484925,
+          "semantic_score": 0.29596663,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.24886822688274549
+        }
+      },
+      {
+        "memory": "Caroline has always had a love for horses.",
+        "score": 0.23422831903425548,
+        "id": "38a6188e-165c-483a-a278-ccc08c99a64c",
+        "created_at": "2026-11-10T15:00:41.404175+00:00",
+        "updated_at": "2026-11-10T15:00:41.404175+00:00",
+        "score_debug": {
+          "combined_score": 0.23422831903425548,
+          "semantic_score": 0.53690326,
+          "bm25_score": 0.04693964033334139,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is continuing to volunteer at the LGBTQ+ youth center, which she considers an important part of her life, and she has made strong connections with people there.",
+        "score": 0.23369146602912877,
+        "id": "1e5a2129-a910-4c00-894d-63195671855c",
+        "created_at": "2026-11-10T15:03:38.104403+00:00",
+        "updated_at": "2026-11-10T15:03:38.104403+00:00",
+        "score_debug": {
+          "combined_score": 0.23369146602912877,
+          "semantic_score": 0.53607434,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is keen on pursuing a career in counseling or working in mental health to support individuals with similar issues.",
+        "score": 0.23342454074156077,
+        "id": "a1ce4dd4-271c-4543-b7d8-df0236f0a4bf",
+        "created_at": "2026-11-10T14:48:22.915030+00:00",
+        "updated_at": "2026-11-10T14:48:22.915030+00:00",
+        "score_debug": {
+          "combined_score": 0.23342454074156077,
+          "semantic_score": 0.5355171,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's friends, family, and mentors are her support system, providing her with motivation and strength to continue her journey.",
+        "score": 0.23324502602912878,
+        "id": "0d7a84e3-2100-4eaa-bcd8-f2dd87ce0ab9",
+        "created_at": "2026-11-10T14:50:12.478819+00:00",
+        "updated_at": "2026-11-10T14:50:12.478819+00:00",
+        "score_debug": {
+          "combined_score": 0.23324502602912878,
+          "semantic_score": 0.53495824,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is part of a group called 'Connected LGBTQ Activists', which consists of diverse individuals committed to investing in positive changes for LGBTQ rights.",
+        "score": 0.23310986575563858,
+        "id": "7f6cdfb5-f59c-4d91-907f-f71cbf9b576d",
+        "created_at": "2026-11-10T14:57:46.737445+00:00",
+        "updated_at": "2026-11-10T14:57:46.737445+00:00",
+        "score_debug": {
+          "combined_score": 0.23310986575563858,
+          "semantic_score": 0.536567,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline's activist group holds regular meetings and plans events and campaigns to support each other and advocate for positive changes.",
+        "score": 0.23235780562829778,
+        "id": "2cf20427-5caf-4d03-a810-8a2d6c3e4b7d",
+        "created_at": "2026-11-10T14:58:00.735085+00:00",
+        "updated_at": "2026-11-10T14:58:00.735085+00:00",
+        "score_debug": {
+          "combined_score": 0.23235780562829778,
+          "semantic_score": 0.5327954,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie what pet she has.",
+        "score": 0.23166711399341677,
+        "id": "bcb068e9-4003-464f-a47a-f95814b9cc99",
+        "created_at": "2026-11-10T14:54:36.847645+00:00",
+        "updated_at": "2026-11-10T14:54:36.847645+00:00",
+        "score_debug": {
+          "combined_score": 0.23166711399341677,
+          "semantic_score": 0.53055876,
+          "bm25_score": 0.046881127731244594,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's LGBTQ activist group holds regular meetings, plans events and campaigns to support each other and invest in positive changes.",
+        "score": 0.23160876874156075,
+        "id": "d9af4af8-57ea-4bcb-9fb8-218c2e19ab6c",
+        "created_at": "2026-11-10T14:58:10.316322+00:00",
+        "updated_at": "2026-11-10T14:58:10.316322+00:00",
+        "score_debug": {
+          "combined_score": 0.23160876874156075,
+          "semantic_score": 0.53097767,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels fulfilled by giving her voice and making a real difference through her involvement in the LGBTQ activist group.",
+        "score": 0.23155767274156078,
+        "id": "bca83fa2-257e-42b3-8006-dbbbb67fab3c",
+        "created_at": "2026-11-10T14:57:49.326718+00:00",
+        "updated_at": "2026-11-10T14:57:49.326718+00:00",
+        "score_debug": {
+          "combined_score": 0.23155767274156078,
+          "semantic_score": 0.53084993,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Melanie expressed confidence in Caroline's caring heart and ability to provide love and stability to the children she plans to adopt, showing excitement for this new chapter in Caroline's life.",
+        "score": 0.231215001025237,
+        "id": "49e28714-c613-411b-933e-9ad26c1ed30f",
+        "created_at": "2026-11-10T14:49:20.138233+00:00",
+        "updated_at": "2026-11-10T14:49:20.138233+00:00",
+        "score_debug": {
+          "combined_score": 0.231215001025237,
+          "semantic_score": 0.52699953,
+          "bm25_score": 0.049310075310795176,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels blessed with love and support throughout her journey and wants to pass it on to others.",
+        "score": 0.23006269664155427,
+        "id": "47f233b6-9284-459f-a523-6630a95eb0b1",
+        "created_at": "2026-11-10T14:49:34.652116+00:00",
+        "updated_at": "2026-11-10T14:49:34.652116+00:00",
+        "score_debug": {
+          "combined_score": 0.23006269664155427,
+          "semantic_score": 0.526778,
+          "bm25_score": 0.04665084435158841,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is committed to continuing her volunteering at the youth center, believing in the importance of community and supporting each other.",
+        "score": 0.22886112562829775,
+        "id": "52ca6e88-440c-4464-89ec-bfbf6f5bb966",
+        "created_at": "2026-11-10T15:03:42.446569+00:00",
+        "updated_at": "2026-11-10T15:03:42.446569+00:00",
+        "score_debug": {
+          "combined_score": 0.22886112562829775,
+          "semantic_score": 0.5240537,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline believes having supportive people makes a huge difference in her life and acknowledges the progress made in LGBTQ rights while expressing a desire to help make a difference.",
+        "score": 0.2286198909240318,
+        "id": "d64b8acd-5a0f-45c2-8cf0-c30e48c9ebf3",
+        "created_at": "2026-11-10T14:53:50.476041+00:00",
+        "updated_at": "2026-11-10T14:53:50.476041+00:00",
+        "score_debug": {
+          "combined_score": 0.2286198909240318,
+          "semantic_score": 0.523668,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels that art gives her a sense of freedom and values having supportive people around her. She is committed to promoting LGBTQ rights and living authentically while helping others to do the same.",
+        "score": 0.22839026689931688,
+        "id": "47a56f50-0588-4183-babc-309780d4389f",
+        "created_at": "2026-11-10T15:01:03.672026+00:00",
+        "updated_at": "2026-11-10T15:01:03.672026+00:00",
+        "score_debug": {
+          "combined_score": 0.22839026689931688,
+          "semantic_score": 0.5232006,
+          "bm25_score": 0.046047169995994924,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline contacted her mentor for adoption advice and is ready to be a mom, feeling excited to start this new chapter in her life.",
+        "score": 0.22823002074156076,
+        "id": "9594e4d9-4445-4fc9-be7a-7dc91dfaef4d",
+        "created_at": "2026-11-10T15:05:46.838903+00:00",
+        "updated_at": "2026-11-10T15:05:46.838903+00:00",
+        "score_debug": {
+          "combined_score": 0.22823002074156076,
+          "semantic_score": 0.5225308,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help people who have gone through similar experiences as her.",
+        "score": 0.22751053002912877,
+        "id": "3eb67347-0401-4188-9c6b-a2024f5ea1aa",
+        "created_at": "2026-11-10T14:52:07.147291+00:00",
+        "updated_at": "2026-11-10T14:52:07.147291+00:00",
+        "score_debug": {
+          "combined_score": 0.22751053002912877,
+          "semantic_score": 0.520622,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help people who have gone through similar experiences as her.",
+        "score": 0.22749895002912876,
+        "id": "a842082a-a633-43bc-beb9-7b699c06d5fb",
+        "created_at": "2026-11-10T14:51:59.917052+00:00",
+        "updated_at": "2026-11-10T14:51:59.917052+00:00",
+        "score_debug": {
+          "combined_score": 0.22749895002912876,
+          "semantic_score": 0.52059305,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help people who have gone through similar experiences as her.",
+        "score": 0.22748910202912875,
+        "id": "b539e322-bcbb-45f8-a3f0-2ba0ccb9e0d0",
+        "created_at": "2026-11-10T14:51:54.238943+00:00",
+        "updated_at": "2026-11-10T14:51:54.238943+00:00",
+        "score_debug": {
+          "combined_score": 0.22748910202912875,
+          "semantic_score": 0.52056843,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's goal is to give children a loving home, and she feels grateful for the support from friends and mentors as she works to turn her dream of adoption into a reality.",
+        "score": 0.22723034465655748,
+        "id": "e96ad73c-716c-456e-897a-b425509ce84f",
+        "created_at": "2026-11-10T14:49:04.046895+00:00",
+        "updated_at": "2026-11-10T14:49:04.046895+00:00",
+        "score_debug": {
+          "combined_score": 0.22723034465655748,
+          "semantic_score": 0.5201403,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline plans to continue her education and explore career options, particularly in counseling or mental health, to support individuals with similar issues.",
+        "score": 0.22703723506763712,
+        "id": "d2289a84-2198-40fe-abda-d549cf903234",
+        "created_at": "2026-11-10T14:48:37.755221+00:00",
+        "updated_at": "2026-11-10T14:48:37.755221+00:00",
+        "score_debug": {
+          "combined_score": 0.22703723506763712,
+          "semantic_score": 0.52133125,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline found self-acceptance after a long process and feels empowered to offer love and support to those in need, aiming to make a positive difference in their lives.",
+        "score": 0.22684867492403177,
+        "id": "8981b78f-4bda-41ad-909c-b6aa8edc46cb",
+        "created_at": "2026-11-10T15:08:02.047111+00:00",
+        "updated_at": "2026-11-10T15:08:02.047111+00:00",
+        "score_debug": {
+          "combined_score": 0.22684867492403177,
+          "semantic_score": 0.51923996,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline contacted her mentor for adoption advice, expressing readiness to become a mom and share her love and family.",
+        "score": 0.22631525002912878,
+        "id": "0f7abae6-bd69-4820-b7d3-374f2fb83330",
+        "created_at": "2026-11-10T15:05:32.736414+00:00",
+        "updated_at": "2026-11-10T15:05:32.736414+00:00",
+        "score_debug": {
+          "combined_score": 0.22631525002912878,
+          "semantic_score": 0.5176338,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is continuing to volunteer at the LGBTQ+ youth center, considering it an important part of her life where she has made strong connections with people. She believes in community and supporting each other, and wants to keep making a difference.",
+        "score": 0.22621093350269858,
+        "id": "cac3874b-17a8-4875-be6f-29321708ff6a",
+        "created_at": "2026-11-10T15:03:24.073907+00:00",
+        "updated_at": "2026-11-10T15:03:24.073907+00:00",
+        "score_debug": {
+          "combined_score": 0.22621093350269858,
+          "semantic_score": 0.5178576,
+          "bm25_score": 0.04594183650444913,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is feeling hopeful and optimistic about the adoption process, despite it being a lot to take in.",
+        "score": 0.22611429575792608,
+        "id": "d152bd93-d15a-4c97-81c1-b48295a151ee",
+        "created_at": "2026-11-10T14:49:04.049603+00:00",
+        "updated_at": "2026-11-10T14:49:04.049603+00:00",
+        "score_debug": {
+          "combined_score": 0.22611429575792608,
+          "semantic_score": 0.51869154,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline's group, 'Connected LGBTQ Activists', holds regular meetings and plans events and campaigns to support each other and advocate for rights.",
+        "score": 0.2259857007415608,
+        "id": "a91c84ce-468e-4b0c-b545-2ffa11a806b3",
+        "created_at": "2026-11-10T14:57:46.741416+00:00",
+        "updated_at": "2026-11-10T14:57:46.741416+00:00",
+        "score_debug": {
+          "combined_score": 0.2259857007415608,
+          "semantic_score": 0.51692,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline has been creating art for an unspecified duration, which she uses to express themes of togetherness and empowerment.",
+        "score": 0.2259116600963132,
+        "id": "bf738588-6f33-4022-9b4d-76778b53ace8",
+        "created_at": "2026-11-10T15:04:40.932960+00:00",
+        "updated_at": "2026-11-10T15:04:40.932960+00:00",
+        "score_debug": {
+          "combined_score": 0.2259116600963132,
+          "semantic_score": 0.51656926,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels accepted and has gained the courage to embrace herself after attending the LGBTQ support group.",
+        "score": 0.22579085209631322,
+        "id": "6e15e624-8dea-4364-ab0e-5d1e8e3522fb",
+        "created_at": "2026-11-10T14:48:15.942261+00:00",
+        "updated_at": "2026-11-10T14:48:15.942261+00:00",
+        "score_debug": {
+          "combined_score": 0.22579085209631322,
+          "semantic_score": 0.51626724,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline appreciates that tough times don't last and that hope and love exist.",
+        "score": 0.2254376624782401,
+        "id": "71d60883-df82-43dc-a6b3-16a901488140",
+        "created_at": "2026-11-10T14:54:41.482450+00:00",
+        "updated_at": "2026-11-10T14:54:41.482450+00:00",
+        "score_debug": {
+          "combined_score": 0.2254376624782401,
+          "semantic_score": 0.5168863,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline feels that being herself and living honestly is freeing, allowing her to accept who she is and find contentment.",
+        "score": 0.22540658602912877,
+        "id": "7a7dc95d-3d3d-48cf-9806-37ab143389ea",
+        "created_at": "2026-11-10T15:08:24.866147+00:00",
+        "updated_at": "2026-11-10T15:08:24.866147+00:00",
+        "score_debug": {
+          "combined_score": 0.22540658602912877,
+          "semantic_score": 0.51536214,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie how her family has been supportive during her move on November 10, 2026.",
+        "score": 0.22533161664155427,
+        "id": "51ec41de-45e6-49d3-b95b-72b3357317c7",
+        "created_at": "2026-11-10T14:56:29.450064+00:00",
+        "updated_at": "2026-11-10T14:56:29.450064+00:00",
+        "score_debug": {
+          "combined_score": 0.22533161664155427,
+          "semantic_score": 0.5149503,
+          "bm25_score": 0.04665084435158841,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's mentee is a transgender teen, and they have been working on building confidence and finding positive strategies together.",
+        "score": 0.22528860562829775,
+        "id": "ef98831a-5973-455a-8a9c-86eacab3c9f5",
+        "created_at": "2026-11-10T14:57:17.127137+00:00",
+        "updated_at": "2026-11-10T14:57:17.127137+00:00",
+        "score_debug": {
+          "combined_score": 0.22528860562829775,
+          "semantic_score": 0.5151224,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline passed the adoption agency interviews on November 3, 2026, and is excited and thankful as this is a significant step towards her goal of having a family.",
+        "score": 0.22447722074156076,
+        "id": "35a8572c-7541-46ff-9ed7-50e742ce3419",
+        "created_at": "2026-11-10T15:07:46.605813+00:00",
+        "updated_at": "2026-11-10T15:07:46.605813+00:00",
+        "score_debug": {
+          "combined_score": 0.22447722074156076,
+          "semantic_score": 0.5131488,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is continuing to volunteer at the youth center, which is an important part of her life where she has made strong connections with people and believes in community support.",
+        "score": 0.22423832074156075,
+        "id": "3666fef8-0f33-44cc-b4d4-e1465e30d8f5",
+        "created_at": "2026-11-10T15:03:51.278491+00:00",
+        "updated_at": "2026-11-10T15:03:51.278491+00:00",
+        "score_debug": {
+          "combined_score": 0.22423832074156075,
+          "semantic_score": 0.51255155,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's mentoring program for LGBTQ youth is going great as of November 10, 2026. She has met some amazing young individuals and finds it inspiring to support them, noting their resilience and strength.",
+        "score": 0.22398307792862968,
+        "id": "ce86e4ea-9ebc-46f9-aaed-004ae857a348",
+        "created_at": "2026-11-10T14:56:57.340946+00:00",
+        "updated_at": "2026-11-10T14:56:57.340946+00:00",
+        "score_debug": {
+          "combined_score": 0.22398307792862968,
+          "semantic_score": 0.51244354,
+          "bm25_score": 0.04578625756927691,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is continuing to volunteer at the LGBTQ+ youth center, feeling it is an important part of her life and expressing a belief in community and supporting each other.",
+        "score": 0.2238380246565575,
+        "id": "6f47be69-0e3d-4677-9985-dee705014da1",
+        "created_at": "2026-11-10T15:03:35.109399+00:00",
+        "updated_at": "2026-11-10T15:03:35.109399+00:00",
+        "score_debug": {
+          "combined_score": 0.2238380246565575,
+          "semantic_score": 0.5116595,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline has always had a love for horses and used to go horseback riding with her dad as a child, enjoying the experience of feeling the wind in the fields.",
+        "score": 0.22373952474156078,
+        "id": "1a9291ac-cfdd-4746-95e6-df897f3449cf",
+        "created_at": "2026-11-10T15:01:07.410685+00:00",
+        "updated_at": "2026-11-10T15:01:07.410685+00:00",
+        "score_debug": {
+          "combined_score": 0.22373952474156078,
+          "semantic_score": 0.51130456,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline passed the adoption agency interviews on November 3, 2026, which is a significant step towards her goal of having a family and providing a loving home for children in need.",
+        "score": 0.22354574689931686,
+        "id": "fb1020be-9db1-4577-95d6-0b38ac8d3615",
+        "created_at": "2026-11-10T15:08:15.509759+00:00",
+        "updated_at": "2026-11-10T15:08:15.509759+00:00",
+        "score_debug": {
+          "combined_score": 0.22354574689931686,
+          "semantic_score": 0.5110893,
+          "bm25_score": 0.046047169995994924,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's mentoring program for LGBTQ youth is going great as of November 10, 2026, where she has met amazing young individuals and finds it inspiring to support them, noting their resilience and strength.",
+        "score": 0.22314870192862965,
+        "id": "9e4cfa85-1818-460a-9f80-1907e8a0a081",
+        "created_at": "2026-11-10T14:57:17.122692+00:00",
+        "updated_at": "2026-11-10T14:57:17.122692+00:00",
+        "score_debug": {
+          "combined_score": 0.22314870192862965,
+          "semantic_score": 0.5103576,
+          "bm25_score": 0.04578625756927691,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline and her mentee had a great time at the LGBT pride event last month, where Caroline felt encouraged by the love and acceptance surrounding them.",
+        "score": 0.22307976404607968,
+        "id": "eb1586ac-b4ae-4d7f-adf2-1e43058e75e1",
+        "created_at": "2026-11-10T14:57:17.125106+00:00",
+        "updated_at": "2026-11-10T14:57:17.125106+00:00",
+        "score_debug": {
+          "combined_score": 0.22307976404607968,
+          "semantic_score": 0.50647163,
+          "bm25_score": 0.04949988286290194,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is always there for her friend Melanie and recalls having a blast at the Pride festival last year, appreciating the supportive friends that make everything worthwhile.",
+        "score": 0.22249410562829777,
+        "id": "cb05792c-4246-4926-b4a1-489938c78987",
+        "created_at": "2026-11-10T15:00:03.519104+00:00",
+        "updated_at": "2026-11-10T15:00:03.519104+00:00",
+        "score_debug": {
+          "combined_score": 0.22249410562829777,
+          "semantic_score": 0.50813615,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is interested in seeing Melanie's paintings and appreciates her creative outlets.",
+        "score": 0.221995358658845,
+        "id": "43e70e7c-4f1a-43e1-b2e7-37fc31e0e9ad",
+        "created_at": "2026-11-10T15:06:00.279698+00:00",
+        "updated_at": "2026-11-10T15:06:00.279698+00:00",
+        "score_debug": {
+          "combined_score": 0.221995358658845,
+          "semantic_score": 0.5066663,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline contacted her mentor for adoption advice around November 10, 2026, expressing her readiness to become a mom and share her love and family.",
+        "score": 0.221800333968556,
+        "id": "2eba6950-6c4f-4da2-aeb3-68280944034d",
+        "created_at": "2026-11-10T15:05:30.030465+00:00",
+        "updated_at": "2026-11-10T15:05:30.030465+00:00",
+        "score_debug": {
+          "combined_score": 0.221800333968556,
+          "semantic_score": 0.5065111,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed that finding self-acceptance was a long process, but she is now ready to offer love and support to those who need it.",
+        "score": 0.22162168562829776,
+        "id": "57c52803-260c-4ada-b85f-d6cb021bf73c",
+        "created_at": "2026-11-10T15:08:15.514618+00:00",
+        "updated_at": "2026-11-10T15:08:15.514618+00:00",
+        "score_debug": {
+          "combined_score": 0.22162168562829776,
+          "semantic_score": 0.5059551,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Melanie asked Caroline about her vision for the future regarding her adoption journey.",
+        "score": 0.221034821379159,
+        "id": "7eb33c29-4eff-4afe-bb70-bf23d3832150",
+        "created_at": "2026-11-10T15:07:46.610685+00:00",
+        "updated_at": "2026-11-10T15:07:46.610685+00:00",
+        "score_debug": {
+          "combined_score": 0.221034821379159,
+          "semantic_score": 0.5041513,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's dream is to create a safe and loving home for children, believing that love and acceptance should be everyone's right and wanting them to experience it.",
+        "score": 0.22101948865655746,
+        "id": "62a4b84b-b05e-4e86-825f-267eaf646d78",
+        "created_at": "2026-11-10T15:08:06.595790+00:00",
+        "updated_at": "2026-11-10T15:08:06.595790+00:00",
+        "score_debug": {
+          "combined_score": 0.22101948865655746,
+          "semantic_score": 0.50461316,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline participated in a school event around November 3, 2026, where she talked about her transgender journey and encouraged students to get involved in the LGBTQ community, reflecting on her progress since starting her transition three years ago.",
+        "score": 0.22100801402137632,
+        "id": "a740c3fe-c99e-49ab-9de2-5d6de48f8dd2",
+        "created_at": "2026-11-10T14:49:22.987760+00:00",
+        "updated_at": "2026-11-10T14:49:22.987760+00:00",
+        "score_debug": {
+          "combined_score": 0.22100801402137632,
+          "semantic_score": 0.50495434,
+          "bm25_score": 0.04583779780114361,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline joined a new LGBTQ activist group on November 3, 2026, where she is meeting many passionate individuals about rights and community support, and feels fulfilled by making a real difference.",
+        "score": 0.22077122163608864,
+        "id": "ce9b65bd-bcd8-43bd-8bbb-cc3cb7682ca0",
+        "created_at": "2026-11-10T14:57:41.612579+00:00",
+        "updated_at": "2026-11-10T14:57:41.612579+00:00",
+        "score_debug": {
+          "combined_score": 0.22077122163608864,
+          "semantic_score": 0.5043105,
+          "bm25_score": 0.045889656837924384,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on an amazing family picture and inquired about how long Melanie has been married.",
+        "score": 0.22062749873834978,
+        "id": "322bf3b2-207d-4cd1-9809-62399c9e830a",
+        "created_at": "2026-11-10T14:50:50.178882+00:00",
+        "updated_at": "2026-11-10T14:50:50.178882+00:00",
+        "score_debug": {
+          "combined_score": 0.22062749873834978,
+          "semantic_score": 0.50330293,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed her commitment to spreading love and understanding, thanking Melanie for her support and encouragement, and emphasized their ability to tackle life's challenges together.",
+        "score": 0.2203131709240318,
+        "id": "633f71c3-4ca7-4134-a8ce-a3dc42c3ace4",
+        "created_at": "2026-11-10T14:49:49.472797+00:00",
+        "updated_at": "2026-11-10T14:49:49.472797+00:00",
+        "score_debug": {
+          "combined_score": 0.2203131709240318,
+          "semantic_score": 0.5029012,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline had a picnic with friends last week, which she enjoyed as part of her transition.",
+        "score": 0.21972946581823524,
+        "id": "f686f753-8e8c-4c1f-9136-106b0b66d775",
+        "created_at": "2026-11-10T14:53:15.517734+00:00",
+        "updated_at": "2026-11-10T14:53:15.517734+00:00",
+        "score_debug": {
+          "combined_score": 0.21972946581823524,
+          "semantic_score": 0.50083053,
+          "bm25_score": 0.04676523729329088,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline joined a new LGBTQ activist group called 'Connected LGBTQ Activists' around November 3, 2026, where she is meeting passionate people and making a difference in rights and community support.",
+        "score": 0.21967105802137638,
+        "id": "9b47c439-a333-4822-801e-06b92e411182",
+        "created_at": "2026-11-10T14:58:10.313934+00:00",
+        "updated_at": "2026-11-10T14:58:10.313934+00:00",
+        "score_debug": {
+          "combined_score": 0.21967105802137638,
+          "semantic_score": 0.50161195,
+          "bm25_score": 0.04583779780114361,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into pursuing counseling and mental health services as a career to help people who have gone through similar experiences as her.",
+        "score": 0.21951925396855604,
+        "id": "a29f8b3a-5f9f-4d14-b7e4-c4b197bdf891",
+        "created_at": "2026-11-10T14:51:39.518646+00:00",
+        "updated_at": "2026-11-10T14:51:39.518646+00:00",
+        "score_debug": {
+          "combined_score": 0.21951925396855604,
+          "semantic_score": 0.5008084,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed interest in Melanie's family's summer traditions and asked if they have any other activities they do together.",
+        "score": 0.21914615865884501,
+        "id": "96611bfc-09ba-4407-b1ac-65e6934eea38",
+        "created_at": "2026-11-10T14:58:10.324631+00:00",
+        "updated_at": "2026-11-10T14:58:10.324631+00:00",
+        "score_debug": {
+          "combined_score": 0.21914615865884501,
+          "semantic_score": 0.4995433,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help others who have gone through similar experiences as her, motivated by her own journey and the support she received.",
+        "score": 0.219129517968556,
+        "id": "0d233836-d739-4b42-a25f-5b8c52cf34c5",
+        "created_at": "2026-11-10T14:51:49.970491+00:00",
+        "updated_at": "2026-11-10T14:51:49.970491+00:00",
+        "score_debug": {
+          "combined_score": 0.219129517968556,
+          "semantic_score": 0.49983406,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie how she is doing in finding peace.",
+        "score": 0.21897293381823527,
+        "id": "9a1bfb1c-0bd9-4818-b744-422d3a2f4499",
+        "created_at": "2026-11-10T14:56:24.015613+00:00",
+        "updated_at": "2026-11-10T14:56:24.015613+00:00",
+        "score_debug": {
+          "combined_score": 0.21897293381823527,
+          "semantic_score": 0.4989392,
+          "bm25_score": 0.04676523729329088,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline joined a new LGBTQ activist group called 'Connected LGBTQ Activists' on November 3, 2026, where she is meeting passionate people and making a difference in rights and community support.",
+        "score": 0.21861374202137634,
+        "id": "8022da8f-c6ec-4619-8dd4-a55230814900",
+        "created_at": "2026-11-10T14:58:00.733029+00:00",
+        "updated_at": "2026-11-10T14:58:00.733029+00:00",
+        "score_debug": {
+          "combined_score": 0.21861374202137634,
+          "semantic_score": 0.49896866,
+          "bm25_score": 0.04583779780114361,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline joined a new LGBTQ activist group called 'Connected LGBTQ Activists' on November 3, 2026, where she is meeting passionate individuals dedicated to rights and community support.",
+        "score": 0.21857794150269858,
+        "id": "5faae545-8332-4e4c-a867-51b14c2023da",
+        "created_at": "2026-11-10T14:57:49.324464+00:00",
+        "updated_at": "2026-11-10T14:57:49.324464+00:00",
+        "score_debug": {
+          "combined_score": 0.21857794150269858,
+          "semantic_score": 0.49877512,
+          "bm25_score": 0.04594183650444913,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is interested in Melanie's upcoming paintings and asked if she has any more planned.",
+        "score": 0.218375161379159,
+        "id": "fd8ff5cd-1a29-46a1-91a4-9e462fd04958",
+        "created_at": "2026-11-10T15:02:49.207281+00:00",
+        "updated_at": "2026-11-10T15:02:49.207281+00:00",
+        "score_debug": {
+          "combined_score": 0.218375161379159,
+          "semantic_score": 0.49750215,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she met and connected with people who have gone through similar journeys, feeling totally accepted in a welcoming environment.",
+        "score": 0.21813365489931685,
+        "id": "abeb6be4-df52-41c2-9447-70e06e64ead9",
+        "created_at": "2026-11-10T14:53:46.381614+00:00",
+        "updated_at": "2026-11-10T14:53:46.381614+00:00",
+        "score_debug": {
+          "combined_score": 0.21813365489931685,
+          "semantic_score": 0.49755907,
+          "bm25_score": 0.046047169995994924,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels proud of her authentic self after her journey and appreciates the support from friends who accept and love her.",
+        "score": 0.2180999160963132,
+        "id": "2b8183e8-8dd9-4b3f-a7c7-226a992b8524",
+        "created_at": "2026-11-10T15:05:17.026913+00:00",
+        "updated_at": "2026-11-10T15:05:17.026913+00:00",
+        "score_debug": {
+          "combined_score": 0.2180999160963132,
+          "semantic_score": 0.4970399,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline passed the adoption agency interviews on November 3, 2026, and feels excited and thankful as this is a significant step towards her goal of having a family.",
+        "score": 0.21803198196855603,
+        "id": "07f615de-c10f-40fe-82ad-ae973bf1d520",
+        "created_at": "2026-11-10T15:07:58.022445+00:00",
+        "updated_at": "2026-11-10T15:07:58.022445+00:00",
+        "score_debug": {
+          "combined_score": 0.21803198196855603,
+          "semantic_score": 0.49709022,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline appreciates the importance of friendship and compassion during her transition and feels lucky to have friends and family supporting her.",
+        "score": 0.21800643512820989,
+        "id": "add2e396-ea4d-4670-a08a-480a60a69c49",
+        "created_at": "2026-11-10T14:53:12.214435+00:00",
+        "updated_at": "2026-11-10T14:53:12.214435+00:00",
+        "score_debug": {
+          "combined_score": 0.21800643512820989,
+          "semantic_score": 0.49858966,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline passed the adoption agency interviews on November 3, 2026, and feels excited and thankful as this is a significant step towards her goal of having a family.",
+        "score": 0.217993833968556,
+        "id": "dd7ccf1b-db89-42b8-a906-f636051ea009",
+        "created_at": "2026-11-10T15:08:06.589936+00:00",
+        "updated_at": "2026-11-10T15:08:06.589936+00:00",
+        "score_debug": {
+          "combined_score": 0.217993833968556,
+          "semantic_score": 0.49699485,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline passed the adoption agency interviews on November 3, 2026, and feels excited and thankful as this is a significant step towards her goal of having a family.",
+        "score": 0.217993833968556,
+        "id": "c4f17c50-1921-487a-97e4-d63e96c1f5c7",
+        "created_at": "2026-11-10T15:07:40.697783+00:00",
+        "updated_at": "2026-11-10T15:07:40.697783+00:00",
+        "score_debug": {
+          "combined_score": 0.217993833968556,
+          "semantic_score": 0.49699485,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's favorite color is blue, which makes her feel relaxed.",
+        "score": 0.217775369379159,
+        "id": "8cb75ed8-89ac-4160-8442-ae084b5950a3",
+        "created_at": "2026-11-10T14:55:40.079465+00:00",
+        "updated_at": "2026-11-10T14:55:40.079465+00:00",
+        "score_debug": {
+          "combined_score": 0.217775369379159,
+          "semantic_score": 0.49600267,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's favorite color is blue, which makes her feel relaxed.",
+        "score": 0.217775369379159,
+        "id": "5ee8fd23-b3cd-43a7-9914-b52c4aa85e2d",
+        "created_at": "2026-11-10T14:55:52.273995+00:00",
+        "updated_at": "2026-11-10T14:55:52.273995+00:00",
+        "score_debug": {
+          "combined_score": 0.217775369379159,
+          "semantic_score": 0.49600267,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed that family love and support is the best on November 10, 2026.",
+        "score": 0.217410142658845,
+        "id": "67703a33-14db-4a72-a457-b0424661d9ee",
+        "created_at": "2026-11-10T14:56:33.305212+00:00",
+        "updated_at": "2026-11-10T14:56:33.305212+00:00",
+        "score_debug": {
+          "combined_score": 0.217410142658845,
+          "semantic_score": 0.49520326,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is committed to using her voice to create love, acceptance, and hope, as acknowledged by Melanie.",
+        "score": 0.21694165065884502,
+        "id": "14f838a1-dc53-4adf-bc88-b7091c7fefee",
+        "created_at": "2026-11-10T14:49:37.264842+00:00",
+        "updated_at": "2026-11-10T14:49:37.264842+00:00",
+        "score_debug": {
+          "combined_score": 0.21694165065884502,
+          "semantic_score": 0.49403203,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline joined a new LGBTQ activist group on November 3, 2026, where she is meeting passionate people about rights and community support, feeling fulfilled by making a real difference.",
+        "score": 0.21693685002137636,
+        "id": "5f313912-9e67-4e34-b638-81f4fa3cacb8",
+        "created_at": "2026-11-10T14:57:43.852515+00:00",
+        "updated_at": "2026-11-10T14:57:43.852515+00:00",
+        "score_debug": {
+          "combined_score": 0.21693685002137636,
+          "semantic_score": 0.49477643,
+          "bm25_score": 0.04583779780114361,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie how her pets are doing.",
+        "score": 0.21677576999341674,
+        "id": "d8dfd292-cb6a-42d2-a532-2edf3d5716e0",
+        "created_at": "2026-11-10T15:00:27.575943+00:00",
+        "updated_at": "2026-11-10T15:00:27.575943+00:00",
+        "score_debug": {
+          "combined_score": 0.21677576999341674,
+          "semantic_score": 0.4933304,
+          "bm25_score": 0.046881127731244594,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline uses her art to advocate for the LGBTQ+ community and promote acceptance through diverse representation.",
+        "score": 0.21669629065884505,
+        "id": "5c6a414c-cb26-4a4e-87c0-399d3aa9f7fa",
+        "created_at": "2026-11-10T14:59:25.235878+00:00",
+        "updated_at": "2026-11-10T14:59:25.235878+00:00",
+        "score_debug": {
+          "combined_score": 0.21669629065884505,
+          "semantic_score": 0.49341863,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline wants to help make a difference in the LGBTQ community, acknowledging the progress made in LGBTQ rights while recognizing that more work is needed.",
+        "score": 0.216418485968556,
+        "id": "b6b6befc-ae9b-4593-bbb5-274b463344f6",
+        "created_at": "2026-11-10T14:54:00.195430+00:00",
+        "updated_at": "2026-11-10T14:54:00.195430+00:00",
+        "score_debug": {
+          "combined_score": 0.216418485968556,
+          "semantic_score": 0.49305648,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline had a picnic with her friends last week, appreciating their support during her transition.",
+        "score": 0.21640187664155425,
+        "id": "4741a028-e127-4d96-81af-bd4800819786",
+        "created_at": "2026-11-10T14:53:54.408734+00:00",
+        "updated_at": "2026-11-10T14:53:54.408734+00:00",
+        "score_debug": {
+          "combined_score": 0.21640187664155425,
+          "semantic_score": 0.49262595,
+          "bm25_score": 0.04665084435158841,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline and her mentee had a great time at the LGBT pride event last month.",
+        "score": 0.21634570464155428,
+        "id": "b597e95b-ba93-4c4a-a04c-798cdd09d5f8",
+        "created_at": "2026-11-10T14:57:04.934856+00:00",
+        "updated_at": "2026-11-10T14:57:04.934856+00:00",
+        "score_debug": {
+          "combined_score": 0.21634570464155428,
+          "semantic_score": 0.49248552,
+          "bm25_score": 0.04665084435158841,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline and her mentee had a great time at the LGBT pride event last month.",
+        "score": 0.21634570464155428,
+        "id": "92bb030e-089a-4a9b-b72e-d39880fa424d",
+        "created_at": "2026-11-10T14:57:02.484872+00:00",
+        "updated_at": "2026-11-10T14:57:02.484872+00:00",
+        "score_debug": {
+          "combined_score": 0.21634570464155428,
+          "semantic_score": 0.49248552,
+          "bm25_score": 0.04665084435158841,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is having an LGBTQ art show next month in December 2026, showcasing her paintings.",
+        "score": 0.21612811865884501,
+        "id": "14fc1f82-f4e3-4dcd-8fab-1963271cebeb",
+        "created_at": "2026-11-10T14:57:30.509277+00:00",
+        "updated_at": "2026-11-10T14:57:30.509277+00:00",
+        "score_debug": {
+          "combined_score": 0.21612811865884501,
+          "semantic_score": 0.4919982,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade on November 3, 2026, where she felt a lot of energy and love, making her proud and reminding her of the importance of standing up for equality.",
+        "score": 0.2161248029694466,
+        "id": "9873336d-03fd-4ecc-8200-3ddc23314655",
+        "created_at": "2026-11-10T14:59:00.549712+00:00",
+        "updated_at": "2026-11-10T14:59:00.549712+00:00",
+        "score_debug": {
+          "combined_score": 0.2161248029694466,
+          "semantic_score": 0.49258977,
+          "bm25_score": 0.045994340171319245,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's necklace, a gift from her grandma in Sweden, is super special to her. It symbolizes love, faith, and strength, serving as a reminder of her roots and the support she receives from her family.",
+        "score": 0.21601637213001385,
+        "id": "3395c5c6-78cc-4360-b274-867ffce74280",
+        "created_at": "2026-11-10T14:51:18.321265+00:00",
+        "updated_at": "2026-11-10T14:51:18.321265+00:00",
+        "score_debug": {
+          "combined_score": 0.21601637213001385,
+          "semantic_score": 0.4922127,
+          "bm25_score": 0.04610033307273741,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is going to a transgender conference in November 2026, expressing excitement about meeting others in the community and learning more about advocacy.",
+        "score": 0.2157883046565575,
+        "id": "9b35bee3-6f8b-49dd-8b42-70d0237ed2ec",
+        "created_at": "2026-11-10T14:52:48.089307+00:00",
+        "updated_at": "2026-11-10T14:52:48.089307+00:00",
+        "score_debug": {
+          "combined_score": 0.2157883046565575,
+          "semantic_score": 0.4915352,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into counseling and mental health jobs because she believes it's important for people to have someone to talk to and wants to help make that happen.",
+        "score": 0.21569975274156078,
+        "id": "114da5ea-bb85-4aea-8994-b869f1ea59ba",
+        "created_at": "2026-11-10T14:54:21.748257+00:00",
+        "updated_at": "2026-11-10T14:54:21.748257+00:00",
+        "score_debug": {
+          "combined_score": 0.21569975274156078,
+          "semantic_score": 0.49120513,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into counseling and mental health jobs because she believes it's important for people to have someone to talk to and wants to help make that happen.",
+        "score": 0.21569975274156078,
+        "id": "184c6b81-9dff-4a97-bf8a-a20f932fef52",
+        "created_at": "2026-11-10T14:54:31.476100+00:00",
+        "updated_at": "2026-11-10T14:54:31.476100+00:00",
+        "score_debug": {
+          "combined_score": 0.21569975274156078,
+          "semantic_score": 0.49120513,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into counseling and mental health jobs because she believes it's important for people to have someone to talk to and wants to help make that happen.",
+        "score": 0.21569975274156078,
+        "id": "35916658-df0b-4141-a195-7e1044f6f603",
+        "created_at": "2026-11-10T14:54:15.351831+00:00",
+        "updated_at": "2026-11-10T14:54:15.351831+00:00",
+        "score_debug": {
+          "combined_score": 0.21569975274156078,
+          "semantic_score": 0.49120513,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into counseling and mental health jobs because she believes it's important for people to have someone to talk to and wants to help make that happen.",
+        "score": 0.21569215674156078,
+        "id": "f55c5991-103a-4e99-b3a6-590e89d605cb",
+        "created_at": "2026-11-10T14:54:08.747976+00:00",
+        "updated_at": "2026-11-10T14:54:08.747976+00:00",
+        "score_debug": {
+          "combined_score": 0.21569215674156078,
+          "semantic_score": 0.49118614,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline appreciates her friends and family for their support during her transition, stating they have provided love, guidance, and acceptance throughout the process.",
+        "score": 0.21533169472737884,
+        "id": "16eded83-809a-4d0f-a9aa-52ea4a2acdea",
+        "created_at": "2026-11-10T14:53:36.487862+00:00",
+        "updated_at": "2026-11-10T14:53:36.487862+00:00",
+        "score_debug": {
+          "combined_score": 0.21533169472737884,
+          "semantic_score": 0.49195802,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline feels proud of her journey and how far she has come in her transition, expressing gratitude for the support she receives from friends and family.",
+        "score": 0.2148552607415608,
+        "id": "72236ef4-fb06-4121-8879-e0230d05a8e2",
+        "created_at": "2026-11-10T15:05:09.609295+00:00",
+        "updated_at": "2026-11-10T15:05:09.609295+00:00",
+        "score_debug": {
+          "combined_score": 0.2148552607415608,
+          "semantic_score": 0.4890939,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is considering working with trans individuals, helping them accept themselves and supporting their mental health.",
+        "score": 0.21485404474156078,
+        "id": "d8b801d7-caff-4cd4-bb60-3d1312b6c8cc",
+        "created_at": "2026-11-10T14:51:54.241800+00:00",
+        "updated_at": "2026-11-10T14:51:54.241800+00:00",
+        "score_debug": {
+          "combined_score": 0.21485404474156078,
+          "semantic_score": 0.48909086,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Melanie expressed appreciation for her friendship with Caroline, acknowledging that Caroline has always been there for her.",
+        "score": 0.21479090990191288,
+        "id": "9bd8a6e0-dece-4629-a454-9c196c5d6eb4",
+        "created_at": "2026-11-10T15:00:00.992727+00:00",
+        "updated_at": "2026-11-10T15:00:00.992727+00:00",
+        "score_debug": {
+          "combined_score": 0.21479090990191288,
+          "semantic_score": 0.48547775,
+          "bm25_score": 0.0497716275024849,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is motivated to pursue counseling due to her own experiences and a desire to help others who have gone through similar challenges.",
+        "score": 0.21468918273834975,
+        "id": "def2fca2-62e2-4a4a-873a-dff46e45f268",
+        "created_at": "2026-11-10T14:51:46.517341+00:00",
+        "updated_at": "2026-11-10T14:51:46.517341+00:00",
+        "score_debug": {
+          "combined_score": 0.21468918273834975,
+          "semantic_score": 0.48845714,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed gratitude to Melanie for being a supportive friend during her journey, stating that she is really glad to have her in her life.",
+        "score": 0.2145710640963132,
+        "id": "688f6187-b564-4481-a376-de1c90779ac1",
+        "created_at": "2026-11-10T14:56:47.283755+00:00",
+        "updated_at": "2026-11-10T14:56:47.283755+00:00",
+        "score_debug": {
+          "combined_score": 0.2145710640963132,
+          "semantic_score": 0.48821777,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline appreciates the support of those close to her, stating that their encouragement has played a significant role in shaping who she is.",
+        "score": 0.21448920312820988,
+        "id": "d59bf91a-54bb-4dc3-b06a-10f096d0854b",
+        "created_at": "2026-11-10T15:08:21.425878+00:00",
+        "updated_at": "2026-11-10T15:08:21.425878+00:00",
+        "score_debug": {
+          "combined_score": 0.21448920312820988,
+          "semantic_score": 0.48979658,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is researching adoption agencies as it has been her dream to have a family and provide a loving home to children in need.",
+        "score": 0.21444869762829777,
+        "id": "d1a1126d-9665-470b-8796-4ad301e2f606",
+        "created_at": "2026-11-10T14:48:57.880440+00:00",
+        "updated_at": "2026-11-10T14:48:57.880440+00:00",
+        "score_debug": {
+          "combined_score": 0.21444869762829777,
+          "semantic_score": 0.48802263,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Melanie feels that Caroline makes life's struggles more bearable, expressing appreciation for her friendship.",
+        "score": 0.21421162409631322,
+        "id": "9abbb034-0699-451f-bc26-c6c670ae1caf",
+        "created_at": "2026-11-10T14:59:57.733706+00:00",
+        "updated_at": "2026-11-10T14:59:57.733706+00:00",
+        "score_debug": {
+          "combined_score": 0.21421162409631322,
+          "semantic_score": 0.48731917,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is exploring counseling and mental health jobs to help others have someone to talk to, motivated by her desire to make a positive impact.",
+        "score": 0.21392993362829774,
+        "id": "3c65a70c-cc2f-4cb8-9b01-51cea2eda18e",
+        "created_at": "2026-11-10T14:54:00.198081+00:00",
+        "updated_at": "2026-11-10T14:54:00.198081+00:00",
+        "score_debug": {
+          "combined_score": 0.21392993362829774,
+          "semantic_score": 0.48672572,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline has been looking into counseling and mental health as a career to help people who have gone through similar experiences as her.",
+        "score": 0.21384338202912878,
+        "id": "7d0d379b-a222-474e-8505-4a3406de6fa7",
+        "created_at": "2026-11-10T14:51:37.348923+00:00",
+        "updated_at": "2026-11-10T14:51:37.348923+00:00",
+        "score_debug": {
+          "combined_score": 0.21384338202912878,
+          "semantic_score": 0.48645413,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline has been volunteering at an LGBTQ+ youth center, finding it gratifying to talk to young people with similar experiences and realizing the importance of kindness and support.",
+        "score": 0.21371953889931689,
+        "id": "15057b55-5d9d-42d4-90f7-a413f6cf9859",
+        "created_at": "2026-11-10T15:03:06.637030+00:00",
+        "updated_at": "2026-11-10T15:03:06.637030+00:00",
+        "score_debug": {
+          "combined_score": 0.21371953889931689,
+          "semantic_score": 0.48652378,
+          "bm25_score": 0.046047169995994924,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks ago, where she felt accepted and happy being around people who celebrated her, making it a top memory for her.",
+        "score": 0.21291858074156078,
+        "id": "1da5d116-2bed-4603-87d4-c12538e70f38",
+        "created_at": "2026-11-10T14:56:09.245865+00:00",
+        "updated_at": "2026-11-10T14:56:09.245865+00:00",
+        "score_debug": {
+          "combined_score": 0.21291858074156078,
+          "semantic_score": 0.4842522,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed that Melanie's family is her rock and appreciates the love she has for them.",
+        "score": 0.21282176137915898,
+        "id": "dcde52f3-3615-4d35-988b-b4b3ff8f23a3",
+        "created_at": "2026-11-10T15:07:08.760511+00:00",
+        "updated_at": "2026-11-10T15:07:08.760511+00:00",
+        "score_debug": {
+          "combined_score": 0.21282176137915898,
+          "semantic_score": 0.48361865,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is still looking into counseling and mental health jobs as of November 10, 2026, motivated by the importance of providing support for people who need someone to talk to.",
+        "score": 0.2127169601300139,
+        "id": "5491206e-0e76-4542-9fe1-3e9d8ac2cc55",
+        "created_at": "2026-11-10T14:53:57.116848+00:00",
+        "updated_at": "2026-11-10T14:53:57.116848+00:00",
+        "score_debug": {
+          "combined_score": 0.2127169601300139,
+          "semantic_score": 0.48396417,
+          "bm25_score": 0.04610033307273741,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade on November 4, 2026, and felt inspired by the energy and love, reinforcing her commitment to fighting for LGBTQ rights.",
+        "score": 0.21261320413001386,
+        "id": "aceee798-2bd4-4e45-92a9-89e84a31220e",
+        "created_at": "2026-11-10T14:59:10.700984+00:00",
+        "updated_at": "2026-11-10T14:59:10.700984+00:00",
+        "score_debug": {
+          "combined_score": 0.21261320413001386,
+          "semantic_score": 0.48370478,
+          "bm25_score": 0.04610033307273741,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is looking into counseling and mental health jobs because she wants to help others have someone to talk to, motivated by her own struggles with mental health and the support she received.",
+        "score": 0.21255038465655746,
+        "id": "4d6c1874-4098-48b7-b505-638946848f69",
+        "created_at": "2026-11-10T14:54:36.838107+00:00",
+        "updated_at": "2026-11-10T14:54:36.838107+00:00",
+        "score_debug": {
+          "combined_score": 0.21255038465655746,
+          "semantic_score": 0.4834404,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed admiration for Melanie's beautiful family moments and feels lucky for her awesome family.",
+        "score": 0.21253102919539427,
+        "id": "07982a27-d671-4fe7-afb1-2eddb0286ba6",
+        "created_at": "2026-11-10T14:58:47.095253+00:00",
+        "updated_at": "2026-11-10T14:58:47.095253+00:00",
+        "score_debug": {
+          "combined_score": 0.21253102919539427,
+          "semantic_score": 0.48484558,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline had a picnic with her friends last week, highlighting the importance of her support network.",
+        "score": 0.212365214658845,
+        "id": "11ba8710-e7dc-4ba2-9226-0a5274a2e136",
+        "created_at": "2026-11-10T14:53:43.637428+00:00",
+        "updated_at": "2026-11-10T14:53:43.637428+00:00",
+        "score_debug": {
+          "combined_score": 0.212365214658845,
+          "semantic_score": 0.48259094,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's dream is to create a safe and loving home for children through adoption, believing that love and acceptance should be everyone's right.",
+        "score": 0.2120171487415608,
+        "id": "75f2715d-37f0-4545-a2ed-d58a87086fa7",
+        "created_at": "2026-11-10T15:07:58.024850+00:00",
+        "updated_at": "2026-11-10T15:07:58.024850+00:00",
+        "score_debug": {
+          "combined_score": 0.2120171487415608,
+          "semantic_score": 0.48199862,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's dream is to create a safe and loving home for children through adoption, believing that love and acceptance should be everyone's right.",
+        "score": 0.2120171487415608,
+        "id": "30b3f799-7cca-4da7-bf16-3297a35f9fd2",
+        "created_at": "2026-11-10T15:08:15.512346+00:00",
+        "updated_at": "2026-11-10T15:08:15.512346+00:00",
+        "score_debug": {
+          "combined_score": 0.2120171487415608,
+          "semantic_score": 0.48199862,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline appreciates her friends and family for their support during her transition, stating that their love, guidance, and acceptance have been instrumental in her growth.",
+        "score": 0.21193442272737886,
+        "id": "62e44721-2865-4fd6-8dbe-feaf3e2601f2",
+        "created_at": "2026-11-10T14:53:43.635139+00:00",
+        "updated_at": "2026-11-10T14:53:43.635139+00:00",
+        "score_debug": {
+          "combined_score": 0.21193442272737886,
+          "semantic_score": 0.48346484,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline had an awesome experience at a pride event, feeling encouraged by the love and acceptance surrounding her.",
+        "score": 0.21190433002912878,
+        "id": "0f7a005e-f580-4aa9-8ca9-630f8140606d",
+        "created_at": "2026-11-10T14:57:36.663517+00:00",
+        "updated_at": "2026-11-10T14:57:36.663517+00:00",
+        "score_debug": {
+          "combined_score": 0.21190433002912878,
+          "semantic_score": 0.4816065,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels motivated to use her story to help others in the community and is excited about pursuing a career in counseling and mental health.",
+        "score": 0.2118745807415608,
+        "id": "8d187519-3aba-472b-a3ac-78626efe2aa8",
+        "created_at": "2026-11-10T14:52:09.873135+00:00",
+        "updated_at": "2026-11-10T14:52:09.873135+00:00",
+        "score_debug": {
+          "combined_score": 0.2118745807415608,
+          "semantic_score": 0.4816422,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she connected with people who have gone through similar journeys and felt welcomed in the environment.",
+        "score": 0.211587193968556,
+        "id": "2cf10e26-bf57-4823-bf63-06dc318429d8",
+        "created_at": "2026-11-10T14:54:00.190557+00:00",
+        "updated_at": "2026-11-10T14:54:00.190557+00:00",
+        "score_debug": {
+          "combined_score": 0.211587193968556,
+          "semantic_score": 0.48097825,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's dream is to create a safe and loving home for the kids she plans to adopt, emphasizing that love and acceptance should be everyone's right and that she wants them to experience it.",
+        "score": 0.2114465629240318,
+        "id": "efcb11ad-04cd-4ec2-bc63-97d1fd074637",
+        "created_at": "2026-11-10T15:07:55.189895+00:00",
+        "updated_at": "2026-11-10T15:07:55.189895+00:00",
+        "score_debug": {
+          "combined_score": 0.2114465629240318,
+          "semantic_score": 0.48073468,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed her willingness to help Melanie if she decides to adopt.",
+        "score": 0.21140109337915897,
+        "id": "bda33a7a-0b3c-4bf5-95aa-51fe190a486f",
+        "created_at": "2026-11-10T15:05:46.849530+00:00",
+        "updated_at": "2026-11-10T15:05:46.849530+00:00",
+        "score_debug": {
+          "combined_score": 0.21140109337915897,
+          "semantic_score": 0.48006698,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline has a special necklace with a cross and a heart, given to her by her grandma in Sweden when she was young. It symbolizes love, faith, and strength, reminding her of her roots and family support.",
+        "score": 0.21138261213001389,
+        "id": "24c18c47-33fe-4ec9-99fd-7b7c8ef0c7d1",
+        "created_at": "2026-11-10T14:51:37.343659+00:00",
+        "updated_at": "2026-11-10T14:51:37.343659+00:00",
+        "score_debug": {
+          "combined_score": 0.21138261213001389,
+          "semantic_score": 0.4806283,
+          "bm25_score": 0.04610033307273741,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline and her mentee attended an LGBT pride event last month, which was encouraging and filled with love and acceptance.",
+        "score": 0.2111933960963132,
+        "id": "637cceda-8420-4a5e-95c6-94679578b137",
+        "created_at": "2026-11-10T14:57:24.003130+00:00",
+        "updated_at": "2026-11-10T14:57:24.003130+00:00",
+        "score_debug": {
+          "combined_score": 0.2111933960963132,
+          "semantic_score": 0.4797736,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ+ pride parade around November 3, 2026, which made her feel a sense of belonging and showcased the growth of the community.",
+        "score": 0.21119081674156076,
+        "id": "f9651547-2f97-40f0-a23f-5e89f20721fe",
+        "created_at": "2026-11-10T14:52:21.853021+00:00",
+        "updated_at": "2026-11-10T14:52:21.853021+00:00",
+        "score_debug": {
+          "combined_score": 0.21119081674156076,
+          "semantic_score": 0.47993279,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed a wish that she had known Melanie during her wedding, indicating it must have been a special occasion.",
+        "score": 0.21096277473834973,
+        "id": "2ca006a9-1ac2-41e0-ba7b-d5ea50d80bb3",
+        "created_at": "2026-11-10T14:55:44.490398+00:00",
+        "updated_at": "2026-11-10T14:55:44.490398+00:00",
+        "score_debug": {
+          "combined_score": 0.21096277473834973,
+          "semantic_score": 0.47914112,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is having an LGBTQ art show next month featuring her paintings.",
+        "score": 0.21090522137915899,
+        "id": "7cb8bda2-71d0-4366-a240-53b47fff4f39",
+        "created_at": "2026-11-10T14:57:36.667592+00:00",
+        "updated_at": "2026-11-10T14:57:36.667592+00:00",
+        "score_debug": {
+          "combined_score": 0.21090522137915899,
+          "semantic_score": 0.4788273,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks ago, where she felt accepted and happy being around people who celebrated her, making it a top memory.",
+        "score": 0.2108844927415608,
+        "id": "c21594de-fbdb-47b8-a878-87199a4f5cd2",
+        "created_at": "2026-11-10T14:56:21.430820+00:00",
+        "updated_at": "2026-11-10T14:56:21.430820+00:00",
+        "score_debug": {
+          "combined_score": 0.2108844927415608,
+          "semantic_score": 0.47916698,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a family posing for a picture in a yard, showcasing her support system.",
+        "score": 0.21042174202912878,
+        "id": "2d6faf8c-7a04-4eb7-983f-3e6a935c5f2c",
+        "created_at": "2026-11-10T14:50:44.841619+00:00",
+        "updated_at": "2026-11-10T14:50:44.841619+00:00",
+        "score_debug": {
+          "combined_score": 0.21042174202912878,
+          "semantic_score": 0.47790003,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels motivated by her experience at the pride parade to use her story to help others, reinforcing her interest in counseling and mental health.",
+        "score": 0.210411133968556,
+        "id": "693629fb-cc0f-4184-aafd-f2bed985c289",
+        "created_at": "2026-11-10T14:52:21.855436+00:00",
+        "updated_at": "2026-11-10T14:52:21.855436+00:00",
+        "score_debug": {
+          "combined_score": 0.210411133968556,
+          "semantic_score": 0.4780381,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she connected with people who have gone through similar journeys and felt it was a welcoming environment.",
+        "score": 0.210146621968556,
+        "id": "bae59588-5f74-493a-bc1d-eebeac0576b1",
+        "created_at": "2026-11-10T14:54:15.349014+00:00",
+        "updated_at": "2026-11-10T14:54:15.349014+00:00",
+        "score_debug": {
+          "combined_score": 0.210146621968556,
+          "semantic_score": 0.47737682,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels that finding a supportive community where she is accepted and loved has made a huge difference in her life, helping her cope with her experiences and expressing that it is very special to her.",
+        "score": 0.21014265213001387,
+        "id": "57688e76-3927-4ffa-a077-49867f48ec2a",
+        "created_at": "2026-11-10T15:01:56.974927+00:00",
+        "updated_at": "2026-11-10T15:01:56.974927+00:00",
+        "score_debug": {
+          "combined_score": 0.21014265213001387,
+          "semantic_score": 0.4775284,
+          "bm25_score": 0.04610033307273741,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is passionate about mental health and wants to help others through their struggles, inspired by the positive impact counseling and support groups had on her.",
+        "score": 0.21001440562829776,
+        "id": "ee7d02d9-ace8-471c-9d86-727eba9dc7c8",
+        "created_at": "2026-11-10T14:51:59.925856+00:00",
+        "updated_at": "2026-11-10T14:51:59.925856+00:00",
+        "score_debug": {
+          "combined_score": 0.21001440562829776,
+          "semantic_score": 0.4769369,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline found the journey to self-acceptance to be long but feels empowered now to offer love and support to those in need, aiming to make a positive difference in their lives.",
+        "score": 0.2100069789240318,
+        "id": "049fee68-388c-42b0-b55d-67919f096f89",
+        "created_at": "2026-11-10T15:08:06.598413+00:00",
+        "updated_at": "2026-11-10T15:08:06.598413+00:00",
+        "score_debug": {
+          "combined_score": 0.2100069789240318,
+          "semantic_score": 0.47713572,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is mentoring a transgender teen and they have been working on building confidence and finding positive strategies together.",
+        "score": 0.20989450874156076,
+        "id": "4b47e6fb-f672-48ec-b0b7-9ab64107dce2",
+        "created_at": "2026-11-10T14:57:24.000801+00:00",
+        "updated_at": "2026-11-10T14:57:24.000801+00:00",
+        "score_debug": {
+          "combined_score": 0.20989450874156076,
+          "semantic_score": 0.47669202,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade on November 3, 2026, and felt a strong sense of energy and love, which reminded her of the importance of standing up for equality.",
+        "score": 0.20942141092403177,
+        "id": "c51c02de-b64c-4572-a678-0f993913081d",
+        "created_at": "2026-11-10T14:59:04.100538+00:00",
+        "updated_at": "2026-11-10T14:59:04.100538+00:00",
+        "score_debug": {
+          "combined_score": 0.20942141092403177,
+          "semantic_score": 0.4756718,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is having an LGBTQ art show featuring her paintings next month, expressing excitement about the event.",
+        "score": 0.20935015609631322,
+        "id": "e430722f-ad88-400f-81d0-e7d41e7ac6a5",
+        "created_at": "2026-11-10T14:57:19.201572+00:00",
+        "updated_at": "2026-11-10T14:57:19.201572+00:00",
+        "score_debug": {
+          "combined_score": 0.20935015609631322,
+          "semantic_score": 0.4751655,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Melanie expressed admiration for Caroline's courage as a trans person and inquired about her recent art.",
+        "score": 0.20925836673834977,
+        "id": "e28e8b96-7eab-4766-93e9-e7a03335d902",
+        "created_at": "2026-11-10T15:02:04.551888+00:00",
+        "updated_at": "2026-11-10T15:02:04.551888+00:00",
+        "score_debug": {
+          "combined_score": 0.20925836673834977,
+          "semantic_score": 0.4748801,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline hopes to build her own family through adoption, aiming to provide a loving home for children who haven't had that before, viewing it as a way to give back and show love and acceptance.",
+        "score": 0.2089935789240318,
+        "id": "23f66fe1-b006-40a1-89e7-429850b44684",
+        "created_at": "2026-11-10T15:08:06.592970+00:00",
+        "updated_at": "2026-11-10T15:08:06.592970+00:00",
+        "score_debug": {
+          "combined_score": 0.2089935789240318,
+          "semantic_score": 0.47460222,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline has been looking into counseling or mental health work more since her last chat, driven by her passion for helping people and making a positive impact. She finds the work tough but really rewarding.",
+        "score": 0.20883665350269856,
+        "id": "b8381007-3c0f-45c5-bdeb-f8f6bb95912c",
+        "created_at": "2026-11-10T14:52:50.911026+00:00",
+        "updated_at": "2026-11-10T14:52:50.911026+00:00",
+        "score_debug": {
+          "combined_score": 0.20883665350269856,
+          "semantic_score": 0.4744219,
+          "bm25_score": 0.04594183650444913,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference two days prior to November 10, 2026, where she felt welcomed and connected with people who have gone through similar journeys, emphasizing the importance of community support during her transition.",
+        "score": 0.20876640163608867,
+        "id": "063b9fa2-e1cf-435a-a59f-88fcd9497012",
+        "created_at": "2026-11-10T14:53:48.313576+00:00",
+        "updated_at": "2026-11-10T14:53:48.313576+00:00",
+        "score_debug": {
+          "combined_score": 0.20876640163608867,
+          "semantic_score": 0.47429845,
+          "bm25_score": 0.045889656837924384,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she connected with people who have gone through similar journeys and felt welcomed.",
+        "score": 0.20874850074156076,
+        "id": "b0f8a8aa-69fa-4e1b-b673-d305b65a0dd7",
+        "created_at": "2026-11-10T14:53:54.404369+00:00",
+        "updated_at": "2026-11-10T14:53:54.404369+00:00",
+        "score_debug": {
+          "combined_score": 0.20874850074156076,
+          "semantic_score": 0.473827,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline uses her art to express her trans experience and educate others about the trans community, showcasing her commitment to inclusivity and diversity.",
+        "score": 0.2087333407415608,
+        "id": "fee48b01-a438-452e-b302-da70b6801e77",
+        "created_at": "2026-11-10T14:59:19.537401+00:00",
+        "updated_at": "2026-11-10T14:59:19.537401+00:00",
+        "score_debug": {
+          "combined_score": 0.2087333407415608,
+          "semantic_score": 0.4737891,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks ago and shared it as a special memory.",
+        "score": 0.20850559065884502,
+        "id": "4a54eb9a-e47e-4f10-acab-bd904e70ecca",
+        "created_at": "2026-11-10T14:55:59.988735+00:00",
+        "updated_at": "2026-11-10T14:55:59.988735+00:00",
+        "score_debug": {
+          "combined_score": 0.20850559065884502,
+          "semantic_score": 0.47294188,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels that finding a supportive community where she is accepted and loved has made a huge difference in her life.",
+        "score": 0.2083700960963132,
+        "id": "29c11a77-7bfc-4657-b7e7-c42f7727e0f3",
+        "created_at": "2026-11-10T15:02:04.549781+00:00",
+        "updated_at": "2026-11-10T15:02:04.549781+00:00",
+        "score_debug": {
+          "combined_score": 0.2083700960963132,
+          "semantic_score": 0.47271535,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie if she has any experience with adoption or knows anyone who has gone through the process.",
+        "score": 0.2080645566415543,
+        "id": "48b021a4-79e4-4063-8337-d73f781d3209",
+        "created_at": "2026-11-10T15:05:35.671302+00:00",
+        "updated_at": "2026-11-10T15:05:35.671302+00:00",
+        "score_debug": {
+          "combined_score": 0.2080645566415543,
+          "semantic_score": 0.47178265,
+          "bm25_score": 0.04665084435158841,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels lucky to have a great support system that has provided love and encouragement, which has been instrumental in her acceptance and growth during her transition.",
+        "score": 0.2080091536282978,
+        "id": "ba623f81-b5d2-4a09-8f48-dba292f12278",
+        "created_at": "2026-11-10T14:53:39.363405+00:00",
+        "updated_at": "2026-11-10T14:53:39.363405+00:00",
+        "score_debug": {
+          "combined_score": 0.2080091536282978,
+          "semantic_score": 0.47192377,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is attending a transgender conference in November 2026 to meet others in the community and learn more about advocacy, expressing excitement about the experience.",
+        "score": 0.20798731396855602,
+        "id": "317fe5a1-e6dc-44d1-ba13-a1bd1765ed05",
+        "created_at": "2026-11-10T14:52:40.698044+00:00",
+        "updated_at": "2026-11-10T14:52:40.698044+00:00",
+        "score_debug": {
+          "combined_score": 0.20798731396855602,
+          "semantic_score": 0.47197855,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed appreciation for her friendship with Melanie, stating that it means a lot to have her in her corner.",
+        "score": 0.20790714273834973,
+        "id": "cc34fabe-894d-4297-acba-4198a12f26c9",
+        "created_at": "2026-11-10T14:59:59.466086+00:00",
+        "updated_at": "2026-11-10T14:59:59.466086+00:00",
+        "score_debug": {
+          "combined_score": 0.20790714273834973,
+          "semantic_score": 0.47150204,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline applied to adoption agencies around November 10, 2026, taking the first step towards becoming a mom and feeling ready to give love to a child.",
+        "score": 0.20780278465655747,
+        "id": "1d23e8af-1b68-4da5-a240-2ab000eea238",
+        "created_at": "2026-11-10T15:00:24.033667+00:00",
+        "updated_at": "2026-11-10T15:00:24.033667+00:00",
+        "score_debug": {
+          "combined_score": 0.20780278465655747,
+          "semantic_score": 0.4715714,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels proud of her journey and how far she has come in her transition, expressing gratitude to Melanie for her support.",
+        "score": 0.20777065002912876,
+        "id": "9d2a3d5e-43e3-4513-b2d2-f5620578454d",
+        "created_at": "2026-11-10T14:56:24.013796+00:00",
+        "updated_at": "2026-11-10T14:56:24.013796+00:00",
+        "score_debug": {
+          "combined_score": 0.20777065002912876,
+          "semantic_score": 0.4712723,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is inspiring others with her journey and positively affecting many by talking about inclusivity and acceptance in the trans community, as praised by Melanie.",
+        "score": 0.20775370996855597,
+        "id": "3c0ced22-f3f0-42c7-adf8-fa8503bdbc32",
+        "created_at": "2026-11-10T14:49:31.480677+00:00",
+        "updated_at": "2026-11-10T14:49:31.480677+00:00",
+        "score_debug": {
+          "combined_score": 0.20775370996855597,
+          "semantic_score": 0.47139454,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline believes that life is all about creating memories and is excited for their upcoming trip with Melanie.",
+        "score": 0.20772546673834974,
+        "id": "690fa273-0656-4b8a-b32c-594a71ac5b90",
+        "created_at": "2026-11-10T15:00:17.263863+00:00",
+        "updated_at": "2026-11-10T15:00:17.263863+00:00",
+        "score_debug": {
+          "combined_score": 0.20772546673834974,
+          "semantic_score": 0.47104785,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's mentee had a special moment at the pride event when they saw the support around them, which lit up their face.",
+        "score": 0.20759336673834974,
+        "id": "2ca2f5aa-1330-49e5-a58f-aa8d814b2a50",
+        "created_at": "2026-11-10T14:57:30.507340+00:00",
+        "updated_at": "2026-11-10T14:57:30.507340+00:00",
+        "score_debug": {
+          "combined_score": 0.20759336673834974,
+          "semantic_score": 0.4707176,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks before November 10, 2026, where she felt accepted and happy being around people who celebrated her, making it a top memory.",
+        "score": 0.2073426926565575,
+        "id": "e401cace-9c5e-4989-a0e3-e6511e64feee",
+        "created_at": "2026-11-10T14:56:04.353007+00:00",
+        "updated_at": "2026-11-10T14:56:04.353007+00:00",
+        "score_debug": {
+          "combined_score": 0.2073426926565575,
+          "semantic_score": 0.47042117,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks before November 10, 2026, where she felt accepted and happy being around people who celebrated her, making it a top memory.",
+        "score": 0.20733270465655748,
+        "id": "5589f52a-242e-4ab2-9a96-f281f58a9b22",
+        "created_at": "2026-11-10T14:56:14.693595+00:00",
+        "updated_at": "2026-11-10T14:56:14.693595+00:00",
+        "score_debug": {
+          "combined_score": 0.20733270465655748,
+          "semantic_score": 0.4703962,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is passionate about mental health and wants to help others through counseling and support groups, inspired by how they improved her life.",
+        "score": 0.2072372100291288,
+        "id": "959f0675-1957-4e39-83c5-e1b2eefe056a",
+        "created_at": "2026-11-10T14:51:54.249137+00:00",
+        "updated_at": "2026-11-10T14:51:54.249137+00:00",
+        "score_debug": {
+          "combined_score": 0.2072372100291288,
+          "semantic_score": 0.4699387,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline and her mentee attended an LGBT pride event last month, which was encouraging due to the love and acceptance present.",
+        "score": 0.20700119609631318,
+        "id": "5729fb34-60c6-47c9-af91-e14035acd4b5",
+        "created_at": "2026-11-10T14:57:10.677602+00:00",
+        "updated_at": "2026-11-10T14:57:10.677602+00:00",
+        "score_debug": {
+          "combined_score": 0.20700119609631318,
+          "semantic_score": 0.4692931,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline finds it helpful to have supportive people around her, which reassures her that she will be okay despite the challenges she faces.",
+        "score": 0.2069740467383497,
+        "id": "096197a5-108f-488a-be12-b6bc677fd09d",
+        "created_at": "2026-11-10T14:59:35.053160+00:00",
+        "updated_at": "2026-11-10T14:59:35.053160+00:00",
+        "score_debug": {
+          "combined_score": 0.2069740467383497,
+          "semantic_score": 0.4691693,
+          "bm25_score": 0.04653791959357706,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline struggled with mental health in the past, and the support she received was helpful, motivating her to pursue a career in counseling to assist others on their journeys.",
+        "score": 0.206943093968556,
+        "id": "7d938308-2d4a-4e63-a0cd-cc1f889f3125",
+        "created_at": "2026-11-10T14:54:08.750479+00:00",
+        "updated_at": "2026-11-10T14:54:08.750479+00:00",
+        "score_debug": {
+          "combined_score": 0.206943093968556,
+          "semantic_score": 0.469368,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline feels that finding a community where she is accepted, loved, and supported has made a huge difference in her life, helping her cope with her experiences.",
+        "score": 0.206838493968556,
+        "id": "7f87acf7-e6bc-4cdb-b197-44dea97fb5df",
+        "created_at": "2026-11-10T15:01:54.990925+00:00",
+        "updated_at": "2026-11-10T15:01:54.990925+00:00",
+        "score_debug": {
+          "combined_score": 0.206838493968556,
+          "semantic_score": 0.4691065,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline finds it helpful to have supportive people around her during challenging times.",
+        "score": 0.20683662937915898,
+        "id": "1c66e18e-0b57-4f62-b8fa-e961e7d50ccb",
+        "created_at": "2026-11-10T14:59:38.334546+00:00",
+        "updated_at": "2026-11-10T14:59:38.334546+00:00",
+        "score_debug": {
+          "combined_score": 0.20683662937915898,
+          "semantic_score": 0.46865582,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline struggled with mental health in the past, and the support she received was helpful, motivating her to pursue a career in counseling to help others on their journeys.",
+        "score": 0.206650733968556,
+        "id": "9e5d0240-415b-47cf-8d41-d74940cfb360",
+        "created_at": "2026-11-10T14:54:15.354331+00:00",
+        "updated_at": "2026-11-10T14:54:15.354331+00:00",
+        "score_debug": {
+          "combined_score": 0.206650733968556,
+          "semantic_score": 0.4686371,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed her desire to help make a difference in the LGBTQ community, acknowledging the progress made but recognizing that more work is needed.",
+        "score": 0.20663396874156076,
+        "id": "98beeb8a-e506-4bff-a1da-fc5949f28ccf",
+        "created_at": "2026-11-10T14:53:54.411580+00:00",
+        "updated_at": "2026-11-10T14:53:54.411580+00:00",
+        "score_debug": {
+          "combined_score": 0.20663396874156076,
+          "semantic_score": 0.46854067,
+          "bm25_score": 0.046316354601604694,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline primarily plays the guitar, stating that playing it helps her express her emotions.",
+        "score": 0.2066048760963132,
+        "id": "c0acbfaa-a9b3-439a-bb20-a00168bf1347",
+        "created_at": "2026-11-10T15:03:54.583809+00:00",
+        "updated_at": "2026-11-10T15:03:54.583809+00:00",
+        "score_debug": {
+          "combined_score": 0.2066048760963132,
+          "semantic_score": 0.4683023,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline believes that family moments are priceless and feels lucky for having them.",
+        "score": 0.206528141379159,
+        "id": "4d31946c-68af-4036-9531-a401e857ee9e",
+        "created_at": "2026-11-10T15:07:38.575182+00:00",
+        "updated_at": "2026-11-10T15:07:38.575182+00:00",
+        "score_debug": {
+          "combined_score": 0.206528141379159,
+          "semantic_score": 0.4678846,
+          "bm25_score": 0.04670785619560022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is planning to have an LGBTQ art show next month featuring her paintings.",
+        "score": 0.20651787065884503,
+        "id": "5fb254a5-6934-41ff-8046-ba2a141525de",
+        "created_at": "2026-11-10T14:57:24.007524+00:00",
+        "updated_at": "2026-11-10T14:57:24.007524+00:00",
+        "score_debug": {
+          "combined_score": 0.20651787065884503,
+          "semantic_score": 0.46797258,
+          "bm25_score": 0.04659419939481529,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference two days prior to November 10, 2026, where she connected with people who have gone through similar journeys and felt welcomed in the environment.",
+        "score": 0.2061968829240318,
+        "id": "bdd5f303-4d4a-492d-8d09-d68da217c3b7",
+        "created_at": "2026-11-10T14:54:08.745081+00:00",
+        "updated_at": "2026-11-10T14:54:08.745081+00:00",
+        "score_debug": {
+          "combined_score": 0.2061968829240318,
+          "semantic_score": 0.46761048,
+          "bm25_score": 0.046153830057782216,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is attending a transgender conference in November 2026, excited to meet others in the community and learn more about advocacy.",
+        "score": 0.20574773002912877,
+        "id": "6cfbe77d-b086-4e3a-adc8-4c7ce22174c2",
+        "created_at": "2026-11-10T14:52:42.348032+00:00",
+        "updated_at": "2026-11-10T14:52:42.348032+00:00",
+        "score_debug": {
+          "combined_score": 0.20574773002912877,
+          "semantic_score": 0.466215,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline treasures her necklace, a gift from her grandma in Sweden, which symbolizes love, faith, and strength, and serves as a reminder of her roots and family support.",
+        "score": 0.20553147506763708,
+        "id": "c5badb35-2361-409b-988b-b57d3c5b4bb1",
+        "created_at": "2026-11-10T14:51:21.566268+00:00",
+        "updated_at": "2026-11-10T14:51:21.566268+00:00",
+        "score_debug": {
+          "combined_score": 0.20553147506763708,
+          "semantic_score": 0.46756685,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline wants to pass on the support she received from friends, family, and role models during her transition to help others in similar situations.",
+        "score": 0.2055247856282978,
+        "id": "b253f7f6-2cf8-4948-b338-686fdc0c770a",
+        "created_at": "2026-11-10T15:08:15.516884+00:00",
+        "updated_at": "2026-11-10T15:08:15.516884+00:00",
+        "score_debug": {
+          "combined_score": 0.2055247856282978,
+          "semantic_score": 0.46571285,
+          "bm25_score": 0.046371216818447136,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ+ pride parade around November 3-4, 2026, where she felt a sense of belonging and was amazed by the happiness of the community and its growth.",
+        "score": 0.20525692065655748,
+        "id": "deb7fdca-efa6-4dd6-80d1-e060b191f8e7",
+        "created_at": "2026-11-10T14:52:02.315924+00:00",
+        "updated_at": "2026-11-10T14:52:02.315924+00:00",
+        "score_debug": {
+          "combined_score": 0.20525692065655748,
+          "semantic_score": 0.46520674,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed interest in whether she likes to paint as well.",
+        "score": 0.20525671641040696,
+        "id": "7b16e4c7-7518-4e68-8598-428907a60aee",
+        "created_at": "2026-11-10T15:00:51.067365+00:00",
+        "updated_at": "2026-11-10T15:00:51.067365+00:00",
+        "score_debug": {
+          "combined_score": 0.20525671641040696,
+          "semantic_score": 0.4645909,
+          "bm25_score": 0.04682299377372022,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline went hiking around November 3, 2026, and encountered a difficult situation with some people, which bothered her. She attempted to apologize to them afterward.",
+        "score": 0.20523915796855602,
+        "id": "9335337c-2dc2-431d-89d3-a14c497e90a6",
+        "created_at": "2026-11-10T15:01:15.659540+00:00",
+        "updated_at": "2026-11-10T15:01:15.659540+00:00",
+        "score_debug": {
+          "combined_score": 0.20523915796855602,
+          "semantic_score": 0.46510816,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline had a day out with friends last weekend where they went biking and saw some cool sights, describing the experience as refreshing.",
+        "score": 0.20521117396855598,
+        "id": "f0ec2044-c314-4181-aa25-c4d91f2a35a7",
+        "created_at": "2026-11-10T15:04:21.154932+00:00",
+        "updated_at": "2026-11-10T15:04:21.154932+00:00",
+        "score_debug": {
+          "combined_score": 0.20521117396855598,
+          "semantic_score": 0.4650382,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is mentoring a transgender teen and has been working on building their confidence and finding positive strategies, which has been effective.",
+        "score": 0.20512226996855598,
+        "id": "49f0b9ca-c512-49f1-a92f-8c0df8c7fcfa",
+        "created_at": "2026-11-10T14:57:10.675417+00:00",
+        "updated_at": "2026-11-10T14:57:10.675417+00:00",
+        "score_debug": {
+          "combined_score": 0.20512226996855598,
+          "semantic_score": 0.46481594,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline expressed sympathy for Melanie's recent injury and hopes she is okay, acknowledging that taking a break from pottery must have been tough for her.",
+        "score": 0.205083733968556,
+        "id": "44d914a9-97b1-4dff-b2c1-6a67fd0ce70a",
+        "created_at": "2026-11-10T15:05:55.105384+00:00",
+        "updated_at": "2026-11-10T15:05:55.105384+00:00",
+        "score_debug": {
+          "combined_score": 0.205083733968556,
+          "semantic_score": 0.4647196,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is considering working with trans individuals to help them accept themselves and support their mental health.",
+        "score": 0.2050363420291288,
+        "id": "b2ffe514-b6f1-40a4-b6cb-5f889c8be92c",
+        "created_at": "2026-11-10T14:51:59.919245+00:00",
+        "updated_at": "2026-11-10T14:51:59.919245+00:00",
+        "score_debug": {
+          "combined_score": 0.2050363420291288,
+          "semantic_score": 0.46443653,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks ago around late October 2026 and shared a photo of the event featuring a rainbow flag and people walking down the street.",
+        "score": 0.2050241429694466,
+        "id": "209829f3-de4b-41c6-bffb-552ed5301cc3",
+        "created_at": "2026-11-10T14:55:56.965119+00:00",
+        "updated_at": "2026-11-10T14:55:56.965119+00:00",
+        "score_debug": {
+          "combined_score": 0.2050241429694466,
+          "semantic_score": 0.46483812,
+          "bm25_score": 0.045994340171319245,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is considering working with trans individuals to help them accept themselves and support their mental health.",
+        "score": 0.20500848202912877,
+        "id": "3606cf6a-fd3a-4178-9c8c-3d179d485d24",
+        "created_at": "2026-11-10T14:52:07.149347+00:00",
+        "updated_at": "2026-11-10T14:52:07.149347+00:00",
+        "score_debug": {
+          "combined_score": 0.20500848202912877,
+          "semantic_score": 0.46436688,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline's art focuses on expressing her trans experience, aiming to show her story and help people understand the trans community.",
+        "score": 0.204965973968556,
+        "id": "ab823e11-ef5c-431e-aa6a-5a1d01188158",
+        "created_at": "2026-11-10T14:59:25.231353+00:00",
+        "updated_at": "2026-11-10T14:59:25.231353+00:00",
+        "score_debug": {
+          "combined_score": 0.204965973968556,
+          "semantic_score": 0.4644252,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline used to go horseback riding with her dad as a child, enjoying the experience of feeling the wind through the fields and developing a love for horses.",
+        "score": 0.20486634465655745,
+        "id": "fc85b4e9-6fc8-48d7-a49f-8fff6a8d08fb",
+        "created_at": "2026-11-10T15:00:45.547144+00:00",
+        "updated_at": "2026-11-10T15:00:45.547144+00:00",
+        "score_debug": {
+          "combined_score": 0.20486634465655745,
+          "semantic_score": 0.4642303,
+          "bm25_score": 0.04620766438909644,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline is considering working with transgender individuals to help them accept themselves and support their mental health.",
+        "score": 0.20481719002912877,
+        "id": "e0627813-4769-4e5b-8b35-36a9949ebfce",
+        "created_at": "2026-11-10T14:51:43.657564+00:00",
+        "updated_at": "2026-11-10T14:51:43.657564+00:00",
+        "score_debug": {
+          "combined_score": 0.20481719002912877,
+          "semantic_score": 0.46388865,
+          "bm25_score": 0.04642642782052465,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline wants to provide the same support she received to others in need, finding joy in bringing comfort and helping them grow.",
+        "score": 0.20473122996855603,
+        "id": "1a743f1e-d81a-4ffd-a7d0-68a410e9016b",
+        "created_at": "2026-11-10T15:08:10.414726+00:00",
+        "updated_at": "2026-11-10T15:08:10.414726+00:00",
+        "score_debug": {
+          "combined_score": 0.20473122996855603,
+          "semantic_score": 0.46383834,
+          "bm25_score": 0.04626183766909272,
+          "entity_boost": 0.0017278972522972397
+        }
+      },
+      {
+        "memory": "Caroline found the pride event awesome and felt encouraged by the love and acceptance surrounding her.",
+        "score": 0.2044036760963132,
+        "id": "8387ea34-76c6-43a9-8179-a51b5199fb91",
+        "created_at": "2026-11-10T14:57:07.429183+00:00",
+        "updated_at": "2026-11-10T14:57:07.429183+00:00",
+        "score_debug": {
+          "combined_score": 0.2044036760963132,
+          "semantic_score": 0.4627993,
+          "bm25_score": 0.04648199298848571,
+          "entity_boost": 0.0017278972522972397
+        }
+      }
+    ],
+    "search_latency_ms": 792.7,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_10": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "She hasn’t mentioned a romantic partner; she’s focused on surrounding herself with supportive friends and reports feeling happier with more genuine relationships.",
+      "memories_evaluated": 10,
+      "reason": "Saying she hasn’t mentioned a romantic partner implies she is single, which matches the gold answer."
+    },
+    "top_20": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "She is single, having recently gone through a tough breakup.",
+      "memories_evaluated": 20,
+      "reason": "The generated answer explicitly says she is single, matching the gold answer."
+    },
+    "top_50": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "Single (recent tough breakup; preparing to adopt as a single parent).",
+      "memories_evaluated": 50,
+      "reason": "The generated answer correctly states that Caroline is single, matching the gold answer, and extra details do not invalidate it."
+    },
+    "top_200": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "Single",
+      "memories_evaluated": 200,
+      "reason": "The generated answer matches the gold answer ('Single'), so it includes the correct item."
+    }
+  }
+}

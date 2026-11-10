@@ -1,0 +1,2651 @@
+{
+  "question_id": "conv0_q40",
+  "conversation_idx": 0,
+  "category": 1,
+  "category_name": "multi-hop",
+  "question": "How many times has Melanie gone to the beach in 2023?",
+  "ground_truth_answer": "2",
+  "evidence": [
+    "D10:8",
+    "D6:16"
+  ],
+  "user_id": "locomo_0_0ff46ffe",
+  "reference_date": "9:55 am on 22 October, 2023",
+  "retrieval": {
+    "search_query": "How many times has Melanie gone to the beach in 2023?",
+    "search_results": [
+      {
+        "memory": "Melanie's family usually goes to the beach once or twice a year, making those visits special for spending time together and relaxing.",
+        "score": 0.6665902709164464,
+        "id": "12b1537e-c84a-446f-b533-e2caefaed4ce",
+        "created_at": "2026-11-10T14:58:10.321223+00:00",
+        "updated_at": "2026-11-10T14:58:10.321223+00:00",
+        "score_debug": {
+          "combined_score": 0.6665902709164464,
+          "semantic_score": 0.6606021,
+          "bm25_score": 0.9999981360455226,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's kids were very happy at the beach, and seeing their joy was the best part of the trip. They usually go to the beach once or twice a year, making those visits special for family time.",
+        "score": 0.6463286556399815,
+        "id": "c07aa73d-44df-4bd5-9ced-1fe7640cee99",
+        "created_at": "2026-11-10T14:58:05.259901+00:00",
+        "updated_at": "2026-11-10T14:58:05.259901+00:00",
+        "score_debug": {
+          "combined_score": 0.6463286556399815,
+          "semantic_score": 0.6100846,
+          "bm25_score": 0.9998615978543605,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie and her kids recently went to the beach, where the kids had a blast playing.",
+        "score": 0.6415419570532327,
+        "id": "80941ca7-1366-431d-b115-7fa79680543b",
+        "created_at": "2026-11-10T14:58:00.740053+00:00",
+        "updated_at": "2026-11-10T14:58:00.740053+00:00",
+        "score_debug": {
+          "combined_score": 0.6415419570532327,
+          "semantic_score": 0.5981681,
+          "bm25_score": 0.9998113513874883,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a beach with footprints in the sand and a blue sky, capturing a serene moment from her beach visit.",
+        "score": 0.6331279226607123,
+        "id": "966ebca6-5ae3-4655-ab59-1c9a982005cd",
+        "created_at": "2026-11-10T14:58:30.932122+00:00",
+        "updated_at": "2026-11-10T14:58:30.932122+00:00",
+        "score_debug": {
+          "combined_score": 0.6331279226607123,
+          "semantic_score": 0.59307563,
+          "bm25_score": 0.9838687354061874,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a sand castle on the beach with a blue sky, highlighting a memorable moment from their beach visit.",
+        "score": 0.6164674706607123,
+        "id": "7c57acb6-6a54-4b77-b476-fb907bb18244",
+        "created_at": "2026-11-10T14:58:05.262474+00:00",
+        "updated_at": "2026-11-10T14:58:05.262474+00:00",
+        "score_debug": {
+          "combined_score": 0.6164674706607123,
+          "semantic_score": 0.5514245,
+          "bm25_score": 0.9838687354061874,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie described her recent family camping trip around November 3-4, 2026 as an awesome time where they explored nature, roasted marshmallows around the campfire, and went on a hike with amazing views.",
+        "score": 0.6111459950391982,
+        "id": "e62895ab-096b-4953-bbea-97f6d0c6f197",
+        "created_at": "2026-11-10T14:51:30.828535+00:00",
+        "updated_at": "2026-11-10T14:51:30.828535+00:00",
+        "score_debug": {
+          "combined_score": 0.6111459950391982,
+          "semantic_score": 0.5227428,
+          "bm25_score": 0.9992467463524021,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her family standing on the beach at sunset, highlighting a joyful moment of togetherness.",
+        "score": 0.6021026482824033,
+        "id": "49fa6064-4bbf-48cc-8d5e-d6a7142c34df",
+        "created_at": "2026-11-10T14:58:43.678821+00:00",
+        "updated_at": "2026-11-10T14:58:43.678821+00:00",
+        "score_debug": {
+          "combined_score": 0.6021026482824033,
+          "semantic_score": 0.5365186,
+          "bm25_score": 0.9628625794604149,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie had a quiet weekend after going camping with her family two weekends ago, enjoying time unplugged and hanging out with her kids.",
+        "score": 0.5959157762897194,
+        "id": "76713d87-af54-42cb-a55c-ec9a83d7d1d1",
+        "created_at": "2026-11-10T14:56:50.902299+00:00",
+        "updated_at": "2026-11-10T14:56:50.902299+00:00",
+        "score_debug": {
+          "combined_score": 0.5959157762897194,
+          "semantic_score": 0.48422182,
+          "bm25_score": 0.9996921794787049,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie had a quiet weekend after going camping with her family two weekends ago, enjoying time unplugged and with the kids.",
+        "score": 0.5937067137873032,
+        "id": "1fe52b1a-cb16-4fcd-9e4c-73a598b50fc3",
+        "created_at": "2026-11-10T14:56:55.107942+00:00",
+        "updated_at": "2026-11-10T14:56:55.107942+00:00",
+        "score_debug": {
+          "combined_score": 0.5937067137873032,
+          "semantic_score": 0.4786839,
+          "bm25_score": 0.9997074432226645,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie went on another camping trip in the forest around November 10, 2026, where they roasted marshmallows around a campfire.",
+        "score": 0.5930665037419305,
+        "id": "848db87a-f0ea-4fb9-ab50-1f5262472723",
+        "created_at": "2026-11-10T14:56:36.250616+00:00",
+        "updated_at": "2026-11-10T14:56:36.250616+00:00",
+        "score_debug": {
+          "combined_score": 0.5930665037419305,
+          "semantic_score": 0.5496836,
+          "bm25_score": 0.9271072181092327,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her kids playing on the beach with a kite, highlighting a fun family moment.",
+        "score": 0.5896569482824032,
+        "id": "4f1cab85-b21e-4709-a1af-7458764d6639",
+        "created_at": "2026-11-10T14:58:00.742253+00:00",
+        "updated_at": "2026-11-10T14:58:00.742253+00:00",
+        "score_debug": {
+          "combined_score": 0.5896569482824032,
+          "semantic_score": 0.50540435,
+          "bm25_score": 0.9628625794604149,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie is going swimming with her kids after the conversation.",
+        "score": 0.589262887142301,
+        "id": "8f604390-c51f-48e0-802c-c74a3a7a1501",
+        "created_at": "2026-11-10T14:48:37.758305+00:00",
+        "updated_at": "2026-11-10T14:48:37.758305+00:00",
+        "score_debug": {
+          "combined_score": 0.589262887142301,
+          "semantic_score": 0.501317,
+          "bm25_score": 0.965964776610159,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her family camping at the beach, emphasizing that camping brings them closer together.",
+        "score": 0.5839239103594611,
+        "id": "ec92de33-6c1d-4262-9d18-9bdd5ccc01da",
+        "created_at": "2026-11-10T14:53:43.639592+00:00",
+        "updated_at": "2026-11-10T14:53:43.639592+00:00",
+        "score_debug": {
+          "combined_score": 0.5839239103594611,
+          "semantic_score": 0.48969662,
+          "bm25_score": 0.9642377146530594,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie took her family camping in the mountains around November 3-4, 2026, and described it as a really nice time together.",
+        "score": 0.581039342197721,
+        "id": "390de2a2-94f5-4601-b1b0-e753a54d7794",
+        "created_at": "2026-11-10T14:51:25.974222+00:00",
+        "updated_at": "2026-11-10T14:51:25.974222+00:00",
+        "score_debug": {
+          "combined_score": 0.581039342197721,
+          "semantic_score": 0.5385023,
+          "bm25_score": 0.9082206142487091,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie and her kids went hiking in the mountains on November 9, 2026, where they had fun and relaxed after a road trip.",
+        "score": 0.5808241797049075,
+        "id": "4b118c5c-3c7b-417c-a06b-cd0a63b3abb2",
+        "created_at": "2026-11-10T15:07:19.839718+00:00",
+        "updated_at": "2026-11-10T15:07:19.839718+00:00",
+        "score_debug": {
+          "combined_score": 0.5808241797049075,
+          "semantic_score": 0.52149487,
+          "bm25_score": 0.9246901380166753,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared an image of her wedding vows ceremony, showing her and her partner holding hands on a beach.",
+        "score": 0.5765990362824034,
+        "id": "8e90c964-1c47-429a-a70f-d4d07fdecdc8",
+        "created_at": "2026-11-10T14:55:54.661463+00:00",
+        "updated_at": "2026-11-10T14:55:54.661463+00:00",
+        "score_debug": {
+          "combined_score": 0.5765990362824034,
+          "semantic_score": 0.47275957,
+          "bm25_score": 0.9628625794604149,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie took her kids to a park on November 9, 2026, where they had fun exploring and playing, enjoying their time outdoors.",
+        "score": 0.5761573116373103,
+        "id": "9fa6e44e-0bca-4d5b-8e8d-3048df8f703d",
+        "created_at": "2026-11-10T15:03:04.740098+00:00",
+        "updated_at": "2026-11-10T15:03:04.740098+00:00",
+        "score_debug": {
+          "combined_score": 0.5761573116373103,
+          "semantic_score": 0.5320646,
+          "bm25_score": 0.9024532378476825,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie feels that Caroline's sunset painting perfectly captures the serene moment she experienced at the beach, conveying a sense of peace.",
+        "score": 0.5681966892663198,
+        "id": "b036cd0c-86a4-42ae-bef8-234c4f32fb45",
+        "created_at": "2026-11-10T15:01:34.654499+00:00",
+        "updated_at": "2026-11-10T15:01:34.654499+00:00",
+        "score_debug": {
+          "combined_score": 0.5681966892663198,
+          "semantic_score": 0.45316452,
+          "bm25_score": 0.9614517619202062,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline reached out to Melanie, mentioning that a lot has been going on since they last talked.",
+        "score": 0.5670881582885647,
+        "id": "de4a8ab0-963e-4a56-af38-2c18142851c6",
+        "created_at": "2026-11-10T14:52:45.692889+00:00",
+        "updated_at": "2026-11-10T14:52:45.692889+00:00",
+        "score_debug": {
+          "combined_score": 0.5670881582885647,
+          "semantic_score": 0.4467566,
+          "bm25_score": 0.9650883544758185,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie went camping with her kids a few weeks ago, enjoying exploring the forest and hiking, which she found refreshing for the soul.",
+        "score": 0.5632182959581906,
+        "id": "53d55d6f-b18f-4983-8a1c-ce0aeeea8ebf",
+        "created_at": "2026-11-10T15:04:27.979064+00:00",
+        "updated_at": "2026-11-10T15:04:27.979064+00:00",
+        "score_debug": {
+          "combined_score": 0.5632182959581906,
+          "semantic_score": 0.4824557,
+          "bm25_score": 0.9197145986498829,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been married for 5 years as of November 10, 2026, and feels that time has flown since her wedding day.",
+        "score": 0.5612623421977211,
+        "id": "be396cab-1797-4a84-93d7-bed55a9e137a",
+        "created_at": "2026-11-10T14:51:04.099289+00:00",
+        "updated_at": "2026-11-10T14:51:04.099289+00:00",
+        "score_debug": {
+          "combined_score": 0.5612623421977211,
+          "semantic_score": 0.4890598,
+          "bm25_score": 0.9082206142487091,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline recently finished a vibrant sunset beach painting, which she shared as a photo on a small easel, and Melanie praised the vivid colors, noting they resemble a real sunset.",
+        "score": 0.555517910212276,
+        "id": "4e0c8bac-db67-4907-ada0-e9cb2ab83b33",
+        "created_at": "2026-11-10T15:01:29.054790+00:00",
+        "updated_at": "2026-11-10T15:01:29.054790+00:00",
+        "score_debug": {
+          "combined_score": 0.555517910212276,
+          "semantic_score": 0.42515257,
+          "bm25_score": 0.9577667642850968,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie took her kids to the museum on November 9, 2026, and enjoyed spending time with them while seeing their excitement at the dinosaur exhibit.",
+        "score": 0.5510278796373104,
+        "id": "6c98cbb2-3f40-4442-84f5-113ba48f332b",
+        "created_at": "2026-11-10T14:52:54.355662+00:00",
+        "updated_at": "2026-11-10T14:52:54.355662+00:00",
+        "score_debug": {
+          "combined_score": 0.5510278796373104,
+          "semantic_score": 0.46924102,
+          "bm25_score": 0.9024532378476825,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie enjoys spending quality time with her family in nature, emphasizing that it is a great way to relax and recharge.",
+        "score": 0.5496351933956092,
+        "id": "c8165b1c-7316-4b55-9734-7cdc78bc052f",
+        "created_at": "2026-11-10T15:07:36.812019+00:00",
+        "updated_at": "2026-11-10T15:07:36.812019+00:00",
+        "score_debug": {
+          "combined_score": 0.5496351933956092,
+          "semantic_score": 0.46285126,
+          "bm25_score": 0.9053612822434295,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie feels that having her family around helps her a lot during hard times, making those times easier.",
+        "score": 0.5441322872397241,
+        "id": "6c1e4a77-bf95-45c2-8041-243d35cf17b8",
+        "created_at": "2026-11-10T15:07:15.123272+00:00",
+        "updated_at": "2026-11-10T15:07:15.123272+00:00",
+        "score_debug": {
+          "combined_score": 0.5441322872397241,
+          "semantic_score": 0.40074423,
+          "bm25_score": 0.9537110468537168,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline painted her vibrant sunset beach painting after visiting the beach around November 3, 2026, where she experienced the calming sight of the sun dipping below the horizon and wanted to capture that feeling.",
+        "score": 0.5418734833823284,
+        "id": "25e68e41-17ad-4e8f-a968-bc7e80707734",
+        "created_at": "2026-11-10T15:01:31.526744+00:00",
+        "updated_at": "2026-11-10T15:01:31.526744+00:00",
+        "score_debug": {
+          "combined_score": 0.5418734833823284,
+          "semantic_score": 0.4326454,
+          "bm25_score": 0.9220383084558212,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie cherishes time spent with her family, expressing that it is when she truly feels alive and happy.",
+        "score": 0.5391079337637001,
+        "id": "1e420b34-a8d2-4c9d-bc3d-65ff32ff0fbd",
+        "created_at": "2026-11-10T14:51:10.126678+00:00",
+        "updated_at": "2026-11-10T14:51:10.126678+00:00",
+        "score_debug": {
+          "combined_score": 0.5391079337637001,
+          "semantic_score": 0.4322625,
+          "bm25_score": 0.9096318931636569,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie admires her children's resilience in tough situations and feels they give her the strength to keep going.",
+        "score": 0.5389056773372835,
+        "id": "cc992005-ecef-402b-861f-a5d1f0258381",
+        "created_at": "2026-11-10T15:07:02.782914+00:00",
+        "updated_at": "2026-11-10T15:07:02.782914+00:00",
+        "score_debug": {
+          "combined_score": 0.5389056773372835,
+          "semantic_score": 0.3767442,
+          "bm25_score": 0.964644552097615,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline has been busy painting and recently finished a vibrant sunset beach painting inspired by her visit to the beach last week.",
+        "score": 0.5314190550581535,
+        "id": "a91ac01e-338e-4a6e-8604-e1656a0977a6",
+        "created_at": "2026-11-10T15:01:42.096241+00:00",
+        "updated_at": "2026-11-10T15:01:42.096241+00:00",
+        "score_debug": {
+          "combined_score": 0.5314190550581535,
+          "semantic_score": 0.40029126,
+          "bm25_score": 0.9282563776453838,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been busy painting and recently finished a vibrant sunset beach painting, inspired by her visit to the beach last week.",
+        "score": 0.5311981110581535,
+        "id": "963e8ce3-e836-4e37-89f6-36ce1c1632e5",
+        "created_at": "2026-11-10T15:01:47.597390+00:00",
+        "updated_at": "2026-11-10T15:01:47.597390+00:00",
+        "score_debug": {
+          "combined_score": 0.5311981110581535,
+          "semantic_score": 0.3997389,
+          "bm25_score": 0.9282563776453838,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie is carving out some me-time each day by running, reading, or playing her violin, which refreshes her and helps her stay present for her family.",
+        "score": 0.5303620916373104,
+        "id": "6bf61a7c-f271-4bca-bd89-cfdd58947cba",
+        "created_at": "2026-11-10T14:48:50.909106+00:00",
+        "updated_at": "2026-11-10T14:48:50.909106+00:00",
+        "score_debug": {
+          "combined_score": 0.5303620916373104,
+          "semantic_score": 0.41757655,
+          "bm25_score": 0.9024532378476825,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie had a great time at the café last weekend, despite the serious sign she shared, and appreciated Caroline's concern for her.",
+        "score": 0.5303320537637001,
+        "id": "a6526ad9-2306-46c0-adb4-b0426e4d6d5e",
+        "created_at": "2026-11-10T15:05:22.593144+00:00",
+        "updated_at": "2026-11-10T15:05:22.593144+00:00",
+        "score_debug": {
+          "combined_score": 0.5303320537637001,
+          "semantic_score": 0.4103228,
+          "bm25_score": 0.9096318931636569,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been reading a book recommended by Caroline and painting to keep busy during tough times.",
+        "score": 0.529534492258448,
+        "id": "c4e775b8-50b6-4dbd-ad16-05438303f4d2",
+        "created_at": "2026-11-10T15:06:27.133772+00:00",
+        "updated_at": "2026-11-10T15:06:27.133772+00:00",
+        "score_debug": {
+          "combined_score": 0.529534492258448,
+          "semantic_score": 0.4069298,
+          "bm25_score": 0.9110309894005263,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a sign at a café that brought her happiness, reflecting on a good time spent there with her kids the previous weekend.",
+        "score": 0.526337891640757,
+        "id": "09c2c0cf-ac55-429f-b849-2d83f8515d0e",
+        "created_at": "2026-11-10T15:05:17.032214+00:00",
+        "updated_at": "2026-11-10T15:05:17.032214+00:00",
+        "score_debug": {
+          "combined_score": 0.526337891640757,
+          "semantic_score": 0.406056,
+          "bm25_score": 0.9039132878562989,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's family has been a great source of love and support during tough times, which she finds awesome.",
+        "score": 0.5248574522584479,
+        "id": "bbd8745e-522f-4cac-be6d-453e6bbe8cb7",
+        "created_at": "2026-11-10T14:56:36.247994+00:00",
+        "updated_at": "2026-11-10T14:56:36.247994+00:00",
+        "score_debug": {
+          "combined_score": 0.5248574522584479,
+          "semantic_score": 0.3952372,
+          "bm25_score": 0.9110309894005263,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline has been busy painting and recently finished a vibrant sunset beach painting inspired by her visit to the beach last week, where she was captivated by the colors of the sunset.",
+        "score": 0.5228724276170033,
+        "id": "86793756-fc01-43f8-b773-dcc888dddd00",
+        "created_at": "2026-11-10T15:01:51.460447+00:00",
+        "updated_at": "2026-11-10T15:01:51.460447+00:00",
+        "score_debug": {
+          "combined_score": 0.5228724276170033,
+          "semantic_score": 0.38096303,
+          "bm25_score": 0.9262180390425082,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed that family moments are special and was glad Melanie had a great time on her recent camping trip with family.",
+        "score": 0.5205543921534297,
+        "id": "f1708f2b-1e9a-460c-9760-bbce89abbe9f",
+        "created_at": "2026-11-10T14:51:32.677786+00:00",
+        "updated_at": "2026-11-10T14:51:32.677786+00:00",
+        "score_debug": {
+          "combined_score": 0.5205543921534297,
+          "semantic_score": 0.38871348,
+          "bm25_score": 0.9067970591379809,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie if she has any experience with adoption or knows anyone who has gone through the process.",
+        "score": 0.5203308785042104,
+        "id": "48b021a4-79e4-4063-8337-d73f781d3209",
+        "created_at": "2026-11-10T15:05:35.671302+00:00",
+        "updated_at": "2026-11-10T15:05:35.671302+00:00",
+        "score_debug": {
+          "combined_score": 0.5203308785042104,
+          "semantic_score": 0.36430752,
+          "bm25_score": 0.9306442350149324,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline praised Melanie for doing an awesome job looking after herself and her family, emphasizing the importance of taking time for oneself.",
+        "score": 0.519534211640757,
+        "id": "4f3b1d62-ef81-4f59-a48f-79b2bc4b1337",
+        "created_at": "2026-11-10T14:48:52.706972+00:00",
+        "updated_at": "2026-11-10T14:48:52.706972+00:00",
+        "score_debug": {
+          "combined_score": 0.519534211640757,
+          "semantic_score": 0.3890468,
+          "bm25_score": 0.9039132878562989,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie had a great time at the café last weekend, which included thoughtful signs that brought her happiness, despite a serious-looking sign that was just a precaution.",
+        "score": 0.5188536516407569,
+        "id": "9118120c-5b15-40c0-9314-3f729d2a7ef0",
+        "created_at": "2026-11-10T15:05:27.606814+00:00",
+        "updated_at": "2026-11-10T15:05:27.606814+00:00",
+        "score_debug": {
+          "combined_score": 0.5188536516407569,
+          "semantic_score": 0.3873454,
+          "bm25_score": 0.9039132878562989,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed that exploring nature and spending family time is special, responding positively to Melanie's description of their family activities.",
+        "score": 0.5153871729246633,
+        "id": "06a81fed-a057-4e92-97f8-27c96f2cf045",
+        "created_at": "2026-11-10T14:56:43.310034+00:00",
+        "updated_at": "2026-11-10T14:56:43.310034+00:00",
+        "score_debug": {
+          "combined_score": 0.5153871729246633,
+          "semantic_score": 0.38161135,
+          "bm25_score": 0.9009811410660646,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline finds the idea of waking up to nature peaceful and calming, appreciating the quality and tranquil time Melanie spends with her family.",
+        "score": 0.5116436649246633,
+        "id": "aa3eebcb-04ee-48b9-ba1e-85e4bd2785b2",
+        "created_at": "2026-11-10T15:07:34.131285+00:00",
+        "updated_at": "2026-11-10T15:07:34.131285+00:00",
+        "score_debug": {
+          "combined_score": 0.5116436649246633,
+          "semantic_score": 0.37225258,
+          "bm25_score": 0.9009811410660646,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline was inspired to paint her vibrant sunset beach painting after visiting the beach last week, where she experienced the calming sight of the sun dipping below the horizon.",
+        "score": 0.5111857046942023,
+        "id": "efb55c01-3d67-44bd-8c19-904ce3344c07",
+        "created_at": "2026-11-10T15:01:34.651566+00:00",
+        "updated_at": "2026-11-10T15:01:34.651566+00:00",
+        "score_debug": {
+          "combined_score": 0.5111857046942023,
+          "semantic_score": 0.35312426,
+          "bm25_score": 0.9248400017355057,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed that having supportive people to lean on helps during tougher times, showing her appreciation for Melanie's support.",
+        "score": 0.5079234161534297,
+        "id": "da83450e-a1ac-4920-959e-6b2cf03b05b4",
+        "created_at": "2026-11-10T15:07:12.548083+00:00",
+        "updated_at": "2026-11-10T15:07:12.548083+00:00",
+        "score_debug": {
+          "combined_score": 0.5079234161534297,
+          "semantic_score": 0.35713604,
+          "bm25_score": 0.9067970591379809,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline painted a sunset after visiting the beach around November 3, 2026, capturing the calming colors and feelings of the moment.",
+        "score": 0.5019305649681935,
+        "id": "5b2909e2-6354-43e1-9cde-2eab9947da78",
+        "created_at": "2026-11-10T15:02:04.538523+00:00",
+        "updated_at": "2026-11-10T15:02:04.538523+00:00",
+        "score_debug": {
+          "combined_score": 0.5019305649681935,
+          "semantic_score": 0.41528445,
+          "bm25_score": 0.8395419624204841,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a stunning photo of a beach with a fence and a sunset from her biking trip last weekend.",
+        "score": 0.49636057265213784,
+        "id": "cbc721be-87c5-4610-8fba-18c85d85c0e6",
+        "created_at": "2026-11-10T15:04:21.157309+00:00",
+        "updated_at": "2026-11-10T15:04:21.157309+00:00",
+        "score_debug": {
+          "combined_score": 0.49636057265213784,
+          "semantic_score": 0.38928652,
+          "bm25_score": 0.8516149116303446,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been busy painting and recently finished a vibrant sunset beach painting, which she shared as a photo on a small easel.",
+        "score": 0.4707981947693732,
+        "id": "58513a32-10ce-4fc0-b492-4862fe595966",
+        "created_at": "2026-11-10T15:01:26.724799+00:00",
+        "updated_at": "2026-11-10T15:01:26.724799+00:00",
+        "score_debug": {
+          "combined_score": 0.4707981947693732,
+          "semantic_score": 0.3333857,
+          "bm25_score": 0.8436097869234329,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline described the experience of watching the sun dip below the horizon at the beach as amazing and calming, which inspired her painting.",
+        "score": 0.4632239586729465,
+        "id": "8ac792e1-830a-4f34-af7c-dfdcf7df7983",
+        "created_at": "2026-11-10T15:01:42.098595+00:00",
+        "updated_at": "2026-11-10T15:01:42.098595+00:00",
+        "score_debug": {
+          "combined_score": 0.4632239586729465,
+          "semantic_score": 0.31243235,
+          "bm25_score": 0.8456275466823663,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "From 'Becoming Nicole', Caroline learned about self-acceptance, finding support, and that tough times don't last, emphasizing the existence of hope and love.",
+        "score": 0.4625249350965845,
+        "id": "04ddc9ec-18f7-4b14-b9d2-d545f53f7d8f",
+        "created_at": "2026-11-10T14:54:31.487090+00:00",
+        "updated_at": "2026-11-10T14:54:31.487090+00:00",
+        "score_debug": {
+          "combined_score": 0.4625249350965845,
+          "semantic_score": 0.22257596,
+          "bm25_score": 0.6670757009063804,
+          "entity_boost": 0.266660676835081
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of her vibrant sunset beach painting on a small easel, showcasing the vivid colors of the sunset.",
+        "score": 0.4580144667693732,
+        "id": "95b65aac-ef61-4ed4-be62-8d47e0ea4037",
+        "created_at": "2026-11-10T15:01:51.463001+00:00",
+        "updated_at": "2026-11-10T15:01:51.463001+00:00",
+        "score_debug": {
+          "combined_score": 0.4580144667693732,
+          "semantic_score": 0.30142638,
+          "bm25_score": 0.8436097869234329,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is going to a transgender conference in November 2026, expressing excitement about meeting others in the community and learning more about advocacy.",
+        "score": 0.45619988027861746,
+        "id": "9b35bee3-6f8b-49dd-8b42-70d0237ed2ec",
+        "created_at": "2026-11-10T14:52:48.089307+00:00",
+        "updated_at": "2026-11-10T14:52:48.089307+00:00",
+        "score_debug": {
+          "combined_score": 0.45619988027861746,
+          "semantic_score": 0.29676512,
+          "bm25_score": 0.8437345806965435,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline learned from 'Becoming Nicole' the importance of self-acceptance, finding support, and that tough times don't last, emphasizing that hope and love exist.",
+        "score": 0.45535670309011717,
+        "id": "4bee87e4-44ac-4861-815e-1350e8ac4071",
+        "created_at": "2026-11-10T14:54:36.843679+00:00",
+        "updated_at": "2026-11-10T14:54:36.843679+00:00",
+        "score_debug": {
+          "combined_score": 0.45535670309011717,
+          "semantic_score": 0.20747933,
+          "bm25_score": 0.6642517508902119,
+          "entity_boost": 0.266660676835081
+        }
+      },
+      {
+        "memory": "Caroline learned about self-acceptance and finding support from 'Becoming Nicole' by Amy Ellis Nutt, which also taught her that tough times don't last and that hope and love exist.",
+        "score": 0.45306446894956787,
+        "id": "a1d0c0e0-b9d0-4a71-99dc-92968fe61797",
+        "created_at": "2026-11-10T14:54:25.278261+00:00",
+        "updated_at": "2026-11-10T14:54:25.278261+00:00",
+        "score_debug": {
+          "combined_score": 0.45306446894956787,
+          "semantic_score": 0.20456971,
+          "bm25_score": 0.6614307855388386,
+          "entity_boost": 0.266660676835081
+        }
+      },
+      {
+        "memory": "Caroline's mentoring program for LGBTQ youth is going great as of November 10, 2026. She has met some amazing young individuals and finds it inspiring to support them, noting their resilience and strength.",
+        "score": 0.4385625060489461,
+        "id": "ce86e4ea-9ebc-46f9-aaed-004ae857a348",
+        "created_at": "2026-11-10T14:56:57.340946+00:00",
+        "updated_at": "2026-11-10T14:56:57.340946+00:00",
+        "score_debug": {
+          "combined_score": 0.4385625060489461,
+          "semantic_score": 0.2620461,
+          "bm25_score": 0.8343601651223651,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline's mentoring program for LGBTQ youth is going great as of November 10, 2026, where she has met amazing young individuals and finds it inspiring to support them, noting their resilience and strength.",
+        "score": 0.43733898604894605,
+        "id": "9e4cfa85-1818-460a-9f80-1907e8a0a081",
+        "created_at": "2026-11-10T14:57:17.122692+00:00",
+        "updated_at": "2026-11-10T14:57:17.122692+00:00",
+        "score_debug": {
+          "combined_score": 0.43733898604894605,
+          "semantic_score": 0.2589873,
+          "bm25_score": 0.8343601651223651,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline went hiking the week of November 3, 2026, and had a negative encounter with some people, which bothered her enough to try to apologize to them.",
+        "score": 0.4234906111516126,
+        "id": "7185569a-5843-4fef-af35-874ad52dfb91",
+        "created_at": "2026-11-10T15:01:24.009542+00:00",
+        "updated_at": "2026-11-10T15:01:24.009542+00:00",
+        "score_debug": {
+          "combined_score": 0.4234906111516126,
+          "semantic_score": 0.3396581,
+          "bm25_score": 0.7190684278790315,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline went hiking around November 3, 2026, and encountered some people that upset her, prompting her to try to apologize to them.",
+        "score": 0.4153446991516126,
+        "id": "c5396487-b5c1-4a1e-b5f1-5a74ee0bd499",
+        "created_at": "2026-11-10T15:01:11.799179+00:00",
+        "updated_at": "2026-11-10T15:01:11.799179+00:00",
+        "score_debug": {
+          "combined_score": 0.4153446991516126,
+          "semantic_score": 0.31929332,
+          "bm25_score": 0.7190684278790315,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline went hiking around November 3, 2026, and encountered a difficult situation with some people, which bothered her. She attempted to apologize to them afterward.",
+        "score": 0.4135505083076588,
+        "id": "9335337c-2dc2-431d-89d3-a14c497e90a6",
+        "created_at": "2026-11-10T15:01:15.659540+00:00",
+        "updated_at": "2026-11-10T15:01:15.659540+00:00",
+        "score_debug": {
+          "combined_score": 0.4135505083076588,
+          "semantic_score": 0.31751424,
+          "bm25_score": 0.7163620307691471,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference two days prior to November 10, 2026, where she connected with people who have gone through similar journeys and felt welcomed in the environment.",
+        "score": 0.40256181751925607,
+        "id": "bdd5f303-4d4a-492d-8d09-d68da217c3b7",
+        "created_at": "2026-11-10T14:54:08.745081+00:00",
+        "updated_at": "2026-11-10T14:54:08.745081+00:00",
+        "score_debug": {
+          "combined_score": 0.40256181751925607,
+          "semantic_score": 0.29545948,
+          "bm25_score": 0.71094506379814,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she connected with people who have gone through similar journeys and felt welcomed in the environment.",
+        "score": 0.4022377323076588,
+        "id": "2cf10e26-bf57-4823-bf63-06dc318429d8",
+        "created_at": "2026-11-10T14:54:00.190557+00:00",
+        "updated_at": "2026-11-10T14:54:00.190557+00:00",
+        "score_debug": {
+          "combined_score": 0.4022377323076588,
+          "semantic_score": 0.2892323,
+          "bm25_score": 0.7163620307691471,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline had a day out with friends last weekend where they went biking and saw some cool sights, describing the experience as refreshing.",
+        "score": 0.4010608323076588,
+        "id": "f0ec2044-c314-4181-aa25-c4d91f2a35a7",
+        "created_at": "2026-11-10T15:04:21.154932+00:00",
+        "updated_at": "2026-11-10T15:04:21.154932+00:00",
+        "score_debug": {
+          "combined_score": 0.4010608323076588,
+          "semantic_score": 0.28629005,
+          "bm25_score": 0.7163620307691471,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she connected with people who have gone through similar journeys and felt welcomed.",
+        "score": 0.39966214315161264,
+        "id": "b0f8a8aa-69fa-4e1b-b673-d305b65a0dd7",
+        "created_at": "2026-11-10T14:53:54.404369+00:00",
+        "updated_at": "2026-11-10T14:53:54.404369+00:00",
+        "score_debug": {
+          "combined_score": 0.39966214315161264,
+          "semantic_score": 0.28008693,
+          "bm25_score": 0.7190684278790315,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she connected with people who have gone through similar journeys and felt it was a welcoming environment.",
+        "score": 0.39915950430765884,
+        "id": "bae59588-5f74-493a-bc1d-eebeac0576b1",
+        "created_at": "2026-11-10T14:54:15.349014+00:00",
+        "updated_at": "2026-11-10T14:54:15.349014+00:00",
+        "score_debug": {
+          "combined_score": 0.39915950430765884,
+          "semantic_score": 0.28153673,
+          "bm25_score": 0.7163620307691471,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference on November 8, 2026, where she met and connected with people who have gone through similar journeys, feeling totally accepted in a welcoming environment.",
+        "score": 0.39834718196284513,
+        "id": "abeb6be4-df52-41c2-9447-70e06e64ead9",
+        "created_at": "2026-11-10T14:53:46.381614+00:00",
+        "updated_at": "2026-11-10T14:53:46.381614+00:00",
+        "score_debug": {
+          "combined_score": 0.39834718196284513,
+          "semantic_score": 0.29034418,
+          "bm25_score": 0.7055237749071127,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended an LGBTQ conference two days prior to November 10, 2026, where she felt welcomed and connected with people who have gone through similar journeys, emphasizing the importance of community support during her transition.",
+        "score": 0.38394986470243203,
+        "id": "063b9fa2-e1cf-435a-a59f-88fcd9497012",
+        "created_at": "2026-11-10T14:53:48.313576+00:00",
+        "updated_at": "2026-11-10T14:53:48.313576+00:00",
+        "score_debug": {
+          "combined_score": 0.38394986470243203,
+          "semantic_score": 0.26248655,
+          "bm25_score": 0.6973881117560801,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been looking into counseling and mental health as a career to help people who have gone through similar experiences as her.",
+        "score": 0.3749187367884431,
+        "id": "7d0d379b-a222-474e-8505-4a3406de6fa7",
+        "created_at": "2026-11-10T14:51:37.348923+00:00",
+        "updated_at": "2026-11-10T14:51:37.348923+00:00",
+        "score_debug": {
+          "combined_score": 0.3749187367884431,
+          "semantic_score": 0.21282142,
+          "bm25_score": 0.7244754219711077,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline and her mentee had a great time at the LGBT pride event last month.",
+        "score": 0.37435475945117225,
+        "id": "b597e95b-ba93-4c4a-a04c-798cdd09d5f8",
+        "created_at": "2026-11-10T14:57:04.934856+00:00",
+        "updated_at": "2026-11-10T14:57:04.934856+00:00",
+        "score_debug": {
+          "combined_score": 0.37435475945117225,
+          "semantic_score": 0.2489818,
+          "bm25_score": 0.6869050986279306,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline and her mentee had a great time at the LGBT pride event last month.",
+        "score": 0.37435475945117225,
+        "id": "92bb030e-089a-4a9b-b72e-d39880fa424d",
+        "created_at": "2026-11-10T14:57:02.484872+00:00",
+        "updated_at": "2026-11-10T14:57:02.484872+00:00",
+        "score_debug": {
+          "combined_score": 0.37435475945117225,
+          "semantic_score": 0.2489818,
+          "bm25_score": 0.6869050986279306,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline went hiking last week and encountered a difficult situation with some people, which bothered her, prompting her to apologize to them.",
+        "score": 0.3734918431965778,
+        "id": "5d4f2ba7-c451-41a4-8e42-9bb8b29991df",
+        "created_at": "2026-11-10T15:01:47.594703+00:00",
+        "updated_at": "2026-11-10T15:01:47.594703+00:00",
+        "score_debug": {
+          "combined_score": 0.3734918431965778,
+          "semantic_score": 0.21195672,
+          "bm25_score": 0.7217728879914446,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline went hiking last week and encountered a difficult situation with some people, which bothered her, prompting her to apologize to them.",
+        "score": 0.3734918431965778,
+        "id": "7a477891-658d-49fa-9384-81191f0ff1ed",
+        "created_at": "2026-11-10T15:01:42.093816+00:00",
+        "updated_at": "2026-11-10T15:01:42.093816+00:00",
+        "score_debug": {
+          "combined_score": 0.3734918431965778,
+          "semantic_score": 0.21195672,
+          "bm25_score": 0.7217728879914446,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is looking into pursuing counseling and mental health services as a career to help people who have gone through similar experiences as her.",
+        "score": 0.36837903230765884,
+        "id": "a29f8b3a-5f9f-4d14-b7e4-c4b197bdf891",
+        "created_at": "2026-11-10T14:51:39.518646+00:00",
+        "updated_at": "2026-11-10T14:51:39.518646+00:00",
+        "score_debug": {
+          "combined_score": 0.36837903230765884,
+          "semantic_score": 0.20458555,
+          "bm25_score": 0.7163620307691471,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help people who have gone through similar experiences as her.",
+        "score": 0.3678504607884431,
+        "id": "b539e322-bcbb-45f8-a3f0-2ba0ccb9e0d0",
+        "created_at": "2026-11-10T14:51:54.238943+00:00",
+        "updated_at": "2026-11-10T14:51:54.238943+00:00",
+        "score_debug": {
+          "combined_score": 0.3678504607884431,
+          "semantic_score": 0.19515073,
+          "bm25_score": 0.7244754219711077,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help people who have gone through similar experiences as her.",
+        "score": 0.3678347447884431,
+        "id": "3eb67347-0401-4188-9c6b-a2024f5ea1aa",
+        "created_at": "2026-11-10T14:52:07.147291+00:00",
+        "updated_at": "2026-11-10T14:52:07.147291+00:00",
+        "score_debug": {
+          "combined_score": 0.3678347447884431,
+          "semantic_score": 0.19511144,
+          "bm25_score": 0.7244754219711077,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help people who have gone through similar experiences as her.",
+        "score": 0.3678326767884431,
+        "id": "a842082a-a633-43bc-beb9-7b699c06d5fb",
+        "created_at": "2026-11-10T14:51:59.917052+00:00",
+        "updated_at": "2026-11-10T14:51:59.917052+00:00",
+        "score_debug": {
+          "combined_score": 0.3678326767884431,
+          "semantic_score": 0.19510627,
+          "bm25_score": 0.7244754219711077,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is looking into a career in counseling and mental health to help others who have gone through similar experiences as her, motivated by her own journey and the support she received.",
+        "score": 0.36543936030765883,
+        "id": "0d233836-d739-4b42-a25f-5b8c52cf34c5",
+        "created_at": "2026-11-10T14:51:49.970491+00:00",
+        "updated_at": "2026-11-10T14:51:49.970491+00:00",
+        "score_debug": {
+          "combined_score": 0.36543936030765883,
+          "semantic_score": 0.19723637,
+          "bm25_score": 0.7163620307691471,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is motivated to pursue counseling due to her own experiences and a desire to help others who have gone through similar challenges.",
+        "score": 0.3625025954343472,
+        "id": "def2fca2-62e2-4a4a-873a-dff46e45f268",
+        "created_at": "2026-11-10T14:51:46.517341+00:00",
+        "updated_at": "2026-11-10T14:51:46.517341+00:00",
+        "score_debug": {
+          "combined_score": 0.3625025954343472,
+          "semantic_score": 0.17638308,
+          "bm25_score": 0.729873408585868,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline and her mentee had a great time at the LGBT pride event last month, where Caroline felt encouraged by the love and acceptance surrounding them.",
+        "score": 0.3592595723625521,
+        "id": "eb1586ac-b4ae-4d7f-adf2-1e43058e75e1",
+        "created_at": "2026-11-10T14:57:17.125106+00:00",
+        "updated_at": "2026-11-10T14:57:17.125106+00:00",
+        "score_debug": {
+          "combined_score": 0.3592595723625521,
+          "semantic_score": 0.23107323,
+          "bm25_score": 0.6670757009063804,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline finds it helpful to have supportive people around her during challenging times.",
+        "score": 0.3448599254657842,
+        "id": "1c66e18e-0b57-4f62-b8fa-e961e7d50ccb",
+        "created_at": "2026-11-10T14:59:38.334546+00:00",
+        "updated_at": "2026-11-10T14:59:38.334546+00:00",
+        "score_debug": {
+          "combined_score": 0.3448599254657842,
+          "semantic_score": 0.17240606,
+          "bm25_score": 0.6897437536644605,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed that spending time with loved ones brings her immense happiness and makes her feel thankful, emphasizing that family is everything.",
+        "score": 0.3400813003560848,
+        "id": "77ac99e9-cda7-4c9d-b174-e9446989197a",
+        "created_at": "2026-11-10T14:51:11.954586+00:00",
+        "updated_at": "2026-11-10T14:51:11.954586+00:00",
+        "score_debug": {
+          "combined_score": 0.3400813003560848,
+          "semantic_score": 0.1859515,
+          "bm25_score": 0.6642517508902119,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline appreciates that tough times don't last and that hope and love exist.",
+        "score": 0.3387661414657842,
+        "id": "71d60883-df82-43dc-a6b3-16a901488140",
+        "created_at": "2026-11-10T14:54:41.482450+00:00",
+        "updated_at": "2026-11-10T14:54:41.482450+00:00",
+        "score_debug": {
+          "combined_score": 0.3387661414657842,
+          "semantic_score": 0.1571716,
+          "bm25_score": 0.6897437536644605,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline loved her time volunteering at the youth center, feeling fulfilled by guiding and supporting young people facing challenges and sharing her own story with them.",
+        "score": 0.33799912143640304,
+        "id": "b16a15a4-0bc1-4fbb-94ba-ccc37e7419c4",
+        "created_at": "2026-11-10T15:03:42.444262+00:00",
+        "updated_at": "2026-11-10T15:03:42.444262+00:00",
+        "score_debug": {
+          "combined_score": 0.33799912143640304,
+          "semantic_score": 0.19762099,
+          "bm25_score": 0.6473768135910076,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a stained glass window for a local church that symbolizes how time changes our lives, reflecting her journey as a transgender woman and the importance of accepting growth and change.",
+        "score": 0.32372386337680076,
+        "id": "22243c9a-84e6-4bc8-bcf2-72519e0f296e",
+        "created_at": "2026-11-10T15:02:11.547615+00:00",
+        "updated_at": "2026-11-10T15:02:11.547615+00:00",
+        "score_debug": {
+          "combined_score": 0.32372386337680076,
+          "semantic_score": 0.15912957,
+          "bm25_score": 0.6501800884420019,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a stained glass window for a local church that symbolizes her journey as a transgender woman, showing how time changes lives and encouraging acceptance of growth and change.",
+        "score": 0.32286220337680077,
+        "id": "ceadb640-dd70-4f82-8d56-1991ab5fbfdf",
+        "created_at": "2026-11-10T15:02:31.145934+00:00",
+        "updated_at": "2026-11-10T15:02:31.145934+00:00",
+        "score_debug": {
+          "combined_score": 0.32286220337680077,
+          "semantic_score": 0.15697542,
+          "bm25_score": 0.6501800884420019,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline believes that loved ones provide strength to tackle any challenge, highlighting the importance of family and support during difficult times.",
+        "score": 0.32179939636255217,
+        "id": "0bb3bc55-e09c-4729-8db1-3752b12f870b",
+        "created_at": "2026-11-10T15:07:05.009452+00:00",
+        "updated_at": "2026-11-10T15:07:05.009452+00:00",
+        "score_debug": {
+          "combined_score": 0.32179939636255217,
+          "semantic_score": 0.13742279,
+          "bm25_score": 0.6670757009063804,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a stained glass window for a local church to symbolize her journey as a transgender woman, showing how time changes lives and the importance of accepting growth and change.",
+        "score": 0.3208815553768008,
+        "id": "535cc8fd-e70a-406c-a70e-8f0196167ca1",
+        "created_at": "2026-11-10T15:02:25.877369+00:00",
+        "updated_at": "2026-11-10T15:02:25.877369+00:00",
+        "score_debug": {
+          "combined_score": 0.3208815553768008,
+          "semantic_score": 0.1520238,
+          "bm25_score": 0.6501800884420019,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie had a blast during a recent outing with her family, expressing excitement about planning another family outing this summer.",
+        "score": 0.2533385846719521,
+        "id": "7949208e-49a7-44b6-8237-56241717be55",
+        "created_at": "2026-11-10T15:00:05.482402+00:00",
+        "updated_at": "2026-11-10T15:00:05.482402+00:00",
+        "score_debug": {
+          "combined_score": 0.2533385846719521,
+          "semantic_score": 0.5611995,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie and Caroline are planning a special outing for the summer of 2027, expressing excitement about catching up and exploring nature together.",
+        "score": 0.2531456400923828,
+        "id": "1fcb6341-1deb-47d7-b302-8eaeccb9e1ce",
+        "created_at": "2026-11-10T15:00:10.207889+00:00",
+        "updated_at": "2026-11-10T15:00:10.207889+00:00",
+        "score_debug": {
+          "combined_score": 0.2531456400923828,
+          "semantic_score": 0.5614613,
+          "bm25_score": 0.06552735898536342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline and Melanie are planning a special outing for the summer of 2027, expressing excitement about catching up and exploring nature together.",
+        "score": 0.24551440009238273,
+        "id": "250df074-13df-4eba-bb44-b7eddbbf5cf3",
+        "created_at": "2026-11-10T15:00:15.120553+00:00",
+        "updated_at": "2026-11-10T15:00:15.120553+00:00",
+        "score_debug": {
+          "combined_score": 0.24551440009238273,
+          "semantic_score": 0.5423832,
+          "bm25_score": 0.06552735898536342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday with a concert on November 9, 2026, surrounded by music, joy, and the warm summer breeze, feeling thankful for the special moments with her family.",
+        "score": 0.24064966086217857,
+        "id": "f41f0b14-a511-41e6-9dc3-1be0f0b6643e",
+        "created_at": "2026-11-10T14:58:55.391051+00:00",
+        "updated_at": "2026-11-10T14:58:55.391051+00:00",
+        "score_debug": {
+          "combined_score": 0.24064966086217857,
+          "semantic_score": 0.531184,
+          "bm25_score": 0.06456471090985294,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's kids are excited about summer break, and they are planning to go camping next month.",
+        "score": 0.23871365356229482,
+        "id": "f41b4ffc-7069-41c7-aeb8-ac74ba30b17b",
+        "created_at": "2026-11-10T14:48:55.718786+00:00",
+        "updated_at": "2026-11-10T14:48:55.718786+00:00",
+        "score_debug": {
+          "combined_score": 0.23871365356229482,
+          "semantic_score": 0.52361405,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday on November 9, 2026, with a concert that was filled with music, joy, and a warm summer breeze, feeling thankful for the special moments with her kids.",
+        "score": 0.23379858086217858,
+        "id": "404cfa25-7182-4503-8f1d-0d25e6be413d",
+        "created_at": "2026-11-10T14:58:52.084643+00:00",
+        "updated_at": "2026-11-10T14:58:52.084643+00:00",
+        "score_debug": {
+          "combined_score": 0.23379858086217858,
+          "semantic_score": 0.5140563,
+          "bm25_score": 0.06456471090985294,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a sunset over a body of water, emphasizing the beauty of nature during her camping trips.",
+        "score": 0.23308880038371765,
+        "id": "a6025a7d-1533-433f-8557-2f4637bdaefc",
+        "created_at": "2026-11-10T15:07:25.865119+00:00",
+        "updated_at": "2026-11-10T15:07:25.865119+00:00",
+        "score_debug": {
+          "combined_score": 0.23308880038371765,
+          "semantic_score": 0.51032263,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie loves camping trips with her family as they help her reset and recharge, bringing peace and serenity.",
+        "score": 0.2271591643837177,
+        "id": "df21acf9-b386-4653-9244-4bbf2a9bac37",
+        "created_at": "2026-11-10T15:07:25.862592+00:00",
+        "updated_at": "2026-11-10T15:07:25.862592+00:00",
+        "score_debug": {
+          "combined_score": 0.2271591643837177,
+          "semantic_score": 0.49549854,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been running longer to improve her mental health and plans to continue this practice.",
+        "score": 0.22466176301434698,
+        "id": "f1fc1e48-100a-4a37-965f-c45974a7d029",
+        "created_at": "2026-11-10T14:55:02.322121+00:00",
+        "updated_at": "2026-11-10T14:55:02.322121+00:00",
+        "score_debug": {
+          "combined_score": 0.22466176301434698,
+          "semantic_score": 0.4887435,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed excitement about making awesome memories with Melanie during their upcoming special outing this summer.",
+        "score": 0.2237060283837177,
+        "id": "2b7a5d8c-ccba-421b-ba68-62ac8422c10e",
+        "created_at": "2026-11-10T15:00:12.257266+00:00",
+        "updated_at": "2026-11-10T15:00:12.257266+00:00",
+        "score_debug": {
+          "combined_score": 0.2237060283837177,
+          "semantic_score": 0.4868657,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie and her kids have been painting together lately, focusing on nature-inspired themes, and they created a new painting featuring vibrant flowers and a sunset sky around November 5-6, 2026.",
+        "score": 0.223203139085622,
+        "id": "64afedfd-97eb-4452-87b2-4c8565f96a3a",
+        "created_at": "2026-11-10T14:55:25.050911+00:00",
+        "updated_at": "2026-11-10T14:55:25.050911+00:00",
+        "score_debug": {
+          "combined_score": 0.223203139085622,
+          "semantic_score": 0.48826838,
+          "bm25_score": 0.06386402646846147,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's best camping memory is from last year when her family saw the Perseid meteor shower, which she found amazing and awe-inspiring as they made wishes while watching the sky light up.",
+        "score": 0.22282260763159778,
+        "id": "7c3fdc60-87c5-46ac-ad1a-05d2ba192108",
+        "created_at": "2026-11-10T14:58:36.366022+00:00",
+        "updated_at": "2026-11-10T14:58:36.366022+00:00",
+        "score_debug": {
+          "combined_score": 0.22282260763159778,
+          "semantic_score": 0.4863788,
+          "bm25_score": 0.06480227783340092,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been married for 5 years as of November 10, 2026, and shared a photo from her wedding day.",
+        "score": 0.22219562607339527,
+        "id": "55d38d5d-ab51-441b-a6cc-bea85a01affb",
+        "created_at": "2026-11-10T14:50:58.682216+00:00",
+        "updated_at": "2026-11-10T14:50:58.682216+00:00",
+        "score_debug": {
+          "combined_score": 0.22219562607339527,
+          "semantic_score": 0.48283505,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie enjoys camping trips with her family as they provide a chance to be present and bond over stories, campfires, and nature.",
+        "score": 0.21852311638371766,
+        "id": "f5e0a447-21d5-4dbb-95e2-acf90d7da942",
+        "created_at": "2026-11-10T15:07:31.344800+00:00",
+        "updated_at": "2026-11-10T15:07:31.344800+00:00",
+        "score_debug": {
+          "combined_score": 0.21852311638371766,
+          "semantic_score": 0.47390842,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been running farther to de-stress, which has positively impacted her headspace.",
+        "score": 0.2178402255622948,
+        "id": "f8fdcdbc-1c8a-4183-b584-e485277eabc5",
+        "created_at": "2026-11-10T14:54:56.665732+00:00",
+        "updated_at": "2026-11-10T14:54:56.665732+00:00",
+        "score_debug": {
+          "combined_score": 0.2178402255622948,
+          "semantic_score": 0.47143048,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been running longer to de-stress and clear her mind, which has greatly improved her mental health since their last chat.",
+        "score": 0.2166116246719521,
+        "id": "0951cd98-2c2d-43b2-92be-7aa96a1a7dcb",
+        "created_at": "2026-11-10T14:55:11.827159+00:00",
+        "updated_at": "2026-11-10T14:55:11.827159+00:00",
+        "score_debug": {
+          "combined_score": 0.2166116246719521,
+          "semantic_score": 0.4693821,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie attended a lively event where the song \"Summer Sounds\" was played, getting everyone dancing and singing, which made it a fun experience.",
+        "score": 0.21419260754124475,
+        "id": "5f49f4d4-a38b-478e-bb65-f89f7131dd98",
+        "created_at": "2026-11-10T15:03:45.901991+00:00",
+        "updated_at": "2026-11-10T15:03:45.901991+00:00",
+        "score_debug": {
+          "combined_score": 0.21419260754124475,
+          "semantic_score": 0.46383283,
+          "bm25_score": 0.0657732476075184,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie how her family has been supportive during her move on November 10, 2026.",
+        "score": 0.2141484182001156,
+        "id": "51ec41de-45e6-49d3-b95b-72b3357317c7",
+        "created_at": "2026-11-10T14:56:29.450064+00:00",
+        "updated_at": "2026-11-10T14:56:29.450064+00:00",
+        "score_debug": {
+          "combined_score": 0.2141484182001156,
+          "semantic_score": 0.46193948,
+          "bm25_score": 0.06755612425469551,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed that the Perseid meteor shower during Melanie's camping trip last year must have been breathtaking.",
+        "score": 0.21359269807339526,
+        "id": "d4d8517f-84b5-4a31-afde-80d99b484eca",
+        "created_at": "2026-11-10T14:58:27.847511+00:00",
+        "updated_at": "2026-11-10T14:58:27.847511+00:00",
+        "score_debug": {
+          "combined_score": 0.21359269807339526,
+          "semantic_score": 0.46132773,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's family has been supportive during her move by helping out and showing lots of love and support on November 10, 2026.",
+        "score": 0.2130888006719521,
+        "id": "f5f3a1fc-2981-4dc8-b3d5-8ea384a130d4",
+        "created_at": "2026-11-10T14:56:31.465979+00:00",
+        "updated_at": "2026-11-10T14:56:31.465979+00:00",
+        "score_debug": {
+          "combined_score": 0.2130888006719521,
+          "semantic_score": 0.46057504,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed enthusiasm about planning their summer outing and is looking forward to making awesome memories with Melanie.",
+        "score": 0.21290844754124477,
+        "id": "1801cd24-7862-4409-9874-6327f41f1d88",
+        "created_at": "2026-11-10T15:00:15.122890+00:00",
+        "updated_at": "2026-11-10T15:00:15.122890+00:00",
+        "score_debug": {
+          "combined_score": 0.21290844754124477,
+          "semantic_score": 0.46062243,
+          "bm25_score": 0.0657732476075184,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie ran a charity race for mental health on November 5, 2026, which she found rewarding and made her reflect on the importance of taking care of our minds.",
+        "score": 0.211678440970048,
+        "id": "26cd44de-b370-4bf6-94b0-5bce8c097e2a",
+        "created_at": "2026-11-10T14:48:40.554965+00:00",
+        "updated_at": "2026-11-10T14:48:40.554965+00:00",
+        "score_debug": {
+          "combined_score": 0.211678440970048,
+          "semantic_score": 0.45803708,
+          "bm25_score": 0.06528358117952662,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's family camping trips are the highlight of their summer, where they roast marshmallows, tell stories around the campfire, and enjoy each other's company.",
+        "score": 0.2113852766719521,
+        "id": "278dd103-fa63-474f-aef5-89b953b91c5f",
+        "created_at": "2026-11-10T14:58:14.055300+00:00",
+        "updated_at": "2026-11-10T14:58:14.055300+00:00",
+        "score_debug": {
+          "combined_score": 0.2113852766719521,
+          "semantic_score": 0.45631623,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie appreciates the peacefulness and serenity that nature brings, especially during camping trips with her family.",
+        "score": 0.210645295014347,
+        "id": "7a8ef272-d3ec-4a52-9228-faec61dde861",
+        "created_at": "2026-11-10T15:07:36.816494+00:00",
+        "updated_at": "2026-11-10T15:07:36.816494+00:00",
+        "score_debug": {
+          "combined_score": 0.210645295014347,
+          "semantic_score": 0.45370233,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie recently painted a horse and shared a photo of her artwork around November 10, 2026.",
+        "score": 0.210245323014347,
+        "id": "ae866021-1be7-4ffc-b824-31258e5b5ddf",
+        "created_at": "2026-11-10T15:00:45.549089+00:00",
+        "updated_at": "2026-11-10T15:00:45.549089+00:00",
+        "score_debug": {
+          "combined_score": 0.210245323014347,
+          "semantic_score": 0.4527024,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday on November 9, 2026, with a concert featuring Matt Patterson, whose talented voice and songs made the event special.",
+        "score": 0.209986384970048,
+        "id": "0f8b7201-5d44-40f1-8e36-500e763a48f0",
+        "created_at": "2026-11-10T14:58:57.771405+00:00",
+        "updated_at": "2026-11-10T14:58:57.771405+00:00",
+        "score_debug": {
+          "combined_score": 0.209986384970048,
+          "semantic_score": 0.45380694,
+          "bm25_score": 0.06528358117952662,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline is interested in Melanie's upcoming paintings and asked if she has any more planned.",
+        "score": 0.20980597405214274,
+        "id": "fd8ff5cd-1a29-46a1-91a4-9e462fd04958",
+        "created_at": "2026-11-10T15:02:49.207281+00:00",
+        "updated_at": "2026-11-10T15:02:49.207281+00:00",
+        "score_debug": {
+          "combined_score": 0.20980597405214274,
+          "semantic_score": 0.45081955,
+          "bm25_score": 0.06781994388476342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed interest in Melanie's family's summer traditions and asked if they have any other activities they do together.",
+        "score": 0.20937333756229481,
+        "id": "96611bfc-09ba-4407-b1ac-65e6934eea38",
+        "created_at": "2026-11-10T14:58:10.324631+00:00",
+        "updated_at": "2026-11-10T14:58:10.324631+00:00",
+        "score_debug": {
+          "combined_score": 0.20937333756229481,
+          "semantic_score": 0.45026326,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie will always remember her camping trip last year when they saw the Perseid meteor shower, describing it as amazing to lie under the sky and watch the streaks of light. They all made wishes and felt at one with the universe.",
+        "score": 0.2088761008621786,
+        "id": "9f60f9f1-d1bf-436a-8ddc-4ad732ae1c7e",
+        "created_at": "2026-11-10T14:58:20.456171+00:00",
+        "updated_at": "2026-11-10T14:58:20.456171+00:00",
+        "score_debug": {
+          "combined_score": 0.2088761008621786,
+          "semantic_score": 0.4517501,
+          "bm25_score": 0.06456471090985294,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's new purple shoes are for running, and she has been running longer since their last chat as a way to destress and clear her mind.",
+        "score": 0.20839213638960552,
+        "id": "0b643306-a8f0-4379-a8d5-3d54deade55b",
+        "created_at": "2026-11-10T14:54:51.070425+00:00",
+        "updated_at": "2026-11-10T14:54:51.070425+00:00",
+        "score_debug": {
+          "combined_score": 0.20839213638960552,
+          "semantic_score": 0.4490836,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie how she is doing in finding peace.",
+        "score": 0.208086998399524,
+        "id": "9a1bfb1c-0bd9-4818-b744-422d3a2f4499",
+        "created_at": "2026-11-10T14:56:24.015613+00:00",
+        "updated_at": "2026-11-10T14:56:24.015613+00:00",
+        "score_debug": {
+          "combined_score": 0.208086998399524,
+          "semantic_score": 0.44625592,
+          "bm25_score": 0.06808613475321654,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie and her family enjoy hiking in the mountains and exploring forests as a way to connect with nature and each other.",
+        "score": 0.2080083083837177,
+        "id": "0d09ca00-639e-4bb4-90b3-ee254b9949c6",
+        "created_at": "2026-11-10T14:56:40.108421+00:00",
+        "updated_at": "2026-11-10T14:56:40.108421+00:00",
+        "score_debug": {
+          "combined_score": 0.2080083083837177,
+          "semantic_score": 0.4476214,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie painted a lake sunrise last year, and it holds special significance for her.",
+        "score": 0.2066588662001156,
+        "id": "8a91edbb-3eef-4d4c-917a-e59b510c7e9a",
+        "created_at": "2026-11-10T14:48:29.292286+00:00",
+        "updated_at": "2026-11-10T14:48:29.292286+00:00",
+        "score_debug": {
+          "combined_score": 0.2066588662001156,
+          "semantic_score": 0.4432156,
+          "bm25_score": 0.06755612425469551,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday with a concert featuring Matt Patterson on November 9, 2026, and felt thankful for the special moments with her kids.",
+        "score": 0.20594554497004802,
+        "id": "075e9e24-aeba-496b-bf50-a6a8d66bd083",
+        "created_at": "2026-11-10T14:59:10.698339+00:00",
+        "updated_at": "2026-11-10T14:59:10.698339+00:00",
+        "score_debug": {
+          "combined_score": 0.20594554497004802,
+          "semantic_score": 0.44370484,
+          "bm25_score": 0.06528358117952662,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's two younger kids love nature and enjoyed their recent camping trip, which included hiking in the mountains.",
+        "score": 0.20571064838371766,
+        "id": "95cba2b0-da37-40c8-b109-1f940e1c8d6a",
+        "created_at": "2026-11-10T15:07:36.814358+00:00",
+        "updated_at": "2026-11-10T15:07:36.814358+00:00",
+        "score_debug": {
+          "combined_score": 0.20571064838371766,
+          "semantic_score": 0.44187725,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie about her best camping memory, expressing enthusiasm for their camping experiences.",
+        "score": 0.20555625407339528,
+        "id": "00d40e67-1767-43a5-852d-ab6319cb61d7",
+        "created_at": "2026-11-10T14:58:16.932361+00:00",
+        "updated_at": "2026-11-10T14:58:16.932361+00:00",
+        "score_debug": {
+          "combined_score": 0.20555625407339528,
+          "semantic_score": 0.44123662,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday with a concert featuring Matt Patterson on November 9, 2026, and felt thankful for the special moments shared with her kids during the event.",
+        "score": 0.20552302363159775,
+        "id": "06ddb35c-7fd9-49a2-8a5d-102fd84cd70a",
+        "created_at": "2026-11-10T14:59:04.094751+00:00",
+        "updated_at": "2026-11-10T14:59:04.094751+00:00",
+        "score_debug": {
+          "combined_score": 0.20552302363159775,
+          "semantic_score": 0.44312984,
+          "bm25_score": 0.06480227783340092,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie signed up for a pottery class on November 10, 2026, describing it as therapeutic and a way to express herself creatively.",
+        "score": 0.20390962467195212,
+        "id": "b9118212-f48c-4d26-a479-e21bc3a4ae9c",
+        "created_at": "2026-11-10T14:52:15.613925+00:00",
+        "updated_at": "2026-11-10T14:52:15.613925+00:00",
+        "score_debug": {
+          "combined_score": 0.20390962467195212,
+          "semantic_score": 0.4376271,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie had a setback last month when she got hurt and had to take a break from pottery, which she uses for self-expression and peace.",
+        "score": 0.20368917407339526,
+        "id": "c0087cdd-7a5a-473e-bcc1-ea0295d65bc8",
+        "created_at": "2026-11-10T15:05:53.140417+00:00",
+        "updated_at": "2026-11-10T15:05:53.140417+00:00",
+        "score_debug": {
+          "combined_score": 0.20368917407339526,
+          "semantic_score": 0.43656892,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a fire pit with a lot of fire and sparks from their family camping trip.",
+        "score": 0.20295722607339525,
+        "id": "cabd0e55-b932-4da3-8c78-a2cea36635c1",
+        "created_at": "2026-11-10T14:58:14.057882+00:00",
+        "updated_at": "2026-11-10T14:58:14.057882+00:00",
+        "score_debug": {
+          "combined_score": 0.20295722607339525,
+          "semantic_score": 0.43473905,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a blue vase with a bouquet of sunflowers and roses on November 10, 2026.",
+        "score": 0.20293124607339527,
+        "id": "61e4ff3f-232c-4b9a-bc04-945fc235e91c",
+        "created_at": "2026-11-10T14:55:36.871225+00:00",
+        "updated_at": "2026-11-10T14:55:36.871225+00:00",
+        "score_debug": {
+          "combined_score": 0.20293124607339527,
+          "semantic_score": 0.4346741,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline loves hearing about Melanie's camping experiences and is curious about what she loves most about camping with her family.",
+        "score": 0.2026642763837177,
+        "id": "a776cece-9a7a-46f4-a0e5-566f79e9c6a3",
+        "created_at": "2026-11-10T15:07:27.791620+00:00",
+        "updated_at": "2026-11-10T15:07:27.791620+00:00",
+        "score_debug": {
+          "combined_score": 0.2026642763837177,
+          "semantic_score": 0.43426132,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed happiness for Melanie's recent family camping trip in the mountains, asking how it was and if there was anything fun about it.",
+        "score": 0.2019785603837177,
+        "id": "c8e990cc-9378-4e75-9647-c8eb7b537657",
+        "created_at": "2026-11-10T14:51:27.781175+00:00",
+        "updated_at": "2026-11-10T14:51:27.781175+00:00",
+        "score_debug": {
+          "combined_score": 0.2019785603837177,
+          "semantic_score": 0.43254703,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie loves showing off their true selves and believes it is the best thing ever.",
+        "score": 0.20187209356229477,
+        "id": "b8805660-92c2-4d15-a1f4-d005972d5869",
+        "created_at": "2026-11-10T15:06:37.760879+00:00",
+        "updated_at": "2026-11-10T15:06:37.760879+00:00",
+        "score_debug": {
+          "combined_score": 0.20187209356229477,
+          "semantic_score": 0.43151015,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her family having a picnic in the park, enjoying food together.",
+        "score": 0.2017971455622948,
+        "id": "44e907d8-620c-4d8b-9fa9-ffe23fc4ffa3",
+        "created_at": "2026-11-10T14:51:04.101988+00:00",
+        "updated_at": "2026-11-10T14:51:04.101988+00:00",
+        "score_debug": {
+          "combined_score": 0.2017971455622948,
+          "semantic_score": 0.43132278,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline is always there for her friend Melanie and recalls having a blast at the Pride festival last year, appreciating the supportive friends that make everything worthwhile.",
+        "score": 0.20154041267195208,
+        "id": "cb05792c-4246-4926-b4a1-489938c78987",
+        "created_at": "2026-11-10T15:00:03.519104+00:00",
+        "updated_at": "2026-11-10T15:00:03.519104+00:00",
+        "score_debug": {
+          "combined_score": 0.20154041267195208,
+          "semantic_score": 0.43170407,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie painted a landscape inspired by sunsets last week, using calming colors that make her feel peaceful.",
+        "score": 0.20098972607339521,
+        "id": "c154191a-0e9e-4d3d-92b5-bbc0271fed53",
+        "created_at": "2026-11-10T15:06:19.601297+00:00",
+        "updated_at": "2026-11-10T15:06:19.601297+00:00",
+        "score_debug": {
+          "combined_score": 0.20098972607339521,
+          "semantic_score": 0.4298203,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline believes that life is all about creating memories and is excited for their upcoming trip with Melanie.",
+        "score": 0.20044992301434697,
+        "id": "690fa273-0656-4b8a-b32c-594a71ac5b90",
+        "created_at": "2026-11-10T15:00:17.263863+00:00",
+        "updated_at": "2026-11-10T15:00:17.263863+00:00",
+        "score_debug": {
+          "combined_score": 0.20044992301434697,
+          "semantic_score": 0.4282139,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie recently experienced a setback when she got hurt last month and had to take a break from pottery, which she uses for self-expression and peace.",
+        "score": 0.19843404867195208,
+        "id": "49ba45ba-0e5d-42bc-b5ac-b1e584ed640a",
+        "created_at": "2026-11-10T15:06:19.595702+00:00",
+        "updated_at": "2026-11-10T15:06:19.595702+00:00",
+        "score_debug": {
+          "combined_score": 0.19843404867195208,
+          "semantic_score": 0.42393816,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie felt tiny and in awe of the universe during the Perseid meteor shower camping trip, reflecting on how awesome life is and cherishing little moments like that.",
+        "score": 0.19841314363159773,
+        "id": "e4268caa-1e68-476a-a661-bc1a0393fd19",
+        "created_at": "2026-11-10T14:58:36.368896+00:00",
+        "updated_at": "2026-11-10T14:58:36.368896+00:00",
+        "score_debug": {
+          "combined_score": 0.19841314363159773,
+          "semantic_score": 0.42535514,
+          "bm25_score": 0.06480227783340092,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie attended a concert that reminded her of how music brings people together, sharing a photo of a crowd at the concert with their hands in the air.",
+        "score": 0.1980265043896055,
+        "id": "193b6f5f-687e-42ec-a60c-7811bb8d7a21",
+        "created_at": "2026-11-10T15:03:42.451820+00:00",
+        "updated_at": "2026-11-10T15:03:42.451820+00:00",
+        "score_debug": {
+          "combined_score": 0.1980265043896055,
+          "semantic_score": 0.42316952,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's two younger kids love nature and enjoyed the camping trip, making the moments spent together as a family very special.",
+        "score": 0.1979303283896055,
+        "id": "f161897c-713b-4c29-adc5-3ab528dd38eb",
+        "created_at": "2026-11-10T14:51:30.831697+00:00",
+        "updated_at": "2026-11-10T14:51:30.831697+00:00",
+        "score_debug": {
+          "combined_score": 0.1979303283896055,
+          "semantic_score": 0.42292908,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has a family camping tradition where they roast marshmallows, tell stories around the campfire, and enjoy each other's company, which she describes as the highlight of their summer.",
+        "score": 0.1975331363896055,
+        "id": "609942f4-0777-4e46-b0d0-3f248649d91f",
+        "created_at": "2026-11-10T14:58:36.362886+00:00",
+        "updated_at": "2026-11-10T14:58:36.362886+00:00",
+        "score_debug": {
+          "combined_score": 0.1975331363896055,
+          "semantic_score": 0.4219361,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie finds waking up to the sound of birds and the smell of fresh air during camping trips to be peaceful and refreshing for her soul.",
+        "score": 0.19697625638960553,
+        "id": "a57c1233-d6ee-499c-9cef-ca0a1dca299d",
+        "created_at": "2026-11-10T15:07:31.347869+00:00",
+        "updated_at": "2026-11-10T15:07:31.347869+00:00",
+        "score_debug": {
+          "combined_score": 0.19697625638960553,
+          "semantic_score": 0.4205439,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie values mental health and has noticed significant improvements in her well-being through her running routine.",
+        "score": 0.19651398701434697,
+        "id": "3f7745bf-66aa-48fd-ad53-0e9826bdac84",
+        "created_at": "2026-11-10T14:55:07.084131+00:00",
+        "updated_at": "2026-11-10T14:55:07.084131+00:00",
+        "score_debug": {
+          "combined_score": 0.19651398701434697,
+          "semantic_score": 0.41837406,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on an amazing family picture and inquired about how long Melanie has been married.",
+        "score": 0.1962037316940782,
+        "id": "322bf3b2-207d-4cd1-9809-62399c9e830a",
+        "created_at": "2026-11-10T14:50:50.178882+00:00",
+        "updated_at": "2026-11-10T14:50:50.178882+00:00",
+        "score_debug": {
+          "combined_score": 0.1962037316940782,
+          "semantic_score": 0.40208894,
+          "bm25_score": 0.0825449479896021,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie recently got new purple running shoes for running, which she shared a photo of with Caroline.",
+        "score": 0.19598865807339522,
+        "id": "d617e08b-7002-4819-b86c-dc01f9ff3e14",
+        "created_at": "2026-11-10T14:55:11.829606+00:00",
+        "updated_at": "2026-11-10T14:55:11.829606+00:00",
+        "score_debug": {
+          "combined_score": 0.19598865807339522,
+          "semantic_score": 0.41731763,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie spent the day with her family volunteering at a homeless shelter, finding it hard to see how neglected some people are but feeling good about making a difference.",
+        "score": 0.19588244763159773,
+        "id": "79479553-a031-4d6b-bcdc-d7cb7b6f9ffc",
+        "created_at": "2026-11-10T15:01:42.101613+00:00",
+        "updated_at": "2026-11-10T15:01:42.101613+00:00",
+        "score_debug": {
+          "combined_score": 0.19588244763159773,
+          "semantic_score": 0.4190284,
+          "bm25_score": 0.06480227783340092,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared an image of their latest painting depicting a sunset with a palm tree.",
+        "score": 0.19559518301434697,
+        "id": "f0ae2427-2f31-4f51-96aa-9481573866d8",
+        "created_at": "2026-11-10T14:55:25.053541+00:00",
+        "updated_at": "2026-11-10T14:55:25.053541+00:00",
+        "score_debug": {
+          "combined_score": 0.19559518301434697,
+          "semantic_score": 0.41607705,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie and her kids have been working on nature-inspired paintings together, focusing on vibrant colors and the beauty of nature.",
+        "score": 0.1954080126719521,
+        "id": "028c33a7-8d36-4f61-8506-0078b913b1eb",
+        "created_at": "2026-11-10T14:55:27.743998+00:00",
+        "updated_at": "2026-11-10T14:55:27.743998+00:00",
+        "score_debug": {
+          "combined_score": 0.1954080126719521,
+          "semantic_score": 0.41637307,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie appreciates special moments with her family, feeling lucky to share their love and experiences together.",
+        "score": 0.19536244607339523,
+        "id": "7af4816c-682d-4012-afad-a103fdabb0ee",
+        "created_at": "2026-11-10T14:58:43.676241+00:00",
+        "updated_at": "2026-11-10T14:58:43.676241+00:00",
+        "score_debug": {
+          "combined_score": 0.19536244607339523,
+          "semantic_score": 0.4157521,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie what pet she has.",
+        "score": 0.19428741423139753,
+        "id": "bcb068e9-4003-464f-a47a-f95814b9cc99",
+        "created_at": "2026-11-10T14:54:36.847645+00:00",
+        "updated_at": "2026-11-10T14:54:36.847645+00:00",
+        "score_debug": {
+          "combined_score": 0.19428741423139753,
+          "semantic_score": 0.41121736,
+          "bm25_score": 0.06862573433290042,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline is curious about what motivated Melanie to start running.",
+        "score": 0.19423489405214273,
+        "id": "c6955691-ccb9-413e-8235-5cf7d68349fc",
+        "created_at": "2026-11-10T14:54:52.593648+00:00",
+        "updated_at": "2026-11-10T14:54:52.593648+00:00",
+        "score_debug": {
+          "combined_score": 0.19423489405214273,
+          "semantic_score": 0.41189185,
+          "bm25_score": 0.06781994388476342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie is doing okay after her recent injury and has been reading a book recommended by Caroline to keep busy.",
+        "score": 0.19401808301434698,
+        "id": "476e89bf-0be6-4124-af33-40ef54cdd054",
+        "created_at": "2026-11-10T15:05:58.149498+00:00",
+        "updated_at": "2026-11-10T15:05:58.149498+00:00",
+        "score_debug": {
+          "combined_score": 0.19401808301434698,
+          "semantic_score": 0.4121343,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie considers marrying her partner and promising to be together forever as the best part of her wedding day, which took place on November 10, 2021.",
+        "score": 0.19400100009238275,
+        "id": "b20b156b-dd49-4f31-9ec6-004406cd2fca",
+        "created_at": "2026-11-10T14:55:54.657311+00:00",
+        "updated_at": "2026-11-10T14:55:54.657311+00:00",
+        "score_debug": {
+          "combined_score": 0.19400100009238275,
+          "semantic_score": 0.4135997,
+          "bm25_score": 0.06552735898536342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline praised Melanie's sunset painting, expressing love for the colors and the relaxed vibe it conveys.",
+        "score": 0.19382836438371767,
+        "id": "8e10084e-acf1-408c-bb3c-4939855259a3",
+        "created_at": "2026-11-10T15:06:05.238100+00:00",
+        "updated_at": "2026-11-10T15:06:05.238100+00:00",
+        "score_debug": {
+          "combined_score": 0.19382836438371767,
+          "semantic_score": 0.41217154,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's kids were scared after their brother's car accident during the road trip on November 10, 2026, but they were reassured that he would be okay.",
+        "score": 0.1933481726719521,
+        "id": "da3f54cb-8104-4a38-8500-ac02c565b356",
+        "created_at": "2026-11-10T15:06:58.573347+00:00",
+        "updated_at": "2026-11-10T15:06:58.573347+00:00",
+        "score_debug": {
+          "combined_score": 0.1933481726719521,
+          "semantic_score": 0.41122347,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's family enjoyed their visit to the Grand Canyon, as shown in a photo of her two children standing on a rocky cliff overlooking the canyon.",
+        "score": 0.19319486009238274,
+        "id": "f3633402-8075-47eb-a71d-0d1ab79bf103",
+        "created_at": "2026-11-10T15:06:54.530850+00:00",
+        "updated_at": "2026-11-10T15:06:54.530850+00:00",
+        "score_debug": {
+          "combined_score": 0.19319486009238274,
+          "semantic_score": 0.41158435,
+          "bm25_score": 0.06552735898536342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared an image of a painting depicting a sunset over a lake.",
+        "score": 0.19313427820011556,
+        "id": "7d37b300-aa8f-45c2-b5e2-debf14797109",
+        "created_at": "2026-11-10T14:48:25.284797+00:00",
+        "updated_at": "2026-11-10T14:48:25.284797+00:00",
+        "score_debug": {
+          "combined_score": 0.19313427820011556,
+          "semantic_score": 0.40940413,
+          "bm25_score": 0.06755612425469551,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been reading a book recommended by Caroline and painting to keep busy during her break from pottery.",
+        "score": 0.19299117501434698,
+        "id": "76263f03-e9bf-442a-9b0a-abf129bae0a1",
+        "created_at": "2026-11-10T15:06:19.597938+00:00",
+        "updated_at": "2026-11-10T15:06:19.597938+00:00",
+        "score_debug": {
+          "combined_score": 0.19299117501434698,
+          "semantic_score": 0.40956703,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has been painting to keep busy after her injury, which she uses for self-expression and peace.",
+        "score": 0.19281230556229476,
+        "id": "62129ed9-8313-4c3d-9145-00c23509af19",
+        "created_at": "2026-11-10T15:05:58.151742+00:00",
+        "updated_at": "2026-11-10T15:05:58.151742+00:00",
+        "score_debug": {
+          "combined_score": 0.19281230556229476,
+          "semantic_score": 0.40886068,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie took her kids to a pottery workshop on November 3, 2026, where they all made their own pots, describing the experience as fun and therapeutic.",
+        "score": 0.1927096883896055,
+        "id": "977643fd-cbbf-46e6-ab7f-c3a3e577ed5b",
+        "created_at": "2026-11-10T14:55:16.618435+00:00",
+        "updated_at": "2026-11-10T14:55:16.618435+00:00",
+        "score_debug": {
+          "combined_score": 0.1927096883896055,
+          "semantic_score": 0.40987748,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie feels lucky to have her husband and kids who keep her motivated, and she shared a photo of them hiking in nature in front of a waterfall.",
+        "score": 0.19221882838371768,
+        "id": "2b2bcc69-0e40-4c3d-8888-45bcb829a439",
+        "created_at": "2026-11-10T14:50:44.844522+00:00",
+        "updated_at": "2026-11-10T14:50:44.844522+00:00",
+        "score_debug": {
+          "combined_score": 0.19221882838371768,
+          "semantic_score": 0.4081477,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie is excited about her pottery journey and is looking forward to future developments in her creative outlet.",
+        "score": 0.19186971407339523,
+        "id": "93cbaf39-9d99-44d0-a76f-fc1e93e4a319",
+        "created_at": "2026-11-10T14:52:38.523941+00:00",
+        "updated_at": "2026-11-10T14:52:38.523941+00:00",
+        "score_debug": {
+          "combined_score": 0.19186971407339523,
+          "semantic_score": 0.40702027,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on a recent photo of her family hiking in the mountains, expressing that it looked like they had fun.",
+        "score": 0.19174761638960552,
+        "id": "da436eaf-16ea-4ee5-bf5e-57efb6a1a3a8",
+        "created_at": "2026-11-10T15:07:17.600212+00:00",
+        "updated_at": "2026-11-10T15:07:17.600212+00:00",
+        "score_debug": {
+          "combined_score": 0.19174761638960552,
+          "semantic_score": 0.4074723,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie recently got new shoes, which are purple running shoes.",
+        "score": 0.19172785820011556,
+        "id": "4425cf6c-920b-40be-bb79-4701530dd9e6",
+        "created_at": "2026-11-10T14:54:46.811629+00:00",
+        "updated_at": "2026-11-10T14:54:46.811629+00:00",
+        "score_debug": {
+          "combined_score": 0.19172785820011556,
+          "semantic_score": 0.40588808,
+          "bm25_score": 0.06755612425469551,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her kids laughing while playing in a water play area at the museum.",
+        "score": 0.19126720038371767,
+        "id": "93b1292b-c45c-439a-b267-677e554b7e6d",
+        "created_at": "2026-11-10T14:52:54.358142+00:00",
+        "updated_at": "2026-11-10T14:52:54.358142+00:00",
+        "score_debug": {
+          "combined_score": 0.19126720038371767,
+          "semantic_score": 0.40576863,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie took her kids to a pottery workshop on November 4, 2026, where they all made their own pots, describing the experience as fun and therapeutic.",
+        "score": 0.1911383563896055,
+        "id": "b4f8ead3-fdd1-48a3-b6f2-34b00bc214d9",
+        "created_at": "2026-11-10T14:55:14.450510+00:00",
+        "updated_at": "2026-11-10T14:55:14.450510+00:00",
+        "score_debug": {
+          "combined_score": 0.1911383563896055,
+          "semantic_score": 0.40594915,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie recently painted a sunflower, showcasing her love for nature in her artwork.",
+        "score": 0.19077340956229477,
+        "id": "30ac6bde-ea67-4118-b632-b349cf501722",
+        "created_at": "2026-11-10T15:02:47.417499+00:00",
+        "updated_at": "2026-11-10T15:02:47.417499+00:00",
+        "score_debug": {
+          "combined_score": 0.19077340956229477,
+          "semantic_score": 0.40376344,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared an image of her family hiking in the mountains, showing a woman and a child walking on a trail.",
+        "score": 0.19054954438960553,
+        "id": "4f607724-87ce-4bc3-8ecd-03ab7b75207d",
+        "created_at": "2026-11-10T15:07:15.125630+00:00",
+        "updated_at": "2026-11-10T15:07:15.125630+00:00",
+        "score_debug": {
+          "combined_score": 0.19054954438960553,
+          "semantic_score": 0.40447712,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a star-filled night sky, capturing the moment of the Perseid meteor shower during their camping trip.",
+        "score": 0.19030606754124474,
+        "id": "24b9d11e-21d5-4a6f-a0a3-2b1d2854c94d",
+        "created_at": "2026-11-10T14:58:20.459158+00:00",
+        "updated_at": "2026-11-10T14:58:20.459158+00:00",
+        "score_debug": {
+          "combined_score": 0.19030606754124474,
+          "semantic_score": 0.40411648,
+          "bm25_score": 0.0657732476075184,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie how her pets are doing.",
+        "score": 0.19010611023139753,
+        "id": "d8dfd292-cb6a-42d2-a532-2edf3d5716e0",
+        "created_at": "2026-11-10T15:00:27.575943+00:00",
+        "updated_at": "2026-11-10T15:00:27.575943+00:00",
+        "score_debug": {
+          "combined_score": 0.19010611023139753,
+          "semantic_score": 0.4007641,
+          "bm25_score": 0.06862573433290042,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has also created an abstract painting, expressing her emotions through vibrant colors and peaceful blue streaks to convey tranquility.",
+        "score": 0.1898121363896055,
+        "id": "2f8b80c2-ea91-49ec-9134-9028244e1fc3",
+        "created_at": "2026-11-10T15:06:27.138055+00:00",
+        "updated_at": "2026-11-10T15:06:27.138055+00:00",
+        "score_debug": {
+          "combined_score": 0.1898121363896055,
+          "semantic_score": 0.4026336,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie volunteered with her family at a homeless shelter recently, finding it hard to see how neglected some people are but feeling great about making a difference.",
+        "score": 0.18919051297004802,
+        "id": "38d10fd5-b223-4843-a0e8-4ff04fcba8a4",
+        "created_at": "2026-11-10T15:01:51.468156+00:00",
+        "updated_at": "2026-11-10T15:01:51.468156+00:00",
+        "score_debug": {
+          "combined_score": 0.18919051297004802,
+          "semantic_score": 0.40181726,
+          "bm25_score": 0.06528358117952662,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie volunteered at a homeless shelter recently, finding it hard to see the neglect some people face but feeling great about making a difference.",
+        "score": 0.188963368970048,
+        "id": "39b6154d-d4c7-47aa-8c6b-4f25ea7e8f27",
+        "created_at": "2026-11-10T15:02:04.543455+00:00",
+        "updated_at": "2026-11-10T15:02:04.543455+00:00",
+        "score_debug": {
+          "combined_score": 0.188963368970048,
+          "semantic_score": 0.4012494,
+          "bm25_score": 0.06528358117952662,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared that her son was involved in a car accident during a road trip on November 10, 2026, but he was okay, and the experience was scary for the family.",
+        "score": 0.18868378354124474,
+        "id": "ca2fbd4f-430f-43cf-93bc-fc75862493bb",
+        "created_at": "2026-11-10T15:06:46.229315+00:00",
+        "updated_at": "2026-11-10T15:06:46.229315+00:00",
+        "score_debug": {
+          "combined_score": 0.18868378354124474,
+          "semantic_score": 0.40006077,
+          "bm25_score": 0.0657732476075184,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie feels lucky to have her family, stating they bring her immense joy and love.",
+        "score": 0.18826969901434698,
+        "id": "bea70567-f6a1-498b-8d8e-68dbb14d02bb",
+        "created_at": "2026-11-10T14:58:49.660515+00:00",
+        "updated_at": "2026-11-10T14:58:49.660515+00:00",
+        "score_debug": {
+          "combined_score": 0.18826969901434698,
+          "semantic_score": 0.39776334,
+          "bm25_score": 0.06703546629027403,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared an image of a field of purple flowers, which they found during their nature walks.",
+        "score": 0.18818919356229477,
+        "id": "88b12bd9-aa99-4755-9881-9aab1a03df1d",
+        "created_at": "2026-11-10T14:55:30.492169+00:00",
+        "updated_at": "2026-11-10T14:55:30.492169+00:00",
+        "score_debug": {
+          "combined_score": 0.18818919356229477,
+          "semantic_score": 0.3973029,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie asked Caroline what inspires her with her volunteering efforts.",
+        "score": 0.18806253439952397,
+        "id": "cc193b1b-36e7-4469-97ef-f138e7be9f2c",
+        "created_at": "2026-11-10T15:04:33.759804+00:00",
+        "updated_at": "2026-11-10T15:04:33.759804+00:00",
+        "score_debug": {
+          "combined_score": 0.18806253439952397,
+          "semantic_score": 0.39619476,
+          "bm25_score": 0.06808613475321654,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie had a fun family picnic where they played games, ate good food, and enjoyed hanging out together, emphasizing that family moments make life awesome.",
+        "score": 0.18756478904038512,
+        "id": "72d10785-1870-4a80-a4f9-d7cbba1342bf",
+        "created_at": "2026-11-10T14:51:07.334796+00:00",
+        "updated_at": "2026-11-10T14:51:07.334796+00:00",
+        "score_debug": {
+          "combined_score": 0.18756478904038512,
+          "semantic_score": 0.39799464,
+          "bm25_score": 0.06504189135536934,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie created a painting inspired by sunsets, using vibrant colors to evoke calmness.",
+        "score": 0.18707311356229478,
+        "id": "79652aed-66f7-4d0d-b44d-c26dbc80caaa",
+        "created_at": "2026-11-10T15:06:27.135884+00:00",
+        "updated_at": "2026-11-10T15:06:27.135884+00:00",
+        "score_debug": {
+          "combined_score": 0.18707311356229478,
+          "semantic_score": 0.3945127,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared an image of her wedding ceremony, which took place in a greenhouse with people taking pictures.",
+        "score": 0.18687604438371766,
+        "id": "ed9e9c94-6e63-4d85-9733-cc17e2ac84a2",
+        "created_at": "2026-11-10T14:55:47.437224+00:00",
+        "updated_at": "2026-11-10T14:55:47.437224+00:00",
+        "score_debug": {
+          "combined_score": 0.18687604438371766,
+          "semantic_score": 0.39479074,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a plane flying in the sky with a trail of smoke during the Perseid meteor shower.",
+        "score": 0.18648786838371767,
+        "id": "9418f2bf-fa76-4906-b164-43ecbeb21e26",
+        "created_at": "2026-11-10T14:58:23.908105+00:00",
+        "updated_at": "2026-11-10T14:58:23.908105+00:00",
+        "score_debug": {
+          "combined_score": 0.18648786838371767,
+          "semantic_score": 0.3938203,
+          "bm25_score": 0.06652392971370073,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie made a plate in pottery class on November 9, 2026, and finds pottery to be relaxing and creative, expressing love for the craft.",
+        "score": 0.18635830009238274,
+        "id": "bcb1e113-6e10-4e79-9246-2f48e2235537",
+        "created_at": "2026-11-10T15:01:24.017297+00:00",
+        "updated_at": "2026-11-10T15:01:24.017297+00:00",
+        "score_debug": {
+          "combined_score": 0.18635830009238274,
+          "semantic_score": 0.39449295,
+          "bm25_score": 0.06552735898536342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie plays the clarinet, which she started when she was young, and describes it as a way to express herself and relax.",
+        "score": 0.18622103356229477,
+        "id": "a730eeb1-b9bd-4fae-9b9e-88886786b04d",
+        "created_at": "2026-11-10T15:04:12.724158+00:00",
+        "updated_at": "2026-11-10T15:04:12.724158+00:00",
+        "score_debug": {
+          "combined_score": 0.18622103356229477,
+          "semantic_score": 0.3923825,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie found the charity race for mental health to be thought-provoking and is starting to realize the importance of self-care in her life.",
+        "score": 0.18605444009238276,
+        "id": "dc034074-f5bb-4156-90a8-082ab8478ad0",
+        "created_at": "2026-11-10T14:48:46.131481+00:00",
+        "updated_at": "2026-11-10T14:48:46.131481+00:00",
+        "score_debug": {
+          "combined_score": 0.18605444009238276,
+          "semantic_score": 0.3937333,
+          "bm25_score": 0.06552735898536342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie painted a sunset inspired piece last week, finding it calming and a great way to express her emotions through art.",
+        "score": 0.18584589954124472,
+        "id": "602897ce-7640-4b3e-8fce-72844078ded9",
+        "created_at": "2026-11-10T15:06:08.101361+00:00",
+        "updated_at": "2026-11-10T15:06:08.101361+00:00",
+        "score_debug": {
+          "combined_score": 0.18584589954124472,
+          "semantic_score": 0.39296606,
+          "bm25_score": 0.0657732476075184,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie plays clarinet, which she started when she was young, and describes it as a way to express herself and relax.",
+        "score": 0.18490229356229476,
+        "id": "2e857cb8-cca7-4ee6-9841-f09ece82f1d2",
+        "created_at": "2026-11-10T15:04:17.700570+00:00",
+        "updated_at": "2026-11-10T15:04:17.700570+00:00",
+        "score_debug": {
+          "combined_score": 0.18490229356229476,
+          "semantic_score": 0.38908565,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline praised Melanie's latest painting, describing it as amazing with bold colors that highlight the beauty of nature.",
+        "score": 0.1846204086719521,
+        "id": "0c840681-6379-4cb4-9a8c-0e7031602fc1",
+        "created_at": "2026-11-10T14:55:27.746607+00:00",
+        "updated_at": "2026-11-10T14:55:27.746607+00:00",
+        "score_debug": {
+          "combined_score": 0.1846204086719521,
+          "semantic_score": 0.38940406,
+          "bm25_score": 0.06627152043428679,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has also created an abstract painting, showcasing her love for using art as a means to express her emotions.",
+        "score": 0.18459254607339523,
+        "id": "a6ae5547-3da3-4e04-8f7a-85ebded7f88f",
+        "created_at": "2026-11-10T15:06:08.103981+00:00",
+        "updated_at": "2026-11-10T15:06:08.103981+00:00",
+        "score_debug": {
+          "combined_score": 0.18459254607339523,
+          "semantic_score": 0.38882735,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie for the names of her pets.",
+        "score": 0.18426915056909338,
+        "id": "31c566b5-6406-4757-9840-fcf1f44a60d5",
+        "created_at": "2026-11-10T14:54:44.134827+00:00",
+        "updated_at": "2026-11-10T14:54:44.134827+00:00",
+        "score_debug": {
+          "combined_score": 0.18426915056909338,
+          "semantic_score": 0.38644272,
+          "bm25_score": 0.06835471517714,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has a dog and a cat that brighten up her day and make her smile.",
+        "score": 0.184150350399524,
+        "id": "508a2525-f5df-4934-a090-6598d5c3eda5",
+        "created_at": "2026-11-10T14:54:41.484616+00:00",
+        "updated_at": "2026-11-10T14:54:41.484616+00:00",
+        "score_debug": {
+          "combined_score": 0.184150350399524,
+          "semantic_score": 0.3864143,
+          "bm25_score": 0.06808613475321654,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed sympathy for Melanie's son's recent car accident during a road trip on November 10, 2026, acknowledging it must have been traumatizing for the family and expressing gratitude that he is okay.",
+        "score": 0.18394769271377098,
+        "id": "cfb27ab8-9ec5-4c8d-9113-54d0334b01d2",
+        "created_at": "2026-11-10T15:06:48.821879+00:00",
+        "updated_at": "2026-11-10T15:06:48.821879+00:00",
+        "score_debug": {
+          "combined_score": 0.18394769271377098,
+          "semantic_score": 0.38989818,
+          "bm25_score": 0.06409561053883406,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie about other creative projects she does with her kids besides pottery.",
+        "score": 0.18376921005214272,
+        "id": "d27f49ae-e8b6-43b7-8d3c-359a43b389ce",
+        "created_at": "2026-11-10T14:55:22.594703+00:00",
+        "updated_at": "2026-11-10T14:55:22.594703+00:00",
+        "score_debug": {
+          "combined_score": 0.18376921005214272,
+          "semantic_score": 0.38572764,
+          "bm25_score": 0.06781994388476342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie asked Caroline about her vision for the future regarding her adoption journey.",
+        "score": 0.18372958605214273,
+        "id": "7eb33c29-4eff-4afe-bb70-bf23d3832150",
+        "created_at": "2026-11-10T15:07:46.610685+00:00",
+        "updated_at": "2026-11-10T15:07:46.610685+00:00",
+        "score_debug": {
+          "combined_score": 0.18372958605214273,
+          "semantic_score": 0.38562858,
+          "bm25_score": 0.06781994388476342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie has never been to a poetry reading and is curious about what made Caroline's experience special.",
+        "score": 0.18369911405214273,
+        "id": "ddb741a6-42f4-496e-a19c-ca154165b14c",
+        "created_at": "2026-11-10T15:06:19.607413+00:00",
+        "updated_at": "2026-11-10T15:06:19.607413+00:00",
+        "score_debug": {
+          "combined_score": 0.18369911405214273,
+          "semantic_score": 0.3855524,
+          "bm25_score": 0.06781994388476342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline expressed admiration for Melanie's beautiful family moments and feels lucky for her awesome family.",
+        "score": 0.18339569807339523,
+        "id": "07982a27-d671-4fe7-afb1-2eddb0286ba6",
+        "created_at": "2026-11-10T14:58:47.095253+00:00",
+        "updated_at": "2026-11-10T14:58:47.095253+00:00",
+        "score_debug": {
+          "combined_score": 0.18339569807339523,
+          "semantic_score": 0.38583523,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie's wedding day was special, filled with love and joy, and celebrated with everyone they love.",
+        "score": 0.18259924156229476,
+        "id": "1c4e0f8b-0856-4858-b63e-24c9462636c2",
+        "created_at": "2026-11-10T14:55:52.279803+00:00",
+        "updated_at": "2026-11-10T14:55:52.279803+00:00",
+        "score_debug": {
+          "combined_score": 0.18259924156229476,
+          "semantic_score": 0.38332802,
+          "bm25_score": 0.06729464266014351,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie feels a strong connection to art, describing it as both a sanctuary and a source of comfort, and expresses gratitude for having something that brings her happiness and fulfillment.",
+        "score": 0.18197518754124473,
+        "id": "20505ed0-f1a1-4cff-b318-a18ee42efe69",
+        "created_at": "2026-11-10T14:59:51.162533+00:00",
+        "updated_at": "2026-11-10T14:59:51.162533+00:00",
+        "score_debug": {
+          "combined_score": 0.18197518754124473,
+          "semantic_score": 0.38328928,
+          "bm25_score": 0.0657732476075184,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a stack of bowls with different designs, asking Caroline if she has any other treasured objects like her necklace.",
+        "score": 0.18185360838960551,
+        "id": "e932ac5a-4926-4a90-8ef4-12556668ae3c",
+        "created_at": "2026-11-10T14:51:21.570044+00:00",
+        "updated_at": "2026-11-10T14:51:21.570044+00:00",
+        "score_debug": {
+          "combined_score": 0.18185360838960551,
+          "semantic_score": 0.38273728,
+          "bm25_score": 0.06602129972842034,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a beautiful photo of a family hiking trail surrounded by vibrant autumn colors.",
+        "score": 0.18177757407339523,
+        "id": "846d39b2-6460-489b-a9c7-7d47db489b1d",
+        "created_at": "2026-11-10T15:04:27.980999+00:00",
+        "updated_at": "2026-11-10T15:04:27.980999+00:00",
+        "score_debug": {
+          "combined_score": 0.18177757407339523,
+          "semantic_score": 0.38178992,
+          "bm25_score": 0.06677857393789467,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a book she read last year that inspires her to pursue her dreams, relating it to Caroline's journey and expressing confidence that Caroline will make a huge difference.",
+        "score": 0.1816632610403851,
+        "id": "ea5a5ba0-a358-479c-9330-c96ff23ce707",
+        "created_at": "2026-11-10T14:54:08.753998+00:00",
+        "updated_at": "2026-11-10T14:54:08.753998+00:00",
+        "score_debug": {
+          "combined_score": 0.1816632610403851,
+          "semantic_score": 0.38324082,
+          "bm25_score": 0.06504189135536934,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie will never forget the day her youngest child took her first steps, reflecting on how fleeting life is and feeling lucky to share such moments.",
+        "score": 0.18051650809238273,
+        "id": "f29bf4c6-8b86-4e8d-8f56-f7980b31d27b",
+        "created_at": "2026-11-10T14:58:38.549554+00:00",
+        "updated_at": "2026-11-10T14:58:38.549554+00:00",
+        "score_debug": {
+          "combined_score": 0.18051650809238273,
+          "semantic_score": 0.37988847,
+          "bm25_score": 0.06552735898536342,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her recent landscape painting featuring a vibrant purple sunset with an autumn theme, which she created last week and finds calming.",
+        "score": 0.1800927330403851,
+        "id": "e9391441-1121-4d39-b25a-fbee14f1cc5a",
+        "created_at": "2026-11-10T15:06:02.617264+00:00",
+        "updated_at": "2026-11-10T15:06:02.617264+00:00",
+        "score_debug": {
+          "combined_score": 0.1800927330403851,
+          "semantic_score": 0.3793145,
+          "bm25_score": 0.06504189135536934,
+          "entity_boost": 0.005875441245593419
+        }
+      },
+      {
+        "memory": "Caroline is inspiring others with her journey and positively affecting many by talking about inclusivity and acceptance in the trans community, as praised by Melanie.",
+        "score": 0.18002375554124472,
+        "id": "3c0ced22-f3f0-42c7-adf8-fa8503bdbc32",
+        "created_at": "2026-11-10T14:49:31.480677+00:00",
+        "updated_at": "2026-11-10T14:49:31.480677+00:00",
+        "score_debug": {
+          "combined_score": 0.18002375554124472,
+          "semantic_score": 0.3784107,
+          "bm25_score": 0.0657732476075184,
+          "entity_boost": 0.005875441245593419
+        }
+      }
+    ],
+    "search_latency_ms": 852.0,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_10": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "Once or twice.",
+      "memories_evaluated": 10,
+      "reason": "The generated answer includes 'twice,' which matches the gold answer of 2, so it contains a correct item."
+    },
+    "top_20": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "Once or twice.",
+      "memories_evaluated": 20,
+      "reason": "The generated answer includes 'twice,' which matches the gold answer of 2 and thus qualifies as correct under partial credit."
+    },
+    "top_50": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "Once or twice.",
+      "memories_evaluated": 50,
+      "reason": "The generated answer includes 'twice,' which matches the gold answer of 2."
+    },
+    "top_200": {
+      "judgment": "WRONG",
+      "score": 0.0,
+      "generated_answer": "1",
+      "memories_evaluated": 200,
+      "reason": "The gold answer is 2, but the generated answer says 1, so there is no correct item."
+    }
+  }
+}
