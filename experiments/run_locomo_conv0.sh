@@ -45,7 +45,7 @@ echo "Mem0 code:  $REF = $MEM0_SHA"
 sed -i -E "s|^mem0ai @ git\+.*|mem0ai @ git+${FORK_URL}@${MEM0_SHA}|" "$REQ"
 cd "$MB"
 docker compose build mem0
-docker compose up -d
+docker compose up -d --force-recreate mem0
 echo -n "Waiting for Mem0 server"
 for _ in $(seq 1 90); do
   curl -sf "$MEM0_HOST/health" >/dev/null 2>&1 && break
