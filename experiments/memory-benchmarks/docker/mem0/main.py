@@ -230,20 +230,26 @@ def add_memories(req: AddRequest):
 def search_memories(req: SearchRequest):
     """Search memories by semantic similarity + BM25 + entity boost."""
     mem = _get_memory()
-    params: dict[str, Any] = {"limit": req.limit}
-    if req.user_id:
-        params["user_id"] = req.user_id
-    if req.agent_id:
-        params["agent_id"] = req.agent_id
-    if req.run_id:
-        params["run_id"] = req.run_id
-    if req.filters:
-        params["filters"] = req.filters
+    # mem0 v2.x: entity ids go inside filters, and the result count is top_k
+    filters: dict[str, Any] = dict(req.filters or {})
+    for key in ("user_id", "agent_id", "run_id"):
+        if getattr(req, key):
+            filters[key] = getattr(req, key)
+    params: dict[str, Any] = {"top_k": req.limit, "filters": filters, "explain": True}
     if req.rerank:
         params["rerank"] = True
 
     try:
         result = mem.search(req.query, **params)
+        # explain=True only adds score details; rename them to what the benchmark client reads
+        for item in result.get("results", []):
+            details = item.get("score_details")
+            if details:
+                item["score_breakdown"] = {
+                    "semantic": details.get("semantic_score", 0),
+                    "bm25": details.get("bm25_score", 0),
+                    "entity_boost": details.get("entity_boost", 0),
+                }
         return result
     except Exception as e:
         logger.exception("search() failed")
