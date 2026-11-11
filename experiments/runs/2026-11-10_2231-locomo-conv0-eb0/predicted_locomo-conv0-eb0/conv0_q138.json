@@ -1,0 +1,2650 @@
+{
+  "question_id": "conv0_q138",
+  "conversation_idx": 0,
+  "category": 4,
+  "category_name": "single-hop",
+  "question": "What kind of painting did Caroline share with Melanie on October 13, 2023?",
+  "ground_truth_answer": "An abstract painting with blue streaks on a wall.",
+  "evidence": [
+    "D17:14"
+  ],
+  "user_id": "locomo_0_001bd360",
+  "reference_date": "9:55 am on 22 October, 2023",
+  "retrieval": {
+    "search_query": "What kind of painting did Caroline share with Melanie on October 13, 2023?",
+    "search_results": [
+      {
+        "memory": "Caroline created a painting with red and blue brush strokes around November 10, 2026, and shared it with Melanie.",
+        "score": 0.8670988103054889,
+        "id": "e7b805b1-29a8-43d4-a605-e22067abfb42",
+        "created_at": "2026-11-10T22:45:52.894668+00:00",
+        "updated_at": "2026-11-10T22:45:52.894668+00:00",
+        "score_debug": {
+          "combined_score": 0.8670988103054889,
+          "semantic_score": 0.81708705,
+          "bm25_score": 0.9171105706109778,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie created an abstract painting with vibrant colors, sharing it with Caroline and expressing her love for how art allows them to express their emotions.",
+        "score": 0.8346989765944373,
+        "id": "575b0975-2194-4276-a390-ea61ca2e6bf7",
+        "created_at": "2026-11-10T22:46:43.485695+00:00",
+        "updated_at": "2026-11-10T22:46:43.485695+00:00",
+        "score_debug": {
+          "combined_score": 0.8346989765944373,
+          "semantic_score": 0.7325496,
+          "bm25_score": 0.9368483531888744,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie recently painted a horse and shared a photo of her artwork with Caroline on November 10, 2026.",
+        "score": 0.8341527085121921,
+        "id": "cd3c28f9-e0f3-460d-b15d-5100dd50ec5d",
+        "created_at": "2026-11-10T22:42:47.499304+00:00",
+        "updated_at": "2026-11-10T22:42:47.499304+00:00",
+        "score_debug": {
+          "combined_score": 0.8341527085121921,
+          "semantic_score": 0.74982697,
+          "bm25_score": 0.9184784470243843,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been busy painting and recently finished a vibrant sunset beach painting, which she shared with Melanie.",
+        "score": 0.8326389394716001,
+        "id": "ae4d1ffb-d0ad-40ec-b086-03d896c1701f",
+        "created_at": "2026-11-10T22:43:17.888059+00:00",
+        "updated_at": "2026-11-10T22:43:17.888059+00:00",
+        "score_debug": {
+          "combined_score": 0.8326389394716001,
+          "semantic_score": 0.7132586,
+          "bm25_score": 0.9520192789432,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a self-portrait painting last week, which she shared with Melanie.",
+        "score": 0.8293502717546384,
+        "id": "54272f1e-936a-4510-ae7e-9df3cd068a7a",
+        "created_at": "2026-11-10T22:43:00.876358+00:00",
+        "updated_at": "2026-11-10T22:43:00.876358+00:00",
+        "score_debug": {
+          "combined_score": 0.8293502717546384,
+          "semantic_score": 0.73619986,
+          "bm25_score": 0.9225006835092766,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie painted a calming sunset painting inspired by sunsets and shared it with Caroline, expressing that the colors make her feel calm.",
+        "score": 0.8204865819508629,
+        "id": "200bfdc5-e7a2-45bb-b585-dfc43358981f",
+        "created_at": "2026-11-10T22:46:43.483147+00:00",
+        "updated_at": "2026-11-10T22:46:43.483147+00:00",
+        "score_debug": {
+          "combined_score": 0.8204865819508629,
+          "semantic_score": 0.69886523,
+          "bm25_score": 0.9421079339017259,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline painted a vibrant sunset beach painting, which she shared with Melanie, and Melanie complimented her on the vivid colors, noting it looks like a real sunset.",
+        "score": 0.8202084733046836,
+        "id": "ca67961a-6e72-4a96-a406-6fc0771c49bd",
+        "created_at": "2026-11-10T22:43:19.805365+00:00",
+        "updated_at": "2026-11-10T22:43:19.805365+00:00",
+        "score_debug": {
+          "combined_score": 0.8202084733046836,
+          "semantic_score": 0.6914724,
+          "bm25_score": 0.9489445466093672,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie created a landscape painting inspired by sunsets, which she finds calming, and shared it with Caroline.",
+        "score": 0.8177762235121921,
+        "id": "dce7c456-017f-409d-ad71-3af7d62ea5fb",
+        "created_at": "2026-11-10T22:46:53.189978+00:00",
+        "updated_at": "2026-11-10T22:46:53.189978+00:00",
+        "score_debug": {
+          "combined_score": 0.8177762235121921,
+          "semantic_score": 0.717074,
+          "bm25_score": 0.9184784470243843,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline inquired if the painting shared by Melanie was her own creation.",
+        "score": 0.8154087714043957,
+        "id": "92b3221c-7b16-413c-94e3-006fa3ac57a1",
+        "created_at": "2026-11-10T22:33:13.800539+00:00",
+        "updated_at": "2026-11-10T22:33:13.800539+00:00",
+        "score_debug": {
+          "combined_score": 0.8154087714043957,
+          "semantic_score": 0.70570344,
+          "bm25_score": 0.9251141028087915,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a painting with a blue and yellow design, asking Caroline if she has any previews of her art.",
+        "score": 0.8093888853054889,
+        "id": "93f542dd-9234-4366-a478-d1b9ec6f2e77",
+        "created_at": "2026-11-10T22:39:46.638731+00:00",
+        "updated_at": "2026-11-10T22:39:46.638731+00:00",
+        "score_debug": {
+          "combined_score": 0.8093888853054889,
+          "semantic_score": 0.7016672,
+          "bm25_score": 0.9171105706109778,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed appreciation to Melanie for her kind words, stating it means a lot to her that Melanie can feel the sense of peace and serenity in her art, which makes Caroline feel connected.",
+        "score": 0.7893642392967779,
+        "id": "fd1b22a4-1696-41a2-baf7-b832d8490943",
+        "created_at": "2026-11-10T22:43:25.078124+00:00",
+        "updated_at": "2026-11-10T22:43:25.078124+00:00",
+        "score_debug": {
+          "combined_score": 0.7893642392967779,
+          "semantic_score": 0.60202813,
+          "bm25_score": 0.9767003485935558,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared an image of a painting depicting a sunset over a lake.",
+        "score": 0.7421755550510432,
+        "id": "933a73a2-6044-40c3-a7ec-41a501c5b69b",
+        "created_at": "2026-11-10T22:33:11.711539+00:00",
+        "updated_at": "2026-11-10T22:33:11.711539+00:00",
+        "score_debug": {
+          "combined_score": 0.7421755550510432,
+          "semantic_score": 0.5895008,
+          "bm25_score": 0.8948503101020864,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared an image of their latest painting, which depicts a sunset with a palm tree.",
+        "score": 0.7413044601535724,
+        "id": "da07ecea-f7ee-47f9-8153-a19051ae5750",
+        "created_at": "2026-11-10T22:38:03.039956+00:00",
+        "updated_at": "2026-11-10T22:38:03.039956+00:00",
+        "score_debug": {
+          "combined_score": 0.7413044601535724,
+          "semantic_score": 0.5894199,
+          "bm25_score": 0.8931890203071449,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a landscape painting she created last week, inspired by sunsets, featuring a vibrant purple sunset with a pink sky that evokes a sense of calm.",
+        "score": 0.7410633950457944,
+        "id": "8a789b5d-8150-4e5d-b2f1-d56823167b7d",
+        "created_at": "2026-11-10T22:46:38.901590+00:00",
+        "updated_at": "2026-11-10T22:46:38.901590+00:00",
+        "score_debug": {
+          "combined_score": 0.7410633950457944,
+          "semantic_score": 0.56736004,
+          "bm25_score": 0.9147667500915889,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed gratitude to Melanie for her kind words, stating that they mean a lot to her.",
+        "score": 0.7383334424135881,
+        "id": "e9d8135d-db01-4ea3-964f-fbab2235231a",
+        "created_at": "2026-11-10T22:35:24.207435+00:00",
+        "updated_at": "2026-11-10T22:35:24.207435+00:00",
+        "score_debug": {
+          "combined_score": 0.7383334424135881,
+          "semantic_score": 0.5008111,
+          "bm25_score": 0.9758557848271764,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline loves creating art and finds painting a great way to express herself. She shared a recent self-portrait she made around November 3, 2026.",
+        "score": 0.7372086066309704,
+        "id": "a0bf422d-c3ff-4500-9761-87ae7a621455",
+        "created_at": "2026-11-10T22:42:54.301101+00:00",
+        "updated_at": "2026-11-10T22:42:54.301101+00:00",
+        "score_debug": {
+          "combined_score": 0.7372086066309704,
+          "semantic_score": 0.66175526,
+          "bm25_score": 0.812661953261941,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared an image of a field of purple flowers with green leaves, which inspired their recent painting.",
+        "score": 0.7347483919967255,
+        "id": "01fcf3a5-de1d-4780-a948-9f3860426c3a",
+        "created_at": "2026-11-10T22:38:08.358276+00:00",
+        "updated_at": "2026-11-10T22:38:08.358276+00:00",
+        "score_debug": {
+          "combined_score": 0.7347483919967255,
+          "semantic_score": 0.5796725,
+          "bm25_score": 0.8898242839934509,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a colorful painting she made, featuring red and blue brush strokes on an easel around November 10, 2026.",
+        "score": 0.7153303070015089,
+        "id": "739d689e-d2d5-4cb7-9056-dc70892d8c05",
+        "created_at": "2026-11-10T22:45:51.032868+00:00",
+        "updated_at": "2026-11-10T22:45:51.032868+00:00",
+        "score_debug": {
+          "combined_score": 0.7153303070015089,
+          "semantic_score": 0.68437684,
+          "bm25_score": 0.7462837740030179,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a painting featuring vibrant colors with the word 'happiness' painted on it, reflecting her self-expression.",
+        "score": 0.7136307557344183,
+        "id": "cbaf26a2-6673-4439-9c57-8919afd0fb5b",
+        "created_at": "2026-11-10T22:48:33.443195+00:00",
+        "updated_at": "2026-11-10T22:48:33.443195+00:00",
+        "score_debug": {
+          "combined_score": 0.7136307557344183,
+          "semantic_score": 0.60921174,
+          "bm25_score": 0.8180497714688365,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie praised Caroline for her kindness in considering adoption and expressed that her future family will be lucky to have her.",
+        "score": 0.713557822780945,
+        "id": "04d132e5-7485-46ea-bc73-1961ccf78742",
+        "created_at": "2026-11-10T22:33:41.148008+00:00",
+        "updated_at": "2026-11-10T22:33:41.148008+00:00",
+        "score_debug": {
+          "combined_score": 0.713557822780945,
+          "semantic_score": 0.45177245,
+          "bm25_score": 0.9753431955618901,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed gratitude to Melanie for her kind words, emphasizing her commitment to ensuring that the children she adopts will have a safe and loving home.",
+        "score": 0.7104022185647461,
+        "id": "91da1d72-67a7-4582-a355-de9b41f1de7f",
+        "created_at": "2026-11-10T22:33:56.879690+00:00",
+        "updated_at": "2026-11-10T22:33:56.879690+00:00",
+        "score_debug": {
+          "combined_score": 0.7104022185647461,
+          "semantic_score": 0.44870323,
+          "bm25_score": 0.9721012071294921,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks ago around late October 2026 and shared a photo of the event featuring a rainbow flag and people walking down the street.",
+        "score": 0.7060225348781335,
+        "id": "419396c7-4988-4488-8564-885be19b57dc",
+        "created_at": "2026-11-10T22:38:30.606774+00:00",
+        "updated_at": "2026-11-10T22:38:30.606774+00:00",
+        "score_debug": {
+          "combined_score": 0.7060225348781335,
+          "semantic_score": 0.4166515,
+          "bm25_score": 0.995393569756267,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline and her mentee had a great time at the LGBT pride event around October 2026.",
+        "score": 0.7047470711059481,
+        "id": "295e24db-99b6-4a90-b292-f3573ad7ac00",
+        "created_at": "2026-11-10T22:39:28.616866+00:00",
+        "updated_at": "2026-11-10T22:39:28.616866+00:00",
+        "score_debug": {
+          "combined_score": 0.7047470711059481,
+          "semantic_score": 0.44847995,
+          "bm25_score": 0.9610141922118963,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed that painting is great for self-expression and she loves creating art, sharing a recent self-portrait she made last week.",
+        "score": 0.6993937337657816,
+        "id": "f4f23069-a59e-4bb2-b64a-df3a615a0ced",
+        "created_at": "2026-11-10T22:42:56.176253+00:00",
+        "updated_at": "2026-11-10T22:42:56.176253+00:00",
+        "score_debug": {
+          "combined_score": 0.6993937337657816,
+          "semantic_score": 0.59199953,
+          "bm25_score": 0.8067879375315633,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline mentored a transgender teen, focusing on building confidence and positive strategies, and they attended an LGBT pride event together in October 2026.",
+        "score": 0.6922935854890533,
+        "id": "c6088ca6-1636-49c8-9c44-a0818fa0b8de",
+        "created_at": "2026-11-10T22:39:51.983744+00:00",
+        "updated_at": "2026-11-10T22:39:51.983744+00:00",
+        "score_debug": {
+          "combined_score": 0.6922935854890533,
+          "semantic_score": 0.43000242,
+          "bm25_score": 0.9545847509781067,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a recent painting that showcases vibrant colors and diverse representation, emphasizing her commitment to inclusivity in her artwork.",
+        "score": 0.6791340522957897,
+        "id": "6aa27d49-033f-47dc-8f72-0508c245f8d3",
+        "created_at": "2026-11-10T22:41:15.338799+00:00",
+        "updated_at": "2026-11-10T22:41:15.338799+00:00",
+        "score_debug": {
+          "combined_score": 0.6791340522957897,
+          "semantic_score": 0.6092417,
+          "bm25_score": 0.7490264045915794,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed interest in whether she likes to paint, indicating a shared appreciation for art.",
+        "score": 0.6787217427443402,
+        "id": "bc961943-b970-4b15-be04-edde74e682c7",
+        "created_at": "2026-11-10T22:42:52.362458+00:00",
+        "updated_at": "2026-11-10T22:42:52.362458+00:00",
+        "score_debug": {
+          "combined_score": 0.6787217427443402,
+          "semantic_score": 0.5975056,
+          "bm25_score": 0.7599378854886804,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a recent self-portrait painting she created last week, which features vibrant colors and a blue face.",
+        "score": 0.6761615848466136,
+        "id": "0836e866-4359-4240-80b1-bf4598750e40",
+        "created_at": "2026-11-10T22:43:12.496127+00:00",
+        "updated_at": "2026-11-10T22:43:12.496127+00:00",
+        "score_debug": {
+          "combined_score": 0.6761615848466136,
+          "semantic_score": 0.60055983,
+          "bm25_score": 0.7517633396932272,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a crowd at the pride parade, showcasing people of all kinds celebrating love and acceptance.",
+        "score": 0.6748021000052398,
+        "id": "68dd8974-eec2-4506-9f0a-9b690cecfafb",
+        "created_at": "2026-11-10T22:41:09.520562+00:00",
+        "updated_at": "2026-11-10T22:41:09.520562+00:00",
+        "score_debug": {
+          "combined_score": 0.6748021000052398,
+          "semantic_score": 0.35805368,
+          "bm25_score": 0.9915505200104795,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of her painting for the art show, which depicts a tree with a bright sun in the background.",
+        "score": 0.6653099677443401,
+        "id": "8e96e431-ea06-4461-b547-e623da58b620",
+        "created_at": "2026-11-10T22:39:57.481169+00:00",
+        "updated_at": "2026-11-10T22:39:57.481169+00:00",
+        "score_debug": {
+          "combined_score": 0.6653099677443401,
+          "semantic_score": 0.57068205,
+          "bm25_score": 0.7599378854886804,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of her vibrant sunset beach painting on a small easel, showcasing her artistic work.",
+        "score": 0.6642108548466136,
+        "id": "4e31d711-b221-495f-8c1f-bea4108a3436",
+        "created_at": "2026-11-10T22:43:33.604669+00:00",
+        "updated_at": "2026-11-10T22:43:33.604669+00:00",
+        "score_debug": {
+          "combined_score": 0.6642108548466136,
+          "semantic_score": 0.57665837,
+          "bm25_score": 0.7517633396932272,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a painting featuring rainbow colors, symbolizing her commitment to the LGBTQ+ community.",
+        "score": 0.658874357187159,
+        "id": "e363d0c3-eb20-400c-96d1-61f1680b8ee3",
+        "created_at": "2026-11-10T22:45:36.819031+00:00",
+        "updated_at": "2026-11-10T22:45:36.819031+00:00",
+        "score_debug": {
+          "combined_score": 0.658874357187159,
+          "semantic_score": 0.56325424,
+          "bm25_score": 0.754494474374318,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a preview of her painting for the upcoming art show, which features a tree with a bright sun in the background.",
+        "score": 0.6551368105821878,
+        "id": "dbc0c33a-fea9-47c6-a38a-7b57f362ef83",
+        "created_at": "2026-11-10T22:39:51.992532+00:00",
+        "updated_at": "2026-11-10T22:39:51.992532+00:00",
+        "score_debug": {
+          "combined_score": 0.6551368105821878,
+          "semantic_score": 0.5530542,
+          "bm25_score": 0.7572194211643754,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a painting depicting a woman with a cow in her lap, which is part of her artistic expression related to her trans experience.",
+        "score": 0.6476729522957897,
+        "id": "6fe4b8aa-0a4e-4e7e-af1f-63205ee5f2af",
+        "created_at": "2026-11-10T22:41:47.283299+00:00",
+        "updated_at": "2026-11-10T22:41:47.283299+00:00",
+        "score_debug": {
+          "combined_score": 0.6476729522957897,
+          "semantic_score": 0.5463195,
+          "bm25_score": 0.7490264045915794,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a preview of her painting for the upcoming LGBTQ art show, which depicts a tree with a bright sun in the background.",
+        "score": 0.642010837187159,
+        "id": "d2cc04a8-951d-4e80-8439-dd96b4346351",
+        "created_at": "2026-11-10T22:39:48.590343+00:00",
+        "updated_at": "2026-11-10T22:39:48.590343+00:00",
+        "score_debug": {
+          "combined_score": 0.642010837187159,
+          "semantic_score": 0.5295272,
+          "bm25_score": 0.754494474374318,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline inquired if Melanie enjoys painting animals.",
+        "score": 0.632379660843408,
+        "id": "73e3af03-4a67-4b2b-b7d2-80eaf32bece0",
+        "created_at": "2026-11-10T22:42:49.946245+00:00",
+        "updated_at": "2026-11-10T22:42:49.946245+00:00",
+        "score_debug": {
+          "combined_score": 0.632379660843408,
+          "semantic_score": 0.6593195,
+          "bm25_score": 0.605439821686816,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on her painting, noting that the colors blend nicely and expressing that painting looks like a great outlet for self-expression.",
+        "score": 0.6277639475479593,
+        "id": "52dde7d8-a0a8-45f0-9c44-bfc9dc9a7e39",
+        "created_at": "2026-11-10T22:33:17.052214+00:00",
+        "updated_at": "2026-11-10T22:33:17.052214+00:00",
+        "score_debug": {
+          "combined_score": 0.6277639475479593,
+          "semantic_score": 0.67427397,
+          "bm25_score": 0.5812539250959186,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been volunteering at an LGBTQ+ youth center, finding it gratifying to talk to young people with similar experiences and realizing the importance of kindness and support.",
+        "score": 0.6272515532632215,
+        "id": "79cba7f1-c2ba-4efc-81c8-45e8fa5c01ee",
+        "created_at": "2026-11-10T22:44:29.436084+00:00",
+        "updated_at": "2026-11-10T22:44:29.436084+00:00",
+        "score_debug": {
+          "combined_score": 0.6272515532632215,
+          "semantic_score": 0.34972042,
+          "bm25_score": 0.9047826865264429,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared an image of a dog walking past a wall with a painting of a woman and a transgender pride flag mural.",
+        "score": 0.6263166022957898,
+        "id": "7b2682ff-818a-4bcb-a472-36a8e376f06b",
+        "created_at": "2026-11-10T22:33:00.926754+00:00",
+        "updated_at": "2026-11-10T22:33:00.926754+00:00",
+        "score_debug": {
+          "combined_score": 0.6263166022957898,
+          "semantic_score": 0.5036068,
+          "bm25_score": 0.7490264045915794,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie and her kids have been painting together lately, focusing on nature-inspired themes, and they created a new painting featuring vibrant flowers and a sunset sky around November 5-6, 2026.",
+        "score": 0.6108981621012851,
+        "id": "82d96209-ee18-483e-92e6-5dde28820729",
+        "created_at": "2026-11-10T22:38:03.037271+00:00",
+        "updated_at": "2026-11-10T22:38:03.037271+00:00",
+        "score_debug": {
+          "combined_score": 0.6108981621012851,
+          "semantic_score": 0.6863076,
+          "bm25_score": 0.5354887242025702,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is excited to see more paintings from Melanie and inquired about any upcoming projects.",
+        "score": 0.6032386699560424,
+        "id": "4fb19731-beee-4e30-bed9-5741e2fe879b",
+        "created_at": "2026-11-10T22:44:16.532840+00:00",
+        "updated_at": "2026-11-10T22:44:16.532840+00:00",
+        "score_debug": {
+          "combined_score": 0.6032386699560424,
+          "semantic_score": 0.7003279,
+          "bm25_score": 0.5061494399120848,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on her abstract painting, noting that the blue color adds much to it and inquired about the feelings Melanie hoped to portray.",
+        "score": 0.6017170414449562,
+        "id": "ee19a065-675f-4930-9992-5df9ce7b5c97",
+        "created_at": "2026-11-10T22:46:45.251384+00:00",
+        "updated_at": "2026-11-10T22:46:45.251384+00:00",
+        "score_debug": {
+          "combined_score": 0.6017170414449562,
+          "semantic_score": 0.6732002,
+          "bm25_score": 0.5302338828899122,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is interested in seeing any paintings Melanie has created and would love to check them out.",
+        "score": 0.5938274124962953,
+        "id": "9ec09dcc-3376-4169-a211-37dfaf249089",
+        "created_at": "2026-11-10T22:46:37.119194+00:00",
+        "updated_at": "2026-11-10T22:46:37.119194+00:00",
+        "score_debug": {
+          "combined_score": 0.5938274124962953,
+          "semantic_score": 0.6874777,
+          "bm25_score": 0.5001771249925907,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie and her kids have been painting together lately, focusing on nature-inspired artwork, including a recent painting of a sunset with a palm tree.",
+        "score": 0.5792245191469185,
+        "id": "1be453a0-222a-4abc-bc22-6666a0bdaae4",
+        "created_at": "2026-11-10T22:38:11.363048+00:00",
+        "updated_at": "2026-11-10T22:38:11.363048+00:00",
+        "score_debug": {
+          "combined_score": 0.5792245191469185,
+          "semantic_score": 0.6128667,
+          "bm25_score": 0.5455823382938371,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline appreciates sharing her art and experiences with Melanie, stating it means a lot to her.",
+        "score": 0.5683378696541248,
+        "id": "f3701474-7b54-46e1-b0a7-a4232a296835",
+        "created_at": "2026-11-10T22:41:33.590368+00:00",
+        "updated_at": "2026-11-10T22:41:33.590368+00:00",
+        "score_debug": {
+          "combined_score": 0.5683378696541248,
+          "semantic_score": 0.65764356,
+          "bm25_score": 0.4790321793082495,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed that sharing her art and experiences with Melanie means a lot to her.",
+        "score": 0.5675146820640273,
+        "id": "3ff6c883-02c6-4ade-94a1-b2c7e8434bfb",
+        "created_at": "2026-11-10T22:41:47.285125+00:00",
+        "updated_at": "2026-11-10T22:41:47.285125+00:00",
+        "score_debug": {
+          "combined_score": 0.5675146820640273,
+          "semantic_score": 0.65175843,
+          "bm25_score": 0.4832709341280548,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie's favorite type of art is painting landscapes and still life, and she recently created a painting of a sunflower.",
+        "score": 0.5638554622712837,
+        "id": "0af3a4ca-b2a2-41e0-b6d2-ef15b4bf35de",
+        "created_at": "2026-11-10T22:44:14.990520+00:00",
+        "updated_at": "2026-11-10T22:44:14.990520+00:00",
+        "score_debug": {
+          "combined_score": 0.5638554622712837,
+          "semantic_score": 0.57357997,
+          "bm25_score": 0.5541309545425672,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on her sunset painting, expressing that she loves the colors and the relaxed vibe it conveys.",
+        "score": 0.5638187035978257,
+        "id": "cb88848f-766b-4ebb-8eef-ba6401c8e839",
+        "created_at": "2026-11-10T22:46:41.038401+00:00",
+        "updated_at": "2026-11-10T22:46:41.038401+00:00",
+        "score_debug": {
+          "combined_score": 0.5638187035978257,
+          "semantic_score": 0.63630104,
+          "bm25_score": 0.49133636719565155,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie praised Caroline's art for its ability to tell stories and educate people about the trans community, expressing interest in seeing more of her paintings.",
+        "score": 0.5623437434225017,
+        "id": "4c7c5d37-beb7-4106-9a65-7b386cd1d161",
+        "created_at": "2026-11-10T22:41:21.653099+00:00",
+        "updated_at": "2026-11-10T22:41:21.653099+00:00",
+        "score_debug": {
+          "combined_score": 0.5623437434225017,
+          "semantic_score": 0.6477667,
+          "bm25_score": 0.47692078684500344,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie and her kids enjoyed bonding over painting together, discussing nature while appreciating the small things in life. They found lovely flowers that inspired their artwork.",
+        "score": 0.5579352667847303,
+        "id": "44c62645-6b59-47ef-83eb-871426ab6d92",
+        "created_at": "2026-11-10T22:38:08.354873+00:00",
+        "updated_at": "2026-11-10T22:38:08.354873+00:00",
+        "score_debug": {
+          "combined_score": 0.5579352667847303,
+          "semantic_score": 0.6196339,
+          "bm25_score": 0.49623663356946063,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie complimented Caroline on her sunset beach painting, expressing that it captured the serenity of the moment and took her back to that experience.",
+        "score": 0.5563451977367471,
+        "id": "7538e1d3-27d1-4f92-812a-bd9b876543d8",
+        "created_at": "2026-11-10T22:43:23.531627+00:00",
+        "updated_at": "2026-11-10T22:43:23.531627+00:00",
+        "score_debug": {
+          "combined_score": 0.5563451977367471,
+          "semantic_score": 0.6242692,
+          "bm25_score": 0.4884211954734941,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on her horse painting, expressing admiration for the details and how it captures the horse's grace and strength.",
+        "score": 0.5508525477367471,
+        "id": "46f42da6-0861-404f-b8d7-affd90dc917d",
+        "created_at": "2026-11-10T22:42:49.944412+00:00",
+        "updated_at": "2026-11-10T22:42:49.944412+00:00",
+        "score_debug": {
+          "combined_score": 0.5508525477367471,
+          "semantic_score": 0.6132839,
+          "bm25_score": 0.4884211954734941,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie appreciates the small things in life, such as the lovely flowers they found while painting together.",
+        "score": 0.5419826069778612,
+        "id": "ac433732-2035-46e6-b885-663737dc0eef",
+        "created_at": "2026-11-10T22:38:11.364980+00:00",
+        "updated_at": "2026-11-10T22:38:11.364980+00:00",
+        "score_debug": {
+          "combined_score": 0.5419826069778612,
+          "semantic_score": 0.56731737,
+          "bm25_score": 0.5166478439557223,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie enjoys painting animals, finding it peaceful and special, and appreciates the grace of horses.",
+        "score": 0.5330459211324705,
+        "id": "5c97b08c-f3ae-4ed2-8648-1eb0ab9d3522",
+        "created_at": "2026-11-10T22:42:52.359979+00:00",
+        "updated_at": "2026-11-10T22:42:52.359979+00:00",
+        "score_debug": {
+          "combined_score": 0.5330459211324705,
+          "semantic_score": 0.5535877,
+          "bm25_score": 0.5125041422649409,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie has been reading a book recommended by Caroline and painting to keep busy during her break from pottery, which she uses for self-expression and peace.",
+        "score": 0.5290976741778176,
+        "id": "205741c8-9383-45fe-b8fe-011486bc32ce",
+        "created_at": "2026-11-10T22:46:53.187582+00:00",
+        "updated_at": "2026-11-10T22:46:53.187582+00:00",
+        "score_debug": {
+          "combined_score": 0.5290976741778176,
+          "semantic_score": 0.5726733,
+          "bm25_score": 0.48552204835563517,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie aimed to portray tranquility in her abstract painting by using peaceful blue streaks, as blue calms her and she wanted the painting to have a serene vibe while incorporating vibrant colors.",
+        "score": 0.5271436036159455,
+        "id": "a1a2cdaa-309f-44ff-9f90-3009eae99a3b",
+        "created_at": "2026-11-10T22:46:47.141747+00:00",
+        "updated_at": "2026-11-10T22:46:47.141747+00:00",
+        "score_debug": {
+          "combined_score": 0.5271436036159455,
+          "semantic_score": 0.5560442,
+          "bm25_score": 0.498243007231891,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie finished another pottery project and offered to share a picture with Caroline.",
+        "score": 0.5229056936408351,
+        "id": "886dd806-7fdc-49ab-a1b6-7595bef200b8",
+        "created_at": "2026-11-10T22:41:41.415835+00:00",
+        "updated_at": "2026-11-10T22:41:41.415835+00:00",
+        "score_debug": {
+          "combined_score": 0.5229056936408351,
+          "semantic_score": 0.645868,
+          "bm25_score": 0.39994338728167017,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie finds painting a fun way to express her feelings and get creative, and it serves as a great way to relax after a long day.",
+        "score": 0.5225545046146365,
+        "id": "7f27862b-e305-4cc8-8201-4702b3035f3f",
+        "created_at": "2026-11-10T22:33:19.018899+00:00",
+        "updated_at": "2026-11-10T22:33:19.018899+00:00",
+        "score_debug": {
+          "combined_score": 0.5225545046146365,
+          "semantic_score": 0.5387631,
+          "bm25_score": 0.5063459092292729,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie asked Caroline if she has any other treasured objects like her necklace, while sharing an image of a stack of bowls with different designs.",
+        "score": 0.5139163063629912,
+        "id": "8da10c88-93c9-4e65-b297-3545acf9f7f9",
+        "created_at": "2026-11-10T22:34:54.421470+00:00",
+        "updated_at": "2026-11-10T22:34:54.421470+00:00",
+        "score_debug": {
+          "combined_score": 0.5139163063629912,
+          "semantic_score": 0.55508757,
+          "bm25_score": 0.47274504272598245,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie and her kids recently finished another painting similar to their previous nature-inspired artwork.",
+        "score": 0.5096539810346415,
+        "id": "008c4878-a144-4646-8574-bd75037c5320",
+        "created_at": "2026-11-10T22:39:57.483314+00:00",
+        "updated_at": "2026-11-10T22:39:57.483314+00:00",
+        "score_debug": {
+          "combined_score": 0.5096539810346415,
+          "semantic_score": 0.6046936,
+          "bm25_score": 0.41461436206928304,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie finds painting to be a helpful way to express her feelings and creativity, with each stroke representing a part of her.",
+        "score": 0.5049946593517245,
+        "id": "06818606-10d5-4124-84e8-ac887c867adb",
+        "created_at": "2026-11-10T22:41:55.537010+00:00",
+        "updated_at": "2026-11-10T22:41:55.537010+00:00",
+        "score_debug": {
+          "combined_score": 0.5049946593517245,
+          "semantic_score": 0.59802103,
+          "bm25_score": 0.4119682887034489,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie painted a sunset over a lake last year, and it holds special significance for her.",
+        "score": 0.5025104453001621,
+        "id": "e1dd1465-b393-461d-acb5-21da545259f1",
+        "created_at": "2026-11-10T22:33:15.401563+00:00",
+        "updated_at": "2026-11-10T22:33:15.401563+00:00",
+        "score_debug": {
+          "combined_score": 0.5025104453001621,
+          "semantic_score": 0.5850577,
+          "bm25_score": 0.41996319060032405,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie also created an abstract painting with vibrant colors, aiming to portray tranquility through peaceful blue streaks.",
+        "score": 0.4993676770775932,
+        "id": "24fc53ef-788a-4186-8a19-664f501c88e5",
+        "created_at": "2026-11-10T22:46:53.192211+00:00",
+        "updated_at": "2026-11-10T22:46:53.192211+00:00",
+        "score_debug": {
+          "combined_score": 0.4993676770775932,
+          "semantic_score": 0.59200233,
+          "bm25_score": 0.4067330241551864,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie cherishes her family memories, stating they bring happiness and togetherness, and appreciates Caroline for sharing in those moments.",
+        "score": 0.49519437136299127,
+        "id": "d2f044ab-f115-4e52-af65-57e4c2c22e30",
+        "created_at": "2026-11-10T22:39:13.566322+00:00",
+        "updated_at": "2026-11-10T22:39:13.566322+00:00",
+        "score_debug": {
+          "combined_score": 0.49519437136299127,
+          "semantic_score": 0.5176437,
+          "bm25_score": 0.47274504272598245,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline appreciates family support and asked Melanie what other activities her family enjoys doing together, sharing a photo of a family walking through a forest with a toddler.",
+        "score": 0.4886457465488093,
+        "id": "e8d6895f-f5d1-44bc-b022-e057717893c2",
+        "created_at": "2026-11-10T22:39:08.870949+00:00",
+        "updated_at": "2026-11-10T22:39:08.870949+00:00",
+        "score_debug": {
+          "combined_score": 0.4886457465488093,
+          "semantic_score": 0.5107483,
+          "bm25_score": 0.4665431930976186,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie made a pottery plate in class yesterday, which she finds relaxing and creative, and shared a photo of it with Caroline.",
+        "score": 0.4787930684279045,
+        "id": "2191fcc5-2e48-4f80-af0d-ef9fbea40554",
+        "created_at": "2026-11-10T22:43:33.606977+00:00",
+        "updated_at": "2026-11-10T22:43:33.606977+00:00",
+        "score_debug": {
+          "combined_score": 0.4787930684279045,
+          "semantic_score": 0.5678921,
+          "bm25_score": 0.3896940368558089,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared that the figurines she bought recently remind her of family love and asked Caroline about her vision for the future.",
+        "score": 0.4780796484279044,
+        "id": "e7a3ce31-1ddc-4a32-ae20-df5adf6f0b29",
+        "created_at": "2026-11-10T22:47:58.287569+00:00",
+        "updated_at": "2026-11-10T22:47:58.287569+00:00",
+        "score_debug": {
+          "combined_score": 0.4780796484279044,
+          "semantic_score": 0.56646526,
+          "bm25_score": 0.3896940368558089,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a blue vase with a bouquet of sunflowers and roses on November 10, 2026, expressing excitement about Caroline's future family.",
+        "score": 0.4724579861969995,
+        "id": "83461da5-e411-4624-9890-7b01d1cae857",
+        "created_at": "2026-11-10T22:38:13.483876+00:00",
+        "updated_at": "2026-11-10T22:38:13.483876+00:00",
+        "score_debug": {
+          "combined_score": 0.4724579861969995,
+          "semantic_score": 0.5676037,
+          "bm25_score": 0.37731227239399895,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a self-portrait painting with vibrant colors last week, which she felt liberated and empowered while painting.",
+        "score": 0.4563107806125874,
+        "id": "6f246efa-5d0d-4b7a-b2d2-5f4e43d45948",
+        "created_at": "2026-11-10T22:43:05.528679+00:00",
+        "updated_at": "2026-11-10T22:43:05.528679+00:00",
+        "score_debug": {
+          "combined_score": 0.4563107806125874,
+          "semantic_score": 0.58875585,
+          "bm25_score": 0.3238657112251748,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie has been creating art for seven years and finds it calming and satisfying, particularly enjoying painting and pottery as her main forms of expression.",
+        "score": 0.45316531478137007,
+        "id": "753ede4d-d780-42c5-9b43-afaef5065ef0",
+        "created_at": "2026-11-10T22:45:48.452770+00:00",
+        "updated_at": "2026-11-10T22:45:48.452770+00:00",
+        "score_debug": {
+          "combined_score": 0.45316531478137007,
+          "semantic_score": 0.51235783,
+          "bm25_score": 0.3939727995627401,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie has been creating art for seven years, focusing on painting and pottery, which she finds calming and satisfying.",
+        "score": 0.45211336754538045,
+        "id": "d2e7f807-e4b5-414b-a2ce-8931440a0388",
+        "created_at": "2026-11-10T22:45:42.839750+00:00",
+        "updated_at": "2026-11-10T22:45:42.839750+00:00",
+        "score_debug": {
+          "combined_score": 0.45211336754538045,
+          "semantic_score": 0.50008315,
+          "bm25_score": 0.4041435850907609,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been busy painting and recently finished a vibrant sunset beach painting inspired by her visit to the beach the previous week, where she was captivated by the colors of the sunset.",
+        "score": 0.4463050433666221,
+        "id": "6beed264-90df-4c3f-b905-dadb458942a1",
+        "created_at": "2026-11-10T22:43:33.602459+00:00",
+        "updated_at": "2026-11-10T22:43:33.602459+00:00",
+        "score_debug": {
+          "combined_score": 0.4463050433666221,
+          "semantic_score": 0.57358897,
+          "bm25_score": 0.3190211167332442,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been busy painting and recently finished a vibrant sunset beach painting inspired by her visit to the beach last week.",
+        "score": 0.4448788302927433,
+        "id": "bc178818-73f9-4eec-82a1-b9c1233fc5dd",
+        "created_at": "2026-11-10T22:43:28.331585+00:00",
+        "updated_at": "2026-11-10T22:43:28.331585+00:00",
+        "score_debug": {
+          "combined_score": 0.4448788302927433,
+          "semantic_score": 0.56686914,
+          "bm25_score": 0.32288852058548656,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie reassured Caroline that the sign she shared was just a precaution and expressed gratitude for Caroline's concern.",
+        "score": 0.44481165540597106,
+        "id": "23783107-0725-465d-918c-87d64dae2d5d",
+        "created_at": "2026-11-10T22:46:14.424574+00:00",
+        "updated_at": "2026-11-10T22:46:14.424574+00:00",
+        "score_debug": {
+          "combined_score": 0.44481165540597106,
+          "semantic_score": 0.4833412,
+          "bm25_score": 0.4062821108119421,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline feels liberated and empowered while painting, which helps her explore her identity and be true to herself. She finds painting therapeutic.",
+        "score": 0.4423013056125874,
+        "id": "a307c65a-583e-41d0-a170-6c86ea108dc8",
+        "created_at": "2026-11-10T22:43:12.494093+00:00",
+        "updated_at": "2026-11-10T22:43:12.494093+00:00",
+        "score_debug": {
+          "combined_score": 0.4423013056125874,
+          "semantic_score": 0.5607369,
+          "bm25_score": 0.3238657112251748,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline finds painting therapeutic and a great way to express herself.",
+        "score": 0.43620981081292187,
+        "id": "36a22cb7-6550-4c5d-ba59-2afeed47af40",
+        "created_at": "2026-11-10T22:43:00.878245+00:00",
+        "updated_at": "2026-11-10T22:43:00.878245+00:00",
+        "score_debug": {
+          "combined_score": 0.43620981081292187,
+          "semantic_score": 0.5783441,
+          "bm25_score": 0.29407552162584377,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline loves the photo Melanie shared, appreciating the yellow leaves and describing the scene as cozy. She finds it fun to see how excited kids get for the little things, noting that their enthusiasm is contagious.",
+        "score": 0.4345031919771382,
+        "id": "857e7831-5daa-4bd6-b5c2-52bd4d2e3445",
+        "created_at": "2026-11-10T22:45:32.106370+00:00",
+        "updated_at": "2026-11-10T22:45:32.106370+00:00",
+        "score_debug": {
+          "combined_score": 0.4345031919771382,
+          "semantic_score": 0.50593555,
+          "bm25_score": 0.3630708339542764,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting titled 'Embracing Identity' that represents finding comfort and love in being oneself, depicting a woman symbolizing the journey of acceptance. The painting aims to convey warmth, love, and self-acceptance.",
+        "score": 0.4299445138323294,
+        "id": "c1e69360-8e8d-4d95-8d4d-cd07fde50d0e",
+        "created_at": "2026-11-10T22:41:23.789431+00:00",
+        "updated_at": "2026-11-10T22:41:23.789431+00:00",
+        "score_debug": {
+          "combined_score": 0.4299445138323294,
+          "semantic_score": 0.5876847,
+          "bm25_score": 0.27220432766465885,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting titled 'Embracing Identity' that represents finding comfort and love in being oneself, symbolized by a woman in the painting who stands for the journey of acceptance.",
+        "score": 0.4278676934070812,
+        "id": "417901eb-f7a4-4144-82ad-8e0e8b50dcf4",
+        "created_at": "2026-11-10T22:41:47.273682+00:00",
+        "updated_at": "2026-11-10T22:41:47.273682+00:00",
+        "score_debug": {
+          "combined_score": 0.4278676934070812,
+          "semantic_score": 0.5746132,
+          "bm25_score": 0.2811221868141623,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline feels powerful emotions while painting, particularly with the color blue.",
+        "score": 0.4184810907210805,
+        "id": "7d3e2f9b-892f-42fa-b3a4-bc325c1e6953",
+        "created_at": "2026-11-10T22:42:56.178310+00:00",
+        "updated_at": "2026-11-10T22:42:56.178310+00:00",
+        "score_debug": {
+          "combined_score": 0.4184810907210805,
+          "semantic_score": 0.54409856,
+          "bm25_score": 0.29286362144216094,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting symbolizing togetherness to celebrate differences and hopes to make something similar next.",
+        "score": 0.4184716833637736,
+        "id": "19af9b9f-4dba-431a-bf1a-9a57b3346eee",
+        "created_at": "2026-11-10T22:43:53.417638+00:00",
+        "updated_at": "2026-11-10T22:43:53.417638+00:00",
+        "score_debug": {
+          "combined_score": 0.4184716833637736,
+          "semantic_score": 0.62258977,
+          "bm25_score": 0.2143535967275472,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her pottery creation, which features intricate patterns and a purple glaze.",
+        "score": 0.416869917510933,
+        "id": "6720e41d-2b35-4fe5-89db-d86a313d4e00",
+        "created_at": "2026-11-10T22:45:42.842125+00:00",
+        "updated_at": "2026-11-10T22:45:42.842125+00:00",
+        "score_debug": {
+          "combined_score": 0.416869917510933,
+          "semantic_score": 0.51531994,
+          "bm25_score": 0.31841989502186596,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline uses painting and drawing to express her feelings and explore her gender identity, stating that creating art was important during her transition.",
+        "score": 0.41600028931410876,
+        "id": "e49929b1-2396-4cd3-a754-df5814a5c372",
+        "created_at": "2026-11-10T22:46:04.753073+00:00",
+        "updated_at": "2026-11-10T22:46:04.753073+00:00",
+        "score_debug": {
+          "combined_score": 0.41600028931410876,
+          "semantic_score": 0.5497345,
+          "bm25_score": 0.2822660786282175,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline uses painting and drawing to express her feelings and explore her gender identity. Creating art was particularly important to her during her transition, helping her understand and accept herself.",
+        "score": 0.41472365674108647,
+        "id": "0fb45f00-372d-457b-977c-48025830ef8b",
+        "created_at": "2026-11-10T22:45:45.552386+00:00",
+        "updated_at": "2026-11-10T22:45:45.552386+00:00",
+        "score_debug": {
+          "combined_score": 0.41472365674108647,
+          "semantic_score": 0.55059326,
+          "bm25_score": 0.27885405348217296,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline painted a sunset after visiting the beach around November 3, 2026, inspired by the calming colors of the sunset.",
+        "score": 0.41426324938591597,
+        "id": "f9abb9ee-ff72-46a6-8a0f-7eae12bf745c",
+        "created_at": "2026-11-10T22:43:43.150799+00:00",
+        "updated_at": "2026-11-10T22:43:43.150799+00:00",
+        "score_debug": {
+          "combined_score": 0.41426324938591597,
+          "semantic_score": 0.6197381,
+          "bm25_score": 0.20878839877183195,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting to represent her path as a trans woman, using red and blue to symbolize the binary gender system and a mix of colors to convey the idea of breaking free from rigid thinking. The painting serves as a reminder to love her authentic self, reflecting her journey to pride in her identity.",
+        "score": 0.40953350486606993,
+        "id": "e63d7b11-6d11-456a-8704-555067219577",
+        "created_at": "2026-11-10T22:45:55.475938+00:00",
+        "updated_at": "2026-11-10T22:45:55.475938+00:00",
+        "score_debug": {
+          "combined_score": 0.40953350486606993,
+          "semantic_score": 0.5532869,
+          "bm25_score": 0.26578010973213984,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline painted her vibrant sunset beach painting after visiting the beach last week, inspired by the calming experience of seeing the sun dip below the horizon and the amazing colors.",
+        "score": 0.40894237674108647,
+        "id": "babf5cdd-f119-44c8-adec-c0812576a9aa",
+        "created_at": "2026-11-10T22:43:21.522482+00:00",
+        "updated_at": "2026-11-10T22:43:21.522482+00:00",
+        "score_debug": {
+          "combined_score": 0.40894237674108647,
+          "semantic_score": 0.5390307,
+          "bm25_score": 0.27885405348217296,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has a guinea pig named Oscar and was asked by Melanie to share a picture of him.",
+        "score": 0.40825939881146445,
+        "id": "e3b9dab6-40b6-4ce4-98ca-a3e2a6fbd983",
+        "created_at": "2026-11-10T22:42:37.567055+00:00",
+        "updated_at": "2026-11-10T22:42:37.567055+00:00",
+        "score_debug": {
+          "combined_score": 0.40825939881146445,
+          "semantic_score": 0.41916674,
+          "bm25_score": 0.39735205762292886,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting titled 'Embracing Identity' that symbolizes the journey of acceptance, conveying warmth, love, and self-acceptance.",
+        "score": 0.40474371796364167,
+        "id": "cdbd7d11-39aa-48b1-8fba-9bc305f4ea6c",
+        "created_at": "2026-11-10T22:41:27.800812+00:00",
+        "updated_at": "2026-11-10T22:41:27.800812+00:00",
+        "score_debug": {
+          "combined_score": 0.40474371796364167,
+          "semantic_score": 0.60205585,
+          "bm25_score": 0.20743158592728342,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting titled 'Embracing Identity' that symbolizes comfort and love in being oneself, representing the journey of acceptance.",
+        "score": 0.4012734429636417,
+        "id": "84863e6f-150e-4777-8bea-7868c61fc8bb",
+        "created_at": "2026-11-10T22:41:41.408747+00:00",
+        "updated_at": "2026-11-10T22:41:41.408747+00:00",
+        "score_debug": {
+          "combined_score": 0.4012734429636417,
+          "semantic_score": 0.5951153,
+          "bm25_score": 0.20743158592728342,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline felt liberated and empowered while painting her self-portrait, describing the experience as therapeutic and a means to explore her identity and be true to herself.",
+        "score": 0.3998620823521556,
+        "id": "a7169436-2a49-4e78-a59e-befa68ab9ad6",
+        "created_at": "2026-11-10T22:42:58.431796+00:00",
+        "updated_at": "2026-11-10T22:42:58.431796+00:00",
+        "score_debug": {
+          "combined_score": 0.3998620823521556,
+          "semantic_score": 0.5151504,
+          "bm25_score": 0.28457376470431117,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared an image of a finished pottery piece made by her kids, which is a cup with a dog face on it.",
+        "score": 0.398343127510933,
+        "id": "2406e760-201c-4b18-9678-442820988f9e",
+        "created_at": "2026-11-10T22:37:52.121743+00:00",
+        "updated_at": "2026-11-10T22:37:52.121743+00:00",
+        "score_debug": {
+          "combined_score": 0.398343127510933,
+          "semantic_score": 0.47826636,
+          "bm25_score": 0.31841989502186596,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a garden full of flowers used as wedding decorations on November 10, 2026.",
+        "score": 0.398332457510933,
+        "id": "7916345c-bfc2-4b41-ba87-b78e80c5c778",
+        "created_at": "2026-11-10T22:38:20.890789+00:00",
+        "updated_at": "2026-11-10T22:38:20.890789+00:00",
+        "score_debug": {
+          "combined_score": 0.398332457510933,
+          "semantic_score": 0.47824502,
+          "bm25_score": 0.31841989502186596,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is having an LGBTQ art show next month in December 2026, showcasing her paintings.",
+        "score": 0.395919611947531,
+        "id": "32c1eb75-01d1-4a78-8c73-06f4dd933ae2",
+        "created_at": "2026-11-10T22:39:51.990172+00:00",
+        "updated_at": "2026-11-10T22:39:51.990172+00:00",
+        "score_debug": {
+          "combined_score": 0.395919611947531,
+          "semantic_score": 0.576059,
+          "bm25_score": 0.21578022389506196,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline believes that painting helps her explore her identity and be true to herself, describing it as therapeutic.",
+        "score": 0.3910176333637736,
+        "id": "bb0fe5d3-57e6-4f00-abd2-a50e6c9f131f",
+        "created_at": "2026-11-10T22:43:05.530742+00:00",
+        "updated_at": "2026-11-10T22:43:05.530742+00:00",
+        "score_debug": {
+          "combined_score": 0.3910176333637736,
+          "semantic_score": 0.56768167,
+          "bm25_score": 0.2143535967275472,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday on November 9, 2026, with a concert that was filled with music, joy, and a warm summer breeze, expressing gratitude for the special moments shared with her kids.",
+        "score": 0.39020938879431166,
+        "id": "722b9f82-2f58-4c36-8217-345b058f4704",
+        "created_at": "2026-11-10T22:40:56.465044+00:00",
+        "updated_at": "2026-11-10T22:40:56.465044+00:00",
+        "score_debug": {
+          "combined_score": 0.39020938879431166,
+          "semantic_score": 0.48439202,
+          "bm25_score": 0.29602675758862335,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared that flowers bring her joy, representing growth and beauty, and reminding her to appreciate small moments. They were an important part of her wedding decor, which reminds her of that special day.",
+        "score": 0.389131000879141,
+        "id": "80ccb580-430a-4152-a451-98ae76663ef4",
+        "created_at": "2026-11-10T22:38:33.024958+00:00",
+        "updated_at": "2026-11-10T22:38:33.024958+00:00",
+        "score_debug": {
+          "combined_score": 0.389131000879141,
+          "semantic_score": 0.4802889,
+          "bm25_score": 0.2979731017582819,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline painted a piece inspired by her visit to an LGBTQ center, aiming to capture unity and strength.",
+        "score": 0.38724593611256036,
+        "id": "2a3ae88c-8fad-4a58-bb77-d1a4607f8838",
+        "created_at": "2026-11-10T22:40:15.746556+00:00",
+        "updated_at": "2026-11-10T22:40:15.746556+00:00",
+        "score_debug": {
+          "combined_score": 0.38724593611256036,
+          "semantic_score": 0.5629489,
+          "bm25_score": 0.21154297222512078,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline loves creating art and finds painting to be a great way to express herself.",
+        "score": 0.3860399483637736,
+        "id": "37efa5ec-1cb6-48c7-b505-f4be0a1fe276",
+        "created_at": "2026-11-10T22:43:05.526455+00:00",
+        "updated_at": "2026-11-10T22:43:05.526455+00:00",
+        "score_debug": {
+          "combined_score": 0.3860399483637736,
+          "semantic_score": 0.5577263,
+          "bm25_score": 0.2143535967275472,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline's painting serves as a reminder to love her authentic self, reflecting her journey to self-acceptance and pride.",
+        "score": 0.38551298565591074,
+        "id": "6b8f286f-7bd3-44f3-939e-72649c2437cd",
+        "created_at": "2026-11-10T22:46:14.416934+00:00",
+        "updated_at": "2026-11-10T22:46:14.416934+00:00",
+        "score_debug": {
+          "combined_score": 0.38551298565591074,
+          "semantic_score": 0.5608672,
+          "bm25_score": 0.2101587713118215,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her latest pottery project, a colorful ceramic bowl, and expressed pride in her work.",
+        "score": 0.3851324612618082,
+        "id": "d4263711-ed32-4beb-84bd-ef145717c3b0",
+        "created_at": "2026-11-10T22:41:49.446557+00:00",
+        "updated_at": "2026-11-10T22:41:49.446557+00:00",
+        "score_debug": {
+          "combined_score": 0.3851324612618082,
+          "semantic_score": 0.4560808,
+          "bm25_score": 0.31418412252361644,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is having an LGBTQ art show next month featuring her paintings.",
+        "score": 0.3846615252992843,
+        "id": "d42627a3-8309-473b-a5ed-c41b92b542d6",
+        "created_at": "2026-11-10T22:39:57.476494+00:00",
+        "updated_at": "2026-11-10T22:39:57.476494+00:00",
+        "score_debug": {
+          "combined_score": 0.3846615252992843,
+          "semantic_score": 0.5506459,
+          "bm25_score": 0.21867715059856857,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is having an LGBTQ art show next month featuring her paintings.",
+        "score": 0.3846615252992843,
+        "id": "c477da46-86df-4b3e-9deb-c10633e077ef",
+        "created_at": "2026-11-10T22:39:46.633394+00:00",
+        "updated_at": "2026-11-10T22:39:46.633394+00:00",
+        "score_debug": {
+          "combined_score": 0.3846615252992843,
+          "semantic_score": 0.5506459,
+          "bm25_score": 0.21867715059856857,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared an image of her husband and daughter standing in front of a waterfall during a hike.",
+        "score": 0.38366989076876945,
+        "id": "539cbfb2-0017-473a-a583-8b5e8f5f3c91",
+        "created_at": "2026-11-10T22:34:29.135981+00:00",
+        "updated_at": "2026-11-10T22:34:29.135981+00:00",
+        "score_debug": {
+          "combined_score": 0.38366989076876945,
+          "semantic_score": 0.4467738,
+          "bm25_score": 0.3205659815375389,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline painted a piece for the art show inspired by her visit to an LGBTQ center, aiming to capture unity and strength.",
+        "score": 0.3830860606559107,
+        "id": "474e82df-a4fe-4657-bffc-b60272793123",
+        "created_at": "2026-11-10T22:40:04.735740+00:00",
+        "updated_at": "2026-11-10T22:40:04.735740+00:00",
+        "score_debug": {
+          "combined_score": 0.3830860606559107,
+          "semantic_score": 0.55601335,
+          "bm25_score": 0.2101587713118215,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been trying out abstract painting recently, finding it freeing to express her feelings on the canvas without a strict plan.",
+        "score": 0.3827539229636417,
+        "id": "df8cfeee-1b3e-4e46-b74b-a28dd2fbc434",
+        "created_at": "2026-11-10T22:46:41.041069+00:00",
+        "updated_at": "2026-11-10T22:46:41.041069+00:00",
+        "score_debug": {
+          "combined_score": 0.3827539229636417,
+          "semantic_score": 0.55807626,
+          "bm25_score": 0.20743158592728342,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed that painting helps her explore her identity and be true to herself, feeling liberated and empowered while creating art.",
+        "score": 0.382343899385916,
+        "id": "993bd718-4da4-4404-af29-17cb0b092bc8",
+        "created_at": "2026-11-10T22:43:00.874442+00:00",
+        "updated_at": "2026-11-10T22:43:00.874442+00:00",
+        "score_debug": {
+          "combined_score": 0.382343899385916,
+          "semantic_score": 0.5558994,
+          "bm25_score": 0.20878839877183195,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday with a concert featuring Matt Patterson on November 9, 2026, and felt thankful for the special moments shared with her kids during the event.",
+        "score": 0.38181097723253893,
+        "id": "db33ef5f-e905-4d0f-979e-d59142b23f51",
+        "created_at": "2026-11-10T22:41:01.638094+00:00",
+        "updated_at": "2026-11-10T22:41:01.638094+00:00",
+        "score_debug": {
+          "combined_score": 0.38181097723253893,
+          "semantic_score": 0.46368498,
+          "bm25_score": 0.29993697446507783,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie celebrated her daughter's birthday with a concert featuring Matt Patterson on November 9, 2026, and felt thankful for the special moments shared with her family.",
+        "score": 0.38164004809806223,
+        "id": "0070f948-0c97-4a71-a800-b01b36693724",
+        "created_at": "2026-11-10T22:41:06.589081+00:00",
+        "updated_at": "2026-11-10T22:41:06.589081+00:00",
+        "score_debug": {
+          "combined_score": 0.38164004809806223,
+          "semantic_score": 0.46136165,
+          "bm25_score": 0.30191844619612446,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline painted her artwork after visiting an LGBTQ center, aiming to capture the unity and strength of the community.",
+        "score": 0.38121691565591076,
+        "id": "19b8ffac-a516-4e9d-b8e8-b2a46c38b8d8",
+        "created_at": "2026-11-10T22:39:53.963971+00:00",
+        "updated_at": "2026-11-10T22:39:53.963971+00:00",
+        "score_debug": {
+          "combined_score": 0.38121691565591076,
+          "semantic_score": 0.55227506,
+          "bm25_score": 0.2101587713118215,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline painted a piece for the art show inspired by her visit to an LGBTQ center, aiming to capture the unity and strength of the community.",
+        "score": 0.380653024385916,
+        "id": "a2c4f5d1-832e-4dc4-aa6d-41d63e32ccb0",
+        "created_at": "2026-11-10T22:39:57.479011+00:00",
+        "updated_at": "2026-11-10T22:39:57.479011+00:00",
+        "score_debug": {
+          "combined_score": 0.380653024385916,
+          "semantic_score": 0.55251765,
+          "bm25_score": 0.20878839877183195,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline made a painting to show her path as a trans woman, using red and blue to represent the binary gender system and the mix of colors to symbolize breaking rigid thinking.",
+        "score": 0.3805439060203353,
+        "id": "983a7df8-d64b-4dcc-9e04-a949705f6676",
+        "created_at": "2026-11-10T22:46:07.512867+00:00",
+        "updated_at": "2026-11-10T22:46:07.512867+00:00",
+        "score_debug": {
+          "combined_score": 0.3805439060203353,
+          "semantic_score": 0.55764604,
+          "bm25_score": 0.20344177204067057,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a sand castle on the beach with a blue sky, highlighting a memorable moment from their beach visit.",
+        "score": 0.3803576340266003,
+        "id": "1c2e4c18-6dc5-4095-831a-78e6e5c00fe6",
+        "created_at": "2026-11-10T22:40:19.179493+00:00",
+        "updated_at": "2026-11-10T22:40:19.179493+00:00",
+        "score_debug": {
+          "combined_score": 0.3803576340266003,
+          "semantic_score": 0.45069253,
+          "bm25_score": 0.3100227380532006,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting to represent her path as a trans woman, using red and blue to symbolize the binary gender system and mixed colors to signify breaking rigid thinking.",
+        "score": 0.3800349599154883,
+        "id": "b8a5b532-b949-422a-be5a-7b59ec74a3b3",
+        "created_at": "2026-11-10T22:46:14.414839+00:00",
+        "updated_at": "2026-11-10T22:46:14.414839+00:00",
+        "score_debug": {
+          "combined_score": 0.3800349599154883,
+          "semantic_score": 0.5592226,
+          "bm25_score": 0.20084731983097653,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a painting to represent her path as a trans woman, using red and blue to symbolize the binary gender system and the mix of colors to signify breaking rigid thinking.",
+        "score": 0.3786183099154883,
+        "id": "79b64e28-7c7c-44ef-9c18-0a0364f567e7",
+        "created_at": "2026-11-10T22:46:04.755629+00:00",
+        "updated_at": "2026-11-10T22:46:04.755629+00:00",
+        "score_debug": {
+          "combined_score": 0.3786183099154883,
+          "semantic_score": 0.5563893,
+          "bm25_score": 0.20084731983097653,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline made a painting to represent her path as a trans woman, using red and blue to symbolize the binary gender system and the mix of colors to signify breaking rigid thinking.",
+        "score": 0.37858299174684956,
+        "id": "948d21d6-b8d1-40bd-9901-faf566bd5dcf",
+        "created_at": "2026-11-10T22:45:58.669768+00:00",
+        "updated_at": "2026-11-10T22:45:58.669768+00:00",
+        "score_debug": {
+          "combined_score": 0.37858299174684956,
+          "semantic_score": 0.5550279,
+          "bm25_score": 0.20213808349369913,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is having an LGBTQ art show featuring her paintings next month, expressing excitement about the event.",
+        "score": 0.37795251160357934,
+        "id": "994a84d5-ee24-4b9c-ace7-db81d2220aca",
+        "created_at": "2026-11-10T22:39:42.660137+00:00",
+        "updated_at": "2026-11-10T22:39:42.660137+00:00",
+        "score_debug": {
+          "combined_score": 0.37795251160357934,
+          "semantic_score": 0.5429638,
+          "bm25_score": 0.21294122320715875,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her family standing on the beach at sunset, capturing a joyful moment of togetherness.",
+        "score": 0.37794514626080544,
+        "id": "868a31bc-990e-454d-bc30-a95407a52068",
+        "created_at": "2026-11-10T22:40:51.254218+00:00",
+        "updated_at": "2026-11-10T22:40:51.254218+00:00",
+        "score_debug": {
+          "combined_score": 0.37794514626080544,
+          "semantic_score": 0.44379604,
+          "bm25_score": 0.3120942525216108,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her wedding ceremony in a greenhouse, capturing the moment with guests taking pictures.",
+        "score": 0.3766256012608054,
+        "id": "dfaef896-f0f0-40bc-be7d-4cacab941559",
+        "created_at": "2026-11-10T22:38:24.866518+00:00",
+        "updated_at": "2026-11-10T22:38:24.866518+00:00",
+        "score_debug": {
+          "combined_score": 0.3766256012608054,
+          "semantic_score": 0.44115695,
+          "bm25_score": 0.3120942525216108,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is putting together an LGBTQ art show next month in December 2026, where she will showcase her paintings and feels super stoked about it.",
+        "score": 0.37644978565591075,
+        "id": "b7babf25-f86e-4bc5-8221-0fafbe936d4d",
+        "created_at": "2026-11-10T22:44:19.761121+00:00",
+        "updated_at": "2026-11-10T22:44:19.761121+00:00",
+        "score_debug": {
+          "combined_score": 0.37644978565591075,
+          "semantic_score": 0.5427408,
+          "bm25_score": 0.2101587713118215,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a sunset over a body of water, emphasizing the beauty of nature during her camping trips.",
+        "score": 0.3753347512618082,
+        "id": "98c06b1c-3139-488f-bbff-d39aa220285b",
+        "created_at": "2026-11-10T22:47:45.058495+00:00",
+        "updated_at": "2026-11-10T22:47:45.058495+00:00",
+        "score_debug": {
+          "combined_score": 0.3753347512618082,
+          "semantic_score": 0.43648538,
+          "bm25_score": 0.31418412252361644,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is excited about her upcoming LGBTQ art show next month, where she will showcase her paintings.",
+        "score": 0.37475496968437016,
+        "id": "5f3fc131-ec87-49ba-9a47-bfce646dbd40",
+        "created_at": "2026-11-10T22:40:04.733354+00:00",
+        "updated_at": "2026-11-10T22:40:04.733354+00:00",
+        "score_debug": {
+          "combined_score": 0.37475496968437016,
+          "semantic_score": 0.53228855,
+          "bm25_score": 0.2172213893687404,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has been creating art for an unspecified duration, which she discusses with Melanie.",
+        "score": 0.37424257236234926,
+        "id": "1b230080-c5d9-4f8e-bddb-b4245f64ce96",
+        "created_at": "2026-11-10T22:45:39.132639+00:00",
+        "updated_at": "2026-11-10T22:45:39.132639+00:00",
+        "score_debug": {
+          "combined_score": 0.37424257236234926,
+          "semantic_score": 0.69482327,
+          "bm25_score": 0.053661874724698515,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo from an outdoor concert on November 9, 2026, highlighting the importance of cultivating a loving and accepting environment for children.",
+        "score": 0.3737469122325389,
+        "id": "3080f27b-018d-4084-ab74-0b53bb744bb1",
+        "created_at": "2026-11-10T22:41:12.953663+00:00",
+        "updated_at": "2026-11-10T22:41:12.953663+00:00",
+        "score_debug": {
+          "combined_score": 0.3737469122325389,
+          "semantic_score": 0.44755685,
+          "bm25_score": 0.29993697446507783,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a fire pit with a lot of fire and sparks from their family camping trip.",
+        "score": 0.3736187260852434,
+        "id": "78898ced-79b0-46ac-8724-e52c3a3438c9",
+        "created_at": "2026-11-10T22:40:30.865333+00:00",
+        "updated_at": "2026-11-10T22:40:30.865333+00:00",
+        "score_debug": {
+          "combined_score": 0.3736187260852434,
+          "semantic_score": 0.43094486,
+          "bm25_score": 0.3162925921704868,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a sign at a café that brought her happiness, reflecting on a good time spent there with her kids the previous weekend.",
+        "score": 0.37305029459174877,
+        "id": "072778e4-4e12-458f-aa82-2636fb0e7240",
+        "created_at": "2026-11-10T22:46:04.760467+00:00",
+        "updated_at": "2026-11-10T22:46:04.760467+00:00",
+        "score_debug": {
+          "combined_score": 0.37305029459174877,
+          "semantic_score": 0.43813103,
+          "bm25_score": 0.30796955918349755,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a family hiking trail with vibrant autumn colors, highlighting the beauty of nature.",
+        "score": 0.3730419262608054,
+        "id": "548ab345-7ba7-4e5a-803b-70e50396668c",
+        "created_at": "2026-11-10T22:45:29.751595+00:00",
+        "updated_at": "2026-11-10T22:45:29.751595+00:00",
+        "score_debug": {
+          "combined_score": 0.3730419262608054,
+          "semantic_score": 0.4339896,
+          "bm25_score": 0.3120942525216108,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie recently got new shoes, which she shared a photo of.",
+        "score": 0.3720474940949663,
+        "id": "4766558a-730b-4aac-b977-541fcb54de39",
+        "created_at": "2026-11-10T22:37:28.538621+00:00",
+        "updated_at": "2026-11-10T22:37:28.538621+00:00",
+        "score_debug": {
+          "combined_score": 0.3720474940949663,
+          "semantic_score": 0.41917944,
+          "bm25_score": 0.32491554818993257,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a beach with footprints in the sand and a blue sky, capturing a moment that reminds her of the beauty of life.",
+        "score": 0.3717903490266003,
+        "id": "b31b3213-162e-46cf-a111-bf531dfa755d",
+        "created_at": "2026-11-10T22:40:42.619889+00:00",
+        "updated_at": "2026-11-10T22:40:42.619889+00:00",
+        "score_debug": {
+          "combined_score": 0.3717903490266003,
+          "semantic_score": 0.43355796,
+          "bm25_score": 0.3100227380532006,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline described the experience of watching the sunset at the beach as amazing and calming, which inspired her painting.",
+        "score": 0.3690360616035794,
+        "id": "8d15bcbd-d221-4aa3-9daf-843b773b9449",
+        "created_at": "2026-11-10T22:43:28.333736+00:00",
+        "updated_at": "2026-11-10T22:43:28.333736+00:00",
+        "score_debug": {
+          "combined_score": 0.3690360616035794,
+          "semantic_score": 0.5251309,
+          "bm25_score": 0.21294122320715875,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her children playing on the beach with a kite, highlighting a fun family moment.",
+        "score": 0.3683876612608054,
+        "id": "f2a34dc2-f245-453f-966d-1ecf01b15311",
+        "created_at": "2026-11-10T22:40:15.758078+00:00",
+        "updated_at": "2026-11-10T22:40:15.758078+00:00",
+        "score_debug": {
+          "combined_score": 0.3683876612608054,
+          "semantic_score": 0.42468107,
+          "bm25_score": 0.3120942525216108,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline's vibrant sunset beach painting was inspired by her visit to the beach last week, where she experienced the calming effect of seeing the sun dip below the horizon and the amazing colors.",
+        "score": 0.3652004849154883,
+        "id": "44b12424-9780-4af6-a727-9dcea7aa43c2",
+        "created_at": "2026-11-10T22:43:23.528839+00:00",
+        "updated_at": "2026-11-10T22:43:23.528839+00:00",
+        "score_debug": {
+          "combined_score": 0.3652004849154883,
+          "semantic_score": 0.52955365,
+          "bm25_score": 0.20084731983097653,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a plane flying in the sky with a trail of smoke during the Perseid meteor shower.",
+        "score": 0.3642423262618082,
+        "id": "e26567f4-92e0-4283-bf4a-42610a66c88c",
+        "created_at": "2026-11-10T22:40:38.409735+00:00",
+        "updated_at": "2026-11-10T22:40:38.409735+00:00",
+        "score_debug": {
+          "combined_score": 0.3642423262618082,
+          "semantic_score": 0.41430053,
+          "bm25_score": 0.31418412252361644,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo from a concert she attended, highlighting the joy of music and its ability to bring people together.",
+        "score": 0.3599460962618082,
+        "id": "58acec85-4893-4564-af9d-59a45aedd41f",
+        "created_at": "2026-11-10T22:44:54.122887+00:00",
+        "updated_at": "2026-11-10T22:44:54.122887+00:00",
+        "score_debug": {
+          "combined_score": 0.3599460962618082,
+          "semantic_score": 0.40570807,
+          "bm25_score": 0.31418412252361644,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline treasures a hand-painted bowl made by a friend for her 18th birthday ten years ago, which represents art and self-expression.",
+        "score": 0.359380699385916,
+        "id": "fb86c587-508c-4923-aef9-c70d58dce626",
+        "created_at": "2026-11-10T22:35:10.064646+00:00",
+        "updated_at": "2026-11-10T22:35:10.064646+00:00",
+        "score_debug": {
+          "combined_score": 0.359380699385916,
+          "semantic_score": 0.509973,
+          "bm25_score": 0.20878839877183195,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a drawing of a bouquet of wildflowers on a table.",
+        "score": 0.35858054711899495,
+        "id": "6ddaf711-60c6-40b3-965c-f88e70faac24",
+        "created_at": "2026-11-10T22:44:08.381718+00:00",
+        "updated_at": "2026-11-10T22:44:08.381718+00:00",
+        "score_debug": {
+          "combined_score": 0.35858054711899495,
+          "semantic_score": 0.5607735,
+          "bm25_score": 0.15638759423798987,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie appreciates her family and the moments they share, expressing that they make everything worth it.",
+        "score": 0.358053205769419,
+        "id": "01f77148-0ea2-43e5-8f27-1abad61452dc",
+        "created_at": "2026-11-10T22:34:36.772191+00:00",
+        "updated_at": "2026-11-10T22:34:36.772191+00:00",
+        "score_debug": {
+          "combined_score": 0.358053205769419,
+          "semantic_score": 0.39337522,
+          "bm25_score": 0.32273119153883806,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared an image of her family hiking in the mountains, showing a woman and a child walking on a trail.",
+        "score": 0.3570899940266003,
+        "id": "8ef12248-424a-4ac9-90a6-9723e1c9bd16",
+        "created_at": "2026-11-10T22:47:37.338891+00:00",
+        "updated_at": "2026-11-10T22:47:37.338891+00:00",
+        "score_debug": {
+          "combined_score": 0.3570899940266003,
+          "semantic_score": 0.40415725,
+          "bm25_score": 0.3100227380532006,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has a hand-painted bowl made by a friend for her 18th birthday ten years ago, which reminds her of art and self-expression.",
+        "score": 0.3569504356559107,
+        "id": "d2ad4085-b62d-4e3a-bbd1-fc32f95ba420",
+        "created_at": "2026-11-10T22:35:06.475000+00:00",
+        "updated_at": "2026-11-10T22:35:06.475000+00:00",
+        "score_debug": {
+          "combined_score": 0.3569504356559107,
+          "semantic_score": 0.5037421,
+          "bm25_score": 0.2101587713118215,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared an image of her kids laughing at a dinosaur exhibit in the museum, showcasing their joy during the visit.",
+        "score": 0.35564536626080545,
+        "id": "958b44fd-9987-440c-8284-401034a1fca6",
+        "created_at": "2026-11-10T22:36:08.326972+00:00",
+        "updated_at": "2026-11-10T22:36:08.326972+00:00",
+        "score_debug": {
+          "combined_score": 0.35564536626080545,
+          "semantic_score": 0.39919648,
+          "bm25_score": 0.3120942525216108,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline asked Melanie what type of art she loves.",
+        "score": 0.35441073204057155,
+        "id": "68ad1ab6-a36a-47c5-b9e7-8c1f9373395e",
+        "created_at": "2026-11-10T22:44:12.939687+00:00",
+        "updated_at": "2026-11-10T22:44:12.939687+00:00",
+        "score_debug": {
+          "combined_score": 0.35441073204057155,
+          "semantic_score": 0.6547173,
+          "bm25_score": 0.05410416408114315,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie has been married for 5 years as of November 10, 2026, and shared a photo from her wedding day where she is wearing a wedding dress and holding a bouquet.",
+        "score": 0.3543087230980622,
+        "id": "2da395c4-32a1-429e-a770-c77990c92ddd",
+        "created_at": "2026-11-10T22:34:32.371583+00:00",
+        "updated_at": "2026-11-10T22:34:32.371583+00:00",
+        "score_debug": {
+          "combined_score": 0.3543087230980622,
+          "semantic_score": 0.406699,
+          "bm25_score": 0.30191844619612446,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is putting together an LGBTQ art show next month to showcase her paintings and feature LGBTQ artists, aiming to spread understanding and acceptance.",
+        "score": 0.3539205459454069,
+        "id": "65b0a3a3-1119-4d29-9fa8-49a2339fd953",
+        "created_at": "2026-11-10T22:44:38.996549+00:00",
+        "updated_at": "2026-11-10T22:44:38.996549+00:00",
+        "score_debug": {
+          "combined_score": 0.3539205459454069,
+          "semantic_score": 0.50175273,
+          "bm25_score": 0.2060883618908138,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is putting together an LGBTQ art show next month to showcase her paintings and feature LGBTQ artists, aiming to spread understanding and acceptance.",
+        "score": 0.3539205459454069,
+        "id": "71733918-8471-4705-8ab5-daac4cdccaf1",
+        "created_at": "2026-11-10T22:44:25.975052+00:00",
+        "updated_at": "2026-11-10T22:44:25.975052+00:00",
+        "score_debug": {
+          "combined_score": 0.3539205459454069,
+          "semantic_score": 0.50175273,
+          "bm25_score": 0.2060883618908138,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her and her partner holding hands during their wedding vows on the beach.",
+        "score": 0.353740182510933,
+        "id": "6c163785-1c88-45aa-b699-0821c3f92fb4",
+        "created_at": "2026-11-10T22:38:28.830307+00:00",
+        "updated_at": "2026-11-10T22:38:28.830307+00:00",
+        "score_debug": {
+          "combined_score": 0.353740182510933,
+          "semantic_score": 0.38906047,
+          "bm25_score": 0.31841989502186596,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline enjoys drawing flowers and finds it a favorite activity, appreciating nature and sharing it through her art.",
+        "score": 0.35218346985017807,
+        "id": "bbcc6450-5caa-4187-a26c-8bfbd36b70f6",
+        "created_at": "2026-11-10T22:44:14.987202+00:00",
+        "updated_at": "2026-11-10T22:44:14.987202+00:00",
+        "score_debug": {
+          "combined_score": 0.35218346985017807,
+          "semantic_score": 0.50391054,
+          "bm25_score": 0.2004563997003561,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline has a hand-painted bowl that was a gift from a friend for her 18th birthday ten years ago. The bowl has an awesome pattern and colors, reminding her of art and self-expression.",
+        "score": 0.3517399417468495,
+        "id": "419be8b9-3670-4565-a4ae-d514e94e559c",
+        "created_at": "2026-11-10T22:34:56.434561+00:00",
+        "updated_at": "2026-11-10T22:34:56.434561+00:00",
+        "score_debug": {
+          "combined_score": 0.3517399417468495,
+          "semantic_score": 0.5013418,
+          "bm25_score": 0.20213808349369913,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a family picnic photo showing a man and woman sitting on a blanket eating food.",
+        "score": 0.3491310145917488,
+        "id": "51673b6f-6edd-4fd4-b45a-8a259c8f933e",
+        "created_at": "2026-11-10T22:34:36.775066+00:00",
+        "updated_at": "2026-11-10T22:34:36.775066+00:00",
+        "score_debug": {
+          "combined_score": 0.3491310145917488,
+          "semantic_score": 0.39029247,
+          "bm25_score": 0.30796955918349755,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie will never forget the day her youngest child took her first steps, feeling that it highlighted how fleeting life is and how lucky she is to share such moments.",
+        "score": 0.34870522959174877,
+        "id": "987d602a-1cc9-4569-a5c0-7e1b21aa69a1",
+        "created_at": "2026-11-10T22:40:46.601092+00:00",
+        "updated_at": "2026-11-10T22:40:46.601092+00:00",
+        "score_debug": {
+          "combined_score": 0.34870522959174877,
+          "semantic_score": 0.3894409,
+          "bm25_score": 0.30796955918349755,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her family camping at the beach, emphasizing that camping brings them closer together.",
+        "score": 0.34856671608524337,
+        "id": "fb348c94-2375-443d-b236-23878a6f0ea6",
+        "created_at": "2026-11-10T22:36:38.919996+00:00",
+        "updated_at": "2026-11-10T22:36:38.919996+00:00",
+        "score_debug": {
+          "combined_score": 0.34856671608524337,
+          "semantic_score": 0.38084084,
+          "bm25_score": 0.3162925921704868,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a star-filled night sky, capturing the moment of the Perseid meteor shower during their camping trip.",
+        "score": 0.3482719145917488,
+        "id": "41f4f568-022a-44f4-8ca1-a00d6d47fb00",
+        "created_at": "2026-11-10T22:40:35.169581+00:00",
+        "updated_at": "2026-11-10T22:40:35.169581+00:00",
+        "score_debug": {
+          "combined_score": 0.3482719145917488,
+          "semantic_score": 0.38857427,
+          "bm25_score": 0.30796955918349755,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared that the song 'Summer Sounds' played at a recent event, creating a fun and lively atmosphere where everyone danced and sang along.",
+        "score": 0.3473671195917488,
+        "id": "72a2cda1-61a4-4be2-a22b-250e9eb2933f",
+        "created_at": "2026-11-10T22:44:56.384759+00:00",
+        "updated_at": "2026-11-10T22:44:56.384759+00:00",
+        "score_debug": {
+          "combined_score": 0.3473671195917488,
+          "semantic_score": 0.38676468,
+          "bm25_score": 0.30796955918349755,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie expressed admiration for Caroline's art, particularly appreciating the themes of self-acceptance and love.",
+        "score": 0.34395602073002973,
+        "id": "6d2b56da-7cf2-4699-bf7c-0145d681a5d2",
+        "created_at": "2026-11-10T22:41:27.802754+00:00",
+        "updated_at": "2026-11-10T22:41:27.802754+00:00",
+        "score_debug": {
+          "combined_score": 0.34395602073002973,
+          "semantic_score": 0.6351109,
+          "bm25_score": 0.052801141460059445,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a poster related to the poetry reading.",
+        "score": 0.34308172065437514,
+        "id": "8cbbedd5-e618-4c72-a4be-0f2092c1b991",
+        "created_at": "2026-11-10T22:46:49.158569+00:00",
+        "updated_at": "2026-11-10T22:46:49.158569+00:00",
+        "score_debug": {
+          "combined_score": 0.34308172065437514,
+          "semantic_score": 0.53075886,
+          "bm25_score": 0.15540458130875023,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is excited for Melanie, expressing that art is helping her express herself and bring her joy, encouraging her to keep it up.",
+        "score": 0.3416875938148955,
+        "id": "baa40b25-a680-4b89-a091-59fbfb265643",
+        "created_at": "2026-11-10T22:35:54.630683+00:00",
+        "updated_at": "2026-11-10T22:35:54.630683+00:00",
+        "score_debug": {
+          "combined_score": 0.3416875938148955,
+          "semantic_score": 0.6307844,
+          "bm25_score": 0.052590787629791004,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline enjoys drawing flowers and appreciates nature, stating that sharing it is great.",
+        "score": 0.3414915595677013,
+        "id": "28d7227f-b610-4cd1-b341-509c91e28483",
+        "created_at": "2026-11-10T22:44:12.937706+00:00",
+        "updated_at": "2026-11-10T22:44:12.937706+00:00",
+        "score_debug": {
+          "combined_score": 0.3414915595677013,
+          "semantic_score": 0.48090392,
+          "bm25_score": 0.20207919913540257,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared that running has been great for her mental health and she plans to keep it up.",
+        "score": 0.34052480409496627,
+        "id": "f33e3dcd-0fff-4a16-b45a-b4dab9004564",
+        "created_at": "2026-11-10T22:37:45.238126+00:00",
+        "updated_at": "2026-11-10T22:37:45.238126+00:00",
+        "score_debug": {
+          "combined_score": 0.34052480409496627,
+          "semantic_score": 0.35613406,
+          "bm25_score": 0.32491554818993257,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a funny story about her cat Oliver hiding a bone in her slipper and feeding a horse a carrot, describing the moments as cute and silly.",
+        "score": 0.3404054022325389,
+        "id": "760c5d1f-11bf-422e-8e13-66cb8a8e071f",
+        "created_at": "2026-11-10T22:42:41.491212+00:00",
+        "updated_at": "2026-11-10T22:42:41.491212+00:00",
+        "score_debug": {
+          "combined_score": 0.3404054022325389,
+          "semantic_score": 0.38087383,
+          "bm25_score": 0.29993697446507783,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline's art expresses her trans experience, serving as a way to share her story and help others understand the trans community.",
+        "score": 0.3390941925322836,
+        "id": "fba58bf1-8ee9-47ce-beb8-8524a1987d09",
+        "created_at": "2026-11-10T22:41:18.953387+00:00",
+        "updated_at": "2026-11-10T22:41:18.953387+00:00",
+        "score_debug": {
+          "combined_score": 0.3390941925322836,
+          "semantic_score": 0.52938634,
+          "bm25_score": 0.14880204506456732,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie expressed admiration for Caroline's stained glass window art, noting its inspiring story and vibrant colors.",
+        "score": 0.33874149204455023,
+        "id": "80f7ef79-331e-463e-8c67-20aa1842384c",
+        "created_at": "2026-11-10T22:43:51.711510+00:00",
+        "updated_at": "2026-11-10T22:43:51.711510+00:00",
+        "score_debug": {
+          "combined_score": 0.33874149204455023,
+          "semantic_score": 0.6253073,
+          "bm25_score": 0.05217568408910041,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie enjoys seeing her kids get excited about learning new things in nature, which makes being a parent worthwhile. They roasted marshmallows and shared stories around the campfire during their camping trip.",
+        "score": 0.33741580879431166,
+        "id": "5285dde3-03df-4417-b99b-af84f4df72c2",
+        "created_at": "2026-11-10T22:45:34.524515+00:00",
+        "updated_at": "2026-11-10T22:45:34.524515+00:00",
+        "score_debug": {
+          "combined_score": 0.33741580879431166,
+          "semantic_score": 0.37880486,
+          "bm25_score": 0.29602675758862335,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a drawing of a flower bouquet with a person holding it.",
+        "score": 0.33534227045621007,
+        "id": "b18a6118-3bb1-4b93-8f48-86acb1ba830c",
+        "created_at": "2026-11-10T22:44:12.941842+00:00",
+        "updated_at": "2026-11-10T22:44:12.941842+00:00",
+        "score_debug": {
+          "combined_score": 0.33534227045621007,
+          "semantic_score": 0.51721555,
+          "bm25_score": 0.1534689909124202,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie is curious about the main idea behind Caroline's art and expresses enthusiasm for her creative work.",
+        "score": 0.33132580422254043,
+        "id": "1ac2d3dd-0d0c-468a-9491-6569a0826554",
+        "created_at": "2026-11-10T22:41:16.971684+00:00",
+        "updated_at": "2026-11-10T22:41:16.971684+00:00",
+        "score_debug": {
+          "combined_score": 0.33132580422254043,
+          "semantic_score": 0.609424,
+          "bm25_score": 0.053227608445080885,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of her cat Oliver playing in the backyard with a frisbee.",
+        "score": 0.33077009576941907,
+        "id": "7cabf008-e8f9-494a-b232-00986c9b53de",
+        "created_at": "2026-11-10T22:42:37.564726+00:00",
+        "updated_at": "2026-11-10T22:42:37.564726+00:00",
+        "score_debug": {
+          "combined_score": 0.33077009576941907,
+          "semantic_score": 0.338809,
+          "bm25_score": 0.32273119153883806,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline uses her art to express her trans experience, aiming to share her story and help others understand the trans community.",
+        "score": 0.32963947253228365,
+        "id": "46265589-1aa8-4b5d-bf17-feb331bb52a1",
+        "created_at": "2026-11-10T22:41:21.650594+00:00",
+        "updated_at": "2026-11-10T22:41:21.650594+00:00",
+        "score_debug": {
+          "combined_score": 0.32963947253228365,
+          "semantic_score": 0.5104769,
+          "bm25_score": 0.14880204506456732,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie shared a photo of a man holding a frisbee in front of a frisbee golf basket, indicating her engagement in outdoor activities.",
+        "score": 0.3249875795917488,
+        "id": "16711a17-3b52-4541-852a-6b3a1af7d325",
+        "created_at": "2026-11-10T22:38:57.991501+00:00",
+        "updated_at": "2026-11-10T22:38:57.991501+00:00",
+        "score_debug": {
+          "combined_score": 0.3249875795917488,
+          "semantic_score": 0.3420056,
+          "bm25_score": 0.30796955918349755,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline finds it awesome to see how kids show their personalities through art and inquires about other creative projects Melanie does with her kids besides pottery.",
+        "score": 0.3233318207300297,
+        "id": "0b9f2ef6-b443-4a08-9ebc-f21abe653ddc",
+        "created_at": "2026-11-10T22:38:00.783982+00:00",
+        "updated_at": "2026-11-10T22:38:00.783982+00:00",
+        "score_debug": {
+          "combined_score": 0.3233318207300297,
+          "semantic_score": 0.5938625,
+          "bm25_score": 0.052801141460059445,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared an image of her drawing of a woman in a dress, inspired by the transgender flag, after attending the poetry reading.",
+        "score": 0.32288100245497786,
+        "id": "45e8bb05-9675-4d55-8690-6396625b4a29",
+        "created_at": "2026-11-10T22:47:00.297180+00:00",
+        "updated_at": "2026-11-10T22:47:00.297180+00:00",
+        "score_debug": {
+          "combined_score": 0.32288100245497786,
+          "semantic_score": 0.4960457,
+          "bm25_score": 0.1497163049099557,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline believes sharing experiences is important for promoting understanding and acceptance, and she feels blessed with love and support throughout her journey, wanting to pass it on to others.",
+        "score": 0.3209621239930831,
+        "id": "f59e6570-7770-4eaa-a59d-0e2a2b26a393",
+        "created_at": "2026-11-10T22:34:08.887044+00:00",
+        "updated_at": "2026-11-10T22:34:08.887044+00:00",
+        "score_debug": {
+          "combined_score": 0.3209621239930831,
+          "semantic_score": 0.44465202,
+          "bm25_score": 0.19727222798616617,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline feels that sharing personal stories takes courage and fosters bonding and understanding among people, emphasizing that everyone has different paths but sharing them helps others feel less alone.",
+        "score": 0.3193365130695755,
+        "id": "203c9783-8ad0-498c-a8d3-88753fc8d176",
+        "created_at": "2026-11-10T22:34:11.148888+00:00",
+        "updated_at": "2026-11-10T22:34:11.148888+00:00",
+        "score_debug": {
+          "combined_score": 0.3193365130695755,
+          "semantic_score": 0.40350133,
+          "bm25_score": 0.235171696139151,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline created a stained glass window to symbolize the key to discovering true potential and living one's best life, sharing this message with others.",
+        "score": 0.3189492439930831,
+        "id": "449bc515-3e6b-4880-b9c1-fc0e7a92a823",
+        "created_at": "2026-11-10T22:43:45.127641+00:00",
+        "updated_at": "2026-11-10T22:43:45.127641+00:00",
+        "score_debug": {
+          "combined_score": 0.3189492439930831,
+          "semantic_score": 0.44062626,
+          "bm25_score": 0.19727222798616617,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie has never been to a poetry reading and expressed curiosity about what made Caroline's recent experience special.",
+        "score": 0.3180342224564196,
+        "id": "24489584-117a-42d3-95b5-abc110bcc126",
+        "created_at": "2026-11-10T22:46:57.578775+00:00",
+        "updated_at": "2026-11-10T22:46:57.578775+00:00",
+        "score_debug": {
+          "combined_score": 0.3180342224564196,
+          "semantic_score": 0.5826247,
+          "bm25_score": 0.05344374491283916,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared that murals like the one depicting a rainbow flag are very special to her, symbolizing unity and acceptance.",
+        "score": 0.3173310374549778,
+        "id": "316acd27-25e5-4dc6-adbd-993f5559cf3e",
+        "created_at": "2026-11-10T22:43:35.892398+00:00",
+        "updated_at": "2026-11-10T22:43:35.892398+00:00",
+        "score_debug": {
+          "combined_score": 0.3173310374549778,
+          "semantic_score": 0.48494577,
+          "bm25_score": 0.1497163049099557,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline had a picnic with friends around November 3, 2026, and shared a photo of a group of women sitting on a blanket in a park.",
+        "score": 0.3144788725322837,
+        "id": "a3fdffd0-49c6-491f-a313-97844d9e834d",
+        "created_at": "2026-11-10T22:36:26.615525+00:00",
+        "updated_at": "2026-11-10T22:36:26.615525+00:00",
+        "score_debug": {
+          "combined_score": 0.3144788725322837,
+          "semantic_score": 0.4801557,
+          "bm25_score": 0.14880204506456732,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended a transgender poetry reading on November 3, 2026, where transgender individuals shared their stories through poetry, creating a powerful and empowering atmosphere for self-expression.",
+        "score": 0.3140259316049844,
+        "id": "fb840d7e-ad97-4ec9-80a4-2c6164a1a617",
+        "created_at": "2026-11-10T22:46:57.576300+00:00",
+        "updated_at": "2026-11-10T22:46:57.576300+00:00",
+        "score_debug": {
+          "combined_score": 0.3140259316049844,
+          "semantic_score": 0.4862378,
+          "bm25_score": 0.14181406320996875,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is happy that Melanie found something that makes her happy and expressed eagerness to see Melanie's pottery project when she can.",
+        "score": 0.31380707139425507,
+        "id": "40a6fafd-409f-4c59-913b-427034c88568",
+        "created_at": "2026-11-10T22:41:47.267909+00:00",
+        "updated_at": "2026-11-10T22:41:47.267909+00:00",
+        "score_debug": {
+          "combined_score": 0.31380707139425507,
+          "semantic_score": 0.5644486,
+          "bm25_score": 0.06316554278851012,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline praised Melanie for her effort and passion in her pottery project, expressing that Melanie's creativity shines and that art as a source of self-expression and growth is truly inspiring.",
+        "score": 0.31333438765166544,
+        "id": "b7156986-8165-4c24-9fbd-1c6c86960cd5",
+        "created_at": "2026-11-10T22:41:57.560767+00:00",
+        "updated_at": "2026-11-10T22:41:57.560767+00:00",
+        "score_debug": {
+          "combined_score": 0.31333438765166544,
+          "semantic_score": 0.56492734,
+          "bm25_score": 0.06174143530333085,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended a transgender poetry reading on November 3, 2026, where transgender individuals shared their stories through poetry, creating a powerful and empowering atmosphere.",
+        "score": 0.3131858356019039,
+        "id": "6e680da6-edd3-4e75-bbd3-4586340eb2a8",
+        "created_at": "2026-11-10T22:47:02.517237+00:00",
+        "updated_at": "2026-11-10T22:47:02.517237+00:00",
+        "score_debug": {
+          "combined_score": 0.3131858356019039,
+          "semantic_score": 0.48286334,
+          "bm25_score": 0.14350833120380782,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended a transgender poetry reading on November 3, 2026, where transgender individuals shared their stories through poetry, creating a powerful and empowering atmosphere.",
+        "score": 0.3131857156019039,
+        "id": "3105e0ca-6048-4ca9-8108-15f96a75a97c",
+        "created_at": "2026-11-10T22:47:10.534899+00:00",
+        "updated_at": "2026-11-10T22:47:10.534899+00:00",
+        "score_debug": {
+          "combined_score": 0.3131857156019039,
+          "semantic_score": 0.4828631,
+          "bm25_score": 0.14350833120380782,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie asked Caroline if she has ever thought about trying pottery or another art form.",
+        "score": 0.3131700724564196,
+        "id": "fbccf9f3-eae2-4051-bf01-382b9bb40e0b",
+        "created_at": "2026-11-10T22:45:48.457815+00:00",
+        "updated_at": "2026-11-10T22:45:48.457815+00:00",
+        "score_debug": {
+          "combined_score": 0.3131700724564196,
+          "semantic_score": 0.5728964,
+          "bm25_score": 0.05344374491283916,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline finds Melanie's pottery bowls amazing and appreciates their cool designs. She loves that Melanie chose pottery for her art.",
+        "score": 0.31030360067310014,
+        "id": "363308fe-1e71-4716-b8a5-163e7952df9b",
+        "created_at": "2026-11-10T22:45:45.549576+00:00",
+        "updated_at": "2026-11-10T22:45:45.549576+00:00",
+        "score_debug": {
+          "combined_score": 0.31030360067310014,
+          "semantic_score": 0.5579841,
+          "bm25_score": 0.06262310134620026,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie has never been to a poetry reading and asked Caroline what made the recent one special.",
+        "score": 0.30967278736234927,
+        "id": "f81e4c96-bac3-43c8-a180-6dd32c02a710",
+        "created_at": "2026-11-10T22:46:53.196459+00:00",
+        "updated_at": "2026-11-10T22:46:53.196459+00:00",
+        "score_debug": {
+          "combined_score": 0.30967278736234927,
+          "semantic_score": 0.5656837,
+          "bm25_score": 0.053661874724698515,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed interest in Melanie's summer traditions with her family and encouraged creating memories together.",
+        "score": 0.30921510204210995,
+        "id": "648ed2cf-f3ff-4127-9237-177267431f93",
+        "created_at": "2026-11-10T22:40:23.592665+00:00",
+        "updated_at": "2026-11-10T22:40:23.592665+00:00",
+        "score_debug": {
+          "combined_score": 0.30921510204210995,
+          "semantic_score": 0.5654168,
+          "bm25_score": 0.05301340408421986,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended a transgender poetry reading on November 3, 2026, where transgender individuals shared their stories through poetry. She found it empowering and special as it provided a safe space for self-expression and celebration of identities.",
+        "score": 0.3087940192573922,
+        "id": "aca0c264-69f7-4629-87ef-77146e5d3c9a",
+        "created_at": "2026-11-10T22:46:55.440071+00:00",
+        "updated_at": "2026-11-10T22:46:55.440071+00:00",
+        "score_debug": {
+          "combined_score": 0.3087940192573922,
+          "semantic_score": 0.47825247,
+          "bm25_score": 0.13933556851478443,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie expressed admiration for Caroline's stained glass window art, which symbolizes the key to discovering true potential and living one's best life.",
+        "score": 0.30836145934502374,
+        "id": "b52f594a-4c06-479d-8ea0-f298f9acbc59",
+        "created_at": "2026-11-10T22:43:46.955956+00:00",
+        "updated_at": "2026-11-10T22:43:46.955956+00:00",
+        "score_debug": {
+          "combined_score": 0.30836145934502374,
+          "semantic_score": 0.56515616,
+          "bm25_score": 0.05156675869004749,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed admiration for Melanie's love for her kids and asked about the concert they attended for her daughter's birthday.",
+        "score": 0.3056681520421099,
+        "id": "538d9cc1-eb9b-4c27-a9c6-fb401f006da8",
+        "created_at": "2026-11-10T22:40:59.397150+00:00",
+        "updated_at": "2026-11-10T22:40:59.397150+00:00",
+        "score_debug": {
+          "combined_score": 0.3056681520421099,
+          "semantic_score": 0.5583229,
+          "bm25_score": 0.05301340408421986,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on her colorful pottery bowl and inquired about the inspiration behind the colors and patterns.",
+        "score": 0.30471320422254045,
+        "id": "41a548e3-49c1-44e7-abbb-dde79a070183",
+        "created_at": "2026-11-10T22:41:51.284431+00:00",
+        "updated_at": "2026-11-10T22:41:51.284431+00:00",
+        "score_debug": {
+          "combined_score": 0.30471320422254045,
+          "semantic_score": 0.5561988,
+          "bm25_score": 0.053227608445080885,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie is finding peace through creativity and family, as expressed in her message around November 10, 2026.",
+        "score": 0.3043563703804343,
+        "id": "73f40586-a699-412b-88d5-85813d49f619",
+        "created_at": "2026-11-10T22:38:57.989134+00:00",
+        "updated_at": "2026-11-10T22:38:57.989134+00:00",
+        "score_debug": {
+          "combined_score": 0.3043563703804343,
+          "semantic_score": 0.5701315,
+          "bm25_score": 0.03858124076086859,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline is committed to using her voice to create love, acceptance, and hope, and she appreciates the impact of sharing stories on inspiring and encouraging others facing similar challenges.",
+        "score": 0.30345858681531984,
+        "id": "7e140697-5229-4373-9820-7590c8171527",
+        "created_at": "2026-11-10T22:34:11.153478+00:00",
+        "updated_at": "2026-11-10T22:34:11.153478+00:00",
+        "score_debug": {
+          "combined_score": 0.30345858681531984,
+          "semantic_score": 0.41120687,
+          "bm25_score": 0.19571030363063968,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline aims to build a strong, supportive community of hope by sharing stories and experiences.",
+        "score": 0.3030211632540799,
+        "id": "c6263428-d3ac-4ddc-9ed0-8e79220bc47d",
+        "created_at": "2026-11-10T22:34:08.889654+00:00",
+        "updated_at": "2026-11-10T22:34:08.889654+00:00",
+        "score_debug": {
+          "combined_score": 0.3030211632540799,
+          "semantic_score": 0.40314388,
+          "bm25_score": 0.20289844650815975,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie agreed with Caroline to plan something special for the summer of 2027.",
+        "score": 0.30222840067863627,
+        "id": "ce5deb46-7a30-4a24-8ab8-6db7c7215c79",
+        "created_at": "2026-11-10T22:42:18.530535+00:00",
+        "updated_at": "2026-11-10T22:42:18.530535+00:00",
+        "score_debug": {
+          "combined_score": 0.30222840067863627,
+          "semantic_score": 0.5505748,
+          "bm25_score": 0.05388200135727252,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed her commitment to spreading love and understanding, thanking Melanie for her support and encouragement, and emphasized their ability to tackle life's challenges together.",
+        "score": 0.30217429187288397,
+        "id": "db69266d-fd67-43f0-88f1-13e9b64551c0",
+        "created_at": "2026-11-10T22:34:18.206637+00:00",
+        "updated_at": "2026-11-10T22:34:18.206637+00:00",
+        "score_debug": {
+          "combined_score": 0.30217429187288397,
+          "semantic_score": 0.55258065,
+          "bm25_score": 0.051767933745767936,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Melanie expressed excitement about Caroline's upcoming LGBTQ art show, emphasizing the need for more platforms for the LGBTQ community.",
+        "score": 0.3021494938148955,
+        "id": "05130df4-e9ba-41bd-b0c1-6bf38e7b5d80",
+        "created_at": "2026-11-10T22:44:21.569385+00:00",
+        "updated_at": "2026-11-10T22:44:21.569385+00:00",
+        "score_debug": {
+          "combined_score": 0.3021494938148955,
+          "semantic_score": 0.5517082,
+          "bm25_score": 0.052590787629791004,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on a picture of her kids at the museum, expressing that it must have been an awesome experience and asking what excited them.",
+        "score": 0.3005776088148955,
+        "id": "0a6265c3-9a2e-4476-951c-e3e0864e71a9",
+        "created_at": "2026-11-10T22:36:10.151597+00:00",
+        "updated_at": "2026-11-10T22:36:10.151597+00:00",
+        "score_debug": {
+          "combined_score": 0.3005776088148955,
+          "semantic_score": 0.54856443,
+          "bm25_score": 0.052590787629791004,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on her pottery plate, expressing that it is awesome and inquired if Melanie made it.",
+        "score": 0.29872597870415135,
+        "id": "0db62912-6e40-4db3-8ce9-e8ad328b8ef2",
+        "created_at": "2026-11-10T22:43:14.215856+00:00",
+        "updated_at": "2026-11-10T22:43:14.215856+00:00",
+        "score_debug": {
+          "combined_score": 0.29872597870415135,
+          "semantic_score": 0.5341033,
+          "bm25_score": 0.06334865740830277,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline attended a pride parade a few weeks ago and shared it as a special memory.",
+        "score": 0.29807163545621007,
+        "id": "700ceec7-76a6-41b8-8c2d-1a6b03b98d83",
+        "created_at": "2026-11-10T22:38:33.031129+00:00",
+        "updated_at": "2026-11-10T22:38:33.031129+00:00",
+        "score_debug": {
+          "combined_score": 0.29807163545621007,
+          "semantic_score": 0.44267428,
+          "bm25_score": 0.1534689909124202,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline praised Melanie for her creativity and hard work, stating that it definitely shows in her pottery.",
+        "score": 0.2980168520421099,
+        "id": "e8066056-bb3e-48d8-a7ab-fc89887a9642",
+        "created_at": "2026-11-10T22:35:50.274327+00:00",
+        "updated_at": "2026-11-10T22:35:50.274327+00:00",
+        "score_debug": {
+          "combined_score": 0.2980168520421099,
+          "semantic_score": 0.5430203,
+          "bm25_score": 0.05301340408421986,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline complimented Melanie on her family picture and inquired about the duration of Melanie's marriage.",
+        "score": 0.297758041076594,
+        "id": "c983285a-9caf-43ed-b4e0-bc644572901f",
+        "created_at": "2026-11-10T22:34:30.480117+00:00",
+        "updated_at": "2026-11-10T22:34:30.480117+00:00",
+        "score_debug": {
+          "combined_score": 0.297758041076594,
+          "semantic_score": 0.53198314,
+          "bm25_score": 0.06353294215318799,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline expressed her excitement about a great day and asked Melanie what her favorite part was.",
+        "score": 0.2974285873623493,
+        "id": "212c52fd-6151-4fc1-a4d8-c273ae99560a",
+        "created_at": "2026-11-10T22:38:26.862838+00:00",
+        "updated_at": "2026-11-10T22:38:26.862838+00:00",
+        "score_debug": {
+          "combined_score": 0.2974285873623493,
+          "semantic_score": 0.5411953,
+          "bm25_score": 0.053661874724698515,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Caroline shared a photo of a family posing for a picture in a yard, taken during a meetup last week.",
+        "score": 0.2955379407971155,
+        "id": "29d7686c-f09a-4ccd-b472-d2c0f3b4189b",
+        "created_at": "2026-11-10T22:34:22.398805+00:00",
+        "updated_at": "2026-11-10T22:34:22.398805+00:00",
+        "score_debug": {
+          "combined_score": 0.2955379407971155,
+          "semantic_score": 0.4395026,
+          "bm25_score": 0.1515732815942309,
+          "entity_boost": 0.0
+        }
+      }
+    ],
+    "search_latency_ms": 939.6,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_10": {
+      "judgment": "WRONG",
+      "score": 0.0,
+      "generated_answer": "A vibrant sunset beach painting.",
+      "memories_evaluated": 10,
+      "reason": "The generated answer describes a sunset beach scene, which does not match the gold answer’s abstract blue-streak painting on a wall."
+    },
+    "top_20": {
+      "judgment": "CORRECT",
+      "score": 1.0,
+      "generated_answer": "I don’t have a record of what Caroline shared on October 13, 2023. The memories only show her sharing a self-portrait, a vibrant sunset beach scene, a red-and-blue abstract, and a “happiness” painting (none tied to that date). Could you confirm which one you mean?",
+      "memories_evaluated": 20,
+      "reason": "The generated answer references an abstract painting (a red-and-blue abstract), which overlaps with the gold answer’s abstract painting with blue streaks, satisfying partial credit."
+    },
+    "top_50": {
+      "judgment": "WRONG",
+      "score": 0.0,
+      "generated_answer": "The provided memories don’t include any entry for October 13, 2023, so I can’t identify which painting Caroline shared that day. If you meant a different date, I can check—she later shared a vibrant sunset beach painting and a self-portrait in early November 2026.",
+      "memories_evaluated": 50,
+      "reason": "The answer does not mention the abstract painting with blue streaks on a wall and instead claims no entry and references unrelated artworks, yielding no overlap with the gold answer."
+    },
+    "top_200": {
+      "judgment": "WRONG",
+      "score": 0.0,
+      "generated_answer": "The provided memories don’t mention October 13, 2023, so I don’t have details on what painting Caroline shared with Melanie that day.",
+      "memories_evaluated": 200,
+      "reason": "The generated answer gives no details and does not mention an abstract painting, blue streaks, or that it was on a wall, providing zero correct items from the gold answer."
+    }
+  }
+}
