@@ -11,9 +11,14 @@ come from QDRANT_PORT in experiments/memory-benchmarks/.env (host is always
 localhost here); no other variables are read from that file.
 
 Writes, under <run_folder>/store_snapshot/:
-    memories.jsonl  - id, data, created_at, user_id (sorted by created_at, then id)
+    memories.jsonl  - id, data, text_lemmatized, created_at, updated_at, hash,
+                      user_id, attributed_to (if present), embedding_dims,
+                      bm25_entries (sorted by created_at, then id)
     entities.jsonl  - id, data, entity_type, linked_memory_ids (sorted by data)
-    README.md       - export date, collections, user id, record counts
+    README.md       - export date, collections, user id, record counts, field list
+
+Vectors are fetched (with_vectors=True) only to compute embedding_dims and
+bm25_entries; the vector values themselves are never written to disk.
 """
 
 import datetime
@@ -47,7 +52,9 @@ def find_user_id(run_dir: Path) -> str:
     return user_ids.pop()
 
 
-def scroll_all(client: QdrantClient, collection: str, user_id: str) -> list[dict]:
+def scroll_all(
+    client: QdrantClient, collection: str, user_id: str, with_vectors: bool = False
+) -> list[dict]:
     flt = models.Filter(
         must=[models.FieldCondition(key="user_id", match=models.MatchValue(value=user_id))]
     )
@@ -60,7 +67,7 @@ def scroll_all(client: QdrantClient, collection: str, user_id: str) -> list[dict
             limit=256,
             offset=offset,
             with_payload=True,
-            with_vectors=False,
+            with_vectors=with_vectors,
         )
         points.extend(batch)
         if offset is None:
@@ -77,18 +84,28 @@ def main() -> None:
 
     client = QdrantClient(host="localhost", port=port)
 
-    memory_points = scroll_all(client, "memories", user_id)
+    memory_points = scroll_all(client, "memories", user_id, with_vectors=True)
     entity_points = scroll_all(client, "memories_entities", user_id)
 
-    memories = [
-        {
+    memories = []
+    for p in memory_points:
+        vector = p.vector or {}
+        dense = vector.get("")
+        sparse = vector.get("bm25")
+        m = {
             "id": str(p.id),
             "data": p.payload.get("data"),
+            "text_lemmatized": p.payload.get("text_lemmatized"),
             "created_at": p.payload.get("created_at"),
+            "updated_at": p.payload.get("updated_at"),
+            "hash": p.payload.get("hash"),
             "user_id": p.payload.get("user_id"),
         }
-        for p in memory_points
-    ]
+        if "attributed_to" in p.payload:
+            m["attributed_to"] = p.payload.get("attributed_to")
+        m["embedding_dims"] = len(dense) if dense is not None else None
+        m["bm25_entries"] = len(sparse.indices) if sparse is not None else None
+        memories.append(m)
     memories.sort(key=lambda m: (m["created_at"] or "", m["id"]))
 
     entities = [
@@ -122,8 +139,28 @@ def main() -> None:
 - Memories exported: {len(memories)}
 - Entities exported: {len(entities)}
 
-Text and links only; no vectors. Read-only export (scroll/count), nothing
-in Qdrant was modified.
+## memories.jsonl fields
+
+- id: the memory's point id in the "memories" Qdrant collection
+- data: the fact's text, as stored by Mem0
+- text_lemmatized: the fact's words in base form, used for BM25 keyword search
+- created_at: timestamp the memory was first written
+- updated_at: timestamp the memory was last updated (Mem0 v2 only adds, so this equals created_at)
+- hash: Mem0's content hash of the fact text
+- user_id: the Mem0 user id the memory belongs to
+- attributed_to: who/what the fact is attributed to, only present when Mem0 set it
+- embedding_dims: length of the dense embedding vector
+- bm25_entries: number of entries in the sparse "bm25" vector, or null if the point has no bm25 vector
+
+## entities.jsonl fields
+
+- id: the entity's point id in the "memories_entities" Qdrant collection
+- data: the entity's name/label
+- entity_type: the entity's type as classified by Mem0
+- linked_memory_ids: ids of memories (from the "memories" collection) linked to this entity
+
+No vector values are written, only counts/lengths derived from them.
+Read-only export (scroll/count), nothing in Qdrant was modified.
 """
     (out_dir / "README.md").write_text(readme)
 
