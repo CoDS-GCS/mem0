@@ -77,5 +77,8 @@ Snapshot taken from the live Qdrant store on 2026-11-10T20:52:30Z (UTC), filtere
 | `store_snapshot/memories.jsonl`, `store_snapshot/entities.jsonl`, `store_snapshot/README.md` | `experiments/scripts/export_store.py` | `experiments/scripts/export_store.py experiments/runs/2026-11-10_1447-locomo-conv0-default/` |
 | `storage_profile.md` | `experiments/scripts/profile_storage.py` | `experiments/scripts/profile_storage.py experiments/runs/2026-11-10_1447-locomo-conv0-default/` |
 | `trace_facts/<question_id>.md` (43 files, all questions judged WRONG at top_200) and `trace_facts/INDEX.md` | `experiments/scripts/trace_question.py` | `experiments/scripts/trace_question.py experiments/runs/2026-11-10_1447-locomo-conv0-default/ --all-failures` |
+| `trace_facts/conv0_q1.md`, `trace_facts/conv0_q113.md`, `trace_facts/conv0_q33.md`, `trace_facts/conv0_q34.md`, `trace_facts/conv0_q77.md` (5 files, flipped vs Run B: correct in A, wrong in B) | `experiments/scripts/trace_question.py` | `experiments/scripts/trace_question.py experiments/runs/2026-11-10_1447-locomo-conv0-default/ conv0_q1 conv0_q113 conv0_q33 conv0_q34 conv0_q77` |
 
-All three were run with `/shared_mnt/loubna/venv-analysis/bin/python` (a venv outside the repo, not `experiments/memory-benchmarks/.venv`).
+All four were run with `/shared_mnt/loubna/venv-analysis/bin/python` (a venv outside the repo, not `experiments/memory-benchmarks/.venv`).
+
+Comparison with Run B (`ENTITY_BOOST_WEIGHT = 0`): see [`experiments/runs/2026-11-10_2231-locomo-conv0-eb0/README.md`](../2026-11-10_2231-locomo-conv0-eb0/README.md#9-comparison-with-run-a-default-settings).
