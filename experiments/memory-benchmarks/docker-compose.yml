@@ -22,6 +22,10 @@ services:
       - COLLECTION_NAME=${COLLECTION_NAME:-memories}
       - LLM_MODEL=${LLM_MODEL:-gpt-4o-mini}
       - EMBEDDER_MODEL=${EMBEDDER_MODEL:-text-embedding-3-small}
+      # Forward the per-session `timestamp` to Memory.add() (needs a mem0 build that
+      # accepts it, e.g. code/session-date). Default 0 = off: reruns of Run A/B behave
+      # exactly as before (v2.2.1 rejects the argument, so it is never passed).
+      - MEM0_FORWARD_TIMESTAMP=${MEM0_FORWARD_TIMESTAMP:-0}
     volumes:
       - mem0_history:/app/history
       # Custom config for advanced setups (Azure, Ollama, SageMaker, etc.)

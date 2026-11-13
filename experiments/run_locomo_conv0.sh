@@ -69,6 +69,7 @@ cat > "$RUN_DIR/manifest.json" <<EOF
   "embedder": "${EMBEDDER_MODEL:-text-embedding-3-small}",
   "answerer_model": "$ANSWERER_MODEL",
   "judge_model": "$JUDGE_MODEL",
+  "forward_timestamp": "${MEM0_FORWARD_TIMESTAMP:-0}",
   "extra_args": "$*",
   "started_utc": "$START"
 }

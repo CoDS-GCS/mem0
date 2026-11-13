@@ -171,6 +171,12 @@ def _get_memory():
 # ---------------------------------------------------------------------------
 
 
+# When on, the per-session `timestamp` (unix epoch, sent by the LoCoMo harness) is
+# forwarded to Memory.add(). Requires a mem0 build that accepts it (e.g. code/session-date);
+# v2.2.1 rejects it, so this stays off by default and Run A/B reruns are unchanged.
+FORWARD_TIMESTAMP = os.getenv("MEM0_FORWARD_TIMESTAMP", "0").strip().lower() in ("1", "true", "yes", "on")
+
+
 class AddRequest(BaseModel):
     messages: list[dict[str, Any]]
     user_id: str | None = None
@@ -178,6 +184,7 @@ class AddRequest(BaseModel):
     run_id: str | None = None
     metadata: dict[str, Any] | None = None
     observation_date: str | None = None
+    timestamp: int | float | str | None = None
     custom_instructions: str | None = None
 
 
@@ -217,6 +224,10 @@ def add_memories(req: AddRequest):
     # the installed mem0ai version supports them
     if req.custom_instructions:
         params["prompt"] = req.custom_instructions
+    # Forward the session date only when explicitly enabled (and a mem0 build that
+    # accepts `timestamp` is installed). Off by default so v2.2.1 reruns are unchanged.
+    if FORWARD_TIMESTAMP and req.timestamp is not None:
+        params["timestamp"] = req.timestamp
 
     try:
         result = mem.add(req.messages, **params)
