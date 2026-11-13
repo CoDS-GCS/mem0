@@ -1,11 +1,13 @@
+import json
 import logging
 import os
+from datetime import datetime, timezone
 from unittest.mock import Mock, patch
 
 import pytest
 
 from mem0.configs.base import MemoryConfig
-from mem0.memory.main import Memory, _validate_and_trim_entity_id
+from mem0.memory.main import Memory, _session_datetime_from_timestamp, _validate_and_trim_entity_id
 
 
 @pytest.fixture(autouse=True)
@@ -62,7 +64,12 @@ def test_add(memory_instance):
     assert result["results"] == [{"memory": "Test memory", "event": "ADD"}]
 
     memory_instance._add_to_vector_store.assert_called_once_with(
-        [{"role": "user", "content": "Test message"}], {"user_id": "test_user"}, {"user_id": "test_user"}, True, prompt=None
+        [{"role": "user", "content": "Test message"}],
+        {"user_id": "test_user"},
+        {"user_id": "test_user"},
+        True,
+        prompt=None,
+        session_dt=None,
     )
 
 
@@ -81,7 +88,119 @@ def test_add_stores_expiration_date(memory_instance):
         {"user_id": "test_user"},
         True,
         prompt=None,
+        session_dt=None,
     )
+
+
+# ---------------------------------------------------------------------------
+# Session-date (`timestamp`) support — mirrors the Platform `timestamp` param.
+# Epoch 1683554160 == "1:56 pm on 8 May, 2023" (UTC), LoCoMo conv0 session_1.
+# ---------------------------------------------------------------------------
+
+SESSION_EPOCH = 1683554160
+SESSION_DATE = "2023-05-08"
+SESSION_ISO = "2023-05-08T13:56:00+00:00"
+
+
+def _stub_add_pipeline(memory_instance):
+    """Replace the external collaborators of add() with mocks (no API calls)."""
+    memory_instance.llm = Mock()
+    memory_instance.embedding_model = Mock()
+    memory_instance.vector_store = Mock()
+    memory_instance.vector_store.search.return_value = []
+    memory_instance.db = Mock()
+    memory_instance.db.get_last_messages.return_value = []
+
+
+def test_session_datetime_from_timestamp():
+    # Epoch seconds (what the LoCoMo harness sends) round-trip to the session date/time.
+    assert _session_datetime_from_timestamp(SESSION_EPOCH) == datetime(2023, 5, 8, 13, 56, tzinfo=timezone.utc)
+    # ISO string and numeric string are accepted too; naive values are treated as UTC.
+    assert _session_datetime_from_timestamp(SESSION_ISO) == datetime(2023, 5, 8, 13, 56, tzinfo=timezone.utc)
+    assert _session_datetime_from_timestamp(str(SESSION_EPOCH)) == datetime(2023, 5, 8, 13, 56, tzinfo=timezone.utc)
+    # No timestamp -> no session date.
+    assert _session_datetime_from_timestamp(None) is None
+
+
+def test_add_with_timestamp_sets_observation_date_in_prompt(memory_instance):
+    _stub_add_pipeline(memory_instance)
+    captured = {}
+
+    def fake_prompt(**kwargs):
+        captured.update(kwargs)
+        return "PROMPT"
+
+    with patch("mem0.memory.main.generate_additive_extraction_prompt", side_effect=fake_prompt):
+        memory_instance.add(
+            messages=[{"role": "user", "content": "We went hiking yesterday."}],
+            user_id="u",
+            timestamp=SESSION_EPOCH,
+        )
+
+    # The extractor's Observation Date is the session date, not the machine clock.
+    assert captured["timestamp"] == SESSION_DATE
+
+
+def test_add_without_timestamp_leaves_observation_date_unset(memory_instance):
+    _stub_add_pipeline(memory_instance)
+    captured = {}
+
+    def fake_prompt(**kwargs):
+        captured.update(kwargs)
+        return "PROMPT"
+
+    with patch("mem0.memory.main.generate_additive_extraction_prompt", side_effect=fake_prompt):
+        memory_instance.add(
+            messages=[{"role": "user", "content": "We went hiking yesterday."}],
+            user_id="u",
+        )
+
+    # Unchanged behaviour: no Observation Date is passed, so the prompt defaults to today.
+    assert captured["timestamp"] is None
+
+
+def test_add_with_timestamp_sets_created_at(memory_instance):
+    _stub_add_pipeline(memory_instance)
+    memory_instance.llm.generate_response.return_value = json.dumps(
+        {"memory": [{"text": "Loubna went hiking on 2023-05-07."}]}
+    )
+
+    with (
+        patch("mem0.memory.main.lemmatize_for_bm25", side_effect=lambda t: t),
+        patch("mem0.memory.main.extract_entities_batch", return_value=[[]]),
+    ):
+        memory_instance.add(
+            messages=[{"role": "user", "content": "We went hiking yesterday."}],
+            user_id="u",
+            timestamp=SESSION_EPOCH,
+        )
+
+    payloads = memory_instance.vector_store.insert.call_args.kwargs["payloads"]
+    assert payloads[0]["created_at"] == SESSION_ISO
+    assert payloads[0]["updated_at"] == SESSION_ISO
+
+
+def test_add_without_timestamp_created_at_is_now(memory_instance):
+    _stub_add_pipeline(memory_instance)
+    memory_instance.llm.generate_response.return_value = json.dumps(
+        {"memory": [{"text": "Loubna went hiking."}]}
+    )
+
+    before = datetime.now(timezone.utc)
+    with (
+        patch("mem0.memory.main.lemmatize_for_bm25", side_effect=lambda t: t),
+        patch("mem0.memory.main.extract_entities_batch", return_value=[[]]),
+    ):
+        memory_instance.add(
+            messages=[{"role": "user", "content": "We went hiking."}],
+            user_id="u",
+        )
+    after = datetime.now(timezone.utc)
+
+    # Unchanged behaviour: created_at is the machine clock at add time, not a 2023 date.
+    payloads = memory_instance.vector_store.insert.call_args.kwargs["payloads"]
+    created_at = datetime.fromisoformat(payloads[0]["created_at"])
+    assert before <= created_at <= after
 
 
 def test_get(memory_instance):

@@ -4,19 +4,17 @@ from mem0.memory import main as memory_main
 from mem0.memory.main import AsyncMemory, Memory
 
 
-def test_sync_add_timestamp_raises_before_validation(monkeypatch):
-    calls = []
+def test_sync_add_timestamp_does_not_call_temporal_feature_notice(monkeypatch):
+    # OSS add() now accepts `timestamp` (the session date) instead of rejecting it,
+    # so the temporal-feature error must not fire; normal validation proceeds.
+    monkeypatch.setattr(
+        memory_main,
+        "get_temporal_feature_error_message",
+        lambda *args: pytest.fail("temporal feature notice should not run"),
+    )
 
-    def get_error(sync_type, trigger_function, trigger_parameter):
-        calls.append((sync_type, trigger_function, trigger_parameter))
-        return "blocked timestamp"
-
-    monkeypatch.setattr(memory_main, "get_temporal_feature_error_message", get_error)
-
-    with pytest.raises(ValueError, match="blocked timestamp"):
+    with pytest.raises(Exception, match="At least one of 'user_id', 'agent_id', or 'run_id'"):
         Memory.add(Memory.__new__(Memory), "hello", timestamp=123)
-
-    assert calls == [("sync", "add", "timestamp")]
 
 
 def test_sync_search_reference_date_raises_before_validation(monkeypatch):
@@ -35,19 +33,16 @@ def test_sync_search_reference_date_raises_before_validation(monkeypatch):
 
 
 @pytest.mark.asyncio
-async def test_async_add_timestamp_raises_before_validation(monkeypatch):
-    calls = []
-
-    async def get_error(sync_type, trigger_function, trigger_parameter):
-        calls.append((sync_type, trigger_function, trigger_parameter))
-        return "blocked async timestamp"
+async def test_async_add_timestamp_does_not_call_temporal_feature_notice(monkeypatch):
+    # OSS add() now accepts `timestamp` (the session date) instead of rejecting it,
+    # so the temporal-feature error must not fire; normal validation proceeds.
+    async def get_error(*args):
+        pytest.fail("temporal feature notice should not run")
 
     monkeypatch.setattr(memory_main, "get_temporal_feature_error_message_async", get_error)
 
-    with pytest.raises(ValueError, match="blocked async timestamp"):
+    with pytest.raises(Exception, match="At least one of 'user_id', 'agent_id', or 'run_id'"):
         await AsyncMemory.add(AsyncMemory.__new__(AsyncMemory), "hello", timestamp=123)
-
-    assert calls == [("async", "add", "timestamp")]
 
 
 @pytest.mark.asyncio

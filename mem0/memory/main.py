@@ -311,6 +311,39 @@ def _normalize_iso_timestamp_to_utc(timestamp: Optional[str]) -> Optional[str]:
     return parsed.astimezone(timezone.utc).isoformat()
 
 
+def _session_datetime_from_timestamp(timestamp: Optional[Any]) -> Optional[datetime]:
+    """Resolve an ``add()`` ``timestamp`` into a timezone-aware UTC datetime.
+
+    Mirrors the Platform ``timestamp`` parameter for OSS: callers pass the date a
+    conversation took place so the extractor and the stored memory are grounded to
+    that date instead of the machine clock. Accepts a unix epoch (int/float, or a
+    numeric string), an ISO 8601 string, or a ``datetime``. Naive values are treated
+    as UTC. Returns ``None`` when no timestamp is given.
+    """
+    if timestamp is None:
+        return None
+    if isinstance(timestamp, datetime):
+        dt = timestamp
+    elif isinstance(timestamp, bool):
+        raise ValueError("timestamp must be a unix epoch, ISO 8601 string, or datetime")
+    elif isinstance(timestamp, (int, float)):
+        dt = datetime.fromtimestamp(timestamp, timezone.utc)
+    elif isinstance(timestamp, str):
+        text = timestamp.strip()
+        if text.lstrip("-").isdigit():
+            dt = datetime.fromtimestamp(int(text), timezone.utc)
+        else:
+            try:
+                dt = datetime.fromisoformat(text.replace("Z", "+00:00"))
+            except ValueError as exc:
+                raise ValueError(f"Could not parse timestamp {timestamp!r}") from exc
+    else:
+        raise ValueError(f"Unsupported timestamp type: {type(timestamp).__name__}")
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(timezone.utc)
+
+
 def _build_filters_and_metadata(
     *,  # Enforce keyword-only arguments
     user_id: Optional[str] = None,
@@ -784,7 +817,10 @@ class Memory(MemoryBase):
             agent_id (str, optional): ID of the agent creating the memory. Defaults to None.
             run_id (str, optional): ID of the run creating the memory. Defaults to None.
             metadata (dict, optional): Metadata to store with the memory. Defaults to None.
-            timestamp (Any, optional): Platform-only temporal parameter. Not supported in OSS.
+            timestamp (Any, optional): Date the conversation took place (unix epoch, ISO 8601
+                string, or datetime). When given, the extractor's Observation Date and the stored
+                memory's created_at/updated_at are set to this date instead of the machine clock.
+                When omitted, behaviour is unchanged.
             expiration_date (Any, optional): Date in YYYY-MM-DD format. Expired memories are hidden
                 from search and get_all unless show_expired is True.
             infer (bool, optional): If True (default), an LLM is used to extract key facts from
@@ -814,8 +850,7 @@ class Memory(MemoryBase):
             LLMError: If LLM operations fail.
             DatabaseError: If database operations fail.
         """
-        if timestamp is not None:
-            raise ValueError(get_temporal_feature_error_message("sync", "add", "timestamp"))
+        session_dt = _session_datetime_from_timestamp(timestamp)
 
         normalized_expiration_date = _normalize_expiration_date(expiration_date)
         temporal_usage_notice = detect_temporal_usage_from_metadata(metadata)
@@ -868,7 +903,9 @@ class Memory(MemoryBase):
         else:
             messages = parse_vision_messages(messages)
 
-        vector_store_result = self._add_to_vector_store(messages, processed_metadata, effective_filters, infer, prompt=prompt)
+        vector_store_result = self._add_to_vector_store(
+            messages, processed_metadata, effective_filters, infer, prompt=prompt, session_dt=session_dt
+        )
         scale_threshold_notice = detect_scale_threshold_from_add_result(self, vector_store_result)
         if temporal_usage_notice:
             display_temporal_usage_notice(self, "sync", "add", *temporal_usage_notice)
@@ -878,7 +915,7 @@ class Memory(MemoryBase):
             display_first_run_notice(self, "sync", "add")
         return {"results": vector_store_result}
 
-    def _add_to_vector_store(self, messages, metadata, filters, infer, prompt=None):
+    def _add_to_vector_store(self, messages, metadata, filters, infer, prompt=None, session_dt=None):
         if not infer:
             returned_memories = []
             for message_dict in messages:
@@ -947,11 +984,13 @@ class Memory(MemoryBase):
 
         custom_instr = prompt or self.custom_instructions
 
+        observation_date = session_dt.date().isoformat() if session_dt is not None else None
         user_prompt = generate_additive_extraction_prompt(
             existing_memories=existing_memories,
             new_messages=parsed_messages,
             last_k_messages=last_messages,
             custom_instructions=custom_instr,
+            timestamp=observation_date,
         )
 
         try:
@@ -1033,7 +1072,10 @@ class Memory(MemoryBase):
             mem_metadata["text_lemmatized"] = text_lemmatized
             mem_metadata["hash"] = mem_hash
             if "created_at" not in mem_metadata:
-                mem_metadata["created_at"] = datetime.now(timezone.utc).isoformat()
+                if session_dt is not None:
+                    mem_metadata["created_at"] = session_dt.isoformat()
+                else:
+                    mem_metadata["created_at"] = datetime.now(timezone.utc).isoformat()
             mem_metadata["updated_at"] = mem_metadata["created_at"]
             if mem.get("attributed_to"):
                 mem_metadata["attributed_to"] = mem["attributed_to"]
@@ -2476,7 +2518,10 @@ class AsyncMemory(MemoryBase):
             agent_id (str, optional): ID of the agent creating the memory. Defaults to None.
             run_id (str, optional): ID of the run creating the memory. Defaults to None.
             metadata (dict, optional): Metadata to store with the memory. Defaults to None.
-            timestamp (Any, optional): Platform-only temporal parameter. Not supported in OSS.
+            timestamp (Any, optional): Date the conversation took place (unix epoch, ISO 8601
+                string, or datetime). When given, the extractor's Observation Date and the stored
+                memory's created_at/updated_at are set to this date instead of the machine clock.
+                When omitted, behaviour is unchanged.
             expiration_date (Any, optional): Date in YYYY-MM-DD format. Expired memories are hidden
                 from search and get_all unless show_expired is True.
             infer (bool, optional): Whether to infer the memories. Defaults to True.
@@ -2493,8 +2538,7 @@ class AsyncMemory(MemoryBase):
         Returns:
             dict: A dictionary containing the result of the memory addition operation.
         """
-        if timestamp is not None:
-            raise ValueError(await get_temporal_feature_error_message_async("async", "add", "timestamp"))
+        session_dt = _session_datetime_from_timestamp(timestamp)
 
         normalized_expiration_date = _normalize_expiration_date(expiration_date)
         temporal_usage_notice = detect_temporal_usage_from_metadata(metadata)
@@ -2543,7 +2587,9 @@ class AsyncMemory(MemoryBase):
         else:
             messages = parse_vision_messages(messages)
 
-        vector_store_result = await self._add_to_vector_store(messages, processed_metadata, effective_filters, infer, prompt=prompt)
+        vector_store_result = await self._add_to_vector_store(
+            messages, processed_metadata, effective_filters, infer, prompt=prompt, session_dt=session_dt
+        )
         scale_threshold_notice = await asyncio.to_thread(detect_scale_threshold_from_add_result, self, vector_store_result)
         if temporal_usage_notice:
             await display_temporal_usage_notice_async(self, "async", "add", *temporal_usage_notice)
@@ -2560,6 +2606,7 @@ class AsyncMemory(MemoryBase):
         effective_filters: dict,
         infer: bool,
         prompt: Optional[str] = None,
+        session_dt: Optional[datetime] = None,
     ):
         if not infer:
             returned_memories = []
@@ -2630,11 +2677,13 @@ class AsyncMemory(MemoryBase):
 
         custom_instr = prompt or self.custom_instructions
 
+        observation_date = session_dt.date().isoformat() if session_dt is not None else None
         user_prompt = generate_additive_extraction_prompt(
             existing_memories=existing_memories,
             new_messages=parsed_messages,
             last_k_messages=last_messages,
             custom_instructions=custom_instr,
+            timestamp=observation_date,
         )
 
         try:
@@ -2712,7 +2761,10 @@ class AsyncMemory(MemoryBase):
             mem_metadata["text_lemmatized"] = text_lemmatized
             mem_metadata["hash"] = mem_hash
             if "created_at" not in mem_metadata:
-                mem_metadata["created_at"] = datetime.now(timezone.utc).isoformat()
+                if session_dt is not None:
+                    mem_metadata["created_at"] = session_dt.isoformat()
+                else:
+                    mem_metadata["created_at"] = datetime.now(timezone.utc).isoformat()
             mem_metadata["updated_at"] = mem_metadata["created_at"]
             if mem.get("attributed_to"):
                 mem_metadata["attributed_to"] = mem["attributed_to"]
