@@ -149,6 +149,20 @@ async def lifespan(app: FastAPI):
         config.get("embedder", {}).get("provider", "?"),
         config.get("vector_store", {}).get("provider", "?"),
     )
+
+    # Operation recorder (experiments/tracing/mem0_trace.py), opt-in via MEM0_TRACE=1.
+    # Off by default; a failure here must never stop the server from serving untraced.
+    if os.getenv("MEM0_TRACE", "0").strip().lower() in ("1", "true", "yes", "on"):
+        try:
+            import sys
+            sys.path.insert(0, os.getenv("MEM0_TRACE_PKG", "/app/tracing"))
+            import mem0_trace
+            ok = mem0_trace.install(memory_instance)
+            logger.info("MEM0_TRACE on: recorder installed=%s path=%s",
+                        ok, mem0_trace.stats().get("path"))
+        except Exception:
+            logger.exception("MEM0_TRACE requested but recorder failed to install (serving untraced)")
+
     yield
     logger.info("Shutting down")
 

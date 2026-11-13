@@ -41,6 +41,12 @@ mkdir -p "$RUN_DIR"
 echo "Run folder: $RUN_DIR"
 echo "Mem0 code:  $REF = $MEM0_SHA"
 
+# Operation recorder (experiments/tracing). Off unless MEM0_TRACE=1. The server writes
+# mem0_trace.jsonl into the run folder (bind-mounted as /app/trace); run.py writes
+# eval_trace.jsonl there too. When off, nothing is written and behaviour is unchanged.
+export MEM0_TRACE="${MEM0_TRACE:-0}"
+export MEM0_TRACE_DIR="$RUN_DIR"
+
 # 2. Point the Mem0 server at that commit, rebuild, start
 sed -i -E "s|^mem0ai @ git\+.*|mem0ai @ git+${FORK_URL}@${MEM0_SHA}|" "$REQ"
 cd "$MB"
@@ -70,6 +76,7 @@ cat > "$RUN_DIR/manifest.json" <<EOF
   "answerer_model": "$ANSWERER_MODEL",
   "judge_model": "$JUDGE_MODEL",
   "forward_timestamp": "${MEM0_FORWARD_TIMESTAMP:-0}",
+  "trace_enabled": "${MEM0_TRACE:-0}",
   "extra_args": "$*",
   "started_utc": "$START"
 }
@@ -112,6 +119,46 @@ for cut in ("top_200", "top_50", "top_20", "top_10"):
         if cut == "top_200":
             for cat, c in m[cut]["by_category"].items():
                 print(f"    {cat:<14} {c['accuracy']:.1f}  ({c['correct']}/{c['total']})")
+EOF
+
+# 7. Finalize traces: count events + recorder errors, gzip, record sizes in manifest.json
+"$PY" - "$RUN_DIR" <<'EOF'
+import gzip, json, os, sys
+run = sys.argv[1]
+manifest_path = os.path.join(run, "manifest.json")
+try:
+    manifest = json.load(open(manifest_path))
+except Exception:
+    manifest = {}
+trace = {}
+for name in ("mem0_trace.jsonl", "eval_trace.jsonl"):
+    path = os.path.join(run, name)
+    info = {"present": False}
+    if os.path.exists(path):
+        events = errors = 0
+        with open(path, "rb") as fh:
+            for line in fh:
+                events += 1
+                if b'"component": "recorder"' in line and b'"operation": "error"' in line:
+                    errors += 1
+        raw_bytes = os.path.getsize(path)
+        gz_path = path + ".gz"
+        try:
+            with open(path, "rb") as fi, gzip.open(gz_path, "wb") as fo:
+                fo.writelines(fi)
+            os.remove(path)
+            gz_bytes = os.path.getsize(gz_path)
+            fname = name + ".gz"
+        except Exception as e:
+            gz_bytes = None
+            fname = name
+            print(f"WARNING: could not gzip {name}: {e}", file=sys.stderr)
+        info = {"present": True, "file": fname, "events": events,
+                "recorder_errors": errors, "raw_bytes": raw_bytes, "gz_bytes": gz_bytes}
+    trace[name.split(".")[0]] = info
+manifest["trace"] = {"enabled": os.getenv("MEM0_TRACE", "0"), **trace}
+json.dump(manifest, open(manifest_path, "w"), indent=2)
+print("Trace: " + json.dumps(manifest["trace"]))
 EOF
 
 echo

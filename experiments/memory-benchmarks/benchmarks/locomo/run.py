@@ -838,6 +838,21 @@ async def async_main() -> None:
     shutdown = GracefulShutdown()
     checkpoint = Checkpoint(output_dir)
 
+    # Eval-side operation recorder (experiments/tracing/eval_trace.py), opt-in via MEM0_TRACE=1.
+    # Wraps the benchmark's own client/answerer/judge calls at runtime; off by default.
+    if os.getenv("MEM0_TRACE", "0").strip().lower() in ("1", "true", "yes", "on"):
+        try:
+            import sys as _sys
+            _sys.path.insert(0, os.getenv(
+                "MEM0_EVAL_TRACE_PKG",
+                os.path.join(os.path.dirname(__file__), "..", "..", "..", "tracing")))
+            import eval_trace
+            eval_trace.install(args.output_dir, mem0_client=mem0, answerer=answerer,
+                               judge_llm=judge_llm, run_module=_sys.modules[__name__])
+            logger.info("MEM0_TRACE on: eval recorder installed -> %s", eval_trace.stats().get("path"))
+        except Exception:
+            logger.exception("MEM0_TRACE requested but eval recorder failed to install (continuing)")
+
     all_evaluations: list[dict] = []
 
     if args.resume:
