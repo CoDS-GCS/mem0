@@ -1,2 +1,3 @@
 | 2026-11-10 | 2026-11-10_1447-locomo-conv0-default | v2.2.1 (94c3fe9) | gpt-4o-mini / text-embedding-3-small / gpt-5 / gpt-5 | 71.7 | baseline; temporal 16.2 (6/37), others 89.6 (103/115) |
 | 2026-11-10 | 2026-11-10_2231-locomo-conv0-eb0 | code/entity-boost-0 (c91d878) | gpt-4o-mini / text-embedding-3-small / gpt-5 / gpt-5 | 71.1 | ENTITY_BOOST_WEIGHT = 0 |
+| 2026-11-14 | [2026-11-14_0302-locomo-conv0-session-date](runs/2026-11-14_0302-locomo-conv0-session-date/README.md) | code/session-date (46c6add7) | gpt-4o-mini / text-embedding-3-small / gpt-5 / gpt-5 | 85.5 | session date forwarded (MEM0_FORWARD_TIMESTAMP=1) + recorder on (MEM0_TRACE=1); temporal 97.3 (36/37), others 81.7 (94/115) |

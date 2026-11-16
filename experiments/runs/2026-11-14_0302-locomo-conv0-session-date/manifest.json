@@ -1,0 +1,36 @@
+{
+  "run_name": "session-date",
+  "benchmark": "locomo",
+  "conversations": "0",
+  "mem0_ref": "code/session-date",
+  "mem0_commit": "46c6add7633cc4a4a04f9120b675c00cc1114a74",
+  "experiments_commit": "971aff77d72986f6af3a9aeb9be1fd46e2080f11",
+  "benchmarks_upstream_commit": "4b61c5d31b9c668a12b4f5e78064248a02c82d2b",
+  "extraction_llm": "gpt-4o-mini",
+  "embedder": "text-embedding-3-small",
+  "answerer_model": "gpt-5",
+  "judge_model": "gpt-5",
+  "forward_timestamp": "1",
+  "trace_enabled": "1",
+  "extra_args": "",
+  "started_utc": "2026-11-14T03:02:35Z",
+  "trace": {
+    "enabled": "1",
+    "mem0_trace": {
+      "present": true,
+      "file": "mem0_trace.jsonl.gz",
+      "events": 10091,
+      "recorder_errors": 0,
+      "raw_bytes": 80805123,
+      "gz_bytes": 25482830
+    },
+    "eval_trace": {
+      "present": true,
+      "file": "eval_trace.jsonl.gz",
+      "events": 1788,
+      "recorder_errors": 0,
+      "raw_bytes": 14763792,
+      "gz_bytes": 2678906
+    }
+  }
+}
