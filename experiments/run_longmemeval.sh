@@ -260,6 +260,11 @@ sed -i -E "s|^mem0ai @ git\+.*|mem0ai @ git+${FORK_URL}@${MEM0_SHA}|" "$REQ"
 cd "$MB"
 docker compose build mem0
 docker compose up -d --force-recreate mem0 qdrant
+# Each rebuild orphans the previous mem0 image as a dangling <none> layer; reclaim it now
+# so / doesn't fill up over successive runs. Dangling-only + build cache — never touches
+# the new in-use image, qdrant, or any other container.
+docker image prune -f >/dev/null 2>&1 || true
+docker builder prune -f >/dev/null 2>&1 || true
 echo -n "Waiting for Mem0 server"
 for _ in $(seq 1 90); do
   curl -sf "$MEM0_HOST/health" >/dev/null 2>&1 && break
