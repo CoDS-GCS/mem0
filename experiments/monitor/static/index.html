@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LongMemEval monitor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <a href="#/" class="brand">LongMemEval <span class="dim">monitor</span></a>
+    <nav id="crumbs" class="crumbs"></nav>
+  </header>
+  <main id="app"><div class="loading">loading…</div></main>
+  <footer class="dim">
+    read-only dataset explorer · add-unit = one <code>mem0.add()</code> = one non-empty
+    (user, assistant) turn-pair · session dates reach Mem0 only with
+    <code>MEM0_FORWARD_TIMESTAMP=1</code> + a session-date build (plain v2.2.1 drops them)
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>
