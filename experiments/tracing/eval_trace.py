@@ -296,6 +296,178 @@ def install(output_dir, *, mem0_client, answerer, judge_llm, run_module=None) ->
     return True
 
 
+# ---------------------------------------------------------------------------
+# LongMemEval install (no run.py edit; activated by experiments/tracing/lme_entry.py)
+# ---------------------------------------------------------------------------
+#
+# LoCoMo activates the recorder from inside locomo/run.py. LongMemEval's run.py is
+# upstream and must not be edited, so for LongMemEval the hook is applied from the
+# outside by lme_entry.py: it wraps the module-level process_question_* functions, which
+# receive the live mem0/answerer/judge instances as kwargs. On the first question those
+# instances are wrapped lazily (same observe-only contract as install() above). The
+# answerer-mode judge calls LLMClient.judge_yes_no -> self.generate, so wrapping each
+# instance's generate() with a role label captures both the answer and the judge prompt.
+
+_LME = {"instances": False}
+
+
+def _wrap_mem0_client(mem0_client) -> None:
+    try:
+        _orig_add = mem0_client.add
+
+        @functools.wraps(_orig_add)
+        async def cadd(messages, user_id, *a, **k):
+            t0 = time.perf_counter()
+            result = await _orig_add(messages, user_id, *a, **k)
+            dur = (time.perf_counter() - t0) * 1000
+            try:
+                res = (result or {}).get("results", []) if isinstance(result, dict) else (result or [])
+                _emit("mem0_client", "add",
+                      inputs={"messages_sha1": _sha1_messages(messages),
+                              "n_messages": len(messages) if messages else 0,
+                              "timestamp": k.get("timestamp", a[1] if len(a) > 1 else None)},
+                      outputs={"n_results": len(res)},
+                      duration_ms=dur, request_id=f"add_{_sha1_messages(messages)[:12]}", user_id=user_id)
+            except Exception:
+                _count_error("lme.mem0_client.add")
+            return result
+        mem0_client.add = cadd
+    except Exception:
+        _count_error("patch.lme.mem0_client.add")
+
+    try:
+        _orig_search = mem0_client.search
+
+        @functools.wraps(_orig_search)
+        async def csearch(query, user_id, *a, **k):
+            t0 = time.perf_counter()
+            result = await _orig_search(query, user_id, *a, **k)
+            dur = (time.perf_counter() - t0) * 1000
+            try:
+                q = _qctx() or {}
+                _emit("mem0_client", "search",
+                      inputs={"query": query, "top_k": k.get("top_k", a[0] if a else None)},
+                      outputs={"n_results": len(result) if result else 0,
+                               "ids": [r.get("id") for r in (result or [])]},
+                      duration_ms=dur, request_id=q.get("question_id"), user_id=user_id)
+            except Exception:
+                _count_error("lme.mem0_client.search")
+            return result
+        mem0_client.search = csearch
+    except Exception:
+        _count_error("patch.lme.mem0_client.search")
+
+
+def _wrap_llm_generate(inst, component) -> None:
+    """Wrap an LLMClient.generate (answerer or judge) + its inner client token usage."""
+    try:
+        _orig = inst.generate
+
+        @functools.wraps(_orig)
+        async def gen(system, user, *a, **k):
+            token = _USAGE.set([])
+            t0 = time.perf_counter()
+            out = None
+            try:
+                out = await _orig(system, user, *a, **k)
+                return out
+            finally:
+                dur = (time.perf_counter() - t0) * 1000
+                try:
+                    q = _qctx() or {}
+                    key = "answer_i" if component == "answerer" else "judge_i"
+                    i = q.get(key, 0)
+                    cutoffs = q.get("cutoffs") or []
+                    cutoff = cutoffs[i] if i < len(cutoffs) else None
+                    if q:
+                        q[key] = i + 1
+                    sink = _USAGE.get() or []
+                    _emit(component, "generate",
+                          inputs={"question_id": q.get("question_id"), "cutoff": cutoff,
+                                  "system": system, "user": user},
+                          outputs={"answer": out, "token_usage": sink[-1] if sink else None},
+                          duration_ms=dur, request_id=q.get("question_id"), user_id=q.get("user_id"))
+                except Exception:
+                    _count_error(f"lme.{component}.generate")
+                _USAGE.reset(token)
+        inst.generate = gen
+    except Exception:
+        _count_error(f"patch.lme.{component}.generate")
+
+    try:
+        comp = inst._client.chat.completions
+        _orig_create = comp.create
+
+        @functools.wraps(_orig_create)
+        async def create(*a, **k):
+            resp = await _orig_create(*a, **k)
+            try:
+                sink = _USAGE.get()
+                if sink is not None:
+                    sink.append(_usage(resp))
+            except Exception:
+                _count_error(f"lme.{component}.usage")
+            return resp
+        comp.create = create
+    except Exception:
+        _count_error(f"patch.lme.{component}.client")
+
+
+def _ensure_lme_instances(mem0_client, answerer, judge_llm) -> None:
+    if _LME["instances"]:
+        return
+    _LME["instances"] = True
+    if mem0_client is not None:
+        _wrap_mem0_client(mem0_client)
+    if answerer is not None:
+        _wrap_llm_generate(answerer, "answerer")
+    if judge_llm is not None and judge_llm is not answerer:
+        _wrap_llm_generate(judge_llm, "judge")
+
+
+def install_longmemeval(output_dir, run_module) -> bool:
+    """LongMemEval eval recorder. Activated by lme_entry.py, never by run.py.
+
+    Wraps ``process_question_answerer`` / ``process_question_retrieval`` to set the
+    per-question context and lazily wrap the mem0 client + answerer + judge instances
+    they receive as kwargs. Observe-only; same contract as ``install``.
+    """
+    if _STATE["installed"]:
+        return True
+    try:
+        _open_writer(output_dir)
+    except Exception:
+        _count_error("open_writer.lme")
+        return False
+
+    for name in ("process_question_answerer", "process_question_retrieval"):
+        orig = getattr(run_module, name, None)
+        if orig is None:
+            continue
+
+        def _make(_orig):
+            @functools.wraps(_orig)
+            async def wrap(*args, **kwargs):
+                try:
+                    q = kwargs.get("question") or (args[0] if args else {}) or {}
+                    _ensure_lme_instances(kwargs.get("mem0"), kwargs.get("answerer"),
+                                          kwargs.get("judge_llm"))
+                    _QCTX.set({"question_id": q.get("question_id"),
+                               "cutoffs": list(kwargs.get("cutoffs") or []),
+                               "answer_i": 0, "judge_i": 0,
+                               "user_id": kwargs.get("user_id"),
+                               "category": q.get("question_type")})
+                except Exception:
+                    _count_error("lme.process.ctx")
+                return await _orig(*args, **kwargs)
+            return wrap
+        setattr(run_module, name, _make(orig))
+
+    _STATE["installed"] = True
+    _emit("recorder", "installed", outputs={"path": _STATE["path"], "mode": "longmemeval"})
+    return True
+
+
 def stats() -> dict:
     return {"path": _STATE["path"], "events": _STATE["events"], "errors": _STATE["errors"],
             "installed": _STATE["installed"]}

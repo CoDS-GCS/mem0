@@ -103,3 +103,37 @@ tr.click:hover td { background: #f9fafb; }
               color: var(--dim); display: block; margin-bottom: .15rem; }
 .turn .more { color: var(--blue); cursor: pointer; font-weight: 600; }
 .clip { display: inline; }
+
+/* run view */
+.navlink { font-size: .9rem; color: var(--dim); }
+.navlink:hover { color: var(--blue); }
+.manifest .kpi { gap: .2rem .9rem; font-size: .82rem; }
+.pill { display: inline-block; font-size: .72rem; font-weight: 700; padding: .05rem .45rem; border-radius: .8rem; }
+.pill.pass { background: #dcfce7; color: #166534; }
+.pill.fail { background: #fee2e2; color: #991b1b; }
+.pill.dim { background: #f1f1f3; color: #9ca3af; }
+.pill.live { background: #fee2e2; color: #b91c1c; animation: blink 1.4s infinite; }
+@keyframes blink { 50% { opacity: .45; } }
+.bar { position: relative; background: #eef0f3; border-radius: .4rem; height: 18px; min-width: 120px; overflow: hidden; }
+.bar .fill { background: #93c5fd; height: 100%; }
+.bar .barlab { position: absolute; left: 6px; top: 0; font-size: .72rem; line-height: 18px; color: #1e3a5f; }
+.stage { font-size: .78rem; padding: .05rem .4rem; border-radius: .3rem; background: #eef2ff; color: #3730a3; white-space: nowrap; }
+.stage.s-queued { background: #f1f1f3; color: #9ca3af; }
+.stage.s-adding { background: #fef9c3; color: #854d0e; }
+.stage.s-searching { background: #e0f2fe; color: #075985; }
+.stage.s-answering { background: #ede9fe; color: #5b21b6; }
+.stage.s-judging { background: #fae8ff; color: #86198f; }
+.stage.s-judged { background: #dcfce7; color: #166534; }
+tr.total td { border-top: 2px solid var(--line); }
+.addunit { background: #fff; border: 1px solid var(--line); border-radius: .5rem; margin: .4rem 0; padding: .3rem .7rem; }
+.addunit > summary { cursor: pointer; font-size: .85rem; font-weight: 600; }
+.addunit .pcol { margin: .5rem 0; }
+.addunit .pcol > b { font-size: .75rem; color: var(--dim); text-transform: uppercase; letter-spacing: .03em; }
+.pre { white-space: pre-wrap; word-wrap: break-word; background: #f8fafc; border: 1px solid #eef0f3;
+       border-radius: .4rem; padding: .5rem .6rem; margin: .2rem 0 0; font-size: .82rem;
+       font-family: ui-monospace, Menlo, Consolas, monospace; max-height: 340px; overflow: auto; }
+.mems { margin: .3rem 0; padding-left: 1.1rem; font-size: .85rem; }
+table.cand { font-size: .82rem; }
+table.cand td.num, table.cand th.num { text-align: right; font-variant-numeric: tabular-nums; }
+tr.evrow td { background: var(--amber-bg); }
+.pre .more { color: var(--blue); cursor: pointer; font-weight: 600; }

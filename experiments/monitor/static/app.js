@@ -23,16 +23,24 @@ function crumbs(parts) {
 const CLIP = 600; // collapse turns longer than this
 
 // ---- router ---------------------------------------------------------------
+let _timer = null;
+function clearTimer() { if (_timer) { clearInterval(_timer); _timer = null; } }
+
 async function route() {
+  clearTimer();
   const h = location.hash.replace(/^#\/?/, "");
-  const [kind, ...rest] = h.split("/");
-  const arg = rest.map(decodeURIComponent).join("/");
+  const [kind, ...rest] = h.split("/").map(decodeURIComponent);
+  const arg = rest.join("/");
   app().innerHTML = `<div class="loading">loading…</div>`;
   try {
     if (kind === "type") await renderType(arg);
     else if (kind === "q") await renderQuestion(arg);
     else if (kind === "s") await renderSession(arg);
-    else await renderHome();
+    else if (kind === "runs") await renderRuns();
+    else if (kind === "run") {
+      if (rest.length >= 3 && rest[1] === "q") await renderRunQuestion(rest[0], rest.slice(2).join("/"));
+      else await renderRunBoard(rest[0]);
+    } else await renderHome();
   } catch (e) {
     app().innerHTML = `<div class="card"><b>Error.</b> ${esc(e.message)}</div>`;
   }
@@ -312,7 +320,200 @@ async function renderSession(sid) {
       </tr>`).join("")}</tbody></table>`;
 }
 
+// ===========================================================================
+// RUN VIEW (tracer)
+// ===========================================================================
+
+function verdictPill(v) {
+  if (!v) return `<span class="pill dim">—</span>`;
+  const up = String(v).toUpperCase();
+  const cls = up === "PASS" ? "pass" : up === "FAIL" ? "fail" : "dim";
+  return `<span class="pill ${cls}">${esc(up)}</span>`;
+}
+
+async function renderRuns() {
+  crumbs([{ label: "home", href: "#/" }, { label: "runs" }]);
+  const d = await api("/api/runs");
+  if (!d.runs.length) {
+    app().innerHTML = `<h1>Runs</h1><div class="card dim">No LongMemEval runs yet under
+      <span class="mono">experiments/runs/</span>. Launch one with
+      <span class="mono">experiments/run_longmemeval.sh &lt;name&gt; 94c3fe9 --per-type 5 --seed 42</span>.</div>`;
+    return;
+  }
+  const rows = d.runs.map((r) => {
+    const m = r.manifest || {};
+    return `<tr class="click" onclick="location.hash='#/run/${encodeURIComponent(r.name)}'">
+      <td class="mono">${esc(r.name)}</td>
+      <td class="mono">${esc((m.mem0_commit || "").slice(0, 7))}</td>
+      <td>${esc(m.extraction_llm || "")}/${esc(m.answerer_model || "")}</td>
+      <td>${esc(m.sample_args || "")}</td>
+      <td>${esc((m.started_utc || "").replace("T", " ").replace("Z", ""))}</td>
+    </tr>`;
+  }).join("");
+  app().innerHTML = `<h1>Runs</h1>
+    <table><thead><tr><th>run</th><th>mem0</th><th>extraction/answerer</th><th>sample</th><th>started (UTC)</th></tr></thead>
+    <tbody>${rows}</tbody></table>`;
+}
+
+function manifestBar(m) {
+  const items = [
+    ["mem0", (m.mem0_ref || "") + " · " + (m.mem0_commit || "").slice(0, 7)],
+    ["extraction", m.extraction_llm], ["answerer", m.answerer_model], ["judge", m.judge_model],
+    ["effort", m.reasoning_effort], ["embedder", m.embedder],
+    ["top_k", m.top_k], ["cutoffs", m.top_k_cutoffs],
+    ["forward_ts", m.forward_timestamp], ["trace", m.trace_enabled], ["sample", m.sample_args],
+  ];
+  return `<div class="card manifest"><div class="kpi">` +
+    items.filter(([, v]) => v != null && v !== "").map(([k, v]) =>
+      `<span><span class="dim">${esc(k)}</span> <b>${esc(v)}</b></span>`).join("") +
+    `</div></div>`;
+}
+
+async function renderRunBoard(name) {
+  crumbs([{ label: "home", href: "#/" }, { label: "runs", href: "#/runs" }, { label: name }]);
+  async function draw() {
+    let d;
+    try { d = await api(`/api/run/${encodeURIComponent(name)}/board`); }
+    catch (e) { clearTimer(); app().innerHTML = `<div class="card">Error: ${esc(e.message)}</div>`; return; }
+    const cutoffHdr = d.cutoffs.map((c) => `<th>${esc(c.replace("top_", "J@"))}</th>`).join("");
+    const rows = d.rows.map((r) => {
+      const pct = r.adds_total ? Math.round(100 * r.adds_done / r.adds_total) : 0;
+      const bar = `<div class="bar"><div class="fill" style="width:${pct}%"></div>
+        <span class="barlab">${r.adds_done}/${r.adds_total}</span></div>`;
+      const verds = d.cutoffs.map((c) => `<td>${verdictPill(r.verdicts[c])}</td>`).join("");
+      return `<tr class="click" onclick="location.hash='#/run/${encodeURIComponent(name)}/q/${encodeURIComponent(r.question_id)}'">
+        <td class="mono">${esc(r.question_id)}${r.is_abstention ? ' <span class="badge abs">ABS</span>' : ""}</td>
+        <td>${esc(r.question_type || "")}</td>
+        <td><span class="stage s-${r.stage.split(" ")[0]}">${esc(r.stage)}</span></td>
+        <td>${bar}</td>${verds}
+        <td>${verdictPill(r.mem0_gpt5_verdict)}</td>
+      </tr>`;
+    }).join("");
+    const live = d.running
+      ? `<span class="pill live">● LIVE</span> auto-refresh 3s`
+      : `<span class="dim">idle</span>`;
+    app().innerHTML = `
+      <h1>${esc(name)} <span class="dim" style="font-size:.9rem">${d.counts.done}/${d.counts.total} judged · ${live}</span>
+        <a class="btn" href="#/runs" style="float:right">← runs</a>
+        <button class="btn" style="float:right;margin-right:.4rem" onclick="showSummary('${esc(name)}')">summary ▾</button></h1>
+      ${manifestBar(d.manifest)}
+      <div id="summaryHost"></div>
+      <table><thead><tr><th>question_id</th><th>type</th><th>stage</th><th>add progress</th>
+        ${cutoffHdr}<th>Mem0 gpt5<br><span class="dim">(top_200)</span></th></tr></thead>
+      <tbody>${rows}</tbody></table>`;
+    if (!d.running) clearTimer();
+  }
+  await draw();
+  clearTimer();
+  _timer = setInterval(draw, 3000);
+}
+
+async function showSummary(name) {
+  const host = document.getElementById("summaryHost");
+  if (!host) return;
+  if (host.dataset.open === "1") { host.innerHTML = ""; host.dataset.open = "0"; return; }
+  host.dataset.open = "1";
+  host.innerHTML = `<div class="card dim">loading summary…</div>`;
+  const d = await api(`/api/run/${encodeURIComponent(name)}/summary`);
+  const cuts = d.cutoffs;
+  const head = `<th>type</th>` + cuts.map((c) => `<th>ours ${esc(c.replace("top_", "@"))}</th>`).join("") +
+    `<th>Mem0 gpt5 @200</th>`;
+  const cell = (o) => (o && o.pct != null ? `${o.pct}% <span class="dim">(${o.n})</span>` : "—");
+  const body = d.by_type.map((t) =>
+    `<tr><td>${esc(t.type)}</td>` + cuts.map((c) => `<td>${cell(t.ours[c])}</td>`).join("") +
+    `<td>${cell(t.mem0_gpt5_top200)}</td></tr>`).join("");
+  const ov = `<tr class="total"><td><b>overall</b></td>` +
+    cuts.map((c) => `<td><b>${cell(d.overall.ours[c])}</b></td>`).join("") +
+    `<td><b>${cell(d.overall.mem0_gpt5_top200)}</b></td></tr>`;
+  host.innerHTML = `<div class="card"><h3>Summary — J per type per cutoff (ours vs Mem0 published gpt-5)</h3>
+    <table><thead><tr>${head}</tr></thead><tbody>${body}${ov}</tbody></table>
+    <p class="dim" style="margin:.5rem 0 0">${esc(d.note)}</p></div>`;
+}
+
+function panelText(s, max = 1500) {
+  const t = String(s ?? "");
+  if (!t) return `<span class="dim">—</span>`;
+  if (t.length <= max) return `<pre class="pre">${esc(t)}</pre>`;
+  return `<pre class="pre">${esc(t.slice(0, max))}<span class="rest" hidden>${esc(t.slice(max))}</span>` +
+    `<span class="more" onclick="showMore(this)">… show more</span></pre>`;
+}
+
+async function renderRunQuestion(name, qid) {
+  crumbs([{ label: "home", href: "#/" }, { label: "runs", href: "#/runs" },
+          { label: name, href: `#/run/${encodeURIComponent(name)}` }, { label: qid }]);
+  const d = await api(`/api/run/${encodeURIComponent(name)}/question/${encodeURIComponent(qid)}`);
+
+  // ADD panel
+  const addRows = (d.add || []).map((a, i) => {
+    const sess = a.session_id
+      ? `<a href="#/s/${encodeURIComponent(a.session_id)}" title="dataset session">${esc(a.session_id)}</a>${a.is_evidence ? ' <span class="badge ev">EVIDENCE</span>' : ""}`
+      : `<span class="dim">unmatched</span>`;
+    const mems = (a.stored_memories || []).map((m) =>
+      `<li>[${esc(m.event || "")}] ${esc(m.memory || "")}</li>`).join("") || "<li class='dim'>none</li>";
+    const tu = a.token_usage ? `${a.token_usage.total_tokens} tok` : "—";
+    return `<details class="addunit"><summary>add #${i + 1} · ${sess}
+      · ts sent <span class="mono">${a.timestamp_sent ?? "—"}</span> · ${tu}
+      · ${a.add_latency_ms != null ? Math.round(a.add_latency_ms) + "ms" : "—"}</summary>
+      <div class="pcol"><b>messages sent</b>${panelText((a.messages || []).map((m) => m.role + ": " + m.content).join("\n\n"))}</div>
+      <div class="pcol"><b>extraction prompt</b>${panelText((a.extraction_prompt || []).map((m) => m.role + ": " + m.content).join("\n\n"))}</div>
+      <div class="pcol"><b>extraction response</b>${panelText(a.extraction_response)}</div>
+      <div class="pcol"><b>stored memories</b><ul class="mems">${mems}</ul></div>
+    </details>`;
+  }).join("") || `<div class="dim">No ADD events traced yet.</div>`;
+
+  // SEARCH panel
+  let searchHtml = `<div class="dim">No SEARCH trace yet.</div>`;
+  if (d.search) {
+    const s = d.search;
+    const evline = Object.entries(s.evidence_in || {}).map(([k, v]) =>
+      `${k.replace("top_", "≤")}: <b>${v}</b>`).join(" · ");
+    const cands = (s.candidates || []).slice(0, 200).map((c) =>
+      `<tr class="${c.is_evidence ? "evrow" : ""}">
+        <td class="num">${c.rank}</td>
+        <td><div class="cellclip">${esc(c.memory || c.id)}</div>${c.is_evidence ? ' <span class="badge ev">EV</span>' : ""}</td>
+        <td class="num">${c.final_score != null ? c.final_score.toFixed(3) : "—"}</td>
+        <td class="num">${c.semantic != null ? c.semantic.toFixed(3) : "—"}</td>
+        <td class="num">${c.bm25 != null ? c.bm25.toFixed(3) : "—"}</td>
+        <td class="num">${c.entity_boost != null ? c.entity_boost.toFixed(3) : "—"}</td>
+      </tr>`).join("");
+    searchHtml = `<p><b>query:</b> ${esc(s.query || "")}</p>
+      <p class="dim">${s.n_candidates} candidates · evidence at ranks [${(s.evidence_ranks || []).join(", ") || "none"}] · in cutoff — ${evline}</p>
+      <table class="cand"><thead><tr><th>#</th><th>memory</th><th>final</th><th>sem</th><th>bm25</th><th>entity</th></tr></thead>
+      <tbody>${cands}</tbody></table>`;
+  }
+
+  // ANSWER + JUDGE panels
+  const ans = (d.answer || []).map((a) =>
+    `<details class="addunit"><summary>${esc(a.cutoff)} — answer${a.token_usage ? " · " + a.token_usage.total_tokens + " tok" : ""}</summary>
+      <div class="pcol"><b>answer prompt (with question_date)</b>${panelText(a.prompt)}</div>
+      <div class="pcol"><b>generated answer</b>${panelText(a.answer, 4000)}</div></details>`).join("");
+  const jud = (d.judge || []).map((j) =>
+    `<tr><td>${esc(j.cutoff)}</td><td>${verdictPill(j.verdict)}</td>
+      <td><div class="cellclip">${esc(j.judge_raw || "")}</div></td></tr>`).join("");
+
+  app().innerHTML = `
+    <div class="card">
+      <h1 class="mono">${esc(qid)} ${d.is_abstention ? '<span class="badge abs">ABSTENTION</span>' : ""}
+        <span class="badge type">${esc(d.question_type || "")}</span></h1>
+      <div class="qmeta"><b>question_date:</b> <span class="mono">${esc(d.question_date || "")}</span>
+        · ${d.n_add_units} add-units · ${d.n_evidence} evidence session(s)</div>
+      <div style="margin:.3rem 0">${esc(d.question || "")}</div>
+      <div class="answer"><b>gold:</b> ${esc(d.gold_answer || "")}</div>
+      <div class="qmeta" style="margin-top:.4rem"><b>Mem0 published gpt-5 (${esc(d.mem0_gpt5.cutoff || "top_200")}):</b>
+        ${verdictPill(d.mem0_gpt5.verdict)} — ${esc(d.mem0_gpt5.answer || "—")}</div>
+    </div>
+
+    <h2>① ADD <span class="dim">— ${(d.add || []).length} add-units (click to expand)</span></h2>${addRows}
+    <h2>② SEARCH <span class="dim">— top-200 candidates, evidence highlighted</span></h2>
+      <div class="card">${searchHtml}</div>
+    <h2>③ ANSWER <span class="dim">— per cutoff</span></h2>${ans || '<div class="dim">No ANSWER trace yet.</div>'}
+    <h2>④ JUDGE <span class="dim">— per cutoff, vs gold &amp; Mem0 published</span></h2>
+      <div class="card"><table><thead><tr><th>cutoff</th><th>ours</th><th>judge raw</th></tr></thead>
+      <tbody>${jud || ""}</tbody></table></div>`;
+}
+
 // expose handlers used in inline onclick
 window.toggleSession = toggleSession;
 window.jumpTo = jumpTo;
 window.showMore = showMore;
+window.showSummary = showSummary;

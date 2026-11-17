@@ -26,6 +26,8 @@ from fastapi import FastAPI, HTTPException, Query
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
+import run_reader
+
 _HERE = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.environ.get("LME_DB", os.path.join(_HERE, "longmemeval.sqlite"))
 STATIC_DIR = os.path.join(_HERE, "static")
@@ -196,6 +198,34 @@ def session_detail(sid: str) -> JSONResponse:
     """, (sid,)))
     conn.close()
     return JSONResponse({"session": dict(meta), "used_by": used_by})
+
+
+# ---------------------------------------------------------------------------
+# Run view (tracer) — read-only over experiments/runs/
+# ---------------------------------------------------------------------------
+
+
+@app.get("/api/runs")
+def runs() -> JSONResponse:
+    return JSONResponse({"runs": run_reader.list_runs()})
+
+
+@app.get("/api/run/{name}/board")
+def run_board(name: str) -> JSONResponse:
+    try:
+        return JSONResponse(run_reader.board(name))
+    except FileNotFoundError:
+        raise HTTPException(404, f"Unknown run {name!r}")
+
+
+@app.get("/api/run/{name}/summary")
+def run_summary(name: str) -> JSONResponse:
+    return JSONResponse(run_reader.summary(name))
+
+
+@app.get("/api/run/{name}/question/{qid}")
+def run_question(name: str, qid: str) -> JSONResponse:
+    return JSONResponse(run_reader.question_pipeline(name, qid))
 
 
 # ---------------------------------------------------------------------------
