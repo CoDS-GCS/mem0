@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Download spaCy English model (used for entity extraction + lemmatization)
 RUN python -m spacy download en_core_web_sm
 
-# Allow "sagemaker" as an embedding provider in mem0's config validator
-RUN sed -i 's/"aws_bedrock",/"aws_bedrock", "sagemaker",/' \
+# Allow "sagemaker" and "tei_local" as embedding providers in mem0's config validator
+RUN sed -i 's/"aws_bedrock",/"aws_bedrock", "sagemaker", "tei_local",/' \
     /usr/local/lib/python3.12/site-packages/mem0/embeddings/configs.py
 
 # History directory

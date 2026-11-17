@@ -91,16 +91,30 @@ def _load_config() -> dict:
 
     # ----- Fallback: build config from environment variables -----
     logger.info("No config file found — building from environment variables")
+
+    embedder_provider = os.getenv("EMBEDDER_PROVIDER", "openai")
+    embedder_config: dict[str, Any] = {"model": os.getenv("EMBEDDER_MODEL", "text-embedding-3-small")}
+    # EMBEDDING_DIMS, when set, pins the embedding width (e.g. 768 for the Qwen 600M
+    # tei_local provider) so Qdrant creates a collection of the right size. Unset keeps
+    # mem0's default (1536 for text-embedding-3-small), so the default server is unchanged.
+    embed_dims_env = os.getenv("EMBEDDING_DIMS")
+    embed_dims = int(embed_dims_env) if embed_dims_env else None
+    if embed_dims:
+        embedder_config["embedding_dims"] = embed_dims
+
+    vector_store_config: dict[str, Any] = {
+        "host": os.getenv("QDRANT_HOST", "qdrant"),
+        "port": int(os.getenv("QDRANT_PORT", "6333")),
+        "collection_name": os.getenv("COLLECTION_NAME", "memories"),
+    }
+    # A 768-dim run must never reuse a 1536-dim collection. The caller passes a fresh,
+    # dims-specific COLLECTION_NAME; we also pin the vector width so create_col is correct.
+    if embed_dims:
+        vector_store_config["embedding_model_dims"] = embed_dims
+
     return {
         "version": "v1.1",
-        "vector_store": {
-            "provider": "qdrant",
-            "config": {
-                "host": os.getenv("QDRANT_HOST", "qdrant"),
-                "port": int(os.getenv("QDRANT_PORT", "6333")),
-                "collection_name": os.getenv("COLLECTION_NAME", "memories"),
-            },
-        },
+        "vector_store": {"provider": "qdrant", "config": vector_store_config},
         "llm": {
             "provider": os.getenv("LLM_PROVIDER", "openai"),
             "config": {
@@ -108,12 +122,7 @@ def _load_config() -> dict:
                 "temperature": 0.1,
             },
         },
-        "embedder": {
-            "provider": os.getenv("EMBEDDER_PROVIDER", "openai"),
-            "config": {
-                "model": os.getenv("EMBEDDER_MODEL", "text-embedding-3-small"),
-            },
-        },
+        "embedder": {"provider": embedder_provider, "config": embedder_config},
         "history_db_path": os.getenv("HISTORY_DB_PATH", "/app/history/history.db"),
     }
 
@@ -128,6 +137,10 @@ from mem0.utils.factory import EmbedderFactory
 
 # Register SageMaker embedder (allowlist patched in Dockerfile via sed)
 EmbedderFactory.provider_to_class["sagemaker"] = "sagemaker_embedder.SageMakerEmbedding"
+
+# Register the local TEI embedder (Qwen 600M served on the host GPU). Only takes effect
+# when EMBEDDER_PROVIDER=tei_local; the default server is unchanged. (allowlist sed'd too)
+EmbedderFactory.provider_to_class["tei_local"] = "tei_local_embedder.TEILocalEmbedding"
 
 # ---------------------------------------------------------------------------
 # App lifespan — initialise Memory once at startup

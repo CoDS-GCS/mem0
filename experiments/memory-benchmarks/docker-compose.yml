@@ -22,6 +22,12 @@ services:
       - COLLECTION_NAME=${COLLECTION_NAME:-memories}
       - LLM_MODEL=${LLM_MODEL:-gpt-4o-mini}
       - EMBEDDER_MODEL=${EMBEDDER_MODEL:-text-embedding-3-small}
+      # Embedder provider + dims. Default unset = OpenAI text-embedding-3-small (1536).
+      # EMBEDDER_PROVIDER=tei_local + EMBEDDING_DIMS=768 selects the local Qwen 600M
+      # service, reached via host-gateway (TEI_LOCAL_URL). Default server is unchanged.
+      - EMBEDDER_PROVIDER=${EMBEDDER_PROVIDER:-openai}
+      - EMBEDDING_DIMS=${EMBEDDING_DIMS:-}
+      - TEI_LOCAL_URL=${TEI_LOCAL_URL:-http://host.docker.internal:8099/embed}
       # Forward the per-session `timestamp` to Memory.add() (needs a mem0 build that
       # accepts it, e.g. code/session-date). Default 0 = off: reruns of Run A/B behave
       # exactly as before (v2.2.1 rejects the argument, so it is never passed).
@@ -39,6 +45,10 @@ services:
       # Custom config for advanced setups (Azure, Ollama, SageMaker, etc.)
       # Uncomment and point to your config file:
       # - ./mem0-config.yaml:/app/config.yaml:ro
+    # Reach the host's local embedding service (experiments/embedding_service) from inside
+    # the container. Harmless when EMBEDDER_PROVIDER is the default OpenAI.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]

@@ -359,14 +359,23 @@ function manifestBar(m) {
   const items = [
     ["mem0", (m.mem0_ref || "") + " · " + (m.mem0_commit || "").slice(0, 7)],
     ["extraction", m.extraction_llm], ["answerer", m.answerer_model], ["judge", m.judge_model],
-    ["effort", m.reasoning_effort], ["embedder", m.embedder],
+    ["effort", m.reasoning_effort], ["embedder", m.embedder_label || m.embedder],
     ["top_k", m.top_k], ["cutoffs", m.top_k_cutoffs],
     ["forward_ts", m.forward_timestamp], ["trace", m.trace_enabled], ["sample", m.sample_args],
   ];
   return `<div class="card manifest"><div class="kpi">` +
     items.filter(([, v]) => v != null && v !== "").map(([k, v]) =>
       `<span><span class="dim">${esc(k)}</span> <b>${esc(v)}</b></span>`).join("") +
-    `</div></div>`;
+    `</div>${embedderCompare(m)}</div>`;
+}
+
+// Ours (from our manifest) vs Mem0's published OSS embedder.
+const MEM0_PUBLISHED_EMBEDDER = "Qwen 600M via SageMaker (README L242)";
+function embedderCompare(m) {
+  const ours = m.embedder_label || m.embedder || "(unknown)";
+  return `<div class="embcmp"><span class="dim">embedder —</span>
+    <b>ours:</b> ${esc(ours)} &nbsp;·&nbsp;
+    <b>Mem0 published:</b> ${esc(MEM0_PUBLISHED_EMBEDDER)}</div>`;
 }
 
 async function renderRunBoard(name) {

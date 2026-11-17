@@ -47,13 +47,44 @@ EXTRACTION_MODEL="${EXTRACTION_MODEL:-gpt-5}"
 ANSWERER_MODEL="${ANSWERER_MODEL:-gpt-5}"
 JUDGE_MODEL="${JUDGE_MODEL:-gpt-5}"
 PROVIDER="${PROVIDER:-openai}"
-EMBEDDER_MODEL="${EMBEDDER_MODEL:-text-embedding-3-small}"
 TOP_K="${TOP_K:-200}"
 CUTOFFS="${CUTOFFS:-200,50,20,10}"
 export LLM_MODEL="$EXTRACTION_MODEL"
-export EMBEDDER_MODEL
 export MEM0_FORWARD_TIMESTAMP="${MEM0_FORWARD_TIMESTAMP:-0}"
 export MEM0_TRACE="${MEM0_TRACE:-1}"
+
+# Embedder. Default EMBEDDER=qwen matches Mem0's published OSS table ("Qwen 600M via
+# SageMaker", README L242): the same model served locally with a TEI-compatible API.
+# EMBEDDER=openai-3-small reverts to the repo default. The embedding service must be up
+# (experiments/embedding_service/run_embedding_service.sh, kept in tmux) for the qwen path.
+EMBEDDER="${EMBEDDER:-qwen}"
+EMBED_HEALTH_URL="${EMBED_HEALTH_URL:-http://localhost:8099/health}"
+EMBED_INFO_URL="${EMBED_INFO_URL:-http://localhost:8099/info}"
+if [ "$EMBEDDER" = "openai-3-small" ] || [ "$EMBEDDER" = "openai" ]; then
+  export EMBEDDER_PROVIDER="openai"
+  export EMBEDDER_MODEL="text-embedding-3-small"
+  EMBED_DIMS="1536"
+  unset EMBEDDING_DIMS || true
+  EMBEDDER_LABEL="OpenAI text-embedding-3-small (1536)"
+  EMBEDDER_REVISION="n/a"; EMBEDDER_SERVING="OpenAI API"; EMBEDDER_DEVICE="n/a"
+  EMBEDDER_NORMALIZE="api-default"; EMBEDDER_INSTRUCTION="none"
+else
+  # Qwen 600M via the local TEI-compatible service.
+  export EMBEDDER_PROVIDER="tei_local"
+  export EMBEDDER_MODEL="${QWEN_MODEL_ID:-Qwen/Qwen3-Embedding-0.6B}"
+  # 768 dims by default — matches SageMakerEmbedding's `embedding_dims or 768` (:43);
+  # README does not state dims. Configurable via EMBEDDING_DIMS.
+  EMBED_DIMS="${EMBEDDING_DIMS:-768}"
+  export EMBEDDING_DIMS="$EMBED_DIMS"
+  export TEI_LOCAL_URL="${TEI_LOCAL_URL:-http://host.docker.internal:8099/embed}"
+  EMBEDDER_REVISION="${QWEN_MODEL_REVISION:-97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3}"
+  EMBEDDER_LABEL="$EMBEDDER_MODEL @ $EMBEDDER_REVISION (${EMBED_DIMS}d) via local TEI-compatible service"
+  EMBEDDER_SERVING="host GPU service serve_qwen_tei.py (not Docker TEI: no nvidia Docker runtime + full / disk)"
+  EMBEDDER_DEVICE="GPU"; EMBEDDER_NORMALIZE="l2_full_vector then [:${EMBED_DIMS}] (no renorm, as SageMaker)"
+  EMBEDDER_INSTRUCTION="none (add and search embed identically)"
+fi
+# A ${EMBED_DIMS}-dim run must never reuse a 1536-dim collection: fresh, dims-tagged name.
+export COLLECTION_NAME="${COLLECTION_NAME:-${NAME}_q${EMBED_DIMS}}"
 
 # gpt-5 is a reasoning model: Mem0 (>=94c3fe9) auto-omits temperature/max_tokens and sends
 # no reasoning_effort, so OpenAI uses its default effort. Record that for the manifest.
@@ -104,6 +135,15 @@ manifest_json() {
   "provider": "$PROVIDER",
   "reasoning_effort": "$REASONING_EFFORT",
   "embedder": "$EMBEDDER_MODEL",
+  "embedder_provider": "$EMBEDDER_PROVIDER",
+  "embedder_label": "$EMBEDDER_LABEL",
+  "embedder_revision": "$EMBEDDER_REVISION",
+  "embedding_dims": "$EMBED_DIMS",
+  "embedder_serving": "$EMBEDDER_SERVING",
+  "embedder_device": "$EMBEDDER_DEVICE",
+  "embedder_normalize": "$EMBEDDER_NORMALIZE",
+  "embedder_instruction": "$EMBEDDER_INSTRUCTION",
+  "collection_name": "$COLLECTION_NAME",
   "top_k": "$TOP_K",
   "top_k_cutoffs": "$CUTOFFS",
   "forward_timestamp": "$MEM0_FORWARD_TIMESTAMP",
@@ -115,6 +155,25 @@ manifest_json() {
   "started_utc": "__START__"
 }
 EOF
+}
+
+# Docker stores images on / (per `docker info`), which is nearly full here. The wrapper
+# rebuilds the mem0 image every run, so check headroom and propose a SAFE prune (dangling
+# images + build cache only — never in-use images or other containers). Returns 1 if tight.
+check_docker_disk() {
+  local avail_kb avail_gb
+  avail_kb=$(df -Pk /var/lib/docker 2>/dev/null | awk 'NR==2{print $4}')
+  avail_gb=$(awk "BEGIN{printf \"%.2f\", ${avail_kb:-0}/1048576}")
+  echo "docker data-root /var/lib/docker: ${avail_gb} GB free on its filesystem"
+  docker system df 2>/dev/null | sed 's/^/  /' || true
+  if [ "${avail_kb:-0}" -lt 2097152 ]; then
+    echo "  WARNING: < 2 GB free where Docker stores images — 'docker compose build mem0' may fail."
+    echo "  Safe reclaim (does NOT touch in-use images or other containers):"
+    echo "      docker image prune -f      # dangling <none> images"
+    echo "      docker builder prune -f    # build cache"
+    return 1
+  fi
+  return 0
 }
 
 # -------------------------------------------------------------------------- dry-run
@@ -129,10 +188,28 @@ if [ "$DRY_RUN" = "1" ]; then
   echo "----- server pin (docker/mem0/requirements.txt) -----"
   echo "mem0ai @ git+${FORK_URL}@${MEM0_SHA}"
   echo
+  echo "----- embedder -----"
+  echo "provider:    $EMBEDDER_PROVIDER   dims: $EMBED_DIMS   collection: $COLLECTION_NAME"
+  echo "model:       $EMBEDDER_LABEL"
+  echo "serving:     $EMBEDDER_SERVING"
+  echo "normalize:   $EMBEDDER_NORMALIZE   instruction: $EMBEDDER_INSTRUCTION"
+  if [ "$EMBEDDER_PROVIDER" = "tei_local" ]; then
+    if curl -sf "$EMBED_HEALTH_URL" >/dev/null 2>&1; then
+      echo "health:      UP at $EMBED_HEALTH_URL"
+    else
+      echo "health:      DOWN at $EMBED_HEALTH_URL — a real run would refuse to start."
+      echo "             start it: experiments/embedding_service/run_embedding_service.sh (keep in tmux)"
+    fi
+  fi
+  echo
   echo "----- server rebuild + recreate -----"
-  echo "cd \"$MB\" && LLM_MODEL=$EXTRACTION_MODEL EMBEDDER_MODEL=$EMBEDDER_MODEL \\"
+  echo "cd \"$MB\" && LLM_MODEL=$EXTRACTION_MODEL EMBEDDER_PROVIDER=$EMBEDDER_PROVIDER EMBEDDING_DIMS=$EMBED_DIMS \\"
+  echo "  EMBEDDER_MODEL=$EMBEDDER_MODEL TEI_LOCAL_URL=${TEI_LOCAL_URL:-n/a} COLLECTION_NAME=$COLLECTION_NAME \\"
   echo "  MEM0_FORWARD_TIMESTAMP=$MEM0_FORWARD_TIMESTAMP MEM0_TRACE=$MEM0_TRACE MEM0_TRACE_DIR=\"$RUN_DIR\" \\"
   echo "  docker compose build mem0 && docker compose up -d --force-recreate mem0 qdrant"
+  echo
+  echo "----- docker disk (mem0 image is rebuilt every run) -----"
+  check_docker_disk || true
   echo
   echo "----- benchmark run -----"
   runner_cmd
@@ -148,6 +225,22 @@ fi
 [ -f "$DATASET" ] || { echo "ERROR: dataset missing: $DATASET (see experiments/data/README)." >&2; exit 1; }
 [ -x "$PY" ] || { echo "ERROR: benchmark venv python not found: $PY" >&2; exit 1; }
 
+# Embedder health gate: the qwen path needs the local service up (kept in tmux).
+if [ "$EMBEDDER_PROVIDER" = "tei_local" ]; then
+  if ! curl -sf "$EMBED_HEALTH_URL" >/dev/null 2>&1; then
+    echo "ERROR: embedding service DOWN at $EMBED_HEALTH_URL." >&2
+    echo "       Start it first and keep it in tmux: experiments/embedding_service/run_embedding_service.sh" >&2
+    exit 1
+  fi
+fi
+
+# Docker-disk gate: a mem0 rebuild needs headroom on /. If tight, stop and let the user
+# run the safe prune, rather than pruning automatically.
+if ! check_docker_disk; then
+  echo "ERROR: insufficient Docker disk for the mem0 rebuild. Run the safe prune above, then re-launch." >&2
+  exit 1
+fi
+
 # The Docker image installs Mem0 from the fork on GitHub, so the commit must be pushed.
 git -C "$EXP" fetch -q origin || true
 if ! git -C "$EXP" branch -r --contains "$MEM0_SHA" | grep -q "origin/"; then
@@ -160,6 +253,7 @@ export MEM0_TRACE_DIR="$RUN_DIR"
 echo "Run folder: $RUN_DIR"
 echo "Mem0 code:  $REF = $MEM0_SHA"
 echo "Models:     extraction=$EXTRACTION_MODEL answerer=$ANSWERER_MODEL judge=$JUDGE_MODEL (provider=$PROVIDER)"
+echo "Embedder:   $EMBEDDER_LABEL  [collection=$COLLECTION_NAME]"
 
 # Point the server at the pinned commit, rebuild, (re)create server + Qdrant.
 sed -i -E "s|^mem0ai @ git\+.*|mem0ai @ git+${FORK_URL}@${MEM0_SHA}|" "$REQ"
