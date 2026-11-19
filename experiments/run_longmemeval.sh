@@ -666,6 +666,68 @@ json.dump(manifest, open(mpath, "w"), indent=2)
 print("Trace: " + json.dumps(manifest["trace"]))
 EOF
 
+# -------------------------------------------------------------------------- memory store
+# What actually landed in the store: memories + entities in Qdrant (this run's collection),
+# and rows in the mem0_history volume created during the run. Also written to
+# <run>/store_facts.json so the README "Memory store" section is reproducible.
+echo
+echo "----- memory store (Qdrant + mem0_history volume) -----"
+QHOST="localhost"; QP="${QDRANT_PORT:-6333}"
+qcount() {  # points_count of a Qdrant collection, or "?" (never fails the run)
+  curl -sf "http://$QHOST:$QP/collections/$1" 2>/dev/null \
+    | python3 -c "import sys,json;print(json.load(sys.stdin)['result']['points_count'])" 2>/dev/null || echo "?"
+}
+MEM_N="$(qcount "$COLLECTION_NAME")"
+ENT_N="$(qcount "${COLLECTION_NAME}_entities")"
+# history + messages rows created during this run (shared volume; filter by start time)
+HIST_JSON="$(docker compose exec -T -e RUN_START="$START" mem0 python - <<'PYEOF' 2>/dev/null || echo '{}'
+import json, os, sqlite3
+from datetime import datetime
+start = datetime.fromisoformat(os.environ["RUN_START"].replace("Z", "+00:00"))
+db = sqlite3.connect("/app/history/history.db")
+def after(table):
+    n = 0
+    for (c,) in db.execute(f"SELECT created_at FROM {table}"):
+        try:
+            if c and datetime.fromisoformat(c) >= start:
+                n += 1
+        except Exception:
+            pass
+    return n
+print(json.dumps({"history_rows": after("history"), "messages_rows": after("messages")}))
+PYEOF
+)"
+HIST_N="$(printf '%s' "$HIST_JSON" | python3 -c "import sys,json;print(json.load(sys.stdin).get('history_rows','?'))" 2>/dev/null || echo "?")"
+MSG_N="$(printf '%s' "$HIST_JSON" | python3 -c "import sys,json;print(json.load(sys.stdin).get('messages_rows','?'))" 2>/dev/null || echo "?")"
+echo "Qdrant memories ($COLLECTION_NAME): $MEM_N"
+echo "Qdrant entities (${COLLECTION_NAME}_entities): $ENT_N"
+echo "history rows this run (mem0_history volume, history table): $HIST_N"
+echo "raw-message rows this run (messages table): $MSG_N"
+# store_facts.json for the README "Memory store" section (compare_lme_to_published.py reads it)
+RUN_DIR="$RUN_DIR" COLLECTION_NAME="$COLLECTION_NAME" MEM_N="$MEM_N" ENT_N="$ENT_N" \
+  HIST_N="$HIST_N" MSG_N="$MSG_N" python3 - <<'PYEOF' || true
+import json, os
+def num(s):
+    try: return int(s)
+    except Exception: return None
+col = os.environ["COLLECTION_NAME"]
+sf = {
+    "measured_utc": __import__("datetime").datetime.utcnow().strftime("%Y-%m-%d"),
+    "note": "Written by run_longmemeval.sh at end of run. Qdrant collection is this run's; "
+            "history/messages counts are rows in the shared mem0_history volume created during the run.",
+    "qdrant": {"memories_collection": col, "memories": num(os.environ["MEM_N"]),
+               "entities_collection": col + "_entities", "entities": num(os.environ["ENT_N"])},
+    "history_db": {"location": "mem0_history docker volume -> /app/history/history.db (SQLite)",
+                   "history_table_rows_this_run": num(os.environ["HIST_N"]),
+                   "history_row_meaning": "one row per stored memory (memory_id, new_memory=<fact text>, event); no raw conversation",
+                   "messages_table_rows_this_run": num(os.environ["MSG_N"]),
+                   "stores_raw_messages": "messages table holds raw user/assistant text but only a bounded recent buffer, NOT the full haystack"},
+}
+with open(os.path.join(os.environ["RUN_DIR"], "store_facts.json"), "w") as f:
+    json.dump(sf, f, indent=2)
+print("wrote " + os.path.join(os.environ["RUN_DIR"], "store_facts.json"))
+PYEOF
+
 echo
 # Monitor was started at run begin and is left running.
 ensure_monitor
