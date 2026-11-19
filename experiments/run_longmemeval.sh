@@ -554,6 +554,7 @@ tok = {"extraction": 0, "answerer": 0}
 n_extract = cutoffs = parse_fail = llm_err = 0
 add_req = add_resp = 0
 ex_models, ans_models = set(), set()
+add_zero = mem_stored = 0
 mp = _find("mem0_trace.jsonl")
 if mp:
     with _open(mp) as fh:
@@ -578,6 +579,10 @@ if mp:
                 add_req += 1
             elif comp == "entry" and op == "add.response":
                 add_resp += 1
+                res = (o.get("outputs") or {}).get("results") or []
+                mem_stored += len(res)
+                if not res:                                # add stored 0 memories
+                    add_zero += 1
 ep = _find("eval_trace.jsonl")
 if ep:
     with _open(ep) as fh:
@@ -618,6 +623,10 @@ print(f"Extraction calls: {n_extract}  |  cut off (finish_reason=length): {cutof
 print(f"Adds: calls={add_req}  ok={add_resp}  "
       f"failed (no response — rate-limit/quota/gateway): {add_failed}  |  "
       f"ingestion-reported failed pairs: {ing_failed}")
+_zpct = (100 * add_zero / add_resp) if add_resp else 0
+_mpa = (mem_stored / add_resp) if add_resp else 0
+print(f"Memories: stored={mem_stored:,}  per-add={_mpa:.2f}  |  "
+      f"adds that stored 0 memories: {add_zero} ({_zpct:.1f}% — a silent empty extraction shows up here)")
 print(f"Reported models: extraction={sorted(ex_models) or 'n/a (older trace)'}  "
       f"answerer={sorted(ans_models) or 'n/a'}")
 EOF

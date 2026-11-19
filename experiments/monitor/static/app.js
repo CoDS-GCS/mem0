@@ -491,7 +491,7 @@ async function renderRunBoard(name) {
         <td><span class="stage s-${r.stage.split(" ")[0]}">${esc(r.stage)}</span></td>
         <td>${bar}</td>
         <td class="num">${kmg(me.add_calls)}${fail}</td>
-        <td class="num">${kmg(me.mem_stored)}</td>
+        <td class="num" title="${me.mem_per_add != null ? me.mem_per_add + " per add" : ""}${me.add_zero ? " · " + me.add_zero + " adds stored 0" : ""}">${kmg(me.mem_stored)}${me.add_zero ? ` <span style="color:#c0392b">${me.add_zero}∅</span>` : ""}</td>
         <td class="num">${kmg(me.tok_in)}/${kmg(me.tok_out)}</td>
         <td class="num">${cutCell}</td>
         <td class="num">${me.search_ms != null ? Math.round(me.search_ms) + "ms" : "—"}</td>
@@ -505,7 +505,10 @@ async function renderRunBoard(name) {
       : `<span class="dim">idle</span>`;
     const ex = d.extraction || {};
     const exColor = ((ex.cutoffs || 0) + (ex.parse_fail || 0) + (ex.errors || 0)) > 0 ? "#c0392b" : "#2e7d32";
-    const exBadge = `<span style="font-size:.8rem;color:${exColor}" title="measured from the mem0 trace — cut off = finish_reason=length (hit max_tokens); parse✗ = output not valid JSON; err = LLM error">· measured: ${num(ex.add_calls)} add calls${ex.add_failed ? " (" + ex.add_failed + " no-resp)" : ""}, ${num(ex.mem_stored)} mems, ${kmg(ex.tok_in)}/${kmg(ex.tok_out)} tok in/out, ${ex.cutoffs || 0} cut off, ${ex.parse_fail || 0} parse✗, ${ex.errors || 0} err · wall ${ms2s(ex.wall_ms)}</span>`;
+    const zeroPct = ex.add_resp ? (100 * (ex.add_zero || 0) / ex.add_resp).toFixed(1) : "0.0";
+    const zeroColor = (ex.add_zero || 0) > 0 ? "#c0392b" : "#2e7d32";
+    const exBadge = `<span style="font-size:.8rem;color:${exColor}" title="measured from the mem0 trace — cut off = finish_reason=length (hit max_tokens); parse✗ = output not valid JSON; err = LLM error">· measured: ${num(ex.add_calls)} add calls${ex.add_failed ? " (" + ex.add_failed + " no-resp)" : ""}, ${num(ex.mem_stored)} mems (${ex.mem_per_add != null ? ex.mem_per_add : "—"}/add), ${kmg(ex.tok_in)}/${kmg(ex.tok_out)} tok in/out, ${ex.cutoffs || 0} cut off, ${ex.parse_fail || 0} parse✗, ${ex.errors || 0} err · wall ${ms2s(ex.wall_ms)}</span>
+      <span style="font-size:.8rem;color:${zeroColor}" title="adds whose extraction stored 0 memories — a silent empty extraction (e.g. wrong JSON key from a gateway model) spikes this">· ${num(ex.add_zero || 0)} zero-memory adds (${zeroPct}%)</span>`;
     const mr = d.models_reported || { extraction: [], answerer: [] };
     const modelsLine = `<p class="dim" style="margin:.3rem 0"><b>reported models</b> (what the API/gateway actually returned) —
       extraction: <b>${(mr.extraction.length ? mr.extraction : ["—"]).map(esc).join(", ")}</b> ·
@@ -558,14 +561,18 @@ async function showSummary(name) {
     `<td><b>${cell(d.overall.published_top200)}</b></td></tr>`;
 
   // Measured per type + total (from the trace, never projected).
-  const mhead = `<th>type</th><th>add calls</th><th>no-resp</th><th>mems stored</th>
+  const mhead = `<th>type</th><th>add calls</th><th>no-resp</th><th>mems stored</th><th>mem/add</th>
+    <th title="adds whose extraction stored 0 memories">0-mem adds</th>
     <th>tok in</th><th>tok out</th><th>tok total</th><th>cut off</th><th>parse✗</th><th>search avg</th>`;
   const mrow = (label, m, bold) => {
     const b = bold ? "<b>" : "", e = bold ? "</b>" : "";
     const bad = (n, red) => (red && n ? `<span style="color:#c0392b">${num(n)}</span>` : num(n));
+    const zpct = m.add_resp ? ` <span class="dim">(${(100 * (m.add_zero || 0) / m.add_resp).toFixed(1)}%)</span>` : "";
     return `<tr${bold ? ' class="total"' : ""}><td>${b}${esc(label)}${e}</td>
       <td class="num">${num(m.add_calls)}</td><td class="num">${bad(m.add_failed, true)}</td>
       <td class="num">${num(m.mem_stored)}</td>
+      <td class="num">${m.mem_per_add != null ? m.mem_per_add : "—"}</td>
+      <td class="num">${bad(m.add_zero, true)}${zpct}</td>
       <td class="num">${num(m.tok_in)}</td><td class="num">${num(m.tok_out)}</td><td class="num">${num(m.tok_total)}</td>
       <td class="num">${bad(m.cutoffs, true)}</td><td class="num">${bad(m.parse_fail, true)}</td>
       <td class="num">${m.search_ms_avg != null ? Math.round(m.search_ms_avg) + "ms" : "—"}</td></tr>`;

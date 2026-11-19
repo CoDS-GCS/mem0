@@ -85,13 +85,13 @@ def _index_file(run_dir):
 # --------------------------------------------------------------------------- index state
 def _fresh():
     return {
-        "version": 3,
+        "version": 4,
         "mem0": {"offset": 0, "size": 0, "inode": None},
         "eval": {"offset": 0, "size": 0, "inode": None},
         # Global extraction health + measured token totals + whole-run time span.
         "extraction": {"calls": 0, "cutoffs": 0, "parse_fail": 0, "errors": 0,
                        "tok_in": 0, "tok_out": 0, "tok_total": 0,
-                       "add_calls": 0, "add_resp": 0, "mem_stored": 0,
+                       "add_calls": 0, "add_resp": 0, "add_zero": 0, "mem_stored": 0,
                        "reasoning_recorded": False, "first": None, "last": None},
         # Distinct model names the API/gateway reports (JSON-serializable lists).
         "models_reported": {"extraction": [], "answerer": []},
@@ -105,7 +105,7 @@ def _qentry(idx, run_dir, qid):
         q = {"adds_done": 0, "searched": False, "answered": 0, "judged": 0,
              "units": [], "search_off": None, "scoring_off": None, "eval_offs": [],
              # measured, counted straight from the trace (never projected)
-             "add_calls": 0, "add_resp": 0, "mem_stored": 0,
+             "add_calls": 0, "add_resp": 0, "add_zero": 0, "mem_stored": 0,
              "tok_in": 0, "tok_out": 0, "tok_total": 0,
              "cutoffs": 0, "parse_fail": 0, "errors": 0,
              "search_ms": 0.0, "first": None, "last": None}
@@ -133,7 +133,7 @@ def _load_from_disk(run_dir):
             idx = json.load(fh)
     except (OSError, ValueError):
         return None
-    if not isinstance(idx, dict) or idx.get("version") != 3:
+    if not isinstance(idx, dict) or idx.get("version") != 4:
         return None
     # Rebuild the in-memory request_id -> unit_index map from the persisted units.
     _RID[run_dir] = {qid: {u["rid"]: i for i, u in enumerate(q["units"])}
@@ -241,6 +241,9 @@ def _apply_mem0(idx, run_dir, pos, obj):
         n = len((out.get("results") or []))
         q["mem_stored"] += n
         ex["mem_stored"] += n
+        if n == 0:                 # add stored 0 memories (silent empty extraction)
+            q["add_zero"] += 1
+            ex["add_zero"] += 1
     elif comp == "entry" and op == "search.request":
         q["search_off"] = pos
         q["searched"] = True
@@ -359,7 +362,9 @@ def aggregate(run_dir):
         per_q[qid] = {
             "add_calls": q["add_calls"], "add_resp": q["add_resp"],
             "add_failed": max(0, q["add_calls"] - q["add_resp"]),
+            "add_zero": q["add_zero"],
             "mem_stored": q["mem_stored"],
+            "mem_per_add": round(q["mem_stored"] / q["add_resp"], 2) if q["add_resp"] else None,
             "tok_in": q["tok_in"], "tok_out": q["tok_out"], "tok_total": q["tok_total"],
             "cutoffs": q["cutoffs"], "parse_fail": q["parse_fail"], "errors": q["errors"],
             "search_ms": round(q["search_ms"], 1) if q["search_ms"] else None,
@@ -367,6 +372,8 @@ def aggregate(run_dir):
         }
     ex = dict(idx["extraction"])
     ex["add_failed"] = max(0, ex.get("add_calls", 0) - ex.get("add_resp", 0))
+    ex["mem_per_add"] = (round(ex.get("mem_stored", 0) / ex["add_resp"], 2)
+                         if ex.get("add_resp") else None)
     ex["wall_ms"] = _span_ms(ex.pop("first", None), ex.pop("last", None))
     mr = idx.get("models_reported") or {"extraction": [], "answerer": []}
     return {"adds_done": adds_done, "searched": searched, "answered": answered,

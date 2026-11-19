@@ -220,7 +220,7 @@ def run_facts(run_dir):
         return None
 
     f = {
-        "add_calls": 0, "add_resp": 0, "mem_stored": 0,
+        "add_calls": 0, "add_resp": 0, "add_zero": 0, "mem_stored": 0,
         "llm_calls": 0, "cutoffs": 0, "parse_fail": 0, "llm_err": 0,
         "tok_in": 0, "tok_out": 0, "tok_total": 0,
         "reasoning_recorded": False,
@@ -246,7 +246,10 @@ def run_facts(run_dir):
                 f["add_calls"] += 1
             elif comp == "entry" and op == "add.response":
                 f["add_resp"] += 1
-                f["mem_stored"] += len((o.get("outputs") or {}).get("results") or [])
+                res = (o.get("outputs") or {}).get("results") or []
+                f["mem_stored"] += len(res)
+                if not res:
+                    f["add_zero"] += 1
             elif comp == "entry" and op == "search.response":
                 d = o.get("duration_ms")
                 if d is not None:
@@ -275,6 +278,8 @@ def run_facts(run_dir):
             wall_s = None
     f["wall_s"] = wall_s
     f["add_failed"] = max(0, f["add_calls"] - f["add_resp"])
+    f["mem_per_add"] = round(f["mem_stored"] / f["add_resp"], 2) if f["add_resp"] else None
+    f["add_zero_pct"] = round(100 * f["add_zero"] / f["add_resp"], 1) if f["add_resp"] else None
     f["search_ms_avg"] = round(sum(f["search_ms"]) / len(f["search_ms"]), 1) if f["search_ms"] else None
     return f
 
@@ -492,6 +497,9 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_d
         lines.append(f"| add calls made | {_n(facts['add_calls'])} |")
         lines.append(f"| add calls without response | {_n(facts['add_failed'])} |")
         lines.append(f"| memories stored | {_n(facts['mem_stored'])} |")
+        lines.append(f"| memories per add | {facts['mem_per_add']} |")
+        lines.append(f"| adds that stored 0 memories | {_n(facts['add_zero'])} "
+                     f"({facts['add_zero_pct']}%) |")
         lines.append(f"| extraction LLM calls | {_n(facts['llm_calls'])} |")
         lines.append(f"| extraction tokens — input | {_n(facts['tok_in'])} |")
         lines.append(f"| extraction tokens — output | {_n(facts['tok_out'])} |")
@@ -678,6 +686,8 @@ def build_two_run_readme(run_dir, manifest, run_file, run_data, ref_dir):
         L.append(f"| add calls made | {_n(facts['add_calls'])} |")
         L.append(f"| add calls without response (rate-limit/quota/gateway) | {_n(facts['add_failed'])} |")
         L.append(f"| memories stored | {_n(facts['mem_stored'])} |")
+        L.append(f"| memories per add | {facts['mem_per_add']} |")
+        L.append(f"| adds that stored 0 memories | {_n(facts['add_zero'])} ({facts['add_zero_pct']}%) |")
         L.append(f"| extraction LLM calls | {_n(facts['llm_calls'])} |")
         L.append(f"| extraction tokens — input / output / total | "
                  f"{_n(facts['tok_in'])} / {_n(facts['tok_out'])} / {_n(facts['tok_total'])} |")

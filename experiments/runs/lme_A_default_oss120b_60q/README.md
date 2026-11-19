@@ -78,6 +78,8 @@ Disagreements (question_ids):
 | add calls made | 15,101 |
 | add calls without response | 18 |
 | memories stored | 67,004 |
+| memories per add | 4.44 |
+| adds that stored 0 memories | 219 (1.5%) |
 | extraction LLM calls | 15,098 |
 | extraction tokens — input | 137,541,634 |
 | extraction tokens — output | 21,851,061 |

@@ -322,9 +322,9 @@ def _iso_s(a, b):
 
 
 def _blank_q():
-    return {"add_calls": 0, "add_resp": 0, "mem_stored": 0, "tok_in": 0, "tok_out": 0,
-            "tok_total": 0, "cutoffs": 0, "parse_fail": 0, "errors": 0, "search_ms": 0.0,
-            "first": None, "last": None}
+    return {"add_calls": 0, "add_resp": 0, "add_zero": 0, "mem_stored": 0, "tok_in": 0,
+            "tok_out": 0, "tok_total": 0, "cutoffs": 0, "parse_fail": 0, "errors": 0,
+            "search_ms": 0.0, "first": None, "last": None}
 
 
 def _finalize_per_q(per):
@@ -335,7 +335,9 @@ def _finalize_per_q(per):
         out[qid] = {
             "add_calls": d["add_calls"], "add_resp": d["add_resp"],
             "add_failed": max(0, d["add_calls"] - d["add_resp"]),
+            "add_zero": d["add_zero"],   # adds that stored 0 memories (silent empty extraction)
             "mem_stored": d["mem_stored"],
+            "mem_per_add": round(d["mem_stored"] / d["add_resp"], 2) if d["add_resp"] else None,
             "tok_in": d["tok_in"], "tok_out": d["tok_out"], "tok_total": d["tok_total"],
             "cutoffs": d["cutoffs"], "parse_fail": d["parse_fail"], "errors": d["errors"],
             "search_ms": round(d["search_ms"], 1) if d["search_ms"] else None,
@@ -361,7 +363,8 @@ def _aggregate_traces(run_dir):
     # Global extraction health + token totals. 0 cut-offs / 0 parse-fail is healthy.
     extraction = {"calls": 0, "cutoffs": 0, "parse_fail": 0, "errors": 0,
                   "tok_in": 0, "tok_out": 0, "tok_total": 0,
-                  "add_calls": 0, "add_resp": 0, "mem_stored": 0, "reasoning_recorded": False}
+                  "add_calls": 0, "add_resp": 0, "add_zero": 0, "mem_stored": 0,
+                  "reasoning_recorded": False}
     span = {"first": None, "last": None}
     ex_models, ans_models = set(), set()   # model names the API/gateway actually reports
     per = {}
@@ -429,6 +432,9 @@ def _aggregate_traces(run_dir):
             extraction["mem_stored"] += len(res)
             d["add_resp"] += 1
             d["mem_stored"] += len(res)
+            if not res:                        # add stored 0 memories
+                extraction["add_zero"] += 1
+                d["add_zero"] += 1
         elif comp == "entry" and op == "search.request":
             searched[qid] = True
         elif comp == "entry" and op == "search.response":
@@ -454,6 +460,8 @@ def _aggregate_traces(run_dir):
             searched[qid] = True
 
     extraction["add_failed"] = max(0, extraction["add_calls"] - extraction["add_resp"])
+    extraction["mem_per_add"] = (round(extraction["mem_stored"] / extraction["add_resp"], 2)
+                                 if extraction["add_resp"] else None)
     run_wall = _iso_s(span["first"], span["last"])
     extraction["wall_ms"] = round(run_wall * 1000, 1) if run_wall is not None else None
     data = {"adds_done": adds_done, "searched": searched, "answered": answered,
@@ -729,8 +737,8 @@ def question_pipeline(name, qid, page=0, page_size=25):
 
 
 # --------------------------------------------------------------------------- summary
-_MEASURED_KEYS = ("add_calls", "add_failed", "mem_stored", "tok_in", "tok_out",
-                  "tok_total", "cutoffs", "parse_fail", "errors")
+_MEASURED_KEYS = ("add_calls", "add_failed", "add_resp", "add_zero", "mem_stored",
+                  "tok_in", "tok_out", "tok_total", "cutoffs", "parse_fail", "errors")
 
 
 def _measured_bucket():
@@ -752,6 +760,7 @@ def _measured_out(b):
     # Wall time is reported per question (board) and as the whole-run span (totals).
     out = {k: b[k] for k in _MEASURED_KEYS}
     out["search_ms_avg"] = round(b["search_ms_sum"] / b["search_n"], 1) if b["search_n"] else None
+    out["mem_per_add"] = round(b["mem_stored"] / b["add_resp"], 2) if b["add_resp"] else None
     return out
 
 
