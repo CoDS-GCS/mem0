@@ -49,17 +49,46 @@ JUDGE_MODEL="${JUDGE_MODEL:-gpt-5}"
 PROVIDER="${PROVIDER:-openai}"
 TOP_K="${TOP_K:-200}"
 CUTOFFS="${CUTOFFS:-200,50,20,10}"
-export LLM_MODEL="$EXTRACTION_MODEL"
 export MEM0_FORWARD_TIMESTAMP="${MEM0_FORWARD_TIMESTAMP:-0}"
 export MEM0_TRACE="${MEM0_TRACE:-1}"
 
+# Extraction routing. Default: gpt-5 on OpenAI direct (reasoning model; mem0 omits
+# temperature/max_tokens and sends no reasoning_effort). EXTRACTION_MODEL=gpt-oss-120b routes
+# extraction through OpenRouter PINNED to one provider with no fallbacks — Parasail, the
+# provider Mem0 used for their GPT-OSS-120B row — and raises the completion budget, because
+# GPT-OSS reasoning tokens count against max_tokens and the mem0 default (2000) cuts off
+# (finish_reason=length, empty JSON). answerer/judge always run host-side on OpenAI.
+EXTRACTION_PROVIDER_PIN="n/a (OpenAI direct)"
+EXTRACTION_MAX_TOKENS="mem0 default (2000)"
+case "$EXTRACTION_MODEL" in
+  gpt-oss-120b|openai/gpt-oss-120b)
+    export LLM_MODEL="openai/gpt-oss-120b"
+    # Bridge the OpenRouter key from .env to the mem0 container ONLY on this path, via the
+    # wrapper-controlled MEM0_OPENROUTER_* vars (compose reads those, never .env directly, so
+    # default OpenAI runs never receive the key). Key value is never printed.
+    : "${OPENROUTER_API_KEY:?set OPENROUTER_API_KEY in memory-benchmarks/.env for gpt-oss-120b}"
+    export MEM0_OPENROUTER_API_KEY="$OPENROUTER_API_KEY"
+    export MEM0_OPENROUTER_PROVIDER="${OPENROUTER_PROVIDER:-Parasail}"
+    # Generous budget so default-reasoning GPT-OSS extraction never truncates (one call
+    # measured ~2.8k completion tokens at 16000; finish_reason=stop).
+    export LLM_MAX_TOKENS="${LLM_MAX_TOKENS:-16000}"
+    REASONING_EFFORT="${REASONING_EFFORT:-default (mem0 sends none; GPT-OSS/OpenRouter default)}"
+    EXTRACTION_PROVIDER_PIN="$MEM0_OPENROUTER_PROVIDER via OpenRouter (allow_fallbacks=false)"
+    EXTRACTION_MAX_TOKENS="$LLM_MAX_TOKENS (raised; GPT-OSS reasoning counts against it)"
+    ;;
+  *)
+    export LLM_MODEL="$EXTRACTION_MODEL"
+    REASONING_EFFORT="${REASONING_EFFORT:-default (medium)}"
+    ;;
+esac
+
 # Embedder. Default EMBEDDER=qwen matches Mem0's published OSS table ("Qwen 600M via
-# SageMaker", README L242): the same model served locally with a TEI-compatible API.
-# EMBEDDER=openai-3-small reverts to the repo default. The embedding service must be up
-# (experiments/embedding_service/run_embedding_service.sh, kept in tmux) for the qwen path.
+# SageMaker", README L242): the same model + revision, now served by real HuggingFace TEI
+# as the `qwen-tei` docker-compose service on the GPU. EMBEDDER=openai-3-small reverts to
+# the repo default. No separate start step — `docker compose up` below brings TEI up and
+# mem0 waits for it to be healthy.
 EMBEDDER="${EMBEDDER:-qwen}"
-EMBED_HEALTH_URL="${EMBED_HEALTH_URL:-http://localhost:8099/health}"
-EMBED_INFO_URL="${EMBED_INFO_URL:-http://localhost:8099/info}"
+EMBED_HEALTH_URL="${EMBED_HEALTH_URL:-http://localhost:${EMBED_PORT:-8099}/health}"
 if [ "$EMBEDDER" = "openai-3-small" ] || [ "$EMBEDDER" = "openai" ]; then
   export EMBEDDER_PROVIDER="openai"
   export EMBEDDER_MODEL="text-embedding-3-small"
@@ -76,19 +105,15 @@ else
   # README does not state dims. Configurable via EMBEDDING_DIMS.
   EMBED_DIMS="${EMBEDDING_DIMS:-768}"
   export EMBEDDING_DIMS="$EMBED_DIMS"
-  export TEI_LOCAL_URL="${TEI_LOCAL_URL:-http://host.docker.internal:8099/embed}"
+  export TEI_LOCAL_URL="${TEI_LOCAL_URL:-http://qwen-tei:80/embed}"
   EMBEDDER_REVISION="${QWEN_MODEL_REVISION:-97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3}"
-  EMBEDDER_LABEL="$EMBEDDER_MODEL @ $EMBEDDER_REVISION (${EMBED_DIMS}d) via local TEI-compatible service"
-  EMBEDDER_SERVING="host GPU service serve_qwen_tei.py (not Docker TEI: no nvidia Docker runtime + full / disk)"
+  EMBEDDER_LABEL="$EMBEDDER_MODEL @ $EMBEDDER_REVISION (${EMBED_DIMS}d) via real HuggingFace TEI"
+  EMBEDDER_SERVING="qwen-tei docker-compose service: HF TEI (hopper/H100 image) on the GPU, reached by mem0 as http://qwen-tei:80/embed"
   EMBEDDER_DEVICE="GPU"; EMBEDDER_NORMALIZE="l2_full_vector then [:${EMBED_DIMS}] (no renorm, as SageMaker)"
   EMBEDDER_INSTRUCTION="none (add and search embed identically)"
 fi
 # A ${EMBED_DIMS}-dim run must never reuse a 1536-dim collection: fresh, dims-tagged name.
 export COLLECTION_NAME="${COLLECTION_NAME:-${NAME}_q${EMBED_DIMS}}"
-
-# gpt-5 is a reasoning model: Mem0 (>=94c3fe9) auto-omits temperature/max_tokens and sends
-# no reasoning_effort, so OpenAI uses its default effort. Record that for the manifest.
-REASONING_EFFORT="${REASONING_EFFORT:-default (medium)}"
 
 RUN_DIR="$EXP/runs/$NAME"
 OUT_DIR="$RUN_DIR"                          # runner writes predicted_<project>/ + unified json here
@@ -130,6 +155,9 @@ manifest_json() {
   "experiments_commit": "$EXPERIMENTS_COMMIT",
   "benchmarks_upstream_commit": "$BENCH_UPSTREAM",
   "extraction_llm": "$EXTRACTION_MODEL",
+  "extraction_model_id": "$LLM_MODEL",
+  "extraction_provider_pin": "$EXTRACTION_PROVIDER_PIN",
+  "extraction_max_tokens": "$EXTRACTION_MAX_TOKENS",
   "answerer_model": "$ANSWERER_MODEL",
   "judge_model": "$JUDGE_MODEL",
   "provider": "$PROVIDER",
@@ -161,10 +189,13 @@ EOF
 # rebuilds the mem0 image every run, so check headroom and propose a SAFE prune (dangling
 # images + build cache only — never in-use images or other containers). Returns 1 if tight.
 check_docker_disk() {
-  local avail_kb avail_gb
-  avail_kb=$(df -Pk /var/lib/docker 2>/dev/null | awk 'NR==2{print $4}')
+  local root avail_kb avail_gb
+  # Docker's storage was moved to /shared_mnt (data-root), so check the real root dir, not
+  # the default /var/lib/docker (which lives on the near-full / filesystem here).
+  root=$(docker info --format '{{.DockerRootDir}}' 2>/dev/null || echo /var/lib/docker)
+  avail_kb=$(df -Pk "$root" 2>/dev/null | awk 'NR==2{print $4}')
   avail_gb=$(awk "BEGIN{printf \"%.2f\", ${avail_kb:-0}/1048576}")
-  echo "docker data-root /var/lib/docker: ${avail_gb} GB free on its filesystem"
+  echo "docker data-root $root: ${avail_gb} GB free on its filesystem"
   docker system df 2>/dev/null | sed 's/^/  /' || true
   if [ "${avail_kb:-0}" -lt 2097152 ]; then
     echo "  WARNING: < 2 GB free where Docker stores images — 'docker compose build mem0' may fail."
@@ -174,6 +205,63 @@ check_docker_disk() {
     return 1
   fi
   return 0
+}
+
+# Monitor: always available for a run. Start experiments/monitor/run_monitor.sh in the
+# background if it isn't already serving, print the URL, and leave it running after the run.
+MONITOR_HOST="${LME_HOST:-127.0.0.1}"
+MONITOR_PORT="${LME_PORT:-8020}"
+MONITOR_URL="http://${MONITOR_HOST}:${MONITOR_PORT}"
+ensure_monitor() {
+  if curl -sf "$MONITOR_URL/" >/dev/null 2>&1; then
+    echo "Monitor already running -> $MONITOR_URL  (Runs tab)"
+    return 0
+  fi
+  echo "Starting monitor in background -> $MONITOR_URL  (Runs tab)"
+  LME_HOST="$MONITOR_HOST" LME_PORT="$MONITOR_PORT" \
+    nohup "$EXP/monitor/run_monitor.sh" > "$EXP/monitor/monitor.out" 2>&1 &
+  disown 2>/dev/null || true
+  for _ in $(seq 1 20); do
+    curl -sf "$MONITOR_URL/" >/dev/null 2>&1 && break
+    sleep 1
+  done
+  curl -sf "$MONITOR_URL/" >/dev/null 2>&1 \
+    || echo "  (monitor not up yet; see $EXP/monitor/monitor.out)"
+}
+
+# Show which questions the sampler will pick (deterministic: same seed/per-type/types as the
+# runner) and how many turn-pairs each has. Replicates sample_questions_stratified exactly.
+show_selected_questions() {
+  "$PY" - "$DATASET" "${RUNNER_ARGS[@]}" <<'PYEOF'
+import argparse, json, random, sys
+dataset = sys.argv[1]
+p = argparse.ArgumentParser()
+p.add_argument("--per-type", type=int, default=5)
+p.add_argument("--seed", type=int, default=42)
+p.add_argument("--question-types", default=None)
+p.add_argument("--all-questions", action="store_true")
+args, _ = p.parse_known_args(sys.argv[2:])
+qs = json.load(open(dataset))
+types = [t.strip() for t in args.question_types.split(",")] if args.question_types else None
+tf = set(types) if types else None
+groups = {}
+for q in qs:
+    if tf is None or q["question_type"] in tf:
+        groups.setdefault(q["question_type"], []).append(q)
+for t in groups:
+    groups[t].sort(key=lambda q: q["question_id"])
+rng = random.Random(args.seed)
+sampled = []
+for t in sorted(groups):
+    g = groups[t]
+    sampled += rng.sample(g, min(args.per_type, len(g)))
+sampled.sort(key=lambda q: q["question_id"])
+print(f"seed={args.seed} per-type={args.per_type} types={types or 'ALL'} -> {len(sampled)} question(s)")
+for q in sampled:
+    sess = q["haystack_sessions"]
+    pairs = sum((len(s) + 1) // 2 for s in sess)   # pair_turns(): ceil(len/2) per session
+    print(f"  {q['question_id']}  type={q['question_type']}  sessions={len(sess)}  turn_pairs={pairs}")
+PYEOF
 }
 
 # -------------------------------------------------------------------------- dry-run
@@ -195,18 +283,38 @@ if [ "$DRY_RUN" = "1" ]; then
   echo "normalize:   $EMBEDDER_NORMALIZE   instruction: $EMBEDDER_INSTRUCTION"
   if [ "$EMBEDDER_PROVIDER" = "tei_local" ]; then
     if curl -sf "$EMBED_HEALTH_URL" >/dev/null 2>&1; then
-      echo "health:      UP at $EMBED_HEALTH_URL"
+      echo "health:      UP at $EMBED_HEALTH_URL (qwen-tei compose service)"
     else
-      echo "health:      DOWN at $EMBED_HEALTH_URL — a real run would refuse to start."
-      echo "             start it: experiments/embedding_service/run_embedding_service.sh (keep in tmux)"
+      echo "health:      DOWN at $EMBED_HEALTH_URL — 'docker compose up' below will start it;"
+      echo "             mem0 waits for qwen-tei to be healthy (depends_on) before it starts."
     fi
   fi
   echo
-  echo "----- server rebuild + recreate -----"
-  echo "cd \"$MB\" && LLM_MODEL=$EXTRACTION_MODEL EMBEDDER_PROVIDER=$EMBEDDER_PROVIDER EMBEDDING_DIMS=$EMBED_DIMS \\"
+  echo "----- extraction LLM -----"
+  echo "EXTRACTION_MODEL: $EXTRACTION_MODEL   ->   mem0 model_id: $LLM_MODEL"
+  echo "provider pin:     $EXTRACTION_PROVIDER_PIN"
+  echo "max_tokens:       $EXTRACTION_MAX_TOKENS"
+  echo "reasoning:        $REASONING_EFFORT   (temperature/top_p: as mem0 sends)"
+  if [ -n "${MEM0_OPENROUTER_API_KEY:-}" ]; then
+    echo "openrouter key:   present (from .env; passed to mem0 container, never printed)"
+  fi
+  echo
+  echo "----- selected questions (deterministic sample) -----"
+  show_selected_questions || echo "(could not compute sample)"
+  echo
+  echo "----- monitor -----"
+  if curl -sf "$MONITOR_URL/" >/dev/null 2>&1; then
+    echo "already running -> $MONITOR_URL  (a real run leaves it up)"
+  else
+    echo "not running — a real run starts experiments/monitor/run_monitor.sh in the background -> $MONITOR_URL"
+  fi
+  echo
+  echo "----- compose bring-up (embedder + qdrant, then rebuild mem0) -----"
+  echo "cd \"$MB\" && docker compose up -d qwen-tei qdrant"
+  echo "LLM_MODEL=$EXTRACTION_MODEL EMBEDDER_PROVIDER=$EMBEDDER_PROVIDER EMBEDDING_DIMS=$EMBED_DIMS \\"
   echo "  EMBEDDER_MODEL=$EMBEDDER_MODEL TEI_LOCAL_URL=${TEI_LOCAL_URL:-n/a} COLLECTION_NAME=$COLLECTION_NAME \\"
   echo "  MEM0_FORWARD_TIMESTAMP=$MEM0_FORWARD_TIMESTAMP MEM0_TRACE=$MEM0_TRACE MEM0_TRACE_DIR=\"$RUN_DIR\" \\"
-  echo "  docker compose build mem0 && docker compose up -d --force-recreate mem0 qdrant"
+  echo "  docker compose build mem0 && docker compose up -d --force-recreate mem0"
   echo
   echo "----- docker disk (mem0 image is rebuilt every run) -----"
   check_docker_disk || true
@@ -224,15 +332,6 @@ fi
 [ -d "$RUN_DIR" ] && { echo "ERROR: $RUN_DIR already exists. Pick a new run name (runs never reuse results)." >&2; exit 1; }
 [ -f "$DATASET" ] || { echo "ERROR: dataset missing: $DATASET (see experiments/data/README)." >&2; exit 1; }
 [ -x "$PY" ] || { echo "ERROR: benchmark venv python not found: $PY" >&2; exit 1; }
-
-# Embedder health gate: the qwen path needs the local service up (kept in tmux).
-if [ "$EMBEDDER_PROVIDER" = "tei_local" ]; then
-  if ! curl -sf "$EMBED_HEALTH_URL" >/dev/null 2>&1; then
-    echo "ERROR: embedding service DOWN at $EMBED_HEALTH_URL." >&2
-    echo "       Start it first and keep it in tmux: experiments/embedding_service/run_embedding_service.sh" >&2
-    exit 1
-  fi
-fi
 
 # Docker-disk gate: a mem0 rebuild needs headroom on /. If tight, stop and let the user
 # run the safe prune, rather than pruning automatically.
@@ -253,13 +352,36 @@ export MEM0_TRACE_DIR="$RUN_DIR"
 echo "Run folder: $RUN_DIR"
 echo "Mem0 code:  $REF = $MEM0_SHA"
 echo "Models:     extraction=$EXTRACTION_MODEL answerer=$ANSWERER_MODEL judge=$JUDGE_MODEL (provider=$PROVIDER)"
+echo "Extraction: $LLM_MODEL  pin=$EXTRACTION_PROVIDER_PIN  max_tokens=$EXTRACTION_MAX_TOKENS"
 echo "Embedder:   $EMBEDDER_LABEL  [collection=$COLLECTION_NAME]"
+
+# Monitor up for the run (and kept running afterwards).
+ensure_monitor
 
 # Point the server at the pinned commit, rebuild, (re)create server + Qdrant.
 sed -i -E "s|^mem0ai @ git\+.*|mem0ai @ git+${FORK_URL}@${MEM0_SHA}|" "$REQ"
 cd "$MB"
+# Bring up the embedder (real HF TEI on the GPU) and Qdrant first — one compose, no separate
+# start step for the embedder. qwen-tei is idempotent; only mem0 is force-recreated.
+docker compose up -d qwen-tei qdrant
+# Confirm the embedder is serving before the (slow) mem0 rebuild (qwen path only).
+if [ "$EMBEDDER_PROVIDER" = "tei_local" ]; then
+  echo -n "Waiting for qwen-tei embedder"
+  for _ in $(seq 1 60); do
+    curl -sf "$EMBED_HEALTH_URL" >/dev/null 2>&1 && break
+    echo -n "."; sleep 2
+  done
+  echo
+  curl -sf "$EMBED_HEALTH_URL" >/dev/null 2>&1 || {
+    echo "ERROR: qwen-tei embedder not healthy at $EMBED_HEALTH_URL." >&2
+    echo "       Check: docker compose logs qwen-tei" >&2
+    exit 1
+  }
+fi
 docker compose build mem0
-docker compose up -d --force-recreate mem0 qdrant
+# mem0 depends_on qwen-tei + qdrant (service_healthy), so compose waits for TEI's weights to
+# load on the GPU before the server starts.
+docker compose up -d --force-recreate mem0
 # Each rebuild orphans the previous mem0 image as a dangling <none> layer; reclaim it now
 # so / doesn't fill up over successive runs. Dangling-only + build cache — never touches
 # the new in-use image, qdrant, or any other container.
@@ -331,6 +453,7 @@ def _find(base):
     return None
 
 tok = {"extraction": 0, "answerer": 0}
+n_extract = cutoffs = parse_fail = 0
 mp = _find("mem0_trace.jsonl")
 if mp:
     with _open(mp) as fh:
@@ -338,8 +461,14 @@ if mp:
             try: o = json.loads(line)
             except Exception: continue
             if o.get("component") == "llm" and o.get("operation") == "generate_response":
-                u = (o.get("outputs") or {}).get("token_usage") or {}
+                out = o.get("outputs") or {}
+                u = out.get("token_usage") or {}
                 tok["extraction"] += u.get("total_tokens") or 0
+                n_extract += 1
+                if out.get("finish_reason") == "length":   # hit max_tokens -> cut off
+                    cutoffs += 1
+                if out.get("parse_ok") is False:           # extraction output not valid JSON
+                    parse_fail += 1
 ep = _find("eval_trace.jsonl")
 if ep:
     with _open(ep) as fh:
@@ -350,11 +479,20 @@ if ep:
                 u = (o.get("outputs") or {}).get("token_usage") or {}
                 tok["answerer"] += u.get("total_tokens") or 0
 
-n_q = len(glob.glob(os.path.join(run, "predicted_*", "*.json")))
-n_q = max(n_q, 1)
+# Count DISTINCT question IDs, not files: predicted_*/ holds both {qid}.json and
+# _progress_{qid}.json, so counting files double-counts (the old "over 2 questions" bug).
+qids = set()
+for p in glob.glob(os.path.join(run, "predicted_*", "*.json")):
+    try:
+        qids.add(json.load(open(p)).get("question_id") or os.path.basename(p))
+    except Exception:
+        qids.add(os.path.basename(p))
+n_q = max(len(qids), 1)
 tot = tok["extraction"] + tok["answerer"]
 print(f"Tokens: extraction={tok['extraction']:,} answerer={tok['answerer']:,} "
-      f"total={tot:,}  (~{tot//n_q:,}/question over {n_q} questions)")
+      f"total={tot:,}  (~{tot//n_q:,}/question over {n_q} question(s))")
+print(f"Extraction calls: {n_extract}  |  cut off (finish_reason=length): {cutoffs}"
+      f"  |  JSON parse failures: {parse_fail}")
 EOF
 
 # Finalize traces: count events, gzip, record sizes in manifest.json.
@@ -393,6 +531,8 @@ print("Trace: " + json.dumps(manifest["trace"]))
 EOF
 
 echo
-echo "Watch it in the tracer: experiments/monitor/run_monitor.sh  ->  http://127.0.0.1:8020  (Runs tab)"
+# Monitor was started at run begin and is left running.
+ensure_monitor
+echo "Watch it in the tracer: $MONITOR_URL  (Runs tab)"
 echo "Then commit: git add experiments && git commit -m \"run: longmemeval $NAME (mem0 ${MEM0_SHA:0:7})\""
 exit "$STATUS"

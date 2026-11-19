@@ -99,6 +99,7 @@ def _new_request(endpoint: str, user_id) -> None:
     _CTX.inserted = []
     _CTX.existing_hashes = []
     _CTX.llm_usage = None
+    _CTX.llm_finish_reason = None
 
 
 def _emit(component: str, operation: str, inputs=None, outputs=None, duration_ms=None) -> None:
@@ -276,7 +277,14 @@ def install(memory) -> bool:
         _emit("llm", "generate_response",
               inputs={"messages": messages, "response_format": kwargs.get("response_format")},
               outputs={"raw": result, "parsed_facts": parsed,
-                       "token_usage": getattr(_CTX, "llm_usage", None), "error": bool(exc)},
+                       "token_usage": getattr(_CTX, "llm_usage", None),
+                       # finish_reason from the raw API response (captured in create_wrap);
+                       # "length" means the model hit max_tokens (cut off). parse_ok is whether
+                       # the extraction output is valid JSON. Both feed the run/monitor cutoff
+                       # and parse-failure counts.
+                       "finish_reason": getattr(_CTX, "llm_finish_reason", None),
+                       "parse_ok": _json_ok(result),
+                       "error": bool(exc)},
               duration_ms=dur)
     memory.llm.generate_response = _wrap(memory.llm.generate_response, rec_llm)
 
@@ -292,6 +300,10 @@ def install(memory) -> bool:
                 _CTX.llm_usage = _usage(resp)
             except Exception:
                 _count_error("llm.usage")
+            try:
+                _CTX.llm_finish_reason = resp.choices[0].finish_reason
+            except Exception:
+                _CTX.llm_finish_reason = None
             return resp
         _comp.create = create_wrap
     except Exception:
@@ -501,6 +513,33 @@ def _emit_dedup_summary() -> None:
     _emit("dedup", "summary",
           outputs={"n_parsed": len(parsed), "n_stored": len(inserted),
                    "n_skipped": len(skipped), "skipped": skipped})
+
+
+def _json_ok(raw) -> bool:
+    """True if the extraction output is parseable JSON (object or embedded object).
+
+    Mirrors ``_parse_facts`` leniency (strips ``` fences, falls back to the first {...}).
+    A cut-off response (content None/empty) or non-JSON text returns False, which the run
+    summary and monitor count as a parse failure.
+    """
+    import re
+    if not raw or not isinstance(raw, str):
+        return False
+    text = raw.strip()
+    text = re.sub(r"^```(json)?", "", text).strip()
+    text = re.sub(r"```$", "", text).strip()
+    try:
+        json.loads(text)
+        return True
+    except Exception:
+        m = re.search(r"\{.*\}", text, re.DOTALL)
+        if not m:
+            return False
+        try:
+            json.loads(m.group(0))
+            return True
+        except Exception:
+            return False
 
 
 def _parse_facts(raw):

@@ -7,6 +7,8 @@ services:
     depends_on:
       qdrant:
         condition: service_healthy
+      qwen-tei:
+        condition: service_healthy
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - AZURE_OPENAI_API_KEY=${AZURE_OPENAI_API_KEY:-}
@@ -21,13 +23,22 @@ services:
       - QDRANT_PORT=6333
       - COLLECTION_NAME=${COLLECTION_NAME:-memories}
       - LLM_MODEL=${LLM_MODEL:-gpt-4o-mini}
+      # Extraction via OpenRouter, pinned to one provider (no fallbacks). Driven only by the
+      # wrapper-controlled MEM0_OPENROUTER_* vars so the key in .env never auto-reaches the
+      # container on default OpenAI runs. When OPENROUTER_API_KEY is empty, mem0 uses OpenAI.
+      - OPENROUTER_API_KEY=${MEM0_OPENROUTER_API_KEY:-}
+      - OPENROUTER_PROVIDER=${MEM0_OPENROUTER_PROVIDER:-}
+      # Completion budget for extraction. Empty = mem0 default (2000). Raised for reasoning
+      # models (gpt-oss-120b) whose reasoning tokens count against max_tokens.
+      - LLM_MAX_TOKENS=${LLM_MAX_TOKENS:-}
       - EMBEDDER_MODEL=${EMBEDDER_MODEL:-text-embedding-3-small}
       # Embedder provider + dims. Default unset = OpenAI text-embedding-3-small (1536).
-      # EMBEDDER_PROVIDER=tei_local + EMBEDDING_DIMS=768 selects the local Qwen 600M
-      # service, reached via host-gateway (TEI_LOCAL_URL). Default server is unchanged.
+      # EMBEDDER_PROVIDER=tei_local + EMBEDDING_DIMS=768 selects the Qwen 600M embedder,
+      # now served by the `qwen-tei` compose service (real HF TEI on the GPU) and reached
+      # by service name (TEI_LOCAL_URL below). Default server is unchanged.
       - EMBEDDER_PROVIDER=${EMBEDDER_PROVIDER:-openai}
       - EMBEDDING_DIMS=${EMBEDDING_DIMS:-}
-      - TEI_LOCAL_URL=${TEI_LOCAL_URL:-http://host.docker.internal:8099/embed}
+      - TEI_LOCAL_URL=${TEI_LOCAL_URL:-http://qwen-tei:80/embed}
       # Forward the per-session `timestamp` to Memory.add() (needs a mem0 build that
       # accepts it, e.g. code/session-date). Default 0 = off: reruns of Run A/B behave
       # exactly as before (v2.2.1 rejects the argument, so it is never passed).
@@ -45,8 +56,8 @@ services:
       # Custom config for advanced setups (Azure, Ollama, SageMaker, etc.)
       # Uncomment and point to your config file:
       # - ./mem0-config.yaml:/app/config.yaml:ro
-    # Reach the host's local embedding service (experiments/embedding_service) from inside
-    # the container. Harmless when EMBEDDER_PROVIDER is the default OpenAI.
+    # Kept for any host-side service a custom config might reference. The Qwen embedder is
+    # now the `qwen-tei` compose service, reached by name — no host-gateway needed for it.
     extra_hosts:
       - "host.docker.internal:host-gateway"
     restart: unless-stopped
@@ -68,6 +79,46 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+
+  # Qwen3-Embedding-0.6B served by real HuggingFace TEI on the GPU (H100/"hopper" image),
+  # replacing the former host process (experiments/embedding_service/serve_qwen_tei.py).
+  # Same model + pinned revision; TEI reads the pre-fetched weights from the bind-mounted
+  # HF hub cache (offline, no download). Pooling is last-token and vectors are L2-normalized
+  # over the full 1024-dim vector (model's 1_Pooling + 2_Normalize), then the tei_local
+  # client truncates to 768 dims — identical math to the old host service.
+  qwen-tei:
+    image: ghcr.io/huggingface/text-embeddings-inference:hopper-1.8
+    gpus: all
+    command:
+      - "--model-id=Qwen/Qwen3-Embedding-0.6B"
+      - "--revision=97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3"
+      - "--dtype=float16"
+      # Last-token pooling + full-vector L2 norm = the host service's recipe. Pinned
+      # explicitly so it never silently falls back to mean/CLS.
+      - "--pooling=last-token"
+      # The model advertises a 32k context; auto-truncate longer inputs instead of erroring
+      # (the old host service truncated at 512; benchmark add/search texts are far shorter).
+      - "--auto-truncate"
+      - "--port=80"
+      - "--json-output"
+    environment:
+      # Use the pre-downloaded weights only; never reach the Hub.
+      - HUGGINGFACE_HUB_CACHE=/data
+      - HF_HUB_OFFLINE=1
+    volumes:
+      # Pre-fetched model files on /shared_mnt (standard HF hub layout: models--Qwen--...).
+      - /shared_mnt/loubna/embed-cache/hf/hub:/data
+    ports:
+      # Host-mapped for the wrapper's health gate and the vector-parity check; mem0 reaches
+      # TEI in-network as http://qwen-tei:80/embed and does not use this mapping.
+      - "${EMBED_PORT:-8099}:80"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:80/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 60s
 
 volumes:
   qdrant_data:

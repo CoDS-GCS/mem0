@@ -112,15 +112,25 @@ def _load_config() -> dict:
     if embed_dims:
         vector_store_config["embedding_model_dims"] = embed_dims
 
+    # Extraction LLM config. temperature stays at mem0's 0.1 default (and top_p is mem0's
+    # default too). LLM_MAX_TOKENS, when set, raises the completion budget — needed for
+    # reasoning models like gpt-oss-120b whose reasoning tokens count against max_tokens and
+    # would otherwise exhaust the default 2000 (finish_reason=length, empty JSON). Unset keeps
+    # mem0's default (2000), so OpenAI/gpt-5 runs are unchanged.
+    llm_config: dict[str, Any] = {
+        "model": os.getenv("LLM_MODEL", "gpt-4o-mini"),
+        "temperature": 0.1,
+    }
+    _max_tokens = os.getenv("LLM_MAX_TOKENS")
+    if _max_tokens:
+        llm_config["max_tokens"] = int(_max_tokens)
+
     return {
         "version": "v1.1",
         "vector_store": {"provider": "qdrant", "config": vector_store_config},
         "llm": {
             "provider": os.getenv("LLM_PROVIDER", "openai"),
-            "config": {
-                "model": os.getenv("LLM_MODEL", "gpt-4o-mini"),
-                "temperature": 0.1,
-            },
+            "config": llm_config,
         },
         "embedder": {"provider": embedder_provider, "config": embedder_config},
         "history_db_path": os.getenv("HISTORY_DB_PATH", "/app/history/history.db"),

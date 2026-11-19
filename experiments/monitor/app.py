@@ -210,6 +210,12 @@ def runs() -> JSONResponse:
     return JSONResponse({"runs": run_reader.list_runs()})
 
 
+@app.get("/api/home/runs_add_calls")
+def home_runs_add_calls() -> JSONResponse:
+    """Measured add calls per run (per type + total), from traces — for the home page."""
+    return JSONResponse({"runs": run_reader.runs_add_calls()})
+
+
 @app.get("/api/run/{name}/board")
 def run_board(name: str) -> JSONResponse:
     try:
@@ -224,8 +230,13 @@ def run_summary(name: str) -> JSONResponse:
 
 
 @app.get("/api/run/{name}/question/{qid}")
-def run_question(name: str, qid: str) -> JSONResponse:
-    return JSONResponse(run_reader.question_pipeline(name, qid))
+def run_question(
+    name: str,
+    qid: str,
+    page: int = Query(0, ge=0),
+    page_size: int = Query(25, ge=1, le=250),
+) -> JSONResponse:
+    return JSONResponse(run_reader.question_pipeline(name, qid, page=page, page_size=page_size))
 
 
 # ---------------------------------------------------------------------------

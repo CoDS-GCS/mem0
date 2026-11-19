@@ -32,13 +32,27 @@ import argparse
 import datetime as dt
 import glob
 import gzip
+import hashlib
 import json
 import os
 import sys
 
+# GitHub rejects any file over 100 MB; such artifacts are left out of git and only
+# recorded here by path / size / sha256.
+GH_LIMIT = 100 * 1024 * 1024
+
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _EXP = os.path.dirname(_HERE)
 PUBLISHED_DIR = os.path.join(_EXP, "memory-benchmarks", "results", "oss")
+# Mem0's GPT-5 run is always shown as a reference column, regardless of the matched file.
+GPT5_FILE = os.path.join(PUBLISHED_DIR, "longmemeval_gpt5.json")
+
+# Measured OpenRouter/OpenAI cost for this run, entered by Loubna from the billing pages.
+COST = {
+    "extraction": ("GPT-OSS-120B via OpenRouter", 24.97),
+    "answer_judge": ("GPT-5 via OpenAI", 9.95),
+    "total": 34.92,
+}
 
 # Fixed question-type order so every table lines up.
 TYPES = [
@@ -111,14 +125,16 @@ def pct(correct, total):
     return round(100 * correct / total, 1) if total else None
 
 
-def accuracy_table(qids, qtype, our_verd, their_verd):
-    """Overall + per-type accuracy on the SAME qids: ours @ each cutoff, theirs @ top_200."""
-    # counters[type_or_overall][cutoff] = [correct, total]; theirs keyed under "top_200".
+def accuracy_table(qids, qtype, our_verd, their_maps):
+    """Overall + per-type accuracy on the SAME qids.
+
+    ours @ each cutoff, plus each published map in ``their_maps`` (name -> {qid: PASS/FAIL})
+    at its top_200. rows[bucket][cutoff] and rows[bucket]["their"][name] = [correct, total].
+    """
     rows = {}
-    buckets = TYPES + ["overall"]
-    for b in buckets:
+    for b in TYPES + ["overall"]:
         rows[b] = {c: [0, 0] for c in CUTOFFS}
-        rows[b]["their_top_200"] = [0, 0]
+        rows[b]["their"] = {k: [0, 0] for k in their_maps}
     for qid in qids:
         t = qtype.get(qid)
         targets = [t, "overall"] if t else ["overall"]
@@ -128,12 +144,34 @@ def accuracy_table(qids, qtype, our_verd, their_verd):
                 for b in targets:
                     rows[b][c][0] += 1 if j == "PASS" else 0
                     rows[b][c][1] += 1
-        tj = their_verd.get(qid)
-        if tj:
-            for b in targets:
-                rows[b]["their_top_200"][0] += 1 if tj == "PASS" else 0
-                rows[b]["their_top_200"][1] += 1
+        for name, tv in their_maps.items():
+            tj = tv.get(qid)
+            if tj:
+                for b in targets:
+                    rows[b]["their"][name][0] += 1 if tj == "PASS" else 0
+                    rows[b]["their"][name][1] += 1
     return rows
+
+
+def pub_setup_col(data, extraction_label):
+    """Setup-table column for a published run. 'not recorded' where its file is silent."""
+    meta = (data or {}).get("metadata", {})
+    n_scored = len(published_verdicts(data)) if data else 0
+    return {
+        "extraction model": extraction_label,
+        "extraction provider": "not recorded",
+        "reasoning": "not recorded",
+        "extraction max_tokens": "not recorded",
+        "embedder": "not recorded",
+        "embedding dims": "not recorded",
+        "answerer": meta.get("answerer_model") or "not recorded",
+        "judge": meta.get("judge_model") or "not recorded",
+        "answerer/judge provider": meta.get("provider") or "not recorded",
+        "top_k": meta.get("top_k") or "not recorded",
+        "cutoffs": ", ".join(meta.get("top_k_cutoffs", [])) or "not recorded",
+        "Mem0 version": "not recorded",
+        "dataset": f"{n_scored} questions (all)" if n_scored else "not recorded",
+    }
 
 
 def agreement(qids, our_verd, their_verd):
@@ -235,6 +273,25 @@ def run_facts(run_dir):
 
 
 # --------------------------------------------------------------------------- formatting
+def large_artifacts(run_dir):
+    """Files in the run dir over GitHub's 100 MB limit: (relpath, bytes, sha256)."""
+    out = []
+    for root, _dirs, files in os.walk(run_dir):
+        for fn in files:
+            p = os.path.join(root, fn)
+            try:
+                sz = os.path.getsize(p)
+            except OSError:
+                continue
+            if sz > GH_LIMIT:
+                h = hashlib.sha256()
+                with open(p, "rb") as fh:
+                    for chunk in iter(lambda: fh.read(1 << 20), b""):
+                        h.update(chunk)
+                out.append((os.path.relpath(p, run_dir), sz, h.hexdigest()))
+    return sorted(out)
+
+
 def _n(x):
     return "—" if x is None else f"{x:,}"
 
@@ -253,13 +310,20 @@ def _cell(pair):
     return f"{pct(c, n)}% ({c}/{n})" if n else "—"
 
 
-def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data):
+def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_data):
     lines = []
     name = manifest.get("run_name") or os.path.basename(run_dir.rstrip("/"))
     our_verd, qtype = ours_verdicts(run_data)
     qids = sorted(our_verd)
     their_verd = published_verdicts(pub_data) if pub_data else {}
+    gpt5_verd = published_verdicts(gpt5_data) if gpt5_data else {}
     matched_60 = [q for q in qids if q in their_verd]
+    matched_label = choice["label"] if choice["path"] else "matched"
+    matched_extraction = (
+        "parasail gpt-120b" if choice["file"] == "longmemeval_parasail_120b.json"
+        else "gpt-5" if choice["file"] == "longmemeval_gpt5.json"
+        else ((pub_data or {}).get("metadata", {}).get("project_name") or "not recorded")
+    )
 
     metrics = run_data.get("metrics_by_cutoff", {})
     pub_metrics = (pub_data or {}).get("metrics_by_cutoff", {}).get("top_200", {}) if pub_data else {}
@@ -286,35 +350,35 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data):
     lines.append("")
 
     # ---------- 1. setup ----------
-    lines.append("## 1. Setup — ours vs matched published run")
+    lines.append("## 1. Setup — ours vs the two published runs")
     lines.append("")
-    lines.append("`not recorded` = the published run's file does not state it.")
+    lines.append("`not recorded` = the published run's file does not state it. The published columns "
+                 "share the same answerer/judge (GPT-5) as ours; they differ in the **extraction** model.")
     lines.append("")
-    lines.append("| field | ours | " + (choice["label"] if choice["path"] else "published") + " |")
-    lines.append("|---|---|---|")
-    setup = [
-        ("extraction model", manifest.get("extraction_llm"),
-         "parasail gpt-120b" if choice["file"] == "longmemeval_parasail_120b.json"
-         else (pub_meta.get("project_name") or "not recorded")),
-        ("extraction provider", manifest.get("extraction_provider_pin"), "not recorded"),
-        ("reasoning", manifest.get("reasoning_effort"), "not recorded"),
-        ("extraction max_tokens", manifest.get("extraction_max_tokens"), "not recorded"),
-        ("embedder", manifest.get("embedder_label") or manifest.get("embedder"), "not recorded"),
-        ("embedding dims", manifest.get("embedding_dims"), "not recorded"),
-        ("answerer", manifest.get("answerer_model"), pub_meta.get("answerer_model") or "not recorded"),
-        ("judge", manifest.get("judge_model"), pub_meta.get("judge_model") or "not recorded"),
-        ("answerer/judge provider", manifest.get("provider"), pub_meta.get("provider") or "not recorded"),
-        ("top_k", manifest.get("top_k"), pub_meta.get("top_k") or "not recorded"),
-        ("cutoffs", manifest.get("top_k_cutoffs"),
-         ", ".join(pub_meta.get("top_k_cutoffs", [])) or "not recorded"),
-        ("Mem0 version", f"{manifest.get('mem0_ref')} ({(manifest.get('mem0_commit') or '')[:7]})", "not recorded"),
-        ("dataset", f"{os.path.basename(manifest.get('dataset_path', '') or '')} "
-                    f"(sha {str(manifest.get('dataset_sha256', ''))[:12]}…)",
-         f"{pub_meta.get('total_questions', 'not recorded')} questions"
-         + (" (all)" if pub_meta.get("all_questions") else "")),
-    ]
-    for field, ours, theirs in setup:
-        lines.append(f"| {field} | {ours if ours not in (None, '') else 'not recorded'} | {theirs} |")
+    ours_map = {
+        "extraction model": manifest.get("extraction_llm"),
+        "extraction provider": manifest.get("extraction_provider_pin"),
+        "reasoning": manifest.get("reasoning_effort"),
+        "extraction max_tokens": manifest.get("extraction_max_tokens"),
+        "embedder": manifest.get("embedder_label") or manifest.get("embedder"),
+        "embedding dims": manifest.get("embedding_dims"),
+        "answerer": manifest.get("answerer_model"),
+        "judge": manifest.get("judge_model"),
+        "answerer/judge provider": manifest.get("provider"),
+        "top_k": manifest.get("top_k"),
+        "cutoffs": manifest.get("top_k_cutoffs"),
+        "Mem0 version": f"{manifest.get('mem0_ref')} ({(manifest.get('mem0_commit') or '')[:7]})",
+        "dataset": f"{os.path.basename(manifest.get('dataset_path', '') or '')} "
+                   f"(sha {str(manifest.get('dataset_sha256', ''))[:12]}…)",
+    }
+    matched_col = pub_setup_col(pub_data, matched_extraction)
+    gpt5_col = pub_setup_col(gpt5_data, "gpt-5")
+    col_h = (matched_label if choice["path"] else "matched (none)")
+    lines.append(f"| field | ours | {col_h} | Mem0 gpt-5 run |")
+    lines.append("|---|---|---|---|")
+    for field, ours in ours_map.items():
+        o = ours if ours not in (None, "") else "not recorded"
+        lines.append(f"| {field} | {o} | {matched_col[field]} | {gpt5_col[field]} |")
     lines.append("")
 
     # ---------- 2. accuracy on same 60 ----------
@@ -325,19 +389,33 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data):
         "our 50/20/10 columns are our own retrieval-cutoff sweep (no published counterpart)."
     )
     lines.append("")
+    their_maps = {}
     if their_verd:
-        acc = accuracy_table(matched_60, qtype, our_verd, their_verd)
-        lines.append("| question type | ours @200 | theirs @200 | ours @50 | ours @20 | ours @10 |")
-        lines.append("|---|---|---|---|---|---|")
+        their_maps[matched_extraction] = their_verd
+    if gpt5_verd:
+        their_maps["gpt-5"] = gpt5_verd
+    if their_maps:
+        acc = accuracy_table(matched_60, qtype, our_verd, their_maps)
+        hdr = ["question type", "ours @200"]
+        if their_verd:
+            hdr.append(f"{matched_extraction} @200")
+        if gpt5_verd:
+            hdr.append("gpt-5 @200")
+        hdr += ["ours @50", "ours @20", "ours @10"]
+        lines.append("| " + " | ".join(hdr) + " |")
+        lines.append("|" + "---|" * len(hdr))
         for b in TYPES + ["overall"]:
             r = acc[b]
             label = "**overall**" if b == "overall" else b
-            lines.append(
-                f"| {label} | {_cell(r['top_200'])} | {_cell(r['their_top_200'])} | "
-                f"{_cell(r['top_50'])} | {_cell(r['top_20'])} | {_cell(r['top_10'])} |"
-            )
+            cells = [label, _cell(r["top_200"])]
+            if their_verd:
+                cells.append(_cell(r["their"][matched_extraction]))
+            if gpt5_verd:
+                cells.append(_cell(r["their"]["gpt-5"]))
+            cells += [_cell(r["top_50"]), _cell(r["top_20"]), _cell(r["top_10"])]
+            lines.append("| " + " | ".join(cells) + " |")
     else:
-        lines.append("_The matched published file has no per-question verdicts, so no same-set comparison is possible._")
+        lines.append("_No per-question published verdicts available, so no same-set comparison is possible._")
     lines.append("")
 
     # ---------- 3. published on all 500 ----------
@@ -409,12 +487,41 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data):
         lines.append(f"| search latency (avg over {len(facts['search_ms'])} searches) | "
                      f"{facts['search_ms_avg']} ms |" if facts["search_ms_avg"] is not None
                      else "| search latency | not measured |")
-        lines.append("| **cost (USD)** | _fill in from OpenRouter_ |")
     else:
         lines.append("_No mem0 trace found in the run folder._")
     lines.append("")
 
-    # ---------- 6. observations ----------
+    # ---------- 6. cost ----------
+    lines.append("## 6. Cost")
+    lines.append("")
+    lines.append("Source: OpenRouter and OpenAI billing pages, entered by Loubna.")
+    lines.append("")
+    n_q = len(qids) or 1
+    ex_label, ex_cost = COST["extraction"]
+    aj_label, aj_cost = COST["answer_judge"]
+    total = COST["total"]
+    lines.append("| component | model / provider | cost (USD) | per question (÷%d) |" % len(qids))
+    lines.append("|---|---|---|---|")
+    lines.append(f"| extraction | {ex_label} | ${ex_cost:.2f} | ${ex_cost / n_q:.4f} |")
+    lines.append(f"| answerer + judge | {aj_label} | ${aj_cost:.2f} | ${aj_cost / n_q:.4f} |")
+    lines.append(f"| **total** | | **${total:.2f}** | **${total / n_q:.4f}** |")
+    lines.append("")
+
+    # ---------- 7. large artifacts not committed ----------
+    big = large_artifacts(run_dir)
+    if big:
+        lines.append("## 7. Large artifacts not committed (over GitHub's 100 MB limit)")
+        lines.append("")
+        lines.append("These stay on the machine; recorded here by path / size / sha256 so they can "
+                     "be re-identified. Everything else in this folder is committed.")
+        lines.append("")
+        lines.append("| file | size | sha256 |")
+        lines.append("|---|---|---|")
+        for rel, sz, sha in big:
+            lines.append(f"| `{rel}` | {sz:,} bytes ({sz / 1e6:.1f} MB) | `{sha}` |")
+        lines.append("")
+
+    # ---------- observations ----------
     lines.append("## Observations")
     lines.append("")
     lines.append("<!-- written by hand -->")
@@ -435,8 +542,9 @@ def main():
     run_file, run_data = unified_results(run_dir)
     choice = published_choice(manifest)
     pub_data = load_json(choice["path"]) if choice["path"] else None
+    gpt5_data = load_json(GPT5_FILE) if os.path.exists(GPT5_FILE) else None
 
-    readme = build_readme(run_dir, manifest, run_file, run_data, choice, pub_data)
+    readme = build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_data)
     out = args.out or os.path.join(run_dir, "README.md")
     with open(out, "w", encoding="utf-8") as fh:
         fh.write(readme)

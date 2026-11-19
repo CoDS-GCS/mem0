@@ -246,6 +246,37 @@ def list_runs():
     return out
 
 
+def runs_add_calls():
+    """Measured add calls per run, grouped by question type + total — from traces only.
+
+    The home page uses this instead of any dataset-derived add-unit estimate: it is the
+    number of mem0.add() calls actually traced for each run. Runs with no trace are omitted.
+    """
+    out = []
+    for run in list_runs():
+        name, manifest = run["name"], run["manifest"]
+        run_dir = os.path.join(RUNS_DIR, name)
+        try:
+            agg = trace_index.aggregate(run_dir) if trace_index.supported(run_dir) else _aggregate_traces(run_dir)
+        except Exception:
+            continue
+        per_q = agg.get("per_q", {})
+        meta = _question_meta(set(per_q))
+        by_type, total, nq = {}, 0, 0
+        for qid, mq in per_q.items():
+            ac = mq.get("add_calls") or 0
+            if ac <= 0:
+                continue
+            total += ac
+            nq += 1
+            t = meta.get(qid, {}).get("question_type") or "(other)"
+            by_type[t] = by_type.get(t, 0) + ac
+        if total:
+            out.append({"name": name, "extraction_llm": manifest.get("extraction_llm"),
+                        "by_type": by_type, "total": total, "n_questions": nq})
+    return out
+
+
 def _predict_dir(run_dir):
     hits = sorted(glob.glob(os.path.join(run_dir, "predicted_*")))
     return hits[0] if hits else None

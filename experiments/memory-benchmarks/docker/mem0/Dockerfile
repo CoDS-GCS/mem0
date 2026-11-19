@@ -17,6 +17,18 @@ RUN python -m spacy download en_core_web_sm
 RUN sed -i 's/"aws_bedrock",/"aws_bedrock", "sagemaker", "tei_local",/' \
     /usr/local/lib/python3.12/site-packages/mem0/embeddings/configs.py
 
+# Pin ONE OpenRouter provider (no fallbacks) for extraction. mem0 @ 94c3fe9 can route to
+# OpenRouter but has no config path for OpenRouter's `provider` routing object, so we inject
+# it into the installed OpenAILLM.generate_response right before the create() call. Runtime-
+# gated on OPENROUTER_API_KEY + OPENROUTER_PROVIDER, so the default (OpenAI/gpt-5) path is
+# untouched. The anchor line is identical across the mem0 refs we build (94c3fe9 and
+# code/session-date). sed cannot fail on a missing match, so grep-verify and fail the build
+# loudly if the patch did not apply.
+RUN F=/usr/local/lib/python3.12/site-packages/mem0/llms/openai.py && \
+    sed -i '/response = self.client.chat.completions.create(\*\*params)/i\        if os.getenv("OPENROUTER_API_KEY") and os.getenv("OPENROUTER_PROVIDER"):\n            params["extra_body"] = {"provider": {"only": [os.getenv("OPENROUTER_PROVIDER")], "allow_fallbacks": False}}' "$F" && \
+    grep -q 'params\["extra_body"\] = {"provider": {"only": \[os.getenv("OPENROUTER_PROVIDER")\]' "$F" || \
+    { echo "ERROR: OpenRouter provider-pin patch did not apply to $F (mem0 source changed?)" >&2; exit 1; }
+
 # History directory
 RUN mkdir -p /app/history
 

@@ -64,6 +64,8 @@ async function renderHome() {
   crumbs([{ label: "home" }]);
   const d = await api("/api/overview");
   const t = d.totals, o = d.overlap;
+  // Dataset counts only — question + abstention + sessions. No add-unit figure here is
+  // computed from the dataset; add counts come from what runs actually added (below).
   const cards = d.types.map((x) => `
     <div class="card click" onclick="location.hash='#/type/${encodeURIComponent(x.type)}'">
       <h3>${esc(x.type)}</h3>
@@ -71,8 +73,6 @@ async function renderHome() {
         <span><b>${num(x.count)}</b> questions</span>
         <span><b>${num(x.abstention)}</b> abstention</span>
         <span>mean <b>${f1(x.mean_sessions)}</b> sessions</span>
-        <span>mean <b>${f1(x.mean_add_units)}</b> add-units</span>
-        <span><b>${num(x.total_add_units)}</b> total adds</span>
       </div>
     </div>`).join("");
 
@@ -81,12 +81,15 @@ async function renderHome() {
     <p class="statline">
       <span class="dim">(dataset)</span>
       <b>${num(t.questions)}</b> questions · <b>${num(t.abstention)}</b> abstention ·
-      overall mean <b>${f1(t.mean_add_units)}</b> add-units/question ·
-      <b>${num(t.total_add_units)}</b> total add-units across the dataset
+      overall mean <b>${f1(t.mean_sessions)}</b> sessions/question
     </p>
-    <h2>Question types</h2>
+    <h2>Question types <span class="dim" style="font-size:.9rem">(dataset)</span></h2>
     <div class="grid">${cards}</div>
-    <h2>Session overlap</h2>
+
+    <h2>Add calls actually made <span class="dim" style="font-size:.9rem">(measured, per run — from traces)</span></h2>
+    <div id="runAdds"><div class="card dim">loading measured add calls…</div></div>
+
+    <h2>Session overlap <span class="dim" style="font-size:.9rem">(dataset)</span></h2>
     <div class="card"><div class="kpi">
       <span><b>${num(o.unique_sessions)}</b> unique sessions</span>
       <span><b>${num(o.total_links)}</b> (question, session) links</span>
@@ -96,8 +99,67 @@ async function renderHome() {
     </div>
     <p class="dim" style="margin:.6rem 0 0">A session's turns are identical across haystacks, but its
     date &amp; evidence status are per-haystack.</p></div>
+
+    ${homeNote()}
+
     <p class="dim" style="margin-top:1rem">Index built ${esc(d.meta.built_at || "")} from
     <span class="mono">${esc(d.meta.dataset_path || "")}</span>.</p>`;
+
+  renderRunAdds();
+}
+
+async function renderRunAdds() {
+  const host = document.getElementById("runAdds");
+  if (!host) return;
+  let d;
+  try { d = await api("/api/home/runs_add_calls"); }
+  catch (e) { host.innerHTML = `<div class="card dim">measured add calls unavailable: ${esc(e.message)}</div>`; return; }
+  if (!d.runs.length) {
+    host.innerHTML = `<div class="card dim">No traced runs under <span class="mono">experiments/runs/</span> yet.</div>`;
+    return;
+  }
+  // Union of types across runs, in a stable order.
+  const typeSet = new Set();
+  d.runs.forEach((r) => Object.keys(r.by_type).forEach((k) => typeSet.add(k)));
+  const types = [...typeSet].sort();
+  const head = `<th>run</th><th class="dim">extraction</th>` +
+    types.map((ty) => `<th class="num">${esc(ty)}</th>`).join("") +
+    `<th class="num">total</th>`;
+  const body = d.runs.map((r) => `
+    <tr class="click" onclick="location.hash='#/run/${encodeURIComponent(r.name)}'">
+      <td class="mono">${esc(r.name)}</td>
+      <td class="dim">${esc(r.extraction_llm || "")}</td>
+      ${types.map((ty) => `<td class="num">${num(r.by_type[ty] || 0)}</td>`).join("")}
+      <td class="num"><b>${num(r.total)}</b></td>
+    </tr>`).join("");
+  host.innerHTML = `<div class="card"><table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>
+    <p class="dim" style="margin:.5rem 0 0">Each cell is the number of <span class="mono">mem0.add()</span>
+    calls traced for that run and question type — what was really added, not a dataset estimate.</p></div>`;
+}
+
+function homeNote() {
+  return `<div class="card" style="margin-top:1rem">
+    <h3>How Mem0 is run on LongMemEval</h3>
+    <p>Each question comes with its own chat history (its haystack: dated user-assistant
+    sessions). Questions are handled independently, several at a time:</p>
+    <ol>
+      <li><b>Add:</b> the question gets its own empty memory space. Its sessions go to Mem0 in
+        date order, one user→assistant turn-pair per <span class="mono">add()</span> call. Each call is one LLM
+        extraction that turns the pair into memories, stored in Qdrant with Qwen
+        embeddings. Default Mem0 (94c3fe9) does not pass the session date; the
+        session-date branch does.</li>
+      <li><b>Search:</b> once the whole haystack is in, Mem0 is searched once with the question
+        (top 200 memories, scored on meaning, keywords and entities).</li>
+      <li><b>Answer:</b> for each cutoff (200, 50, 20, 10), the top memories in date order plus
+        the question date go to the answerer.</li>
+      <li><b>Judge:</b> the judge compares each answer with the gold answer.</li>
+    </ol>
+    <p>Unlike LoCoMo, where one conversation is added once and all its questions search
+    the same memories, LongMemEval adds a full haystack for every question. Sessions
+    that appear in several haystacks are added again each time, because each question
+    has its own memory space and the same session carries a different date in each
+    haystack.</p>
+  </div>`;
 }
 
 // ---- type page ------------------------------------------------------------

@@ -4,3 +4,7 @@ data/*.json
 
 # Monitor index (built locally from the pinned dataset) — regenerated on demand.
 monitor/longmemeval.sqlite
+
+# Monitor run-trace index (incremental byte-offset cache over experiments/runs/*
+# traces, rebuilt on demand) — large and run-specific, never committed.
+monitor/cache/
