@@ -7,6 +7,17 @@ const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) =>
   ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const num = (n) => (n == null ? "—" : Number(n).toLocaleString());
 const f1 = (n) => (n == null ? "—" : Number(n).toFixed(1));
+// compact token/count: 1234 -> 1.2k, 1234567 -> 1.23M
+const kmg = (n) => {
+  if (n == null) return "—";
+  n = Number(n);
+  if (Math.abs(n) >= 1e6) return (n / 1e6).toFixed(2) + "M";
+  if (Math.abs(n) >= 1e3) return (n / 1e3).toFixed(1) + "k";
+  return String(n);
+};
+const ms2s = (ms) => (ms == null ? "—" : (ms >= 60000
+  ? `${Math.floor(ms / 3600000)}h${Math.floor((ms % 3600000) / 60000)}m`
+  : `${(ms / 1000).toFixed(1)}s`));
 
 async function api(path) {
   const r = await fetch(path);
@@ -68,9 +79,10 @@ async function renderHome() {
   app().innerHTML = `
     <h1>LongMemEval dataset <span class="dim" style="font-size:1rem">(longmemeval_s_cleaned)</span></h1>
     <p class="statline">
+      <span class="dim">(dataset)</span>
       <b>${num(t.questions)}</b> questions · <b>${num(t.abstention)}</b> abstention ·
       overall mean <b>${f1(t.mean_add_units)}</b> add-units/question ·
-      <b>${num(t.total_add_units)}</b> total add-units if the whole set is ingested
+      <b>${num(t.total_add_units)}</b> total add-units across the dataset
     </p>
     <h2>Question types</h2>
     <div class="grid">${cards}</div>
@@ -385,30 +397,58 @@ async function renderRunBoard(name) {
     try { d = await api(`/api/run/${encodeURIComponent(name)}/board`); }
     catch (e) { clearTimer(); app().innerHTML = `<div class="card">Error: ${esc(e.message)}</div>`; return; }
     const cutoffHdr = d.cutoffs.map((c) => `<th>${esc(c.replace("top_", "J@"))}</th>`).join("");
+    const pubLabel = (d.published && d.published.label) || "published";
+    const pubShort = pubLabel.replace(/^Mem0 /, "Mem0<br>");
     const rows = d.rows.map((r) => {
       const pct = r.adds_total ? Math.round(100 * r.adds_done / r.adds_total) : 0;
       const bar = `<div class="bar"><div class="fill" style="width:${pct}%"></div>
         <span class="barlab">${r.adds_done}/${r.adds_total}</span></div>`;
       const verds = d.cutoffs.map((c) => `<td>${verdictPill(r.verdicts[c])}</td>`).join("");
+      const me = r.measured || {};
+      const fail = me.add_failed ? ` <span style="color:#c0392b">+${me.add_failed}✗</span>` : "";
+      const badExt = (me.cutoffs || 0) + (me.parse_fail || 0);
+      const cutCell = badExt
+        ? `<span style="color:#c0392b">${me.cutoffs || 0}/${me.parse_fail || 0}</span>` : "0/0";
       return `<tr class="click" onclick="location.hash='#/run/${encodeURIComponent(name)}/q/${encodeURIComponent(r.question_id)}'">
         <td class="mono">${esc(r.question_id)}${r.is_abstention ? ' <span class="badge abs">ABS</span>' : ""}</td>
         <td>${esc(r.question_type || "")}</td>
         <td><span class="stage s-${r.stage.split(" ")[0]}">${esc(r.stage)}</span></td>
-        <td>${bar}</td>${verds}
-        <td>${verdictPill(r.mem0_gpt5_verdict)}</td>
+        <td>${bar}</td>
+        <td class="num">${kmg(me.add_calls)}${fail}</td>
+        <td class="num">${kmg(me.mem_stored)}</td>
+        <td class="num">${kmg(me.tok_in)}/${kmg(me.tok_out)}</td>
+        <td class="num">${cutCell}</td>
+        <td class="num">${me.search_ms != null ? Math.round(me.search_ms) + "ms" : "—"}</td>
+        <td class="num">${ms2s(me.wall_ms)}</td>
+        ${verds}
+        <td>${verdictPill(r.published_verdict)}</td>
       </tr>`;
     }).join("");
     const live = d.running
       ? `<span class="pill live">● LIVE</span> auto-refresh 3s`
       : `<span class="dim">idle</span>`;
+    const ex = d.extraction || {};
+    const exColor = ((ex.cutoffs || 0) + (ex.parse_fail || 0) + (ex.errors || 0)) > 0 ? "#c0392b" : "#2e7d32";
+    const exBadge = `<span style="font-size:.8rem;color:${exColor}" title="measured from the mem0 trace — cut off = finish_reason=length (hit max_tokens); parse✗ = output not valid JSON; err = LLM error">· measured: ${num(ex.add_calls)} add calls${ex.add_failed ? " (" + ex.add_failed + " no-resp)" : ""}, ${num(ex.mem_stored)} mems, ${kmg(ex.tok_in)}/${kmg(ex.tok_out)} tok in/out, ${ex.cutoffs || 0} cut off, ${ex.parse_fail || 0} parse✗, ${ex.errors || 0} err · wall ${ms2s(ex.wall_ms)}</span>`;
+    const pubUsed = d.published && d.published.path
+      ? `<div class="embcmp"><span class="dim">compared vs —</span> <b>${esc(pubLabel)}</b>
+          <span class="mono dim">(${esc(d.published.file)})</span>, matched to extraction model
+          <b>${esc(d.published.model)}</b></div>`
+      : `<div class="embcmp"><span class="dim">compared vs —</span> <b>no published row</b>
+          for extraction model <b>${esc((d.published && d.published.model) || "?")}</b></div>`;
     app().innerHTML = `
-      <h1>${esc(name)} <span class="dim" style="font-size:.9rem">${d.counts.done}/${d.counts.total} judged · ${live}</span>
+      <h1>${esc(name)} <span class="dim" style="font-size:.9rem">${d.counts.done}/${d.counts.total} judged · ${live} ${exBadge}</span>
         <a class="btn" href="#/runs" style="float:right">← runs</a>
         <button class="btn" style="float:right;margin-right:.4rem" onclick="showSummary('${esc(name)}')">summary ▾</button></h1>
       ${manifestBar(d.manifest)}
+      ${pubUsed}
+      <p class="dim" style="margin:.3rem 0">Per-question numbers below are <b>measured from this run's traces</b>
+        — add calls (✗ = no response), memories stored, extraction tokens (in/out), cut-offs/parse✗,
+        search latency, and wall time. "add progress" is against the dataset's planned add-units.</p>
       <div id="summaryHost"></div>
       <table><thead><tr><th>question_id</th><th>type</th><th>stage</th><th>add progress</th>
-        ${cutoffHdr}<th>Mem0 gpt5<br><span class="dim">(top_200)</span></th></tr></thead>
+        <th>add<br>calls</th><th>mems</th><th>tok<br>in/out</th><th>cut/<br>parse✗</th><th>search</th><th>wall</th>
+        ${cutoffHdr}<th>${pubShort}<br><span class="dim">(top_200)</span></th></tr></thead>
       <tbody>${rows}</tbody></table>`;
     if (!d.running) clearTimer();
   }
@@ -425,18 +465,42 @@ async function showSummary(name) {
   host.innerHTML = `<div class="card dim">loading summary…</div>`;
   const d = await api(`/api/run/${encodeURIComponent(name)}/summary`);
   const cuts = d.cutoffs;
+  const pubLabel = (d.published && d.published.label) || "published";
   const head = `<th>type</th>` + cuts.map((c) => `<th>ours ${esc(c.replace("top_", "@"))}</th>`).join("") +
-    `<th>Mem0 gpt5 @200</th>`;
+    `<th>${esc(pubLabel)} @200</th>`;
   const cell = (o) => (o && o.pct != null ? `${o.pct}% <span class="dim">(${o.n})</span>` : "—");
   const body = d.by_type.map((t) =>
     `<tr><td>${esc(t.type)}</td>` + cuts.map((c) => `<td>${cell(t.ours[c])}</td>`).join("") +
-    `<td>${cell(t.mem0_gpt5_top200)}</td></tr>`).join("");
+    `<td>${cell(t.published_top200)}</td></tr>`).join("");
   const ov = `<tr class="total"><td><b>overall</b></td>` +
     cuts.map((c) => `<td><b>${cell(d.overall.ours[c])}</b></td>`).join("") +
-    `<td><b>${cell(d.overall.mem0_gpt5_top200)}</b></td></tr>`;
-  host.innerHTML = `<div class="card"><h3>Summary — J per type per cutoff (ours vs Mem0 published gpt-5)</h3>
+    `<td><b>${cell(d.overall.published_top200)}</b></td></tr>`;
+
+  // Measured per type + total (from the trace, never projected).
+  const mhead = `<th>type</th><th>add calls</th><th>no-resp</th><th>mems stored</th>
+    <th>tok in</th><th>tok out</th><th>tok total</th><th>cut off</th><th>parse✗</th><th>search avg</th>`;
+  const mrow = (label, m, bold) => {
+    const b = bold ? "<b>" : "", e = bold ? "</b>" : "";
+    const bad = (n, red) => (red && n ? `<span style="color:#c0392b">${num(n)}</span>` : num(n));
+    return `<tr${bold ? ' class="total"' : ""}><td>${b}${esc(label)}${e}</td>
+      <td class="num">${num(m.add_calls)}</td><td class="num">${bad(m.add_failed, true)}</td>
+      <td class="num">${num(m.mem_stored)}</td>
+      <td class="num">${num(m.tok_in)}</td><td class="num">${num(m.tok_out)}</td><td class="num">${num(m.tok_total)}</td>
+      <td class="num">${bad(m.cutoffs, true)}</td><td class="num">${bad(m.parse_fail, true)}</td>
+      <td class="num">${m.search_ms_avg != null ? Math.round(m.search_ms_avg) + "ms" : "—"}</td></tr>`;
+  };
+  const mbody = d.by_type.map((t) => mrow(t.type, t.measured, false)).join("");
+  const mov = mrow("overall", d.overall.measured, true);
+  const wall = d.overall.measured && d.overall.measured.wall_ms;
+
+  host.innerHTML = `<div class="card"><h3>Accuracy — judge PASS per type per cutoff (ours vs ${esc(pubLabel)})</h3>
     <table><thead><tr>${head}</tr></thead><tbody>${body}${ov}</tbody></table>
-    <p class="dim" style="margin:.5rem 0 0">${esc(d.note)}</p></div>`;
+    <p class="dim" style="margin:.5rem 0 0">${esc(d.note)}</p>
+    <h3 style="margin-top:1rem">Measured per type + total (from the run's traces)</h3>
+    <table><thead><tr>${mhead}</tr></thead><tbody>${mbody}${mov}</tbody></table>
+    <p class="dim" style="margin:.5rem 0 0">Whole-run wall time (first→last trace event): <b>${ms2s(wall)}</b>.
+      Reasoning tokens are folded into "tok out" (GPT-OSS does not break them out). Per-question wall
+      time is in the board; it is not summed here because questions run in parallel.</p></div>`;
 }
 
 function panelText(s, max = 1500) {
@@ -447,12 +511,12 @@ function panelText(s, max = 1500) {
     `<span class="more" onclick="showMore(this)">… show more</span></pre>`;
 }
 
-async function renderRunQuestion(name, qid) {
+async function renderRunQuestion(name, qid, page = 0) {
   crumbs([{ label: "home", href: "#/" }, { label: "runs", href: "#/runs" },
           { label: name, href: `#/run/${encodeURIComponent(name)}` }, { label: qid }]);
-  const d = await api(`/api/run/${encodeURIComponent(name)}/question/${encodeURIComponent(qid)}`);
+  const d = await api(`/api/run/${encodeURIComponent(name)}/question/${encodeURIComponent(qid)}?page=${page}&page_size=25`);
 
-  // ADD panel
+  // ADD panel (paginated — this page's add-units only)
   const addRows = (d.add || []).map((a, i) => {
     const sess = a.session_id
       ? `<a href="#/s/${encodeURIComponent(a.session_id)}" title="dataset session">${esc(a.session_id)}</a>${a.is_evidence ? ' <span class="badge ev">EVIDENCE</span>' : ""}`
@@ -460,7 +524,7 @@ async function renderRunQuestion(name, qid) {
     const mems = (a.stored_memories || []).map((m) =>
       `<li>[${esc(m.event || "")}] ${esc(m.memory || "")}</li>`).join("") || "<li class='dim'>none</li>";
     const tu = a.token_usage ? `${a.token_usage.total_tokens} tok` : "—";
-    return `<details class="addunit"><summary>add #${i + 1} · ${sess}
+    return `<details class="addunit"><summary>add #${a.n ?? i + 1} · ${sess}
       · ts sent <span class="mono">${a.timestamp_sent ?? "—"}</span> · ${tu}
       · ${a.add_latency_ms != null ? Math.round(a.add_latency_ms) + "ms" : "—"}</summary>
       <div class="pcol"><b>messages sent</b>${panelText((a.messages || []).map((m) => m.role + ": " + m.content).join("\n\n"))}</div>
@@ -500,6 +564,22 @@ async function renderRunQuestion(name, qid) {
     `<tr><td>${esc(j.cutoff)}</td><td>${verdictPill(j.verdict)}</td>
       <td><div class="cellclip">${esc(j.judge_raw || "")}</div></td></tr>`).join("");
 
+  // ADD pager
+  const addTotal = d.add_total ?? (d.add || []).length;
+  const addPs = d.add_page_size ?? 25;
+  const addPg = d.add_page ?? 0;
+  const nPages = Math.max(1, Math.ceil(addTotal / addPs));
+  const lo = addTotal ? addPg * addPs + 1 : 0;
+  const hi = Math.min(addTotal, (addPg + 1) * addPs);
+  const goto = (p) => `gotoAddPage('${esc(name)}','${esc(qid)}',${p})`;
+  const pager = nPages > 1
+    ? `<div class="toolbar">
+        <button class="btn" ${addPg <= 0 ? "disabled" : ""} onclick="${goto(addPg - 1)}">← prev</button>
+        <span class="dim">add-units ${lo}–${hi} of ${addTotal} · page ${addPg + 1}/${nPages}</span>
+        <button class="btn" ${addPg >= nPages - 1 ? "disabled" : ""} onclick="${goto(addPg + 1)}">next →</button>
+      </div>`
+    : "";
+
   app().innerHTML = `
     <div class="card">
       <h1 class="mono">${esc(qid)} ${d.is_abstention ? '<span class="badge abs">ABSTENTION</span>' : ""}
@@ -508,11 +588,12 @@ async function renderRunQuestion(name, qid) {
         · ${d.n_add_units} add-units · ${d.n_evidence} evidence session(s)</div>
       <div style="margin:.3rem 0">${esc(d.question || "")}</div>
       <div class="answer"><b>gold:</b> ${esc(d.gold_answer || "")}</div>
-      <div class="qmeta" style="margin-top:.4rem"><b>Mem0 published gpt-5 (${esc(d.mem0_gpt5.cutoff || "top_200")}):</b>
-        ${verdictPill(d.mem0_gpt5.verdict)} — ${esc(d.mem0_gpt5.answer || "—")}</div>
+      <div class="qmeta" style="margin-top:.4rem"><b>${esc((d.published && d.published.label) || "published")} (${esc(d.published_result.cutoff || "top_200")}):</b>
+        ${verdictPill(d.published_result.verdict)} — ${esc(d.published_result.answer || "—")}</div>
     </div>
 
-    <h2>① ADD <span class="dim">— ${(d.add || []).length} add-units (click to expand)</span></h2>${addRows}
+    <h2>① ADD <span class="dim">— ${addTotal} add-units (click to expand)</span></h2>
+    ${pager}${addRows}${pager}
     <h2>② SEARCH <span class="dim">— top-200 candidates, evidence highlighted</span></h2>
       <div class="card">${searchHtml}</div>
     <h2>③ ANSWER <span class="dim">— per cutoff</span></h2>${ans || '<div class="dim">No ANSWER trace yet.</div>'}
@@ -521,8 +602,16 @@ async function renderRunQuestion(name, qid) {
       <tbody>${jud || ""}</tbody></table></div>`;
 }
 
+function gotoAddPage(name, qid, p) {
+  renderRunQuestion(name, qid, p).catch((e) => {
+    app().innerHTML = `<div class="card"><b>Error.</b> ${esc(e.message)}</div>`;
+  });
+  window.scrollTo({ top: 0 });
+}
+
 // expose handlers used in inline onclick
 window.toggleSession = toggleSession;
 window.jumpTo = jumpTo;
 window.showMore = showMore;
 window.showSummary = showSummary;
+window.gotoAddPage = gotoAddPage;

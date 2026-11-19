@@ -17,6 +17,7 @@ Nothing here writes, runs, or imports the benchmark.
 
 from __future__ import annotations
 
+import datetime as dt
 import glob
 import gzip
 import json
@@ -25,11 +26,13 @@ import random
 import sqlite3
 import time
 
+import trace_index
+
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _EXP = os.path.dirname(_HERE)
 RUNS_DIR = os.path.join(_EXP, "runs")
 DB_PATH = os.environ.get("LME_DB", os.path.join(_HERE, "longmemeval.sqlite"))
-PUBLISHED_GPT5 = os.path.join(_EXP, "memory-benchmarks", "results", "oss", "longmemeval_gpt5.json")
+PUBLISHED_DIR = os.path.join(_EXP, "memory-benchmarks", "results", "oss")
 
 CUTOFFS = [200, 50, 20, 10]
 
@@ -169,18 +172,40 @@ def _evidence_pairs(qid):
     return out
 
 
-# --------------------------------------------------------------------------- published gpt5
-_PUB = {"mtime": None, "map": {}}
+# --------------------------------------------------------------------------- published (like-with-like)
+def published_choice(manifest):
+    """Pick the published OSS result file whose extraction model matches this run.
+
+    Compare like with like: a GPT-OSS-120B run is judged against Mem0's "parasail
+    gpt-120b" file, a gpt-5 run against their gpt5 file, anything else gets no row.
+    Returns {"path", "file", "label", "model"}; path is None when nothing matches.
+    """
+    m = ((manifest or {}).get("extraction_llm") or "").lower()
+    if "120b" in m or "gpt-oss" in m or "oss-120" in m:
+        f, label = "longmemeval_parasail_120b.json", "Mem0 parasail gpt-120b"
+    elif m in ("gpt-5", "gpt5") or m.startswith("gpt-5"):
+        f, label = "longmemeval_gpt5.json", "Mem0 gpt-5"
+    else:
+        return {"path": None, "file": None, "label": "no published row", "model": m}
+    path = os.path.join(PUBLISHED_DIR, f)
+    return {"path": path if os.path.exists(path) else None, "file": f, "label": label, "model": m}
 
 
-def published_map():
+_PUB = {}  # path -> {"mtime", "map"}
+
+
+def published_map(path):
+    """question_id -> published top_200 verdict for the given file (cached on mtime)."""
+    if not path:
+        return {}
     try:
-        mt = os.path.getmtime(PUBLISHED_GPT5)
+        mt = os.path.getmtime(path)
     except OSError:
         return {}
-    if _PUB["mtime"] == mt:
-        return _PUB["map"]
-    data = _load_json(PUBLISHED_GPT5) or {}
+    cached = _PUB.get(path)
+    if cached and cached["mtime"] == mt:
+        return cached["map"]
+    data = _load_json(path) or {}
     m = {}
     for e in data.get("evaluations", []):
         cr = e.get("cutoff_results")
@@ -194,8 +219,7 @@ def published_map():
             "judge_raw": top.get("judge_raw"),
             "cutoff": "top_200",
         }
-    _PUB["mtime"] = mt
-    _PUB["map"] = m
+    _PUB[path] = {"mtime": mt, "map": m}
     return m
 
 
@@ -258,24 +282,122 @@ def _trace_sig(run_dir):
     return tuple(sig)
 
 
+def _iso_s(a, b):
+    """Seconds between two ISO-8601 time strings, or None if either is unparseable."""
+    try:
+        return (dt.datetime.fromisoformat(b) - dt.datetime.fromisoformat(a)).total_seconds()
+    except (ValueError, TypeError):
+        return None
+
+
+def _blank_q():
+    return {"add_calls": 0, "add_resp": 0, "mem_stored": 0, "tok_in": 0, "tok_out": 0,
+            "tok_total": 0, "cutoffs": 0, "parse_fail": 0, "errors": 0, "search_ms": 0.0,
+            "first": None, "last": None}
+
+
+def _finalize_per_q(per):
+    """Turn raw per-qid accumulators into the measured shape the UI renders."""
+    out = {}
+    for qid, d in per.items():
+        wall = _iso_s(d["first"], d["last"])
+        out[qid] = {
+            "add_calls": d["add_calls"], "add_resp": d["add_resp"],
+            "add_failed": max(0, d["add_calls"] - d["add_resp"]),
+            "mem_stored": d["mem_stored"],
+            "tok_in": d["tok_in"], "tok_out": d["tok_out"], "tok_total": d["tok_total"],
+            "cutoffs": d["cutoffs"], "parse_fail": d["parse_fail"], "errors": d["errors"],
+            "search_ms": round(d["search_ms"], 1) if d["search_ms"] else None,
+            "wall_ms": round(wall * 1000, 1) if wall is not None else None,
+        }
+    return out
+
+
 def _aggregate_traces(run_dir):
-    """Per-qid live progress from the server + eval traces. Cached on file sizes."""
+    """Per-qid measured metrics from the server + eval traces. Cached on file sizes.
+
+    Everything here is counted from the trace, never projected: add calls / failures,
+    memories stored, extraction tokens (input/output/total), cut-offs, parse failures,
+    per-question search latency and wall time. GPT-OSS reasoning tokens are not broken
+    out by the API, so only input/output/total are reported.
+    """
     sig = _trace_sig(run_dir)
     cached = _TRACE_CACHE.get(run_dir)
     if cached and cached["sig"] == sig:
         return cached["data"]
 
     adds_done, searched, answered, judged = {}, {}, {}, {}
+    # Global extraction health + token totals. 0 cut-offs / 0 parse-fail is healthy.
+    extraction = {"calls": 0, "cutoffs": 0, "parse_fail": 0, "errors": 0,
+                  "tok_in": 0, "tok_out": 0, "tok_total": 0,
+                  "add_calls": 0, "add_resp": 0, "mem_stored": 0, "reasoning_recorded": False}
+    span = {"first": None, "last": None}
+    per = {}
+
+    def pq(qid):
+        d = per.get(qid)
+        if d is None:
+            d = _blank_q()
+            per[qid] = d
+        return d
+
     mp = _trace_path(run_dir, "mem0_trace.jsonl")
     for o in iter_events(mp):
+        comp, op = o.get("component"), o.get("operation")
         qid, _ = split_user_id(o.get("user_id") or "")
+        gt = o.get("time")
+        if gt:
+            if span["first"] is None:
+                span["first"] = gt
+            span["last"] = gt
+        if comp == "llm" and op == "generate_response":
+            out = o.get("outputs") or {}
+            tu = out.get("token_usage") or {}
+            pi, co, to = tu.get("prompt_tokens") or 0, tu.get("completion_tokens") or 0, tu.get("total_tokens") or 0
+            extraction["calls"] += 1
+            extraction["tok_in"] += pi
+            extraction["tok_out"] += co
+            extraction["tok_total"] += to
+            if any("reason" in k.lower() for k in tu):
+                extraction["reasoning_recorded"] = True
+            cut = out.get("finish_reason") == "length"
+            pf = out.get("parse_ok") is False
+            er = bool(out.get("error"))
+            if cut:
+                extraction["cutoffs"] += 1
+            if pf:
+                extraction["parse_fail"] += 1
+            if er:
+                extraction["errors"] += 1
+            if qid:
+                d = pq(qid)
+                d["tok_in"] += pi
+                d["tok_out"] += co
+                d["tok_total"] += to
+                d["cutoffs"] += 1 if cut else 0
+                d["parse_fail"] += 1 if pf else 0
+                d["errors"] += 1 if er else 0
         if not qid:
             continue
-        comp, op = o.get("component"), o.get("operation")
-        if comp == "entry" and op == "add.response":
+        d = pq(qid)
+        t = o.get("time")
+        if d["first"] is None:
+            d["first"] = t
+        d["last"] = t
+        if comp == "entry" and op == "add.request":
+            extraction["add_calls"] += 1
+            d["add_calls"] += 1
+        elif comp == "entry" and op == "add.response":
             adds_done[qid] = adds_done.get(qid, 0) + 1
+            res = (o.get("outputs") or {}).get("results") or []
+            extraction["add_resp"] += 1
+            extraction["mem_stored"] += len(res)
+            d["add_resp"] += 1
+            d["mem_stored"] += len(res)
         elif comp == "entry" and op == "search.request":
             searched[qid] = True
+        elif comp == "entry" and op == "search.response":
+            d["search_ms"] += o.get("duration_ms") or 0.0
 
     ep = _trace_path(run_dir, "eval_trace.jsonl")
     for o in iter_events(ep):
@@ -293,7 +415,11 @@ def _aggregate_traces(run_dir):
         elif comp == "mem0_client" and o.get("operation") == "search":
             searched[qid] = True
 
-    data = {"adds_done": adds_done, "searched": searched, "answered": answered, "judged": judged}
+    extraction["add_failed"] = max(0, extraction["add_calls"] - extraction["add_resp"])
+    run_wall = _iso_s(span["first"], span["last"])
+    extraction["wall_ms"] = round(run_wall * 1000, 1) if run_wall is not None else None
+    data = {"adds_done": adds_done, "searched": searched, "answered": answered,
+            "judged": judged, "extraction": extraction, "per_q": _finalize_per_q(per)}
     _TRACE_CACHE[run_dir] = {"sig": sig, "data": data}
     return data
 
@@ -304,8 +430,12 @@ def board(name):
     manifest = _load_json(os.path.join(run_dir, "manifest.json")) or {}
     planned = reproduce_sample(manifest)
     predict = _predict_files(run_dir)
-    agg = _aggregate_traces(run_dir)
-    pub = published_map()
+    # Live runs: answer from the incremental index (reads only newly-appended bytes).
+    # Finished runs (trace gzipped) fall back to the legacy full scan.
+    agg = trace_index.aggregate(run_dir) if trace_index.supported(run_dir) else _aggregate_traces(run_dir)
+    choice = published_choice(manifest)
+    pub = published_map(choice["path"])
+    per_q = agg.get("per_q", {})
 
     # Include any qids seen in predictions/traces but not in the reproduced sample.
     planned_ids = [r["question_id"] for r in planned]
@@ -348,10 +478,11 @@ def board(name):
             "is_abstention": bool(m.get("is_abstention")),
             "stage": stage,
             "adds_done": done,
-            "adds_total": total,
+            "adds_total": total,          # dataset target (planned add-units)
             "verdicts": verdicts,
-            "mem0_gpt5_verdict": p.get("judgment"),
-            "mem0_gpt5_cutoff": p.get("cutoff"),
+            "measured": per_q.get(qid, {}),   # add calls/fail, mem stored, tokens, search, wall
+            "published_verdict": p.get("judgment"),
+            "published_cutoff": p.get("cutoff"),
         })
 
     running = any(r["stage"] not in ("judged", "queued") for r in rows)
@@ -360,6 +491,8 @@ def board(name):
         "name": name, "manifest": manifest,
         "cutoffs": [f"top_{c}" for c in CUTOFFS],
         "counts": {"total": len(rows), "done": done_n},
+        "extraction": agg.get("extraction", {}),
+        "published": choice,
         "running": running,
         "rows": rows,
     }
@@ -392,15 +525,40 @@ def _server_ops_for(run_dir, qid):
     return adds, add_order, search_req, scoring
 
 
-def question_pipeline(name, qid):
+def _collect_ops(run_dir, qid, page, page_size):
+    """Normalize one question's server + eval events across the fast and legacy paths.
+
+    Fast path (live run, plain trace): the index gives us byte offsets, so we read only
+    this question's events — all (small) requests/responses for correct SEARCH tagging,
+    but only the current page's (large) extraction llm lines. Legacy path (gzipped,
+    finished run): one full scan, all add-units on a single page.
+    """
+    if trace_index.supported(run_dir):
+        io = trace_index.question_ops(run_dir, qid, page, page_size)
+        if io is None:
+            return {}, [], [], None, None, [], 0, 0, page_size
+        adds = {rid: {"request": io["requests"].get(rid), "llm": io["llm"].get(rid),
+                      "response": io["responses"].get(rid)} for rid in io["order_all"]}
+        return (adds, io["order_all"], io["page_order"], io["search_req"], io["scoring"],
+                io["eval"], io["total_units"], io["page"], io["page_size"])
+
+    adds, add_order, search_req, scoring = _server_ops_for(run_dir, qid)
+    eval_objs = list(iter_events(_trace_path(run_dir, "eval_trace.jsonl")))
+    return (adds, add_order, add_order, search_req, scoring,
+            eval_objs, len(add_order), 0, max(len(add_order), 1))
+
+
+def question_pipeline(name, qid, page=0, page_size=25):
     run_dir = os.path.join(RUNS_DIR, name)
     manifest = _load_json(os.path.join(run_dir, "manifest.json")) or {}
     meta = _question_meta([qid]).get(qid, {})
     ev_pairs = _evidence_pairs(qid)
-    pub = published_map().get(qid, {})
+    choice = published_choice(manifest)
+    pub = published_map(choice["path"]).get(qid, {})
     predict = _load_json(_predict_files(run_dir).get(qid)) if qid in _predict_files(run_dir) else None
 
-    adds, add_order, search_req, scoring = _server_ops_for(run_dir, qid)
+    (adds, add_order, page_order, search_req, scoring,
+     eval_objs, add_total, add_page, add_page_size) = _collect_ops(run_dir, qid, page, page_size)
 
     def _match_session(messages):
         for msg in messages or []:
@@ -411,10 +569,25 @@ def question_pipeline(name, qid):
                     return hit
         return None
 
-    # ADD panel + memory_id -> evidence/session map (for SEARCH tagging).
-    add_panel = []
+    # memory_id -> evidence/session map, built from ALL add-units so SEARCH can tag every
+    # candidate regardless of which page its creating add-unit falls on.
     mem_meta = {}
     for rid in add_order:
+        a = adds.get(rid, {})
+        req = (a.get("request") or {}).get("inputs") or {}
+        resp = (a.get("response") or {}).get("outputs") or {}
+        sess = _match_session(req.get("messages") or [])
+        for mem in (resp.get("results") or []):
+            mem_meta[mem.get("id")] = {
+                "memory": mem.get("memory"),
+                "is_evidence": bool(sess and sess["is_evidence"]),
+                "session_id": sess["session_id"] if sess else None,
+            }
+
+    # ADD panel — only the current page of add-units (the heavy extraction llm lines are
+    # read for this page alone).
+    add_panel = []
+    for j, rid in enumerate(page_order):
         a = adds.get(rid, {})
         req = (a.get("request") or {}).get("inputs") or {}
         llm = (a.get("llm") or {}).get("outputs") or {}
@@ -423,13 +596,8 @@ def question_pipeline(name, qid):
         msgs = req.get("messages") or []
         sess = _match_session(msgs)
         stored = resp.get("results") or []
-        for mem in stored:
-            mem_meta[mem.get("id")] = {
-                "memory": mem.get("memory"),
-                "is_evidence": bool(sess and sess["is_evidence"]),
-                "session_id": sess["session_id"] if sess else None,
-            }
         add_panel.append({
+            "n": add_page * add_page_size + j + 1,
             "request_id": rid,
             "session_id": sess["session_id"] if sess else None,
             "is_evidence": bool(sess and sess["is_evidence"]),
@@ -475,7 +643,7 @@ def question_pipeline(name, qid):
 
     # ANSWER + JUDGE panels from eval trace (exact prompts) + predict JSON (verdicts).
     answers, judges = {}, {}
-    for o in iter_events(_trace_path(run_dir, "eval_trace.jsonl")):
+    for o in eval_objs:
         inp = o.get("inputs") or {}
         if inp.get("question_id") != qid:
             continue
@@ -512,13 +680,41 @@ def question_pipeline(name, qid):
         "is_abstention": bool(meta.get("is_abstention")),
         "n_add_units": meta.get("n_add_units"), "n_evidence": meta.get("n_evidence"),
         "add": add_panel, "search": search_panel, "answer": answer_panel, "judge": judge_panel,
-        "mem0_gpt5": {"answer": pub.get("answer"), "verdict": pub.get("judgment"),
-                      "cutoff": pub.get("cutoff")},
+        "add_total": add_total, "add_page": add_page, "add_page_size": add_page_size,
+        "published": choice,
+        "published_result": {"answer": pub.get("answer"), "verdict": pub.get("judgment"),
+                             "cutoff": pub.get("cutoff")},
         "gold": meta.get("answer"),
     }
 
 
 # --------------------------------------------------------------------------- summary
+_MEASURED_KEYS = ("add_calls", "add_failed", "mem_stored", "tok_in", "tok_out",
+                  "tok_total", "cutoffs", "parse_fail", "errors")
+
+
+def _measured_bucket():
+    b = {k: 0 for k in _MEASURED_KEYS}
+    b["search_ms_sum"], b["search_n"] = 0.0, 0
+    return b
+
+
+def _measured_add(b, mq):
+    for k in _MEASURED_KEYS:
+        b[k] += mq.get(k) or 0
+    if mq.get("search_ms") is not None:
+        b["search_ms_sum"] += mq["search_ms"]
+        b["search_n"] += 1
+
+
+def _measured_out(b):
+    # No wall-time sum: questions run in parallel, so summing per-question spans overcounts.
+    # Wall time is reported per question (board) and as the whole-run span (totals).
+    out = {k: b[k] for k in _MEASURED_KEYS}
+    out["search_ms_avg"] = round(b["search_ms_sum"] / b["search_n"], 1) if b["search_n"] else None
+    return out
+
+
 def summary(name):
     run_dir = os.path.join(RUNS_DIR, name)
     manifest = _load_json(os.path.join(run_dir, "manifest.json")) or {}
@@ -526,14 +722,19 @@ def summary(name):
     qids = [r["question_id"] for r in planned]
     meta = _question_meta(set(qids))
     predict_files = _predict_files(run_dir)
-    pub = published_map()
+    choice = published_choice(manifest)
+    pub = published_map(choice["path"])
+    agg = trace_index.aggregate(run_dir) if trace_index.supported(run_dir) else _aggregate_traces(run_dir)
+    per_q = agg.get("per_q", {})
 
     # Ours: per-qid verdict per cutoff from predict JSONs.
     types = sorted({meta[q]["question_type"] for q in qids if q in meta})
     ours = {t: {f"top_{c}": [0, 0] for c in CUTOFFS} for t in types}   # [correct, total]
     ours_overall = {f"top_{c}": [0, 0] for c in CUTOFFS}
-    mem0_row = {t: [0, 0] for t in types}
-    mem0_overall = [0, 0]
+    pub_row = {t: [0, 0] for t in types}
+    pub_overall = [0, 0]
+    meas = {t: _measured_bucket() for t in types}
+    meas_overall = _measured_bucket()
 
     for qid in qids:
         t = meta.get(qid, {}).get("question_type")
@@ -549,25 +750,42 @@ def summary(name):
                 ours[t][ck][1] += 1
                 ours_overall[ck][0] += ok
                 ours_overall[ck][1] += 1
-        # Mem0 published (top_200 only).
+        # Measured metrics per type + overall (from the trace).
+        mq = per_q.get(qid)
+        if mq:
+            _measured_add(meas[t], mq)
+            _measured_add(meas_overall, mq)
+        # Published (top_200 only), same question_ids.
         p = pub.get(qid)
         if p and p.get("judgment"):
             ok = 1 if p["judgment"] == "PASS" else 0
-            mem0_row[t][0] += ok
-            mem0_row[t][1] += 1
-            mem0_overall[0] += ok
-            mem0_overall[1] += 1
+            pub_row[t][0] += ok
+            pub_row[t][1] += 1
+            pub_overall[0] += ok
+            pub_overall[1] += 1
 
     def pct(pair):
         return round(100 * pair[0] / pair[1], 1) if pair[1] else None
 
     by_type = []
     for t in types:
-        row = {"type": t, "ours": {ck: {"pct": pct(ours[t][ck]), "n": ours[t][ck][1]} for ck in ours[t]},
-               "mem0_gpt5_top200": {"pct": pct(mem0_row[t]), "n": mem0_row[t][1]}}
-        by_type.append(row)
-    overall = {"ours": {ck: {"pct": pct(ours_overall[ck]), "n": ours_overall[ck][1]} for ck in ours_overall},
-               "mem0_gpt5_top200": {"pct": pct(mem0_overall), "n": mem0_overall[1]}}
+        by_type.append({
+            "type": t,
+            "ours": {ck: {"pct": pct(ours[t][ck]), "n": ours[t][ck][1]} for ck in ours[t]},
+            "published_top200": {"pct": pct(pub_row[t]), "n": pub_row[t][1]},
+            "measured": _measured_out(meas[t]),
+        })
+    overall_measured = _measured_out(meas_overall)
+    overall_measured["wall_ms"] = agg.get("extraction", {}).get("wall_ms")   # whole-run span
+    overall = {
+        "ours": {ck: {"pct": pct(ours_overall[ck]), "n": ours_overall[ck][1]} for ck in ours_overall},
+        "published_top200": {"pct": pct(pub_overall), "n": pub_overall[1]},
+        "measured": overall_measured,
+    }
+    note = (f"Compared on the same question_ids against {choice['label']} "
+            f"({choice['file']}), which reports top_200 only."
+            if choice["path"] else
+            f"No published row for extraction model {choice['model']!r}; accuracy shown for ours only.")
     return {"name": name, "cutoffs": [f"top_{c}" for c in CUTOFFS],
-            "by_type": by_type, "overall": overall,
-            "note": "Mem0's published gpt-5 run reports top_200 only; compared on the same question_ids."}
+            "published": choice,
+            "by_type": by_type, "overall": overall, "note": note}
