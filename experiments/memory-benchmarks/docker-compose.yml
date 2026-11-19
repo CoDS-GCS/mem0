@@ -29,8 +29,15 @@ services:
       - OPENROUTER_API_KEY=${MEM0_OPENROUTER_API_KEY:-}
       - OPENROUTER_PROVIDER=${MEM0_OPENROUTER_PROVIDER:-}
       # Completion budget for extraction. Empty = mem0 default (2000). Raised for reasoning
-      # models (gpt-oss-120b) whose reasoning tokens count against max_tokens.
+      # models (gpt-oss-120b, gpt-6-luna) whose reasoning tokens count against max_tokens.
       - LLM_MAX_TOKENS=${LLM_MAX_TOKENS:-}
+      # OpenAI-compatible gateway for extraction (e.g. a Sub2API subscription endpoint).
+      # Empty on default runs: mem0 then uses the official OpenAI API (or OpenRouter above).
+      # Set only via the wrapper-controlled MEM0_LLM_* vars so the gateway key in .env never
+      # auto-reaches the container on default paths. main.py puts these on the llm config as
+      # openai_base_url / api_key — no mem0 code change.
+      - LLM_BASE_URL=${MEM0_LLM_BASE_URL:-}
+      - LLM_API_KEY=${MEM0_LLM_API_KEY:-}
       - EMBEDDER_MODEL=${EMBEDDER_MODEL:-text-embedding-3-small}
       # Embedder provider + dims. Default unset = OpenAI text-embedding-3-small (1536).
       # EMBEDDER_PROVIDER=tei_local + EMBEDDING_DIMS=768 selects the Qwen 600M embedder,

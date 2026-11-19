@@ -229,6 +229,14 @@ def run_summary(name: str) -> JSONResponse:
     return JSONResponse(run_reader.summary(name))
 
 
+@app.get("/api/compare")
+def compare(runs: str = Query(..., description="comma-separated run names")) -> JSONResponse:
+    names = [n for n in runs.split(",") if n]
+    if len(names) < 2:
+        raise HTTPException(400, "give at least two run names: ?runs=a,b")
+    return JSONResponse(run_reader.compare(names))
+
+
 @app.get("/api/run/{name}/question/{qid}")
 def run_question(
     name: str,

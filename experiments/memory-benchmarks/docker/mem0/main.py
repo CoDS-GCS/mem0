@@ -125,6 +125,25 @@ def _load_config() -> dict:
     if _max_tokens:
         llm_config["max_tokens"] = int(_max_tokens)
 
+    # Point the extraction LLM at an OpenAI-compatible gateway (e.g. a Sub2API
+    # subscription endpoint) purely through config — no mem0 code change. mem0's OpenAI
+    # LLM uses config.openai_base_url / config.api_key when OPENROUTER_API_KEY is unset
+    # (mem0/llms/openai.py). Driven by LLM_BASE_URL / LLM_API_KEY, which docker-compose
+    # passes only on that path via the wrapper-controlled MEM0_LLM_* vars, so the gateway
+    # key never auto-reaches the container on default OpenAI runs. The key is never logged.
+    _llm_base = os.getenv("LLM_BASE_URL")
+    if _llm_base:
+        llm_config["openai_base_url"] = _llm_base
+    _llm_key = os.getenv("LLM_API_KEY")
+    if _llm_key:
+        llm_config["api_key"] = _llm_key
+    logger.info(
+        "LLM: provider=%s model=%s endpoint=%s max_tokens=%s",
+        os.getenv("LLM_PROVIDER", "openai"), llm_config["model"],
+        "custom OpenAI-compatible gateway" if _llm_base else "default (openai/openrouter env)",
+        llm_config.get("max_tokens", "mem0 default"),
+    )
+
     return {
         "version": "v1.1",
         "vector_store": {"provider": "qdrant", "config": vector_store_config},

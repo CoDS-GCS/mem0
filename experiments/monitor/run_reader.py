@@ -363,6 +363,7 @@ def _aggregate_traces(run_dir):
                   "tok_in": 0, "tok_out": 0, "tok_total": 0,
                   "add_calls": 0, "add_resp": 0, "mem_stored": 0, "reasoning_recorded": False}
     span = {"first": None, "last": None}
+    ex_models, ans_models = set(), set()   # model names the API/gateway actually reports
     per = {}
 
     def pq(qid):
@@ -400,6 +401,9 @@ def _aggregate_traces(run_dir):
                 extraction["parse_fail"] += 1
             if er:
                 extraction["errors"] += 1
+            mr = out.get("model_reported")
+            if mr:
+                ex_models.add(mr)
             if qid:
                 d = pq(qid)
                 d["tok_in"] += pi
@@ -440,6 +444,9 @@ def _aggregate_traces(run_dir):
         if comp == "answerer":
             answered.setdefault(qid, 0)
             answered[qid] += 1
+            mr = (o.get("outputs") or {}).get("model_reported")
+            if mr:
+                ans_models.add(mr)
         elif comp == "judge":
             judged.setdefault(qid, 0)
             judged[qid] += 1
@@ -450,7 +457,8 @@ def _aggregate_traces(run_dir):
     run_wall = _iso_s(span["first"], span["last"])
     extraction["wall_ms"] = round(run_wall * 1000, 1) if run_wall is not None else None
     data = {"adds_done": adds_done, "searched": searched, "answered": answered,
-            "judged": judged, "extraction": extraction, "per_q": _finalize_per_q(per)}
+            "judged": judged, "extraction": extraction, "per_q": _finalize_per_q(per),
+            "models_reported": {"extraction": sorted(ex_models), "answerer": sorted(ans_models)}}
     _TRACE_CACHE[run_dir] = {"sig": sig, "data": data}
     return data
 
@@ -523,6 +531,7 @@ def board(name):
         "cutoffs": [f"top_{c}" for c in CUTOFFS],
         "counts": {"total": len(rows), "done": done_n},
         "extraction": agg.get("extraction", {}),
+        "models_reported": agg.get("models_reported", {"extraction": [], "answerer": []}),
         "published": choice,
         "running": running,
         "rows": rows,
@@ -820,3 +829,107 @@ def summary(name):
     return {"name": name, "cutoffs": [f"top_{c}" for c in CUTOFFS],
             "published": choice,
             "by_type": by_type, "overall": overall, "note": note}
+
+
+# --------------------------------------------------------------------------- compare two+ runs
+def _run_verdicts(name):
+    """One run's per-qid verdicts per cutoff + question types, from its unified results
+    (or predict files while still running)."""
+    run_dir = os.path.join(RUNS_DIR, name)
+    manifest = _load_json(os.path.join(run_dir, "manifest.json")) or {}
+    cuts = [f"top_{c}" for c in CUTOFFS]
+    verd, qtype = {}, {}
+    files = sorted(glob.glob(os.path.join(run_dir, "longmemeval_results_*.json")))
+    if files:
+        for e in (_load_json(files[-1]) or {}).get("evaluations", []):
+            qid = e["question_id"]
+            qtype[qid] = e.get("question_type")
+            cr = e.get("cutoff_results") or {}
+            verd[qid] = {c: (cr.get(c) or {}).get("judgment") for c in cuts}
+    else:
+        for qid, p in _predict_files(run_dir).items():
+            pj = _load_json(p) or {}
+            cr = pj.get("cutoff_results") or {}
+            verd[qid] = {c: (cr.get(c) or {}).get("judgment") for c in cuts}
+            qtype[qid] = pj.get("question_type")
+    return manifest, verd, qtype
+
+
+def compare(names):
+    """Compare two or more of our runs on their shared question_ids: accuracy per type per
+    cutoff, a per-question top_200 verdict grid with flips, and each run's published row."""
+    cuts = [f"top_{c}" for c in CUTOFFS]
+    runs = []
+    for n in names:
+        manifest, verd, qtype = _run_verdicts(n)
+        runs.append({"name": n, "manifest": manifest, "verd": verd, "qtype": qtype,
+                     "extraction_llm": manifest.get("extraction_llm"),
+                     "extraction_endpoint": manifest.get("extraction_endpoint"),
+                     "published": published_choice(manifest)})
+
+    shared = None
+    for r in runs:
+        s = set(r["verd"])
+        shared = s if shared is None else (shared & s)
+    shared = sorted(shared or [])
+
+    qtype = {}
+    for q in shared:
+        for r in runs:
+            if r["qtype"].get(q):
+                qtype[q] = r["qtype"][q]
+                break
+    types = sorted({t for t in qtype.values() if t})
+
+    def pct(pair):
+        return round(100 * pair[0] / pair[1], 1) if pair[1] else None
+
+    accuracy = []
+    for r in runs:
+        by = {t: {ck: [0, 0] for ck in cuts} for t in types}
+        ov = {ck: [0, 0] for ck in cuts}
+        for q in shared:
+            t = qtype.get(q)
+            for ck in cuts:
+                j = r["verd"].get(q, {}).get(ck)
+                if j:
+                    ok = 1 if j == "PASS" else 0
+                    if t:
+                        by[t][ck][0] += ok
+                        by[t][ck][1] += 1
+                    ov[ck][0] += ok
+                    ov[ck][1] += 1
+        accuracy.append({
+            "name": r["name"], "extraction_llm": r["extraction_llm"],
+            "by_type": {t: {ck: {"pct": pct(by[t][ck]), "n": by[t][ck][1]} for ck in cuts} for t in types},
+            "overall": {ck: {"pct": pct(ov[ck]), "n": ov[ck][1]} for ck in cuts},
+        })
+
+    # Per-question top_200 verdict grid, flips = runs disagree.
+    grid, flips = [], 0
+    for q in shared:
+        verds = [r["verd"].get(q, {}).get("top_200") for r in runs]
+        flip = len({v for v in verds if v}) > 1
+        flips += 1 if flip else 0
+        grid.append({"question_id": q, "question_type": qtype.get(q), "verdicts": verds, "flip": flip})
+
+    # Each run's published row on the shared qids (top_200), where a published match exists.
+    published = []
+    for r in runs:
+        ch = r["published"]
+        pm = published_map(ch["path"])
+        c = n = 0
+        for q in shared:
+            p = pm.get(q)
+            if p and p.get("judgment"):
+                n += 1
+                c += 1 if p["judgment"] == "PASS" else 0
+        published.append({"name": r["name"], "label": ch["label"],
+                          "has": bool(ch["path"]) and n > 0, "pct": pct([c, n]), "n": n})
+
+    return {
+        "runs": [{"name": r["name"], "extraction_llm": r["extraction_llm"],
+                  "extraction_endpoint": r["extraction_endpoint"]} for r in runs],
+        "cutoffs": cuts, "types": types, "shared_count": len(shared),
+        "accuracy": accuracy, "grid": grid, "flips": flips, "published": published,
+    }

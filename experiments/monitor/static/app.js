@@ -48,6 +48,7 @@ async function route() {
     else if (kind === "q") await renderQuestion(arg);
     else if (kind === "s") await renderSession(arg);
     else if (kind === "runs") await renderRuns();
+    else if (kind === "compare") await renderCompare(arg);
     else if (kind === "run") {
       if (rest.length >= 3 && rest[1] === "q") await renderRunQuestion(rest[0], rest.slice(2).join("/"));
       else await renderRunBoard(rest[0]);
@@ -416,17 +417,30 @@ async function renderRuns() {
   }
   const rows = d.runs.map((r) => {
     const m = r.manifest || {};
-    return `<tr class="click" onclick="location.hash='#/run/${encodeURIComponent(r.name)}'">
-      <td class="mono">${esc(r.name)}</td>
+    const gw = m.extraction_endpoint && /gateway/i.test(m.extraction_endpoint)
+      ? ` <span class="badge" title="${esc(m.extraction_endpoint)}">gateway</span>` : "";
+    return `<tr>
+      <td><input type="checkbox" class="cmpsel" value="${esc(r.name)}" onclick="event.stopPropagation()"></td>
+      <td class="mono click" onclick="location.hash='#/run/${encodeURIComponent(r.name)}'">${esc(r.name)}</td>
       <td class="mono">${esc((m.mem0_commit || "").slice(0, 7))}</td>
-      <td>${esc(m.extraction_llm || "")}/${esc(m.answerer_model || "")}</td>
+      <td><b>${esc(m.extraction_llm || "?")}</b>${gw} <span class="dim">→ ${esc(m.answerer_model || "")}</span></td>
       <td>${esc(m.sample_args || "")}</td>
       <td>${esc((m.started_utc || "").replace("T", " ").replace("Z", ""))}</td>
     </tr>`;
   }).join("");
-  app().innerHTML = `<h1>Runs</h1>
-    <table><thead><tr><th>run</th><th>mem0</th><th>extraction/answerer</th><th>sample</th><th>started (UTC)</th></tr></thead>
+  app().innerHTML = `<h1>Runs <span class="dim" style="font-size:.9rem">— pick 2+ by extraction model, then Compare</span></h1>
+    <div class="toolbar">
+      <button class="btn" onclick="compareSelected()">Compare selected →</button>
+      <span class="dim">tick the runs to compare on their shared questions</span>
+    </div>
+    <table><thead><tr><th></th><th>run</th><th>mem0</th><th>extraction → answerer</th><th>sample</th><th>started (UTC)</th></tr></thead>
     <tbody>${rows}</tbody></table>`;
+}
+
+function compareSelected() {
+  const names = [...document.querySelectorAll(".cmpsel:checked")].map((c) => c.value);
+  if (names.length < 2) { alert("Pick at least two runs to compare."); return; }
+  location.hash = "#/compare/" + names.map(encodeURIComponent).join(",");
 }
 
 function manifestBar(m) {
@@ -492,6 +506,10 @@ async function renderRunBoard(name) {
     const ex = d.extraction || {};
     const exColor = ((ex.cutoffs || 0) + (ex.parse_fail || 0) + (ex.errors || 0)) > 0 ? "#c0392b" : "#2e7d32";
     const exBadge = `<span style="font-size:.8rem;color:${exColor}" title="measured from the mem0 trace — cut off = finish_reason=length (hit max_tokens); parse✗ = output not valid JSON; err = LLM error">· measured: ${num(ex.add_calls)} add calls${ex.add_failed ? " (" + ex.add_failed + " no-resp)" : ""}, ${num(ex.mem_stored)} mems, ${kmg(ex.tok_in)}/${kmg(ex.tok_out)} tok in/out, ${ex.cutoffs || 0} cut off, ${ex.parse_fail || 0} parse✗, ${ex.errors || 0} err · wall ${ms2s(ex.wall_ms)}</span>`;
+    const mr = d.models_reported || { extraction: [], answerer: [] };
+    const modelsLine = `<p class="dim" style="margin:.3rem 0"><b>reported models</b> (what the API/gateway actually returned) —
+      extraction: <b>${(mr.extraction.length ? mr.extraction : ["—"]).map(esc).join(", ")}</b> ·
+      answerer: <b>${(mr.answerer.length ? mr.answerer : ["—"]).map(esc).join(", ")}</b></p>`;
     const pubUsed = d.published && d.published.path
       ? `<div class="embcmp"><span class="dim">compared vs —</span> <b>${esc(pubLabel)}</b>
           <span class="mono dim">(${esc(d.published.file)})</span>, matched to extraction model
@@ -503,6 +521,7 @@ async function renderRunBoard(name) {
         <a class="btn" href="#/runs" style="float:right">← runs</a>
         <button class="btn" style="float:right;margin-right:.4rem" onclick="showSummary('${esc(name)}')">summary ▾</button></h1>
       ${manifestBar(d.manifest)}
+      ${modelsLine}
       ${pubUsed}
       <p class="dim" style="margin:.3rem 0">Per-question numbers below are <b>measured from this run's traces</b>
         — add calls (✗ = no response), memories stored, extraction tokens (in/out), cut-offs/parse✗,
@@ -563,6 +582,61 @@ async function showSummary(name) {
     <p class="dim" style="margin:.5rem 0 0">Whole-run wall time (first→last trace event): <b>${ms2s(wall)}</b>.
       Reasoning tokens are folded into "tok out" (GPT-OSS does not break them out). Per-question wall
       time is in the board; it is not summed here because questions run in parallel.</p></div>`;
+}
+
+// ---- compare two+ runs ----------------------------------------------------
+async function renderCompare(arg) {
+  const names = (arg || "").split(",").map(decodeURIComponent).filter(Boolean);
+  crumbs([{ label: "home", href: "#/" }, { label: "runs", href: "#/runs" }, { label: "compare" }]);
+  if (names.length < 2) { app().innerHTML = `<div class="card">Pick at least two runs from <a href="#/runs">Runs</a>.</div>`; return; }
+  let d;
+  try { d = await api(`/api/compare?runs=${names.map(encodeURIComponent).join(",")}`); }
+  catch (e) { app().innerHTML = `<div class="card">Error: ${esc(e.message)}</div>`; return; }
+
+  const cuts = d.cutoffs;
+  const cell = (o) => (o && o.pct != null ? `${o.pct}% <span class="dim">(${o.n})</span>` : "—");
+  const runHdrTop = d.runs.map((r) =>
+    `<th colspan="${cuts.length}">${esc(r.name)}<br><span class="dim">${esc(r.extraction_llm || "?")}${/gateway/i.test(r.extraction_endpoint || "") ? " · gateway" : ""}</span></th>`).join("");
+  const runHdrSub = d.runs.map(() => cuts.map((c) => `<th class="num">${esc(c.replace("top_", "@"))}</th>`).join("")).join("");
+  const accRow = (label, pick, bold) => `<tr${bold ? ' class="total"' : ""}><td>${bold ? "<b>" + esc(label) + "</b>" : esc(label)}</td>` +
+    d.accuracy.map((a) => cuts.map((c) => `<td class="num">${cell(pick(a)[c])}</td>`).join("")).join("") + `</tr>`;
+  const body = d.types.map((t) => accRow(t, (a) => a.by_type[t])).join("") +
+    accRow("overall", (a) => a.overall, true);
+
+  // published rows (top_200 on shared qids), where a match exists
+  const pubLine = d.published.map((p) =>
+    p.has ? `<li><b>${esc(p.name)}</b> vs ${esc(p.label)}: ${p.pct}% <span class="dim">(${p.n} shared)</span></li>`
+          : `<li><b>${esc(p.name)}</b>: ${esc(p.label)}</li>`).join("");
+
+  // per-question flip grid
+  const vpill = (v) => verdictPill(v);
+  const gridRows = (flipsOnly) => d.grid.filter((g) => !flipsOnly || g.flip).map((g) =>
+    `<tr class="${g.flip ? "evrow" : ""}">
+      <td class="mono">${esc(g.question_id)}${g.flip ? ' <span class="badge" style="background:#c0392b;color:#fff">FLIP</span>' : ""}</td>
+      <td>${esc(g.question_type || "")}</td>
+      ${g.verdicts.map((v) => `<td>${vpill(v)}</td>`).join("")}
+    </tr>`).join("");
+  const gridHead = `<th>question_id</th><th>type</th>` + d.runs.map((r) => `<th>${esc(r.extraction_llm || r.name)}<br><span class="dim">@200</span></th>`).join("");
+
+  app().innerHTML = `
+    <h1>Compare <span class="dim" style="font-size:.9rem">— ${d.runs.map((r) => esc(r.extraction_llm || r.name)).join(" vs ")} · ${d.shared_count} shared questions · ${d.flips} flips @200</span>
+      <a class="btn" href="#/runs" style="float:right">← runs</a></h1>
+    <div class="card">
+      <h3>Accuracy on shared question_ids — per type, per cutoff</h3>
+      <table><thead>
+        <tr><th rowspan="2">type</th>${runHdrTop}</tr>
+        <tr>${runHdrSub}</tr>
+      </thead><tbody>${body}</tbody></table>
+      <h3 style="margin-top:1rem">Published rows (top_200, on shared questions)</h3>
+      <ul class="dim">${pubLine}</ul>
+    </div>
+    <div class="card">
+      <h3>Per-question verdict grid @top_200 <span class="dim">— flips highlighted</span>
+        <label style="float:right;font-weight:normal"><input type="checkbox" id="flipsOnly"> flips only</label></h3>
+      <table><thead><tr>${gridHead}</tr></thead><tbody id="gridBody">${gridRows(false)}</tbody></table>
+    </div>`;
+  const cb = document.getElementById("flipsOnly");
+  if (cb) cb.addEventListener("change", (e) => { document.getElementById("gridBody").innerHTML = gridRows(e.target.checked); });
 }
 
 function panelText(s, max = 1500) {
@@ -677,3 +751,4 @@ window.jumpTo = jumpTo;
 window.showMore = showMore;
 window.showSummary = showSummary;
 window.gotoAddPage = gotoAddPage;
+window.compareSelected = compareSelected;

@@ -100,6 +100,7 @@ def _new_request(endpoint: str, user_id) -> None:
     _CTX.existing_hashes = []
     _CTX.llm_usage = None
     _CTX.llm_finish_reason = None
+    _CTX.llm_model_reported = None
 
 
 def _emit(component: str, operation: str, inputs=None, outputs=None, duration_ms=None) -> None:
@@ -284,6 +285,10 @@ def install(memory) -> bool:
                        # and parse-failure counts.
                        "finish_reason": getattr(_CTX, "llm_finish_reason", None),
                        "parse_ok": _json_ok(result),
+                       # model name the API/gateway actually reports for this call — lets the
+                       # run/monitor show which model served extraction (e.g. a Sub2API gateway
+                       # could silently serve a different model than requested).
+                       "model_reported": getattr(_CTX, "llm_model_reported", None),
                        "error": bool(exc)},
               duration_ms=dur)
     memory.llm.generate_response = _wrap(memory.llm.generate_response, rec_llm)
@@ -304,6 +309,10 @@ def install(memory) -> bool:
                 _CTX.llm_finish_reason = resp.choices[0].finish_reason
             except Exception:
                 _CTX.llm_finish_reason = None
+            try:
+                _CTX.llm_model_reported = getattr(resp, "model", None)
+            except Exception:
+                _CTX.llm_model_reported = None
             return resp
         _comp.create = create_wrap
     except Exception:

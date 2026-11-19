@@ -85,7 +85,7 @@ def _index_file(run_dir):
 # --------------------------------------------------------------------------- index state
 def _fresh():
     return {
-        "version": 2,
+        "version": 3,
         "mem0": {"offset": 0, "size": 0, "inode": None},
         "eval": {"offset": 0, "size": 0, "inode": None},
         # Global extraction health + measured token totals + whole-run time span.
@@ -93,6 +93,8 @@ def _fresh():
                        "tok_in": 0, "tok_out": 0, "tok_total": 0,
                        "add_calls": 0, "add_resp": 0, "mem_stored": 0,
                        "reasoning_recorded": False, "first": None, "last": None},
+        # Distinct model names the API/gateway reports (JSON-serializable lists).
+        "models_reported": {"extraction": [], "answerer": []},
         "qids": {},
     }
 
@@ -131,7 +133,7 @@ def _load_from_disk(run_dir):
             idx = json.load(fh)
     except (OSError, ValueError):
         return None
-    if not isinstance(idx, dict) or idx.get("version") != 2:
+    if not isinstance(idx, dict) or idx.get("version") != 3:
         return None
     # Rebuild the in-memory request_id -> unit_index map from the persisted units.
     _RID[run_dir] = {qid: {u["rid"]: i for i, u in enumerate(q["units"])}
@@ -201,6 +203,11 @@ def _apply_mem0(idx, run_dir, pos, obj):
             ex["parse_fail"] += 1
         if er:
             ex["errors"] += 1
+        mr = out.get("model_reported")
+        if mr:
+            lst = idx["models_reported"]["extraction"]
+            if mr not in lst:
+                lst.append(mr)
     qid = split_user_id(obj.get("user_id") or "")
     if not qid:
         return
@@ -253,6 +260,11 @@ def _apply_eval(idx, run_dir, pos, obj):
     if comp == "answerer":
         q["answered"] += 1
         q["eval_offs"].append(pos)
+        mr = (obj.get("outputs") or {}).get("model_reported")
+        if mr:
+            lst = idx["models_reported"]["answerer"]
+            if mr not in lst:
+                lst.append(mr)
     elif comp == "judge":
         q["judged"] += 1
         q["eval_offs"].append(pos)
@@ -356,8 +368,11 @@ def aggregate(run_dir):
     ex = dict(idx["extraction"])
     ex["add_failed"] = max(0, ex.get("add_calls", 0) - ex.get("add_resp", 0))
     ex["wall_ms"] = _span_ms(ex.pop("first", None), ex.pop("last", None))
+    mr = idx.get("models_reported") or {"extraction": [], "answerer": []}
     return {"adds_done": adds_done, "searched": searched, "answered": answered,
-            "judged": judged, "extraction": ex, "per_q": per_q}
+            "judged": judged, "extraction": ex, "per_q": per_q,
+            "models_reported": {"extraction": sorted(mr.get("extraction", [])),
+                                "answerer": sorted(mr.get("answerer", []))}}
 
 
 # --------------------------------------------------------------------------- question view

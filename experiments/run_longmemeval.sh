@@ -60,7 +60,29 @@ export MEM0_TRACE="${MEM0_TRACE:-1}"
 # (finish_reason=length, empty JSON). answerer/judge always run host-side on OpenAI.
 EXTRACTION_PROVIDER_PIN="n/a (OpenAI direct)"
 EXTRACTION_MAX_TOKENS="mem0 default (2000)"
+EXTRACTION_ENDPOINT="official OpenAI API"
 case "$EXTRACTION_MODEL" in
+  gpt-6-luna|sub2api/gpt-6-luna)
+    # GPT-6 Luna via a Sub2API subscription-backed gateway (OpenAI-compatible), pointed at
+    # through SERVER CONFIG only (main.py -> llm config openai_base_url/api_key), never mem0
+    # code. The gateway reports model "gpt-6-luna"; a single test call accepted mem0's params
+    # (temperature/top_p/max_tokens/response_format), finish_reason=stop, valid JSON.
+    export LLM_MODEL="gpt-6-luna"
+    : "${SUB2API_BASE_URL:?set SUB2API_BASE_URL in memory-benchmarks/.env for gpt-6-luna}"
+    : "${SUB2API_API_KEY:?set SUB2API_API_KEY in memory-benchmarks/.env for gpt-6-luna}"
+    # Key reaches the container ONLY through these wrapper-controlled MEM0_LLM_* vars; never
+    # printed. The OpenRouter key must NOT be bridged on this path.
+    export MEM0_LLM_BASE_URL="$SUB2API_BASE_URL"
+    export MEM0_LLM_API_KEY="$SUB2API_API_KEY"
+    unset MEM0_OPENROUTER_API_KEY MEM0_OPENROUTER_PROVIDER 2>/dev/null || true
+    # Luna reports reasoning tokens inside completion_tokens; raise the budget so default-
+    # reasoning extraction never truncates. Same rule as gpt-oss-120b.
+    export LLM_MAX_TOKENS="${LLM_MAX_TOKENS:-16000}"
+    REASONING_EFFORT="${REASONING_EFFORT:-default (mem0 sends none; gateway/model default)}"
+    EXTRACTION_PROVIDER_PIN="Sub2API subscription gateway (OpenAI-compatible), model gpt-6-luna"
+    EXTRACTION_MAX_TOKENS="$LLM_MAX_TOKENS (raised; Luna reasoning tokens count within completion)"
+    EXTRACTION_ENDPOINT="Sub2API subscription-backed gateway (OpenAI-compatible), NOT the official OpenAI API"
+    ;;
   gpt-oss-120b|openai/gpt-oss-120b)
     export LLM_MODEL="openai/gpt-oss-120b"
     # Bridge the OpenRouter key from .env to the mem0 container ONLY on this path, via the
@@ -79,6 +101,25 @@ case "$EXTRACTION_MODEL" in
   *)
     export LLM_MODEL="$EXTRACTION_MODEL"
     REASONING_EFFORT="${REASONING_EFFORT:-default (medium)}"
+    ;;
+esac
+
+# Answerer + judge endpoint (selectable). Default: official OpenAI (host-side; OPENAI_API_KEY
+# from .env). ANSWERER_ENDPOINT=sub2api routes them through the same gateway by pointing the
+# host OpenAI client at it — run.py's LLMClient reads OPENAI_BASE_URL/OPENAI_API_KEY from env,
+# so no upstream run.py edit is needed. This run uses official OpenAI.
+ANSWERER_ENDPOINT="${ANSWERER_ENDPOINT:-openai}"
+case "$ANSWERER_ENDPOINT" in
+  sub2api)
+    : "${SUB2API_BASE_URL:?set SUB2API_BASE_URL in .env for ANSWERER_ENDPOINT=sub2api}"
+    : "${SUB2API_API_KEY:?set SUB2API_API_KEY in .env for ANSWERER_ENDPOINT=sub2api}"
+    export OPENAI_BASE_URL="$SUB2API_BASE_URL"
+    export OPENAI_API_KEY="$SUB2API_API_KEY"
+    ANSWERER_ENDPOINT_LABEL="Sub2API gateway (OpenAI-compatible)"
+    ;;
+  openai|*)
+    unset OPENAI_BASE_URL 2>/dev/null || true   # official endpoint; OPENAI_API_KEY stays the .env official key
+    ANSWERER_ENDPOINT_LABEL="official OpenAI API"
     ;;
 esac
 
@@ -161,6 +202,9 @@ manifest_json() {
   "answerer_model": "$ANSWERER_MODEL",
   "judge_model": "$JUDGE_MODEL",
   "provider": "$PROVIDER",
+  "extraction_endpoint": "$EXTRACTION_ENDPOINT",
+  "answerer_endpoint": "$ANSWERER_ENDPOINT_LABEL",
+  "endpoint_note": "Extraction endpoint: $EXTRACTION_ENDPOINT. Answerer/judge endpoint: $ANSWERER_ENDPOINT_LABEL.",
   "reasoning_effort": "$REASONING_EFFORT",
   "embedder": "$EMBEDDER_MODEL",
   "embedder_provider": "$EMBEDDER_PROVIDER",
@@ -264,6 +308,50 @@ for q in sampled:
 PYEOF
 }
 
+# Confirm this run's deterministic sample equals another run's question_ids (SAME questions).
+# Reads the reference run's unified results JSON for its question_ids.
+check_same_questions() {
+  "$PY" - "$DATASET" "$1" "${RUNNER_ARGS[@]}" <<'PYEOF'
+import argparse, glob, json, os, random, sys
+dataset, ref = sys.argv[1], sys.argv[2]
+p = argparse.ArgumentParser()
+p.add_argument("--per-type", type=int, default=5)
+p.add_argument("--seed", type=int, default=42)
+p.add_argument("--question-types", default=None)
+p.add_argument("--all-questions", action="store_true")
+args, _ = p.parse_known_args(sys.argv[3:])
+qs = json.load(open(dataset))
+tf = set(t.strip() for t in args.question_types.split(",")) if args.question_types else None
+groups = {}
+for q in qs:
+    if tf is None or q["question_type"] in tf:
+        groups.setdefault(q["question_type"], []).append(q)
+for t in groups:
+    groups[t].sort(key=lambda q: q["question_id"])
+rng = random.Random(args.seed)
+samp = []
+for t in sorted(groups):
+    g = groups[t]
+    samp += rng.sample(g, min(args.per_type, len(g)))
+sample_ids = sorted(q["question_id"] for q in samp)
+refs = sorted(glob.glob(os.path.join(ref, "longmemeval_results_*.json")))
+if not refs:
+    print(f"reference run {os.path.basename(ref)} has no unified results JSON — cannot compare")
+    sys.exit(0)
+ref_ids = sorted(e["question_id"] for e in json.load(open(refs[-1]))["evaluations"])
+print(f"this run sample:  {len(sample_ids)} question_ids")
+print(f"reference run:    {len(ref_ids)} question_ids ({os.path.basename(ref)})")
+if sample_ids == ref_ids:
+    print(f"MATCH: identical {len(sample_ids)} question_ids ✓")
+else:
+    only_here = sorted(set(sample_ids) - set(ref_ids))
+    only_ref = sorted(set(ref_ids) - set(sample_ids))
+    print("MISMATCH ✗")
+    if only_here: print("  only in this run:", only_here[:12])
+    if only_ref:  print("  only in reference:", only_ref[:12])
+PYEOF
+}
+
 # -------------------------------------------------------------------------- dry-run
 if [ "$DRY_RUN" = "1" ]; then
   echo "===== DRY RUN (nothing launched) ====="
@@ -292,15 +380,25 @@ if [ "$DRY_RUN" = "1" ]; then
   echo
   echo "----- extraction LLM -----"
   echo "EXTRACTION_MODEL: $EXTRACTION_MODEL   ->   mem0 model_id: $LLM_MODEL"
+  echo "endpoint:         $EXTRACTION_ENDPOINT"
   echo "provider pin:     $EXTRACTION_PROVIDER_PIN"
   echo "max_tokens:       $EXTRACTION_MAX_TOKENS"
   echo "reasoning:        $REASONING_EFFORT   (temperature/top_p: as mem0 sends)"
+  if [ -n "${MEM0_LLM_BASE_URL:-}" ]; then
+    echo "gateway host:     $(printf '%s' "$MEM0_LLM_BASE_URL" | sed -E 's#^[a-zA-Z]+://([^/]+).*#\1#')   (OpenAI-compatible; set on llm config via server config)"
+    echo "gateway key:      present (from .env SUB2API_API_KEY; to container via MEM0_LLM_API_KEY, never printed)"
+    echo "openrouter key:   NOT passed to the container on this path"
+  fi
   if [ -n "${MEM0_OPENROUTER_API_KEY:-}" ]; then
     echo "openrouter key:   present (from .env; passed to mem0 container, never printed)"
   fi
+  echo "answerer/judge:   $ANSWERER_ENDPOINT_LABEL  (models: answerer=$ANSWERER_MODEL judge=$JUDGE_MODEL)"
   echo
   echo "----- selected questions (deterministic sample) -----"
   show_selected_questions || echo "(could not compute sample)"
+  echo
+  echo "----- same-questions check vs lme_A_default_oss120b_60q -----"
+  check_same_questions "$EXP/runs/lme_A_default_oss120b_60q" || echo "(could not compare question sets)"
   echo
   echo "----- monitor -----"
   if curl -sf "$MONITOR_URL/" >/dev/null 2>&1; then
@@ -453,14 +551,17 @@ def _find(base):
     return None
 
 tok = {"extraction": 0, "answerer": 0}
-n_extract = cutoffs = parse_fail = 0
+n_extract = cutoffs = parse_fail = llm_err = 0
+add_req = add_resp = 0
+ex_models, ans_models = set(), set()
 mp = _find("mem0_trace.jsonl")
 if mp:
     with _open(mp) as fh:
         for line in fh:
             try: o = json.loads(line)
             except Exception: continue
-            if o.get("component") == "llm" and o.get("operation") == "generate_response":
+            comp, op = o.get("component"), o.get("operation")
+            if comp == "llm" and op == "generate_response":
                 out = o.get("outputs") or {}
                 u = out.get("token_usage") or {}
                 tok["extraction"] += u.get("total_tokens") or 0
@@ -469,6 +570,14 @@ if mp:
                     cutoffs += 1
                 if out.get("parse_ok") is False:           # extraction output not valid JSON
                     parse_fail += 1
+                if out.get("error"):
+                    llm_err += 1
+                if out.get("model_reported"):
+                    ex_models.add(out["model_reported"])
+            elif comp == "entry" and op == "add.request":
+                add_req += 1
+            elif comp == "entry" and op == "add.response":
+                add_resp += 1
 ep = _find("eval_trace.jsonl")
 if ep:
     with _open(ep) as fh:
@@ -476,8 +585,21 @@ if ep:
             try: o = json.loads(line)
             except Exception: continue
             if o.get("component") == "answerer":
-                u = (o.get("outputs") or {}).get("token_usage") or {}
+                out = o.get("outputs") or {}
+                u = out.get("token_usage") or {}
                 tok["answerer"] += u.get("total_tokens") or 0
+                if out.get("model_reported"):
+                    ans_models.add(out["model_reported"])
+
+# Failed adds (rate-limit / quota / gateway errors): an add whose request has no response,
+# plus the ingestion harness's own per-question failed-pair count.
+add_failed = max(0, add_req - add_resp)
+ing_failed = 0
+for p in glob.glob(os.path.join(run, "predicted_*", "_ingestion_*.json")):
+    try:
+        ing_failed += int(json.load(open(p)).get("total_pairs_failed") or 0)
+    except Exception:
+        pass
 
 # Count DISTINCT question IDs, not files: predicted_*/ holds both {qid}.json and
 # _progress_{qid}.json, so counting files double-counts (the old "over 2 questions" bug).
@@ -492,7 +614,12 @@ tot = tok["extraction"] + tok["answerer"]
 print(f"Tokens: extraction={tok['extraction']:,} answerer={tok['answerer']:,} "
       f"total={tot:,}  (~{tot//n_q:,}/question over {n_q} question(s))")
 print(f"Extraction calls: {n_extract}  |  cut off (finish_reason=length): {cutoffs}"
-      f"  |  JSON parse failures: {parse_fail}")
+      f"  |  JSON parse failures: {parse_fail}  |  LLM errors: {llm_err}")
+print(f"Adds: calls={add_req}  ok={add_resp}  "
+      f"failed (no response — rate-limit/quota/gateway): {add_failed}  |  "
+      f"ingestion-reported failed pairs: {ing_failed}")
+print(f"Reported models: extraction={sorted(ex_models) or 'n/a (older trace)'}  "
+      f"answerer={sorted(ans_models) or 'n/a'}")
 EOF
 
 # Finalize traces: count events, gzip, record sizes in manifest.json.

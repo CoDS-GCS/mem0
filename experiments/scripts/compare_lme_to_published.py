@@ -546,9 +546,185 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_d
     return "\n".join(lines)
 
 
+def run_verdicts_types(run_data):
+    """question_id -> {cutoff: PASS/FAIL} and question_id -> question_type."""
+    verd, qtype = {}, {}
+    for e in run_data.get("evaluations", []):
+        qid = e["question_id"]
+        qtype[qid] = e.get("question_type")
+        cr = e.get("cutoff_results") or {}
+        verd[qid] = {c: (cr.get(c) or {}).get("judgment") for c in CUTOFFS}
+    return verd, qtype
+
+
+def build_two_run_readme(run_dir, manifest, run_file, run_data, ref_dir):
+    """README comparing OUR run (e.g. Luna) against another of OUR runs (e.g. GPT-OSS):
+    setup, accuracy per type per cutoff, flips, run facts, a cost line, empty Observations."""
+    name = manifest.get("run_name") or os.path.basename(run_dir.rstrip("/"))
+    ref_manifest = load_json(os.path.join(ref_dir, "manifest.json"))
+    ref_name = ref_manifest.get("run_name") or os.path.basename(ref_dir.rstrip("/"))
+    _ref_file, ref_data = unified_results(ref_dir)
+    ov, oqt = run_verdicts_types(run_data)
+    rv, rqt = run_verdicts_types(ref_data)
+    shared = sorted(set(ov) & set(rv))
+    qtype = {q: (oqt.get(q) or rqt.get(q)) for q in shared}
+    types = [t for t in TYPES if t in set(qtype.values())] or TYPES
+    facts = run_facts(run_dir)
+
+    L = []
+    L.append(f"# {name}")
+    L.append("")
+    L.append(f"LongMemEval run — extraction **{manifest.get('extraction_llm')}** via "
+             f"{manifest.get('extraction_endpoint', 'n/a')}. Compared against our "
+             f"**{ref_manifest.get('extraction_llm')}** run `{ref_name}` on their "
+             f"{len(shared)} shared question_ids.")
+    L.append("")
+
+    # ---- setup ----
+    L.append("## 1. Setup — this run vs the reference run")
+    L.append("")
+    L.append(f"| field | {name} | {ref_name} |")
+    L.append("|---|---|---|")
+    fields = ["extraction_llm", "extraction_endpoint", "extraction_provider_pin",
+              "extraction_max_tokens", "reasoning_effort", "answerer_model", "judge_model",
+              "answerer_endpoint", "embedder_label", "embedding_dims", "top_k", "top_k_cutoffs",
+              "mem0_ref", "collection_name"]
+    labels = {"extraction_llm": "extraction model", "extraction_endpoint": "extraction endpoint",
+              "extraction_provider_pin": "extraction provider", "extraction_max_tokens": "extraction max_tokens",
+              "reasoning_effort": "reasoning", "answerer_model": "answerer", "judge_model": "judge",
+              "answerer_endpoint": "answerer/judge endpoint", "embedder_label": "embedder",
+              "embedding_dims": "embedding dims", "top_k": "top_k", "top_k_cutoffs": "cutoffs",
+              "mem0_ref": "Mem0 version", "collection_name": "collection"}
+    for f in fields:
+        L.append(f"| {labels.get(f, f)} | {manifest.get(f, '—')} | {ref_manifest.get(f, '—')} |")
+    L.append("")
+
+    # ---- accuracy per type per cutoff ----
+    L.append(f"## 2. Accuracy on the same {len(shared)} question_ids — per type, per cutoff")
+    L.append("")
+
+    def acc(verd):
+        by = {t: {c: [0, 0] for c in CUTOFFS} for t in types}
+        ov_ = {c: [0, 0] for c in CUTOFFS}
+        for q in shared:
+            t = qtype.get(q)
+            for c in CUTOFFS:
+                j = verd.get(q, {}).get(c)
+                if j:
+                    ok = 1 if j == "PASS" else 0
+                    if t in by:
+                        by[t][c][0] += ok
+                        by[t][c][1] += 1
+                    ov_[c][0] += ok
+                    ov_[c][1] += 1
+        return by, ov_
+    oby, oov = acc(ov)
+    rby, rov = acc(rv)
+    head = ["type"] + [f"{name.split('_')[-1] or 'ours'} {c.replace('top_', '@')}" for c in CUTOFFS] \
+        + [f"ref {c.replace('top_', '@')}" for c in CUTOFFS]
+    # keep headers short
+    head = ["type"] + [f"this @{c.split('_')[1]}" for c in CUTOFFS] + [f"ref @{c.split('_')[1]}" for c in CUTOFFS]
+    L.append("| " + " | ".join(head) + " |")
+    L.append("|" + "---|" * len(head))
+    for t in types + ["overall"]:
+        ob = oov if t == "overall" else oby[t]
+        rb = rov if t == "overall" else rby[t]
+        label = "**overall**" if t == "overall" else t
+        cells = [label] + [_cell(ob[c]) for c in CUTOFFS] + [_cell(rb[c]) for c in CUTOFFS]
+        L.append("| " + " | ".join(cells) + " |")
+    L.append("")
+    L.append(f"Columns: `this` = {name} ({manifest.get('extraction_llm')}), "
+             f"`ref` = {ref_name} ({ref_manifest.get('extraction_llm')}).")
+    L.append("")
+
+    # ---- flips ----
+    L.append("## 3. Flips (top_200)")
+    L.append("")
+    both_r = both_w = only_this = only_ref = 0
+    flip_this, flip_ref = [], []
+    for q in shared:
+        a = ov.get(q, {}).get("top_200") == "PASS"
+        b = rv.get(q, {}).get("top_200") == "PASS"
+        if a and b:
+            both_r += 1
+        elif not a and not b:
+            both_w += 1
+        elif a and not b:
+            only_this += 1
+            flip_this.append(q)
+        else:
+            only_ref += 1
+            flip_ref.append(q)
+    L.append("| bucket | count |")
+    L.append("|---|---|")
+    L.append(f"| both right | {both_r} |")
+    L.append(f"| both wrong | {both_w} |")
+    L.append(f"| only this run right | {only_this} |")
+    L.append(f"| only reference right | {only_ref} |")
+    L.append("")
+    L.append(f"- **only {name} right** ({only_this}): " + (", ".join(f"`{q}`" for q in flip_this) or "none"))
+    L.append(f"- **only {ref_name} right** ({only_ref}): " + (", ".join(f"`{q}`" for q in flip_ref) or "none"))
+    L.append("")
+
+    # ---- run facts ----
+    L.append("## 4. Run facts (measured)")
+    L.append("")
+    if facts:
+        reasoning = ("recorded" if facts["reasoning_recorded"]
+                     else "reported within completion tokens (not separately summed)")
+        L.append("| metric | value |")
+        L.append("|---|---|")
+        L.append(f"| wall time (trace span) | {_fmt_hms(facts['wall_s'])} |")
+        L.append(f"| add calls made | {_n(facts['add_calls'])} |")
+        L.append(f"| add calls without response (rate-limit/quota/gateway) | {_n(facts['add_failed'])} |")
+        L.append(f"| memories stored | {_n(facts['mem_stored'])} |")
+        L.append(f"| extraction LLM calls | {_n(facts['llm_calls'])} |")
+        L.append(f"| extraction tokens — input / output / total | "
+                 f"{_n(facts['tok_in'])} / {_n(facts['tok_out'])} / {_n(facts['tok_total'])} |")
+        L.append(f"| reasoning tokens | {reasoning} |")
+        L.append(f"| cut-offs (finish_reason=length) | {_n(facts['cutoffs'])} |")
+        L.append(f"| parse failures | {_n(facts['parse_fail'])} |")
+        L.append(f"| extraction LLM errors | {_n(facts['llm_err'])} |")
+        if facts["search_ms_avg"] is not None:
+            L.append(f"| search latency (avg) | {facts['search_ms_avg']} ms |")
+    else:
+        L.append("_No mem0 trace found in the run folder._")
+    L.append("")
+
+    # ---- cost ----
+    L.append("## 5. Cost")
+    L.append("")
+    L.append("Source: OpenRouter / OpenAI / Sub2API billing, entered by Loubna.")
+    L.append("")
+    L.append("| component | model / endpoint | cost (USD) |")
+    L.append("|---|---|---|")
+    L.append(f"| extraction | {manifest.get('extraction_llm')} via {manifest.get('extraction_endpoint','gateway')} | _fill in_ |")
+    L.append(f"| answerer + judge | {manifest.get('answerer_model')} via {manifest.get('answerer_endpoint','OpenAI')} | _fill in_ |")
+    L.append("| **total** | | _fill in_ |")
+    L.append("")
+
+    big = large_artifacts(run_dir)
+    if big:
+        L.append("## 6. Large artifacts not committed (over GitHub's 100 MB limit)")
+        L.append("")
+        L.append("| file | size | sha256 |")
+        L.append("|---|---|---|")
+        for rel, sz, sha in big:
+            L.append(f"| `{rel}` | {sz:,} bytes ({sz / 1e6:.1f} MB) | `{sha}` |")
+        L.append("")
+
+    L.append("## Observations")
+    L.append("")
+    L.append("<!-- written by hand -->")
+    L.append("")
+    return "\n".join(L)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--run", required=True, help="path to the run folder")
+    ap.add_argument("--vs", default=None, help="compare against another of OUR runs (path); "
+                                               "writes a two-run README instead of the published one")
     ap.add_argument("--out", default=None, help="output README path (default: <run>/README.md)")
     ap.add_argument("--print", action="store_true", help="also print the README to stdout")
     args = ap.parse_args()
@@ -556,11 +732,15 @@ def main():
     run_dir = os.path.abspath(args.run)
     manifest = load_json(os.path.join(run_dir, "manifest.json"))
     run_file, run_data = unified_results(run_dir)
-    choice = published_choice(manifest)
-    pub_data = load_json(choice["path"]) if choice["path"] else None
-    gpt5_data = load_json(GPT5_FILE) if os.path.exists(GPT5_FILE) else None
 
-    readme = build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_data)
+    if args.vs:
+        readme = build_two_run_readme(run_dir, manifest, run_file, run_data, os.path.abspath(args.vs))
+    else:
+        choice = published_choice(manifest)
+        pub_data = load_json(choice["path"]) if choice["path"] else None
+        gpt5_data = load_json(GPT5_FILE) if os.path.exists(GPT5_FILE) else None
+        readme = build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_data)
+
     out = args.out or os.path.join(run_dir, "README.md")
     with open(out, "w", encoding="utf-8") as fh:
         fh.write(readme)

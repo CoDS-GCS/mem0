@@ -38,6 +38,9 @@ _SEQ = {"n": 0}
 _QCTX: contextvars.ContextVar = contextvars.ContextVar("mem0_eval_qctx", default=None)
 # per-task sink the answerer.generate wrapper opens so the inner create wrapper can drop usage in
 _USAGE: contextvars.ContextVar = contextvars.ContextVar("mem0_eval_usage", default=None)
+# Parallel to _USAGE: the model name the answerer's API/gateway reports per call, so the
+# run/monitor can show which model actually answered (official OpenAI vs a gateway).
+_AMODEL: contextvars.ContextVar = contextvars.ContextVar("mem0_eval_answerer_model", default=None)
 
 
 def _now_iso() -> str:
@@ -217,6 +220,7 @@ def install(output_dir, *, mem0_client, answerer, judge_llm, run_module=None) ->
         @functools.wraps(_orig_gen)
         async def gen(system, user, *a, **k):
             token = _USAGE.set([])
+            mtoken = _AMODEL.set([])
             t0 = time.perf_counter()
             out = None
             try:
@@ -232,14 +236,17 @@ def install(output_dir, *, mem0_client, answerer, judge_llm, run_module=None) ->
                     if q:
                         q["answer_i"] = i + 1
                     sink = _USAGE.get() or []
+                    msink = _AMODEL.get() or []
                     _emit("answerer", "generate",
                           inputs={"question_id": q.get("question_id"), "cutoff": cutoff,
                                   "system": system, "user": user},
-                          outputs={"answer": out, "token_usage": sink[-1] if sink else None},
+                          outputs={"answer": out, "token_usage": sink[-1] if sink else None,
+                                   "model_reported": msink[-1] if msink else None},
                           duration_ms=dur, request_id=q.get("question_id"), user_id=q.get("user_id"))
                 except Exception:
                     _count_error("answerer.generate")
                 _USAGE.reset(token)
+                _AMODEL.reset(mtoken)
         answerer.generate = gen
     except Exception:
         _count_error("patch.answerer.generate")
@@ -255,6 +262,9 @@ def install(output_dir, *, mem0_client, answerer, judge_llm, run_module=None) ->
                 sink = _USAGE.get()
                 if sink is not None:
                     sink.append(_usage(resp))
+                msink = _AMODEL.get()
+                if msink is not None:
+                    msink.append(getattr(resp, "model", None))
             except Exception:
                 _count_error("answerer.usage")
             return resp
