@@ -1,0 +1,2653 @@
+{
+  "question_id": "gpt4_7ddcf75f",
+  "question_type": "temporal-reasoning",
+  "question": "How many days ago did I go on a whitewater rafting trip in the Oregon mountains?",
+  "ground_truth_answer": "3 days ago. 4 days (including the last day) is also acceptable.",
+  "question_date": "2023/06/20 (Tue) 16:30",
+  "is_abstention": false,
+  "user_id": "longmemeval_gpt4_7ddcf75f_8da3076b",
+  "answer_session_ids": [
+    "answer_ad8a76cb_1"
+  ],
+  "retrieval": {
+    "search_query": "How many days ago did I go on a whitewater rafting trip in the Oregon mountains?",
+    "search_results": [
+      {
+        "memory": "User returned from a whitewater rafting trip in the Oregon mountains with coworkers on 2026-11-18 and wishes they had a waterproof camera to capture the thrilling moments",
+        "score": 0.8605715720000001,
+        "id": "9b270a6d-2e61-43a4-b743-56d1e3614b18",
+        "created_at": "2026-11-18T18:16:46.434193+00:00",
+        "updated_at": "2026-11-18T18:16:46.434193+00:00",
+        "score_debug": {
+          "combined_score": 0.8605715720000001,
+          "semantic_score": 0.65142953,
+          "bm25_score": 1.0,
+          "entity_boost": 0.4999994
+        }
+      },
+      {
+        "memory": "User plans to bring a portable 10,000 mAh power bank to keep devices charged during the camping portion of the whitewater rafting trip.",
+        "score": 0.8132404184044224,
+        "id": "1f65bea1-d181-43a5-ac7e-cf8e5743966f",
+        "created_at": "2026-11-18T18:18:50.374255+00:00",
+        "updated_at": "2026-11-18T18:18:50.374255+00:00",
+        "score_debug": {
+          "combined_score": 0.8132404184044224,
+          "semantic_score": 0.5409758,
+          "bm25_score": 0.999999999948064,
+          "entity_boost": 0.4921252460629921
+        }
+      },
+      {
+        "memory": "User asked whether the GoPro Hero8 Black can be used to capture photos during whitewater rafting, or if it is primarily for video.",
+        "score": 0.8091120540240724,
+        "id": "22c367ae-5113-43b7-994f-62615fe1c745",
+        "created_at": "2026-11-18T18:18:06.213145+00:00",
+        "updated_at": "2026-11-18T18:18:06.213145+00:00",
+        "score_debug": {
+          "combined_score": 0.8091120540240724,
+          "semantic_score": 0.5306549,
+          "bm25_score": 0.9999999889971886,
+          "entity_boost": 0.4921252460629921
+        }
+      },
+      {
+        "memory": "User plans to bring a 7W solar charger to charge their 10,000 mAh power bank during the camping portion of the whitewater rafting trip.",
+        "score": 0.7978155504028437,
+        "id": "fc2117e9-959b-46ba-9d70-4394e0d93388",
+        "created_at": "2026-11-18T18:19:13.138963+00:00",
+        "updated_at": "2026-11-18T18:19:13.138963+00:00",
+        "score_debug": {
+          "combined_score": 0.7978155504028437,
+          "semantic_score": 0.50241363,
+          "bm25_score": 0.9999999999441171,
+          "entity_boost": 0.4921252460629921
+        }
+      },
+      {
+        "memory": "User is particularly interested in the GoPro Hero8 Black because of its video quality and wants details about its stabilization feature, asking whether it performs well in high‑shake situations such as whitewater rafting.",
+        "score": 0.781502955780028,
+        "id": "325dcd52-cbef-4290-9bfa-9946cdf2b007",
+        "created_at": "2026-11-18T18:17:27.933719+00:00",
+        "updated_at": "2026-11-18T18:17:27.933719+00:00",
+        "score_debug": {
+          "combined_score": 0.781502955780028,
+          "semantic_score": 0.46163216,
+          "bm25_score": 0.9999999833870781,
+          "entity_boost": 0.4921252460629921
+        }
+      },
+      {
+        "memory": "Assistant suggested taking a stroll along the shore of Lake Batur from Toya Devasya to enjoy scenic mountain and water vistas.",
+        "score": 0.7514230059226708,
+        "id": "eb895955-d9dc-4a97-b5da-c23d671422de",
+        "created_at": "2026-11-18T18:05:09.072411+00:00",
+        "updated_at": "2026-11-18T18:05:09.072411+00:00",
+        "score_debug": {
+          "combined_score": 0.7514230059226708,
+          "semantic_score": 0.5241622,
+          "bm25_score": 0.9360513848066768,
+          "entity_boost": 0.41834393
+        }
+      },
+      {
+        "memory": "Assistant suggests a day trip to Everglades National Park, where visitors can take an airboat tour or hike through the unique ecosystem just outside Miami.",
+        "score": 0.7467448910344179,
+        "id": "9e1122bc-eada-4da1-b6c8-2068e0203541",
+        "created_at": "2026-11-18T17:05:18.247765+00:00",
+        "updated_at": "2026-11-18T17:05:18.247765+00:00",
+        "score_debug": {
+          "combined_score": 0.7467448910344179,
+          "semantic_score": 0.4605077,
+          "bm25_score": 0.9974547273862444,
+          "entity_boost": 0.40889980019980027
+        }
+      },
+      {
+        "memory": "Assistant recommends starting at Shark Valley, driving the 15‑mile paved loop road to view wildlife such as alligators, birds, and turtles during the day trip.",
+        "score": 0.7435752522181052,
+        "id": "6316d36b-074d-440b-a4b8-16dd90e30ad9",
+        "created_at": "2026-11-18T17:06:59.716014+00:00",
+        "updated_at": "2026-11-18T17:06:59.716014+00:00",
+        "score_debug": {
+          "combined_score": 0.7435752522181052,
+          "semantic_score": 0.4884963,
+          "bm25_score": 0.9972405510177037,
+          "entity_boost": 0.3732012795275591
+        }
+      },
+      {
+        "memory": "Assistant recommended a day trip to nearby hot‑spring sites, including the popular Toya Bungkah hot springs, for additional soaking experiences.",
+        "score": 0.740267075552264,
+        "id": "bd6bdd93-4d11-428b-a63a-8bd30ad30246",
+        "created_at": "2026-11-18T18:05:09.074629+00:00",
+        "updated_at": "2026-11-18T18:05:09.074629+00:00",
+        "score_debug": {
+          "combined_score": 0.740267075552264,
+          "semantic_score": 0.48008153,
+          "bm25_score": 0.997384879353101,
+          "entity_boost": 0.3732012795275591
+        }
+      },
+      {
+        "memory": "User plans to visit Everglades National Park on a day trip from Miami and is asking for a concise route or guided tour to see the park's highlights within limited time.",
+        "score": 0.7358651704204144,
+        "id": "4bb2288a-26d5-45ff-9ec5-8dcfee486ec8",
+        "created_at": "2026-11-18T17:06:59.713117+00:00",
+        "updated_at": "2026-11-18T17:06:59.713117+00:00",
+        "score_debug": {
+          "combined_score": 0.7358651704204144,
+          "semantic_score": 0.46929562,
+          "bm25_score": 0.9971660265234769,
+          "entity_boost": 0.3732012795275591
+        }
+      },
+      {
+        "memory": "Assistant recommended best practices for photographing while whitewater rafting with the Hero8 Black: securely mount the camera on a helmet or chest, use a waterproof case for extra protection, employ burst mode, experiment with SuperPhoto mode, and review and adjust settings to ensure optimal results.",
+        "score": 0.7145000764113416,
+        "id": "784a13af-5499-47a6-a0ef-3b8f04a87ca8",
+        "created_at": "2026-11-18T18:18:06.220588+00:00",
+        "updated_at": "2026-11-18T18:18:06.220588+00:00",
+        "score_debug": {
+          "combined_score": 0.7145000764113416,
+          "semantic_score": 0.4806975,
+          "bm25_score": 0.9999999937256567,
+          "entity_boost": 0.30555269730269735
+        }
+      },
+      {
+        "memory": "Assistant suggests day trips to the Florida Keys, Fort Lauderdale, or the Everglades to add variety and new scenery to the Miami itinerary.",
+        "score": 0.7112129769544977,
+        "id": "ab1950fc-d3c3-4d96-8a6a-c7621e74708f",
+        "created_at": "2026-11-18T17:05:18.270388+00:00",
+        "updated_at": "2026-11-18T17:05:18.270388+00:00",
+        "score_debug": {
+          "combined_score": 0.7112129769544977,
+          "semantic_score": 0.39759725,
+          "bm25_score": 0.9974547273862444,
+          "entity_boost": 0.382980465
+        }
+      },
+      {
+        "memory": "Assistant explained that the GoPro Hero8 Black has a 12‑megapixel sensor with improved low‑light performance, burst mode up to 25 photos per second, RAW image capture, SuperPhoto HDR mode, and a touchscreen for touch zoom, making it well suited for still photography during high‑shake activities like whitewater rafting.",
+        "score": 0.7091898189778069,
+        "id": "ca0d525f-4f9e-48e5-a7ad-070fcb32e776",
+        "created_at": "2026-11-18T18:18:06.217059+00:00",
+        "updated_at": "2026-11-18T18:18:06.217059+00:00",
+        "score_debug": {
+          "combined_score": 0.7091898189778069,
+          "semantic_score": 0.46100983,
+          "bm25_score": 0.999999967444517,
+          "entity_boost": 0.31196475
+        }
+      },
+      {
+        "memory": "User likes mountains and beaches and is looking for a place to stay in Bali that offers both mountain and beach experiences.",
+        "score": 0.7047420760051756,
+        "id": "684ea35c-692c-4ea2-aae2-f272578aeedf",
+        "created_at": "2026-11-18T18:07:47.762000+00:00",
+        "updated_at": "2026-11-18T18:07:47.762000+00:00",
+        "score_debug": {
+          "combined_score": 0.7047420760051756,
+          "semantic_score": 0.48591757,
+          "bm25_score": 0.977803052662359,
+          "entity_boost": 0.29813456735057986
+        }
+      },
+      {
+        "memory": "User plans to rent an SUV for a single day to explore the surrounding areas of Miami, seeking a suitable model for the trip.",
+        "score": 0.702938866210771,
+        "id": "254739ad-d869-401e-b94c-288436fd361a",
+        "created_at": "2026-11-18T17:06:39.958833+00:00",
+        "updated_at": "2026-11-18T17:06:39.958833+00:00",
+        "score_debug": {
+          "combined_score": 0.702938866210771,
+          "semantic_score": 0.43598846,
+          "bm25_score": 0.997384879353101,
+          "entity_boost": 0.32397382617382625
+        }
+      },
+      {
+        "memory": "User returned from a week-long trip to Hawaii on November 18, 2026, feeling refreshed after the vacation.",
+        "score": 0.6889872431897087,
+        "id": "3895f298-f992-4b4e-97d3-b6fb9239cbca",
+        "created_at": "2026-11-18T18:43:12.977991+00:00",
+        "updated_at": "2026-11-18T18:43:12.977991+00:00",
+        "score_debug": {
+          "combined_score": 0.6889872431897087,
+          "semantic_score": 0.5663614,
+          "bm25_score": 0.7405393079742717,
+          "entity_boost": 0.4155674
+        }
+      },
+      {
+        "memory": "User has visited Miami before, but that visit was a while ago, indicating prior familiarity with the city.",
+        "score": 0.6823092660422727,
+        "id": "42f39181-dc71-4bbd-bc02-77aa3210099f",
+        "created_at": "2026-11-18T17:05:18.227418+00:00",
+        "updated_at": "2026-11-18T17:05:18.227418+00:00",
+        "score_debug": {
+          "combined_score": 0.6823092660422727,
+          "semantic_score": 0.47361413,
+          "bm25_score": 0.9784391937159536,
+          "entity_boost": 0.2537198413897281
+        }
+      },
+      {
+        "memory": "Assistant recommended the following SUV models for a day trip in Miami: Honda CR‑V, Toyota RAV4, Hyundai Tucson, Ford Escape, Jeep Compass, and Nissan Rogue.",
+        "score": 0.6809493385978783,
+        "id": "5dd1a845-ce39-4d01-a18c-c99be17e284a",
+        "created_at": "2026-11-18T17:06:39.961844+00:00",
+        "updated_at": "2026-11-18T17:06:39.961844+00:00",
+        "score_debug": {
+          "combined_score": 0.6809493385978783,
+          "semantic_score": 0.33208218,
+          "bm25_score": 0.9970898869671367,
+          "entity_boost": 0.3732012795275591
+        }
+      },
+      {
+        "memory": "Assistant recommended Ubud, Lovina, Amed, and Jimbaran as Bali locations that provide access to both mountains and beaches, noting Ubud’s cultural hub and rice paddies, Lovina’s black‑sand beaches near Mount Batur, Amed’s eastern coast snorkeling with views of Mount Agung, and Jimbaran’s white‑sand beaches with nearby mountain day‑trip options.",
+        "score": 0.6696723007267362,
+        "id": "3aa938bf-3254-4d50-8787-1a59edb4a7c2",
+        "created_at": "2026-11-18T18:07:47.766441+00:00",
+        "updated_at": "2026-11-18T18:07:47.766441+00:00",
+        "score_debug": {
+          "combined_score": 0.6696723007267362,
+          "semantic_score": 0.32437834,
+          "bm25_score": 0.9709502118168408,
+          "entity_boost": 0.3788522
+        }
+      },
+      {
+        "memory": "User recalls a conversation with manager Rachel about three months ago (around August 2026) where she hinted at growth opportunities, and User took her advice to step up their performance.",
+        "score": 0.6588066564551135,
+        "id": "cbbc6a4c-44be-4388-8047-9123981f4ee1",
+        "created_at": "2026-11-18T16:57:19.019727+00:00",
+        "updated_at": "2026-11-18T16:57:19.019727+00:00",
+        "score_debug": {
+          "combined_score": 0.6588066564551135,
+          "semantic_score": 0.36081812,
+          "bm25_score": 0.9750251147632817,
+          "entity_boost": 0.31117340637450197
+        }
+      },
+      {
+        "memory": "Assistant explained that the GoPro Hero8 Black uses HyperSmooth 2.0 stabilization, which operates in all video modes (4K 60 fps, 2.7K 120 fps, 1080p 240 fps), reduces rolling‑shutter distortion, improves low‑light performance, and delivers remarkably steady footage in intense, high‑shake activities like whitewater rafting.",
+        "score": 0.6387675980454477,
+        "id": "95a5f32c-9425-4162-b4c0-0040381221b8",
+        "created_at": "2026-11-18T18:17:27.938869+00:00",
+        "updated_at": "2026-11-18T18:17:27.938869+00:00",
+        "score_debug": {
+          "combined_score": 0.6387675980454477,
+          "semantic_score": 0.31205407,
+          "bm25_score": 0.9999999637236578,
+          "entity_boost": 0.28486496138996137
+        }
+      },
+      {
+        "memory": "User is curious about the battery life of the GoPro Hero8 Black for a full day of whitewater rafting and camping, planning to capture both video and photos.",
+        "score": 0.629643679957596,
+        "id": "abb8e8fe-ff83-4e86-a3dc-ed65ab607646",
+        "created_at": "2026-11-18T18:18:37.432089+00:00",
+        "updated_at": "2026-11-18T18:18:37.432089+00:00",
+        "score_debug": {
+          "combined_score": 0.629643679957596,
+          "semantic_score": 0.5741092,
+          "bm25_score": 0.9999999998939899,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is interested in volunteering in the hospital's silent auction department, leveraging their positive experience helping with the silent auction at a charity gala two weeks ago.",
+        "score": 0.6267877961253616,
+        "id": "0cdef73a-01cc-4ed3-a1e3-57e11193f3fb",
+        "created_at": "2026-11-18T18:33:00.205509+00:00",
+        "updated_at": "2026-11-18T18:33:00.205509+00:00",
+        "score_debug": {
+          "combined_score": 0.6267877961253616,
+          "semantic_score": 0.31143922,
+          "bm25_score": 0.9734483403134041,
+          "entity_boost": 0.28208193
+        }
+      },
+      {
+        "memory": "Assistant’s story states that Natalia, Ashley, Jack, Michael, Cindy, and Steve had planned their camping trip for months and arrived at the campsite in high spirits.",
+        "score": 0.6174932354161028,
+        "id": "2df2e012-c608-41ef-bdb9-26ffcf96a64a",
+        "created_at": "2026-11-18T17:18:14.317897+00:00",
+        "updated_at": "2026-11-18T17:18:14.317897+00:00",
+        "score_debug": {
+          "combined_score": 0.6174932354161028,
+          "semantic_score": 0.41779798,
+          "bm25_score": 0.729362188540257,
+          "entity_boost": 0.39657292
+        }
+      },
+      {
+        "memory": "User is planning a trip to Miami and is looking for travel recommendations to make the most of the visit.",
+        "score": 0.6115916570502223,
+        "id": "008219cf-8896-4767-bad8-b4e055a626ee",
+        "created_at": "2026-11-18T17:05:18.225140+00:00",
+        "updated_at": "2026-11-18T17:05:18.225140+00:00",
+        "score_debug": {
+          "combined_score": 0.6115916570502223,
+          "semantic_score": 0.4428838,
+          "bm25_score": 0.7488719426255559,
+          "entity_boost": 0.3372234
+        }
+      },
+      {
+        "memory": "User has prior experience with car rentals, having previously rented vehicles for personal trips, indicating familiarity with the rental process.",
+        "score": 0.6024057014716844,
+        "id": "a6c7ad3f-9007-4ef0-978f-5354ea93e054",
+        "created_at": "2026-11-18T17:06:39.954019+00:00",
+        "updated_at": "2026-11-18T17:06:39.954019+00:00",
+        "score_debug": {
+          "combined_score": 0.6024057014716844,
+          "semantic_score": 0.4241653,
+          "bm25_score": 0.734959353679211,
+          "entity_boost": 0.3468896
+        }
+      },
+      {
+        "memory": "User is planning an upcoming trip and asked for tips to keep their jewelry safe while traveling.",
+        "score": 0.6013116029148816,
+        "id": "28837150-0be1-47a7-832f-188ad8033131",
+        "created_at": "2026-11-18T18:51:42.083552+00:00",
+        "updated_at": "2026-11-18T18:51:42.083552+00:00",
+        "score_debug": {
+          "combined_score": 0.6013116029148816,
+          "semantic_score": 0.40962264,
+          "bm25_score": 0.746099687287204,
+          "entity_boost": 0.34755668
+        }
+      },
+      {
+        "memory": "Assistant suggested pre‑adventure steps: check battery life, pack extra batteries, use a waterproof case or housing, and practice using the camera before the trip",
+        "score": 0.5976847381863803,
+        "id": "2a53e5e1-57f4-4edf-9bf5-c52f7023daac",
+        "created_at": "2026-11-18T18:16:46.453238+00:00",
+        "updated_at": "2026-11-18T18:16:46.453238+00:00",
+        "score_debug": {
+          "combined_score": 0.5976847381863803,
+          "semantic_score": 0.45649636,
+          "bm25_score": 0.7321627881632534,
+          "entity_boost": 0.30555269730269735
+        }
+      },
+      {
+        "memory": "User wants to work out five days a week with two rest days on the weekend.",
+        "score": 0.5957514235820132,
+        "id": "28785922-0471-47e8-ba7d-cd7c4f398664",
+        "created_at": "2026-11-18T17:27:18.673294+00:00",
+        "updated_at": "2026-11-18T17:27:18.673294+00:00",
+        "score_debug": {
+          "combined_score": 0.5957514235820132,
+          "semantic_score": 0.41581428,
+          "bm25_score": 0.7779059173166714,
+          "entity_boost": 0.2956583616383617
+        }
+      },
+      {
+        "memory": "Assistant recommends splitting workouts into 3–4 days, assigning Day 1 to chest and triceps, Day 2 to back and biceps, Day 3 to legs, and Day 4 to shoulders and abs.",
+        "score": 0.5902578209224819,
+        "id": "aeb46338-d00a-4a87-8bc3-46db606983bd",
+        "created_at": "2026-11-18T17:30:07.673083+00:00",
+        "updated_at": "2026-11-18T17:30:07.673083+00:00",
+        "score_debug": {
+          "combined_score": 0.5902578209224819,
+          "semantic_score": 0.3457375,
+          "bm25_score": 0.8490873020564546,
+          "entity_boost": 0.2808197502497503
+        }
+      },
+      {
+        "memory": "Assistant reminded to keep the power bank fully charged before the trip and to top it up when possible to ensure readiness.",
+        "score": 0.5825975471965639,
+        "id": "7070cae9-ea90-4d00-81ad-51f749443143",
+        "created_at": "2026-11-18T18:18:50.385816+00:00",
+        "updated_at": "2026-11-18T18:18:50.385816+00:00",
+        "score_debug": {
+          "combined_score": 0.5825975471965639,
+          "semantic_score": 0.43102634,
+          "bm25_score": 0.7488719426255559,
+          "entity_boost": 0.27659558536585366
+        }
+      },
+      {
+        "memory": "Assistant recommends ending the day at the 0.8‑mile Anhinga Trail boardwalk, renowned for abundant alligator, bird, and turtle sightings.",
+        "score": 0.5739642337296529,
+        "id": "300fed42-3bf6-4f8e-89bb-2e6d8eb1fd01",
+        "created_at": "2026-11-18T17:06:59.723557+00:00",
+        "updated_at": "2026-11-18T17:06:59.723557+00:00",
+        "score_debug": {
+          "combined_score": 0.5739642337296529,
+          "semantic_score": 0.4595181,
+          "bm25_score": 0.6139479624117817,
+          "entity_boost": 0.3614445219123506
+        }
+      },
+      {
+        "memory": "User is planning to rent a car for a single day to explore the surrounding areas of Miami.",
+        "score": 0.567094069157116,
+        "id": "4f02ef90-7361-403c-ac66-d890754e2b56",
+        "created_at": "2026-11-18T17:06:22.788564+00:00",
+        "updated_at": "2026-11-18T17:06:22.788564+00:00",
+        "score_debug": {
+          "combined_score": 0.567094069157116,
+          "semantic_score": 0.47366846,
+          "bm25_score": 0.6200928867189638,
+          "entity_boost": 0.32397382617382625
+        }
+      },
+      {
+        "memory": "Assistant provides an example balanced routine: Day 1 – Barbell Bench Press, Incline Dumbbell Press, Cable Fly, Tricep Pushdown, Tricep Dips; Day 2 – Pull‑ups, Barbell Rows, Lat Pulldowns, Dumbbell Bicep Curls, Hammer Curls; Day 3 – Squats, Leg Press, Lunges, Leg Extensions, Leg Curls; Day 4 – Dumbbell Shoulder Press, Lateral Raises, Rear Delt Fly, Plank, Russian Twists.",
+        "score": 0.5647060651680892,
+        "id": "3ebedfb8-b493-4c75-b50b-20ffe6460296",
+        "created_at": "2026-11-18T17:30:07.692531+00:00",
+        "updated_at": "2026-11-18T17:30:07.692531+00:00",
+        "score_debug": {
+          "combined_score": 0.5647060651680892,
+          "semantic_score": 0.2677887,
+          "bm25_score": 0.8132733129202231,
+          "entity_boost": 0.33070315
+        }
+      },
+      {
+        "memory": "User plans to visit Kew Gardens on their next trip to London, considering it a must‑visit place.",
+        "score": 0.5587534457717288,
+        "id": "5ca878af-e849-4704-8ce9-02e81da6a516",
+        "created_at": "2026-11-18T17:44:31.243870+00:00",
+        "updated_at": "2026-11-18T17:44:31.243870+00:00",
+        "score_debug": {
+          "combined_score": 0.5587534457717288,
+          "semantic_score": 0.33203965,
+          "bm25_score": 0.7488719426255559,
+          "entity_boost": 0.31597202180376616
+        }
+      },
+      {
+        "memory": "User's morning routine includes a 30‑minute walk on Mondays, Tuesdays, and Thursdays before starting the day.",
+        "score": 0.5434174740915969,
+        "id": "b1323a26-4fb9-44d6-9fef-a75d0e41b52c",
+        "created_at": "2026-11-18T16:51:23.474305+00:00",
+        "updated_at": "2026-11-18T16:51:23.474305+00:00",
+        "score_debug": {
+          "combined_score": 0.5434174740915969,
+          "semantic_score": 0.44144392,
+          "bm25_score": 0.623175119874347,
+          "entity_boost": 0.2939246453546454
+        }
+      },
+      {
+        "memory": "Assistant explained that the \"Fed day\" effect refers to systematic differences in stock returns on days when the Federal Reserve announces monetary policy decisions, driven primarily by interest‑rate changes and shifts in investor sentiment.",
+        "score": 0.5404514210657597,
+        "id": "34ec90eb-5a10-4162-b5de-f51ace6fffaf",
+        "created_at": "2026-11-18T17:41:09.450134+00:00",
+        "updated_at": "2026-11-18T17:41:09.450134+00:00",
+        "score_debug": {
+          "combined_score": 0.5404514210657597,
+          "semantic_score": 0.29836962,
+          "bm25_score": 0.7551125326643991,
+          "entity_boost": 0.2976464
+        }
+      },
+      {
+        "memory": "Assistant recommended choosing a sunny location with at least 6 hours of direct sunlight per day, ideally 8‑10 hours, for tomato plants",
+        "score": 0.5126997322143546,
+        "id": "54d101d9-3da3-45f1-8461-f1efba8e3224",
+        "created_at": "2026-11-18T17:19:03.701138+00:00",
+        "updated_at": "2026-11-18T17:19:03.701138+00:00",
+        "score_debug": {
+          "combined_score": 0.5126997322143546,
+          "semantic_score": 0.32968155,
+          "bm25_score": 0.6108858805358864,
+          "entity_boost": 0.3411819
+        }
+      },
+      {
+        "memory": "Assistant recommended James Allen as an online jeweler that offers a free engagement ring resizing service within 60 days of purchase.",
+        "score": 0.48764521221435453,
+        "id": "1521ddc4-e547-468b-871a-79697a946f53",
+        "created_at": "2026-11-18T18:50:33.025674+00:00",
+        "updated_at": "2026-11-18T18:50:33.025674+00:00",
+        "score_debug": {
+          "combined_score": 0.48764521221435453,
+          "semantic_score": 0.3076729,
+          "bm25_score": 0.6108858805358864,
+          "entity_boost": 0.30055425
+        }
+      },
+      {
+        "memory": "Assistant advised User to listen to their body and take rest days as needed, emphasizing a balance between physical activity and relaxation for overall well‑being",
+        "score": 0.48459188086969923,
+        "id": "ce8823e4-5b46-411e-85f0-7f969dcbc9bb",
+        "created_at": "2026-11-18T16:52:40.577716+00:00",
+        "updated_at": "2026-11-18T16:52:40.577716+00:00",
+        "score_debug": {
+          "combined_score": 0.48459188086969923,
+          "semantic_score": 0.30493546,
+          "bm25_score": 0.6108858805358864,
+          "entity_boost": 0.2956583616383617
+        }
+      },
+      {
+        "memory": "From that day forward, Sandra feels comfortable taking breaks and leave, her boss and colleagues support her, and she continues to perform her job well without added stress.",
+        "score": 0.48103259908356694,
+        "id": "deb78f8b-5da5-4217-9e3c-599aa330feec",
+        "created_at": "2026-11-18T17:15:33.111078+00:00",
+        "updated_at": "2026-11-18T17:15:33.111078+00:00",
+        "score_debug": {
+          "combined_score": 0.48103259908356694,
+          "semantic_score": 0.27251884,
+          "bm25_score": 0.6047833023939566,
+          "entity_boost": 0.32527935531496066
+        }
+      },
+      {
+        "memory": "Assistant recommended Mrs. Meyer’s Clean Day dish soap, noting it is gentle, effective, biodegradable, non‑toxic, and formulated without phthalates, parabens or other harsh chemicals.",
+        "score": 0.46912773500710275,
+        "id": "9e262cad-defc-447c-9746-732fa6019818",
+        "created_at": "2026-11-18T18:35:33.569341+00:00",
+        "updated_at": "2026-11-18T18:35:33.569341+00:00",
+        "score_debug": {
+          "combined_score": 0.46912773500710275,
+          "semantic_score": 0.27112943,
+          "bm25_score": 0.6017433790462283,
+          "entity_boost": 0.29994652847152853
+        }
+      },
+      {
+        "memory": "Assistant recommended turning off the Hero8 Black when not in use to conserve battery during the trip.",
+        "score": 0.4500876170502224,
+        "id": "11af17cd-25c6-41ce-8c9f-7314c7e771b9",
+        "created_at": "2026-11-18T18:18:50.381236+00:00",
+        "updated_at": "2026-11-18T18:18:50.381236+00:00",
+        "score_debug": {
+          "combined_score": 0.4500876170502224,
+          "semantic_score": 0.3763471,
+          "bm25_score": 0.7488719426255559,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant warned that visa fees and airport taxes may apply to the trip and should be included when calculating the total expense.",
+        "score": 0.44824471118970866,
+        "id": "e3cf7310-6982-4cf5-adc4-43396a490a87",
+        "created_at": "2026-11-18T18:07:07.412458+00:00",
+        "updated_at": "2026-11-18T18:07:07.412458+00:00",
+        "score_debug": {
+          "combined_score": 0.44824471118970866,
+          "semantic_score": 0.38007247,
+          "bm25_score": 0.7405393079742717,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant noted that Hanna Andersson typically runs sales during holidays like Mother’s Day, Father’s Day, and Black Friday.",
+        "score": 0.4039958213064601,
+        "id": "f037a8d1-2053-4604-b64d-fab01256a7c6",
+        "created_at": "2026-11-18T18:29:29.079050+00:00",
+        "updated_at": "2026-11-18T18:29:29.079050+00:00",
+        "score_debug": {
+          "combined_score": 0.4039958213064601,
+          "semantic_score": 0.2426547,
+          "bm25_score": 0.7673348532661503,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has a Spotify playlist called “Morning Boost” that consistently pumps them up and prepares them for the day.",
+        "score": 0.40077734239267304,
+        "id": "1992f5bd-bb5e-4bed-9726-1d96a66fa204",
+        "created_at": "2026-11-18T18:11:58.498791+00:00",
+        "updated_at": "2026-11-18T18:11:58.498791+00:00",
+        "score_debug": {
+          "combined_score": 0.40077734239267304,
+          "semantic_score": 0.37567967,
+          "bm25_score": 0.6262636859816827,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "In the code, Assistant creates an 'Option Expiration' column, filters pre‑option and option days, buys the stock on the first expiration date, sells four days later, and calculates the holding‑period return.",
+        "score": 0.3929650101698488,
+        "id": "b3dae40b-6aec-4235-bc28-5889aed723dd",
+        "created_at": "2026-11-18T17:41:39.431901+00:00",
+        "updated_at": "2026-11-18T17:41:39.431901+00:00",
+        "score_debug": {
+          "combined_score": 0.3929650101698488,
+          "semantic_score": 0.21964459,
+          "bm25_score": 0.762767935424622,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has a Spotify playlist titled 'Morning Boost' that they say always gets them pumped up and ready for the day.",
+        "score": 0.3910018463926731,
+        "id": "aef16ab6-88b7-439e-a98f-e1bffa89ad0a",
+        "created_at": "2026-11-18T18:09:38.155013+00:00",
+        "updated_at": "2026-11-18T18:09:38.155013+00:00",
+        "score_debug": {
+          "combined_score": 0.3910018463926731,
+          "semantic_score": 0.35124093,
+          "bm25_score": 0.6262636859816827,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User drinks at least 8 cups of water each day, limits caffeine to one cup of coffee in the morning and one cup of tea in the afternoon, and reports feeling more focused and less jittery.",
+        "score": 0.3857931421751199,
+        "id": "95952cf6-76f8-4d4f-bb42-f9a1c89955b3",
+        "created_at": "2026-11-18T18:49:13.747420+00:00",
+        "updated_at": "2026-11-18T18:49:13.747420+00:00",
+        "score_debug": {
+          "combined_score": 0.3857931421751199,
+          "semantic_score": 0.36577165,
+          "bm25_score": 0.5987112054377998,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User aims to read at least 20 pages each day and plans to use the extra commute time to catch up on reading.",
+        "score": 0.38423380893998277,
+        "id": "bb3aa2c2-1645-40c6-8ff9-a4090dfe3d61",
+        "created_at": "2026-11-18T18:40:44.182367+00:00",
+        "updated_at": "2026-11-18T18:40:44.182367+00:00",
+        "score_debug": {
+          "combined_score": 0.38423380893998277,
+          "semantic_score": 0.34356728,
+          "bm25_score": 0.6170172423499569,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended using a sun‑tracking planter for container‑grown tomatoes to follow the sun’s movement throughout the day",
+        "score": 0.3826453527678749,
+        "id": "70b937f1-6291-4806-9947-bab22fb360ee",
+        "created_at": "2026-11-18T17:19:03.714220+00:00",
+        "updated_at": "2026-11-18T17:19:03.714220+00:00",
+        "score_debug": {
+          "combined_score": 0.3826453527678749,
+          "semantic_score": 0.3241552,
+          "bm25_score": 0.6324581819196873,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User intends to use the extra commute time to read, setting a personal goal of at least 20 pages per day to stay on track with their reading habit.",
+        "score": 0.3744619636184913,
+        "id": "8609bb9d-45cc-4187-91a2-36acf6d1e6b2",
+        "created_at": "2026-11-18T18:39:27.859485+00:00",
+        "updated_at": "2026-11-18T18:39:27.859485+00:00",
+        "score_debug": {
+          "combined_score": 0.3744619636184913,
+          "semantic_score": 0.33441153,
+          "bm25_score": 0.6017433790462283,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant explained that the option expiration effect in equities causes heightened volatility and atypical price movements on the days leading up to the expiration of stock options.",
+        "score": 0.3717282716184913,
+        "id": "5b64d8c1-f64e-46db-b4eb-d988cf541edd",
+        "created_at": "2026-11-18T17:41:39.419585+00:00",
+        "updated_at": "2026-11-18T17:41:39.419585+00:00",
+        "score_debug": {
+          "combined_score": 0.3717282716184913,
+          "semantic_score": 0.3275773,
+          "bm25_score": 0.6017433790462283,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested that maintaining a consistent 7:30 am wake‑up time can set a positive tone for the day and improve overall well‑being.",
+        "score": 0.3686822146875855,
+        "id": "842f3d1b-f36c-4ea5-81d0-3a973ac7fef4",
+        "created_at": "2026-11-18T18:48:55.670729+00:00",
+        "updated_at": "2026-11-18T18:48:55.670729+00:00",
+        "score_debug": {
+          "combined_score": 0.3686822146875855,
+          "semantic_score": 0.30161265,
+          "bm25_score": 0.6200928867189638,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advises a short pre‑sleep journaling habit: write down things you’re grateful for or reflect on the day, helping to process emotions and ease the mind before bedtime.",
+        "score": 0.3686603716184913,
+        "id": "fb2c486e-dd09-44bb-9eee-3d33e3bfe5ef",
+        "created_at": "2026-11-18T18:13:30.509785+00:00",
+        "updated_at": "2026-11-18T18:13:30.509785+00:00",
+        "score_debug": {
+          "combined_score": 0.3686603716184913,
+          "semantic_score": 0.31990755,
+          "bm25_score": 0.6017433790462283,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant estimated that with moderate use—intermittent video clips and photo capture over a full day—the battery can last 6–8 hours, yielding about 200–300 photos and 1–2 hours of video footage.",
+        "score": 0.36542583961849134,
+        "id": "eba7f3d9-10d8-4eb1-9e03-058620dce735",
+        "created_at": "2026-11-18T18:18:37.440391+00:00",
+        "updated_at": "2026-11-18T18:18:37.440391+00:00",
+        "score_debug": {
+          "combined_score": 0.36542583961849134,
+          "semantic_score": 0.31182122,
+          "bm25_score": 0.6017433790462283,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested reading‑goal tips: choose books that genuinely interest you, always carry a book, track the number of pages read each day, and make reading during the commute a consistent habit.",
+        "score": 0.3650219836184913,
+        "id": "97abcb84-1d9a-4b08-abee-64fbf4247bef",
+        "created_at": "2026-11-18T18:39:27.856763+00:00",
+        "updated_at": "2026-11-18T18:39:27.856763+00:00",
+        "score_debug": {
+          "combined_score": 0.3650219836184913,
+          "semantic_score": 0.31081158,
+          "bm25_score": 0.6017433790462283,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is seeking an extremely lightweight Linux distribution suitable for running a script once a day.",
+        "score": 0.3635556546875855,
+        "id": "1db23fe5-06cb-475a-a357-e908d306d050",
+        "created_at": "2026-11-18T17:37:41.603883+00:00",
+        "updated_at": "2026-11-18T17:37:41.603883+00:00",
+        "score_debug": {
+          "combined_score": 0.3635556546875855,
+          "semantic_score": 0.28879625,
+          "bm25_score": 0.6200928867189638,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is looking for an extremely lightweight Linux distribution suitable for running a script that executes once a day",
+        "score": 0.36351578493998277,
+        "id": "40842eba-3c07-4b21-85b4-03997a2ac234",
+        "created_at": "2026-11-18T17:40:35.084259+00:00",
+        "updated_at": "2026-11-18T17:40:35.084259+00:00",
+        "score_debug": {
+          "combined_score": 0.36351578493998277,
+          "semantic_score": 0.29177222,
+          "bm25_score": 0.6170172423499569,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is seeking recommendations for waterproof cameras for an upcoming outdoor adventure",
+        "score": 0.35947634400000006,
+        "id": "8ee74874-f4bb-459c-8186-2ac579a41dbe",
+        "created_at": "2026-11-18T18:16:46.431220+00:00",
+        "updated_at": "2026-11-18T18:16:46.431220+00:00",
+        "score_debug": {
+          "combined_score": 0.35947634400000006,
+          "semantic_score": 0.49859276,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4000981
+        }
+      },
+      {
+        "memory": "Assistant advised transitioning the pet to a new food gradually over 7–10 days to prevent digestive upset.",
+        "score": 0.3593689746875855,
+        "id": "1426d7ab-6dc2-45bd-b4f0-83011bb55620",
+        "created_at": "2026-11-18T17:46:28.788775+00:00",
+        "updated_at": "2026-11-18T17:46:28.788775+00:00",
+        "score_debug": {
+          "combined_score": 0.3593689746875855,
+          "semantic_score": 0.27832955,
+          "bm25_score": 0.6200928867189638,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended rotating tomato plants every 1‑2 weeks so each plant receives equal sunlight throughout the day",
+        "score": 0.3563010866875855,
+        "id": "be667d23-3b9b-4896-bc05-8784b13c6484",
+        "created_at": "2026-11-18T17:19:03.707798+00:00",
+        "updated_at": "2026-11-18T17:19:03.707798+00:00",
+        "score_debug": {
+          "combined_score": 0.3563010866875855,
+          "semantic_score": 0.27065983,
+          "bm25_score": 0.6200928867189638,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended establishing a consistent yoga habit by practicing at the same time each day or week to maximize digestive benefits and overall well‑being.",
+        "score": 0.3550292950412655,
+        "id": "e0f5c426-5af3-433e-9a31-9d006765848b",
+        "created_at": "2026-11-18T18:43:59.914788+00:00",
+        "updated_at": "2026-11-18T18:43:59.914788+00:00",
+        "score_debug": {
+          "combined_score": 0.3550292950412655,
+          "semantic_score": 0.27974236,
+          "bm25_score": 0.6078308776031637,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant describes the campsite as situated in a dense forest with tall trees overhead and a babbling stream nearby.",
+        "score": 0.35304015200000005,
+        "id": "4f6f00ff-b5b6-417d-a07a-73e291682d51",
+        "created_at": "2026-11-18T17:18:14.320068+00:00",
+        "updated_at": "2026-11-18T17:18:14.320068+00:00",
+        "score_debug": {
+          "combined_score": 0.35304015200000005,
+          "semantic_score": 0.5034243,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37917608
+        }
+      },
+      {
+        "memory": "Assistant mentions a 2‑hour Shark Valley Guided Tram Tour, offering a narrated exploration of the area’s history, geology, and wildlife.",
+        "score": 0.34936552,
+        "id": "a23aa923-098a-4e63-8d1f-eeacede043f1",
+        "created_at": "2026-11-18T17:06:59.730772+00:00",
+        "updated_at": "2026-11-18T17:06:59.730772+00:00",
+        "score_debug": {
+          "combined_score": 0.34936552,
+          "semantic_score": 0.5145839,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3588299
+        }
+      },
+      {
+        "memory": "Assistant describes a 1‑hour Everglades Airboat Tour departing from the Alligator Farm, taking visitors deep into the wetlands to observe alligators and birdlife.",
+        "score": 0.34752002800000004,
+        "id": "60ca2be0-e2bf-44d8-947b-fc6d37caca6f",
+        "created_at": "2026-11-18T17:06:59.728448+00:00",
+        "updated_at": "2026-11-18T17:06:59.728448+00:00",
+        "score_debug": {
+          "combined_score": 0.34752002800000004,
+          "semantic_score": 0.47691807,
+          "bm25_score": 0.0,
+          "entity_boost": 0.391882
+        }
+      },
+      {
+        "memory": "Assistant advised User to identify the top 3‑5 high‑priority tasks each day, allocate them to focus blocks, break larger tasks into smaller chunks, and use scheduled breaks to check emails or handle minor tasks.",
+        "score": 0.34313073507109493,
+        "id": "6e7f72cd-19ea-4de3-a436-fd46ccf5eca1",
+        "created_at": "2026-11-18T16:51:53.023862+00:00",
+        "updated_at": "2026-11-18T16:51:53.023862+00:00",
+        "score_debug": {
+          "combined_score": 0.34313073507109493,
+          "semantic_score": 0.26816297,
+          "bm25_score": 0.5896638676777374,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant reminds the traveler to pack for Miami’s hot, sunny weather, stay hydrated, and use sun protection during outdoor activities.",
+        "score": 0.337258852,
+        "id": "52b49640-ebee-4bc3-ba92-cfa222c35a9e",
+        "created_at": "2026-11-18T17:05:18.272691+00:00",
+        "updated_at": "2026-11-18T17:05:18.272691+00:00",
+        "score_debug": {
+          "combined_score": 0.337258852,
+          "semantic_score": 0.47277573,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3703714
+        }
+      },
+      {
+        "memory": "Assistant highlights the Everglades Alligator Farm, a 30‑minute drive from Shark Valley, offering an airboat tour that showcases wetlands, alligators, birds, and turtles.",
+        "score": 0.33649784007992006,
+        "id": "18b1c9b5-15ab-407f-af70-ed4e28cbee27",
+        "created_at": "2026-11-18T17:06:59.721191+00:00",
+        "updated_at": "2026-11-18T17:06:59.721191+00:00",
+        "score_debug": {
+          "combined_score": 0.33649784007992006,
+          "semantic_score": 0.4323448,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40889980019980027
+        }
+      },
+      {
+        "memory": "User has taken two personal vacation flights in the past month, indicating frequent recent travel.",
+        "score": 0.333325507250996,
+        "id": "e669c4f4-5435-4c99-8680-8383ae9ef9c5",
+        "created_at": "2026-11-18T17:05:56.633325+00:00",
+        "updated_at": "2026-11-18T17:05:56.633325+00:00",
+        "score_debug": {
+          "combined_score": 0.333325507250996,
+          "semantic_score": 0.5162808,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31703296812749004
+        }
+      },
+      {
+        "memory": "Assistant suggests a short 0.4‑mile boardwalk hike on the Gumbo Limbo Trail to experience a lush hardwood forest and spot diverse wildlife.",
+        "score": 0.3326070842477523,
+        "id": "8c46fde0-6373-4552-a4e4-c0cb1a3991ee",
+        "created_at": "2026-11-18T17:06:59.718616+00:00",
+        "updated_at": "2026-11-18T17:06:59.718616+00:00",
+        "score_debug": {
+          "combined_score": 0.3326070842477523,
+          "semantic_score": 0.46042833,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3710893806193807
+        }
+      },
+      {
+        "memory": "User took two personal vacation flights in the month leading up to November 18, 2026, reflecting recent frequent travel.",
+        "score": 0.32893892725099605,
+        "id": "b63d2cab-ebd3-44a2-a77d-9f139cd2bc92",
+        "created_at": "2026-11-18T17:06:39.956290+00:00",
+        "updated_at": "2026-11-18T17:06:39.956290+00:00",
+        "score_debug": {
+          "combined_score": 0.32893892725099605,
+          "semantic_score": 0.50531435,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31703296812749004
+        }
+      },
+      {
+        "memory": "Assistant advises practical tips: verify trail closures and permits on the park website, bring sunscreen, insect repellent, plenty of water, wear comfortable shoes, and keep a safe distance from wildlife.",
+        "score": 0.32190876,
+        "id": "e0185b2e-1ae2-4a9a-8c53-9a7e50dbdb7e",
+        "created_at": "2026-11-18T17:06:59.733550+00:00",
+        "updated_at": "2026-11-18T17:06:59.733550+00:00",
+        "score_debug": {
+          "combined_score": 0.32190876,
+          "semantic_score": 0.4676838,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3370881
+        }
+      },
+      {
+        "memory": "Assistant provided example Python code using yfinance to download iShares 20+ Year Treasury Bond ETF (TLT) data from 2010‑01‑01 to 2022‑02‑25, mark specific auction dates, filter the hour before each auction, compute the average hourly return, decide a long or short position, hold for three days, and calculate the holding‑period return.",
+        "score": 0.3217442496072569,
+        "id": "41b97cf8-6a62-4b9c-b549-0616e43b5778",
+        "created_at": "2026-11-18T17:42:26.726825+00:00",
+        "updated_at": "2026-11-18T17:42:26.726825+00:00",
+        "score_debug": {
+          "combined_score": 0.3217442496072569,
+          "semantic_score": 0.25005963,
+          "bm25_score": 0.5543009940181423,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User intends to book the Everglades National Park Guided Tour, viewing it as the best way to see the park's highlights in a short amount of time.",
+        "score": 0.32147616800000006,
+        "id": "68fdf2ba-064a-43b5-bcb4-740c84040894",
+        "created_at": "2026-11-18T17:07:35.317062+00:00",
+        "updated_at": "2026-11-18T17:07:35.317062+00:00",
+        "score_debug": {
+          "combined_score": 0.32147616800000006,
+          "semantic_score": 0.45539042,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34830000000000005
+        }
+      },
+      {
+        "memory": "Assistant outlines a 4‑hour guided tour that covers Shark Valley, Gumbo Limbo Trail, and Anhinga Trail, providing expert commentary on the park’s ecosystem.",
+        "score": 0.32007896799999996,
+        "id": "2b5c61c0-4c8d-4030-ab2a-d9cdbf8a52db",
+        "created_at": "2026-11-18T17:06:59.726032+00:00",
+        "updated_at": "2026-11-18T17:06:59.726032+00:00",
+        "score_debug": {
+          "combined_score": 0.32007896799999996,
+          "semantic_score": 0.43011945,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37007797
+        }
+      },
+      {
+        "memory": "User completed their first marathon in October 2026, describing it as a huge personal milestone.",
+        "score": 0.3187476731707317,
+        "id": "e7242d75-b2d4-4987-87c5-7c156874dfbd",
+        "created_at": "2026-11-18T18:43:12.980166+00:00",
+        "updated_at": "2026-11-18T18:43:12.980166+00:00",
+        "score_debug": {
+          "combined_score": 0.3187476731707317,
+          "semantic_score": 0.4649765,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3318926829268293
+        }
+      },
+      {
+        "memory": "User asked about the height of Mount Batur, indicating interest in the volcano's elevation.",
+        "score": 0.318611715023622,
+        "id": "005824fb-ca33-4bb5-8800-b513d1967d07",
+        "created_at": "2026-11-18T18:06:33.421751+00:00",
+        "updated_at": "2026-11-18T18:06:33.421751+00:00",
+        "score_debug": {
+          "combined_score": 0.318611715023622,
+          "semantic_score": 0.42915726,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3673720275590551
+        }
+      },
+      {
+        "memory": "User has been traveling frequently recently, having taken two personal vacation flights within the past month, showing a high travel frequency.",
+        "score": 0.318058195250996,
+        "id": "cbbe5a82-45f9-409b-9676-305f2a37759c",
+        "created_at": "2026-11-18T17:05:18.229744+00:00",
+        "updated_at": "2026-11-18T17:05:18.229744+00:00",
+        "score_debug": {
+          "combined_score": 0.318058195250996,
+          "semantic_score": 0.47811252,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31703296812749004
+        }
+      },
+      {
+        "memory": "The tour includes a short drive through Shark Valley’s scenic loop road, a 0.4‑mile boardwalk hike on the Gumbo Limbo Trail, and a 0.8‑mile boardwalk walk on the Anhinga Trail, providing chances to spot alligators, birds, turtles, and fish.",
+        "score": 0.31725778024775225,
+        "id": "6cf3a060-55c6-4a5a-b36d-5e237d9e8ccd",
+        "created_at": "2026-11-18T17:07:35.324184+00:00",
+        "updated_at": "2026-11-18T17:07:35.324184+00:00",
+        "score_debug": {
+          "combined_score": 0.31725778024775225,
+          "semantic_score": 0.42205507,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3710893806193807
+        }
+      },
+      {
+        "memory": "User asked for suggestions on activities to do in Toya Devasya, a hot‑springs resort in Toya Bungkah, Bali.",
+        "score": 0.315341154,
+        "id": "16664925-fe4e-4f3f-9655-a5b000f0b1b7",
+        "created_at": "2026-11-18T18:05:09.063039+00:00",
+        "updated_at": "2026-11-18T18:05:09.063039+00:00",
+        "score_debug": {
+          "combined_score": 0.315341154,
+          "semantic_score": 0.4448008,
+          "bm25_score": 0.0,
+          "entity_boost": 0.343552085
+        }
+      },
+      {
+        "memory": "Mount Batur is an active volcano in the Bangli regency of Bali, Indonesia, standing 1,717 meters (5,633 feet) above sea level and popular for sunrise hikes.",
+        "score": 0.31483323199999996,
+        "id": "bc5bb1b7-c9f5-4881-b27c-317226f57786",
+        "created_at": "2026-11-18T18:06:33.424833+00:00",
+        "updated_at": "2026-11-18T18:06:33.424833+00:00",
+        "score_debug": {
+          "combined_score": 0.31483323199999996,
+          "semantic_score": 0.4184637,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36861938
+        }
+      },
+      {
+        "memory": "Assistant described that the campers fled deeper into the woods and stumbled upon a rickety rope bridge suspended high above a ravine, its planks creaking and swaying in the wind as the ghost closed in, forcing them to cross one by one.",
+        "score": 0.31183057000000003,
+        "id": "a6aee296-9e0c-4340-8e1c-29ff1cc5d984",
+        "created_at": "2026-11-18T17:17:33.660975+00:00",
+        "updated_at": "2026-11-18T17:17:33.660975+00:00",
+        "score_debug": {
+          "combined_score": 0.31183057000000003,
+          "semantic_score": 0.4527666,
+          "bm25_score": 0.0,
+          "entity_boost": 0.326809825
+        }
+      },
+      {
+        "memory": "User asked how to reach Toya Bungkah, a village on the shores of Lake Batur in Bali.",
+        "score": 0.30950447312983154,
+        "id": "9222148b-9887-4cd5-9dde-fd00c01817f7",
+        "created_at": "2026-11-18T18:04:51.184867+00:00",
+        "updated_at": "2026-11-18T18:04:51.184867+00:00",
+        "score_debug": {
+          "combined_score": 0.30950447312983154,
+          "semantic_score": 0.43274483,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3410163528245788
+        }
+      },
+      {
+        "memory": "User is looking for the cheapest way to travel from Tokyo, Japan to Bali, Indonesia.",
+        "score": 0.309124568,
+        "id": "ca5af318-ef47-4baf-b7bd-3d542febfd7c",
+        "created_at": "2026-11-18T18:07:07.402606+00:00",
+        "updated_at": "2026-11-18T18:07:07.402606+00:00",
+        "score_debug": {
+          "combined_score": 0.309124568,
+          "semantic_score": 0.43144572,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3413657
+        }
+      },
+      {
+        "memory": "Assistant advises renting a bike to ride the Miami Beach Boardwalk, which stretches from South Pointe Park to 46th Street, for a scenic coastal ride.",
+        "score": 0.305103744,
+        "id": "13ed758f-6117-44fc-a84b-462cc085506d",
+        "created_at": "2026-11-18T17:05:18.252573+00:00",
+        "updated_at": "2026-11-18T17:05:18.252573+00:00",
+        "score_debug": {
+          "combined_score": 0.305103744,
+          "semantic_score": 0.38886726,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3738921
+        }
+      },
+      {
+        "memory": "The Everglades National Park Guided Tour lasts four hours, departs from the Shark Valley Visitor Center at 36000 SW 8th St, Miami, FL 33194, and is led by a knowledgeable park ranger or naturalist in an air‑conditioned vehicle.",
+        "score": 0.304317552,
+        "id": "2245621a-2e65-4be8-93f7-951c7c53e25c",
+        "created_at": "2026-11-18T17:07:35.320861+00:00",
+        "updated_at": "2026-11-18T17:07:35.320861+00:00",
+        "score_debug": {
+          "combined_score": 0.304317552,
+          "semantic_score": 0.41249388,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34830000000000005
+        }
+      },
+      {
+        "memory": "User requested that the ghost‑story scene include a rope bridge suspended about 20 ft above water, where the campers must cross while being chased, and that the rope snaps as the last camper attempts to cross, narrowly avoiding death by diving and grabbing another camper’s hand.",
+        "score": 0.30391418000000003,
+        "id": "10b93f03-e40b-4e43-a3f3-15b0e1a30cfb",
+        "created_at": "2026-11-18T17:17:33.657330+00:00",
+        "updated_at": "2026-11-18T17:17:33.657330+00:00",
+        "score_debug": {
+          "combined_score": 0.30391418000000003,
+          "semantic_score": 0.4130574,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34672805
+        }
+      },
+      {
+        "memory": "Recommended items to bring are plenty of water, sunscreen, insect repellent, comfortable shoes or hiking boots, and a camera; arrive at least 30 minutes early for check‑in and parking, dress for changing weather, and keep a safe distance from wildlife.",
+        "score": 0.302429848,
+        "id": "b692301c-676b-472f-8fe6-e5a343e71ac5",
+        "created_at": "2026-11-18T17:07:35.327489+00:00",
+        "updated_at": "2026-11-18T17:07:35.327489+00:00",
+        "score_debug": {
+          "combined_score": 0.302429848,
+          "semantic_score": 0.4471582,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30891642
+        }
+      },
+      {
+        "memory": "Assistant advised mounting the Hero8 Black securely (helmet, chest, etc.), using a narrower field of view, and experimenting with angles to further minimize camera shake during rugged activities.",
+        "score": 0.300044824,
+        "id": "77a5f33f-3805-46d4-bf5f-ffb3185837b7",
+        "created_at": "2026-11-18T18:17:27.941768+00:00",
+        "updated_at": "2026-11-18T18:17:27.941768+00:00",
+        "score_debug": {
+          "combined_score": 0.300044824,
+          "semantic_score": 0.38375998,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36635208
+        }
+      },
+      {
+        "memory": "Assistant recommended enjoying a traditional Balinese massage at Toya Devasya as a relaxing way to unwind after hiking.",
+        "score": 0.2990866730199203,
+        "id": "17898508-3fe0-4da8-9e92-3dc81f76dfd3",
+        "created_at": "2026-11-18T18:05:09.067853+00:00",
+        "updated_at": "2026-11-18T18:05:09.067853+00:00",
+        "score_debug": {
+          "combined_score": 0.2990866730199203,
+          "semantic_score": 0.45828232,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2894343625498008
+        }
+      },
+      {
+        "memory": "User decided to try the brisk walking option, noting it is comfortable and easy to fit into their schedule",
+        "score": 0.29872281569721115,
+        "id": "6ba6e698-86ca-4dab-ab48-71d7813e6f6d",
+        "created_at": "2026-11-18T16:53:31.611097+00:00",
+        "updated_at": "2026-11-18T16:53:31.611097+00:00",
+        "score_debug": {
+          "combined_score": 0.29872281569721115,
+          "semantic_score": 0.4298331,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31697393924302786
+        }
+      },
+      {
+        "memory": "Assistant mentioned that Portuguese‑speaking communities exist as significant minorities in the United States, Canada, and various European countries due to recent emigration.",
+        "score": 0.2978819349322709,
+        "id": "4d89b5d4-826b-4d3e-b182-d9fbbf24b348",
+        "created_at": "2026-11-18T17:10:34.101792+00:00",
+        "updated_at": "2026-11-18T17:10:34.101792+00:00",
+        "score_debug": {
+          "combined_score": 0.2978819349322709,
+          "semantic_score": 0.35865167,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3860531673306773
+        }
+      },
+      {
+        "memory": "Assistant recommended the GoPro Hero8 Black, waterproof up to 30 feet (9 m) without a housing, compact, rugged, capable of 4K video and 12 MP photos",
+        "score": 0.29746258455598457,
+        "id": "9b43a01b-7201-4c8f-9a51-30294bcc1fb7",
+        "created_at": "2026-11-18T18:16:46.436995+00:00",
+        "updated_at": "2026-11-18T18:16:46.436995+00:00",
+        "score_debug": {
+          "combined_score": 0.29746258455598457,
+          "semantic_score": 0.4587915,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28486496138996137
+        }
+      },
+      {
+        "memory": "Assistant noted that in North America, the United States hosts large Portuguese‑speaking communities in New Bedford and Fall River, Massachusetts, as well as in parts of California and New Jersey.",
+        "score": 0.2970850303296704,
+        "id": "9ad10eaa-ed0b-42f2-a4dc-de1057395908",
+        "created_at": "2026-11-18T17:11:37.064407+00:00",
+        "updated_at": "2026-11-18T17:11:37.064407+00:00",
+        "score_debug": {
+          "combined_score": 0.2970850303296704,
+          "semantic_score": 0.2913584,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4513541758241759
+        }
+      },
+      {
+        "memory": "User recalls that Mike's wife Sarah brought a new spicy, smoky BBQ sauce from Texas, which the user loved.",
+        "score": 0.297058432,
+        "id": "afb10efa-05bf-45cb-acfc-006cba2493ec",
+        "created_at": "2026-11-18T18:41:59.357726+00:00",
+        "updated_at": "2026-11-18T18:41:59.357726+00:00",
+        "score_debug": {
+          "combined_score": 0.297058432,
+          "semantic_score": 0.33146468,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4111814
+        }
+      },
+      {
+        "memory": "Assistant suggested soaking in Toya Devasya’s hot‑spring pools, which range from warm to hot and offer views of Mount Batur and Lake Batur.",
+        "score": 0.296690011023622,
+        "id": "95610185-aa60-4ba3-a3f5-d600c4fe9888",
+        "created_at": "2026-11-18T18:05:09.065718+00:00",
+        "updated_at": "2026-11-18T18:05:09.065718+00:00",
+        "score_debug": {
+          "combined_score": 0.296690011023622,
+          "semantic_score": 0.374353,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3673720275590551
+        }
+      },
+      {
+        "memory": "Toya Bungkah is a village on the shores of Lake Batur and serves as the starting point for the popular hiking trail to the summit of Mount Batur in Bali.",
+        "score": 0.29221929199999996,
+        "id": "411338b9-7566-453b-b248-0990899f7b07",
+        "created_at": "2026-11-18T18:04:51.187921+00:00",
+        "updated_at": "2026-11-18T18:04:51.187921+00:00",
+        "score_debug": {
+          "combined_score": 0.29221929199999996,
+          "semantic_score": 0.36113268,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36941555
+        }
+      },
+      {
+        "memory": "User is looking for volunteer opportunities in their local area and wants information about upcoming charity events or organizations that need help.",
+        "score": 0.29012948400000005,
+        "id": "f6bccdf9-dee4-4341-bd75-324dc2e0705b",
+        "created_at": "2026-11-18T18:31:08.859190+00:00",
+        "updated_at": "2026-11-18T18:31:08.859190+00:00",
+        "score_debug": {
+          "combined_score": 0.29012948400000005,
+          "semantic_score": 0.38436434,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34095937
+        }
+      },
+      {
+        "memory": "User is interested in notable Portuguese‑speaking communities that exist in unexpected places around the world.",
+        "score": 0.29007066,
+        "id": "1568fd0b-e4d6-439c-90d9-56e31922cc21",
+        "created_at": "2026-11-18T17:11:37.053857+00:00",
+        "updated_at": "2026-11-18T17:11:37.053857+00:00",
+        "score_debug": {
+          "combined_score": 0.29007066,
+          "semantic_score": 0.392379,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33279765
+        }
+      },
+      {
+        "memory": "Assistant advised starting brisk walking slowly, gradually increasing pace and duration, wearing comfortable shoes and clothing, and staying hydrated before, during, and after the walk",
+        "score": 0.2896371196972112,
+        "id": "27de458e-5453-469a-b4fc-ab838e9dba1a",
+        "created_at": "2026-11-18T16:53:31.613732+00:00",
+        "updated_at": "2026-11-18T16:53:31.613732+00:00",
+        "score_debug": {
+          "combined_score": 0.2896371196972112,
+          "semantic_score": 0.40711886,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31697393924302786
+        }
+      },
+      {
+        "memory": "User went to the gym during lunch breaks on Monday, 2026-11-14, and Tuesday, 2026-11-15, reporting that the workouts help de-stress and support fitness goals.",
+        "score": 0.2890331452923687,
+        "id": "7d2537bd-94a6-44b4-bac8-06c34b88ad32",
+        "created_at": "2026-11-18T18:46:55.203457+00:00",
+        "updated_at": "2026-11-18T18:46:55.203457+00:00",
+        "score_debug": {
+          "combined_score": 0.2890331452923687,
+          "semantic_score": 0.443601,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2789818632309217
+        }
+      },
+      {
+        "memory": "User started a new job around August 18 2026 (three months before the observation date) and began commuting by bus instead of driving, which gives extra time to listen to podcasts.",
+        "score": 0.2871374425498008,
+        "id": "59636296-395c-4ffd-8bd4-bab4c67742d4",
+        "created_at": "2026-11-18T17:37:41.612006+00:00",
+        "updated_at": "2026-11-18T17:37:41.612006+00:00",
+        "score_debug": {
+          "combined_score": 0.2871374425498008,
+          "semantic_score": 0.4066702,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31117340637450197
+        }
+      },
+      {
+        "memory": "Assistant recommended the Olympus TG‑6, waterproof up to 50 ft (15 m), featuring a 12 MP sensor, 4K video and a wide‑angle lens",
+        "score": 0.28702402,
+        "id": "77fb367f-f8a3-4b2f-b535-4b6aba1e253a",
+        "created_at": "2026-11-18T18:16:46.439779+00:00",
+        "updated_at": "2026-11-18T18:16:46.439779+00:00",
+        "score_debug": {
+          "combined_score": 0.28702402,
+          "semantic_score": 0.4241751,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29338495
+        }
+      },
+      {
+        "memory": "Assistant concludes that after the rope‑bridge collapse the group fled, saw a glimmer of light, reached the lights of a nearby town, emerged from the forest alive, and survived the haunted woods.",
+        "score": 0.28386557999999995,
+        "id": "fe642c03-8548-4e48-a436-0a19c5cc59f6",
+        "created_at": "2026-11-18T17:18:14.328311+00:00",
+        "updated_at": "2026-11-18T17:18:14.328311+00:00",
+        "score_debug": {
+          "combined_score": 0.28386557999999995,
+          "semantic_score": 0.38237,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32729395
+        }
+      },
+      {
+        "memory": "User missed their train on Wednesday, 2026-11-16, by five minutes, took a taxi instead that cost $12, and is actively tracking daily commute expenses.",
+        "score": 0.2837470487804878,
+        "id": "b55f7d06-eecb-46f8-94a3-ca8a14046cd8",
+        "created_at": "2026-11-18T18:39:27.809238+00:00",
+        "updated_at": "2026-11-18T18:39:27.809238+00:00",
+        "score_debug": {
+          "combined_score": 0.2837470487804878,
+          "semantic_score": 0.4361585,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27320912195121955
+        }
+      },
+      {
+        "memory": "Assistant recommended Padma Resort Legian, a beachfront resort in Legian that includes halal food, prayer facilities, a private beach, and a kids' club.",
+        "score": 0.2835427580891972,
+        "id": "4222dc9e-f3c2-4bac-9008-78a6e974d895",
+        "created_at": "2026-11-18T18:06:06.133437+00:00",
+        "updated_at": "2026-11-18T18:06:06.133437+00:00",
+        "score_debug": {
+          "combined_score": 0.2835427580891972,
+          "semantic_score": 0.35956192,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3492949752229931
+        }
+      },
+      {
+        "memory": "Assistant advised that when choosing a waterproof camera, consider waterproof rating, image quality, video capabilities, durability, and size/weight",
+        "score": 0.282922172,
+        "id": "eb194ff0-44f1-46f8-a4be-7cf0513c84fe",
+        "created_at": "2026-11-18T18:16:46.450765+00:00",
+        "updated_at": "2026-11-18T18:16:46.450765+00:00",
+        "score_debug": {
+          "combined_score": 0.282922172,
+          "semantic_score": 0.394878,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31242743
+        }
+      },
+      {
+        "memory": "User described a construction opportunity for Roadway Widening and Reconstruction in Montgomery County, New York, covering all labor, materials, machinery, tools, equipment, and other means necessary to complete the work per the plans and specifications.",
+        "score": 0.281508302,
+        "id": "90cb5472-f8b4-4097-b696-037f538cc1e3",
+        "created_at": "2026-11-18T18:12:28.038908+00:00",
+        "updated_at": "2026-11-18T18:12:28.038908+00:00",
+        "score_debug": {
+          "combined_score": 0.281508302,
+          "semantic_score": 0.31770402,
+          "bm25_score": 0.0,
+          "entity_boost": 0.386066735
+        }
+      },
+      {
+        "memory": "User wants to create a workout schedule for the upcoming week that incorporates yoga, jogging, and strength training exercises.",
+        "score": 0.28135359600000004,
+        "id": "8f35cce2-24fe-4538-8727-21d156475ab4",
+        "created_at": "2026-11-18T17:26:52.426484+00:00",
+        "updated_at": "2026-11-18T17:26:52.426484+00:00",
+        "score_debug": {
+          "combined_score": 0.28135359600000004,
+          "semantic_score": 0.41633934,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28704465
+        }
+      },
+      {
+        "memory": "Assistant suggested the user could inquire about upcoming fundraising galas, silent auctions, online auctions, benefit dinners, wine tastings, and golf tournaments that may be scheduled for the summer, holiday season, next quarter, or the next few months.",
+        "score": 0.28129136800000004,
+        "id": "a9e60c38-4ab8-4db6-adda-a2762460c800",
+        "created_at": "2026-11-18T18:33:53.649065+00:00",
+        "updated_at": "2026-11-18T18:33:53.649065+00:00",
+        "score_debug": {
+          "combined_score": 0.28129136800000004,
+          "semantic_score": 0.37043542,
+          "bm25_score": 0.0,
+          "entity_boost": 0.332793
+        }
+      },
+      {
+        "memory": "Assistant notes that on the first night the six campers gathered around a roaring campfire, swapping stories and enjoying each other's company.",
+        "score": 0.28103606000000003,
+        "id": "e6d92837-bb92-4444-9ad1-e6df282d884f",
+        "created_at": "2026-11-18T17:18:14.322435+00:00",
+        "updated_at": "2026-11-18T17:18:14.322435+00:00",
+        "score_debug": {
+          "combined_score": 0.28103606000000003,
+          "semantic_score": 0.3653535,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33723665
+        }
+      },
+      {
+        "memory": "User expressed interest in Moosejaw's winter boot sale and asked for details about the brands and boot styles available.",
+        "score": 0.2807743549380204,
+        "id": "bb590a9b-35a4-48b9-9f21-438ae824217a",
+        "created_at": "2026-11-18T17:59:49.697669+00:00",
+        "updated_at": "2026-11-18T17:59:49.697669+00:00",
+        "score_debug": {
+          "combined_score": 0.2807743549380204,
+          "semantic_score": 0.39675462,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3051812673450509
+        }
+      },
+      {
+        "memory": "Assistant suggested renting a scooter to ride to Toya Bungkah, noting that the roads are generally well‑maintained for comfortable travel.",
+        "score": 0.280204296,
+        "id": "cd93afa0-562a-4733-9140-a98da978e5a1",
+        "created_at": "2026-11-18T18:04:51.192927+00:00",
+        "updated_at": "2026-11-18T18:04:51.192927+00:00",
+        "score_debug": {
+          "combined_score": 0.280204296,
+          "semantic_score": 0.36871606,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33179468
+        }
+      },
+      {
+        "memory": "Assistant recommended The Westin Resort Nusa Dua, a beachfront property in Nusa Dua offering halal food, prayer facilities, and a private beach.",
+        "score": 0.2798345749613479,
+        "id": "148a707a-5aaf-4049-add5-060bd6770a14",
+        "created_at": "2026-11-18T18:06:06.130710+00:00",
+        "updated_at": "2026-11-18T18:06:06.130710+00:00",
+        "score_debug": {
+          "combined_score": 0.2798345749613479,
+          "semantic_score": 0.34403726,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3555491774033697
+        }
+      },
+      {
+        "memory": "Assistant recommended following local non‑profits on social media (Facebook, Twitter, Instagram) and checking online event calendars like Eventbrite and Meetup for volunteer events.",
+        "score": 0.279075718,
+        "id": "b81e85f2-65c4-43b7-b736-412cae8e0a73",
+        "created_at": "2026-11-18T18:31:08.868872+00:00",
+        "updated_at": "2026-11-18T18:31:08.868872+00:00",
+        "score_debug": {
+          "combined_score": 0.279075718,
+          "semantic_score": 0.40452212,
+          "bm25_score": 0.0,
+          "entity_boost": 0.293167175
+        }
+      },
+      {
+        "memory": "User has been playing many games on a PS5, which was a birthday gift from their brother on 10 January",
+        "score": 0.2773396187250996,
+        "id": "f68b7b9e-fc73-4a74-9021-037653558848",
+        "created_at": "2026-11-18T17:07:54.835644+00:00",
+        "updated_at": "2026-11-18T17:07:54.835644+00:00",
+        "score_debug": {
+          "combined_score": 0.2773396187250996,
+          "semantic_score": 0.405642,
+          "bm25_score": 0.0,
+          "entity_boost": 0.287707046812749
+        }
+      },
+      {
+        "memory": "Assistant created a ghost story in which six experienced campers (three men, three women) hear rumors, encounter a tall gaunt ghost with glowing eyes, confront it, see it vanish, flee through the woods to a nearby town, drink coffee in a cafe, and all survive, vowing never to camp there again.",
+        "score": 0.2770362,
+        "id": "85ade0f9-b619-40d0-bd63-5da1e407a1ee",
+        "created_at": "2026-11-18T17:16:36.312881+00:00",
+        "updated_at": "2026-11-18T17:16:36.312881+00:00",
+        "score_debug": {
+          "combined_score": 0.2770362,
+          "semantic_score": 0.3551584,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3374321
+        }
+      },
+      {
+        "memory": "Assistant recommended tracking progress by keeping a workout log, taking regular body measurements, using progress photos, monitoring heart rate, and utilizing mobile apps such as MyFitnessPal, Strava, or Fitbit Coach.",
+        "score": 0.27696398,
+        "id": "9fa54743-a849-453a-bcc2-c203ea5efd1d",
+        "created_at": "2026-11-18T17:27:44.574834+00:00",
+        "updated_at": "2026-11-18T17:27:44.574834+00:00",
+        "score_debug": {
+          "combined_score": 0.27696398,
+          "semantic_score": 0.3880612,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30434875
+        }
+      },
+      {
+        "memory": "Assistant recommended specific tools for tracking reading progress, including the Goodreads platform, personal reading logs or journals, spreadsheets, and habit‑tracking apps such as Habitica, HabitBull, and Loop Habit Tracker.",
+        "score": 0.276784252,
+        "id": "9c349886-f948-446b-a951-6227447954db",
+        "created_at": "2026-11-18T16:55:25.007739+00:00",
+        "updated_at": "2026-11-18T16:55:25.007739+00:00",
+        "score_debug": {
+          "combined_score": 0.276784252,
+          "semantic_score": 0.37331963,
+          "bm25_score": 0.0,
+          "entity_boost": 0.318641
+        }
+      },
+      {
+        "memory": "User has been taking guitar lessons with Alex for six weeks, starting around October 7, 2026, and has noticed significant improvement in playing.",
+        "score": 0.2767199531707317,
+        "id": "a12bf042-d7e2-49be-800f-69c094289f65",
+        "created_at": "2026-11-18T17:50:27.804948+00:00",
+        "updated_at": "2026-11-18T17:50:27.804948+00:00",
+        "score_debug": {
+          "combined_score": 0.2767199531707317,
+          "semantic_score": 0.3599072,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3318926829268293
+        }
+      },
+      {
+        "memory": "User purchased a Razer DeathAdder Elite gaming mouse on 15 February 2026, noting it has been a game-changer for their Overwatch gameplay.",
+        "score": 0.2766377587250996,
+        "id": "19c7a51d-8648-4e00-b9ef-2d2e4a49b11b",
+        "created_at": "2026-11-18T17:08:14.713198+00:00",
+        "updated_at": "2026-11-18T17:08:14.713198+00:00",
+        "score_debug": {
+          "combined_score": 0.2766377587250996,
+          "semantic_score": 0.4169436,
+          "bm25_score": 0.0,
+          "entity_boost": 0.274650796812749
+        }
+      },
+      {
+        "memory": "User recently resumed guitar lessons after a ten‑year hiatus, feeling inspired to explore the indie‑folk genre further.",
+        "score": 0.27614769439043824,
+        "id": "b5349c2a-b0af-4270-8ca0-a36a9d99a8ae",
+        "created_at": "2026-11-18T17:12:05.790734+00:00",
+        "updated_at": "2026-11-18T17:12:05.790734+00:00",
+        "score_debug": {
+          "combined_score": 0.27614769439043824,
+          "semantic_score": 0.36719573,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3231735059760956
+        }
+      },
+      {
+        "memory": "Assistant recommended Grand Mirage Resort & Thalasso Bali, a beachfront resort in Nusa Dua offering halal food, prayer facilities, and separate swimming pools for men and women.",
+        "score": 0.2758541909613479,
+        "id": "814dc072-225b-46f4-95ca-5d70b60a05e0",
+        "created_at": "2026-11-18T18:06:06.125685+00:00",
+        "updated_at": "2026-11-18T18:06:06.125685+00:00",
+        "score_debug": {
+          "combined_score": 0.2758541909613479,
+          "semantic_score": 0.3340863,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3555491774033697
+        }
+      },
+      {
+        "memory": "The North Face boots are known to run slightly smaller than true to size, so they may feel snug if ordered at regular size.",
+        "score": 0.27506646172111554,
+        "id": "d23e7f7c-52c8-488e-9af3-c9bbf9aa3eec",
+        "created_at": "2026-11-18T18:01:17.537950+00:00",
+        "updated_at": "2026-11-18T18:01:17.537950+00:00",
+        "score_debug": {
+          "combined_score": 0.27506646172111554,
+          "semantic_score": 0.26555473,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42211142430278886
+        }
+      },
+      {
+        "memory": "User plans to make a burger with bacon and a type of cheese, inspired by a similar burger they had at friend Mike's house around October 28, 2026",
+        "score": 0.2750628531707317,
+        "id": "6a3caff2-121f-4c91-a049-1aeab97d193b",
+        "created_at": "2026-11-18T18:41:10.717438+00:00",
+        "updated_at": "2026-11-18T18:41:10.717438+00:00",
+        "score_debug": {
+          "combined_score": 0.2750628531707317,
+          "semantic_score": 0.35576445,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3318926829268293
+        }
+      },
+      {
+        "memory": "User recently started learning ukulele online and finds it surprisingly easy to pick up as of November 2026.",
+        "score": 0.2749160041398601,
+        "id": "35545e5c-5625-448e-acd0-05156d9ad3f1",
+        "created_at": "2026-11-18T17:50:27.807158+00:00",
+        "updated_at": "2026-11-18T17:50:27.807158+00:00",
+        "score_debug": {
+          "combined_score": 0.2749160041398601,
+          "semantic_score": 0.41081536,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2764746503496503
+        }
+      },
+      {
+        "memory": "User expressed enthusiasm about the London parks and gardens, stating they sound amazing and expressing excitement to explore them.",
+        "score": 0.27460475672150647,
+        "id": "c2616aca-f649-424d-9a42-84affea22002",
+        "created_at": "2026-11-18T17:43:53.434544+00:00",
+        "updated_at": "2026-11-18T17:43:53.434544+00:00",
+        "score_debug": {
+          "combined_score": 0.27460475672150647,
+          "semantic_score": 0.37053987,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31597202180376616
+        }
+      },
+      {
+        "memory": "Assistant advised visiting community centers, libraries, and places of worship to ask about volunteer opportunities and upcoming events.",
+        "score": 0.27394043999999995,
+        "id": "b14846b0-1dd6-491c-9ce3-a0711104ad75",
+        "created_at": "2026-11-18T18:31:08.866312+00:00",
+        "updated_at": "2026-11-18T18:31:08.866312+00:00",
+        "score_debug": {
+          "combined_score": 0.27394043999999995,
+          "semantic_score": 0.3872819,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2975692
+        }
+      },
+      {
+        "memory": "User purchased a Razer DeathAdder Elite gaming mouse on 15 February 2026, reporting that it has significantly improved their Overwatch gameplay.",
+        "score": 0.2738043827250996,
+        "id": "537d9141-0bc4-4ca0-b467-de246d8ee46f",
+        "created_at": "2026-11-18T17:10:34.077069+00:00",
+        "updated_at": "2026-11-18T17:10:34.077069+00:00",
+        "score_debug": {
+          "combined_score": 0.2738043827250996,
+          "semantic_score": 0.40986016,
+          "bm25_score": 0.0,
+          "entity_boost": 0.274650796812749
+        }
+      },
+      {
+        "memory": "Assistant highlights Little River as an up‑and‑coming Miami neighborhood offering a vibrant brewery scene, artisanal shops, and a relaxed atmosphere for visitors.",
+        "score": 0.273753344,
+        "id": "7016173a-bb6e-49a0-a7a1-5b2a398d9f51",
+        "created_at": "2026-11-18T17:05:18.254857+00:00",
+        "updated_at": "2026-11-18T17:05:18.254857+00:00",
+        "score_debug": {
+          "combined_score": 0.273753344,
+          "semantic_score": 0.32051986,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3638635
+        }
+      },
+      {
+        "memory": "Assistant advised packing the power bank, charging cables, and other accessories in a waterproof bag to protect them from the elements.",
+        "score": 0.27279551199999996,
+        "id": "44510a8d-729b-4c2d-825d-ffae0bd4f013",
+        "created_at": "2026-11-18T18:18:50.388066+00:00",
+        "updated_at": "2026-11-18T18:18:50.388066+00:00",
+        "score_debug": {
+          "combined_score": 0.27279551199999996,
+          "semantic_score": 0.36223698,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3197518
+        }
+      },
+      {
+        "memory": "The North Face provides a generous 30‑day return and exchange policy for the Thermoball boots, as long as they are returned in their original condition.",
+        "score": 0.27232322972111556,
+        "id": "6dea5f4b-86fe-4a68-bf59-e5723f1a7f5e",
+        "created_at": "2026-11-18T18:01:17.545984+00:00",
+        "updated_at": "2026-11-18T18:01:17.545984+00:00",
+        "score_debug": {
+          "combined_score": 0.27232322972111556,
+          "semantic_score": 0.25869665,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42211142430278886
+        }
+      },
+      {
+        "memory": "Assistant recommended Meliã Bali, a luxury beachfront resort in Nusa Dua that provides halal food, prayer facilities, and a private beach.",
+        "score": 0.2722108309613479,
+        "id": "0c49ef8a-4f98-4c98-84cc-5dc63034e77f",
+        "created_at": "2026-11-18T18:06:06.128252+00:00",
+        "updated_at": "2026-11-18T18:06:06.128252+00:00",
+        "score_debug": {
+          "combined_score": 0.2722108309613479,
+          "semantic_score": 0.3249779,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3555491774033697
+        }
+      },
+      {
+        "memory": "User asked for the locations of halal beach resorts in Bali, seeking options that provide halal food and prayer facilities.",
+        "score": 0.2719714996923077,
+        "id": "75750a03-982d-469c-816b-3a6af0df916b",
+        "created_at": "2026-11-18T18:06:06.122634+00:00",
+        "updated_at": "2026-11-18T18:06:06.122634+00:00",
+        "score_debug": {
+          "combined_score": 0.2719714996923077,
+          "semantic_score": 0.36596298,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3139657692307693
+        }
+      },
+      {
+        "memory": "Assistant recommended The Sakala Resort Bali, a beachfront resort in Nusa Dua providing halal food, prayer facilities, and a private beach.",
+        "score": 0.2718918309613479,
+        "id": "4e4ebcf7-d8e0-4c12-9ee9-b989e3602b3f",
+        "created_at": "2026-11-18T18:06:06.135871+00:00",
+        "updated_at": "2026-11-18T18:06:06.135871+00:00",
+        "score_debug": {
+          "combined_score": 0.2718918309613479,
+          "semantic_score": 0.3241804,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3555491774033697
+        }
+      },
+      {
+        "memory": "User is interested in a construction opportunity titled “Gettysburg/Norwich Alley Reconstruction” (Invitation # CIP 19‑15) located in Fresno County, California (Planning and Development 1033 Fifth Street, Clovis). The bid was posted on October 10, 2022 at 2:35:21 PM PDT and is due November 1, 2022 at 2:00 PM PDT. The project is in the bidding stage, with a lump‑sum award, paper response format, line‑item response type, and falls under categories 74500, 91314, 91336, and 91394.",
+        "score": 0.27119577432967035,
+        "id": "e7783051-6754-446b-b3cb-d71647e8be27",
+        "created_at": "2026-11-18T18:11:58.490451+00:00",
+        "updated_at": "2026-11-18T18:11:58.490451+00:00",
+        "score_debug": {
+          "combined_score": 0.27119577432967035,
+          "semantic_score": 0.22663526,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4513541758241759
+        }
+      },
+      {
+        "memory": "User is interested in how The North Face Thermoball boots perform in terms of grip and traction on icy and snowy surfaces",
+        "score": 0.27074843800000004,
+        "id": "39475e24-39c7-4e69-9368-75aa7d58d0f4",
+        "created_at": "2026-11-18T18:00:42.511653+00:00",
+        "updated_at": "2026-11-18T18:00:42.511653+00:00",
+        "score_debug": {
+          "combined_score": 0.27074843800000004,
+          "semantic_score": 0.35897422,
+          "bm25_score": 0.0,
+          "entity_boost": 0.317896875
+        }
+      },
+      {
+        "memory": "User is looking for podcast recommendations that provide a global perspective, similar to \"The Daily\" and \"Pod Save America\".",
+        "score": 0.2707112650949051,
+        "id": "c5986c23-949a-4a79-be6a-7267bab976d7",
+        "created_at": "2026-11-18T17:37:41.601756+00:00",
+        "updated_at": "2026-11-18T17:37:41.601756+00:00",
+        "score_debug": {
+          "combined_score": 0.2707112650949051,
+          "semantic_score": 0.3754409,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30133726273726275
+        }
+      },
+      {
+        "memory": "User reports going to the gym during lunch breaks on Monday and Tuesday, finding it helps de‑stress and supports their fitness goals.",
+        "score": 0.2696876532923687,
+        "id": "fdf8bea3-8913-4289-ba64-e0f1bdea4ba5",
+        "created_at": "2026-11-18T18:48:11.690380+00:00",
+        "updated_at": "2026-11-18T18:48:11.690380+00:00",
+        "score_debug": {
+          "combined_score": 0.2696876532923687,
+          "semantic_score": 0.39523727,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2789818632309217
+        }
+      },
+      {
+        "memory": "User is planning a BBQ on the weekend of November 19–20, 2026.",
+        "score": 0.26919798875675677,
+        "id": "57b91273-7716-45f4-ae00-465dd29c03a3",
+        "created_at": "2026-11-18T18:42:29.565003+00:00",
+        "updated_at": "2026-11-18T18:42:29.565003+00:00",
+        "score_debug": {
+          "combined_score": 0.26919798875675677,
+          "semantic_score": 0.38835308,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2846418918918919
+        }
+      },
+      {
+        "memory": "User started a new job around August 18, 2026, and has been taking the bus to work instead of driving, giving extra time to listen to podcasts during the commute.",
+        "score": 0.2688882345498008,
+        "id": "66af149a-d99a-40dc-9cf9-098337835486",
+        "created_at": "2026-11-18T17:37:22.378636+00:00",
+        "updated_at": "2026-11-18T17:37:22.378636+00:00",
+        "score_debug": {
+          "combined_score": 0.2688882345498008,
+          "semantic_score": 0.36104718,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31117340637450197
+        }
+      },
+      {
+        "memory": "Assistant suggested checking the local government website for information on volunteer opportunities, community events, and charity organizations.",
+        "score": 0.26830657799999996,
+        "id": "0b602fc9-d623-491b-8453-d65c3e55d8e0",
+        "created_at": "2026-11-18T18:31:08.871032+00:00",
+        "updated_at": "2026-11-18T18:31:08.871032+00:00",
+        "score_debug": {
+          "combined_score": 0.26830657799999996,
+          "semantic_score": 0.36828268,
+          "bm25_score": 0.0,
+          "entity_boost": 0.302483765
+        }
+      },
+      {
+        "memory": "Assistant recommended Blue Nile as an online jeweler that provides engagement ring resizing services.",
+        "score": 0.267298936,
+        "id": "39a47976-4540-41ff-ac7d-945e853640fb",
+        "created_at": "2026-11-18T18:50:33.027678+00:00",
+        "updated_at": "2026-11-18T18:50:33.027678+00:00",
+        "score_debug": {
+          "combined_score": 0.267298936,
+          "semantic_score": 0.34371656,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32453078
+        }
+      },
+      {
+        "memory": "Assistant recommended Hampstead Heath, a large natural park in North London with swimming ponds, open-air theatres, playgrounds, and some of the best views of the city.",
+        "score": 0.266353076,
+        "id": "7442efda-3e33-452c-933d-be620b2a9a67",
+        "created_at": "2026-11-18T17:42:48.231577+00:00",
+        "updated_at": "2026-11-18T17:42:48.231577+00:00",
+        "score_debug": {
+          "combined_score": 0.266353076,
+          "semantic_score": 0.30168414,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36419855
+        }
+      },
+      {
+        "memory": "User has been performing push-ups and pull-ups and now wants to add new back and shoulder exercises, specifically bent-over rows and lateral raises, stressing that proper form is crucial to avoid injury.",
+        "score": 0.265962398,
+        "id": "56540bb7-237a-4cf5-aaee-ee800e1a6a6b",
+        "created_at": "2026-11-18T17:29:00.857873+00:00",
+        "updated_at": "2026-11-18T17:29:00.857873+00:00",
+        "score_debug": {
+          "combined_score": 0.265962398,
+          "semantic_score": 0.36137268,
+          "bm25_score": 0.0,
+          "entity_boost": 0.303533315
+        }
+      },
+      {
+        "memory": "Assistant recommended Richmond Park, the largest Royal Park, known for its expansive landscapes, herds of deer, and Pembroke Lodge offering afternoon tea and city views.",
+        "score": 0.26560099400000003,
+        "id": "dd021844-5730-4a70-a4de-cfd355f5fe7b",
+        "created_at": "2026-11-18T17:42:48.218247+00:00",
+        "updated_at": "2026-11-18T17:42:48.218247+00:00",
+        "score_debug": {
+          "combined_score": 0.26560099400000003,
+          "semantic_score": 0.32111526,
+          "bm25_score": 0.0,
+          "entity_boost": 0.342887225
+        }
+      },
+      {
+        "memory": "Assistant recommended reaching Toya Bungkah by hiring a private car or taxi, which offers flexibility to stop at other attractions and can be arranged through a hotel or local tour operator.",
+        "score": 0.26553661799999995,
+        "id": "8a99cfef-2cca-427e-b091-7761ab1c7781",
+        "created_at": "2026-11-18T18:04:51.190692+00:00",
+        "updated_at": "2026-11-18T18:04:51.190692+00:00",
+        "score_debug": {
+          "combined_score": 0.26553661799999995,
+          "semantic_score": 0.36420357,
+          "bm25_score": 0.0,
+          "entity_boost": 0.299637975
+        }
+      },
+      {
+        "memory": "On Wednesdays and Fridays, User spends 30 minutes catching up on a favorite podcast or responding to urgent work emails.",
+        "score": 0.26520424552647354,
+        "id": "418e4036-e577-4994-8a3c-90f60846cf8d",
+        "created_at": "2026-11-18T16:51:23.476631+00:00",
+        "updated_at": "2026-11-18T16:51:23.476631+00:00",
+        "score_debug": {
+          "combined_score": 0.26520424552647354,
+          "semantic_score": 0.36549443,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2975161838161839
+        }
+      },
+      {
+        "memory": "User is interested in The North Face Thermoball boots and asked for details about their waterproofing and insulation features",
+        "score": 0.2647296988503937,
+        "id": "4625b3d1-a5a3-40d5-9139-79c0c019bbf7",
+        "created_at": "2026-11-18T18:00:18.943206+00:00",
+        "updated_at": "2026-11-18T18:00:18.943206+00:00",
+        "score_debug": {
+          "combined_score": 0.2647296988503937,
+          "semantic_score": 0.35884938,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30297486712598426
+        }
+      },
+      {
+        "memory": "Assistant lists the Relax and Sleep Well app by Glenn Harrold as a resource offering guided sleep‑focused mindfulness exercises.",
+        "score": 0.264223744,
+        "id": "8ce864fc-24a5-45aa-97b4-e55ee5292b1f",
+        "created_at": "2026-11-18T18:13:30.520287+00:00",
+        "updated_at": "2026-11-18T18:13:30.520287+00:00",
+        "score_debug": {
+          "combined_score": 0.264223744,
+          "semantic_score": 0.36356336,
+          "bm25_score": 0.0,
+          "entity_boost": 0.296996
+        }
+      },
+      {
+        "memory": "Assistant suggested the user could inquire about various upcoming event types, such as fundraising galas, silent auctions, online auctions, benefit dinners, wine tastings, golf tournaments, holiday‑themed events, and toy drives.",
+        "score": 0.264094424,
+        "id": "36dfa283-7090-40b9-a0bd-4155423a1c0e",
+        "created_at": "2026-11-18T18:33:23.172413+00:00",
+        "updated_at": "2026-11-18T18:33:23.172413+00:00",
+        "score_debug": {
+          "combined_score": 0.264094424,
+          "semantic_score": 0.37423253,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28600353
+        }
+      },
+      {
+        "memory": "Assistant recommended Alexandra Palace Park, mentioning its historic palace building, city views, boating lake, ice skating rink, and regular events and concerts.",
+        "score": 0.2638951728351649,
+        "id": "695b771b-ae96-416c-a714-6eb1237bf7bb",
+        "created_at": "2026-11-18T17:42:48.228941+00:00",
+        "updated_at": "2026-11-18T17:42:48.228941+00:00",
+        "score_debug": {
+          "combined_score": 0.2638951728351649,
+          "semantic_score": 0.30330002,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35643791208791215
+        }
+      },
+      {
+        "memory": "User usually takes the 7:45 am train for their daily commute; this routine has been reliable except for an incident last Wednesday when they missed the train.",
+        "score": 0.2635988850551181,
+        "id": "a0931326-e65c-43ce-a65c-08d8dffd6ad0",
+        "created_at": "2026-11-18T18:40:44.175355+00:00",
+        "updated_at": "2026-11-18T18:40:44.175355+00:00",
+        "score_debug": {
+          "combined_score": 0.2635988850551181,
+          "semantic_score": 0.38389394,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27510327263779527
+        }
+      },
+      {
+        "memory": "User currently does yoga on Mondays, Wednesdays, and Fridays; jogging on Tuesdays and Thursdays; and strength training three times a week, focusing on upper‑body exercises.",
+        "score": 0.2632350495264736,
+        "id": "fff8a008-8743-4ebf-91aa-581b0110494a",
+        "created_at": "2026-11-18T17:27:18.682550+00:00",
+        "updated_at": "2026-11-18T17:27:18.682550+00:00",
+        "score_debug": {
+          "combined_score": 0.2632350495264736,
+          "semantic_score": 0.36057144,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2975161838161839
+        }
+      },
+      {
+        "memory": "Fetch Rewards partners with Petco, PetSmart, Chewy.com, Hill's Science Diet, and Royal Canin, offering up to 5% cashback on pet food purchases",
+        "score": 0.2631254886374502,
+        "id": "bb282bde-a350-44d5-a837-8bcb04dd8a41",
+        "created_at": "2026-11-18T17:47:39.235581+00:00",
+        "updated_at": "2026-11-18T17:47:39.235581+00:00",
+        "score_debug": {
+          "combined_score": 0.2631254886374502,
+          "semantic_score": 0.26817662,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3896371015936255
+        }
+      },
+      {
+        "memory": "User attends yoga classes about three times per week and also practices yoga at home, maintaining a regular practice schedule.",
+        "score": 0.262786676,
+        "id": "6489dc85-6f80-4123-bee4-f2cf1807c766",
+        "created_at": "2026-11-18T18:46:55.195977+00:00",
+        "updated_at": "2026-11-18T18:46:55.195977+00:00",
+        "score_debug": {
+          "combined_score": 0.262786676,
+          "semantic_score": 0.36821786,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28874883
+        }
+      },
+      {
+        "memory": "Assistant advised making the habit of leaving earlier consistent, so it becomes second nature and reduces the chance of being caught out by unexpected delays.",
+        "score": 0.26258898799999997,
+        "id": "5453365b-7567-4720-847e-305073e428c6",
+        "created_at": "2026-11-18T18:38:45.275640+00:00",
+        "updated_at": "2026-11-18T18:38:45.275640+00:00",
+        "score_debug": {
+          "combined_score": 0.26258898799999997,
+          "semantic_score": 0.34560987,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3108626
+        }
+      },
+      {
+        "memory": "User sat next to a snoring passenger on the bus around November 11, 2026, found it very annoying and switched seats to escape the noise",
+        "score": 0.2622753401398601,
+        "id": "727601da-7a55-4428-aa0e-c4cc2df351f5",
+        "created_at": "2026-11-18T18:08:17.312757+00:00",
+        "updated_at": "2026-11-18T18:08:17.312757+00:00",
+        "score_debug": {
+          "combined_score": 0.2622753401398601,
+          "semantic_score": 0.3792137,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2764746503496503
+        }
+      },
+      {
+        "memory": "User wants to diversify their strength‑training routine by incorporating a variety of upper‑body exercises that target multiple muscle groups.",
+        "score": 0.262208364,
+        "id": "024b5d29-8326-4752-808a-31103fe53446",
+        "created_at": "2026-11-18T17:28:17.082129+00:00",
+        "updated_at": "2026-11-18T17:28:17.082129+00:00",
+        "score_debug": {
+          "combined_score": 0.262208364,
+          "semantic_score": 0.36108536,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29443555
+        }
+      },
+      {
+        "memory": "Assistant mentions Sleep Meditations such as counting down from ten or visualizing a peaceful place, with guided recordings available on meditation apps or YouTube to help fall asleep more easily.",
+        "score": 0.261925472,
+        "id": "03e39c6b-2fe9-4928-b046-c53684118e59",
+        "created_at": "2026-11-18T18:13:30.512416+00:00",
+        "updated_at": "2026-11-18T18:13:30.512416+00:00",
+        "score_debug": {
+          "combined_score": 0.261925472,
+          "semantic_score": 0.37594253,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27887115
+        }
+      },
+      {
+        "memory": "User gave her sister a silver necklace with a small pendant for the sister's birthday in October 2026, and the sister loved it.",
+        "score": 0.26162515317073176,
+        "id": "a993a0a8-a11b-4484-9b80-1b520608cc43",
+        "created_at": "2026-11-18T18:28:12.273018+00:00",
+        "updated_at": "2026-11-18T18:28:12.273018+00:00",
+        "score_debug": {
+          "combined_score": 0.26162515317073176,
+          "semantic_score": 0.3221702,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3318926829268293
+        }
+      },
+      {
+        "memory": "Assistant offered to recalculate Pig's MTOW and dimensions if the user adjusts the cabin size or seating arrangement",
+        "score": 0.261044012,
+        "id": "118d95c0-23cd-48ab-a2f6-63d0899f912d",
+        "created_at": "2026-11-18T18:21:17.082738+00:00",
+        "updated_at": "2026-11-18T18:21:17.082738+00:00",
+        "score_debug": {
+          "combined_score": 0.261044012,
+          "semantic_score": 0.36821973,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2843903
+        }
+      },
+      {
+        "memory": "User is interested in purchasing The North Face Thermoball boots from Moosejaw and asked for help with the checkout process and information on any available discounts or promotions.",
+        "score": 0.26097955893802033,
+        "id": "20ffac40-fc3b-4b38-9579-195309797bd8",
+        "created_at": "2026-11-18T18:01:47.458979+00:00",
+        "updated_at": "2026-11-18T18:01:47.458979+00:00",
+        "score_debug": {
+          "combined_score": 0.26097955893802033,
+          "semantic_score": 0.34726763,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3051812673450509
+        }
+      },
+      {
+        "memory": "Assistant recommends Richmond Upon Thames, a picturesque town near Kew Gardens known for its historic architecture, boutique shops, and scenic riverside walks.",
+        "score": 0.260969416,
+        "id": "0fb3cc09-e039-4e50-91d8-76d97e9e1f76",
+        "created_at": "2026-11-18T17:44:31.248870+00:00",
+        "updated_at": "2026-11-18T17:44:31.248870+00:00",
+        "score_debug": {
+          "combined_score": 0.260969416,
+          "semantic_score": 0.30342954,
+          "bm25_score": 0.0,
+          "entity_boost": 0.348994
+        }
+      },
+      {
+        "memory": "User can dedicate 30‑45 minutes per workout session and prefers to exercise in the morning around 6:30 am.",
+        "score": 0.26089229199999997,
+        "id": "a3cdc6ac-96db-400e-8105-8549e857f8dc",
+        "created_at": "2026-11-18T17:27:18.679865+00:00",
+        "updated_at": "2026-11-18T17:27:18.679865+00:00",
+        "score_debug": {
+          "combined_score": 0.26089229199999997,
+          "semantic_score": 0.3677436,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28448713
+        }
+      },
+      {
+        "memory": "User volunteered at a charity gala for a local children's hospital on November 4, 2026, confirming there is a nearby hospital they have previously helped.",
+        "score": 0.26024351,
+        "id": "8790daf1-659b-49ea-a5f9-ec81479b9879",
+        "created_at": "2026-11-18T18:32:22.211293+00:00",
+        "updated_at": "2026-11-18T18:32:22.211293+00:00",
+        "score_debug": {
+          "combined_score": 0.26024351,
+          "semantic_score": 0.35722935,
+          "bm25_score": 0.0,
+          "entity_boost": 0.293379425
+        }
+      },
+      {
+        "memory": "Assistant suggested the YouTube channel Music Theory with Ben, covering music theory, harmony, and composition topics.",
+        "score": 0.2601451447072928,
+        "id": "83bbeeae-4b92-4b78-8bf0-863b1ff42c92",
+        "created_at": "2026-11-18T17:51:02.311083+00:00",
+        "updated_at": "2026-11-18T17:51:02.311083+00:00",
+        "score_debug": {
+          "combined_score": 0.2601451447072928,
+          "semantic_score": 0.34057963,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30978323176823186
+        }
+      },
+      {
+        "memory": "On that last Wednesday, User missed the train by five minutes, took a taxi, and paid $12 for the ride.",
+        "score": 0.2593104887804878,
+        "id": "0afb02d1-4eaf-4e37-be10-72066ddd7755",
+        "created_at": "2026-11-18T18:40:44.177779+00:00",
+        "updated_at": "2026-11-18T18:40:44.177779+00:00",
+        "score_debug": {
+          "combined_score": 0.2593104887804878,
+          "semantic_score": 0.3750671,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27320912195121955
+        }
+      },
+      {
+        "memory": "User plans to try the Baked Salmon with Roasted Vegetables recipe this weekend, aiming to incorporate more fish into their diet.",
+        "score": 0.259169938374502,
+        "id": "364e7321-7da6-46cc-9b32-0420f1a373b9",
+        "created_at": "2026-11-18T18:48:55.661425+00:00",
+        "updated_at": "2026-11-18T18:48:55.661425+00:00",
+        "score_debug": {
+          "combined_score": 0.259169938374502,
+          "semantic_score": 0.35998508,
+          "bm25_score": 0.0,
+          "entity_boost": 0.287939765936255
+        }
+      },
+      {
+        "memory": "User met filmmaker Alex at the International Film Festival in October 2026, and Alex mentioned he plans to enter his new film in a 2027 festival, prompting User to consider collaboration or an early preview.",
+        "score": 0.2591202058531935,
+        "id": "b448d25b-a6c3-4536-9a4b-87551c94f3f6",
+        "created_at": "2026-11-18T17:04:26.682676+00:00",
+        "updated_at": "2026-11-18T17:04:26.682676+00:00",
+        "score_debug": {
+          "combined_score": 0.2591202058531935,
+          "semantic_score": 0.37364265,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2741578646329838
+        }
+      },
+      {
+        "memory": "User asked for recommendations of popular parks or gardens in London and wanted to know what is unique about each one.",
+        "score": 0.259010468,
+        "id": "c7abc614-7ac6-4015-a1d5-63cc0952eb10",
+        "created_at": "2026-11-18T17:42:48.203800+00:00",
+        "updated_at": "2026-11-18T17:42:48.203800+00:00",
+        "score_debug": {
+          "combined_score": 0.259010468,
+          "semantic_score": 0.32496977,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3225564
+        }
+      },
+      {
+        "memory": "Assistant outlined Moosejaw's checkout process for the Thermoball boots: add to cart, view cart, log in or checkout as guest, enter shipping address, provide payment details, review order summary, and submit the purchase.",
+        "score": 0.2585007069380204,
+        "id": "2fc74266-a715-44d3-8675-dfdd4f5773a2",
+        "created_at": "2026-11-18T18:01:47.462157+00:00",
+        "updated_at": "2026-11-18T18:01:47.462157+00:00",
+        "score_debug": {
+          "combined_score": 0.2585007069380204,
+          "semantic_score": 0.3410705,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3051812673450509
+        }
+      },
+      {
+        "memory": "User expressed fascination with how Portuguese spread historically and asked whether unique dialects or regional variations of the language have developed in different areas.",
+        "score": 0.25834236,
+        "id": "30d27a44-8cfe-4857-9603-8cfba8bbd12e",
+        "created_at": "2026-11-18T17:11:06.485693+00:00",
+        "updated_at": "2026-11-18T17:11:06.485693+00:00",
+        "score_debug": {
+          "combined_score": 0.25834236,
+          "semantic_score": 0.32990983,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31594607
+        }
+      },
+      {
+        "memory": "User finished listening to \"The Hating Game\" by Sally Thorne around October 2026, the month before the observation date.",
+        "score": 0.25814257317073175,
+        "id": "3106316f-ea67-4c45-a339-d7f921a6db7a",
+        "created_at": "2026-11-18T16:57:19.007780+00:00",
+        "updated_at": "2026-11-18T16:57:19.007780+00:00",
+        "score_debug": {
+          "combined_score": 0.25814257317073175,
+          "semantic_score": 0.31346375,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3318926829268293
+        }
+      },
+      {
+        "memory": "Assistant mentions free online resources for focus‑enhancing music such as Noisli, SimplyNoise, and lo‑fi music channels on YouTube",
+        "score": 0.258038938,
+        "id": "867de3b4-fdcf-4f88-9380-10131e116d89",
+        "created_at": "2026-11-18T18:08:57.426507+00:00",
+        "updated_at": "2026-11-18T18:08:57.426507+00:00",
+        "score_debug": {
+          "combined_score": 0.258038938,
+          "semantic_score": 0.32634276,
+          "bm25_score": 0.0,
+          "entity_boost": 0.318754585
+        }
+      },
+      {
+        "memory": "Assistant noted that the campers remembered the brave man's earlier words and resolved to face the ghost together",
+        "score": 0.257849584,
+        "id": "1de78f76-f132-4710-92e1-60aba4bf664c",
+        "created_at": "2026-11-18T17:16:57.070449+00:00",
+        "updated_at": "2026-11-18T17:16:57.070449+00:00",
+        "score_debug": {
+          "combined_score": 0.257849584,
+          "semantic_score": 0.35024294,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29438102
+        }
+      },
+      {
+        "memory": "User ate a bacon and cheese burger at friend Mike's house, found it really good, and is recalling the tasty experience while planning his own BBQ.",
+        "score": 0.25770879563346616,
+        "id": "b68a6aec-6c1c-4e61-9e45-494c8988a8e2",
+        "created_at": "2026-11-18T18:41:37.189558+00:00",
+        "updated_at": "2026-11-18T18:41:37.189558+00:00",
+        "score_debug": {
+          "combined_score": 0.25770879563346616,
+          "semantic_score": 0.35646176,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2878102290836653
+        }
+      },
+      {
+        "memory": "Assistant added that additional Portuguese variations exist in Africa, Asia, and other world regions, where local languages and cultures blend with Portuguese to create unique regional mixes.",
+        "score": 0.2574974817443013,
+        "id": "c1004953-50a4-49e7-a6c6-0fd9a024fb77",
+        "created_at": "2026-11-18T17:11:06.494400+00:00",
+        "updated_at": "2026-11-18T17:11:06.494400+00:00",
+        "score_debug": {
+          "combined_score": 0.2574974817443013,
+          "semantic_score": 0.3039553,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33978840436075325
+        }
+      },
+      {
+        "memory": "User usually takes the 7:45 am train for their daily commute, which generally works fine except for the missed train incident on Wednesday, November 11, 2026.",
+        "score": 0.25745491613986016,
+        "id": "8803fb78-6e50-4ed3-a5b5-0c474567bc72",
+        "created_at": "2026-11-18T18:38:09.325343+00:00",
+        "updated_at": "2026-11-18T18:38:09.325343+00:00",
+        "score_debug": {
+          "combined_score": 0.25745491613986016,
+          "semantic_score": 0.36716264,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2764746503496503
+        }
+      },
+      {
+        "memory": "Assistant offered additional purchasing tips: review Moosejaw's return and exchange policies, consider buying during off‑peak seasons, use price‑comparison tools for best deals, and contact Moosejaw customer service for checkout assistance.",
+        "score": 0.25732307493802037,
+        "id": "51d878d8-60fe-4cdc-9a0e-66cae7a6dd25",
+        "created_at": "2026-11-18T18:01:47.470619+00:00",
+        "updated_at": "2026-11-18T18:01:47.470619+00:00",
+        "score_debug": {
+          "combined_score": 0.25732307493802037,
+          "semantic_score": 0.33812642,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3051812673450509
+        }
+      },
+      {
+        "memory": "Assistant suggested considering mail‑in cleaning providers, specifically naming Jeweluxe, The Jewelry Cleaning Co., and Diamond Spa as options for sending jewelry to be cleaned and restored.",
+        "score": 0.256750952,
+        "id": "163781cd-d718-4624-a48b-cc9c7ebbf2fd",
+        "created_at": "2026-11-18T18:50:08.200452+00:00",
+        "updated_at": "2026-11-18T18:50:08.200452+00:00",
+        "score_debug": {
+          "combined_score": 0.256750952,
+          "semantic_score": 0.29105213,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35082525
+        }
+      },
+      {
+        "memory": "Assistant noted that Portugal’s 15th‑ and 16th‑century colonial expansion established Portuguese in Africa, Asia, and the Americas, contributing to its global spread.",
+        "score": 0.2564230663736264,
+        "id": "dc0bde6e-35c9-4a81-b647-6a7d3296a9f5",
+        "created_at": "2026-11-18T17:10:34.095726+00:00",
+        "updated_at": "2026-11-18T17:10:34.095726+00:00",
+        "score_debug": {
+          "combined_score": 0.2564230663736264,
+          "semantic_score": 0.2651036,
+          "bm25_score": 0.0,
+          "entity_boost": 0.375954065934066
+        }
+      },
+      {
+        "memory": "User listens to news‑related podcasts such as \"The Daily\" and \"Pod Save America\" to stay up‑to‑date on current events, and reports feeling more informed and engaged in conversations with friends and family.",
+        "score": 0.2563844214173228,
+        "id": "38ad81b3-f171-48ff-a938-146216fdd456",
+        "created_at": "2026-11-18T17:37:41.596896+00:00",
+        "updated_at": "2026-11-18T17:37:41.596896+00:00",
+        "score_debug": {
+          "combined_score": 0.2563844214173228,
+          "semantic_score": 0.3532844,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28767665354330707
+        }
+      },
+      {
+        "memory": "Assistant recommends Coyo Taco in Wynwood for authentic, delicious tacos as a tasty food option during the Miami visit.",
+        "score": 0.25631015,
+        "id": "ffba1778-7502-4470-bf10-5bbca31cac8f",
+        "created_at": "2026-11-18T17:05:18.261320+00:00",
+        "updated_at": "2026-11-18T17:05:18.261320+00:00",
+        "score_debug": {
+          "combined_score": 0.25631015,
+          "semantic_score": 0.3247545,
+          "bm25_score": 0.0,
+          "entity_boost": 0.316020875
+        }
+      },
+      {
+        "memory": "User was advised to review each rental company’s policies, compare prices and vehicle options, and read customer reviews before booking to ensure a smooth rental experience.",
+        "score": 0.25609768,
+        "id": "31f89f48-4122-430f-8e61-7221daf92093",
+        "created_at": "2026-11-18T17:06:22.795669+00:00",
+        "updated_at": "2026-11-18T17:06:22.795669+00:00",
+        "score_debug": {
+          "combined_score": 0.25609768,
+          "semantic_score": 0.33040205,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30984215
+        }
+      },
+      {
+        "memory": "Assistant suggested The Guardian's \"The Audio Long Read\" podcast as a global‑perspective option comparable to \"The Daily\" and \"Pod Save America\".",
+        "score": 0.25604308541732285,
+        "id": "ba2a52c7-8d15-432b-b273-eb91d5079722",
+        "created_at": "2026-11-18T17:37:41.609145+00:00",
+        "updated_at": "2026-11-18T17:37:41.609145+00:00",
+        "score_debug": {
+          "combined_score": 0.25604308541732285,
+          "semantic_score": 0.35243106,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28767665354330707
+        }
+      },
+      {
+        "memory": "Assistant also suggested region‑specific podcasts: The Africa Report, The Asia Podcast, Latino USA, and The Middle East Week.",
+        "score": 0.255755256,
+        "id": "020b1f87-4d15-4944-bb91-937bc4cc05fc",
+        "created_at": "2026-11-18T17:36:34.255083+00:00",
+        "updated_at": "2026-11-18T17:36:34.255083+00:00",
+        "score_debug": {
+          "combined_score": 0.255755256,
+          "semantic_score": 0.28949016,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34989798
+        }
+      },
+      {
+        "memory": "User has been using cashback apps Ibotta and Fetch Rewards and is interested in earning cashback on pet food purchases",
+        "score": 0.25573057152191236,
+        "id": "cda5f64d-37d9-4260-9ebb-f84946ac8a68",
+        "created_at": "2026-11-18T17:47:39.230578+00:00",
+        "updated_at": "2026-11-18T17:47:39.230578+00:00",
+        "score_debug": {
+          "combined_score": 0.25573057152191236,
+          "semantic_score": 0.32343113,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31589529880478084
+        }
+      },
+      {
+        "memory": "Assistant noted that in South America, besides Brazil, there are smaller Portuguese‑speaking communities in Uruguay, Paraguay, and Argentina.",
+        "score": 0.255668632,
+        "id": "4b3e4748-2ed5-4788-b375-d23769869fb4",
+        "created_at": "2026-11-18T17:11:37.066694+00:00",
+        "updated_at": "2026-11-18T17:11:37.066694+00:00",
+        "score_debug": {
+          "combined_score": 0.255668632,
+          "semantic_score": 0.29309618,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3460754
+        }
+      },
+      {
+        "memory": "User requested tips and tricks to maximize cashback earnings on pet food purchases, seeking ways to get the most out of cashback apps such as Ibotta and Fetch Rewards.",
+        "score": 0.2553859275219123,
+        "id": "be1f7144-b893-4ca8-8820-c1045b1eff0a",
+        "created_at": "2026-11-18T17:47:56.643898+00:00",
+        "updated_at": "2026-11-18T17:47:56.643898+00:00",
+        "score_debug": {
+          "combined_score": 0.2553859275219123,
+          "semantic_score": 0.32256952,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31589529880478084
+        }
+      },
+      {
+        "memory": "User is looking for podcast recommendations similar to \"The Daily\" and \"Pod Save America\" but with a more global perspective to learn about events in other parts of the world.",
+        "score": 0.2552111450949051,
+        "id": "7e049a95-d707-435c-a770-2c9aa09688a6",
+        "created_at": "2026-11-18T17:36:34.249058+00:00",
+        "updated_at": "2026-11-18T17:36:34.249058+00:00",
+        "score_debug": {
+          "combined_score": 0.2552111450949051,
+          "semantic_score": 0.3366906,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30133726273726275
+        }
+      },
+      {
+        "memory": "Assistant recommended a 30‑minute brisk‑walking routine: 5‑minute warm‑up walk, 20‑minute brisk walk at 3‑4 mph, and 5‑minute cool‑down walk.",
+        "score": 0.25501876369721116,
+        "id": "2436389b-fc75-4949-9b80-c1e112316de0",
+        "created_at": "2026-11-18T16:53:17.438130+00:00",
+        "updated_at": "2026-11-18T16:53:17.438130+00:00",
+        "score_debug": {
+          "combined_score": 0.25501876369721116,
+          "semantic_score": 0.32057297,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31697393924302786
+        }
+      },
+      {
+        "memory": "User is looking for ways to prevent overwatering tomato plants, particularly during hot weather.",
+        "score": 0.254590272,
+        "id": "3501a250-a77f-4d46-b6b9-6768e621b3d0",
+        "created_at": "2026-11-18T17:19:34.248245+00:00",
+        "updated_at": "2026-11-18T17:19:34.248245+00:00",
+        "score_debug": {
+          "combined_score": 0.254590272,
+          "semantic_score": 0.32750803,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30896765
+        }
+      },
+      {
+        "memory": "User has been trying to listen to more news‑related podcasts, specifically “The Daily” and “Pod Save America”, to stay up‑to‑date on current events, and reports that this has made them feel more informed and more engaged in conversations with friends and family.",
+        "score": 0.25410360941732285,
+        "id": "5471fae9-602c-4b3f-89f8-e3a14b48b517",
+        "created_at": "2026-11-18T17:36:05.502418+00:00",
+        "updated_at": "2026-11-18T17:36:05.502418+00:00",
+        "score_debug": {
+          "combined_score": 0.25410360941732285,
+          "semantic_score": 0.34758237,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28767665354330707
+        }
+      },
+      {
+        "memory": "Assistant recommended Puracy dish soap, describing it as natural, non‑toxic, biodegradable, free from harsh chemicals and gentle on hands.",
+        "score": 0.25397379999999997,
+        "id": "6bd09184-6bd3-4fa6-9da3-42cde256b33e",
+        "created_at": "2026-11-18T18:35:33.573715+00:00",
+        "updated_at": "2026-11-18T18:35:33.573715+00:00",
+        "score_debug": {
+          "combined_score": 0.25397379999999997,
+          "semantic_score": 0.31260145,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32233305
+        }
+      },
+      {
+        "memory": "Assistant recommended Battersea Park, highlighting its outdoor sports facilities, Thames views, boating lake, children's zoo, and the Victorian Peace Pagoda.",
+        "score": 0.25372016483516485,
+        "id": "a340676a-068a-43be-b7b4-b65c36495443",
+        "created_at": "2026-11-18T17:42:48.226568+00:00",
+        "updated_at": "2026-11-18T17:42:48.226568+00:00",
+        "score_debug": {
+          "combined_score": 0.25372016483516485,
+          "semantic_score": 0.2778625,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35643791208791215
+        }
+      },
+      {
+        "memory": "Assistant recommended Hyde Park, one of London's largest and most famous parks, highlighting its Serpentine Lake, the Diana Memorial Fountain, and Speaker's Corner as unique features.",
+        "score": 0.253621044,
+        "id": "621192c3-f85c-449b-b5ad-f2b5b3bb8137",
+        "created_at": "2026-11-18T17:42:48.206895+00:00",
+        "updated_at": "2026-11-18T17:42:48.206895+00:00",
+        "score_debug": {
+          "combined_score": 0.253621044,
+          "semantic_score": 0.25600746,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37804515
+        }
+      },
+      {
+        "memory": "User is currently reading a novel, is on chapter 7, finds it engaging, and is trying to finish it quickly by making the most of their daily commute time",
+        "score": 0.25361476400000005,
+        "id": "4f924f45-8bfb-4653-b469-c284cd3545f8",
+        "created_at": "2026-11-18T18:40:07.041207+00:00",
+        "updated_at": "2026-11-18T18:40:07.041207+00:00",
+        "score_debug": {
+          "combined_score": 0.25361476400000005,
+          "semantic_score": 0.34895366,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28508325
+        }
+      },
+      {
+        "memory": "Assistant advises periodizing the workout routine every 4–6 weeks by changing exercises, sets, reps, or weight to prevent plateaus and overtraining.",
+        "score": 0.2527543092187812,
+        "id": "a7015345-1721-4d75-8e99-320cadc11c95",
+        "created_at": "2026-11-18T17:30:07.686836+00:00",
+        "updated_at": "2026-11-18T17:30:07.686836+00:00",
+        "score_debug": {
+          "combined_score": 0.2527543092187812,
+          "semantic_score": 0.34906882,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28281695304695303
+        }
+      }
+    ],
+    "search_latency_ms": 4931.3,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_200": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "You haven’t gone yet—your rafting trip was on Nov 18, 2026, which is 1,247 days from today (Tuesday, June 20, 2023).",
+      "judge_raw": "<judge_thinking>The correct answer is 3 days ago (or 4 including the last day). The model claims the trip hasn't happened yet and gives a future date, which contradicts the correct answer.</judge_thinking>\nno",
+      "memories_evaluated": 200,
+      "reason": "Generated answer: You haven’t gone yet—your rafting trip was on Nov 18, 2026, which is 1,247 days from today (Tuesday, June 20, 2023)."
+    },
+    "top_50": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "You haven’t yet—the trip is on Nov 18, 2026, which is 1,247 days from today.",
+      "judge_raw": "no",
+      "memories_evaluated": 50,
+      "reason": "Generated answer: You haven’t yet—the trip is on Nov 18, 2026, which is 1,247 days from today."
+    },
+    "top_20": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "You haven’t gone yet—it’s 1,247 days from today (return date: Nov 18, 2026).",
+      "judge_raw": "<judge_thinking>\nCore claim: Determine how many days ago the rafting trip occurred. Correct answer: 3 days ago (or 4 including the last day).\nModel response claims the trip hasn’t happened yet and is 1,247 days in the future. This directly contradicts the correct answer and does not address the \"days ago\" timeframe. It is not an equivalent or acceptable variation.\n</judge_thinking>\nno",
+      "memories_evaluated": 20,
+      "reason": "Generated answer: You haven’t gone yet—it’s 1,247 days from today (return date: Nov 18, 2026)."
+    },
+    "top_10": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "You haven’t gone yet—it’s in 1,247 days (on Nov 18, 2026).",
+      "judge_raw": "no",
+      "memories_evaluated": 10,
+      "reason": "Generated answer: You haven’t gone yet—it’s in 1,247 days (on Nov 18, 2026)."
+    }
+  }
+}

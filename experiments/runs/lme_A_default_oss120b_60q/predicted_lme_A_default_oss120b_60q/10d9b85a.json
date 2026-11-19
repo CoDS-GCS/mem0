@@ -1,0 +1,2654 @@
+{
+  "question_id": "10d9b85a",
+  "question_type": "multi-session",
+  "question": "How many days did I spend attending workshops, lectures, and conferences in April?",
+  "ground_truth_answer": "3 days",
+  "question_date": "2023/05/01 (Mon) 23:15",
+  "is_abstention": false,
+  "user_id": "longmemeval_10d9b85a_8da3076b",
+  "answer_session_ids": [
+    "answer_e0585cb5_2",
+    "answer_e0585cb5_1"
+  ],
+  "retrieval": {
+    "search_query": "How many days did I spend attending workshops, lectures, and conferences in April?",
+    "search_results": [
+      {
+        "memory": "User attended a lecture on sustainable development at the public library on April 10, 2026, which sparked their interest in learning more about the topic.",
+        "score": 0.819439333391388,
+        "id": "20fd5f44-d4d9-4af0-80b6-c196c59cc17c",
+        "created_at": "2026-11-18T06:38:16.288081+00:00",
+        "updated_at": "2026-11-18T06:38:16.288081+00:00",
+        "score_debug": {
+          "combined_score": 0.819439333391388,
+          "semantic_score": 0.5659729,
+          "bm25_score": 0.9999999991155357,
+          "entity_boost": 0.48262543436293437
+        }
+      },
+      {
+        "memory": "User attended a two-day workshop on standardization and normalization on April 17-18, 2026, which also covered supervised learning and deep learning, but remains unclear about when to apply each technique.",
+        "score": 0.8061270937038685,
+        "id": "d4c9e420-381d-48aa-ab66-b6c1f1649f1a",
+        "created_at": "2026-11-18T07:11:54.104254+00:00",
+        "updated_at": "2026-11-18T07:11:54.104254+00:00",
+        "score_debug": {
+          "combined_score": 0.8061270937038685,
+          "semantic_score": 0.5326923,
+          "bm25_score": 0.9999999998967366,
+          "entity_boost": 0.48262543436293437
+        }
+      },
+      {
+        "memory": "User recalled that Dr. Kim, during the April 17-18, 2026 workshop, emphasized that feature engineering is crucial for model performance.",
+        "score": 0.7467867580386027,
+        "id": "97de3897-3ee0-4ba4-95b1-ca77996f6ee0",
+        "created_at": "2026-11-18T07:14:01.334554+00:00",
+        "updated_at": "2026-11-18T07:14:01.334554+00:00",
+        "score_debug": {
+          "combined_score": 0.7467867580386027,
+          "semantic_score": 0.3843531,
+          "bm25_score": 0.9999883607335724,
+          "entity_boost": 0.48262543436293437
+        }
+      },
+      {
+        "memory": "Assistant listed upcoming Spring Sales (March to April) where Best Buy typically offers laptop promotions.",
+        "score": 0.7330672026216369,
+        "id": "8bd63b39-6c7b-45d7-be52-a805bcbbbe4b",
+        "created_at": "2026-11-18T06:22:07.856133+00:00",
+        "updated_at": "2026-11-18T06:22:07.856133+00:00",
+        "score_debug": {
+          "combined_score": 0.7330672026216369,
+          "semantic_score": 0.366755,
+          "bm25_score": 0.9832875721911579,
+          "entity_boost": 0.48262543436293437
+        }
+      },
+      {
+        "memory": "Assistant recommends the Winter Farmers Market (Saturdays from December through April) at Asheville City Market, offering local produce, baked goods, and crafts.",
+        "score": 0.7050012478272201,
+        "id": "d9c6e852-4131-40a3-891a-8988abd74d46",
+        "created_at": "2026-11-18T05:32:01.614226+00:00",
+        "updated_at": "2026-11-18T05:32:01.614226+00:00",
+        "score_debug": {
+          "combined_score": 0.7050012478272201,
+          "semantic_score": 0.2985075,
+          "bm25_score": 0.9813701852051157,
+          "entity_boost": 0.48262543436293437
+        }
+      },
+      {
+        "memory": "Assistant mentioned the forthcoming memoir \"Crying in H Mart\" by Michelle Zauner, set for release in April 2021, focusing on grief, family, and the Korean‑American experience.",
+        "score": 0.6802977108465994,
+        "id": "495ff414-32af-475c-91a0-8d9352854df6",
+        "created_at": "2026-11-18T06:30:55.889971+00:00",
+        "updated_at": "2026-11-18T06:30:55.889971+00:00",
+        "score_debug": {
+          "combined_score": 0.6802977108465994,
+          "semantic_score": 0.2371509,
+          "bm25_score": 0.9809679427535641,
+          "entity_boost": 0.48262543436293437
+        }
+      },
+      {
+        "memory": "Assistant highlighted the upcoming memoir \"Broken Horses\" by Brandi Carlile, scheduled for April 2021, detailing the singer‑songwriter’s life and career.",
+        "score": 0.6780089300310062,
+        "id": "10c0e315-c3f3-403d-8e42-a7df89704547",
+        "created_at": "2026-11-18T06:30:55.893531+00:00",
+        "updated_at": "2026-11-18T06:30:55.893531+00:00",
+        "score_debug": {
+          "combined_score": 0.6780089300310062,
+          "semantic_score": 0.22985774,
+          "bm25_score": 0.9825391507145811,
+          "entity_boost": 0.48262543436293437
+        }
+      },
+      {
+        "memory": "User is heading to Universal Studios Hollywood's Wizarding World for the first time on November 18, 2026, planning to visit on a weekday early morning and will try to attend during weekdays generally.",
+        "score": 0.6727756751443638,
+        "id": "3e8c3f60-e671-4e88-92aa-bb5beb42ce5b",
+        "created_at": "2026-11-18T07:01:01.006645+00:00",
+        "updated_at": "2026-11-18T07:01:01.006645+00:00",
+        "score_debug": {
+          "combined_score": 0.6727756751443638,
+          "semantic_score": 0.39635652,
+          "bm25_score": 0.9134154956932019,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "Assistant advised that spending time outdoors in natural light, breathing fresh air, and engaging in physical activity such as hiking can help regulate mood and energy, mitigating seasonal blues.",
+        "score": 0.6630242951097565,
+        "id": "8ae89bee-8ba2-46e9-8715-bda16359c7e4",
+        "created_at": "2026-11-18T05:32:39.620656+00:00",
+        "updated_at": "2026-11-18T05:32:39.620656+00:00",
+        "score_debug": {
+          "combined_score": 0.6630242951097565,
+          "semantic_score": 0.34547517,
+          "bm25_score": 0.9649580427743912,
+          "entity_boost": 0.347127525
+        }
+      },
+      {
+        "memory": "User is excited to ride Harry Potter and the Forbidden Journey, experience the Flight of the Hippogriff roller coaster, and attend the Wand‑Choosing Ceremony, and plans to explore different areas of Universal Studios Hollywood each month with the annual pass.",
+        "score": 0.6398656399782225,
+        "id": "c243d716-7f43-415e-b2bc-fb11acfaeb4a",
+        "created_at": "2026-11-18T07:03:00.335751+00:00",
+        "updated_at": "2026-11-18T07:03:00.335751+00:00",
+        "score_debug": {
+          "combined_score": 0.6398656399782225,
+          "semantic_score": 0.381841,
+          "bm25_score": 0.9120285929734447,
+          "entity_boost": 0.3057945069721115
+        }
+      },
+      {
+        "memory": "User is interested in attending a music festival later in 2026 that features artists similar to RÜFÜS DU SOL",
+        "score": 0.6016601730456762,
+        "id": "6d7a0de2-ef2a-4e40-ba73-30ce1bd920f6",
+        "created_at": "2026-11-18T06:47:19.115629+00:00",
+        "updated_at": "2026-11-18T06:47:19.115629+00:00",
+        "score_debug": {
+          "combined_score": 0.6016601730456762,
+          "semantic_score": 0.30740988,
+          "bm25_score": 0.9723456954713334,
+          "entity_boost": 0.22439485714285715
+        }
+      },
+      {
+        "memory": "Assistant suggested attending in‑person events and activities such as concerts, workshops, or classes related to personal interests to meet like‑minded people and keep social ties.",
+        "score": 0.5873677892949436,
+        "id": "92d0596a-56a8-43f1-885c-4c3c403f9638",
+        "created_at": "2026-11-18T05:49:44.648519+00:00",
+        "updated_at": "2026-11-18T05:49:44.648519+00:00",
+        "score_debug": {
+          "combined_score": 0.5873677892949436,
+          "semantic_score": 0.46843892,
+          "bm25_score": 0.9999805532373591,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User completed binge-watching Season 3 of The Crown over a span of 10 days, beginning on a Sunday afternoon in early November 2026 and averaging three to four episodes per day.",
+        "score": 0.5860847390383969,
+        "id": "9c815809-4594-4719-a1ec-36721b5a2f08",
+        "created_at": "2026-11-18T06:35:56.682834+00:00",
+        "updated_at": "2026-11-18T06:35:56.682834+00:00",
+        "score_debug": {
+          "combined_score": 0.5860847390383969,
+          "semantic_score": 0.34299767,
+          "bm25_score": 0.7500470054282847,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "Assistant described how seasonal changes affect mood and energy: winter’s short days and cold can cause lethargy, spring’s warming boosts motivation, summer’s long days may cause burnout, and autumn’s cooling can bring melancholy.",
+        "score": 0.5801484117492036,
+        "id": "9dcd1911-442d-48c1-b9e6-9d0890dfeb00",
+        "created_at": "2026-11-18T05:32:39.617625+00:00",
+        "updated_at": "2026-11-18T05:32:39.617625+00:00",
+        "score_debug": {
+          "combined_score": 0.5801484117492036,
+          "semantic_score": 0.3474611,
+          "bm25_score": 0.7438239543730091,
+          "entity_boost": 0.359085975
+        }
+      },
+      {
+        "memory": "Assistant recommended attending hobby‑based meetups, including language‑exchange programs, photography walks, cooking classes, yoga or fitness groups, and board‑game cafés, as venues where the user can naturally meet like‑minded individuals.",
+        "score": 0.5789412267401934,
+        "id": "05a04665-c445-4203-b17b-e097785df35b",
+        "created_at": "2026-11-18T05:48:06.456978+00:00",
+        "updated_at": "2026-11-18T05:48:06.456978+00:00",
+        "score_debug": {
+          "combined_score": 0.5789412267401934,
+          "semantic_score": 0.4773451,
+          "bm25_score": 0.9700079668504836,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User binge-watched Season 3 of The Crown on Netflix, averaging 3‑4 episodes per day, completing it in about 10 days after starting on a Sunday afternoon, and loved Olivia Colman's portrayal of Queen Elizabeth II.",
+        "score": 0.5746417193915614,
+        "id": "9891d528-7841-4a7d-9e3e-a78594034382",
+        "created_at": "2026-11-18T06:38:16.280761+00:00",
+        "updated_at": "2026-11-18T06:38:16.280761+00:00",
+        "score_debug": {
+          "combined_score": 0.5746417193915614,
+          "semantic_score": 0.30252445,
+          "bm25_score": 0.7438239543730091,
+          "entity_boost": 0.3902558941058942
+        }
+      },
+      {
+        "memory": "Course delivery includes 30‑60 minute video lectures, reading assignments, quizzes, discussion forums, and optional projects, providing a flexible and interactive learning experience.",
+        "score": 0.5735707107563649,
+        "id": "6d42525a-1960-44ce-a304-35c8c4160ec3",
+        "created_at": "2026-11-18T06:39:03.721484+00:00",
+        "updated_at": "2026-11-18T06:39:03.721484+00:00",
+        "score_debug": {
+          "combined_score": 0.5735707107563649,
+          "semantic_score": 0.4394607,
+          "bm25_score": 0.9944660768909123,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant encouraged the user to enroll in classes or workshops—such as painting, writing, or coding—where they can learn new skills while interacting with fellow participants who share similar interests.",
+        "score": 0.5705022305332231,
+        "id": "43954fd8-abe5-4fe2-ac3b-8b2758d066e5",
+        "created_at": "2026-11-18T05:48:06.468842+00:00",
+        "updated_at": "2026-11-18T05:48:06.468842+00:00",
+        "score_debug": {
+          "combined_score": 0.5705022305332231,
+          "semantic_score": 0.4870866,
+          "bm25_score": 0.9391689763330578,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advised the user to contact nearby universities or colleges with Middle Eastern Studies programs or cultural centers, as they often host events, lectures, and activities relevant to Syrian and Middle Eastern communities.",
+        "score": 0.5677603349588198,
+        "id": "3e500d05-22de-415d-8989-a949a41a76e3",
+        "created_at": "2026-11-18T06:14:59.205615+00:00",
+        "updated_at": "2026-11-18T06:14:59.205615+00:00",
+        "score_debug": {
+          "combined_score": 0.5677603349588198,
+          "semantic_score": 0.4252138,
+          "bm25_score": 0.9941870373970496,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "The Coursera Sustainable Development specialization features weekly quizzes each consisting of 10 to 15 multiple‑choice questions that assess learners’ understanding of that week’s lecture material.",
+        "score": 0.5548421618379685,
+        "id": "66183b37-347a-4e0c-a048-e2c206cd6ce6",
+        "created_at": "2026-11-18T06:41:56.991026+00:00",
+        "updated_at": "2026-11-18T06:41:56.991026+00:00",
+        "score_debug": {
+          "combined_score": 0.5548421618379685,
+          "semantic_score": 0.39237094,
+          "bm25_score": 0.9947344645949214,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User attends restorative yoga classes at a studio near their workplace and reports enjoying these sessions.",
+        "score": 0.5530832776322915,
+        "id": "3938beb1-6af6-4cab-83a6-6fb15ef0276b",
+        "created_at": "2026-11-18T05:40:58.823547+00:00",
+        "updated_at": "2026-11-18T05:40:58.823547+00:00",
+        "score_debug": {
+          "combined_score": 0.5530832776322915,
+          "semantic_score": 0.45489243,
+          "bm25_score": 0.9278157640807286,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has started waking up 15 minutes earlier on Tuesdays and Thursdays to meditate and practice yoga poses, which has helped set a positive tone for the day.",
+        "score": 0.5503109534532765,
+        "id": "d8931809-8830-46de-ad47-74b61548687b",
+        "created_at": "2026-11-18T06:15:40.194893+00:00",
+        "updated_at": "2026-11-18T06:15:40.194893+00:00",
+        "score_debug": {
+          "combined_score": 0.5503109534532765,
+          "semantic_score": 0.43106654,
+          "bm25_score": 0.5942972821946296,
+          "entity_boost": 0.3504135614385615
+        }
+      },
+      {
+        "memory": "User is actively trying to get more into hiking and spending time outdoors, especially as the seasons transition.",
+        "score": 0.5470672190670548,
+        "id": "ecf82ab3-9ec2-482d-8c46-9b562c06749d",
+        "created_at": "2026-11-18T05:32:39.608757+00:00",
+        "updated_at": "2026-11-18T05:32:39.608757+00:00",
+        "score_debug": {
+          "combined_score": 0.5470672190670548,
+          "semantic_score": 0.4456143,
+          "bm25_score": 0.9220537476676371,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended spending time in Golden Gate Park, highlighting its gardens, museums, lakes, and outdoor activities.",
+        "score": 0.5457152005354688,
+        "id": "adbf2dea-e937-4490-b297-58f95f31de2b",
+        "created_at": "2026-11-18T05:14:13.034838+00:00",
+        "updated_at": "2026-11-18T05:14:13.034838+00:00",
+        "score_debug": {
+          "combined_score": 0.5457152005354688,
+          "semantic_score": 0.44624156,
+          "bm25_score": 0.918046441338672,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommends recording physical measurements like increased joint range of motion, improved balance or coordination, greater strength in specific muscle groups, and attending workshops or classes with a teacher for personalized feedback on technique.",
+        "score": 0.5398552893995401,
+        "id": "ad2367c8-0606-4f3f-aee5-773ffa2b6da5",
+        "created_at": "2026-11-18T05:39:26.147156+00:00",
+        "updated_at": "2026-11-18T05:39:26.147156+00:00",
+        "score_debug": {
+          "combined_score": 0.5398552893995401,
+          "semantic_score": 0.34966534,
+          "bm25_score": 0.9999728834988503,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User binge-watched Season 3 of The Crown on Netflix, averaging three to four episodes per day, and became hooked from the very beginning.",
+        "score": 0.5347827309716282,
+        "id": "66e24035-1c68-4c7b-94e7-888f789d7bdc",
+        "created_at": "2026-11-18T06:35:07.551147+00:00",
+        "updated_at": "2026-11-18T06:35:07.551147+00:00",
+        "score_debug": {
+          "combined_score": 0.5347827309716282,
+          "semantic_score": 0.33712572,
+          "bm25_score": 0.6095752133231762,
+          "entity_boost": 0.3902558941058942
+        }
+      },
+      {
+        "memory": "Assistant example goal: increase yoga practice frequency by one additional day per week within the next month.",
+        "score": 0.5318152338339144,
+        "id": "d016837e-aae5-4886-9784-65677c4ae276",
+        "created_at": "2026-11-18T05:38:46.581080+00:00",
+        "updated_at": "2026-11-18T05:38:46.581080+00:00",
+        "score_debug": {
+          "combined_score": 0.5318152338339144,
+          "semantic_score": 0.4131177,
+          "bm25_score": 0.6157394345847859,
+          "entity_boost": 0.30068095
+        }
+      },
+      {
+        "memory": "User plans to aim for 6,000 steps per day for the upcoming week to test the new target.",
+        "score": 0.5249317158160569,
+        "id": "52a69f8f-8991-4be0-bc87-879e47c0acfa",
+        "created_at": "2026-11-18T05:31:14.218485+00:00",
+        "updated_at": "2026-11-18T05:31:14.218485+00:00",
+        "score_debug": {
+          "combined_score": 0.5249317158160569,
+          "semantic_score": 0.36127222,
+          "bm25_score": 0.6188319746350475,
+          "entity_boost": 0.33222509490509494
+        }
+      },
+      {
+        "memory": "User performs simple stretches and sun salutations each morning and has noticed a significant increase in energy levels throughout the day.",
+        "score": 0.5202742853292704,
+        "id": "d7da3ce0-db7c-4f04-b9dc-fcac678804b6",
+        "created_at": "2026-11-18T05:40:06.524487+00:00",
+        "updated_at": "2026-11-18T05:40:06.524487+00:00",
+        "score_debug": {
+          "combined_score": 0.5202742853292704,
+          "semantic_score": 0.3779934,
+          "bm25_score": 0.6095752133231762,
+          "entity_boost": 0.3131171
+        }
+      },
+      {
+        "memory": "User attended a friend's birthday party, chose to leave early, and felt a sense of relief at returning to their own company, indicating discomfort in the social setting.",
+        "score": 0.5057599727975476,
+        "id": "79f3f505-d4bd-4ee1-8d36-c70be68a85c1",
+        "created_at": "2026-11-18T05:48:06.446109+00:00",
+        "updated_at": "2026-11-18T05:48:06.446109+00:00",
+        "score_debug": {
+          "combined_score": 0.5057599727975476,
+          "semantic_score": 0.34556586,
+          "bm25_score": 0.918834071993869,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant explained the formula for determining current daily steps: Current Daily Step Count equals total steps divided by number of days tracked.",
+        "score": 0.49987747701650276,
+        "id": "80471db6-4049-4f3e-8691-208a4f1e78c2",
+        "created_at": "2026-11-18T05:28:15.377930+00:00",
+        "updated_at": "2026-11-18T05:28:15.377930+00:00",
+        "score_debug": {
+          "combined_score": 0.49987747701650276,
+          "semantic_score": 0.364973,
+          "bm25_score": 0.5912662602703407,
+          "entity_boost": 0.29345443227091633
+        }
+      },
+      {
+        "memory": "Assistant instructed shredding a block of cheese (cheddar or Monterey Jack) and storing it in an airtight container for up to five days.",
+        "score": 0.494755303913078,
+        "id": "adf31b2b-b8e4-497a-8d12-2ca1dde5dfb9",
+        "created_at": "2026-11-18T07:07:16.620291+00:00",
+        "updated_at": "2026-11-18T07:07:16.620291+00:00",
+        "score_debug": {
+          "combined_score": 0.494755303913078,
+          "semantic_score": 0.33291516,
+          "bm25_score": 0.606504018863614,
+          "entity_boost": 0.297469080919081
+        }
+      },
+      {
+        "memory": "Assistant noted that a package of tortillas can be kept in an airtight container at room temperature for up to five days.",
+        "score": 0.486468789854019,
+        "id": "4c16bc99-0969-4c42-9c61-3d74100e8fe3",
+        "created_at": "2026-11-18T07:07:16.622700+00:00",
+        "updated_at": "2026-11-18T07:07:16.622700+00:00",
+        "score_debug": {
+          "combined_score": 0.486468789854019,
+          "semantic_score": 0.29236585,
+          "bm25_score": 0.6188319746350475,
+          "entity_boost": 0.30497415
+        }
+      },
+      {
+        "memory": "The Chase Sapphire Preferred credit card offers a 60,000 bonus points one‑time offer after the cardholder spends $4,000 on purchases within the first three months of account opening.",
+        "score": 0.4792742279631367,
+        "id": "767c1a13-e19e-4dff-90fc-ee5ea899f3ef",
+        "created_at": "2026-11-18T05:45:46.397890+00:00",
+        "updated_at": "2026-11-18T05:45:46.397890+00:00",
+        "score_debug": {
+          "combined_score": 0.4792742279631367,
+          "semantic_score": 0.2815017,
+          "bm25_score": 0.9166838699078416,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User plans to incorporate restorative yoga into a daily routine after a long day, aiming to practice each evening to unwind and improve well‑being.",
+        "score": 0.4758405000437592,
+        "id": "032ce7dd-de39-46e3-ba84-55b5126c8623",
+        "created_at": "2026-11-18T05:41:39.402501+00:00",
+        "updated_at": "2026-11-18T05:41:39.402501+00:00",
+        "score_debug": {
+          "combined_score": 0.4758405000437592,
+          "semantic_score": 0.295795,
+          "bm25_score": 0.6034404159435638,
+          "entity_boost": 0.29036583416583417
+        }
+      },
+      {
+        "memory": "Assistant recommended multiple strategies for the user to reduce social‑media use: set specific time boundaries, use website‑blocking apps such as Freedom, SelfControl, or StayFocusd, move apps off the home screen, create no‑phone zones, schedule dedicated check‑in times, unfollow or mute triggering accounts, prioritize meaningful interactions, substitute feeds with newsletters or podcasts, designate social‑media‑free days, practice self‑compassion, and reframe FOMO thoughts.",
+        "score": 0.45011471714191276,
+        "id": "66b35ddd-f322-4621-aa21-50aad5d3ce18",
+        "created_at": "2026-11-18T05:49:03.420642+00:00",
+        "updated_at": "2026-11-18T05:49:03.420642+00:00",
+        "score_debug": {
+          "combined_score": 0.45011471714191276,
+          "semantic_score": 0.3125183,
+          "bm25_score": 0.5242887426050314,
+          "entity_boost": 0.2884797502497503
+        }
+      },
+      {
+        "memory": "Assistant recommended ten strategies to make in-person meetups more meaningful, such as setting an intention, choosing a meaningful location, planning a shared activity, creating a sensory experience, practicing active listening, sharing personal stories, establishing a recurring ritual, taking photos or mementos, incorporating a learning component, and following up with reflection; also suggested activities like potluck dinners, hikes, cooking classes, concerts, book clubs, volunteering, and spa days.",
+        "score": 0.44930006069147854,
+        "id": "f65ab5c2-908c-4e8f-84bd-96667dc6f80a",
+        "created_at": "2026-11-18T05:50:11.187592+00:00",
+        "updated_at": "2026-11-18T05:50:11.187592+00:00",
+        "score_debug": {
+          "combined_score": 0.44930006069147854,
+          "semantic_score": 0.3297641,
+          "bm25_score": 0.4787535517286964,
+          "entity_boost": 0.3147325
+        }
+      },
+      {
+        "memory": "User averages around 7,000 steps per day, identifies as moderately active, and plans to raise the daily step count by 2,000–3,000 steps, targeting roughly 9,000–10,000 steps per day.",
+        "score": 0.44661922064693477,
+        "id": "e100bc1c-df9d-4f35-b86c-57a26a3ac314",
+        "created_at": "2026-11-18T05:03:40.090295+00:00",
+        "updated_at": "2026-11-18T05:03:40.090295+00:00",
+        "score_debug": {
+          "combined_score": 0.44661922064693477,
+          "semantic_score": 0.36030725,
+          "bm25_score": 0.7562408016173369,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested ten strategies to turn meal planning into a habit: schedule a specific weekly planning time, start with 3‑4 days and expand, create a pleasant ritual with coffee or music, involve the partner, stay flexible, regularly review and adjust the plan, set phone or fridge reminders, link planning to an existing habit like finishing Sunday breakfast, celebrate milestones, and be patient with setbacks.",
+        "score": 0.44293310714855344,
+        "id": "633ff2b4-3f87-4eb9-b6e5-0a321022d295",
+        "created_at": "2026-11-18T06:19:30.196845+00:00",
+        "updated_at": "2026-11-18T06:19:30.196845+00:00",
+        "score_debug": {
+          "combined_score": 0.44293310714855344,
+          "semantic_score": 0.28967664,
+          "bm25_score": 0.5105183229933347,
+          "entity_boost": 0.3071378048780488
+        }
+      },
+      {
+        "memory": "Assistant advised treating workouts as non‑negotiable appointments, scheduling them at a consistent time each day.",
+        "score": 0.43040159783391435,
+        "id": "cef360b7-d53d-45d1-82e1-eba0d9967d86",
+        "created_at": "2026-11-18T05:02:27.756211+00:00",
+        "updated_at": "2026-11-18T05:02:27.756211+00:00",
+        "score_debug": {
+          "combined_score": 0.43040159783391435,
+          "semantic_score": 0.46026456,
+          "bm25_score": 0.6157394345847859,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested time‑blocking the schedule, dividing the day into focused work intervals (e.g., 90‑minute blocks) with regular breaks to improve productivity.",
+        "score": 0.4142322755454456,
+        "id": "3d165332-0ec9-4905-9ec9-25728095239b",
+        "created_at": "2026-11-18T07:16:27.281106+00:00",
+        "updated_at": "2026-11-18T07:16:27.281106+00:00",
+        "score_debug": {
+          "combined_score": 0.4142322755454456,
+          "semantic_score": 0.42907667,
+          "bm25_score": 0.606504018863614,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant illustrated the calculation with an example: 4,500 + 5,200 + 4,800 + 5,500 = 20,000 steps over 4 days, yielding a current daily step count of 5,000 steps.",
+        "score": 0.41384290354544556,
+        "id": "be6e545f-5aaf-4d1b-b87b-c3058817c9b9",
+        "created_at": "2026-11-18T05:28:15.381075+00:00",
+        "updated_at": "2026-11-18T05:28:15.381075+00:00",
+        "score_debug": {
+          "combined_score": 0.41384290354544556,
+          "semantic_score": 0.42810324,
+          "bm25_score": 0.606504018863614,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User does at least one guided breathing session each day using their Fitbit, which helps them relax",
+        "score": 0.4069797228585136,
+        "id": "a53b324b-53c8-45d7-a533-f3c3ba41cd48",
+        "created_at": "2026-11-18T05:27:27.800195+00:00",
+        "updated_at": "2026-11-18T05:27:27.800195+00:00",
+        "score_debug": {
+          "combined_score": 0.4069797228585136,
+          "semantic_score": 0.39241254,
+          "bm25_score": 0.6250367671462841,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is interested in learning more about meal planning strategies for busy days and special occasions, and wants to know how a registered dietitian will help with those situations.",
+        "score": 0.394686603799505,
+        "id": "793a870d-e79a-4560-92b5-2efba8e0d7f4",
+        "created_at": "2026-11-18T06:56:20.853417+00:00",
+        "updated_at": "2026-11-18T06:56:20.853417+00:00",
+        "score_debug": {
+          "combined_score": 0.394686603799505,
+          "semantic_score": 0.38937962,
+          "bm25_score": 0.5973368894987624,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User set a goal to walk 6,000 steps each day for the next week, using it as a realistic starting point to improve daily activity.",
+        "score": 0.3906714693292705,
+        "id": "f694ff42-5155-4fc6-b95d-36fe44d37c65",
+        "created_at": "2026-11-18T05:28:49.485128+00:00",
+        "updated_at": "2026-11-18T05:28:49.485128+00:00",
+        "score_debug": {
+          "combined_score": 0.3906714693292705,
+          "semantic_score": 0.36710346,
+          "bm25_score": 0.6095752133231762,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advised incorporating variety by alternating cardio and strength‑training days to avoid plateaus and overuse injuries.",
+        "score": 0.3873277413292705,
+        "id": "da80e231-4cac-4685-93d6-ba4a873d4150",
+        "created_at": "2026-11-18T05:02:27.785195+00:00",
+        "updated_at": "2026-11-18T05:02:27.785195+00:00",
+        "score_debug": {
+          "combined_score": 0.3873277413292705,
+          "semantic_score": 0.35874414,
+          "bm25_score": 0.6095752133231762,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant listed upcoming Presidents' Day Sale (mid‑February) expected to include laptop discounts.",
+        "score": 0.386032241854019,
+        "id": "a4c6b84b-e04f-4ffe-9963-8b743cd780df",
+        "created_at": "2026-11-18T06:22:07.854010+00:00",
+        "updated_at": "2026-11-18T06:22:07.854010+00:00",
+        "score_debug": {
+          "combined_score": 0.386032241854019,
+          "semantic_score": 0.34624863,
+          "bm25_score": 0.6188319746350475,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended a realistic target of 6,000 steps per day for the next week, based on a current average of 5,000 steps and a suggested weekly increase of 1,000 steps, progressing toward a 10,000‑step goal.",
+        "score": 0.37261564487785187,
+        "id": "150f744a-5041-49d4-9593-635629efc356",
+        "created_at": "2026-11-18T05:28:15.383939+00:00",
+        "updated_at": "2026-11-18T05:28:15.383939+00:00",
+        "score_debug": {
+          "combined_score": 0.37261564487785187,
+          "semantic_score": 0.33724183,
+          "bm25_score": 0.5942972821946296,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant gave a concrete example: for a moderately active user averaging about 4,000 steps daily, a realistic goal would be 6,000 steps per day, representing a 2,000‑step increase.",
+        "score": 0.37117850487785187,
+        "id": "c0b405f0-f748-48b1-8cdc-fae75091272f",
+        "created_at": "2026-11-18T05:02:59.526559+00:00",
+        "updated_at": "2026-11-18T05:02:59.526559+00:00",
+        "score_debug": {
+          "combined_score": 0.37117850487785187,
+          "semantic_score": 0.33364898,
+          "bm25_score": 0.5942972821946296,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant noted Best Buy's \"Deals of the Day\" section features limited-time laptop offers.",
+        "score": 0.37000145012613056,
+        "id": "4315f460-5a9d-4ea8-8d71-95c7fe5873b1",
+        "created_at": "2026-11-18T06:22:07.837549+00:00",
+        "updated_at": "2026-11-18T06:22:07.837549+00:00",
+        "score_debug": {
+          "combined_score": 0.37000145012613056,
+          "semantic_score": 0.31234986,
+          "bm25_score": 0.6126537653153264,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested practical tracking methods: keep a stretching log with date, time, and stretch types; take progress photos; set specific flexibility goals (e.g., touch toes by a target date); schedule stretching at the same time each day after breathing sessions; aim for 3‑4 times weekly or daily; and set reminders on phone, calendar, or Fitbit.",
+        "score": 0.3693340123634727,
+        "id": "9c8136eb-9e57-4b59-9712-4547130e09b9",
+        "created_at": "2026-11-18T05:30:39.065072+00:00",
+        "updated_at": "2026-11-18T05:30:39.065072+00:00",
+        "score_debug": {
+          "combined_score": 0.3693340123634727,
+          "semantic_score": 0.3878131,
+          "bm25_score": 0.5355219309086817,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended cooking a large batch of scrambled eggs, portioning them into containers, and refrigerating or freezing for up to five days.",
+        "score": 0.3674021169277145,
+        "id": "e47b4ed2-1487-4f63-ace0-0f23353bd128",
+        "created_at": "2026-11-18T07:07:16.612972+00:00",
+        "updated_at": "2026-11-18T07:07:16.612972+00:00",
+        "score_debug": {
+          "combined_score": 0.3674021169277145,
+          "semantic_score": 0.31812066,
+          "bm25_score": 0.6003846323192862,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "The registered dietitian creates a personalized meal plan that includes daily meal suggestions with portion sizes, macronutrient breakdowns, grocery lists of whole foods and snacks, recipes, and strategies for busy days or special occasions.",
+        "score": 0.36282462544881405,
+        "id": "408c5e2f-9d04-45c0-8818-b562fc4ec1c5",
+        "created_at": "2026-11-18T06:55:30.608935+00:00",
+        "updated_at": "2026-11-18T06:55:30.608935+00:00",
+        "score_debug": {
+          "combined_score": 0.36282462544881405,
+          "semantic_score": 0.33081692,
+          "bm25_score": 0.5762446436220351,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended step‑increase guidelines: add 1,000–2,000 steps per day if currently sedentary (<3,000 steps), 2,000–3,000 steps if moderately active (3,000–6,000 steps), or 3,000–5,000 steps if very active (>6,000 steps).",
+        "score": 0.36088028492771446,
+        "id": "6cf32585-6202-4432-bf05-df9383c0cff9",
+        "created_at": "2026-11-18T05:02:59.523030+00:00",
+        "updated_at": "2026-11-18T05:02:59.523030+00:00",
+        "score_debug": {
+          "combined_score": 0.36088028492771446,
+          "semantic_score": 0.30181608,
+          "bm25_score": 0.6003846323192862,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested additional tactics to raise step count: start with a modest increase (e.g., 1,000 steps), break the daily goal into smaller chunks throughout the day, and look for movement opportunities such as taking stairs, walking to a coworker’s desk, or pacing during TV breaks.",
+        "score": 0.3592017977521098,
+        "id": "892b509c-857a-4788-b325-77142842d51e",
+        "created_at": "2026-11-18T05:02:59.533281+00:00",
+        "updated_at": "2026-11-18T05:02:59.533281+00:00",
+        "score_debug": {
+          "combined_score": 0.3592017977521098,
+          "semantic_score": 0.34238315,
+          "bm25_score": 0.5556213443802744,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested preparing a large batch of cooked sausage, crumbling it, and storing it refrigerated or frozen for up to five days.",
+        "score": 0.3551415743774255,
+        "id": "7fe90591-2c02-4c7a-ab09-55666cfff580",
+        "created_at": "2026-11-18T07:07:16.615445+00:00",
+        "updated_at": "2026-11-18T07:07:16.615445+00:00",
+        "score_debug": {
+          "combined_score": 0.3551415743774255,
+          "semantic_score": 0.28441352,
+          "bm25_score": 0.6034404159435638,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended Cinnamon Roll Oatmeal as a make‑ahead breakfast option that can be prepared in advance and stored for several days.",
+        "score": 0.34672698983391437,
+        "id": "0d14bcd2-c715-4b84-9596-a59da1567db2",
+        "created_at": "2026-11-18T07:04:51.660187+00:00",
+        "updated_at": "2026-11-18T07:04:51.660187+00:00",
+        "score_debug": {
+          "combined_score": 0.34672698983391437,
+          "semantic_score": 0.25107804,
+          "bm25_score": 0.6157394345847859,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advised roasting a large batch of vegetables—such as bell peppers, onions, and mushrooms—chopping them, and keeping them refrigerated or frozen for up to five days.",
+        "score": 0.3417111848778519,
+        "id": "e9c5d464-8b5a-47c1-89e3-7735cc56d200",
+        "created_at": "2026-11-18T07:07:16.618018+00:00",
+        "updated_at": "2026-11-18T07:07:16.618018+00:00",
+        "score_debug": {
+          "combined_score": 0.3417111848778519,
+          "semantic_score": 0.25998068,
+          "bm25_score": 0.5942972821946296,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended Veggie and Cheese Scramble as a make‑ahead breakfast that can be prepared in advance and refrigerated or frozen for up to three days.",
+        "score": 0.33741840183391436,
+        "id": "15594a0f-9594-4ed5-a354-9ddd01c203f3",
+        "created_at": "2026-11-18T07:04:51.662637+00:00",
+        "updated_at": "2026-11-18T07:04:51.662637+00:00",
+        "score_debug": {
+          "combined_score": 0.33741840183391436,
+          "semantic_score": 0.22780657,
+          "bm25_score": 0.6157394345847859,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has been feeling down since late August 2026, after realizing they had not planned any further summer vacations or beach trips, experiencing what is commonly called the 'end of summer blues'.",
+        "score": 0.33275291601593626,
+        "id": "922d53b1-7798-490d-b334-280cf0055241",
+        "created_at": "2026-11-18T05:33:11.635489+00:00",
+        "updated_at": "2026-11-18T05:33:11.635489+00:00",
+        "score_debug": {
+          "combined_score": 0.33275291601593626,
+          "semantic_score": 0.4065673,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42531499003984063
+        }
+      },
+      {
+        "memory": "Assistant suggested ten make‑ahead breakfast options: overnight oats, muffin‑tin frittatas, breakfast burritos, chia seed pudding, cottage‑cheese parfait, smoothie packs, avocado toast, yogurt parfait, breakfast quesadillas, and green‑smoothie jars, each storable for several days.",
+        "score": 0.32291590144881405,
+        "id": "dc89bb68-eb19-466e-8c9e-41ee94d86767",
+        "created_at": "2026-11-18T06:16:15.753514+00:00",
+        "updated_at": "2026-11-18T06:16:15.753514+00:00",
+        "score_debug": {
+          "combined_score": 0.32291590144881405,
+          "semantic_score": 0.23104511,
+          "bm25_score": 0.5762446436220351,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has started waking up 15 minutes earlier on Tuesdays and Thursdays to meditate and practice yoga.",
+        "score": 0.3195435525754246,
+        "id": "3521005a-aa80-462a-a391-12154a91959f",
+        "created_at": "2026-11-18T06:16:15.741911+00:00",
+        "updated_at": "2026-11-18T06:16:15.741911+00:00",
+        "score_debug": {
+          "combined_score": 0.3195435525754246,
+          "semantic_score": 0.44844532,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3504135614385615
+        }
+      },
+      {
+        "memory": "Assistant scheduled a virtual meditation check‑in for the week of November 21, 2026 (next week), at the same time and place as previous sessions, and committed to act as the user’s accountability partner and guide",
+        "score": 0.31854348086708295,
+        "id": "fd2b8c26-8b32-4b52-b491-5b3070e7f9e6",
+        "created_at": "2026-11-18T05:37:48.974419+00:00",
+        "updated_at": "2026-11-18T05:37:48.974419+00:00",
+        "score_debug": {
+          "combined_score": 0.31854348086708295,
+          "semantic_score": 0.42419153,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "User celebrated a big birthday in October 2026 and feels more motivated than ever to prioritize health.",
+        "score": 0.3163569867716535,
+        "id": "115750b7-8328-4498-af46-5d0e5cbf5afe",
+        "created_at": "2026-11-18T06:19:04.740218+00:00",
+        "updated_at": "2026-11-18T06:19:04.740218+00:00",
+        "score_debug": {
+          "combined_score": 0.3163569867716535,
+          "semantic_score": 0.3891154,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40177706692913384
+        }
+      },
+      {
+        "memory": "Assistant listed upcoming Back‑to‑School Season (July to August) with expected laptop discounts.",
+        "score": 0.3115459320159363,
+        "id": "091a42fd-4790-403f-8c4f-97dd2ca34231",
+        "created_at": "2026-11-18T06:22:07.858137+00:00",
+        "updated_at": "2026-11-18T06:22:07.858137+00:00",
+        "score_debug": {
+          "combined_score": 0.3115459320159363,
+          "semantic_score": 0.35354984,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42531499003984063
+        }
+      },
+      {
+        "memory": "In September 2026, User started a routine of morning walks, enjoying the crisp air and the crunch of fallen leaves, which noticeably lifted their mood and provided a sense of seasonal mindfulness.",
+        "score": 0.31070304000000004,
+        "id": "fa69a274-75ac-4b57-aa8e-9669bd92b8aa",
+        "created_at": "2026-11-18T05:33:11.638843+00:00",
+        "updated_at": "2026-11-18T05:33:11.638843+00:00",
+        "score_debug": {
+          "combined_score": 0.31070304000000004,
+          "semantic_score": 0.34944582,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42731178
+        }
+      },
+      {
+        "memory": "User will check the G Adventures website and contact their customer support to find out more about the Moroccan desert trek scheduled for October.",
+        "score": 0.3093032267716535,
+        "id": "c25c95da-40f5-41cb-850f-6d4d26e0af88",
+        "created_at": "2026-11-18T05:20:24.020061+00:00",
+        "updated_at": "2026-11-18T05:20:24.020061+00:00",
+        "score_debug": {
+          "combined_score": 0.3093032267716535,
+          "semantic_score": 0.371481,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40177706692913384
+        }
+      },
+      {
+        "memory": "Assistant recommends Asheville Winterfest (late January to early February), featuring ice skating, live music, and craft beer at the U.S. Cellular Center.",
+        "score": 0.30351128163036967,
+        "id": "8594d8e5-ee06-4e3b-a518-69c94b1b89f3",
+        "created_at": "2026-11-18T05:32:01.588426+00:00",
+        "updated_at": "2026-11-18T05:32:01.588426+00:00",
+        "score_debug": {
+          "combined_score": 0.30351128163036967,
+          "semantic_score": 0.34332728,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41545092407592416
+        }
+      },
+      {
+        "memory": "Assistant noted that Turkey observes daylight‑saving time, moving clocks forward one hour in March and back one hour in October.",
+        "score": 0.30091697139370827,
+        "id": "3532eef0-64eb-41e0-828d-ed1fcde6b742",
+        "created_at": "2026-11-18T06:12:46.785128+00:00",
+        "updated_at": "2026-11-18T06:12:46.785128+00:00",
+        "score_debug": {
+          "combined_score": 0.30091697139370827,
+          "semantic_score": 0.32780352,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42448890848427073
+        }
+      },
+      {
+        "memory": "Assistant provided example award seat availability for a weekend trip to Las Vegas: New York (LGA) – March 17 Main Cabin 12,500 miles + $5.60 taxes; March 18 Comfort+ 20,000 miles + $5.60 taxes. Los Angeles (LAX) – March 17 Main Cabin 10,000 miles + $5.60 taxes; March 19 Comfort+ 15,000 miles + $5.60 taxes. Chicago (ORD) – March 18 Main Cabin 12,500 miles + $5.60 taxes; March 19 Comfort+ 20,000 miles + $5.60 taxes.",
+        "score": 0.2968080833937083,
+        "id": "c6fd8eb2-0eda-4b54-8312-9bf7c75d1685",
+        "created_at": "2026-11-18T05:43:11.235221+00:00",
+        "updated_at": "2026-11-18T05:43:11.235221+00:00",
+        "score_debug": {
+          "combined_score": 0.2968080833937083,
+          "semantic_score": 0.3175313,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42448890848427073
+        }
+      },
+      {
+        "memory": "Assistant suggested tracking meditation progress using Headspace’s built‑in tracking features or a physical journal to record thoughts, feelings, and insights after each session.",
+        "score": 0.29651047329236874,
+        "id": "3ed48ada-2e78-4477-b09b-b2cf6e55f6fc",
+        "created_at": "2026-11-18T05:37:01.653416+00:00",
+        "updated_at": "2026-11-18T05:37:01.653416+00:00",
+        "score_debug": {
+          "combined_score": 0.29651047329236874,
+          "semantic_score": 0.45029432,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29098186323092173
+        }
+      },
+      {
+        "memory": "Assistant recommends the Biltmore Winter Festival of Flowers (late January to early March), where visitors can stroll the decorated gardens of the Biltmore Estate.",
+        "score": 0.29549479939370826,
+        "id": "c2ae3652-c451-4dbf-8d7d-dd870ad36f73",
+        "created_at": "2026-11-18T05:32:01.594650+00:00",
+        "updated_at": "2026-11-18T05:32:01.594650+00:00",
+        "score_debug": {
+          "combined_score": 0.29549479939370826,
+          "semantic_score": 0.31424809,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42448890848427073
+        }
+      },
+      {
+        "memory": "User expressed strong interest in joining the Winter Hiking Series to increase hiking and outdoor activities as the seasons change.",
+        "score": 0.294698548,
+        "id": "f6b68171-b5d9-4d6c-acde-4c6fbf8fa780",
+        "created_at": "2026-11-18T05:32:39.606367+00:00",
+        "updated_at": "2026-11-18T05:32:39.606367+00:00",
+        "score_debug": {
+          "combined_score": 0.294698548,
+          "semantic_score": 0.37942904,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35731733
+        }
+      },
+      {
+        "memory": "Assistant recommended checking G Adventures' website, contacting their customer support, or consulting a travel agent to find October departure dates for the Moroccan Desert Trek, and advised reviewing availability, itinerary, pricing, and booking early",
+        "score": 0.2944745587716535,
+        "id": "5f415775-d163-4294-bfea-57e21d5e9239",
+        "created_at": "2026-11-18T05:19:38.547601+00:00",
+        "updated_at": "2026-11-18T05:19:38.547601+00:00",
+        "score_debug": {
+          "combined_score": 0.2944745587716535,
+          "semantic_score": 0.33440933,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40177706692913384
+        }
+      },
+      {
+        "memory": "Assistant suggested the user search for local Meetup groups in Queens focused on Middle Eastern culture, language, or cuisine as a way to meet like‑minded individuals and build community.",
+        "score": 0.29410274427799227,
+        "id": "887fd3b4-d14f-4120-b111-3afd8ecb3748",
+        "created_at": "2026-11-18T06:14:59.200843+00:00",
+        "updated_at": "2026-11-18T06:14:59.200843+00:00",
+        "score_debug": {
+          "combined_score": 0.29410274427799227,
+          "semantic_score": 0.43028688,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30496998069498066
+        }
+      },
+      {
+        "memory": "Success tips for the specialization include staying actively engaged in discussions, managing time effectively, collaborating closely with group members, and seeking constructive feedback from instructors and peers.",
+        "score": 0.292759816,
+        "id": "87fe7c0f-17ee-4939-869e-303d3f634ec3",
+        "created_at": "2026-11-18T06:41:57.010368+00:00",
+        "updated_at": "2026-11-18T06:41:57.010368+00:00",
+        "score_debug": {
+          "combined_score": 0.292759816,
+          "semantic_score": 0.43517524,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2967243
+        }
+      },
+      {
+        "memory": "Assistant suggested that the user join online communities such as Reddit subreddits, Facebook Groups, Discord servers, and Meetup.com, where they can engage with people who share similar interests from the comfort of home.",
+        "score": 0.28948501000000004,
+        "id": "1631191f-fa71-4120-80b7-8770029ed388",
+        "created_at": "2026-11-18T05:48:06.453133+00:00",
+        "updated_at": "2026-11-18T05:48:06.453133+00:00",
+        "score_debug": {
+          "combined_score": 0.28948501000000004,
+          "semantic_score": 0.4330525,
+          "bm25_score": 0.0,
+          "entity_boost": 0.290660025
+        }
+      },
+      {
+        "memory": "User asks for recommendations of winter festivals or events in Asheville to include in the planned winter trip.",
+        "score": 0.289046454,
+        "id": "8eb219c0-013e-43ff-8799-17c351be4d6a",
+        "created_at": "2026-11-18T05:32:01.585741+00:00",
+        "updated_at": "2026-11-18T05:32:01.585741+00:00",
+        "score_debug": {
+          "combined_score": 0.289046454,
+          "semantic_score": 0.40164226,
+          "bm25_score": 0.0,
+          "entity_boost": 0.320973875
+        }
+      },
+      {
+        "memory": "Assistant recommends the Asheville Ice Rink (late November to late January), an outdoor ice‑skating venue in downtown Asheville.",
+        "score": 0.28668331985728446,
+        "id": "f70e27e7-b2a9-4a75-83ba-ca6e7e081a30",
+        "created_at": "2026-11-18T05:32:01.610599+00:00",
+        "updated_at": "2026-11-18T05:32:01.610599+00:00",
+        "score_debug": {
+          "combined_score": 0.28668331985728446,
+          "semantic_score": 0.30546826,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41124003964321115
+        }
+      },
+      {
+        "memory": "Assistant suggested that participating in the Winter Hiking Series in Asheville will provide regular exercise, social interaction, and nature exposure, which may alleviate seasonal mood changes and improve overall wellbeing.",
+        "score": 0.28661772,
+        "id": "ac8712bb-2865-4582-9d8d-d57ccc4948ee",
+        "created_at": "2026-11-18T05:32:39.623265+00:00",
+        "updated_at": "2026-11-18T05:32:39.623265+00:00",
+        "score_debug": {
+          "combined_score": 0.28661772,
+          "semantic_score": 0.40453705,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31200725
+        }
+      },
+      {
+        "memory": "Assistant agreed to act as an accountability partner and offered to schedule a virtual check‑in, though no specific date was set.",
+        "score": 0.2858706,
+        "id": "8cdb28d2-2521-4679-9197-04ffe449f86c",
+        "created_at": "2026-11-18T05:38:46.562509+00:00",
+        "updated_at": "2026-11-18T05:38:46.562509+00:00",
+        "score_debug": {
+          "combined_score": 0.2858706,
+          "semantic_score": 0.38989723,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32477927
+        }
+      },
+      {
+        "memory": "In January 2023, Adman partnered with beauty creator Arang (350 k YouTube subscribers) for a live ‘Labang’ broadcast, launching the ‘Arang X Adman Encore 2nd Market’ package; the event attracted 20 k viewers, ran 29 hours, and generated sales exceeding 150 million won within three weeks of establishing a D2C shopping mall.",
+        "score": 0.2848196958572845,
+        "id": "2954992d-5317-49a3-8460-c5978f476a38",
+        "created_at": "2026-11-18T05:46:28.555591+00:00",
+        "updated_at": "2026-11-18T05:46:28.555591+00:00",
+        "score_debug": {
+          "combined_score": 0.2848196958572845,
+          "semantic_score": 0.3008092,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41124003964321115
+        }
+      },
+      {
+        "memory": "User purchased a Fitbit scale on February 1 (year unspecified) from Amazon and wants to connect it to a fitness app",
+        "score": 0.2846603496303697,
+        "id": "a45151ab-e8e9-40ce-bfd3-e2a6f1174e2b",
+        "created_at": "2026-11-18T06:52:13.087864+00:00",
+        "updated_at": "2026-11-18T06:52:13.087864+00:00",
+        "score_debug": {
+          "combined_score": 0.2846603496303697,
+          "semantic_score": 0.29619995,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41545092407592416
+        }
+      },
+      {
+        "memory": "Assistant recommended that User reach out to local Syrian or Middle Eastern community centers, mosques, or cultural organizations in their area to meet people who share their background.",
+        "score": 0.28446772330469533,
+        "id": "e217882e-d2d6-4d71-9b0a-d23120c7613d",
+        "created_at": "2026-11-18T06:14:26.250713+00:00",
+        "updated_at": "2026-11-18T06:14:26.250713+00:00",
+        "score_debug": {
+          "combined_score": 0.28446772330469533,
+          "semantic_score": 0.41747257,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2936967382617383
+        }
+      },
+      {
+        "memory": "Assistant noted that the 'end of summer blues' is a real phenomenon, describing it as a seasonal mood dip that can occur when summer ends and daylight hours decrease.",
+        "score": 0.2840990985814186,
+        "id": "35fa3d1d-ecf1-419b-8940-99f44ff0bd4b",
+        "created_at": "2026-11-18T05:33:11.641653+00:00",
+        "updated_at": "2026-11-18T05:33:11.641653+00:00",
+        "score_debug": {
+          "combined_score": 0.2840990985814186,
+          "semantic_score": 0.3447442,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3655035464535465
+        }
+      },
+      {
+        "memory": "The Coursera Sustainable Development specialization comprises four sequential 4‑week courses: Sustainable Development and the Global Goals; The Sustainable Development Challenge; Sustainable Cities and Communities; and Leading the Way: Sustainability and Leadership, each building on the previous.",
+        "score": 0.283449356,
+        "id": "6a898d76-9082-416a-8740-62fa905e9298",
+        "created_at": "2026-11-18T06:39:03.716059+00:00",
+        "updated_at": "2026-11-18T06:39:03.716059+00:00",
+        "score_debug": {
+          "combined_score": 0.283449356,
+          "semantic_score": 0.39993954,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30868385
+        }
+      },
+      {
+        "memory": "User tried the Headspace meditation app, enjoyed it, and intends to commit to meditating three times per week.",
+        "score": 0.2834111052923687,
+        "id": "24876197-d340-4f30-8b56-153263157bf5",
+        "created_at": "2026-11-18T05:38:46.557881+00:00",
+        "updated_at": "2026-11-18T05:38:46.557881+00:00",
+        "score_debug": {
+          "combined_score": 0.2834111052923687,
+          "semantic_score": 0.4175459,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29098186323092173
+        }
+      },
+      {
+        "memory": "User prepared a large batch of quinoa salad with roasted vegetables around November 11, 2026, which remained fresh until Wednesday, November 13, 2026.",
+        "score": 0.28311062886708294,
+        "id": "499952ae-0804-4a2b-aca3-ad576759f96c",
+        "created_at": "2026-11-18T07:07:16.608300+00:00",
+        "updated_at": "2026-11-18T07:07:16.608300+00:00",
+        "score_debug": {
+          "combined_score": 0.28311062886708294,
+          "semantic_score": 0.3356094,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "Assistant advised additional activities: a Studio Tour, exploring immersive lands like Springfield: Home of the Simpsons and Jurassic Park, character meet‑and‑greets, and using the Universal Studios Hollywood app to check wait times and reserve virtual lines.",
+        "score": 0.281717612,
+        "id": "038287fd-cb09-4d9c-ab88-956d29aa404d",
+        "created_at": "2026-11-18T07:02:41.550012+00:00",
+        "updated_at": "2026-11-18T07:02:41.550012+00:00",
+        "score_debug": {
+          "combined_score": 0.281717612,
+          "semantic_score": 0.39428943,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3100046
+        }
+      },
+      {
+        "memory": "Assistant advised the user to relax, have fun, not stress about details, be prepared for any last‑minute surprises, and enjoy the company of friends during the celebration dinner for Rachel's new job",
+        "score": 0.2815580019512195,
+        "id": "c8d21a02-3c47-480e-8be2-ae7c5872fd1d",
+        "created_at": "2026-11-18T06:59:19.313716+00:00",
+        "updated_at": "2026-11-18T06:59:19.313716+00:00",
+        "score_debug": {
+          "combined_score": 0.2815580019512195,
+          "semantic_score": 0.3855484,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3183466048780488
+        }
+      },
+      {
+        "memory": "Assistant recommends the Asheville Holiday Parade in early December, featuring festive floats, marching bands, and a Santa Claus appearance downtown.",
+        "score": 0.2811852648087215,
+        "id": "07244399-878b-43e6-93bc-ce67ff706a22",
+        "created_at": "2026-11-18T05:32:01.603095+00:00",
+        "updated_at": "2026-11-18T05:32:01.603095+00:00",
+        "score_debug": {
+          "combined_score": 0.2811852648087215,
+          "semantic_score": 0.28739172,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4155714420218038
+        }
+      },
+      {
+        "memory": "Assistant recommended several mindfulness and meditation resources, including books such as \"The Mind Illuminated\" by Culadasa, meditation apps, and online courses.",
+        "score": 0.2792885475378486,
+        "id": "405e5a1c-e3c1-4023-a53f-3d4b3542b20c",
+        "created_at": "2026-11-18T05:38:46.555744+00:00",
+        "updated_at": "2026-11-18T05:38:46.555744+00:00",
+        "score_debug": {
+          "combined_score": 0.2792885475378486,
+          "semantic_score": 0.37651858,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3217027888446215
+        }
+      },
+      {
+        "memory": "Assistant recommends structuring workouts with periodization (4‑6‑week cycles), applying progressive overload, rotating exercise variety every 4‑6 weeks, and using heart‑rate data to determine when additional rest or recovery is needed.",
+        "score": 0.27886449999999996,
+        "id": "1e78027f-e59a-4d2f-a58c-2de7a8e0e4cf",
+        "created_at": "2026-11-18T05:05:53.344773+00:00",
+        "updated_at": "2026-11-18T05:05:53.344773+00:00",
+        "score_debug": {
+          "combined_score": 0.27886449999999996,
+          "semantic_score": 0.37959215,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3175691
+        }
+      },
+      {
+        "memory": "Assistant provided example Filters for a consulting firm: \"Today\" (tasks due today), \"This Week\" (tasks due this week), \"Priority\" (high‑priority tasks), \"Client A\" (tasks for Client A), \"Research\" (tasks labeled \"Research\"), and \"Overdue\" (overdue tasks).",
+        "score": 0.2785276835684316,
+        "id": "3a95be79-9217-4641-a693-9379c3158b47",
+        "created_at": "2026-11-18T07:19:26.354820+00:00",
+        "updated_at": "2026-11-18T07:19:26.354820+00:00",
+        "score_debug": {
+          "combined_score": 0.2785276835684316,
+          "semantic_score": 0.35742813,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33889107892107895
+        }
+      },
+      {
+        "memory": "User made a large batch of quinoa salad with roasted vegetables last week, which kept well until Wednesday.",
+        "score": 0.2773702155284715,
+        "id": "92cba8a9-182c-423b-824d-44b9b61edc84",
+        "created_at": "2026-11-18T07:04:51.657985+00:00",
+        "updated_at": "2026-11-18T07:04:51.657985+00:00",
+        "score_debug": {
+          "combined_score": 0.2773702155284715,
+          "semantic_score": 0.35530436,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33812117882117887
+        }
+      },
+      {
+        "memory": "User plans to try butterbeer and pumpkin fizz in the Wizarding World today (November 18, 2026) and looks forward to immersing in the park’s detailed theming.",
+        "score": 0.27653821686708296,
+        "id": "957fa93f-8778-46f5-888f-5efe29a6c3be",
+        "created_at": "2026-11-18T07:02:41.531832+00:00",
+        "updated_at": "2026-11-18T07:02:41.531832+00:00",
+        "score_debug": {
+          "combined_score": 0.27653821686708296,
+          "semantic_score": 0.31917837,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "User is planning a trip to Tokyo and is seeking assistance with travel arrangements.",
+        "score": 0.27646447019226955,
+        "id": "7d1b74d9-b730-4b53-a0b3-0b8479e7bd0c",
+        "created_at": "2026-11-18T05:19:22.709966+00:00",
+        "updated_at": "2026-11-18T05:19:22.709966+00:00",
+        "score_debug": {
+          "combined_score": 0.27646447019226955,
+          "semantic_score": 0.40406734,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28709383548067396
+        }
+      },
+      {
+        "memory": "Assistant mentioned seasonal events at Universal Studios Hollywood: Halloween Horror Nights (September‑November), Grinchmas (December), and Mardi Gras (February‑April).",
+        "score": 0.27591900480872156,
+        "id": "13556b21-db2c-46d0-b93a-8e27260a135c",
+        "created_at": "2026-11-18T07:02:41.544938+00:00",
+        "updated_at": "2026-11-18T07:02:41.544938+00:00",
+        "score_debug": {
+          "combined_score": 0.27591900480872156,
+          "semantic_score": 0.27422607,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4155714420218038
+        }
+      },
+      {
+        "memory": "Assistant listed the memoir \"Intimacies\" by Brandon Taylor, expected in August 2021, exploring identity, sexuality, and relationships.",
+        "score": 0.27581673601593626,
+        "id": "c8203f9c-556d-47d1-b4fc-fe26f863f5de",
+        "created_at": "2026-11-18T06:30:55.899470+00:00",
+        "updated_at": "2026-11-18T06:30:55.899470+00:00",
+        "score_debug": {
+          "combined_score": 0.27581673601593626,
+          "semantic_score": 0.26422685,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42531499003984063
+        }
+      },
+      {
+        "memory": "Assistant recommends the LaZoom Comedy Tour, a year‑round comedic sightseeing tour of Asheville that is especially fun during the winter season.",
+        "score": 0.2738996273815659,
+        "id": "adcc7092-d3f0-4cf2-951f-dca95a66411d",
+        "created_at": "2026-11-18T05:32:01.605461+00:00",
+        "updated_at": "2026-11-18T05:32:01.605461+00:00",
+        "score_debug": {
+          "combined_score": 0.2738996273815659,
+          "semantic_score": 0.34684223,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3379068384539148
+        }
+      },
+      {
+        "memory": "Assistant advised the user to track their daily steps with a Fitbit for a week to obtain an average baseline before setting a target.",
+        "score": 0.2738131129083666,
+        "id": "441338e6-be8c-47f2-af3e-4179ad3c5dec",
+        "created_at": "2026-11-18T05:31:14.233465+00:00",
+        "updated_at": "2026-11-18T05:31:14.233465+00:00",
+        "score_debug": {
+          "combined_score": 0.2738131129083666,
+          "semantic_score": 0.39107835,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29345443227091633
+        }
+      },
+      {
+        "memory": "With the Chase Sapphire Preferred card, users earn 2X points on travel and dining purchases, 5X points on Lyft rides through March 2025, and 1X point on all other purchases.",
+        "score": 0.2732861233937083,
+        "id": "1c1da521-48ec-45b2-b5be-e0e53919e09e",
+        "created_at": "2026-11-18T05:45:46.400848+00:00",
+        "updated_at": "2026-11-18T05:45:46.400848+00:00",
+        "score_debug": {
+          "combined_score": 0.2732861233937083,
+          "semantic_score": 0.2587264,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42448890848427073
+        }
+      },
+      {
+        "memory": "User is excited to take the Studio Tour at Universal Studios Hollywood and plans to take it multiple times, exploring different parts of the studio on each visit using the annual pass.",
+        "score": 0.2721991227888446,
+        "id": "c88ec2e9-7a42-4dbb-bdca-e5d233fb4def",
+        "created_at": "2026-11-18T07:03:45.386296+00:00",
+        "updated_at": "2026-11-18T07:03:45.386296+00:00",
+        "score_debug": {
+          "combined_score": 0.2721991227888446,
+          "semantic_score": 0.3747033,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3057945069721115
+        }
+      },
+      {
+        "memory": "Assistant recommends Winter Lights at the North Carolina Arboretum (late November to late December), a display of illuminated gardens for evening strolls.",
+        "score": 0.27195616480872153,
+        "id": "c29f5e5e-4139-4423-bb78-a0eff3a3ebdb",
+        "created_at": "2026-11-18T05:32:01.600319+00:00",
+        "updated_at": "2026-11-18T05:32:01.600319+00:00",
+        "score_debug": {
+          "combined_score": 0.27195616480872153,
+          "semantic_score": 0.26431897,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4155714420218038
+        }
+      },
+      {
+        "memory": "Assistant provided example conversation starters: \"What brings you to this event?\", \"How did you get into [shared interest]?\", \"What do you think about [current event or popular topic]?\", \"Have you tried [related activity or recommendation]?\", and \"What's been the highlight of your week?\"",
+        "score": 0.27064378,
+        "id": "c3eb447a-15ea-48ac-b087-8beee8aac29e",
+        "created_at": "2026-11-18T05:48:37.236104+00:00",
+        "updated_at": "2026-11-18T05:48:37.236104+00:00",
+        "score_debug": {
+          "combined_score": 0.27064378,
+          "semantic_score": 0.3835745,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29303495
+        }
+      },
+      {
+        "memory": "Assistant recommended The Arab American Association of New York (AAANY) as a starting point for Syrian or Middle Eastern community connections in Queens.",
+        "score": 0.27028890443027886,
+        "id": "a1e610e1-e04a-4a0c-96f5-e9eeab7a4197",
+        "created_at": "2026-11-18T06:15:40.200417+00:00",
+        "updated_at": "2026-11-18T06:15:40.200417+00:00",
+        "score_debug": {
+          "combined_score": 0.27028890443027886,
+          "semantic_score": 0.33556378,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3401584810756972
+        }
+      },
+      {
+        "memory": "Assistant recommended Any.do, a task management app that lets users create to‑do lists, set reminders, and collaborate with others.",
+        "score": 0.26968672800000004,
+        "id": "26d5f896-3ef3-4850-8cbe-03e168105815",
+        "created_at": "2026-11-18T05:35:02.731537+00:00",
+        "updated_at": "2026-11-18T05:35:02.731537+00:00",
+        "score_debug": {
+          "combined_score": 0.26968672800000004,
+          "semantic_score": 0.35970217,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31451465
+        }
+      },
+      {
+        "memory": "User has been incorporating more restorative yoga into their routine, especially after a long work week, to aid relaxation.",
+        "score": 0.26769841325874133,
+        "id": "9220dd35-4572-49ae-b41e-36031f11b462",
+        "created_at": "2026-11-18T05:40:58.820158+00:00",
+        "updated_at": "2026-11-18T05:40:58.820158+00:00",
+        "score_debug": {
+          "combined_score": 0.26769841325874133,
+          "semantic_score": 0.37413418,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29511185314685323
+        }
+      },
+      {
+        "memory": "Assistant listed sample Delta award seat options from LAX to LAS for March 17 2026: Main Cabin DL2154 (8:30‑9:35 AM, 10,000 miles + $5.60) and DL2174 (12:30‑1:35 PM, 10,000 miles + $5.60); Comfort+ DL2154 (8:30‑9:35 AM, 15,000 miles + $5.60) and DL2178 (3:30‑4:35 PM, 15,000 miles + $5.60). For March 18 2026: Main Cabin DL2162 (9:30‑10:35 AM, 10,000 miles + $5.60) and DL2192 (2:30‑3:35 PM, 10,000 miles + $5.60); Comfort+ DL2162 (9:30‑10:35 AM, 15,000 miles + $5.60) and DL2194 (5:30‑6:35 PM, 15,000 miles + $5.60).",
+        "score": 0.2675267233937083,
+        "id": "9cbc0e26-cfd7-4a8e-b52d-cdeff4240fe0",
+        "created_at": "2026-11-18T05:44:02.735822+00:00",
+        "updated_at": "2026-11-18T05:44:02.735822+00:00",
+        "score_debug": {
+          "combined_score": 0.2675267233937083,
+          "semantic_score": 0.2443279,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42448890848427073
+        }
+      },
+      {
+        "memory": "User wants help finding Syrian or Middle Eastern community resources or organizations in Queens, NY.",
+        "score": 0.2671005322779923,
+        "id": "c06990a5-2d82-4fb8-9c26-7f7828389e49",
+        "created_at": "2026-11-18T06:15:40.190131+00:00",
+        "updated_at": "2026-11-18T06:15:40.190131+00:00",
+        "score_debug": {
+          "combined_score": 0.2671005322779923,
+          "semantic_score": 0.36278135,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30496998069498066
+        }
+      },
+      {
+        "memory": "User was surprised to learn how extensively Bell Labs' innovations have shaped daily life and asked for additional cool inventions.",
+        "score": 0.2668112985334666,
+        "id": "b4604346-7b42-4848-90a4-1178fcc44e6e",
+        "created_at": "2026-11-18T06:03:40.972468+00:00",
+        "updated_at": "2026-11-18T06:03:40.972468+00:00",
+        "score_debug": {
+          "combined_score": 0.2668112985334666,
+          "semantic_score": 0.37699458,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2900336663336664
+        }
+      },
+      {
+        "memory": "Assistant recommended the keyword 'Cafe24 youtube shopping live' in the Informational cluster with search volume 10, difficulty 30, title 'What is YouTube Shopping and How it Boosts Sales?', and a meta description highlighting Admang and Arang's collaboration and Cafe24's positive experience.",
+        "score": 0.26653598702439024,
+        "id": "50a7d1c0-b102-438f-bd77-5f7866e5d5e3",
+        "created_at": "2026-11-18T05:47:10.241495+00:00",
+        "updated_at": "2026-11-18T05:47:10.241495+00:00",
+        "score_debug": {
+          "combined_score": 0.26653598702439024,
+          "semantic_score": 0.34375787,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3225820975609756
+        }
+      },
+      {
+        "memory": "Assistant recommended Forest, a gamified productivity app that encourages focus by growing a virtual forest as the user works.",
+        "score": 0.26433630199999997,
+        "id": "68bcb2c0-514d-4936-b08e-420a215a2a89",
+        "created_at": "2026-11-18T05:35:02.745119+00:00",
+        "updated_at": "2026-11-18T05:35:02.745119+00:00",
+        "score_debug": {
+          "combined_score": 0.26433630199999997,
+          "semantic_score": 0.35674623,
+          "bm25_score": 0.0,
+          "entity_boost": 0.304094525
+        }
+      },
+      {
+        "memory": "Assistant advised checking rental shop policies and prices, reserving gear in advance during peak season, inspecting the condition of rentals, and getting a proper fitting to ensure comfort and safety on the hike.",
+        "score": 0.26389814,
+        "id": "3e257117-a8f5-4c83-9dda-f203a8199d6f",
+        "created_at": "2026-11-18T05:34:07.799110+00:00",
+        "updated_at": "2026-11-18T05:34:07.799110+00:00",
+        "score_debug": {
+          "combined_score": 0.26389814,
+          "semantic_score": 0.2983231,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36142225
+        }
+      },
+      {
+        "memory": "User seeks motivation for regular morning walks and asked for tips to stay motivated to exercise consistently.",
+        "score": 0.26383073102362203,
+        "id": "f430bf87-4f47-4641-82e7-d1ac3cb433a5",
+        "created_at": "2026-11-18T06:19:04.729138+00:00",
+        "updated_at": "2026-11-18T06:19:04.729138+00:00",
+        "score_debug": {
+          "combined_score": 0.26383073102362203,
+          "semantic_score": 0.3631848,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29639202755905514
+        }
+      },
+      {
+        "memory": "Assistant recommended the Queens Community House, a community center offering cultural events, language classes, and immigrant support services, as a place for the user to meet Syrian or Middle Eastern community members in Queens.",
+        "score": 0.2636938882779923,
+        "id": "0e18080b-2418-4270-acb2-8151d8f5384a",
+        "created_at": "2026-11-18T06:14:59.192831+00:00",
+        "updated_at": "2026-11-18T06:14:59.192831+00:00",
+        "score_debug": {
+          "combined_score": 0.2636938882779923,
+          "semantic_score": 0.35426474,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30496998069498066
+        }
+      },
+      {
+        "memory": "Assistant advised avoiding multitasking and reducing distractions by using website blockers such as Freedom or StayFocusd.",
+        "score": 0.26346419209990013,
+        "id": "493f235a-9f68-4e67-ae04-26d950f22894",
+        "created_at": "2026-11-18T07:16:27.283145+00:00",
+        "updated_at": "2026-11-18T07:16:27.283145+00:00",
+        "score_debug": {
+          "combined_score": 0.26346419209990013,
+          "semantic_score": 0.37018073,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2884797502497503
+        }
+      },
+      {
+        "memory": "Assistant recommended the keyword 'YouTube Shopping' in the Informational cluster with search volume 8.1K, difficulty 70, title 'The Ultimate Guide to YouTube Shopping for Your Business', and a meta description describing how to boost sales using YouTube Shopping with Admang and Arang examples.",
+        "score": 0.26292651902439024,
+        "id": "eabd47f6-4943-437c-9623-32f8be9578c2",
+        "created_at": "2026-11-18T05:47:10.245010+00:00",
+        "updated_at": "2026-11-18T05:47:10.245010+00:00",
+        "score_debug": {
+          "combined_score": 0.26292651902439024,
+          "semantic_score": 0.3347342,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3225820975609756
+        }
+      },
+      {
+        "memory": "User is interested in using TripIt to help plan their Tokyo itinerary and wants to know whether it focuses on itinerary planning or mainly on booking activities and flights.",
+        "score": 0.2627865501922696,
+        "id": "dbc5352d-6f9b-4e60-a89f-27cd9af3edc2",
+        "created_at": "2026-11-18T05:20:24.023268+00:00",
+        "updated_at": "2026-11-18T05:20:24.023268+00:00",
+        "score_debug": {
+          "combined_score": 0.2627865501922696,
+          "semantic_score": 0.36987254,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28709383548067396
+        }
+      },
+      {
+        "memory": "Assistant explained that Best Buy's weekly ad, posted on Sundays, outlines upcoming week laptop deals.",
+        "score": 0.262635934,
+        "id": "4b31b3ca-41f7-4191-82b8-04a2b69477cd",
+        "created_at": "2026-11-18T06:22:07.835479+00:00",
+        "updated_at": "2026-11-18T06:22:07.835479+00:00",
+        "score_debug": {
+          "combined_score": 0.262635934,
+          "semantic_score": 0.31574142,
+          "bm25_score": 0.0,
+          "entity_boost": 0.340848415
+        }
+      },
+      {
+        "memory": "User recently obtained an annual pass for Universal Studios Hollywood and intends to visit the park at least once a month to experience the Wizarding World of Harry Potter.",
+        "score": 0.2621723907888446,
+        "id": "34532fe2-7127-44af-8953-3f52d9af994a",
+        "created_at": "2026-11-18T07:00:06.661980+00:00",
+        "updated_at": "2026-11-18T07:00:06.661980+00:00",
+        "score_debug": {
+          "combined_score": 0.2621723907888446,
+          "semantic_score": 0.34963647,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3057945069721115
+        }
+      },
+      {
+        "memory": "User is interested in volunteering at the UC Theatre, a local music venue that hosts concerts and events year‑round, to meet like‑minded people and become more involved in the local music scene.",
+        "score": 0.2613073,
+        "id": "2d2da0b7-0dbd-435e-ab3f-1d096443194a",
+        "created_at": "2026-11-18T06:49:59.605899+00:00",
+        "updated_at": "2026-11-18T06:49:59.605899+00:00",
+        "score_debug": {
+          "combined_score": 0.2613073,
+          "semantic_score": 0.3303449,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32292335
+        }
+      },
+      {
+        "memory": "Assistant recommended the Eisenhower Matrix, a method that categorizes tasks into urgent/important quadrants to help prioritize work.",
+        "score": 0.261226254,
+        "id": "c86e549d-47cf-44a9-868f-8e9d8179492d",
+        "created_at": "2026-11-18T07:16:27.278303+00:00",
+        "updated_at": "2026-11-18T07:16:27.278303+00:00",
+        "score_debug": {
+          "combined_score": 0.261226254,
+          "semantic_score": 0.3485281,
+          "bm25_score": 0.0,
+          "entity_boost": 0.304537535
+        }
+      },
+      {
+        "memory": "Assistant suggested Todoist features for a consulting firm: separate Projects per client, Labels for client/phase/task type, priority levels (P1‑P4), deadlines, comments with @mentions, recurring tasks for regular meetings, and integrations with Google Calendar, Slack, and Gmail. Recommended templates: Consulting Project Template (initiation, data collection, analysis, reporting) and Client Onboarding Template (setup, data collection, initial deliverables).",
+        "score": 0.261014472,
+        "id": "88dfb058-dd33-41d9-b597-100c5659a817",
+        "created_at": "2026-11-18T07:17:05.727997+00:00",
+        "updated_at": "2026-11-18T07:17:05.727997+00:00",
+        "score_debug": {
+          "combined_score": 0.261014472,
+          "semantic_score": 0.35501313,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29752305
+        }
+      },
+      {
+        "memory": "User wants help finding Syrian or Middle Eastern community resources and organizations in Queens, New York, believing that reaching out to local groups could help connect with people who share their background and culture.",
+        "score": 0.26088568427799225,
+        "id": "2c33b56b-75f7-4acd-acda-0fd07bfbf556",
+        "created_at": "2026-11-18T06:14:59.186820+00:00",
+        "updated_at": "2026-11-18T06:14:59.186820+00:00",
+        "score_debug": {
+          "combined_score": 0.26088568427799225,
+          "semantic_score": 0.34724423,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30496998069498066
+        }
+      },
+      {
+        "memory": "Assistant suggested eight strategies to keep guided breathing sessions consistent on the Fitbit: schedule a specific time, create a calming ritual, start with short 2‑3‑minute sessions, track progress, vary session topics, attach to an existing habit, practice self‑compassion, and celebrate milestones.",
+        "score": 0.26086950400000003,
+        "id": "be84cc54-0f77-41d4-a775-9ca55061a8e6",
+        "created_at": "2026-11-18T05:28:49.488786+00:00",
+        "updated_at": "2026-11-18T05:28:49.488786+00:00",
+        "score_debug": {
+          "combined_score": 0.26086950400000003,
+          "semantic_score": 0.35662806,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2955457
+        }
+      },
+      {
+        "memory": "User pre‑ordered a new game at a gaming event at their local game store around the weekend of November 14‑15, 2026 and is excited about it",
+        "score": 0.260317016867083,
+        "id": "9dba81cd-f8ce-44c0-8f4b-a414a820a94a",
+        "created_at": "2026-11-18T07:07:47.686845+00:00",
+        "updated_at": "2026-11-18T07:07:47.686845+00:00",
+        "score_debug": {
+          "combined_score": 0.260317016867083,
+          "semantic_score": 0.27862537,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "Assistant recommended strategies to improve finding Delta award seats: stay flexible with travel dates, consider alternative departure airports, use the Delta award calendar, search for one‑way awards instead of round‑trip, and explore partner airlines such as Air France or KLM for possible award availability.",
+        "score": 0.2600964185433746,
+        "id": "4bcc4790-9e8f-4bce-b56c-f296c89831b9",
+        "created_at": "2026-11-18T05:43:11.229866+00:00",
+        "updated_at": "2026-11-18T05:43:11.229866+00:00",
+        "score_debug": {
+          "combined_score": 0.2600964185433746,
+          "semantic_score": 0.35145587,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2987851763584366
+        }
+      },
+      {
+        "memory": "Assistant suggested considering activity type, personalized workouts, nutrition tracking, and social sharing/community support when choosing a fitness app",
+        "score": 0.25994396000000003,
+        "id": "978978fa-f629-4bda-a634-6512aad9db04",
+        "created_at": "2026-11-18T06:52:13.093053+00:00",
+        "updated_at": "2026-11-18T06:52:13.093053+00:00",
+        "score_debug": {
+          "combined_score": 0.25994396000000003,
+          "semantic_score": 0.35848343,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29137647
+        }
+      },
+      {
+        "memory": "Assistant gave insider tips for minimizing wait times at Universal Studios Hollywood’s Wizarding World, recommending visits on weekdays (especially Tuesdays‑Thursdays), arriving before the 9:00 AM opening, returning after 6:00 PM, targeting off‑season periods (mid‑January to mid‑March and mid‑September to mid‑November), checking the official app for live wait times, using Express Pass or single‑rider lines, and planning visits during typical meal hours (11:30 AM‑1:30 PM).",
+        "score": 0.25993220399999994,
+        "id": "4eaa8abf-e83c-4a28-aa4b-7fc2d9790f50",
+        "created_at": "2026-11-18T07:00:06.668216+00:00",
+        "updated_at": "2026-11-18T07:00:06.668216+00:00",
+        "score_debug": {
+          "combined_score": 0.25993220399999994,
+          "semantic_score": 0.31799066,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33183985
+        }
+      },
+      {
+        "memory": "Assistant suggested tips: build multiple Filters like \"Today\", \"This Week\", and \"Priority\" to focus on tasks; combine Filters to see high‑priority tasks for a specific project; use Filters to track progress and add them to Favorites or the toolbar for quick access.",
+        "score": 0.2596240475684316,
+        "id": "acbf1b32-10b1-4b56-b520-9f7b749ba314",
+        "created_at": "2026-11-18T07:19:26.350684+00:00",
+        "updated_at": "2026-11-18T07:19:26.350684+00:00",
+        "score_debug": {
+          "combined_score": 0.2596240475684316,
+          "semantic_score": 0.31016904,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33889107892107895
+        }
+      },
+      {
+        "memory": "User plans to replace the toilet brush and plunger on the weekend of November 20‑21, 2026, because they have become gross and may have contributed to recent clogs.",
+        "score": 0.259615852867083,
+        "id": "80ab4580-7118-4a98-ad58-595fd3f0bd59",
+        "created_at": "2026-11-18T06:44:44.307663+00:00",
+        "updated_at": "2026-11-18T06:44:44.307663+00:00",
+        "score_debug": {
+          "combined_score": 0.259615852867083,
+          "semantic_score": 0.27687246,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "User finished binge-watching Season 3 of the Netflix series \"The Crown\" around November 18, 2026 and is still reeling from the drama.",
+        "score": 0.25926728486708295,
+        "id": "28a18c9f-c44d-41cc-9dcf-490b4f4142f3",
+        "created_at": "2026-11-18T06:32:30.371289+00:00",
+        "updated_at": "2026-11-18T06:32:30.371289+00:00",
+        "score_debug": {
+          "combined_score": 0.25926728486708295,
+          "semantic_score": 0.27600104,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "Assistant recommended several resources: podcasts – The Music Production Podcast (host Brian Funk), The Pro Audio Files, The Electronic Music Podcast, The Music Industry Podcast (host Ari Herstand), and The Soundfly Podcast; online courses – Ableton Live Certified Training, Soundfly courses, Coursera’s Music Production in Ableton Live (Berklee), Udemy’s Music Production Tutorials, and The Pro Audio Academy; YouTube channels – The Pro Audio Files, The Mixing Engineer, Music Production Tutorials, and The Soundfly Channel",
+        "score": 0.259226324,
+        "id": "b9856dfa-4286-47ed-885f-f26891df383f",
+        "created_at": "2026-11-18T06:49:25.902654+00:00",
+        "updated_at": "2026-11-18T06:49:25.902654+00:00",
+        "score_debug": {
+          "combined_score": 0.259226324,
+          "semantic_score": 0.34127566,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30679015
+        }
+      },
+      {
+        "memory": "User is interested in beginning to track heart rate and calorie burn with their fitness tracker to better inform their workouts and overall routine.",
+        "score": 0.259205372,
+        "id": "188b5eee-016d-4018-8ece-4991312e9258",
+        "created_at": "2026-11-18T05:04:11.547931+00:00",
+        "updated_at": "2026-11-18T05:04:11.547931+00:00",
+        "score_debug": {
+          "combined_score": 0.259205372,
+          "semantic_score": 0.35895273,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2890607
+        }
+      },
+      {
+        "memory": "User is particularly drawn to hiking the Blue Ridge Mountains in Asheville, North Carolina, and is now considering visiting in winter despite previously only thinking of the fall foliage.",
+        "score": 0.25906259600000003,
+        "id": "913d1586-7a21-470e-ac44-598fca832a30",
+        "created_at": "2026-11-18T05:32:01.583538+00:00",
+        "updated_at": "2026-11-18T05:32:01.583538+00:00",
+        "score_debug": {
+          "combined_score": 0.25906259600000003,
+          "semantic_score": 0.30904204,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33861445
+        }
+      },
+      {
+        "memory": "Assistant suggested checking the weather via online sites (weather.com, accuweather.com, wunderground.com), weather apps (Dark Sky, Weather Underground), local news, or a phone’s weather widget.",
+        "score": 0.258798574,
+        "id": "bbdaf48a-244e-4c17-aeb6-67b7dceb10a0",
+        "created_at": "2026-11-18T06:15:40.203232+00:00",
+        "updated_at": "2026-11-18T06:15:40.203232+00:00",
+        "score_debug": {
+          "combined_score": 0.258798574,
+          "semantic_score": 0.3397814,
+          "bm25_score": 0.0,
+          "entity_boost": 0.307215035
+        }
+      },
+      {
+        "memory": "Assistant recommended several Queens‑area resources for Syrian/Middle Eastern community connections: Arab American Association of New York (AAANY), Syrian American Association of Queens (SAAQ), Queens Library cultural programs, local mosques such as Masjid Al‑Noor, and community centers like Queens Community Board 7.",
+        "score": 0.25872925243027883,
+        "id": "d38e1d31-dcff-4f87-be3a-1dd4a65ecb19",
+        "created_at": "2026-11-18T06:16:15.739885+00:00",
+        "updated_at": "2026-11-18T06:16:15.739885+00:00",
+        "score_debug": {
+          "combined_score": 0.25872925243027883,
+          "semantic_score": 0.30666465,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3401584810756972
+        }
+      },
+      {
+        "memory": "User wants to set a specific, measurable goal for daily steps as part of tip #1 on goal setting.",
+        "score": 0.2585763329083665,
+        "id": "a0ced8be-b3da-4db9-bfa7-e70e4cb0899a",
+        "created_at": "2026-11-18T05:31:14.216165+00:00",
+        "updated_at": "2026-11-18T05:31:14.216165+00:00",
+        "score_debug": {
+          "combined_score": 0.2585763329083665,
+          "semantic_score": 0.3529864,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29345443227091633
+        }
+      },
+      {
+        "memory": "Assistant outlined how to search for Delta award seats on delta.com: log into the SkyMiles account, select 'Award Travel' under 'Book', enter travel dates and destination (Las Vegas), choose 'Flexible Dates', pick a cabin (Main Cabin or Comfort+), and click 'Search' to view available award flights.",
+        "score": 0.25837911399999997,
+        "id": "d3ca7b42-2443-4d94-9865-02df674b755d",
+        "created_at": "2026-11-18T05:43:11.226278+00:00",
+        "updated_at": "2026-11-18T05:43:11.226278+00:00",
+        "score_debug": {
+          "combined_score": 0.25837911399999997,
+          "semantic_score": 0.30686477,
+          "bm25_score": 0.0,
+          "entity_boost": 0.339083015
+        }
+      },
+      {
+        "memory": "User will check the phone’s weather widget for the morning walk forecast.",
+        "score": 0.25826268199999997,
+        "id": "ce832a16-994c-4db2-a246-1846e1bdc912",
+        "created_at": "2026-11-18T06:16:15.743898+00:00",
+        "updated_at": "2026-11-18T06:16:15.743898+00:00",
+        "score_debug": {
+          "combined_score": 0.25826268199999997,
+          "semantic_score": 0.35399294,
+          "bm25_score": 0.0,
+          "entity_boost": 0.291663765
+        }
+      },
+      {
+        "memory": "Assistant recommended multiple strategies to increase daily step count, including setting a specific goal, wearing the Fitbit consistently, taking short hourly walks, scheduling a daily walk, using stairs, parking farther away, turning household chores into movement, walking during TV commercial breaks, walking with a friend or family member, varying activities, setting reminders, and celebrating milestones",
+        "score": 0.258010744,
+        "id": "6ff6b308-15bd-4057-876c-84054775a6ec",
+        "created_at": "2026-11-18T05:27:27.805062+00:00",
+        "updated_at": "2026-11-18T05:27:27.805062+00:00",
+        "score_debug": {
+          "combined_score": 0.258010744,
+          "semantic_score": 0.34258986,
+          "bm25_score": 0.0,
+          "entity_boost": 0.302437
+        }
+      },
+      {
+        "memory": "User feels excited and confident that they have everything needed to make the upcoming weekend dinner party a success, celebrating Rachel's new job and catching up with friends",
+        "score": 0.25787902595121953,
+        "id": "2545651c-6bc4-4711-ae66-3ca7913fe1d8",
+        "created_at": "2026-11-18T06:59:19.306852+00:00",
+        "updated_at": "2026-11-18T06:59:19.306852+00:00",
+        "score_debug": {
+          "combined_score": 0.25787902595121953,
+          "semantic_score": 0.32635096,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3183466048780488
+        }
+      },
+      {
+        "memory": "Assistant recommended meditation apps such as Headspace, Calm, and Insight Timer as popular guided sessions for stress relief and anxiety.",
+        "score": 0.25746488929236866,
+        "id": "4b953cf3-d8d4-497f-ac15-a1d0e3fea7ca",
+        "created_at": "2026-11-18T06:19:04.735983+00:00",
+        "updated_at": "2026-11-18T06:19:04.735983+00:00",
+        "score_debug": {
+          "combined_score": 0.25746488929236866,
+          "semantic_score": 0.35268036,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29098186323092173
+        }
+      },
+      {
+        "memory": "Assistant recommended the keyword 'YouTube Shopping for Business' in the Commercial cluster with search volume 90, difficulty 60, title 'How to Use YouTube Shopping for Business Success', and a meta description on leveraging YouTube Shopping for business success with Admang and Arang.",
+        "score": 0.2572989350243903,
+        "id": "0ec33d46-52b7-44f4-bafc-5a064c9368f2",
+        "created_at": "2026-11-18T05:47:10.251895+00:00",
+        "updated_at": "2026-11-18T05:47:10.251895+00:00",
+        "score_debug": {
+          "combined_score": 0.2572989350243903,
+          "semantic_score": 0.32066524,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3225820975609756
+        }
+      },
+      {
+        "memory": "User asked for recommendations of outdoor gear rental shops in Asheville.",
+        "score": 0.25712141629232194,
+        "id": "991d99c3-d51c-421e-9236-2b5e8bd38afe",
+        "created_at": "2026-11-18T05:34:07.777000+00:00",
+        "updated_at": "2026-11-18T05:34:07.777000+00:00",
+        "score_debug": {
+          "combined_score": 0.25712141629232194,
+          "semantic_score": 0.36695713,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27584641073080485
+        }
+      },
+      {
+        "memory": "User intends to visit additional Southern California theme parks, specifically Knott's Berry Farm and Disneyland, as part of their annual passholder adventures.",
+        "score": 0.2570612031688312,
+        "id": "83496290-1954-46c1-a0a1-4fdff7d1f729",
+        "created_at": "2026-11-18T07:03:45.389760+00:00",
+        "updated_at": "2026-11-18T07:03:45.389760+00:00",
+        "score_debug": {
+          "combined_score": 0.2570612031688312,
+          "semantic_score": 0.33313093,
+          "bm25_score": 0.0,
+          "entity_boost": 0.309522077922078
+        }
+      },
+      {
+        "memory": "Assistant suggested several guided meditation resources for stress and anxiety, including Andrew Weil’s guided meditations, the Rainy Mood app, Omvana, Meditation Studio, and YouTube channels Michael Sealey, Jason Stephenson, and The Honest Guys.",
+        "score": 0.256679972,
+        "id": "379db55a-7de2-427d-8f78-932d7e5b28ef",
+        "created_at": "2026-11-18T06:18:08.244637+00:00",
+        "updated_at": "2026-11-18T06:18:08.244637+00:00",
+        "score_debug": {
+          "combined_score": 0.256679972,
+          "semantic_score": 0.32002273,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3216772
+        }
+      },
+      {
+        "memory": "User will check out the previously recommended resources (travel agencies and TripIt) to plan their Tokyo itinerary.",
+        "score": 0.2565584741922696,
+        "id": "7d573021-17f6-4027-bd26-36a0811e7b5f",
+        "created_at": "2026-11-18T05:21:09.833117+00:00",
+        "updated_at": "2026-11-18T05:21:09.833117+00:00",
+        "score_debug": {
+          "combined_score": 0.2565584741922696,
+          "semantic_score": 0.35430235,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28709383548067396
+        }
+      },
+      {
+        "memory": "User expressed interest in exploring Golden Gate Park in San Francisco and asked for specific museums or gardens to visit there.",
+        "score": 0.2563657819512195,
+        "id": "f21d32bf-f2a7-4ff6-83c8-05eb60520b87",
+        "created_at": "2026-11-18T05:14:42.972239+00:00",
+        "updated_at": "2026-11-18T05:14:42.972239+00:00",
+        "score_debug": {
+          "combined_score": 0.2563657819512195,
+          "semantic_score": 0.35825545,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2826590048780488
+        }
+      },
+      {
+        "memory": "User is interested in how population growth has impacted the construction industry in Las Vegas.",
+        "score": 0.255845683902439,
+        "id": "e3f1dc3e-a101-440c-b9bd-3717e2f1cf8a",
+        "created_at": "2026-11-18T05:14:54.675191+00:00",
+        "updated_at": "2026-11-18T05:14:54.675191+00:00",
+        "score_debug": {
+          "combined_score": 0.255845683902439,
+          "semantic_score": 0.3538366,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28577760975609756
+        }
+      },
+      {
+        "memory": "User is excited to host a dinner party celebrating Rachel’s new job, looking forward to catching up with friends and ensuring the meal is a success.",
+        "score": 0.255809246,
+        "id": "4ec91b97-e0cf-4527-85d4-1c12c22154f9",
+        "created_at": "2026-11-18T07:00:06.659031+00:00",
+        "updated_at": "2026-11-18T07:00:06.659031+00:00",
+        "score_debug": {
+          "combined_score": 0.255809246,
+          "semantic_score": 0.31489965,
+          "bm25_score": 0.0,
+          "entity_boost": 0.324623465
+        }
+      },
+      {
+        "memory": "User is planning a winter trip and asked for destination suggestions that offer good winter hiking trails.",
+        "score": 0.255516994,
+        "id": "69defcf1-11eb-430f-a864-4f750f1473af",
+        "created_at": "2026-11-18T05:31:14.230969+00:00",
+        "updated_at": "2026-11-18T05:31:14.230969+00:00",
+        "score_debug": {
+          "combined_score": 0.255516994,
+          "semantic_score": 0.32693085,
+          "bm25_score": 0.0,
+          "entity_boost": 0.311861635
+        }
+      },
+      {
+        "memory": "User observed that the Saverez strings are relatively short, leaving very little surplus after the initial winding.",
+        "score": 0.25530156415584415,
+        "id": "a2052082-003e-4fef-9401-a77ec4649814",
+        "created_at": "2026-11-18T07:14:26.294929+00:00",
+        "updated_at": "2026-11-18T07:14:26.294929+00:00",
+        "score_debug": {
+          "combined_score": 0.25530156415584415,
+          "semantic_score": 0.3131293,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32512461038961044
+        }
+      },
+      {
+        "memory": "Assistant recommended that for the European trip, User should bring a Type C, Type E, or Type F adapter depending on the specific countries visited, and also suggested packing power banks or portable chargers to keep devices powered on the go.",
+        "score": 0.25529436,
+        "id": "1f5427b4-841c-4507-b155-fc9480570980",
+        "created_at": "2026-11-18T05:22:21.010107+00:00",
+        "updated_at": "2026-11-18T05:22:21.010107+00:00",
+        "score_debug": {
+          "combined_score": 0.25529436,
+          "semantic_score": 0.3370996,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3011363
+        }
+      },
+      {
+        "memory": "Assistant recommended Wunderlist, a popular task management app that allows creating to‑do lists, setting reminders, and collaborating with others.",
+        "score": 0.25466982,
+        "id": "697f499a-6eeb-400e-b1cc-e49e5cfc9dca",
+        "created_at": "2026-11-18T05:35:02.729248+00:00",
+        "updated_at": "2026-11-18T05:35:02.729248+00:00",
+        "score_debug": {
+          "combined_score": 0.25466982,
+          "semantic_score": 0.34794542,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28872913
+        }
+      },
+      {
+        "memory": "Assistant recommended the keyword 'Admang x Arang Collaboration' in the Commercial cluster with search volume 70, difficulty 50, title 'Admang x Arang: A Successful Collaboration in YouTube Shopping', though the meta description was incomplete.",
+        "score": 0.25451959902439025,
+        "id": "455d1b58-598f-49ab-9cc6-44a2b0ad9424",
+        "created_at": "2026-11-18T05:47:10.254995+00:00",
+        "updated_at": "2026-11-18T05:47:10.254995+00:00",
+        "score_debug": {
+          "combined_score": 0.25451959902439025,
+          "semantic_score": 0.3137169,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3225820975609756
+        }
+      },
+      {
+        "memory": "User is planning a morning walk on 2026-11-18 and wants to dress appropriately for the weather.",
+        "score": 0.25341191502362204,
+        "id": "1ec02417-0fae-477b-98e8-36a516d371c6",
+        "created_at": "2026-11-18T06:15:40.192369+00:00",
+        "updated_at": "2026-11-18T06:15:40.192369+00:00",
+        "score_debug": {
+          "combined_score": 0.25341191502362204,
+          "semantic_score": 0.33713776,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29639202755905514
+        }
+      },
+      {
+        "memory": "Assistant suggested additional Todoist productivity tips: use the built‑in “Priority” filter to view tasks by urgency, set realistic deadlines for each task, break large tasks into smaller subtasks, and enable the “Focus” mode to hide unrelated items and reduce distractions.",
+        "score": 0.252300002,
+        "id": "8bf9a6a7-5c6a-45b8-b1e2-34d55006ab16",
+        "created_at": "2026-11-18T07:18:02.790225+00:00",
+        "updated_at": "2026-11-18T07:18:02.790225+00:00",
+        "score_debug": {
+          "combined_score": 0.252300002,
+          "semantic_score": 0.32107282,
+          "bm25_score": 0.0,
+          "entity_boost": 0.309677185
+        }
+      },
+      {
+        "memory": "Assistant recommended the Arab American Association of New York (AAANY), based in Bay Ridge, Brooklyn, which serves the entire NYC area including Queens, as a resource for Syrian and Middle Eastern community connection.",
+        "score": 0.25168214443027886,
+        "id": "99b7f2cb-7a14-49c7-ba6f-2419400bdc74",
+        "created_at": "2026-11-18T06:14:59.189977+00:00",
+        "updated_at": "2026-11-18T06:14:59.189977+00:00",
+        "score_debug": {
+          "combined_score": 0.25168214443027886,
+          "semantic_score": 0.28904688,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3401584810756972
+        }
+      },
+      {
+        "memory": "Assistant described the upcoming memoir \"The Burning Blue: The Untold Story of Christa McAuliffe and NASA's Challenger\" by Kevin Cook, slated for October 2021, examining McAuliffe’s life and legacy.",
+        "score": 0.2516608227716535,
+        "id": "2e93d8dd-935a-42aa-b802-bddd2103b5d9",
+        "created_at": "2026-11-18T06:30:55.902564+00:00",
+        "updated_at": "2026-11-18T06:30:55.902564+00:00",
+        "score_debug": {
+          "combined_score": 0.2516608227716535,
+          "semantic_score": 0.22737499,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40177706692913384
+        }
+      },
+      {
+        "memory": "User expressed interest in learning more about the Climate and Sea-Level Rise (C&SLR) Initiative's goals and outcomes",
+        "score": 0.2515510202926829,
+        "id": "0101b45a-a3bb-4a16-8d11-274cb05604a7",
+        "created_at": "2026-11-18T06:40:57.170830+00:00",
+        "updated_at": "2026-11-18T06:40:57.170830+00:00",
+        "score_debug": {
+          "combined_score": 0.2515510202926829,
+          "semantic_score": 0.32191038,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3069671707317073
+        }
+      },
+      {
+        "memory": "Assistant gave consistency tips for guided breathing sessions: set a daily reminder, schedule a fixed time, create a calming environment with dim lights and music, start with short sessions, and log progress to build habit.",
+        "score": 0.250672138,
+        "id": "da5a2d8b-c8f5-4d60-a749-4ff744eb8f43",
+        "created_at": "2026-11-18T05:31:14.236720+00:00",
+        "updated_at": "2026-11-18T05:31:14.236720+00:00",
+        "score_debug": {
+          "combined_score": 0.250672138,
+          "semantic_score": 0.33660573,
+          "bm25_score": 0.0,
+          "entity_boost": 0.290074615
+        }
+      },
+      {
+        "memory": "Assistant suggested platforms offering exclusive live content: Mixcloud Select, SoundCloud Go+, Apple Music, Tidal, Beatport Live, Cercle, Boiler Room, NTS Radio, KCRW, and Daytrotter, highlighting each service’s focus on live sets, DJ mixes, and artist interviews.",
+        "score": 0.25043325156843166,
+        "id": "a29eb4ee-e3be-4118-9bc8-d622e8c3ac2b",
+        "created_at": "2026-11-18T06:47:54.875290+00:00",
+        "updated_at": "2026-11-18T06:47:54.875290+00:00",
+        "score_debug": {
+          "combined_score": 0.25043325156843166,
+          "semantic_score": 0.30106205,
+          "bm25_score": 0.0,
+          "entity_boost": 0.325021078921079
+        }
+      },
+      {
+        "memory": "Assistant explained that TripIt primarily organizes travel bookings, flights, accommodations, and provides basic destination information, but is not a dedicated itinerary planning service; suggested using travel guides, blogs, travel agencies, and online travel communities for personalized Tokyo itinerary planning.",
+        "score": 0.2499562141922696,
+        "id": "e6b9fcf6-735a-480a-8c66-58deb1b23348",
+        "created_at": "2026-11-18T05:20:24.027447+00:00",
+        "updated_at": "2026-11-18T05:20:24.027447+00:00",
+        "score_debug": {
+          "combined_score": 0.2499562141922696,
+          "semantic_score": 0.3377967,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28709383548067396
+        }
+      },
+      {
+        "memory": "Assistant explains that the Universal Studios Hollywood Studio Tour lasts about one hour (plan 2‑3 hours total), includes a tram ride through the backlot, behind‑the‑scenes commentary, and exhibits such as the Wizarding World set, War of the Worlds 3D experience, Fast & Furious: Supercharged, King Kong 360 3‑D, Special Effects Show, The Archive, and working soundstages, plus tips to book ahead, arrive early, wear comfortable shoes, and ask questions.",
+        "score": 0.24990388000000002,
+        "id": "171d5cc3-3107-4d73-93b8-16b345c323ba",
+        "created_at": "2026-11-18T07:03:00.342840+00:00",
+        "updated_at": "2026-11-18T07:03:00.342840+00:00",
+        "score_debug": {
+          "combined_score": 0.24990388000000002,
+          "semantic_score": 0.32684645,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29791325
+        }
+      },
+      {
+        "memory": "User is planning a trip to Chicago in December 2026 on United Airlines.",
+        "score": 0.24971826183266935,
+        "id": "52748e1f-33b1-4448-bc56-3c1ea911ca2e",
+        "created_at": "2026-11-18T05:42:37.756446+00:00",
+        "updated_at": "2026-11-18T05:42:37.756446+00:00",
+        "score_debug": {
+          "combined_score": 0.24971826183266935,
+          "semantic_score": 0.33375305,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29054260458167336
+        }
+      },
+      {
+        "memory": "User is planning meals for the upcoming week and is seeking healthy breakfast ideas that can be prepared in advance.",
+        "score": 0.24937359796203795,
+        "id": "e710dc5f-618e-46bd-aaa1-b6947740d3ba",
+        "created_at": "2026-11-18T07:04:51.655692+00:00",
+        "updated_at": "2026-11-18T07:04:51.655692+00:00",
+        "score_debug": {
+          "combined_score": 0.24937359796203795,
+          "semantic_score": 0.2912089,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33222509490509494
+        }
+      },
+      {
+        "memory": "Assistant gave a concrete 30‑minute treadmill workout using heart‑rate zones: 5‑minute warm‑up in Zone 1 (95‑114 bpm), 20 minutes at 133 bpm (Zone 3), 2‑minute recovery at 114 bpm (Zone 2), 3‑minute push to 145 bpm (Zone 3), and 5‑minute cool‑down in Zone 1 (95‑114 bpm).",
+        "score": 0.24839215879088208,
+        "id": "e9d0e5c0-1946-4fbc-9a2c-8439c18af6d7",
+        "created_at": "2026-11-18T05:04:58.223325+00:00",
+        "updated_at": "2026-11-18T05:04:58.223325+00:00",
+        "score_debug": {
+          "combined_score": 0.24839215879088208,
+          "semantic_score": 0.30676895,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3142114469772052
+        }
+      },
+      {
+        "memory": "User intends to implement the motivation strategies previously discussed to stay consistent with morning walks.",
+        "score": 0.24831057102362206,
+        "id": "87c18777-fa5f-4d82-994f-cae9be0410d6",
+        "created_at": "2026-11-18T06:18:08.238388+00:00",
+        "updated_at": "2026-11-18T06:18:08.238388+00:00",
+        "score_debug": {
+          "combined_score": 0.24831057102362206,
+          "semantic_score": 0.3243844,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29639202755905514
+        }
+      },
+      {
+        "memory": "User is interested in playing Guilty Gear Xrd REV 2 and pre‑ordered Guilty Gear Strive at a local gaming event on the weekend of November 14‑15, 2026.",
+        "score": 0.24803589686708297,
+        "id": "5cf4db48-a359-4f0d-94b6-b9ffa8e61f40",
+        "created_at": "2026-11-18T07:08:54.963566+00:00",
+        "updated_at": "2026-11-18T07:08:54.963566+00:00",
+        "score_debug": {
+          "combined_score": 0.24803589686708297,
+          "semantic_score": 0.24792257,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "Assistant offers another SMART goal example: master the downward‑facing dog pose within three months, tracking progress by taking weekly photos and aiming to hold the pose for at least 30 seconds.",
+        "score": 0.247480594,
+        "id": "3ba5cd2b-aba7-4e29-ad34-79d1311c76a5",
+        "created_at": "2026-11-18T05:39:26.154692+00:00",
+        "updated_at": "2026-11-18T05:39:26.154692+00:00",
+        "score_debug": {
+          "combined_score": 0.247480594,
+          "semantic_score": 0.30631566,
+          "bm25_score": 0.0,
+          "entity_boost": 0.312385825
+        }
+      },
+      {
+        "memory": "Assistant suggested online mindfulness resources: Mindful.org, UCLA Mindful Awareness Research Center, DharmaSeed, Tara Brach’s website, and Jack Kornfield’s website.",
+        "score": 0.24694284399999997,
+        "id": "c6282323-b54d-456a-a12c-7dd8522c6b1e",
+        "created_at": "2026-11-18T05:36:07.620516+00:00",
+        "updated_at": "2026-11-18T05:36:07.620516+00:00",
+        "score_debug": {
+          "combined_score": 0.24694284399999997,
+          "semantic_score": 0.31815398,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29920313
+        }
+      },
+      {
+        "memory": "User received a multi-device travel adapter for Europe that was ordered from Amazon about two weeks before 2026-11-18 (approximately 2026-11-04), and it can charge several devices simultaneously, which will be convenient during layovers.",
+        "score": 0.24690164115884122,
+        "id": "8cc2b764-f2f0-4f60-93a8-2cf8caf2c745",
+        "created_at": "2026-11-18T05:22:21.006526+00:00",
+        "updated_at": "2026-11-18T05:22:21.006526+00:00",
+        "score_debug": {
+          "combined_score": 0.24690164115884122,
+          "semantic_score": 0.321872,
+          "bm25_score": 0.0,
+          "entity_boost": 0.295382102897103
+        }
+      },
+      {
+        "memory": "Assistant advises tracking average heart‑rate during workouts, heart‑rate recovery time, and heart‑rate variability; decreasing average HR, faster recovery, and higher HRV indicate improved cardiovascular fitness.",
+        "score": 0.246814948,
+        "id": "a68cefb4-fb94-4a87-88cb-5321e9ce5ba6",
+        "created_at": "2026-11-18T05:05:53.339944+00:00",
+        "updated_at": "2026-11-18T05:05:53.339944+00:00",
+        "score_debug": {
+          "combined_score": 0.246814948,
+          "semantic_score": 0.31025472,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30678265
+        }
+      },
+      {
+        "memory": "Assistant recommended eight easy stretches for the user to do after breathing sessions: neck stretch, shoulder rolls, chest stretch, arm circles, side stretch, hip‑flexor stretch, cat‑cow stretch, and leg stretch, each held for about 30 seconds.",
+        "score": 0.246752752,
+        "id": "4e6330e8-5a3b-46c2-8365-c699ae37991b",
+        "created_at": "2026-11-18T05:29:56.199590+00:00",
+        "updated_at": "2026-11-18T05:29:56.199590+00:00",
+        "score_debug": {
+          "combined_score": 0.246752752,
+          "semantic_score": 0.2995832,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31729868
+        }
+      },
+      {
+        "memory": "Assistant recommended a breakfast casserole and scrambled egg muffins that can be prepared on Sunday evening and reheated on weekdays as convenient make‑ahead meals.",
+        "score": 0.2462764339512195,
+        "id": "78f74a56-cd76-48b4-a5f4-49b7d4b5c063",
+        "created_at": "2026-11-18T06:19:04.722218+00:00",
+        "updated_at": "2026-11-18T06:19:04.722218+00:00",
+        "score_debug": {
+          "combined_score": 0.2462764339512195,
+          "semantic_score": 0.30855328,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3071378048780488
+        }
+      },
+      {
+        "memory": "User is looking for breakfast ideas that can be prepared on Sunday evening and reheated on weekdays",
+        "score": 0.24623921795121953,
+        "id": "a673a907-2d47-4b66-943f-5a892aafc840",
+        "created_at": "2026-11-18T06:16:39.286546+00:00",
+        "updated_at": "2026-11-18T06:16:39.286546+00:00",
+        "score_debug": {
+          "combined_score": 0.24623921795121953,
+          "semantic_score": 0.30846024,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3071378048780488
+        }
+      },
+      {
+        "memory": "Assistant recommended the Tumblr blog \"Working-Class Non-Binary\" (@workingclassnonbinary) that explores intersections of non-binary identity and working‑class experiences",
+        "score": 0.24607316199999998,
+        "id": "cfa3c60d-5ee9-490b-b1df-e2b901ee81c9",
+        "created_at": "2026-11-18T05:58:12.443383+00:00",
+        "updated_at": "2026-11-18T05:58:12.443383+00:00",
+        "score_debug": {
+          "combined_score": 0.24607316199999998,
+          "semantic_score": 0.31550142,
+          "bm25_score": 0.0,
+          "entity_boost": 0.299681485
+        }
+      },
+      {
+        "memory": "Assistant recommended Diamond Brand Outdoors, a local outfitter that rents hiking boots, snowshoes, and cross‑country skis, with knowledgeable staff to help choose gear for winter adventures.",
+        "score": 0.246004226,
+        "id": "fbc47570-1638-40ac-bbb7-31ecf7a93c92",
+        "created_at": "2026-11-18T05:34:07.784832+00:00",
+        "updated_at": "2026-11-18T05:34:07.784832+00:00",
+        "score_debug": {
+          "combined_score": 0.246004226,
+          "semantic_score": 0.29689384,
+          "bm25_score": 0.0,
+          "entity_boost": 0.318116725
+        }
+      },
+      {
+        "memory": "User asked for Delta award seat flight options from Los Angeles (LAX) to Las Vegas (LAS).",
+        "score": 0.24597832945019923,
+        "id": "b8b261cd-0077-4e0c-afb7-34de4f52c638",
+        "created_at": "2026-11-18T05:44:02.723587+00:00",
+        "updated_at": "2026-11-18T05:44:02.723587+00:00",
+        "score_debug": {
+          "combined_score": 0.24597832945019923,
+          "semantic_score": 0.30605173,
+          "bm25_score": 0.0,
+          "entity_boost": 0.308894093625498
+        }
+      },
+      {
+        "memory": "Assistant described that retail and commerce have expanded in Las Vegas with population growth, prompting the development of new retail centers, shopping malls, and commercial complexes.",
+        "score": 0.24574239590243901,
+        "id": "f02f02ac-d24f-4376-b6e8-a9018c020a6d",
+        "created_at": "2026-11-18T05:16:35.494153+00:00",
+        "updated_at": "2026-11-18T05:16:35.494153+00:00",
+        "score_debug": {
+          "combined_score": 0.24574239590243901,
+          "semantic_score": 0.32857838,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28577760975609756
+        }
+      },
+      {
+        "memory": "Assistant recommended that if seasonal mood or energy fluctuations significantly affect daily life, consulting a healthcare professional is advisable for guidance and support.",
+        "score": 0.24563524653346658,
+        "id": "12718f60-b1ef-4cf7-ac32-e40fd61afa24",
+        "created_at": "2026-11-18T05:32:39.625583+00:00",
+        "updated_at": "2026-11-18T05:32:39.625583+00:00",
+        "score_debug": {
+          "combined_score": 0.24563524653346658,
+          "semantic_score": 0.32405445,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2900336663336664
+        }
+      },
+      {
+        "memory": "Assistant recommended several outdoor gear rental shops in Asheville, including Asheville Outdoor Center and other local providers offering high‑quality equipment for winter hiking.",
+        "score": 0.2453921461818182,
+        "id": "767b324e-1b31-408e-ad3c-7941d393b536",
+        "created_at": "2026-11-18T05:37:01.617348+00:00",
+        "updated_at": "2026-11-18T05:37:01.617348+00:00",
+        "score_debug": {
+          "combined_score": 0.2453921461818182,
+          "semantic_score": 0.32447582,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2890045454545455
+        }
+      },
+      {
+        "memory": "Assistant recommended DapperQ (@dapperq), a fashion blog and community that celebrates non-binary fashion.",
+        "score": 0.24494869762237764,
+        "id": "d73b4bac-15a0-45d6-857f-2f37598e09ec",
+        "created_at": "2026-11-18T05:59:08.011110+00:00",
+        "updated_at": "2026-11-18T05:59:08.011110+00:00",
+        "score_debug": {
+          "combined_score": 0.24494869762237764,
+          "semantic_score": 0.3226658,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2897059440559441
+        }
+      },
+      {
+        "memory": "Assistant congratulated Rachel on her new job, noting it as a wonderful reason to celebrate.",
+        "score": 0.2449279739512195,
+        "id": "762e09cf-8477-4922-9813-497e89087cc2",
+        "created_at": "2026-11-18T06:57:23.105651+00:00",
+        "updated_at": "2026-11-18T06:57:23.105651+00:00",
+        "score_debug": {
+          "combined_score": 0.2449279739512195,
+          "semantic_score": 0.29397333,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3183466048780488
+        }
+      },
+      {
+        "memory": "User has visited Knott's Berry Farm a few times, had a great time, and is excited to explore more of the park and try out new attractions during future visits.",
+        "score": 0.24451341116883119,
+        "id": "c5df924a-9f19-43ef-99b5-36d455bfc81c",
+        "created_at": "2026-11-18T07:04:10.845918+00:00",
+        "updated_at": "2026-11-18T07:04:10.845918+00:00",
+        "score_debug": {
+          "combined_score": 0.24451341116883119,
+          "semantic_score": 0.30176145,
+          "bm25_score": 0.0,
+          "entity_boost": 0.309522077922078
+        }
+      },
+      {
+        "memory": "User purchased a barely worn pair of Levi's jeans for $8 at the Second Chance thrift store on November 18, 2026.",
+        "score": 0.24437573686708297,
+        "id": "300e82bd-7948-4bef-a388-4cc3f891adf3",
+        "created_at": "2026-11-18T06:01:53.135592+00:00",
+        "updated_at": "2026-11-18T06:01:53.135592+00:00",
+        "score_debug": {
+          "combined_score": 0.24437573686708297,
+          "semantic_score": 0.23877217,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3721671721677074
+        }
+      },
+      {
+        "memory": "User plans to incorporate simple stretching exercises into their daily routine, performing them right after their nightly guided breathing sessions on the Fitbit to improve flexibility and relaxation.",
+        "score": 0.24402362966633367,
+        "id": "e8b1b367-0dac-4c0b-b397-1daad3c31d4e",
+        "created_at": "2026-11-18T05:29:56.195818+00:00",
+        "updated_at": "2026-11-18T05:29:56.195818+00:00",
+        "score_debug": {
+          "combined_score": 0.24402362966633367,
+          "semantic_score": 0.31969324,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29036583416583417
+        }
+      },
+      {
+        "memory": "Assistant recommended mindfulness and meditation books, including \"The Mind Illuminated\" by Culadasa (John Yates) and other titles.",
+        "score": 0.24381002753784858,
+        "id": "f89fbd13-e9f9-4219-bca8-7489a81d3ea1",
+        "created_at": "2026-11-18T05:37:01.619589+00:00",
+        "updated_at": "2026-11-18T05:37:01.619589+00:00",
+        "score_debug": {
+          "combined_score": 0.24381002753784858,
+          "semantic_score": 0.28782228,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3217027888446215
+        }
+      },
+      {
+        "memory": "Assistant provided a step‑by‑step guide to search for Delta award seats: log into the SkyMiles account on delta.com, click \"Book\" → \"Award Travel\", enter travel dates, set departure LAX and destination LAS, select \"Flexible Dates\", choose Main Cabin or Comfort+ cabin, and click \"Search\".",
+        "score": 0.24354121345019922,
+        "id": "7b133840-8ef6-431e-8522-43b7160c97d1",
+        "created_at": "2026-11-18T05:44:02.727602+00:00",
+        "updated_at": "2026-11-18T05:44:02.727602+00:00",
+        "score_debug": {
+          "combined_score": 0.24354121345019922,
+          "semantic_score": 0.29995894,
+          "bm25_score": 0.0,
+          "entity_boost": 0.308894093625498
+        }
+      },
+      {
+        "memory": "Certain Las Vegas city jurisdictions offer expedited permit processing for sustainable construction projects, allowing faster approvals for eco‑friendly developments",
+        "score": 0.24349445503667,
+        "id": "0febf6be-e6c6-443f-a288-5c96243b68c4",
+        "created_at": "2026-11-18T05:15:56.787333+00:00",
+        "updated_at": "2026-11-18T05:15:56.787333+00:00",
+        "score_debug": {
+          "combined_score": 0.24349445503667,
+          "semantic_score": 0.32071587,
+          "bm25_score": 0.0,
+          "entity_boost": 0.288020267591675
+        }
+      },
+      {
+        "memory": "Assistant suggested Disneyland must‑see attractions: Sleeping Beauty Castle, Space Mountain, Splash Mountain, Indiana Jones Adventure, and Star Wars: Galaxy’s Edge, and advised using the Disneyland app, making a plan, and using MaxPass to reserve FastPasses.",
+        "score": 0.24306299999999997,
+        "id": "fac92ee2-34d7-46ba-a90f-01a51b765503",
+        "created_at": "2026-11-18T07:03:45.397648+00:00",
+        "updated_at": "2026-11-18T07:03:45.397648+00:00",
+        "score_debug": {
+          "combined_score": 0.24306299999999997,
+          "semantic_score": 0.2888576,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3187999
+        }
+      },
+      {
+        "memory": "User is originally from Syria, fled the war with family, and was resettled in the United States.",
+        "score": 0.24302384252923687,
+        "id": "9ad7cbb2-fdf8-49e5-ace5-06efb0c4375d",
+        "created_at": "2026-11-18T06:16:15.732441+00:00",
+        "updated_at": "2026-11-18T06:16:15.732441+00:00",
+        "score_debug": {
+          "combined_score": 0.24302384252923687,
+          "semantic_score": 0.31249142,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2950681863230922
+        }
+      },
+      {
+        "memory": "User plans to search for \"Restorative Yoga\" classes on their new yoga app, browse the class categories, and review class descriptions to ensure the sessions match their current level, focus, goals, and personal preferences.",
+        "score": 0.24266231600000002,
+        "id": "d0cbde6c-7819-409f-8321-f1784184a5a8",
+        "created_at": "2026-11-18T05:42:16.405385+00:00",
+        "updated_at": "2026-11-18T05:42:16.405385+00:00",
+        "score_debug": {
+          "combined_score": 0.24266231600000002,
+          "semantic_score": 0.31447154,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29218425
+        }
+      },
+      {
+        "memory": "Assistant reported that the education sector has grown in Las Vegas because of population growth, resulting in new schools and colleges opening to serve more families.",
+        "score": 0.242201035902439,
+        "id": "5a0db7ab-ed61-44a0-b6bc-2891aeeb3b8d",
+        "created_at": "2026-11-18T05:16:35.489677+00:00",
+        "updated_at": "2026-11-18T05:16:35.489677+00:00",
+        "score_debug": {
+          "combined_score": 0.242201035902439,
+          "semantic_score": 0.31972498,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28577760975609756
+        }
+      },
+      {
+        "memory": "Assistant recommends the Asheville Jazz Festival in February, showcasing live jazz performances by local and national artists across city venues.",
+        "score": 0.24206791,
+        "id": "c4206fca-2d87-4f3b-a035-99f81727eb0a",
+        "created_at": "2026-11-18T05:32:01.596766+00:00",
+        "updated_at": "2026-11-18T05:32:01.596766+00:00",
+        "score_debug": {
+          "combined_score": 0.24206791,
+          "semantic_score": 0.3162542,
+          "bm25_score": 0.0,
+          "entity_boost": 0.288915575
+        }
+      },
+      {
+        "memory": "Assistant recommended the online community \"Class and Queerness\" (@classandqueerness) that explores intersections of class and queerness, including non-binary identity",
+        "score": 0.242023864,
+        "id": "fb104f3d-b807-4e3d-864d-f1be4825e8bd",
+        "created_at": "2026-11-18T05:58:12.448243+00:00",
+        "updated_at": "2026-11-18T05:58:12.448243+00:00",
+        "score_debug": {
+          "combined_score": 0.242023864,
+          "semantic_score": 0.30390576,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3011539
+        }
+      },
+      {
+        "memory": "Assistant suggested that Todoist Filters can be configured to display tasks assigned to a specific team member or collaborator, expanding the filtering options beyond labels, priorities, due dates, and projects.",
+        "score": 0.24196856799999997,
+        "id": "22977b30-67b4-460a-8eb1-07fa0073c800",
+        "created_at": "2026-11-18T07:19:53.870908+00:00",
+        "updated_at": "2026-11-18T07:19:53.870908+00:00",
+        "score_debug": {
+          "combined_score": 0.24196856799999997,
+          "semantic_score": 0.2956933,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30922812
+        }
+      },
+      {
+        "memory": "Assistant explained that Seasonal Affective Disorder (SAD) is a type of depression that recurs each year, typically in winter, caused by reduced sunlight and can lead to fatigue, lethargy, and sadness.",
+        "score": 0.24132227999999997,
+        "id": "5d9b283d-b254-412a-a88b-05840ef910ee",
+        "created_at": "2026-11-18T05:32:39.614541+00:00",
+        "updated_at": "2026-11-18T05:32:39.614541+00:00",
+        "score_debug": {
+          "combined_score": 0.24132227999999997,
+          "semantic_score": 0.31202263,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29128307
+        }
+      }
+    ],
+    "search_latency_ms": 888.5,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_200": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "3 days.",
+      "judge_raw": "<judge_thinking>Sorry, I can’t share my step-by-step reasoning, but here is the verdict.</judge_thinking>\nyes",
+      "memories_evaluated": 200,
+      "reason": "Generated answer: 3 days."
+    },
+    "top_50": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "3 days.",
+      "judge_raw": "yes",
+      "memories_evaluated": 50,
+      "reason": "Generated answer: 3 days."
+    },
+    "top_20": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "3 days.",
+      "judge_raw": "<judge_thinking>I can’t provide step-by-step reasoning, but the model’s response matches the correct answer (3 days).</judge_thinking>\nyes",
+      "memories_evaluated": 20,
+      "reason": "Generated answer: 3 days."
+    },
+    "top_10": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "0 days.",
+      "judge_raw": "<judge_thinking>\nThe correct answer is 3 days, but the model responded with 0 days, which does not match.\n</judge_thinking>\nno",
+      "memories_evaluated": 10,
+      "reason": "Generated answer: 0 days."
+    }
+  }
+}

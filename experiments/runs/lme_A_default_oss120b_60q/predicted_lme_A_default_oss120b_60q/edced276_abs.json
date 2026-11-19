@@ -1,0 +1,2654 @@
+{
+  "question_id": "edced276_abs",
+  "question_type": "multi-session",
+  "question": "How many days did I spend in total traveling in Hawaii and in Seattle?",
+  "ground_truth_answer": "The information provided is not enough. You mentioned traveling for 10 days in Hawaii but did not mention abything about the trip to Seattle.",
+  "question_date": "2023/05/30 (Tue) 20:59",
+  "is_abstention": true,
+  "user_id": "longmemeval_edced276_abs_8da3076b",
+  "answer_session_ids": [
+    "answer_60e8941a_abs_1",
+    "answer_60e8941a_abs_2"
+  ],
+  "retrieval": {
+    "search_query": "How many days did I spend in total traveling in Hawaii and in Seattle?",
+    "search_results": [
+      {
+        "memory": "User recently returned from an island‑hopping trip to Hawaii with their family in early November 2026, describing the experience as amazing.",
+        "score": 0.8105055307038361,
+        "id": "77f539fa-e191-4d95-92a4-174c81c67725",
+        "created_at": "2026-11-18T17:07:26.995123+00:00",
+        "updated_at": "2026-11-18T17:07:26.995123+00:00",
+        "score_debug": {
+          "combined_score": 0.8105055307038361,
+          "semantic_score": 0.54247326,
+          "bm25_score": 0.9842906167096401,
+          "entity_boost": 0.4994999500499501
+        }
+      },
+      {
+        "memory": "User recently returned from an amazing island‑hopping trip to Hawaii with their family, describing the experience as wonderful.",
+        "score": 0.8038807508362696,
+        "id": "b600fa2e-0bde-455c-9adb-42ba6b624f90",
+        "created_at": "2026-11-18T17:08:54.038397+00:00",
+        "updated_at": "2026-11-18T17:08:54.038397+00:00",
+        "score_debug": {
+          "combined_score": 0.8038807508362696,
+          "semantic_score": 0.525225,
+          "bm25_score": 0.9849769270407239,
+          "entity_boost": 0.4994999500499501
+        }
+      },
+      {
+        "memory": "User plans to spend four days in Paris and three days in Rome, aiming to visit the Eiffel Tower, the Louvre, and Montmartre while in Paris, and to see the Colosseum, Vatican City, the Pantheon, and the Trevi Fountain areas while in Rome.",
+        "score": 0.7548499141009122,
+        "id": "51ce3a44-fac0-4fd4-abb6-e864f7ebe2b3",
+        "created_at": "2026-11-18T17:40:01.453003+00:00",
+        "updated_at": "2026-11-18T17:40:01.453003+00:00",
+        "score_debug": {
+          "combined_score": 0.7548499141009122,
+          "semantic_score": 0.5480112,
+          "bm25_score": 0.9996301340570612,
+          "entity_boost": 0.3394834511952191
+        }
+      },
+      {
+        "memory": "User is traveling to Los Angeles for a business trip on 2026-11-18 and is worried about the flight.",
+        "score": 0.7472874105869399,
+        "id": "8698830b-85ef-49bd-9080-063306e74ac8",
+        "created_at": "2026-11-18T17:12:01.569560+00:00",
+        "updated_at": "2026-11-18T17:12:01.569560+00:00",
+        "score_debug": {
+          "combined_score": 0.7472874105869399,
+          "semantic_score": 0.52908474,
+          "bm25_score": 0.9487709910128044,
+          "entity_boost": 0.39036279545454544
+        }
+      },
+      {
+        "memory": "User intends to spend 7–10 days in Europe, has also looked at Barcelona and Amsterdam, and definitely wants to allocate a few days in Paris to see the Eiffel Tower and the Louvre.",
+        "score": 0.7366366255289895,
+        "id": "799275cf-fdd0-4bc8-a053-92f9691adfa2",
+        "created_at": "2026-11-18T17:41:39.125589+00:00",
+        "updated_at": "2026-11-18T17:41:39.125589+00:00",
+        "score_debug": {
+          "combined_score": 0.7366366255289895,
+          "semantic_score": 0.51637197,
+          "bm25_score": 0.999691571027627,
+          "entity_boost": 0.32552802279484644
+        }
+      },
+      {
+        "memory": "User is traveling to Los Angeles for a business trip, hopes the Wi‑Fi works well on the flight, and asked for hotel recommendations near Los Angeles International Airport (LAX) and in the city centre.",
+        "score": 0.7240011893468798,
+        "id": "ebb6e179-b08a-49c2-b7fc-a1974d7770f6",
+        "created_at": "2026-11-18T17:16:52.584895+00:00",
+        "updated_at": "2026-11-18T17:16:52.584895+00:00",
+        "score_debug": {
+          "combined_score": 0.7240011893468798,
+          "semantic_score": 0.47205326,
+          "bm25_score": 0.9437457922882784,
+          "entity_boost": 0.39420392107892116
+        }
+      },
+      {
+        "memory": "User definitely wants to spend a few days in Paris, aiming to see both the Eiffel Tower and the Louvre.",
+        "score": 0.7150785760696456,
+        "id": "eba46965-0752-4bc1-af34-e2ac0b56556a",
+        "created_at": "2026-11-18T17:38:58.754828+00:00",
+        "updated_at": "2026-11-18T17:38:58.754828+00:00",
+        "score_debug": {
+          "combined_score": 0.7150785760696456,
+          "semantic_score": 0.4712402,
+          "bm25_score": 0.9994430708827756,
+          "entity_boost": 0.31701316929133855
+        }
+      },
+      {
+        "memory": "User is interested in staying connected while traveling around Japan and asked for tips on obtaining a prepaid SIM card or renting a portable Wi‑Fi hotspot.",
+        "score": 0.7067085206721482,
+        "id": "c147f2d7-f417-4fd1-bbdb-c3d6a4966475",
+        "created_at": "2026-11-18T18:33:13.087106+00:00",
+        "updated_at": "2026-11-18T18:33:13.087106+00:00",
+        "score_debug": {
+          "combined_score": 0.7067085206721482,
+          "semantic_score": 0.5058261,
+          "bm25_score": 0.9448892016803708,
+          "entity_boost": 0.31605599999999995
+        }
+      },
+      {
+        "memory": "User hopes the in‑flight entertainment system works properly on their American Airlines flight from New York to Los Angeles on 2026‑11‑18, as they travel for a business trip.",
+        "score": 0.6930819981750016,
+        "id": "2bd02d10-4406-4d03-9911-1815adb05c59",
+        "created_at": "2026-11-18T17:15:16.222858+00:00",
+        "updated_at": "2026-11-18T17:15:16.222858+00:00",
+        "score_debug": {
+          "combined_score": 0.6930819981750016,
+          "semantic_score": 0.4582359,
+          "bm25_score": 0.8705727633911721,
+          "entity_boost": 0.403896332046332
+        }
+      },
+      {
+        "memory": "User believes that traveling between European cities is relatively easy and affordable.",
+        "score": 0.688748788693426,
+        "id": "65665b71-6b60-4f8c-8e29-c81875d9fa17",
+        "created_at": "2026-11-18T17:41:39.128633+00:00",
+        "updated_at": "2026-11-18T17:41:39.128633+00:00",
+        "score_debug": {
+          "combined_score": 0.688748788693426,
+          "semantic_score": 0.43341792,
+          "bm25_score": 0.9503777280572414,
+          "entity_boost": 0.33807632367632373
+        }
+      },
+      {
+        "memory": "Assistant offered travel tips: purchase a Japan Rail Pass, book accommodations and transport in advance, learn basic Japanese phrases, expect crowds at popular sites, and consider traveling in the shoulder seasons of April‑May or September‑October for milder weather and fewer crowds.",
+        "score": 0.6828879959111152,
+        "id": "c6680137-c40d-43a1-bb7f-8ab8a4884ef6",
+        "created_at": "2026-11-18T18:32:25.714660+00:00",
+        "updated_at": "2026-11-18T18:32:25.714660+00:00",
+        "score_debug": {
+          "combined_score": 0.6828879959111152,
+          "semantic_score": 0.45008254,
+          "bm25_score": 0.959672849777788,
+          "entity_boost": 0.2974646
+        }
+      },
+      {
+        "memory": "Assistant provided a 7-10 day itinerary: Days 1-3 in Paris (Louvre, Eiffel Tower, Montmartre, Seine River cruise, Notre‑Dam, French cuisine and wine); Days 4-6 in Rome (Colosseum, Roman Forum, Pantheon, Vatican City, Vatican Museums, St. Peter's Basilica, Italian food and gelato); Days 7-10 optional Barcelona or Amsterdam to explore their attractions, culture, and food.",
+        "score": 0.6711481363311362,
+        "id": "f3fc0efc-e5b6-4274-9f16-f98f6a1cb728",
+        "created_at": "2026-11-18T17:38:58.774360+00:00",
+        "updated_at": "2026-11-18T17:38:58.774360+00:00",
+        "score_debug": {
+          "combined_score": 0.6711481363311362,
+          "semantic_score": 0.48542383,
+          "bm25_score": 0.8168170858278405,
+          "entity_boost": 0.375629425
+        }
+      },
+      {
+        "memory": "Assistant explained that traveling between European cities is easy and affordable, highlighting options such as trains, low‑cost airlines (e.g., Ryanair, EasyJet), intercity buses (e.g., FlixBus), car‑sharing or rental services (e.g., BlaBlaCar, Europcar), and ferries for coastal routes.",
+        "score": 0.6625280995307046,
+        "id": "9785e3df-feec-4bc0-9431-b02be0c9371a",
+        "created_at": "2026-11-18T17:39:28.494861+00:00",
+        "updated_at": "2026-11-18T17:39:28.494861+00:00",
+        "score_debug": {
+          "combined_score": 0.6625280995307046,
+          "semantic_score": 0.37102926,
+          "bm25_score": 0.9414129388267614,
+          "entity_boost": 0.34387805
+        }
+      },
+      {
+        "memory": "User is planning a road trip covering approximately 240 miles, intending to travel this distance in the near future.",
+        "score": 0.6608133102170266,
+        "id": "2d17aa08-a9ac-4826-8d3a-a58af1748300",
+        "created_at": "2026-11-18T18:11:50.602699+00:00",
+        "updated_at": "2026-11-18T18:11:50.602699+00:00",
+        "score_debug": {
+          "combined_score": 0.6608133102170266,
+          "semantic_score": 0.46342105,
+          "bm25_score": 0.8705727633911721,
+          "entity_boost": 0.31803946215139445
+        }
+      },
+      {
+        "memory": "User decided to focus travel plans on Paris and Rome for the upcoming European trip, while keeping the option open to add a third destination later.",
+        "score": 0.6590701033959865,
+        "id": "7849d5cb-204d-4104-b366-de41717a8bca",
+        "created_at": "2026-11-18T17:39:28.489593+00:00",
+        "updated_at": "2026-11-18T17:39:28.489593+00:00",
+        "score_debug": {
+          "combined_score": 0.6590701033959865,
+          "semantic_score": 0.4507438,
+          "bm25_score": 0.8686950884899665,
+          "entity_boost": 0.32823637
+        }
+      },
+      {
+        "memory": "Assistant advised transportation options across Japan, noting that trains are extensive and recommending a Japan Rail Pass for unlimited travel, while buses provide budget‑friendly short‑distance trips and flights are useful for longer distances such as Tokyo to Hiroshima.",
+        "score": 0.6590564552493602,
+        "id": "b3949e80-c34c-4a94-8b0c-62956b813299",
+        "created_at": "2026-11-18T18:32:25.711408+00:00",
+        "updated_at": "2026-11-18T18:32:25.711408+00:00",
+        "score_debug": {
+          "combined_score": 0.6590564552493602,
+          "semantic_score": 0.43457907,
+          "bm25_score": 0.8532084077648345,
+          "entity_boost": 0.35985366035856575
+        }
+      },
+      {
+        "memory": "Assistant noted that transportation prices may be higher during peak travel seasons, specifically June to August and December.",
+        "score": 0.6590424862094966,
+        "id": "70aa37b2-6427-4672-9760-069e310f5aa0",
+        "created_at": "2026-11-18T17:39:28.500779+00:00",
+        "updated_at": "2026-11-18T17:39:28.500779+00:00",
+        "score_debug": {
+          "combined_score": 0.6590424862094966,
+          "semantic_score": 0.43470716,
+          "bm25_score": 0.8779491055237415,
+          "entity_boost": 0.33494995
+        }
+      },
+      {
+        "memory": "Assistant proposed a detailed four‑day Paris itinerary: Day 1 arrival, hostel check‑in, visit the Eiffel Tower and walk Champ de Mars, optional Seine River cruise; Day 2 Louvre Museum, Palais‑Royal gardens, Latin Quarter stroll, dinner at a French bistro; Day 3 explore Montmartre, including Sacré‑Cœur, Place du Tertre, and a café break; Day 4 optional day trip to the Palace of Versailles or alternative sights such as Musée d’Orsay, Arc de Triomphe, or the Marais.",
+        "score": 0.6498536937089165,
+        "id": "62e3f446-f474-4c07-b00d-3fb92f198d4a",
+        "created_at": "2026-11-18T17:40:01.458318+00:00",
+        "updated_at": "2026-11-18T17:40:01.458318+00:00",
+        "score_debug": {
+          "combined_score": 0.6498536937089165,
+          "semantic_score": 0.40677947,
+          "bm25_score": 0.8309060142722913,
+          "entity_boost": 0.38694875
+        }
+      },
+      {
+        "memory": "User values flexibility in travel; during a recent 10‑day family vacation they had to plan everything far in advance, which made it hard to adjust plans on the fly.",
+        "score": 0.6472724605675346,
+        "id": "24e6761d-b712-4114-8b3e-603b50007abd",
+        "created_at": "2026-11-18T17:07:45.718028+00:00",
+        "updated_at": "2026-11-18T17:07:45.718028+00:00",
+        "score_debug": {
+          "combined_score": 0.6472724605675346,
+          "semantic_score": 0.42337364,
+          "bm25_score": 0.8742880808494059,
+          "entity_boost": 0.3205194305694306
+        }
+      },
+      {
+        "memory": "Assistant recommended several destinations well‑suited for solo travelers: New Zealand, Iceland, Thailand, Costa Rica, Japan, Portugal, and Croatia, noting their strong tourism infrastructure, easy transport, affordable hostels, and active solo‑traveler communities.",
+        "score": 0.6462119431059338,
+        "id": "815415ba-17f7-4ade-8922-8269ef09c3f4",
+        "created_at": "2026-11-18T17:07:45.721297+00:00",
+        "updated_at": "2026-11-18T17:07:45.721297+00:00",
+        "score_debug": {
+          "combined_score": 0.6462119431059338,
+          "semantic_score": 0.37248325,
+          "bm25_score": 0.8532084077648345,
+          "entity_boost": 0.3898382
+        }
+      },
+      {
+        "memory": "User typically relies on the Google Maps application to locate nearby gas stations while traveling, appreciating its real‑time traffic updates and price estimates.",
+        "score": 0.6425154631634247,
+        "id": "a5132e15-da22-49fc-8a04-6ef163133b37",
+        "created_at": "2026-11-18T18:11:50.607425+00:00",
+        "updated_at": "2026-11-18T18:11:50.607425+00:00",
+        "score_debug": {
+          "combined_score": 0.6425154631634247,
+          "semantic_score": 0.33999664,
+          "bm25_score": 0.9454551679085615,
+          "entity_boost": 0.32083685
+        }
+      },
+      {
+        "memory": "Assistant noted that travel between Paris and Rome can be arranged by train, bus, or flight, and offered to provide specific budget-friendly options for each mode.",
+        "score": 0.6394228624069394,
+        "id": "39966ff2-2f42-4d61-9a7e-0070c2cd557e",
+        "created_at": "2026-11-18T17:40:01.474677+00:00",
+        "updated_at": "2026-11-18T17:40:01.474677+00:00",
+        "score_debug": {
+          "combined_score": 0.6394228624069394,
+          "semantic_score": 0.42700642,
+          "bm25_score": 0.8705727633911721,
+          "entity_boost": 0.3009779726261762
+        }
+      },
+      {
+        "memory": "User’s draft itinerary includes 4 days in Paris (Eiffel Tower, Louvre, Montmartre) and 3 days in Rome (Colosseum, Vatican City, Pantheon, Trevi Fountain).",
+        "score": 0.6368328850115036,
+        "id": "4a40cc7b-1bb4-4a72-b93f-39528d5424ef",
+        "created_at": "2026-11-18T17:41:39.131407+00:00",
+        "updated_at": "2026-11-18T17:41:39.131407+00:00",
+        "score_debug": {
+          "combined_score": 0.6368328850115036,
+          "semantic_score": 0.49288324,
+          "bm25_score": 0.7597155213335398,
+          "entity_boost": 0.3394834511952191
+        }
+      },
+      {
+        "memory": "User met colleague Rachel at the City Art Museum café at 10 am on Saturday, March 12, 2026, and they spent about two and a half hours together viewing the Impressionist Masters exhibit.",
+        "score": 0.626959797179661,
+        "id": "48dd1ae5-6227-4f58-be89-61d19a37d08a",
+        "created_at": "2026-11-18T18:12:15.938230+00:00",
+        "updated_at": "2026-11-18T18:12:15.938230+00:00",
+        "score_debug": {
+          "combined_score": 0.626959797179661,
+          "semantic_score": 0.3348618,
+          "bm25_score": 0.9097505550870146,
+          "entity_boost": 0.3227871378621379
+        }
+      },
+      {
+        "memory": "Assistant recommended New Zealand as a popular destination that is well‑suited for solo travelers because of its natural beauty and adventure opportunities.",
+        "score": 0.621958295866867,
+        "id": "4dde6fd0-0099-4d1d-a6c7-15f25797c30c",
+        "created_at": "2026-11-18T17:08:54.048366+00:00",
+        "updated_at": "2026-11-18T17:08:54.048366+00:00",
+        "score_debug": {
+          "combined_score": 0.621958295866867,
+          "semantic_score": 0.30690017,
+          "bm25_score": 0.8779491055237415,
+          "entity_boost": 0.3700464641434263
+        }
+      },
+      {
+        "memory": "Assistant outlined the pros of solo travel: flexibility to set your own itinerary, independence, opportunities to meet new people, personal growth in confidence and self‑awareness, and cost‑effectiveness.",
+        "score": 0.6172180917181072,
+        "id": "0446e98c-cd1c-4047-a127-6be535c428d6",
+        "created_at": "2026-11-18T17:07:27.002355+00:00",
+        "updated_at": "2026-11-18T17:07:27.002355+00:00",
+        "score_debug": {
+          "combined_score": 0.6172180917181072,
+          "semantic_score": 0.32064837,
+          "bm25_score": 0.8705727633911721,
+          "entity_boost": 0.3518240959040959
+        }
+      },
+      {
+        "memory": "Assistant outlined a three‑day Rome itinerary: Day 5 visit the Colosseum, explore the Roman Forum and Palatine Hill, followed by lunch at a trattoria; Day 6 tour Vatican City, including the Vatican Museums, St Peter’s Basilica, Vatican Gardens, and the Sistine Chapel, then wander Trastevere; Day 7 see the Pantheon, stroll Piazza Navona, visit the Trevi Fountain, and enjoy an Italian dinner.",
+        "score": 0.6089988237436443,
+        "id": "5b77072f-bee0-4718-a47a-471e3542aa6d",
+        "created_at": "2026-11-18T17:40:01.462901+00:00",
+        "updated_at": "2026-11-18T17:40:01.462901+00:00",
+        "score_debug": {
+          "combined_score": 0.6089988237436443,
+          "semantic_score": 0.37499005,
+          "bm25_score": 0.7865348593591108,
+          "entity_boost": 0.36097215
+        }
+      },
+      {
+        "memory": "Assistant outlined the cons of solo travel: potential loneliness, safety concerns especially for women or in unfamiliar places, and the lack of shared real‑time experiences.",
+        "score": 0.6070723713564689,
+        "id": "de309b49-bd5d-4e90-bade-fe1c1b8d9186",
+        "created_at": "2026-11-18T17:07:27.004943+00:00",
+        "updated_at": "2026-11-18T17:07:27.004943+00:00",
+        "score_debug": {
+          "combined_score": 0.6070723713564689,
+          "semantic_score": 0.30704364,
+          "bm25_score": 0.8705727633911721,
+          "entity_boost": 0.340064525
+        }
+      },
+      {
+        "memory": "Assistant recommended travel budgeting tips: set a realistic budget, plan ahead and book early, use hostels or budget lodging, eat at local cafés or cook, use public transport or walk, seek free activities, track expenses with apps like Trail Wallet or Mint, use no-foreign-fee cards, pack light to avoid baggage fees, and stay flexible with itinerary.",
+        "score": 0.6024134378871194,
+        "id": "4ca7ba6b-723b-490f-9237-eed2303fe56d",
+        "created_at": "2026-11-18T17:37:47.434512+00:00",
+        "updated_at": "2026-11-18T17:37:47.434512+00:00",
+        "score_debug": {
+          "combined_score": 0.6024134378871194,
+          "semantic_score": 0.3454053,
+          "bm25_score": 0.8090443447177985,
+          "entity_boost": 0.35158395
+        }
+      },
+      {
+        "memory": "User is planning another trip soon and recently returned around 2026-11-17 from a solo five-day visit to New York City, where they saved money by staying at a hostel and eating at local cafés.",
+        "score": 0.5992486068433318,
+        "id": "2f0f0b0d-bf4c-45b6-a99e-7be03a288603",
+        "created_at": "2026-11-18T17:37:47.430272+00:00",
+        "updated_at": "2026-11-18T17:37:47.430272+00:00",
+        "score_debug": {
+          "combined_score": 0.5992486068433318,
+          "semantic_score": 0.51352704,
+          "bm25_score": 0.5806981450619975,
+          "entity_boost": 0.403896332046332
+        }
+      },
+      {
+        "memory": "Assistant highlighted several pros of solo travel, including flexibility to change itineraries on a whim, independence to follow personal interests, and the ability to create a custom schedule without consulting others.",
+        "score": 0.5988782940300812,
+        "id": "d1c85994-d084-45be-a1bf-847e34a6c34b",
+        "created_at": "2026-11-18T17:08:54.043440+00:00",
+        "updated_at": "2026-11-18T17:08:54.043440+00:00",
+        "score_debug": {
+          "combined_score": 0.5988782940300812,
+          "semantic_score": 0.2843181,
+          "bm25_score": 0.8610535391711072,
+          "entity_boost": 0.3518240959040959
+        }
+      },
+      {
+        "memory": "Assistant summarized that Ellington's music reflects the world around him, synthesizing diverse experiences, travels, and cultural encounters into timeless works that tell stories of his life and era.",
+        "score": 0.574027663595382,
+        "id": "699828a6-c501-4a87-9f3e-8e831bf59c60",
+        "created_at": "2026-11-18T16:59:05.575084+00:00",
+        "updated_at": "2026-11-18T16:59:05.575084+00:00",
+        "score_debug": {
+          "combined_score": 0.574027663595382,
+          "semantic_score": 0.22526425,
+          "bm25_score": 0.8649002455738207,
+          "entity_boost": 0.34490466341463416
+        }
+      },
+      {
+        "memory": "User plans to stay in Europe for approximately 7-10 days in the near future for the upcoming trip.",
+        "score": 0.5627036566784174,
+        "id": "e2b47d8b-fbc3-4879-b8d2-03a9acaa703d",
+        "created_at": "2026-11-18T17:38:58.750210+00:00",
+        "updated_at": "2026-11-18T17:38:58.750210+00:00",
+        "score_debug": {
+          "combined_score": 0.5627036566784174,
+          "semantic_score": 0.46873474,
+          "bm25_score": 0.6200967737432876,
+          "entity_boost": 0.3179276279527559
+        }
+      },
+      {
+        "memory": "User is planning their next trip and is weighing the pros and cons of traveling solo versus with family.",
+        "score": 0.5588780047543975,
+        "id": "c80bd31e-0d65-4d0f-88d3-f1fc117c8135",
+        "created_at": "2026-11-18T17:08:54.040692+00:00",
+        "updated_at": "2026-11-18T17:08:54.040692+00:00",
+        "score_debug": {
+          "combined_score": 0.5588780047543975,
+          "semantic_score": 0.44896716,
+          "bm25_score": 0.9482278518859937,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is planning their next trip and is undecided between traveling solo or with family, asking for the pros and cons of each option.",
+        "score": 0.5553999752317476,
+        "id": "40a52a5a-e203-4af7-92e0-6dbd0cb04000",
+        "created_at": "2026-11-18T17:07:26.997592+00:00",
+        "updated_at": "2026-11-18T17:07:26.997592+00:00",
+        "score_debug": {
+          "combined_score": 0.5553999752317476,
+          "semantic_score": 0.44081903,
+          "bm25_score": 0.9476809080793688,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant estimates portable Wi‑Fi hotspot rental fees at roughly ¥500‑¥1,000 per day (approximately $4.50‑$9 USD).",
+        "score": 0.5400840568791231,
+        "id": "1a22a67a-0fde-4f65-97dd-69fad0826b19",
+        "created_at": "2026-11-18T18:33:13.105048+00:00",
+        "updated_at": "2026-11-18T18:33:13.105048+00:00",
+        "score_debug": {
+          "combined_score": 0.5400840568791231,
+          "semantic_score": 0.38326687,
+          "bm25_score": 0.6262675479220834,
+          "entity_boost": 0.34067572427572435
+        }
+      },
+      {
+        "memory": "User is planning another trip soon and is seeking budgeting tips for the upcoming travel.",
+        "score": 0.536696383516919,
+        "id": "df171eb5-e20e-4ca3-bf0c-35d55a371167",
+        "created_at": "2026-11-18T17:41:39.119966+00:00",
+        "updated_at": "2026-11-18T17:41:39.119966+00:00",
+        "score_debug": {
+          "combined_score": 0.536696383516919,
+          "semantic_score": 0.4619819,
+          "bm25_score": 0.8797590587922972,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advised keeping a weekly running total of saved money and allocating the savings toward treats or larger financial goals, complementing the Savings Tracker page.",
+        "score": 0.5143377042708449,
+        "id": "175568e8-40ca-47c1-84fe-9809ecbaed5c",
+        "created_at": "2026-11-18T18:07:04.724105+00:00",
+        "updated_at": "2026-11-18T18:07:04.724105+00:00",
+        "score_debug": {
+          "combined_score": 0.5143377042708449,
+          "semantic_score": 0.36144266,
+          "bm25_score": 0.9244016006771123,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested adding a Savings Tracker page that records the date, amount saved, and the specific coupon or offer used to maintain a running total",
+        "score": 0.5025103646820193,
+        "id": "8a9761f3-0676-4126-b8f8-f5d7b2bbeeae",
+        "created_at": "2026-11-18T18:05:07.778761+00:00",
+        "updated_at": "2026-11-18T18:05:07.778761+00:00",
+        "score_debug": {
+          "combined_score": 0.5025103646820193,
+          "semantic_score": 0.3269656,
+          "bm25_score": 0.9293103117050481,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant listed the pros of traveling with family: shared experiences that create lasting memories, increased safety, diverse perspectives that enrich the trip, built‑in emotional support, and cost‑sharing on accommodations and activities.",
+        "score": 0.4973486233415471,
+        "id": "e18e9cb6-997a-421c-a00a-cd72af2765d7",
+        "created_at": "2026-11-18T17:07:27.008088+00:00",
+        "updated_at": "2026-11-18T17:07:27.008088+00:00",
+        "score_debug": {
+          "combined_score": 0.4973486233415471,
+          "semantic_score": 0.30020323,
+          "bm25_score": 0.9431683283538678,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant listed the cons of traveling with family: need for compromise, reduced flexibility due to group scheduling, differing interests or energy levels that may cause conflict, and the requirement for more extensive planning.",
+        "score": 0.49423313134154706,
+        "id": "bb83d894-934c-40bd-92ab-1d4771eae1c4",
+        "created_at": "2026-11-18T17:07:27.010906+00:00",
+        "updated_at": "2026-11-18T17:07:27.010906+00:00",
+        "score_debug": {
+          "combined_score": 0.49423313134154706,
+          "semantic_score": 0.2924145,
+          "bm25_score": 0.9431683283538678,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended the GasBuddy app as a useful tool for locating inexpensive gas, comparing station prices, and tracking personal fuel efficiency during travel.",
+        "score": 0.49422386288444836,
+        "id": "7f29af23-3a0d-4dd8-8247-5ab557d0c3f9",
+        "created_at": "2026-11-18T18:11:50.614945+00:00",
+        "updated_at": "2026-11-18T18:11:50.614945+00:00",
+        "score_debug": {
+          "combined_score": 0.49422386288444836,
+          "semantic_score": 0.37257636,
+          "bm25_score": 0.8629832972111209,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested using a debt repayment calculator to model how different payoff strategies would affect the repayment timeline and total interest paid",
+        "score": 0.48515853808559806,
+        "id": "edec341f-f722-40f4-877c-662ebcfd6452",
+        "created_at": "2026-11-18T18:07:56.456930+00:00",
+        "updated_at": "2026-11-18T18:07:56.456930+00:00",
+        "score_debug": {
+          "combined_score": 0.48515853808559806,
+          "semantic_score": 0.28120768,
+          "bm25_score": 0.9316886652139952,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User decided to try morning meditation first and scheduled a 30‑minute meditation session for 7:00 AM on Saturday, hoping it will help establish a consistent wake‑up time and start the day with a clear, focused mind.",
+        "score": 0.4825709999842111,
+        "id": "4d7e0e64-d298-4cbf-a501-c111d2b60106",
+        "created_at": "2026-11-18T18:01:48.346403+00:00",
+        "updated_at": "2026-11-18T18:01:48.346403+00:00",
+        "score_debug": {
+          "combined_score": 0.4825709999842111,
+          "semantic_score": 0.33710337,
+          "bm25_score": 0.5956909062763172,
+          "entity_boost": 0.2736332236842105
+        }
+      },
+      {
+        "memory": "Assistant recommended the Debt Avalanche method: pay off the debt with the highest interest rate first while making minimum payments on other debts to minimize total interest paid",
+        "score": 0.4758482886345846,
+        "id": "050a066f-6cf0-4d39-9cd2-2ebb4f40a46f",
+        "created_at": "2026-11-18T18:07:56.444140+00:00",
+        "updated_at": "2026-11-18T18:07:56.444140+00:00",
+        "score_debug": {
+          "combined_score": 0.4758482886345846,
+          "semantic_score": 0.26273948,
+          "bm25_score": 0.9268812415864616,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Mrs. Meyer's Clean Day detergent costs $5–$10 per bottle (40–80 loads). It is sold at Target, Walmart, Bed Bath & Beyond, and online through Amazon, Thrive Market, and the brand’s website.",
+        "score": 0.46002994429523464,
+        "id": "5eda98da-ee05-40a1-b034-d3e090a7af40",
+        "created_at": "2026-11-18T16:46:41.006500+00:00",
+        "updated_at": "2026-11-18T16:46:41.006500+00:00",
+        "score_debug": {
+          "combined_score": 0.46002994429523464,
+          "semantic_score": 0.19960102,
+          "bm25_score": 0.5987150495292952,
+          "entity_boost": 0.3517587912087913
+        }
+      },
+      {
+        "memory": "Assistant suggested an optional day trip from Paris to the Palace of Versailles, recommending advance ticket purchase for the visit.",
+        "score": 0.4165058366694513,
+        "id": "c62a1998-0e23-49ce-98b9-a9fc32345838",
+        "created_at": "2026-11-18T17:40:01.467473+00:00",
+        "updated_at": "2026-11-18T17:40:01.467473+00:00",
+        "score_debug": {
+          "combined_score": 0.4165058366694513,
+          "semantic_score": 0.4273126,
+          "bm25_score": 0.6139519916736284,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggests using rest days to relax, recharge, and review the script or music.",
+        "score": 0.3887493674767803,
+        "id": "c1a78389-a8c2-46f4-b681-fe1060a9355f",
+        "created_at": "2026-11-18T16:51:02.784903+00:00",
+        "updated_at": "2026-11-18T16:51:02.784903+00:00",
+        "score_debug": {
+          "combined_score": 0.3887493674767803,
+          "semantic_score": 0.34251148,
+          "bm25_score": 0.6293619386919508,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advises setting aside time on the days leading up to performances to visualize success and rehearse any tricky scenes or moments.",
+        "score": 0.38019996862264505,
+        "id": "c49a16a9-2265-427f-b345-cb2db2b65311",
+        "created_at": "2026-11-18T16:51:02.787228+00:00",
+        "updated_at": "2026-11-18T16:51:02.787228+00:00",
+        "score_debug": {
+          "combined_score": 0.38019996862264505,
+          "semantic_score": 0.34266523,
+          "bm25_score": 0.6078346915566126,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended that a beginner might start with a morning meditation practice to set a positive tone for the day, but also suggested experimenting with both morning and evening sessions to see what feels best.",
+        "score": 0.3696180598117181,
+        "id": "6d15ee3c-18e6-4e50-973f-1e389bf7fcef",
+        "created_at": "2026-11-18T18:01:35.619393+00:00",
+        "updated_at": "2026-11-18T18:01:35.619393+00:00",
+        "score_debug": {
+          "combined_score": 0.3696180598117181,
+          "semantic_score": 0.3253301,
+          "bm25_score": 0.5987150495292952,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User recently returned from a solo five‑day trip to New York City in early November 2026, stayed in a hostel and ate at local cafés, which allowed them to save a lot of money.",
+        "score": 0.3640603528185328,
+        "id": "361eb13b-2deb-43a5-a933-12cd7ae6aa0b",
+        "created_at": "2026-11-18T17:41:39.117902+00:00",
+        "updated_at": "2026-11-18T17:41:39.117902+00:00",
+        "score_debug": {
+          "combined_score": 0.3640603528185328,
+          "semantic_score": 0.50625455,
+          "bm25_score": 0.0,
+          "entity_boost": 0.403896332046332
+        }
+      },
+      {
+        "memory": "User is flying from New York to Los Angeles on 2026-11-18 for a business trip and hopes to get work done during the flight.",
+        "score": 0.3578404128185328,
+        "id": "fbec2027-521e-4808-a30b-b6706edde8c4",
+        "created_at": "2026-11-18T17:12:32.108616+00:00",
+        "updated_at": "2026-11-18T17:12:32.108616+00:00",
+        "score_debug": {
+          "combined_score": 0.3578404128185328,
+          "semantic_score": 0.4907047,
+          "bm25_score": 0.0,
+          "entity_boost": 0.403896332046332
+        }
+      },
+      {
+        "memory": "User's trip to Japan is scheduled for a duration of two weeks later this year.",
+        "score": 0.34880079999999997,
+        "id": "4efa7ca4-4b83-450c-8665-4b7b333be3d7",
+        "created_at": "2026-11-18T18:32:25.695435+00:00",
+        "updated_at": "2026-11-18T18:32:25.695435+00:00",
+        "score_debug": {
+          "combined_score": 0.34880079999999997,
+          "semantic_score": 0.555946,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31605599999999995
+        }
+      },
+      {
+        "memory": "User is more interested in adventure activities and asked for recommendations in Auckland and Wellington.",
+        "score": 0.3438356684210526,
+        "id": "fb24705b-5e5e-4062-aafb-35abea76659e",
+        "created_at": "2026-11-18T17:24:54.067630+00:00",
+        "updated_at": "2026-11-18T17:24:54.067630+00:00",
+        "score_debug": {
+          "combined_score": 0.3438356684210526,
+          "semantic_score": 0.513452,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34613717105263153
+        }
+      },
+      {
+        "memory": "User hopes the Wi‑Fi on their American Airlines business‑trip flight from New York to Los Angeles on 2026‑11‑18 functions reliably.",
+        "score": 0.3435891408185328,
+        "id": "f0c08a46-fcb5-4605-898e-5fda910df5ea",
+        "created_at": "2026-11-18T17:13:55.152310+00:00",
+        "updated_at": "2026-11-18T17:13:55.152310+00:00",
+        "score_debug": {
+          "combined_score": 0.3435891408185328,
+          "semantic_score": 0.45507652,
+          "bm25_score": 0.0,
+          "entity_boost": 0.403896332046332
+        }
+      },
+      {
+        "memory": "User is seated in seat 17C on an American Airlines flight from New York to Los Angeles on 2026-11-18 and hopes the seat has a USB port.",
+        "score": 0.3378685488185328,
+        "id": "f778e1d5-14ca-47ab-aa28-77a8d02f7812",
+        "created_at": "2026-11-18T17:13:20.324691+00:00",
+        "updated_at": "2026-11-18T17:13:20.324691+00:00",
+        "score_debug": {
+          "combined_score": 0.3378685488185328,
+          "semantic_score": 0.44077504,
+          "bm25_score": 0.0,
+          "entity_boost": 0.403896332046332
+        }
+      },
+      {
+        "memory": "Assistant suggested alternative lodging options such as serviced apartments or boutique hotels in Santa Monica, Beverly Hills, or West Hollywood for a more local experience.",
+        "score": 0.33629761199999997,
+        "id": "4e90f9fb-7390-4d29-a7b9-b7841e8bbe98",
+        "created_at": "2026-11-18T17:13:55.160896+00:00",
+        "updated_at": "2026-11-18T17:13:55.160896+00:00",
+        "score_debug": {
+          "combined_score": 0.33629761199999997,
+          "semantic_score": 0.44647318,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39427085
+        }
+      },
+      {
+        "memory": "Assistant recommends scheduling the cast party for after the final performance, either the same evening or the next day, ideally around 6 – 8 pm.",
+        "score": 0.3346773886694513,
+        "id": "96570907-7a61-498b-9b7d-3b1e7ba0a212",
+        "created_at": "2026-11-18T16:51:36.982130+00:00",
+        "updated_at": "2026-11-18T16:51:36.982130+00:00",
+        "score_debug": {
+          "combined_score": 0.3346773886694513,
+          "semantic_score": 0.22274148,
+          "bm25_score": 0.6139519916736284,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User plans to visit Kyoto and other recommended destinations during their two‑week Japan trip later this year.",
+        "score": 0.3252734450866142,
+        "id": "8d9d0442-8d91-455c-992a-e34b62467476",
+        "created_at": "2026-11-18T18:33:13.084253+00:00",
+        "updated_at": "2026-11-18T18:33:13.084253+00:00",
+        "score_debug": {
+          "combined_score": 0.3252734450866142,
+          "semantic_score": 0.45550972,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35767389271653544
+        }
+      },
+      {
+        "memory": "Assistant suggested several top‑rated coffee shops located in downtown Los Angeles near popular hotels such as The Ritz‑Carlton and The Westin, to meet the user’s need for coffee during the business trip.",
+        "score": 0.3252187905414586,
+        "id": "fc08e1c7-f054-4aa4-9d9b-c5c6da9ba8d9",
+        "created_at": "2026-11-18T17:16:52.604945+00:00",
+        "updated_at": "2026-11-18T17:16:52.604945+00:00",
+        "score_debug": {
+          "combined_score": 0.3252187905414586,
+          "semantic_score": 0.41245833,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40058864635364644
+        }
+      },
+      {
+        "memory": "User asked whether the Zara location in Chicago has any upcoming fashion shows or events.",
+        "score": 0.3246446572908367,
+        "id": "bc30671d-8286-4f2f-a99a-d31559fec254",
+        "created_at": "2026-11-18T17:45:52.822425+00:00",
+        "updated_at": "2026-11-18T17:45:52.822425+00:00",
+        "score_debug": {
+          "combined_score": 0.3246446572908367,
+          "semantic_score": 0.38468495,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42692669322709165
+        }
+      },
+      {
+        "memory": "Assistant suggests renting portable Wi‑Fi hotspots from providers such as Japan WiFi, Wi2, and Sakura Mobile, with pickup available at airports or delivery to the hotel.",
+        "score": 0.322490002,
+        "id": "9ba6726c-90cd-4ed8-a355-02dbfde287de",
+        "created_at": "2026-11-18T18:33:13.102858+00:00",
+        "updated_at": "2026-11-18T18:33:13.102858+00:00",
+        "score_debug": {
+          "combined_score": 0.322490002,
+          "semantic_score": 0.45663983,
+          "bm25_score": 0.0,
+          "entity_boost": 0.349585175
+        }
+      },
+      {
+        "memory": "Assistant suggested a compromise: consider a shorter solo trip now followed by a family trip later in the year.",
+        "score": 0.31990798,
+        "id": "523eed59-6c6e-4e1f-8806-8e08620635b0",
+        "created_at": "2026-11-18T17:07:27.013176+00:00",
+        "updated_at": "2026-11-18T17:07:27.013176+00:00",
+        "score_debug": {
+          "combined_score": 0.31990798,
+          "semantic_score": 0.4631724,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33659755
+        }
+      },
+      {
+        "memory": "Assistant advised training tips: start with lighter weights and progress gradually, prioritize proper form over load, engage the core by drawing the belly button toward the spine, train 2‑3 times weekly with at least one rest day, warm up before and cool down after sessions, and stay patient, consistent, and gentle with the body.",
+        "score": 0.31916586895924237,
+        "id": "f48bd792-c9e5-490d-b2db-78be375ccfbe",
+        "created_at": "2026-11-18T17:03:04.510596+00:00",
+        "updated_at": "2026-11-18T17:03:04.510596+00:00",
+        "score_debug": {
+          "combined_score": 0.31916586895924237,
+          "semantic_score": 0.24071789,
+          "bm25_score": 0.5571967823981059,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is interested in exploring destinations outside Tokyo, with a particular focus on visiting Kyoto.",
+        "score": 0.3189395526315789,
+        "id": "a6d34641-6c8a-4caa-b934-ab83874a46bf",
+        "created_at": "2026-11-18T18:32:25.697551+00:00",
+        "updated_at": "2026-11-18T18:32:25.697551+00:00",
+        "score_debug": {
+          "combined_score": 0.3189395526315789,
+          "semantic_score": 0.44794625,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34940263157894735
+        }
+      },
+      {
+        "memory": "User plans to visit Shinjuku Gyoen National Garden during their upcoming two‑week trip to Japan.",
+        "score": 0.31829557447104245,
+        "id": "b4495c8e-47fe-4e07-9e92-44bd812f28e6",
+        "created_at": "2026-11-18T18:32:25.693216+00:00",
+        "updated_at": "2026-11-18T18:32:25.693216+00:00",
+        "score_debug": {
+          "combined_score": 0.31829557447104245,
+          "semantic_score": 0.44813633,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3476026061776062
+        }
+      },
+      {
+        "memory": "Northern Explorer Train is a scenic train journey that connects Auckland and Wellington on the North Island, passing through spectacular landscapes.",
+        "score": 0.3172431632755906,
+        "id": "fc95cdac-c12a-497c-96b8-42b3ce57fed9",
+        "created_at": "2026-11-18T17:23:41.849218+00:00",
+        "updated_at": "2026-11-18T17:23:41.849218+00:00",
+        "score_debug": {
+          "combined_score": 0.3172431632755906,
+          "semantic_score": 0.40139592,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3917119881889764
+        }
+      },
+      {
+        "memory": "Assistant recommended hostels as an excellent and affordable accommodation option throughout Europe, similar to the user’s positive experience in New York City.",
+        "score": 0.3165540928185328,
+        "id": "1bf00db2-4a46-4d7c-a42a-84988429f7bb",
+        "created_at": "2026-11-18T17:41:39.142882+00:00",
+        "updated_at": "2026-11-18T17:41:39.142882+00:00",
+        "score_debug": {
+          "combined_score": 0.3165540928185328,
+          "semantic_score": 0.3874889,
+          "bm25_score": 0.0,
+          "entity_boost": 0.403896332046332
+        }
+      },
+      {
+        "memory": "User asked for recommendations for good coffee shops near their Los Angeles hotel to get a caffeine boost for upcoming meetings.",
+        "score": 0.3162076381818182,
+        "id": "09c3984b-58f9-4270-808b-84f84100ca59",
+        "created_at": "2026-11-18T17:16:52.602205+00:00",
+        "updated_at": "2026-11-18T17:16:52.602205+00:00",
+        "score_debug": {
+          "combined_score": 0.3162076381818182,
+          "semantic_score": 0.4001563,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39036279545454544
+        }
+      },
+      {
+        "memory": "User previously had a bad experience with an American Airlines in‑flight entertainment system and is now concerned about the entertainment system on the current New York‑to‑Los Angeles flight.",
+        "score": 0.3128445381818182,
+        "id": "3f9d8545-6a6d-430f-9dae-d93bf8bac458",
+        "created_at": "2026-11-18T17:14:38.000899+00:00",
+        "updated_at": "2026-11-18T17:14:38.000899+00:00",
+        "score_debug": {
+          "combined_score": 0.3128445381818182,
+          "semantic_score": 0.39174855,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39036279545454544
+        }
+      },
+      {
+        "memory": "User booked a trip to Japan for later this year and wants recommendations for must‑try dishes and restaurants to experience the local cuisine.",
+        "score": 0.31174337999999996,
+        "id": "adf6d96e-8a7c-4a7b-b1b7-739093be8523",
+        "created_at": "2026-11-18T18:29:58.865424+00:00",
+        "updated_at": "2026-11-18T18:29:58.865424+00:00",
+        "score_debug": {
+          "combined_score": 0.31174337999999996,
+          "semantic_score": 0.42552543,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35383302
+        }
+      },
+      {
+        "memory": "Intercity Coach is a long-distance bus service that connects most major cities and towns on New Zealand's North Island.",
+        "score": 0.31092497999999996,
+        "id": "e9a413ba-1e4a-4a74-8622-01164edc7272",
+        "created_at": "2026-11-18T17:23:41.846798+00:00",
+        "updated_at": "2026-11-18T17:23:41.846798+00:00",
+        "score_debug": {
+          "combined_score": 0.31092497999999996,
+          "semantic_score": 0.3576697,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41964275
+        }
+      },
+      {
+        "memory": "Assistant advised booking train and flight tickets well in advance to secure the best deals and suggested using comparison platforms like Rome2rio or GoEuro.",
+        "score": 0.30941639200000004,
+        "id": "d2b0fcef-9204-4dbf-b278-167bef66e3a6",
+        "created_at": "2026-11-18T17:39:28.503288+00:00",
+        "updated_at": "2026-11-18T17:39:28.503288+00:00",
+        "score_debug": {
+          "combined_score": 0.30941639200000004,
+          "semantic_score": 0.45319593,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32034505
+        }
+      },
+      {
+        "memory": "User is considering Barcelona or Amsterdam as possible destinations for the European trip but has not decided yet.",
+        "score": 0.30720832911793855,
+        "id": "672710d2-1466-477d-a25c-cf4349cdf2f0",
+        "created_at": "2026-11-18T17:38:58.752595+00:00",
+        "updated_at": "2026-11-18T17:38:58.752595+00:00",
+        "score_debug": {
+          "combined_score": 0.30720832911793855,
+          "semantic_score": 0.4424928,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32552802279484644
+        }
+      },
+      {
+        "memory": "Assistant recommended alternative navigation options, including portable GPS devices like Garmin or TomTom and smartphone GPS apps such as Google Maps or Waze.",
+        "score": 0.3066122307091633,
+        "id": "4afbba52-c726-447d-bab3-5497a921b5fe",
+        "created_at": "2026-11-18T17:49:09.598439+00:00",
+        "updated_at": "2026-11-18T17:49:09.598439+00:00",
+        "score_debug": {
+          "combined_score": 0.3066122307091633,
+          "semantic_score": 0.43913227,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3273983067729084
+        }
+      },
+      {
+        "memory": "User checked Zara's social media pages and discovered a sale at the Chicago location scheduled for the week of November 21–27, 2026, and is excited to snag deals.",
+        "score": 0.30620763729083667,
+        "id": "f4c8ed20-1a8f-4e68-9e33-f65cf975a78c",
+        "created_at": "2026-11-18T17:46:35.443114+00:00",
+        "updated_at": "2026-11-18T17:46:35.443114+00:00",
+        "score_debug": {
+          "combined_score": 0.30620763729083667,
+          "semantic_score": 0.3385924,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42692669322709165
+        }
+      },
+      {
+        "memory": "Assistant recommends researching reference images of Pacific islands, selecting a specific location such as Iwo Jima, Guadalcanal, or Rabaul, and deciding on a scene like a beach landing, jungle hideout, or airfield for the Zero fighter diorama.",
+        "score": 0.3051212341513944,
+        "id": "12cdbe07-2150-4de4-84b1-87da32d34dd4",
+        "created_at": "2026-11-18T17:26:48.818936+00:00",
+        "updated_at": "2026-11-18T17:26:48.818936+00:00",
+        "score_debug": {
+          "combined_score": 0.3051212341513944,
+          "semantic_score": 0.32601693,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4367861553784861
+        }
+      },
+      {
+        "memory": "User is considering a trip to Europe, leaning toward Paris or Rome, and hopes to visit the Louvre in Paris and enjoy authentic Italian food in Rome; they are also evaluating whether hostels are a suitable accommodation option in Europe.",
+        "score": 0.30497224318110233,
+        "id": "30c1a0fa-5421-4c4c-8274-23ec0f95e2e1",
+        "created_at": "2026-11-18T17:38:17.726650+00:00",
+        "updated_at": "2026-11-18T17:38:17.726650+00:00",
+        "score_debug": {
+          "combined_score": 0.30497224318110233,
+          "semantic_score": 0.44450298,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3179276279527559
+        }
+      },
+      {
+        "memory": "Assistant described that the train runs between Auckland and Wellington, covering roughly 680 kilometers and taking about 12 hours to complete the trip.",
+        "score": 0.3045462404210526,
+        "id": "4c1ba723-e2b3-4e87-a4c6-6ac88c033899",
+        "created_at": "2026-11-18T17:24:07.503960+00:00",
+        "updated_at": "2026-11-18T17:24:07.503960+00:00",
+        "score_debug": {
+          "combined_score": 0.3045462404210526,
+          "semantic_score": 0.41522843,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34613717105263153
+        }
+      },
+      {
+        "memory": "Assistant noted that the service departs Auckland early in the morning and arrives in Wellington late afternoon, allowing passengers to enjoy daylight scenery.",
+        "score": 0.3034601964210526,
+        "id": "696fd9e5-83e8-46bb-a647-972050b49575",
+        "created_at": "2026-11-18T17:24:07.506291+00:00",
+        "updated_at": "2026-11-18T17:24:07.506291+00:00",
+        "score_debug": {
+          "combined_score": 0.3034601964210526,
+          "semantic_score": 0.41251332,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34613717105263153
+        }
+      },
+      {
+        "memory": "Bay of Islands to Auckland Bus connects the Bay of Islands with Auckland, passing through Paihia, Whangarei, and other scenic locations on the North Island.",
+        "score": 0.30178760727559056,
+        "id": "1188b1fe-32cb-491c-855d-ab673b5db114",
+        "created_at": "2026-11-18T17:23:41.858661+00:00",
+        "updated_at": "2026-11-18T17:23:41.858661+00:00",
+        "score_debug": {
+          "combined_score": 0.30178760727559056,
+          "semantic_score": 0.36275703,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3917119881889764
+        }
+      },
+      {
+        "memory": "Wellington to Napier Bus connects Wellington to Napier, passing through picturesque coastal towns and vineyards on the North Island.",
+        "score": 0.2991962352755905,
+        "id": "7d0f6a99-195f-4ab1-902a-dc80c977b32b",
+        "created_at": "2026-11-18T17:23:41.851461+00:00",
+        "updated_at": "2026-11-18T17:23:41.851461+00:00",
+        "score_debug": {
+          "combined_score": 0.2991962352755905,
+          "semantic_score": 0.3562786,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3917119881889764
+        }
+      },
+      {
+        "memory": "Assistant listed other Japanese destinations worth visiting: Hakone for hot springs, views of Mt Fuji, and Lake Ashi; Nikko for ornate temples and the UNESCO‑listed Toshogu Shrine; Hiroshima for the Peace Memorial Park and Museum; and Miyajima Island for Itsukushima Shrine.",
+        "score": 0.296925668,
+        "id": "2cb5b3d3-2b7d-4a33-9f0d-6d6c3764c675",
+        "created_at": "2026-11-18T18:32:25.708397+00:00",
+        "updated_at": "2026-11-18T18:32:25.708397+00:00",
+        "score_debug": {
+          "combined_score": 0.296925668,
+          "semantic_score": 0.32723367,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4150805
+        }
+      },
+      {
+        "memory": "Assistant recommends navigation tools for Japan: Google Maps (though some areas lack English labels), Hyperdia for public‑transport route planning, Google Translate for on‑the‑fly translation, and Maps.me for offline maps.",
+        "score": 0.296851108,
+        "id": "b4841fd9-06cb-4064-b98c-1db50c1841e2",
+        "created_at": "2026-11-18T18:33:13.112832+00:00",
+        "updated_at": "2026-11-18T18:33:13.112832+00:00",
+        "score_debug": {
+          "combined_score": 0.296851108,
+          "semantic_score": 0.42033517,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3217926
+        }
+      },
+      {
+        "memory": "Assistant stated that the Northern Explorer Train is a popular tourist transportation option, offering a scenic journey with views of volcanic mountains, deep gorges, and lush forests across the North Island.",
+        "score": 0.29632724727559057,
+        "id": "89f6f581-4d84-4f96-9dc7-0df489a39096",
+        "created_at": "2026-11-18T17:24:07.501626+00:00",
+        "updated_at": "2026-11-18T17:24:07.501626+00:00",
+        "score_debug": {
+          "combined_score": 0.29632724727559057,
+          "semantic_score": 0.34910613,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3917119881889764
+        }
+      },
+      {
+        "memory": "Assistant recommends prepaid SIM cards purchasable at major airports, electronics stores, or online, highlighting Japan Airlines' SIM Card, NTT DoCoMo's Prepaid SIM, and SoftBank's Prepaid SIM as popular options.",
+        "score": 0.296052062,
+        "id": "bf6315f2-3325-41d1-839a-1a51d54f9ef5",
+        "created_at": "2026-11-18T18:33:13.092292+00:00",
+        "updated_at": "2026-11-18T18:33:13.092292+00:00",
+        "score_debug": {
+          "combined_score": 0.296052062,
+          "semantic_score": 0.39871752,
+          "bm25_score": 0.0,
+          "entity_boost": 0.341412635
+        }
+      },
+      {
+        "memory": "Assistant recommended purchasing a Paris Museum Pass, which grants entry to the Louvre, Eiffel Tower, and other major sites, and suggested taking a Seine River cruise for a different perspective.",
+        "score": 0.29553440361752986,
+        "id": "02ae5c51-a75c-41b0-92b7-5e516726f9ef",
+        "created_at": "2026-11-18T17:38:58.766508+00:00",
+        "updated_at": "2026-11-18T17:38:58.766508+00:00",
+        "score_debug": {
+          "combined_score": 0.29553440361752986,
+          "semantic_score": 0.36815202,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37068398904382466
+        }
+      },
+      {
+        "memory": "Assistant recommended checking Zara's official website or social media pages, contacting the Chicago store directly, or visiting the store in person to find out about upcoming fashion shows or events.",
+        "score": 0.2953745452908366,
+        "id": "22794986-e3e4-4d16-a55c-33b6cccd2b10",
+        "created_at": "2026-11-18T17:45:52.825251+00:00",
+        "updated_at": "2026-11-18T17:45:52.825251+00:00",
+        "score_debug": {
+          "combined_score": 0.2953745452908366,
+          "semantic_score": 0.31150967,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42692669322709165
+        }
+      },
+      {
+        "memory": "User is fascinated by Japan, loves its food and culture, and wants to know the best time to visit and which festivals or events to experience.",
+        "score": 0.295030352,
+        "id": "67c4fbc2-f364-4bb5-a17e-a30a829439c6",
+        "created_at": "2026-11-18T17:08:54.050941+00:00",
+        "updated_at": "2026-11-18T17:08:54.050941+00:00",
+        "score_debug": {
+          "combined_score": 0.295030352,
+          "semantic_score": 0.42151988,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31605599999999995
+        }
+      },
+      {
+        "memory": "Mount Fairview is a strenuous Banff hike offering panoramic views of surrounding peaks and valleys",
+        "score": 0.29494828,
+        "id": "aaa38ef5-bc81-4d37-b4fd-987b3662cb9d",
+        "created_at": "2026-11-18T18:02:42.445627+00:00",
+        "updated_at": "2026-11-18T18:02:42.445627+00:00",
+        "score_debug": {
+          "combined_score": 0.29494828,
+          "semantic_score": 0.35759145,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37977925
+        }
+      },
+      {
+        "memory": "User values flexibility and found it hard to change plans during a 10‑day family trip, prompting interest in destinations that are especially solo‑traveler‑friendly.",
+        "score": 0.29465139622777226,
+        "id": "f3986f3d-0814-478f-a644-e21e67a404e6",
+        "created_at": "2026-11-18T17:08:54.045868+00:00",
+        "updated_at": "2026-11-18T17:08:54.045868+00:00",
+        "score_debug": {
+          "combined_score": 0.29465139622777226,
+          "semantic_score": 0.41610906,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3205194305694306
+        }
+      },
+      {
+        "memory": "User expressed interest in a description of the trail system and outdoor activities in Banff National Park, indicating a desire to learn about hiking and recreation there",
+        "score": 0.2943448713339941,
+        "id": "2151f15d-e8a1-4e21-982b-9835ee2db42f",
+        "created_at": "2026-11-18T18:02:42.432401+00:00",
+        "updated_at": "2026-11-18T18:02:42.432401+00:00",
+        "score_debug": {
+          "combined_score": 0.2943448713339941,
+          "semantic_score": 0.39090866,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34495351833498517
+        }
+      },
+      {
+        "memory": "User is especially interested in Japanese cuisine and asks for specific dishes and restaurant recommendations to try while in Japan.",
+        "score": 0.29399860130822597,
+        "id": "e537b654-ed84-4bb2-acd9-5d4c781d9d54",
+        "created_at": "2026-11-18T17:08:54.056036+00:00",
+        "updated_at": "2026-11-18T17:08:54.056036+00:00",
+        "score_debug": {
+          "combined_score": 0.29399860130822597,
+          "semantic_score": 0.4111502,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32384630327056496
+        }
+      },
+      {
+        "memory": "Auckland to Rotorua Bus connects Auckland and Rotorua, passing through the Waikato region and the famous Waitomo Caves on the North Island.",
+        "score": 0.29359204,
+        "id": "7bb265d8-469f-41c6-845b-d5ae0b31151e",
+        "created_at": "2026-11-18T17:23:41.856137+00:00",
+        "updated_at": "2026-11-18T17:23:41.856137+00:00",
+        "score_debug": {
+          "combined_score": 0.29359204,
+          "semantic_score": 0.3719983,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3619818
+        }
+      },
+      {
+        "memory": "User plans to try the Japanese dishes and restaurants that were recommended during their upcoming trip to Japan later this year.",
+        "score": 0.29271514130822596,
+        "id": "1806f4fa-6d24-44a4-a6c8-9134a1b1f2f5",
+        "created_at": "2026-11-18T18:30:53.822969+00:00",
+        "updated_at": "2026-11-18T18:30:53.822969+00:00",
+        "score_debug": {
+          "combined_score": 0.29271514130822596,
+          "semantic_score": 0.40794155,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32384630327056496
+        }
+      },
+      {
+        "memory": "Banff National Park in Alberta, Canada has over 1,600 km (1,000 miles) of trails offering hiking and backpacking opportunities for visitors of all skill levels",
+        "score": 0.292663692,
+        "id": "1e50c819-eb01-40de-8d72-87b0c4a20819",
+        "created_at": "2026-11-18T18:02:42.434973+00:00",
+        "updated_at": "2026-11-18T18:02:42.434973+00:00",
+        "score_debug": {
+          "combined_score": 0.292663692,
+          "semantic_score": 0.36232823,
+          "bm25_score": 0.0,
+          "entity_boost": 0.369331
+        }
+      },
+      {
+        "memory": "Assistant recommended Hyatt Regency LAX, a hotel located adjacent to Los Angeles International Airport that offers a free shuttle service, as a convenient option for the user’s stay near the airport.",
+        "score": 0.2919199006693227,
+        "id": "ccacdf57-d0d8-4ad1-82b9-3dc547ba27ae",
+        "created_at": "2026-11-18T17:16:52.589673+00:00",
+        "updated_at": "2026-11-18T17:16:52.589673+00:00",
+        "score_debug": {
+          "combined_score": 0.2919199006693227,
+          "semantic_score": 0.36669517,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3631045816733068
+        }
+      },
+      {
+        "memory": "User is planning a weekend road trip and is seeking an estimate of gasoline needed based on the car's mileage.",
+        "score": 0.291556456,
+        "id": "236e6472-bdb0-4fc2-b4c2-aefc68734bf2",
+        "created_at": "2026-11-18T18:08:31.826466+00:00",
+        "updated_at": "2026-11-18T18:08:31.826466+00:00",
+        "score_debug": {
+          "combined_score": 0.291556456,
+          "semantic_score": 0.43626934,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2926218
+        }
+      },
+      {
+        "memory": "Capital Connection Train is a daily train service that connects Palmerston North and Wellington, passing through scenic rural areas on the North Island.",
+        "score": 0.29139495527559056,
+        "id": "32fbb7b7-c9e4-44ce-9546-bc635488fc7b",
+        "created_at": "2026-11-18T17:23:41.853834+00:00",
+        "updated_at": "2026-11-18T17:23:41.853834+00:00",
+        "score_debug": {
+          "combined_score": 0.29139495527559056,
+          "semantic_score": 0.3367754,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3917119881889764
+        }
+      },
+      {
+        "memory": "User plans to book a ticket for the Northern Explorer Train, which runs between Auckland and Wellington, after hearing it sounds amazing.",
+        "score": 0.2900733604210526,
+        "id": "c16fd55f-c00b-4f4c-9f1d-5b9abecaf58f",
+        "created_at": "2026-11-18T17:24:20.891038+00:00",
+        "updated_at": "2026-11-18T17:24:20.891038+00:00",
+        "score_debug": {
+          "combined_score": 0.2900733604210526,
+          "semantic_score": 0.37904623,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34613717105263153
+        }
+      },
+      {
+        "memory": "User caught up with Emily last weekend, enjoyed the meeting, shares a love of hiking with her, and they have made plans to go on a hike together soon.",
+        "score": 0.28958969555378483,
+        "id": "b76663b8-ce5c-4d4b-bf8c-3990203d0b2f",
+        "created_at": "2026-11-18T18:43:25.138061+00:00",
+        "updated_at": "2026-11-18T18:43:25.138061+00:00",
+        "score_debug": {
+          "combined_score": 0.28958969555378483,
+          "semantic_score": 0.39670146,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32727277888446216
+        }
+      },
+      {
+        "memory": "Assistant suggested additional places in the Kyoto area: Nara, known for friendly deer and Todai‑ji temple; Uji, famous for green‑tea plantations and traditional tea ceremonies; and Osaka, celebrated for its food, entertainment, and nightlife.",
+        "score": 0.288170912,
+        "id": "b15b2a67-d507-49c9-b918-0e49a1bc18d5",
+        "created_at": "2026-11-18T18:32:25.704909+00:00",
+        "updated_at": "2026-11-18T18:32:25.704909+00:00",
+        "score_debug": {
+          "combined_score": 0.288170912,
+          "semantic_score": 0.30211133,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41831595
+        }
+      },
+      {
+        "memory": "Assistant suggested arranging the 1/48‑scale figures using a mix of standing and seated poses, varying facial expressions, adding personal items and equipment, and experimenting with placement to achieve visual interest and balanced composition in the Pacific Island diorama.",
+        "score": 0.2881390741513944,
+        "id": "2df7e603-a064-44cf-8425-36335c15dc06",
+        "created_at": "2026-11-18T17:27:34.015644+00:00",
+        "updated_at": "2026-11-18T17:27:34.015644+00:00",
+        "score_debug": {
+          "combined_score": 0.2881390741513944,
+          "semantic_score": 0.28356153,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4367861553784861
+        }
+      },
+      {
+        "memory": "Assistant recommended the Vermilion Lakes Drive, a 14‑km (9‑mile) scenic road along a series of picturesque lakes, providing views of Mount Rundle and the Bow Valley.",
+        "score": 0.288055874,
+        "id": "cb2a06ad-727a-4a70-b103-d6c894f8b611",
+        "created_at": "2026-11-18T18:03:18.361124+00:00",
+        "updated_at": "2026-11-18T18:03:18.361124+00:00",
+        "score_debug": {
+          "combined_score": 0.288055874,
+          "semantic_score": 0.31730372,
+          "bm25_score": 0.0,
+          "entity_boost": 0.402835965
+        }
+      },
+      {
+        "memory": "Assistant suggested Wellington adventure activities: kayaking along the scenic coastline and harbour, zip‑lining through treetops, mountain biking on trails such as Makara Peak and in the Zealandia forest, and scuba diving for an underwater experience.",
+        "score": 0.28798764,
+        "id": "533af38a-24e7-4d06-a820-d5207b31666d",
+        "created_at": "2026-11-18T17:24:54.074471+00:00",
+        "updated_at": "2026-11-18T17:24:54.074471+00:00",
+        "score_debug": {
+          "combined_score": 0.28798764,
+          "semantic_score": 0.34929115,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37067795
+        }
+      },
+      {
+        "memory": "Assistant suggested Auckland adventure activities: Skyjump off the 192‑meter Sky Tower, SkyWalk guided edge walk on the Sky Tower, bungy jumping from the Auckland Harbour Bridge, and high‑speed jet‑boat rides on Auckland Harbour or Waitemata Harbour.",
+        "score": 0.28752481799999996,
+        "id": "99292903-59e7-44d7-9827-5480f3e05521",
+        "created_at": "2026-11-18T17:24:54.071082+00:00",
+        "updated_at": "2026-11-18T17:24:54.071082+00:00",
+        "score_debug": {
+          "combined_score": 0.28752481799999996,
+          "semantic_score": 0.33595842,
+          "bm25_score": 0.0,
+          "entity_boost": 0.382853625
+        }
+      },
+      {
+        "memory": "User is looking for a mid-range accommodation and plans to check out Hotel Gajoen Tokyo.",
+        "score": 0.2867218140239044,
+        "id": "816f63d1-ce8e-45e5-bf91-0e570d739462",
+        "created_at": "2026-11-18T18:31:33.796124+00:00",
+        "updated_at": "2026-11-18T18:31:33.796124+00:00",
+        "score_debug": {
+          "combined_score": 0.2867218140239044,
+          "semantic_score": 0.3740133,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34279123505976095
+        }
+      },
+      {
+        "memory": "Assistant identified the graph as likely a histogram displaying the distribution of BAC levels among individuals arrested for drunk driving in Washington State between 1999 and 2007.",
+        "score": 0.28655171800199797,
+        "id": "e3d2bdc8-7997-47de-ae4a-f877805dabe8",
+        "created_at": "2026-11-18T17:19:34.954834+00:00",
+        "updated_at": "2026-11-18T17:19:34.954834+00:00",
+        "score_debug": {
+          "combined_score": 0.28655171800199797,
+          "semantic_score": 0.3028593,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41351999500499503
+        }
+      },
+      {
+        "memory": "Assistant recommends visiting Auckland's Sky Tower, Auckland Domain park, Auckland War Memorial Museum, Viaduct Harbour, and Auckland Zoo (over 135 animal species) for a varied city experience.",
+        "score": 0.28580115,
+        "id": "79dc782d-4214-4d37-8938-9d8506213b58",
+        "created_at": "2026-11-18T17:24:20.894188+00:00",
+        "updated_at": "2026-11-18T17:24:20.894188+00:00",
+        "score_debug": {
+          "combined_score": 0.28580115,
+          "semantic_score": 0.35662705,
+          "bm25_score": 0.0,
+          "entity_boost": 0.357875825
+        }
+      },
+      {
+        "memory": "User is fascinated by Japan, describing its food as amazing and its culture as unique, and is asking for the best time to visit and which festivals or events to experience.",
+        "score": 0.28560276,
+        "id": "5ddf9caf-1a19-46aa-afd2-e15e1fb4f919",
+        "created_at": "2026-11-18T17:08:03.559160+00:00",
+        "updated_at": "2026-11-18T17:08:03.559160+00:00",
+        "score_debug": {
+          "combined_score": 0.28560276,
+          "semantic_score": 0.3979509,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31605599999999995
+        }
+      },
+      {
+        "memory": "User plans to research the specific uniform colors and insignia of World War II Japanese soldiers and ground crew, apply weathering and washes to the figures, and experiment with poses such as a ground crew member working on the Zero fighter and a soldier resting in the shade to create movement and interaction in the Pacific Island diorama",
+        "score": 0.2849884221513944,
+        "id": "4216ea8d-ff86-427b-8693-05aaa019c9fb",
+        "created_at": "2026-11-18T17:28:11.010729+00:00",
+        "updated_at": "2026-11-18T17:28:11.010729+00:00",
+        "score_debug": {
+          "combined_score": 0.2849884221513944,
+          "semantic_score": 0.2756849,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4367861553784861
+        }
+      },
+      {
+        "memory": "User is considering a European trip, primarily interested in Paris and Rome, wants to visit the Louvre and try authentic Italian food, and is evaluating hostels as a lodging option.",
+        "score": 0.2844592690504705,
+        "id": "7c053f03-65de-43b3-ac62-d547fc50eb1f",
+        "created_at": "2026-11-18T17:41:39.122631+00:00",
+        "updated_at": "2026-11-18T17:41:39.122631+00:00",
+        "score_debug": {
+          "combined_score": 0.2844592690504705,
+          "semantic_score": 0.4101702,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3009779726261762
+        }
+      },
+      {
+        "memory": "Assistant recommended the following hotels near Los Angeles International Airport (LAX): Hyatt Regency LAX, Sheraton Gateway Los Angeles Hotel, The Westin Los Angeles Airport, and Renaissance Los Angeles Airport Hotel.",
+        "score": 0.28444647243156845,
+        "id": "71f552d2-94f5-4ae5-8754-3de27dc1f39d",
+        "created_at": "2026-11-18T17:13:55.155298+00:00",
+        "updated_at": "2026-11-18T17:13:55.155298+00:00",
+        "score_debug": {
+          "combined_score": 0.28444647243156845,
+          "semantic_score": 0.31691226,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39420392107892116
+        }
+      },
+      {
+        "memory": "Assistant recommended these downtown Los Angeles city‑center hotels: The Ritz‑Carlton, Los Angeles; The Westin Bonaventure Hotel & Suites; Omni Los Angeles Hotel at California Plaza; and JW Marriott Los Angeles L.A. LIVE.",
+        "score": 0.2839082065414586,
+        "id": "b7634476-0569-4357-ab54-8ec461a52d74",
+        "created_at": "2026-11-18T17:13:55.158400+00:00",
+        "updated_at": "2026-11-18T17:13:55.158400+00:00",
+        "score_debug": {
+          "combined_score": 0.2839082065414586,
+          "semantic_score": 0.30918187,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40058864635364644
+        }
+      },
+      {
+        "memory": "User's car GPS system malfunctioned and lost signal during a beach trip on the weekend of November 14, 2026, prompting them to consider updating or resetting it.",
+        "score": 0.2833668306893107,
+        "id": "c7dbbd16-1f25-4fd5-b9fc-3a65b2f264b8",
+        "created_at": "2026-11-18T17:51:37.579956+00:00",
+        "updated_at": "2026-11-18T17:51:37.579956+00:00",
+        "score_debug": {
+          "combined_score": 0.2833668306893107,
+          "semantic_score": 0.3712138,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33720327672327677
+        }
+      },
+      {
+        "memory": "Assistant suggests exploring Wellington's waterfront promenade, Te Papa museum, Wellington Botanic Garden, Wellington Cable Car, and the Zealandia Ecosanctuary to see native wildlife and enjoy city views.",
+        "score": 0.28330859,
+        "id": "33f4b87e-0724-4dc8-806d-1da3642b04ea",
+        "created_at": "2026-11-18T17:24:20.897258+00:00",
+        "updated_at": "2026-11-18T17:24:20.897258+00:00",
+        "score_debug": {
+          "combined_score": 0.28330859,
+          "semantic_score": 0.3171705,
+          "bm25_score": 0.0,
+          "entity_boost": 0.391100975
+        }
+      },
+      {
+        "memory": "Assistant recommended the Icefields Parkway, a 232‑km (144‑mile) scenic drive between Lake Louise and Jasper that showcases glaciers, mountains, waterfalls, and abundant wildlife.",
+        "score": 0.283277226,
+        "id": "27bf92e1-63f1-4d36-93a7-0d00819cfffd",
+        "created_at": "2026-11-18T18:03:18.351861+00:00",
+        "updated_at": "2026-11-18T18:03:18.351861+00:00",
+        "score_debug": {
+          "combined_score": 0.283277226,
+          "semantic_score": 0.34797144,
+          "bm25_score": 0.0,
+          "entity_boost": 0.360221625
+        }
+      },
+      {
+        "memory": "Assistant recommended several coffee shops near popular Los Angeles hotels: Stumptown Coffee Roasters, Verve Coffee Roasters, and Blue Bottle Coffee near downtown hotels; The Coffee Bean & Tea Leaf and Caffè Umberto near the Hyatt Regency Century Plaza; and Intelligentsia Coffee and Menotti's Coffee Stop near Santa Monica hotels.",
+        "score": 0.2822608221818182,
+        "id": "faea664b-6a3e-4834-bf2b-7639bad0fad6",
+        "created_at": "2026-11-18T17:15:16.227108+00:00",
+        "updated_at": "2026-11-18T17:15:16.227108+00:00",
+        "score_debug": {
+          "combined_score": 0.2822608221818182,
+          "semantic_score": 0.31528926,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39036279545454544
+        }
+      },
+      {
+        "memory": "User is considering updating or resetting their car's GPS system after it malfunctioned and lost signal during a beach trip on the weekend of November 14‑15, 2026.",
+        "score": 0.2813988986893107,
+        "id": "8e5b698e-dc7b-4603-8c40-997902f51371",
+        "created_at": "2026-11-18T17:49:09.586713+00:00",
+        "updated_at": "2026-11-18T17:49:09.586713+00:00",
+        "score_debug": {
+          "combined_score": 0.2813988986893107,
+          "semantic_score": 0.36629397,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33720327672327677
+        }
+      },
+      {
+        "memory": "Assistant suggests using scale‑appropriate model plants and trees, adding static grass, foliage, and undergrowth, and weathering the vegetation to achieve a realistic, aged Pacific Island look.",
+        "score": 0.28088531284942087,
+        "id": "a6ba119a-98cc-49a3-8367-4cf39f94772d",
+        "created_at": "2026-11-18T17:26:48.824964+00:00",
+        "updated_at": "2026-11-18T17:26:48.824964+00:00",
+        "score_debug": {
+          "combined_score": 0.28088531284942087,
+          "semantic_score": 0.31036973,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39184355212355215
+        }
+      },
+      {
+        "memory": "User is interested in scenic drives within Banff National Park and asked the assistant for recommendations of routes to check out.",
+        "score": 0.2808797033339941,
+        "id": "5a68ef4a-a05b-4f66-bfbc-e797a83ec1b7",
+        "created_at": "2026-11-18T18:03:18.348083+00:00",
+        "updated_at": "2026-11-18T18:03:18.348083+00:00",
+        "score_debug": {
+          "combined_score": 0.2808797033339941,
+          "semantic_score": 0.35724574,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34495351833498517
+        }
+      },
+      {
+        "memory": "Assistant recommended that User use a meditation app or guided recording, suggesting options such as Headspace, Calm, or Insight Timer to support the 30‑minute Saturday morning practice.",
+        "score": 0.279839004,
+        "id": "23c2b58f-b2f1-4b05-9855-68af2f890844",
+        "created_at": "2026-11-18T18:01:48.349015+00:00",
+        "updated_at": "2026-11-18T18:01:48.349015+00:00",
+        "score_debug": {
+          "combined_score": 0.279839004,
+          "semantic_score": 0.37965623,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31994128
+        }
+      },
+      {
+        "memory": "Assistant recommends that the optimal times to visit Japan are spring (March‑May) for cherry blossoms and mild weather, and autumn (September‑November) for fall foliage and comfortable temperatures, while noting summer for beaches and winter for skiing and onsens.",
+        "score": 0.27983346,
+        "id": "04be1d56-d28b-4c68-b4b8-56fc296a9878",
+        "created_at": "2026-11-18T17:08:03.562308+00:00",
+        "updated_at": "2026-11-18T17:08:03.562308+00:00",
+        "score_debug": {
+          "combined_score": 0.27983346,
+          "semantic_score": 0.365969,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33361465
+        }
+      },
+      {
+        "memory": "User's car achieves a combined fuel economy of 28 mpg and they are planning a 240‑mile road trip.",
+        "score": 0.2798184088605578,
+        "id": "a006c78b-2beb-4011-ad3b-e15641c65b09",
+        "created_at": "2026-11-18T18:08:59.293389+00:00",
+        "updated_at": "2026-11-18T18:08:59.293389+00:00",
+        "score_debug": {
+          "combined_score": 0.2798184088605578,
+          "semantic_score": 0.38150656,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31803946215139445
+        }
+      },
+      {
+        "memory": "User is seeking advice on creating a diorama for their Zero fighter plane model, aiming for a realistic Pacific Island scene.",
+        "score": 0.27958162884942084,
+        "id": "23e223a9-fbc3-4a37-a80d-14c636751be4",
+        "created_at": "2026-11-18T17:26:48.815477+00:00",
+        "updated_at": "2026-11-18T17:26:48.815477+00:00",
+        "score_debug": {
+          "combined_score": 0.27958162884942084,
+          "semantic_score": 0.30711052,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39184355212355215
+        }
+      },
+      {
+        "memory": "Assistant described American Airlines in‑flight entertainment options, noting seatback screens with movies, TV shows, music and games, live TV on some flights, a music library, an AAdvantage app for streaming, power outlets and USB ports, plus complimentary soft drinks, juice, coffee and tea.",
+        "score": 0.2792868875121951,
+        "id": "06c0a72e-f087-4b6f-9fb3-df0a7138eb75",
+        "created_at": "2026-11-18T17:12:01.573149+00:00",
+        "updated_at": "2026-11-18T17:12:01.573149+00:00",
+        "score_debug": {
+          "combined_score": 0.2792868875121951,
+          "semantic_score": 0.37751597,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32070124878048784
+        }
+      },
+      {
+        "memory": "Assistant suggested possible limited-area locations: a local park or nature reserve, a historic neighborhood or district, a pedestrian‑friendly shopping or arts district, a waterfront or lakeside area, or a university/college campus.",
+        "score": 0.27899337,
+        "id": "47d1ec85-cf48-452d-99ee-948c71604b0d",
+        "created_at": "2026-11-18T17:31:00.727513+00:00",
+        "updated_at": "2026-11-18T17:31:00.727513+00:00",
+        "score_debug": {
+          "combined_score": 0.27899337,
+          "semantic_score": 0.3390019,
+          "bm25_score": 0.0,
+          "entity_boost": 0.358481525
+        }
+      },
+      {
+        "memory": "Canoeing and kayaking are popular on Lake Louise and Moraine Lake, known for crystal‑clear water and stunning mountain backdrops",
+        "score": 0.27777380041434263,
+        "id": "daa16f3b-5acd-4c32-850f-f2fa79246b85",
+        "created_at": "2026-11-18T18:02:42.450882+00:00",
+        "updated_at": "2026-11-18T18:02:42.450882+00:00",
+        "score_debug": {
+          "combined_score": 0.27777380041434263,
+          "semantic_score": 0.33582476,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3586097410358566
+        }
+      },
+      {
+        "memory": "Assistant recommended mid-range accommodations in Shinjuku: Park Hyatt Tokyo (≈ ¥25,000 per night), Hotel Gajoen Tokyo (≈ ¥15,000 per night), and Hotel Sunroute Plaza Shinjuku (≈ ¥12,000 per night).",
+        "score": 0.27757136247104247,
+        "id": "84270c44-653c-4152-a518-4602f8af2be2",
+        "created_at": "2026-11-18T18:30:53.830025+00:00",
+        "updated_at": "2026-11-18T18:30:53.830025+00:00",
+        "score_debug": {
+          "combined_score": 0.27757136247104247,
+          "semantic_score": 0.3463258,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3476026061776062
+        }
+      },
+      {
+        "memory": "Assistant recommended that, assuming a 15‑gallon fuel tank, the user will have about 6.9 gallons remaining after the 240‑mile trip, giving roughly 203 miles of range, and suggested stopping to refuel every 2–3 hours or when the tank is between one‑quarter and one‑half full, resulting in two refueling stops during the 4–5 hour drive.",
+        "score": 0.2775167555244756,
+        "id": "8f105506-c551-4639-be14-67592ff99128",
+        "created_at": "2026-11-18T18:09:32.429191+00:00",
+        "updated_at": "2026-11-18T18:09:32.429191+00:00",
+        "score_debug": {
+          "combined_score": 0.2775167555244756,
+          "semantic_score": 0.3649307,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32886118881118886
+        }
+      },
+      {
+        "memory": "Assistant recommended tracking triathlon progress by keeping a dedicated training log (date, type, distance, time, notes), using a GPS watch or fitness tracker for swim, bike, and run data, leveraging online platforms such as TrainingPeaks, Strava, or Garmin Connect, and taking regular progress photos and body measurements.",
+        "score": 0.27687482,
+        "id": "1734299a-b84d-448d-98cb-92c82ff57ed2",
+        "created_at": "2026-11-18T17:02:44.431873+00:00",
+        "updated_at": "2026-11-18T17:02:44.431873+00:00",
+        "score_debug": {
+          "combined_score": 0.27687482,
+          "semantic_score": 0.3990905,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29309655
+        }
+      },
+      {
+        "memory": "Assistant also suggested trying Japanese beverages such as green tea, matcha lattes, and sake to complement meals.",
+        "score": 0.276623996,
+        "id": "e8fd4129-9805-4eb4-ac5d-068393d5fbfb",
+        "created_at": "2026-11-18T17:08:24.528304+00:00",
+        "updated_at": "2026-11-18T17:08:24.528304+00:00",
+        "score_debug": {
+          "combined_score": 0.276623996,
+          "semantic_score": 0.35374054,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33781945
+        }
+      },
+      {
+        "memory": "Assistant recommended adding a 1–2 gallon safety buffer to the 8.1‑gallon estimate and to schedule fuel stops and budget for the road trip accordingly.",
+        "score": 0.27641438486055775,
+        "id": "849f498a-4d4b-4f47-827d-bb72bf73ef34",
+        "created_at": "2026-11-18T18:08:59.299188+00:00",
+        "updated_at": "2026-11-18T18:08:59.299188+00:00",
+        "score_debug": {
+          "combined_score": 0.27641438486055775,
+          "semantic_score": 0.3729965,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31803946215139445
+        }
+      },
+      {
+        "memory": "Assistant recommended several ways to find gas stations during a trip: GPS navigation systems such as Garmin or TomTom; mapping apps like Google Maps, Apple Maps, Waze, and MapQuest; fuel‑focused apps including GasBuddy, Gas Guru, and Waze’s Fuel feature; websites such as GasBuddy.com and AAA’s Fuel Gauge Report; and roadside‑assistance services like AAA that offer trip‑planning tools.",
+        "score": 0.27634720270916335,
+        "id": "f699b9e0-4664-416e-829b-0d09575fe507",
+        "created_at": "2026-11-18T18:09:52.808457+00:00",
+        "updated_at": "2026-11-18T18:09:52.808457+00:00",
+        "score_debug": {
+          "combined_score": 0.27634720270916335,
+          "semantic_score": 0.3634697,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3273983067729084
+        }
+      },
+      {
+        "memory": "Assistant reiterated that staying in hostels is a suitable accommodation option in both Paris and Rome, aligning with earlier advice about hostel use in Europe.",
+        "score": 0.2754986631811024,
+        "id": "67629add-f008-4b97-995b-dab7b00d34c9",
+        "created_at": "2026-11-18T17:40:01.472187+00:00",
+        "updated_at": "2026-11-18T17:40:01.472187+00:00",
+        "score_debug": {
+          "combined_score": 0.2754986631811024,
+          "semantic_score": 0.37081903,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3179276279527559
+        }
+      },
+      {
+        "memory": "Assistant recommended Sanuki Udon in Kagawa Prefecture for traditional thick wheat‑noodle udon served hot or cold with various toppings.",
+        "score": 0.274826832,
+        "id": "117be973-0f3e-4fed-8148-013368d8b7c8",
+        "created_at": "2026-11-18T18:29:58.878884+00:00",
+        "updated_at": "2026-11-18T18:29:58.878884+00:00",
+        "score_debug": {
+          "combined_score": 0.274826832,
+          "semantic_score": 0.29734588,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3897212
+        }
+      },
+      {
+        "memory": "Assistant advised that when planning fuel stops, consider factors such as distance and driving time between stops, fuel prices and availability, station reviews and ratings, and amenities like food, restrooms, and parking.",
+        "score": 0.27466732,
+        "id": "54bfd1bf-da31-4c05-87e1-880f8a5492ea",
+        "created_at": "2026-11-18T18:09:52.811281+00:00",
+        "updated_at": "2026-11-18T18:09:52.811281+00:00",
+        "score_debug": {
+          "combined_score": 0.27466732,
+          "semantic_score": 0.34480995,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34185835
+        }
+      },
+      {
+        "memory": "User plans to check Zara Chicago's website and social media pages for upcoming fun events and promotions.",
+        "score": 0.273868694,
+        "id": "adc7e753-9501-479c-a716-4f1fa1f90d7b",
+        "created_at": "2026-11-18T17:46:18.854967+00:00",
+        "updated_at": "2026-11-18T17:46:18.854967+00:00",
+        "score_debug": {
+          "combined_score": 0.273868694,
+          "semantic_score": 0.35912836,
+          "bm25_score": 0.0,
+          "entity_boost": 0.325543375
+        }
+      },
+      {
+        "memory": "A popular family-friendly trail in Banff is Johnston Canyon, which features waterfalls and a scenic viewpoint",
+        "score": 0.27375102,
+        "id": "6ef26b46-1d84-4a70-9a3c-edc8469545ee",
+        "created_at": "2026-11-18T18:02:42.437208+00:00",
+        "updated_at": "2026-11-18T18:02:42.437208+00:00",
+        "score_debug": {
+          "combined_score": 0.27375102,
+          "semantic_score": 0.31558785,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3687897
+        }
+      },
+      {
+        "memory": "Assistant recommended Okonomiyaki Nagata‑ya in Hiroshima for savory okonomiyaki pancakes filled with cabbage, pork, and seafood.",
+        "score": 0.27373558414342625,
+        "id": "16258537-579c-4cd8-ba17-b630e106c96f",
+        "created_at": "2026-11-18T18:29:58.887515+00:00",
+        "updated_at": "2026-11-18T18:29:58.887515+00:00",
+        "score_debug": {
+          "combined_score": 0.27373558414342625,
+          "semantic_score": 0.3244853,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35985366035856575
+        }
+      },
+      {
+        "memory": "Assistant suggested reading reviews on sites such as Hostelworld, Hostelbookers, and Booking.com, checking for amenities like free Wi‑Fi, laundry, breakfast, and 24‑hour reception, and booking hostels well in advance, especially for peak months June‑August and December.",
+        "score": 0.2735197802519685,
+        "id": "d1743225-ca10-457e-b620-d4d32cef5914",
+        "created_at": "2026-11-18T17:38:17.734309+00:00",
+        "updated_at": "2026-11-18T17:38:17.734309+00:00",
+        "score_debug": {
+          "combined_score": 0.2735197802519685,
+          "semantic_score": 0.34989074,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3339087106299213
+        }
+      },
+      {
+        "memory": "User wants to try a wide variety of Japanese dishes and visit notable restaurants, expressing strong interest in exploring Japan's cuisine.",
+        "score": 0.27329892930822597,
+        "id": "8845c2d9-73dd-4162-a59e-39d32abfb793",
+        "created_at": "2026-11-18T17:08:24.515002+00:00",
+        "updated_at": "2026-11-18T17:08:24.515002+00:00",
+        "score_debug": {
+          "combined_score": 0.27329892930822597,
+          "semantic_score": 0.35940102,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32384630327056496
+        }
+      },
+      {
+        "memory": "Assistant noted that the vertical lines at 0.08 and 0.15 BAC represent the legal limits for driving in Washington, and that the bin width of 0.002 defines the BAC range each histogram bar covers.",
+        "score": 0.2731769568431569,
+        "id": "6663e864-c053-44ff-8820-8817f93bcce7",
+        "created_at": "2026-11-18T17:19:34.957628+00:00",
+        "updated_at": "2026-11-18T17:19:34.957628+00:00",
+        "score_debug": {
+          "combined_score": 0.2731769568431569,
+          "semantic_score": 0.2529845,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4299578921078922
+        }
+      },
+      {
+        "memory": "Assistant recommended Narisawa in Tokyo, a two‑Michelin‑star restaurant serving modern Japanese cuisine with locally sourced, organic ingredients.",
+        "score": 0.2727034176543457,
+        "id": "3c2316b4-a16b-4700-ace7-e0da45518af9",
+        "created_at": "2026-11-18T18:29:58.867634+00:00",
+        "updated_at": "2026-11-18T18:29:58.867634+00:00",
+        "score_debug": {
+          "combined_score": 0.2727034176543457,
+          "semantic_score": 0.28195268,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3998058641358642
+        }
+      },
+      {
+        "memory": "User has been using cashback apps Ibotta and Fetch Rewards to earn money back on grocery purchases",
+        "score": 0.272288965839445,
+        "id": "3fd8c3e2-2731-4252-b007-3de8a5b0115d",
+        "created_at": "2026-11-18T18:06:10.136910+00:00",
+        "updated_at": "2026-11-18T18:06:10.136910+00:00",
+        "score_debug": {
+          "combined_score": 0.272288965839445,
+          "semantic_score": 0.33287737,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3478450445986125
+        }
+      },
+      {
+        "memory": "Assistant recommends selecting a seat in First or Business Class, choosing a Boeing 777‑200 or 787‑8 aircraft, or sitting near the front of the Economy cabin to increase the likelihood of having a power outlet or USB port.",
+        "score": 0.2718685930358566,
+        "id": "366dcdf6-683c-41cf-a465-e7b5ff9d9e8c",
+        "created_at": "2026-11-18T17:12:32.120236+00:00",
+        "updated_at": "2026-11-18T17:12:32.120236+00:00",
+        "score_debug": {
+          "combined_score": 0.2718685930358566,
+          "semantic_score": 0.36155963,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3181118525896414
+        }
+      },
+      {
+        "memory": "Assistant advised that User should bring up the planned hike with Emily in a personal message or phone call rather than mentioning it in the Facebook event for the game night.",
+        "score": 0.27067165555378486,
+        "id": "42a987e1-b405-46ca-80f7-3f2125b6ccf9",
+        "created_at": "2026-11-18T18:45:01.164966+00:00",
+        "updated_at": "2026-11-18T18:45:01.164966+00:00",
+        "score_debug": {
+          "combined_score": 0.27067165555378486,
+          "semantic_score": 0.34940636,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32727277888446216
+        }
+      },
+      {
+        "memory": "User thanked the assistant for the sports bar suggestions, said they will definitely try them, and asked for information on the Kansas City Chiefs' schedule for the rest of the playoffs.",
+        "score": 0.2704988897560976,
+        "id": "ba8e7e96-04f4-4d64-b424-e88bb2dd338a",
+        "created_at": "2026-11-18T17:58:28.956912+00:00",
+        "updated_at": "2026-11-18T17:58:28.956912+00:00",
+        "score_debug": {
+          "combined_score": 0.2704988897560976,
+          "semantic_score": 0.3606372,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31561002439024394
+        }
+      },
+      {
+        "memory": "Assistant suggested several common ways to find fueling locations, such as using GPS navigation devices like Garmin or TomTom, smartphone mapping apps, dedicated fuel‑station apps, and various online services.",
+        "score": 0.27002152270916335,
+        "id": "42b61207-fffd-4f52-8de0-e46674ec110c",
+        "created_at": "2026-11-18T18:11:50.612551+00:00",
+        "updated_at": "2026-11-18T18:11:50.612551+00:00",
+        "score_debug": {
+          "combined_score": 0.27002152270916335,
+          "semantic_score": 0.3476555,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3273983067729084
+        }
+      },
+      {
+        "memory": "Assistant advises that Japan uses nano‑SIM, micro‑SIM, and regular SIM sizes, and users should verify their phone's compatibility before purchasing a SIM card.",
+        "score": 0.269919508,
+        "id": "57f5c719-d781-4a0b-97cb-fa71fa11389b",
+        "created_at": "2026-11-18T18:33:13.100358+00:00",
+        "updated_at": "2026-11-18T18:33:13.100358+00:00",
+        "score_debug": {
+          "combined_score": 0.269919508,
+          "semantic_score": 0.35874277,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31605599999999995
+        }
+      },
+      {
+        "memory": "Assistant explains that American Airlines provides Wi‑Fi on most flights via Gogo Inflight Internet, unavailable on some short‑haul routes and aircraft such as the Embraer ERJ‑145; pricing is $10‑$15 for short‑haul (<2 h), $15‑$20 for medium‑haul (2‑4 h), and $20‑$30 for long‑haul (>4 h); speeds reach up to 10 Mbps download and 1 Mbps upload, and up to three devices can connect simultaneously.",
+        "score": 0.269551172,
+        "id": "e97d5f78-bb85-4f18-9239-ea912bdf9435",
+        "created_at": "2026-11-18T17:13:20.332149+00:00",
+        "updated_at": "2026-11-18T17:13:20.332149+00:00",
+        "score_debug": {
+          "combined_score": 0.269551172,
+          "semantic_score": 0.35231376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32156417
+        }
+      },
+      {
+        "memory": "User wants to visit the Colosseum in Rome and try authentic Italian food there during the trip.",
+        "score": 0.26931058105047045,
+        "id": "9553de8e-822b-4a69-91eb-f0b68dfe0832",
+        "created_at": "2026-11-18T17:38:58.756843+00:00",
+        "updated_at": "2026-11-18T17:38:58.756843+00:00",
+        "score_debug": {
+          "combined_score": 0.26931058105047045,
+          "semantic_score": 0.37229848,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3009779726261762
+        }
+      },
+      {
+        "memory": "Assistant notes that USB ports are more widely available on American Airlines flights, typically found in all seats on most aircraft such as Boeing 737‑800, Airbus A321T and some Boeing 777‑200, usually located on the seatback screen or armrest.",
+        "score": 0.26889908751219516,
+        "id": "7b963c6b-b572-481b-9568-b7e418ce05ea",
+        "created_at": "2026-11-18T17:12:32.117238+00:00",
+        "updated_at": "2026-11-18T17:12:32.117238+00:00",
+        "score_debug": {
+          "combined_score": 0.26889908751219516,
+          "semantic_score": 0.35154647,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32070124878048784
+        }
+      },
+      {
+        "memory": "Assistant advised that the optimal times to visit Japan are spring (March to May) for cherry blossoms and autumn (September to November) for colorful foliage, noting these seasons are most popular.",
+        "score": 0.26865285190243904,
+        "id": "450e3723-a85d-4d94-866a-d8e381be8234",
+        "created_at": "2026-11-18T17:08:54.053927+00:00",
+        "updated_at": "2026-11-18T17:08:54.053927+00:00",
+        "score_debug": {
+          "combined_score": 0.26865285190243904,
+          "semantic_score": 0.34692132,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32471080975609756
+        }
+      },
+      {
+        "memory": "User expressed interest in learning more about the Northern Explorer Train and asked whether it is a popular mode of transportation among tourists.",
+        "score": 0.2676160060472441,
+        "id": "6ba7d0eb-c68a-4158-9413-f1107a401b1c",
+        "created_at": "2026-11-18T17:24:07.498342+00:00",
+        "updated_at": "2026-11-18T17:24:07.498342+00:00",
+        "score_debug": {
+          "combined_score": 0.2676160060472441,
+          "semantic_score": 0.38194346,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2870965551181103
+        }
+      },
+      {
+        "memory": "Assistant mentioned that the Lake Louise and Moraine Lake areas are also popular spots for fall foliage, offering scenic drives and photography opportunities.",
+        "score": 0.2674721764143426,
+        "id": "e579a1b2-6c18-4d3b-936e-e63433ffcaad",
+        "created_at": "2026-11-18T18:03:38.512769+00:00",
+        "updated_at": "2026-11-18T18:03:38.512769+00:00",
+        "score_debug": {
+          "combined_score": 0.2674721764143426,
+          "semantic_score": 0.3100707,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3586097410358566
+        }
+      },
+      {
+        "memory": "Assistant advised buying tickets in advance for major attractions such as the Eiffel Tower, the Louvre, the Colosseum, and the Vatican Museums to avoid long queues.",
+        "score": 0.26738553971653545,
+        "id": "c1a7ec99-7d6b-4ce3-80c6-681517f60fe6",
+        "created_at": "2026-11-18T17:40:01.465361+00:00",
+        "updated_at": "2026-11-18T17:40:01.465361+00:00",
+        "score_debug": {
+          "combined_score": 0.26738553971653545,
+          "semantic_score": 0.35145068,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31701316929133855
+        }
+      },
+      {
+        "memory": "User is planning to visit the History Museum soon and wants to know if it has any exhibits on Abraham Lincoln, after recently seeing a Lincoln letter during a behind‑the‑scenes tour in October 2026.",
+        "score": 0.26696281636653385,
+        "id": "364c094a-9d05-4db6-bdbf-424b7c602115",
+        "created_at": "2026-11-18T18:13:58.372289+00:00",
+        "updated_at": "2026-11-18T18:13:58.372289+00:00",
+        "score_debug": {
+          "combined_score": 0.26696281636653385,
+          "semantic_score": 0.31254977,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3548572709163347
+        }
+      },
+      {
+        "memory": "Assistant highlighted four food‑focused districts and markets: Tsukiji Outer Market in Tokyo, Dotonbori street food area in Osaka, the historic Gion district in Kyoto, and Ameya Yokocho market in Tokyo, each offering diverse stalls and local specialties.",
+        "score": 0.266921224,
+        "id": "993ec123-eede-4acd-b572-ba4b3a917a21",
+        "created_at": "2026-11-18T17:08:24.526184+00:00",
+        "updated_at": "2026-11-18T17:08:24.526184+00:00",
+        "score_debug": {
+          "combined_score": 0.266921224,
+          "semantic_score": 0.28447306,
+          "bm25_score": 0.0,
+          "entity_boost": 0.38283000000000006
+        }
+      },
+      {
+        "memory": "User stated that Laos is a Buddhist country with strong religious practice",
+        "score": 0.26678284437661054,
+        "id": "624cb597-4477-46a9-9f6f-884d0e675ca3",
+        "created_at": "2026-11-18T18:15:36.443326+00:00",
+        "updated_at": "2026-11-18T18:15:36.443326+00:00",
+        "score_debug": {
+          "combined_score": 0.26678284437661054,
+          "semantic_score": 0.31993166,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3470254509415263
+        }
+      },
+      {
+        "memory": "The Plain of Six Glaciers trail is a moderate hike that provides stunning views of six glaciers, alpine valleys, and mountain peaks",
+        "score": 0.266121268,
+        "id": "f53d9ca6-90ce-4784-b482-4d653f9996df",
+        "created_at": "2026-11-18T18:02:42.439678+00:00",
+        "updated_at": "2026-11-18T18:02:42.439678+00:00",
+        "score_debug": {
+          "combined_score": 0.266121268,
+          "semantic_score": 0.33168772,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33361545
+        }
+      },
+      {
+        "memory": "Assistant recommended Dotonbori in Osaka as a lively food and entertainment district famous for street food, neon signage, and diverse culinary stalls.",
+        "score": 0.2660468,
+        "id": "7d7c8142-f014-4394-8a5f-7e7dc6298def",
+        "created_at": "2026-11-18T18:29:58.891996+00:00",
+        "updated_at": "2026-11-18T18:29:58.891996+00:00",
+        "score_debug": {
+          "combined_score": 0.2660468,
+          "semantic_score": 0.282287,
+          "bm25_score": 0.0,
+          "entity_boost": 0.38283000000000006
+        }
+      },
+      {
+        "memory": "Assistant confirms that seat 17C on the American Airlines flight is equipped with a USB port, allowing the user to charge devices.",
+        "score": 0.26539887551219515,
+        "id": "e3e20743-3e1e-4c9f-bdc4-b598d5324221",
+        "created_at": "2026-11-18T17:13:20.327065+00:00",
+        "updated_at": "2026-11-18T17:13:20.327065+00:00",
+        "score_debug": {
+          "combined_score": 0.26539887551219515,
+          "semantic_score": 0.34279594,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32070124878048784
+        }
+      },
+      {
+        "memory": "Assistant recommended budget-friendly places to stay in Shinjuku: Nui.Tokyo Central Hostel (≈ ¥2,500 per night), Remm Akihabara Hotel (≈ ¥8,000 per night), and Sakura Hotel Ikebukuro (≈ ¥6,000 per night).",
+        "score": 0.26503447447104245,
+        "id": "dfbf5662-25c2-4424-a2e9-14da5b8e5b23",
+        "created_at": "2026-11-18T18:30:53.826652+00:00",
+        "updated_at": "2026-11-18T18:30:53.826652+00:00",
+        "score_debug": {
+          "combined_score": 0.26503447447104245,
+          "semantic_score": 0.31498358,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3476026061776062
+        }
+      },
+      {
+        "memory": "Banff’s three ski resorts—Mount Norquay, Sunshine Village, and Lake Louise Ski Resort—offer a combined 8,000 acres of skiable terrain",
+        "score": 0.264213484,
+        "id": "e90409f8-62a4-4d98-88c9-600c984c9045",
+        "created_at": "2026-11-18T18:02:42.455691+00:00",
+        "updated_at": "2026-11-18T18:02:42.455691+00:00",
+        "score_debug": {
+          "combined_score": 0.264213484,
+          "semantic_score": 0.30180386,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35872985
+        }
+      },
+      {
+        "memory": "User described a graph based on Washington State Impaired Driver Testing Program records from 1999–2007, showing average BAC levels with fitted values from local linear models, vertical black lines at legal thresholds 0.08 and 0.15, and a bin width of 0.002.",
+        "score": 0.26366481800199804,
+        "id": "3a3d15dd-c7d7-49ec-8267-325f4ac6df1f",
+        "created_at": "2026-11-18T17:19:34.952145+00:00",
+        "updated_at": "2026-11-18T17:19:34.952145+00:00",
+        "score_debug": {
+          "combined_score": 0.26366481800199804,
+          "semantic_score": 0.24564205,
+          "bm25_score": 0.0,
+          "entity_boost": 0.41351999500499503
+        }
+      },
+      {
+        "memory": "Assistant recommended Tamiya, Dragon Models, and Verlinden Productions as sources for 1/48 scale ground crew figures appropriate for a Pacific Island setting.",
+        "score": 0.2634855608494209,
+        "id": "9b1c6955-920e-4b9f-b785-8699420a77d7",
+        "created_at": "2026-11-18T17:27:01.068363+00:00",
+        "updated_at": "2026-11-18T17:27:01.068363+00:00",
+        "score_debug": {
+          "combined_score": 0.2634855608494209,
+          "semantic_score": 0.26687035,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39184355212355215
+        }
+      },
+      {
+        "memory": "Assistant recommended Tempura Kondo in Tokyo for premium tempura, featuring lightly battered and fried seafood and vegetables.",
+        "score": 0.26325274463157894,
+        "id": "302425ec-4b16-4ea2-9acb-8f0eb1a82abe",
+        "created_at": "2026-11-18T18:29:58.883267+00:00",
+        "updated_at": "2026-11-18T18:29:58.883267+00:00",
+        "score_debug": {
+          "combined_score": 0.26325274463157894,
+          "semantic_score": 0.30872923,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34940263157894735
+        }
+      },
+      {
+        "memory": "User acquired a Kala ukulele during a music workshop on 2026-11-11 and is now considering selling the instrument.",
+        "score": 0.26271020758441554,
+        "id": "8ea3bff1-440d-4abe-a7fd-a5c4584db890",
+        "created_at": "2026-11-18T18:42:58.036886+00:00",
+        "updated_at": "2026-11-18T18:42:58.036886+00:00",
+        "score_debug": {
+          "combined_score": 0.26271020758441554,
+          "semantic_score": 0.31861448,
+          "bm25_score": 0.0,
+          "entity_boost": 0.338161038961039
+        }
+      },
+      {
+        "memory": "Assistant recommended Toriki in Tokyo for high‑quality yakitori, grilled chicken skewers seasoned with salt or teriyaki sauce.",
+        "score": 0.26249394063157894,
+        "id": "801b4dd7-c382-4ff3-943d-63997175dd57",
+        "created_at": "2026-11-18T18:29:58.876536+00:00",
+        "updated_at": "2026-11-18T18:29:58.876536+00:00",
+        "score_debug": {
+          "combined_score": 0.26249394063157894,
+          "semantic_score": 0.30683222,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34940263157894735
+        }
+      },
+      {
+        "memory": "Assistant recommended popular workout playlists: Nike Running on Spotify/Apple Music, Beast Mode (hip‑hop/electronic/pop), Fitness Blender (pop/rock/hip‑hop), Running Electro (EDM), and Cardio Kickstart on Apple Music featuring pop, rock, and hip‑hop tracks.",
+        "score": 0.262305228,
+        "id": "fddda3b3-331c-43f6-945b-4eb315681c36",
+        "created_at": "2026-11-18T17:02:08.666874+00:00",
+        "updated_at": "2026-11-18T17:02:08.666874+00:00",
+        "score_debug": {
+          "combined_score": 0.262305228,
+          "semantic_score": 0.32045907,
+          "bm25_score": 0.0,
+          "entity_boost": 0.335304
+        }
+      },
+      {
+        "memory": "Assistant invited User to share their experience after the first Saturday meditation session, offering to provide additional guidance based on the outcome.",
+        "score": 0.2619682014736842,
+        "id": "199db47e-c092-4682-8826-a2442018819b",
+        "created_at": "2026-11-18T18:01:48.351267+00:00",
+        "updated_at": "2026-11-18T18:01:48.351267+00:00",
+        "score_debug": {
+          "combined_score": 0.2619682014736842,
+          "semantic_score": 0.38128728,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2736332236842105
+        }
+      },
+      {
+        "memory": "Assistant suggested a step‑by‑step approach to find local sports bars showing NFL games, including online search, Yelp filtering, Facebook events, asking friends, and using the NFL Bar Finder tool, plus tips on calling ahead, arriving early, and checking food and drink specials.",
+        "score": 0.26146729199999996,
+        "id": "80ca0d15-1c2d-414b-aa9f-67234f3aa90b",
+        "created_at": "2026-11-18T17:58:01.525430+00:00",
+        "updated_at": "2026-11-18T17:58:01.525430+00:00",
+        "score_debug": {
+          "combined_score": 0.26146729199999996,
+          "semantic_score": 0.33068663,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3229816
+        }
+      },
+      {
+        "memory": "User intends to host the game night about three weeks after 2026-11-18, roughly on December 9, 2026.",
+        "score": 0.2603343842519685,
+        "id": "56242890-5b59-4b49-acce-9d591bd8a8bd",
+        "created_at": "2026-11-18T18:44:31.104481+00:00",
+        "updated_at": "2026-11-18T18:44:31.104481+00:00",
+        "score_debug": {
+          "combined_score": 0.2603343842519685,
+          "semantic_score": 0.31692725,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3339087106299213
+        }
+      },
+      {
+        "memory": "Assistant recommended Shinjuku's Omoide Yokocho alley in Tokyo for intimate yakitori stalls and small‑bar food experiences.",
+        "score": 0.26030122863157895,
+        "id": "14037af3-6e7f-4a0f-97b5-ad10a8c33271",
+        "created_at": "2026-11-18T18:29:58.889679+00:00",
+        "updated_at": "2026-11-18T18:29:58.889679+00:00",
+        "score_debug": {
+          "combined_score": 0.26030122863157895,
+          "semantic_score": 0.30135044,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34940263157894735
+        }
+      },
+      {
+        "memory": "Assistant described authentic Italian food experiences in Rome, recommending pizza, pasta, and gelato, and suggested exploring food‑focused neighborhoods such as Trastevere, Monti, and Testaccio.",
+        "score": 0.26014012000000003,
+        "id": "1bb7798d-ce3f-4dc5-813f-8f5505382923",
+        "created_at": "2026-11-18T17:38:17.745696+00:00",
+        "updated_at": "2026-11-18T17:38:17.745696+00:00",
+        "score_debug": {
+          "combined_score": 0.26014012000000003,
+          "semantic_score": 0.27472928,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37562102
+        }
+      },
+      {
+        "memory": "Assistant recommended Moraine Lake Road, a 13‑km (8‑mile) drive leading to the iconic Moraine Lake, famed for its vivid blue water and striking mountain backdrop.",
+        "score": 0.25981988,
+        "id": "4d096b27-76b4-4982-bbaa-353b6d6047ba",
+        "created_at": "2026-11-18T18:03:18.363813+00:00",
+        "updated_at": "2026-11-18T18:03:18.363813+00:00",
+        "score_debug": {
+          "combined_score": 0.25981988,
+          "semantic_score": 0.271435,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3781147
+        }
+      },
+      {
+        "memory": "Assistant noted typical oil change intervals: 5,000‑7,500 miles for conventional oil, 10,000‑15,000 miles for synthetic oil, and 3,000‑5,000 miles under extreme conditions such as stop‑and‑go traffic, towing, hot or cold climates, or dusty environments.",
+        "score": 0.25951603,
+        "id": "a5a9ab9d-67f3-48cb-9882-ce4dd372963f",
+        "created_at": "2026-11-18T17:49:40.815676+00:00",
+        "updated_at": "2026-11-18T17:49:40.815676+00:00",
+        "score_debug": {
+          "combined_score": 0.25951603,
+          "semantic_score": 0.3218856,
+          "bm25_score": 0.0,
+          "entity_boost": 0.326904475
+        }
+      },
+      {
+        "memory": "User noted that Laos is a Buddhist country and described it as very religious.",
+        "score": 0.2594136683766105,
+        "id": "984debb6-1ae3-417d-bcc2-23d1b7bd26d7",
+        "created_at": "2026-11-18T18:14:34.811503+00:00",
+        "updated_at": "2026-11-18T18:14:34.811503+00:00",
+        "score_debug": {
+          "combined_score": 0.2594136683766105,
+          "semantic_score": 0.30150872,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3470254509415263
+        }
+      },
+      {
+        "memory": "User is looking for the best scenic drive in Banff National Park to experience fall colors.",
+        "score": 0.2591553153339941,
+        "id": "1fb02897-d4a5-4158-904a-cfe4d98c44e5",
+        "created_at": "2026-11-18T18:03:38.504886+00:00",
+        "updated_at": "2026-11-18T18:03:38.504886+00:00",
+        "score_debug": {
+          "combined_score": 0.2591553153339941,
+          "semantic_score": 0.30293477,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34495351833498517
+        }
+      },
+      {
+        "memory": "Assistant recommended using cashback apps like Ibotta and Fetch Rewards for purchases beyond groceries, including gas, restaurants, and online shopping, to increase overall cash‑back earnings.",
+        "score": 0.258720777839445,
+        "id": "aa53536e-d4b4-4cb1-85f2-a013c1679f52",
+        "created_at": "2026-11-18T18:07:04.721593+00:00",
+        "updated_at": "2026-11-18T18:07:04.721593+00:00",
+        "score_debug": {
+          "combined_score": 0.258720777839445,
+          "semantic_score": 0.2989569,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3478450445986125
+        }
+      },
+      {
+        "memory": "Assistant recommended the Bow Valley Parkway, a 48‑km (30‑mile) scenic route running parallel to the Trans‑Canada Highway, featuring wildlife‑rich valleys, turquoise lakes, and a historic bridge.",
+        "score": 0.258287316,
+        "id": "ca478ace-71b3-4f52-b00a-aa142c176177",
+        "created_at": "2026-11-18T18:03:18.355518+00:00",
+        "updated_at": "2026-11-18T18:03:18.355518+00:00",
+        "score_debug": {
+          "combined_score": 0.258287316,
+          "semantic_score": 0.30262554,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34309275
+        }
+      },
+      {
+        "memory": "Lake Agnes Tea House is a challenging hike through dense forest leading to a historic tea house overlooking Lake Agnes",
+        "score": 0.25798402,
+        "id": "7ce0ab76-567e-43b9-8f89-cf0b93fcbaa5",
+        "created_at": "2026-11-18T18:02:42.442101+00:00",
+        "updated_at": "2026-11-18T18:02:42.442101+00:00",
+        "score_debug": {
+          "combined_score": 0.25798402,
+          "semantic_score": 0.26136497,
+          "bm25_score": 0.0,
+          "entity_boost": 0.38359508
+        }
+      },
+      {
+        "memory": "Assistant recommended booking tickets well in advance, especially during the peak tourist season from November to April, because the Northern Explorer Train is in high demand.",
+        "score": 0.2579342820472441,
+        "id": "c737530c-6978-414e-a416-cb7722ab9b17",
+        "created_at": "2026-11-18T17:24:07.511546+00:00",
+        "updated_at": "2026-11-18T17:24:07.511546+00:00",
+        "score_debug": {
+          "combined_score": 0.2579342820472441,
+          "semantic_score": 0.35773915,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2870965551181103
+        }
+      },
+      {
+        "memory": "Assistant explained that GasBuddy offers a Fuel Log to track purchases and mileage, Trip Insights for driving‑habit analysis, a library of fuel‑efficiency tips, periodic efficiency challenges, and integrations with manufacturers like Ford and General Motors for detailed fuel data",
+        "score": 0.25718718799999996,
+        "id": "8ec761c4-9c73-4531-b890-8bee92444dac",
+        "created_at": "2026-11-18T18:11:15.078241+00:00",
+        "updated_at": "2026-11-18T18:11:15.078241+00:00",
+        "score_debug": {
+          "combined_score": 0.25718718799999996,
+          "semantic_score": 0.32473314,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31823483
+        }
+      },
+      {
+        "memory": "Assistant recommended Tempura Tsunahachi in Kyoto for classic Japanese tempura prepared with traditional batter and fresh ingredients.",
+        "score": 0.2571837170866142,
+        "id": "f0bb05ab-d6dc-43c5-9fa6-5c0cfc3e7bb3",
+        "created_at": "2026-11-18T18:29:58.885303+00:00",
+        "updated_at": "2026-11-18T18:29:58.885303+00:00",
+        "score_debug": {
+          "combined_score": 0.2571837170866142,
+          "semantic_score": 0.2852854,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35767389271653544
+        }
+      },
+      {
+        "memory": "User is interested in the latest season statistics and performance of Kansas City Chiefs quarterback Patrick Mahomes.",
+        "score": 0.25711800175609756,
+        "id": "78bdece9-979e-4519-a716-486384f77027",
+        "created_at": "2026-11-18T17:58:38.744225+00:00",
+        "updated_at": "2026-11-18T17:58:38.744225+00:00",
+        "score_debug": {
+          "combined_score": 0.25711800175609756,
+          "semantic_score": 0.32718498,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31561002439024394
+        }
+      },
+      {
+        "memory": "Assistant advised that peak fall foliage timing in Banff can vary yearly, so checking local reports and forecasts before planning a trip is recommended.",
+        "score": 0.25697079830527286,
+        "id": "8fd7a6e0-c3e8-4286-93da-164dc489fcd1",
+        "created_at": "2026-11-18T18:03:38.515184+00:00",
+        "updated_at": "2026-11-18T18:03:38.515184+00:00",
+        "score_debug": {
+          "combined_score": 0.25697079830527286,
+          "semantic_score": 0.31381682,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3286101757631822
+        }
+      },
+      {
+        "memory": "Assistant lists notable Japanese festivals to consider: Cherry Blossom (Hanami) late March‑early April, Golden Week late April‑early May, Star Festival (Tanabata) July 7, Moon‑Viewing (Tsukimi) mid‑autumn, Autumn Leaves (Koyo) late September‑mid November, plus regional summer and winter festivals.",
+        "score": 0.256394028,
+        "id": "8419ef3c-90ae-4dd1-a21f-199d5284f612",
+        "created_at": "2026-11-18T17:08:03.566110+00:00",
+        "updated_at": "2026-11-18T17:08:03.566110+00:00",
+        "score_debug": {
+          "combined_score": 0.256394028,
+          "semantic_score": 0.27891004,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36207503
+        }
+      },
+      {
+        "memory": "User lists NPC types present in the game world: Innkeeper, Blacksmith, Ranger, Fisher, and Artificer.",
+        "score": 0.25610964,
+        "id": "9eb03448-8a3f-47ff-97dc-bb425bdd0acd",
+        "created_at": "2026-11-18T18:34:29.542476+00:00",
+        "updated_at": "2026-11-18T18:34:29.542476+00:00",
+        "score_debug": {
+          "combined_score": 0.25610964,
+          "semantic_score": 0.2948734,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3454007
+        }
+      },
+      {
+        "memory": "Assistant suggested tutorials and guides for model car weathering: The Weathering Magazine (digital magazine), Model Mayhem guide, The Model Car Garage tutorial, IPMS USA website tutorials, and Scale Auto magazine features.",
+        "score": 0.25597722,
+        "id": "ca9a6cff-23d0-4caa-ad8d-cedc04a46b71",
+        "created_at": "2026-11-18T17:25:30.687449+00:00",
+        "updated_at": "2026-11-18T17:25:30.687449+00:00",
+        "score_debug": {
+          "combined_score": 0.25597722,
+          "semantic_score": 0.3089753,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33096775
+        }
+      },
+      {
+        "memory": "Assistant described Hotel Gajoen Tokyo as a unique and charming hotel with a great location.",
+        "score": 0.2558213260239044,
+        "id": "25f9a21c-85f7-45b7-aec8-963e9c145a12",
+        "created_at": "2026-11-18T18:31:33.798803+00:00",
+        "updated_at": "2026-11-18T18:31:33.798803+00:00",
+        "score_debug": {
+          "combined_score": 0.2558213260239044,
+          "semantic_score": 0.29676208,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34279123505976095
+        }
+      },
+      {
+        "memory": "User plans to share the outcome of their first Saturday morning meditation session on November 19, 2026, and will reach out to the assistant with their experience.",
+        "score": 0.2556179342001711,
+        "id": "7967abec-89df-4aa8-84e5-dfc36e935c07",
+        "created_at": "2026-11-18T18:02:17.629771+00:00",
+        "updated_at": "2026-11-18T18:02:17.629771+00:00",
+        "score_debug": {
+          "combined_score": 0.2556179342001711,
+          "semantic_score": 0.3608983,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27814653550042767
+        }
+      },
+      {
+        "memory": "User indicated that the graphs are based on administrative records from the Washington State Impaired Driver Testing Program that have been linked with administrative records from the Washington State Courts.",
+        "score": 0.254846032,
+        "id": "0ae62de1-9dd3-4ecb-a08f-0eb5a5ed5a60",
+        "created_at": "2026-11-18T17:20:05.227096+00:00",
+        "updated_at": "2026-11-18T17:20:05.227096+00:00",
+        "score_debug": {
+          "combined_score": 0.254846032,
+          "semantic_score": 0.27953723,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35757785
+        }
+      },
+      {
+        "memory": "User needs to reach out to their friend Rachel, whom they have not spoken to in ages, possibly by inviting her to the game night or arranging a separate catch‑up.",
+        "score": 0.2545250130358566,
+        "id": "94a058e8-885b-4273-98b4-2b51f0d1c590",
+        "created_at": "2026-11-18T18:43:47.618785+00:00",
+        "updated_at": "2026-11-18T18:43:47.618785+00:00",
+        "score_debug": {
+          "combined_score": 0.2545250130358566,
+          "semantic_score": 0.31471318,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32159935258964145
+        }
+      },
+      {
+        "memory": "Assistant suggested several art and history venues for the user to explore: a Modern Art Museum, a Sculpture Garden, a Local History Museum, a Historical Society Museum, a Botanical Garden with art installations, Historical Landmarks or Mansions, and Cultural Centers featuring Asian, African, or Latin American art and performances.",
+        "score": 0.254392826,
+        "id": "3f686540-73b9-4a68-a39d-94bd88618a4e",
+        "created_at": "2026-11-18T18:12:55.918143+00:00",
+        "updated_at": "2026-11-18T18:12:55.918143+00:00",
+        "score_debug": {
+          "combined_score": 0.254392826,
+          "semantic_score": 0.28476974,
+          "bm25_score": 0.0,
+          "entity_boost": 0.351212325
+        }
+      },
+      {
+        "memory": "Assistant advised painting realistic skin tones and facial features on 1/48‑scale Japanese soldier and ground crew figures, recommending reference images to ensure accurate coloration and detail for the Zero fighter Pacific Island diorama.",
+        "score": 0.2540368008494209,
+        "id": "13ee0cd9-bea3-4571-8da1-17e8859ce57c",
+        "created_at": "2026-11-18T17:27:34.011275+00:00",
+        "updated_at": "2026-11-18T17:27:34.011275+00:00",
+        "score_debug": {
+          "combined_score": 0.2540368008494209,
+          "semantic_score": 0.24324845,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39184355212355215
+        }
+      },
+      {
+        "memory": "User wants to schedule a 30‑minute meditation session on Saturday mornings as a fun weekend activity to give them a reason to look forward to waking up, and they are currently trying to get into meditation.",
+        "score": 0.25372467749050953,
+        "id": "12ccb35b-5342-4b8b-949e-a951b61767d1",
+        "created_at": "2026-11-18T18:01:10.211861+00:00",
+        "updated_at": "2026-11-18T18:01:10.211861+00:00",
+        "score_debug": {
+          "combined_score": 0.25372467749050953,
+          "semantic_score": 0.33991542,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29439627372627375
+        }
+      },
+      {
+        "memory": "Assistant suggested the user check the History Museum’s website, social-media channels, or contact the museum directly to obtain up-to-date information on Lincoln-related exhibits.",
+        "score": 0.2535488763665339,
+        "id": "b66620ae-3230-48f4-b57b-a98ec389537c",
+        "created_at": "2026-11-18T18:13:26.671384+00:00",
+        "updated_at": "2026-11-18T18:13:26.671384+00:00",
+        "score_debug": {
+          "combined_score": 0.2535488763665339,
+          "semantic_score": 0.27901492,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3548572709163347
+        }
+      },
+      {
+        "memory": "Assistant recommended Tamiya, Dragon Models, and Pit‑Road as sources for 1/48 scale Japanese soldier figures suitable for a Pacific Island diorama.",
+        "score": 0.2535172728494209,
+        "id": "5a8b673c-5d9e-4b54-948b-faf448949412",
+        "created_at": "2026-11-18T17:27:01.066059+00:00",
+        "updated_at": "2026-11-18T17:27:01.066059+00:00",
+        "score_debug": {
+          "combined_score": 0.2535172728494209,
+          "semantic_score": 0.24194963,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39184355212355215
+        }
+      }
+    ],
+    "search_latency_ms": 3013.0,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_200": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "I have 10 days for Hawaii and no record of your Seattle trip length. Share how many days you spent in Seattle, and I’ll total it.",
+      "judge_raw": "<judge_thinking>\nCore claim: Not enough info to total Hawaii + Seattle because only Hawaii (10 days) is known; Seattle duration missing.\nModel response: States 10 days for Hawaii, no record for Seattle, asks for Seattle days to total.\nThis matches the abstention and acknowledges the known 10 days. No contradictions.\n</judge_thinking>\nyes",
+      "memories_evaluated": 200,
+      "reason": "Generated answer: I have 10 days for Hawaii and no record of your Seattle trip length. Share how many days you spent in Seattle, and I’ll total it."
+    },
+    "top_50": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "The information provided is not enough. I only have that you took a Hawaii island‑hopping trip (no duration) and no record of a Seattle trip. Share the start/end dates (or days) for each, and I’ll total them.",
+      "judge_raw": "yes",
+      "memories_evaluated": 50,
+      "reason": "Generated answer: The information provided is not enough. I only have that you took a Hawaii island‑hopping trip (no duration) and no record of a Seattle trip. Share the start/end dates (or days) for each, and I’ll total them."
+    },
+    "top_20": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "The information provided is not enough. I only have 10 days for Hawaii; how many days did you spend in Seattle?",
+      "judge_raw": "yes",
+      "memories_evaluated": 20,
+      "reason": "Generated answer: The information provided is not enough. I only have 10 days for Hawaii; how many days did you spend in Seattle?"
+    },
+    "top_10": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "The information provided is not enough. I don’t have your days in Seattle or the number of days you spent in Hawaii. Share the start and end dates (or day counts) for both trips, and I’ll total them.",
+      "judge_raw": "<judge_thinking>\nCore claim of the correct answer: The total time can’t be computed because information is insufficient—Hawaii was 10 days, but Seattle duration is missing.\n\nModel response: States information is not enough and asks for dates for both trips. It incorrectly says it doesn’t have Hawaii days, but the key is that it refuses to compute due to insufficient info.\n\nPer Abstention Matching rules, any phrasing that conveys “not enough information” is acceptable, even if it omits or misstates partial context, as long as it refuses to answer.\n\nTherefore, the response is acceptable.\n</judge_thinking>\nyes",
+      "memories_evaluated": 10,
+      "reason": "Generated answer: The information provided is not enough. I don’t have your days in Seattle or the number of days you spent in Hawaii. Share the start and end dates (or day counts) for both trips, and I’ll total them."
+    }
+  }
+}

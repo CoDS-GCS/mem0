@@ -1,0 +1,2654 @@
+{
+  "question_id": "4dfccbf8",
+  "question_type": "temporal-reasoning",
+  "question": "What did I do with Rachel on the Wednesday two months ago?",
+  "ground_truth_answer": "I started taking ukulele lessons with Rachel.",
+  "question_date": "2023/04/01 (Sat) 16:08",
+  "is_abstention": false,
+  "user_id": "longmemeval_4dfccbf8_8da3076b",
+  "answer_session_ids": [
+    "answer_4bebc783_1",
+    "answer_4bebc783_2"
+  ],
+  "retrieval": {
+    "search_query": "What did I do with Rachel on the Wednesday two months ago?",
+    "search_results": [
+      {
+        "memory": "User began ukulele lessons with friend Rachel on November 18, 2026 and describes the experience as really fun so far.",
+        "score": 0.850748451716048,
+        "id": "1e4927a9-53f5-4d91-b755-120e68eae467",
+        "created_at": "2026-11-18T11:41:06.770825+00:00",
+        "updated_at": "2026-11-18T11:41:06.770825+00:00",
+        "score_debug": {
+          "combined_score": 0.850748451716048,
+          "semantic_score": 0.63332367,
+          "bm25_score": 0.9940469597896202,
+          "entity_boost": 0.4995004995004996
+        }
+      },
+      {
+        "memory": "User is taking ukulele lessons with friend Rachel, enjoys the lessons and feels good progress, but is struggling with fingerpicking because the fingers get tangled and it is hard to achieve a smooth sound; Rachel provides exercises to practice.",
+        "score": 0.7856053837428594,
+        "id": "010e96a5-d7d3-47d4-bd02-f642b2338058",
+        "created_at": "2026-11-18T11:41:44.908996+00:00",
+        "updated_at": "2026-11-18T11:41:44.908996+00:00",
+        "score_debug": {
+          "combined_score": 0.7856053837428594,
+          "semantic_score": 0.4663418,
+          "bm25_score": 0.9981711598566486,
+          "entity_boost": 0.4995004995004996
+        }
+      },
+      {
+        "memory": "Group member Rachel gave User great suggestions on how to improve the data analysis section of the thesis",
+        "score": 0.7710644832967832,
+        "id": "848b0a0a-8119-4399-8ce8-28a332811a72",
+        "created_at": "2026-11-18T09:58:12.256492+00:00",
+        "updated_at": "2026-11-18T09:58:12.256492+00:00",
+        "score_debug": {
+          "combined_score": 0.7710644832967832,
+          "semantic_score": 0.5531082,
+          "bm25_score": 0.994189658241958,
+          "entity_boost": 0.38036335
+        }
+      },
+      {
+        "memory": "User has been enjoying recent game nights with friends, noting that last month they played Codenames at Sarah's house and found it very fun.",
+        "score": 0.7530811077553812,
+        "id": "ba12e80d-cca6-4203-ae42-f7ea46e421f3",
+        "created_at": "2026-11-18T10:08:51.039208+00:00",
+        "updated_at": "2026-11-18T10:08:51.039208+00:00",
+        "score_debug": {
+          "combined_score": 0.7530811077553812,
+          "semantic_score": 0.48502016,
+          "bm25_score": 0.9553214943884532,
+          "entity_boost": 0.442361115
+        }
+      },
+      {
+        "memory": "User attended a music festival at the Harvard Athletic Complex (Boston Calling) in October 2026, after the event took place the previous month.",
+        "score": 0.6912512140570632,
+        "id": "3ecac750-5cff-45fb-a582-c3c849b20f34",
+        "created_at": "2026-11-18T11:16:21.284949+00:00",
+        "updated_at": "2026-11-18T11:16:21.284949+00:00",
+        "score_debug": {
+          "combined_score": 0.6912512140570632,
+          "semantic_score": 0.42281902,
+          "bm25_score": 0.954513160996804,
+          "entity_boost": 0.3507958541458542
+        }
+      },
+      {
+        "memory": "User is planning a summer trip to New York City, is considering staying at the Ritz‑Carlton in Battery Park for its views of the Statue of Liberty, and recently earned Hilton points from a business conference stay in downtown Chicago three weeks ago, asking how many points are needed for a free night at the Ritz‑Carlton.",
+        "score": 0.6842076961800344,
+        "id": "2f6b0d07-4521-43f3-b5d8-54c21477bb40",
+        "created_at": "2026-11-18T10:22:41.651038+00:00",
+        "updated_at": "2026-11-18T10:22:41.651038+00:00",
+        "score_debug": {
+          "combined_score": 0.6842076961800344,
+          "semantic_score": 0.38850957,
+          "bm25_score": 0.9948367683521838,
+          "entity_boost": 0.3271729020979022
+        }
+      },
+      {
+        "memory": "User plans to host the next monthly game night at their own home, will introduce a new game alongside Deception, and is excited to try Deception with their friends.",
+        "score": 0.6744010901378514,
+        "id": "57092bf3-1458-44d6-bfe7-52a7f288c8ed",
+        "created_at": "2026-11-18T10:11:09.997624+00:00",
+        "updated_at": "2026-11-18T10:11:09.997624+00:00",
+        "score_debug": {
+          "combined_score": 0.6744010901378514,
+          "semantic_score": 0.41619647,
+          "bm25_score": 0.9553214943884532,
+          "entity_boost": 0.3144847609561753
+        }
+      },
+      {
+        "memory": "User is planning a family trip to Europe, noting it has been about six months since the last family travel, and is seeking destination and itinerary suggestions to enjoy quality time together.",
+        "score": 0.6571734822641784,
+        "id": "e950bb4c-1cca-437f-868f-8bf18a64fb7b",
+        "created_at": "2026-11-18T11:00:04.644509+00:00",
+        "updated_at": "2026-11-18T11:00:04.644509+00:00",
+        "score_debug": {
+          "combined_score": 0.6571734822641784,
+          "semantic_score": 0.41466874,
+          "bm25_score": 0.9528675235755039,
+          "entity_boost": 0.27539744208494205
+        }
+      },
+      {
+        "memory": "User is interested in playing Werewolf with friends and wants to know if it fits their monthly game night, which typically has around six participants.",
+        "score": 0.6524270592250812,
+        "id": "5e3df34a-b539-40be-b732-3747ce70c47f",
+        "created_at": "2026-11-18T10:09:39.406813+00:00",
+        "updated_at": "2026-11-18T10:09:39.406813+00:00",
+        "score_debug": {
+          "combined_score": 0.6524270592250812,
+          "semantic_score": 0.35967353,
+          "bm25_score": 0.9569093571065275,
+          "entity_boost": 0.3144847609561753
+        }
+      },
+      {
+        "memory": "User plans to try Deception: Murder in Hong Kong at their monthly game night, which usually has around six participants, as an alternative to Werewolf.",
+        "score": 0.6503164352250812,
+        "id": "06e0bbea-1aa9-42ad-a7ac-5ed353e0b57d",
+        "created_at": "2026-11-18T10:10:26.466193+00:00",
+        "updated_at": "2026-11-18T10:10:26.466193+00:00",
+        "score_debug": {
+          "combined_score": 0.6503164352250812,
+          "semantic_score": 0.35439697,
+          "bm25_score": 0.9569093571065275,
+          "entity_boost": 0.3144847609561753
+        }
+      },
+      {
+        "memory": "Assistant noted that Greece is ideal to visit in spring (April‑May) or autumn (September‑October), with peak tourist months June‑August being hot and crowded and winter (December‑February) cooler; recommended avoiding travel during Orthodox Easter (March/April), the Athens Festival (June‑September) and the Full Moon Festival in August.",
+        "score": 0.6273536573284483,
+        "id": "ec52c679-d2c1-4f58-87cd-1d95d78c0105",
+        "created_at": "2026-11-18T11:03:13.553836+00:00",
+        "updated_at": "2026-11-18T11:03:13.553836+00:00",
+        "score_debug": {
+          "combined_score": 0.6273536573284483,
+          "semantic_score": 0.26546115,
+          "bm25_score": 0.9458954009135283,
+          "entity_boost": 0.35702759240759246
+        }
+      },
+      {
+        "memory": "Assistant recommended organizing Max's photos by setting up monthly or weekly folders, labeling each file with date, age, and description, categorizing by activity, choosing a theme and album type (physical or digital), designing consistent layouts with captions, milestones, timelines, and interactive elements, and suggested digital platforms Shutterfly, Google Photos, and Canva for creating the album",
+        "score": 0.6105024762575084,
+        "id": "015d1b93-40fb-41f5-a021-cc350f3dfae5",
+        "created_at": "2026-11-18T11:38:27.842710+00:00",
+        "updated_at": "2026-11-18T11:38:27.842710+00:00",
+        "score_debug": {
+          "combined_score": 0.6105024762575084,
+          "semantic_score": 0.29272836,
+          "bm25_score": 0.926799350643771,
+          "entity_boost": 0.30672848
+        }
+      },
+      {
+        "memory": "The Data Science for Business course on Coursera, offered by the University of Colorado Boulder and taught by Professors Galit Shmueli and Peter Bruce, lasts about 4 months (approximately 32 video hours), is rated intermediate, and recommends a basic understanding of statistics, algebra, and data analysis using Excel or Google Sheets; a certificate is awarded upon completion.",
+        "score": 0.6013661610471958,
+        "id": "d713de0c-fc92-4631-9c28-6a10e057a864",
+        "created_at": "2026-11-18T11:19:41.929889+00:00",
+        "updated_at": "2026-11-18T11:19:41.929889+00:00",
+        "score_debug": {
+          "combined_score": 0.6013661610471958,
+          "semantic_score": 0.25403336,
+          "bm25_score": 0.9362924264762572,
+          "entity_boost": 0.3130896161417323
+        }
+      },
+      {
+        "memory": "User has been collecting vintage cameras for about three months and recently acquired five new cameras for the collection",
+        "score": 0.5353287320435254,
+        "id": "ddc3146f-8038-4f01-8e86-58b4021a3fc9",
+        "created_at": "2026-11-18T10:18:38.517468+00:00",
+        "updated_at": "2026-11-18T10:18:38.517468+00:00",
+        "score_debug": {
+          "combined_score": 0.5353287320435254,
+          "semantic_score": 0.37910217,
+          "bm25_score": 0.9592196601088135,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User attended the “Impressionist Masters” exhibition at the City Art Museum last month and found it amazing.",
+        "score": 0.5290985920435254,
+        "id": "b0470857-749a-41df-abd9-97c00e58db1a",
+        "created_at": "2026-11-18T11:12:04.825035+00:00",
+        "updated_at": "2026-11-18T11:12:04.825035+00:00",
+        "score_debug": {
+          "combined_score": 0.5290985920435254,
+          "semantic_score": 0.36352682,
+          "bm25_score": 0.9592196601088135,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "A few years ago a heart doctor told the user they had a high vagal tone, a trait common among serious athletes, though it was not sufficient for a recent personal crisis.",
+        "score": 0.513202907613062,
+        "id": "bda93e2b-c728-45d8-b1d6-3267789fc843",
+        "created_at": "2026-11-18T10:15:09.641983+00:00",
+        "updated_at": "2026-11-18T10:15:09.641983+00:00",
+        "score_debug": {
+          "combined_score": 0.513202907613062,
+          "semantic_score": 0.28633392,
+          "bm25_score": 0.9966733490326548,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has been collecting vinyl records for about six months and is seeking advice on how to display and store them properly.",
+        "score": 0.499357946412184,
+        "id": "c4dfdcbf-cc64-4e42-97f2-c45972994a03",
+        "created_at": "2026-11-18T10:18:06.270812+00:00",
+        "updated_at": "2026-11-18T10:18:06.270812+00:00",
+        "score_debug": {
+          "combined_score": 0.499357946412184,
+          "semantic_score": 0.28993583,
+          "bm25_score": 0.95845903603046,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant emphasized ensuring the passport is valid for at least six months after the return date, carrying travel‑insurance documents, any required visas, and keeping digital copies of important documents with a trusted contact.",
+        "score": 0.49827013168230094,
+        "id": "b7253f9c-f28f-429d-a234-1f4c91731805",
+        "created_at": "2026-11-18T11:03:50.934735+00:00",
+        "updated_at": "2026-11-18T11:03:50.934735+00:00",
+        "score_debug": {
+          "combined_score": 0.49827013168230094,
+          "semantic_score": 0.295349,
+          "bm25_score": 0.9503263292057524,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has been collecting vinyl records for about six months, currently stores them in a \"nerd cave\" together with his cameras, and wants proper storage methods to keep the records in good condition.",
+        "score": 0.496411511236437,
+        "id": "b9046d1e-3547-47c7-a6ba-dd6dc20a20d8",
+        "created_at": "2026-11-18T10:22:41.639615+00:00",
+        "updated_at": "2026-11-18T10:22:41.639615+00:00",
+        "score_debug": {
+          "combined_score": 0.496411511236437,
+          "semantic_score": 0.2873336,
+          "bm25_score": 0.9536951780910925,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User has been collecting vinyl records for about six months, storing them in a \"nerd cave\" alongside cameras, and wants proper storage to keep the records in good condition.",
+        "score": 0.491264699236437,
+        "id": "848ac805-28d6-4074-9437-dbd0318f974e",
+        "created_at": "2026-11-18T10:21:46.785124+00:00",
+        "updated_at": "2026-11-18T10:21:46.785124+00:00",
+        "score_debug": {
+          "combined_score": 0.491264699236437,
+          "semantic_score": 0.27446657,
+          "bm25_score": 0.9536951780910925,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User's last meeting with their group occurred on March 1, 2026",
+        "score": 0.34894935696303697,
+        "id": "eb4d9568-8a30-44d4-915d-937d3776aeb7",
+        "created_at": "2026-11-18T09:58:12.254334+00:00",
+        "updated_at": "2026-11-18T09:58:12.254334+00:00",
+        "score_debug": {
+          "combined_score": 0.34894935696303697,
+          "semantic_score": 0.5153458,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35702759240759246
+        }
+      },
+      {
+        "memory": "User worked out twice at the Hilton Hotel gym during their October 2026 stay and found the facility very nice.",
+        "score": 0.33264308565834166,
+        "id": "1478f1de-3648-4e35-9a35-630142f5bbb3",
+        "created_at": "2026-11-18T11:08:31.100764+00:00",
+        "updated_at": "2026-11-18T11:08:31.100764+00:00",
+        "score_debug": {
+          "combined_score": 0.33264308565834166,
+          "semantic_score": 0.48081186,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3507958541458542
+        }
+      },
+      {
+        "memory": "Jack is interrupted by Wendy, a colleague of his mother from the museum's restoration department, who greets him and asks about his summer.",
+        "score": 0.33201465959640364,
+        "id": "0a5c6d4f-91b0-456f-9d6f-5dae7d707901",
+        "created_at": "2026-11-18T10:12:38.868991+00:00",
+        "updated_at": "2026-11-18T10:12:38.868991+00:00",
+        "score_debug": {
+          "combined_score": 0.33201465959640364,
+          "semantic_score": 0.42614564,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40389100899100905
+        }
+      },
+      {
+        "memory": "Jack feels self-conscious under Wendy's gaze and struggles to find the right words.",
+        "score": 0.32898501559640364,
+        "id": "df6dd5cc-2863-4fc9-a3b4-382f474343e0",
+        "created_at": "2026-11-18T10:12:38.871029+00:00",
+        "updated_at": "2026-11-18T10:12:38.871029+00:00",
+        "score_debug": {
+          "combined_score": 0.32898501559640364,
+          "semantic_score": 0.41857153,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40389100899100905
+        }
+      },
+      {
+        "memory": "User decided to pair the pasta-making kit with the cookbook \"The Essentials of Classic Italian Cooking\" by Marcella Hazan and will include a personalized note that expresses excitement for their mom's new hobby and shares a favorite pasta-related memory they have together.",
+        "score": 0.3258106872207792,
+        "id": "f9934812-115d-4632-992e-816cd0a3e6fd",
+        "created_at": "2026-11-18T09:51:55.447853+00:00",
+        "updated_at": "2026-11-18T09:51:55.447853+00:00",
+        "score_debug": {
+          "combined_score": 0.3258106872207792,
+          "semantic_score": 0.41569477,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3988319480519481
+        }
+      },
+      {
+        "memory": "User intends to dedicate a section of Max's photo album to vet visits and milestones, including his first vaccination and check-up recorded on February 15, 2026.",
+        "score": 0.3172149635059761,
+        "id": "9392ba98-33fb-4f9b-803e-8da6d0eedbbc",
+        "created_at": "2026-11-18T11:39:57.213581+00:00",
+        "updated_at": "2026-11-18T11:39:57.213581+00:00",
+        "score_debug": {
+          "combined_score": 0.3172149635059761,
+          "semantic_score": 0.4391896,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35384780876494026
+        }
+      },
+      {
+        "memory": "User is considering adding a dedicated section to Max's photo album that documents his veterinary visits and milestones, such as the first vaccination and check‑up on February 15, 2026.",
+        "score": 0.3144579915059761,
+        "id": "29dedc8a-e154-4857-b086-114885ebf8cb",
+        "created_at": "2026-11-18T11:38:52.630498+00:00",
+        "updated_at": "2026-11-18T11:38:52.630498+00:00",
+        "score_debug": {
+          "combined_score": 0.3144579915059761,
+          "semantic_score": 0.43229717,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35384780876494026
+        }
+      },
+      {
+        "memory": "Assistant advises making reservations in advance for popular restaurants such as Girl & the Goat and Alinea to ensure availability.",
+        "score": 0.3137333431553785,
+        "id": "fab5c802-8f2a-4269-b28d-8efc4611f6ef",
+        "created_at": "2026-11-18T11:04:37.635447+00:00",
+        "updated_at": "2026-11-18T11:04:37.635447+00:00",
+        "score_debug": {
+          "combined_score": 0.3137333431553785,
+          "semantic_score": 0.40925783,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3750755278884462
+        }
+      },
+      {
+        "memory": "User scheduled Max to be microchipped around November 24, 2026 (the week after the conversation), indicating the procedure will take place next week.",
+        "score": 0.3128436734566254,
+        "id": "510412b5-5870-41b3-aaf9-9cd3f9206345",
+        "created_at": "2026-11-18T11:39:57.205941+00:00",
+        "updated_at": "2026-11-18T11:39:57.205941+00:00",
+        "score_debug": {
+          "combined_score": 0.3128436734566254,
+          "semantic_score": 0.45254436,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3295648236415634
+        }
+      },
+      {
+        "memory": "User indicated they have gathered all the information they need for the Savannah trip and thanked the assistant for the recommendations.",
+        "score": 0.311508678,
+        "id": "8be1465b-65e6-4a81-bcff-fa20a2460c3f",
+        "created_at": "2026-11-18T10:08:02.671282+00:00",
+        "updated_at": "2026-11-18T10:08:02.671282+00:00",
+        "score_debug": {
+          "combined_score": 0.311508678,
+          "semantic_score": 0.46749848,
+          "bm25_score": 0.0,
+          "entity_boost": 0.311273215
+        }
+      },
+      {
+        "memory": "User tracks Max's veterinary appointments and vaccination schedule on an online pet-specific calendar he purchased, finding it very helpful for staying organized.",
+        "score": 0.307725824,
+        "id": "e931ea6a-c7db-42f7-aa30-9371ebc1fd9d",
+        "created_at": "2026-11-18T11:39:57.208498+00:00",
+        "updated_at": "2026-11-18T11:39:57.208498+00:00",
+        "score_debug": {
+          "combined_score": 0.307725824,
+          "semantic_score": 0.46744034,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30187422
+        }
+      },
+      {
+        "memory": "User returned from a trip to Hawaii on November 18, 2026 and is currently feeling relaxed and laid‑back, describing a calm mood.",
+        "score": 0.30750548945662537,
+        "id": "1233405f-4858-4800-892a-9f4b219d1626",
+        "created_at": "2026-11-18T10:05:29.449870+00:00",
+        "updated_at": "2026-11-18T10:05:29.449870+00:00",
+        "score_debug": {
+          "combined_score": 0.30750548945662537,
+          "semantic_score": 0.4391989,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3295648236415634
+        }
+      },
+      {
+        "memory": "User took Max to his first veterinary check-up and vaccination on February 15, 2026, and has been feeding him the specific brand of dog food the vet recommended.",
+        "score": 0.3061323435059761,
+        "id": "526e3aec-e41c-4bfc-b99f-5e190ded8067",
+        "created_at": "2026-11-18T11:36:55.009509+00:00",
+        "updated_at": "2026-11-18T11:36:55.009509+00:00",
+        "score_debug": {
+          "combined_score": 0.3061323435059761,
+          "semantic_score": 0.41148305,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35384780876494026
+        }
+      },
+      {
+        "memory": "User requests a roughly 200‑word transition linking Jack's fall museum experience to his first day of Christmas break at the museum, where he will spend the entire day, wander into a storage room, and see a mirror for the first time (without mentioning the mirror).",
+        "score": 0.30412844864735267,
+        "id": "9a86a9c8-c230-4639-8273-b1759f444741",
+        "created_at": "2026-11-18T10:13:28.257043+00:00",
+        "updated_at": "2026-11-18T10:13:28.257043+00:00",
+        "score_debug": {
+          "combined_score": 0.30412844864735267,
+          "semantic_score": 0.43245274,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32786838161838167
+        }
+      },
+      {
+        "memory": "User's Taylor GS Mini guitar has a high action that causes discomfort in the left hand, and they plan to take it to guitar technician Joe at Guitar Central for service by November 30, 2026.",
+        "score": 0.30384446947452554,
+        "id": "d267cfde-3549-43b8-8f4e-acc660e33f7a",
+        "created_at": "2026-11-18T11:42:18.285802+00:00",
+        "updated_at": "2026-11-18T11:42:18.285802+00:00",
+        "score_debug": {
+          "combined_score": 0.30384446947452554,
+          "semantic_score": 0.38984486,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36976631368631374
+        }
+      },
+      {
+        "memory": "User participated in a track day on May 1, 2026 with a local car enthusiast group and wants to improve handling for future events.",
+        "score": 0.30264247371428576,
+        "id": "e00fa637-7b8f-40b6-8025-d4181e9f3eeb",
+        "created_at": "2026-11-18T11:07:56.998272+00:00",
+        "updated_at": "2026-11-18T11:07:56.998272+00:00",
+        "score_debug": {
+          "combined_score": 0.30264247371428576,
+          "semantic_score": 0.40600047,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3506057142857143
+        }
+      },
+      {
+        "memory": "User scheduled Max to be microchipped around November 25, 2026 (next week from the observation date) and is considering the benefits of microchipping.",
+        "score": 0.2991380974566254,
+        "id": "08da167e-a8dc-443b-a3ad-0395013c7ace",
+        "created_at": "2026-11-18T11:37:48.321627+00:00",
+        "updated_at": "2026-11-18T11:37:48.321627+00:00",
+        "score_debug": {
+          "combined_score": 0.2991380974566254,
+          "semantic_score": 0.41828042,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3295648236415634
+        }
+      },
+      {
+        "memory": "On 2026-11-18, User visited guitar technician Joe's shop, had the Taylor GS Mini serviced, and reports the action is now perfect, making the instrument much more comfortable to play.",
+        "score": 0.2988906934745255,
+        "id": "30d32d3c-858b-4dc5-bba9-23b9ea5f0e2e",
+        "created_at": "2026-11-18T11:46:21.572367+00:00",
+        "updated_at": "2026-11-18T11:46:21.572367+00:00",
+        "score_debug": {
+          "combined_score": 0.2988906934745255,
+          "semantic_score": 0.37746042,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36976631368631374
+        }
+      },
+      {
+        "memory": "User returned from a trip to Hawaii on November 18, 2026 and realized they need to restock their sunscreen supply, requesting recommendations for good sunscreen brands.",
+        "score": 0.2976334974566254,
+        "id": "d8241349-3d29-49ff-afe8-50da0a0a6094",
+        "created_at": "2026-11-18T10:04:31.614939+00:00",
+        "updated_at": "2026-11-18T10:04:31.614939+00:00",
+        "score_debug": {
+          "combined_score": 0.2976334974566254,
+          "semantic_score": 0.41451892,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3295648236415634
+        }
+      },
+      {
+        "memory": "User is planning a weekend getaway to Springfield, which is about a two‑hour drive from their current location.",
+        "score": 0.2973701045510406,
+        "id": "eca7f2a4-bfc2-4bac-bce0-6df4aaf4ea2d",
+        "created_at": "2026-11-18T11:12:42.484214+00:00",
+        "updated_at": "2026-11-18T11:12:42.484214+00:00",
+        "score_debug": {
+          "combined_score": 0.2973701045510406,
+          "semantic_score": 0.43062097,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31280429137760163
+        }
+      },
+      {
+        "memory": "User remains undecided about purchasing a new keyboard, still evaluating options from Korg and Roland.",
+        "score": 0.2970631792191235,
+        "id": "0bd83c70-7a0d-4adb-a400-eba15cabfd11",
+        "created_at": "2026-11-18T11:41:06.772931+00:00",
+        "updated_at": "2026-11-18T11:41:06.772931+00:00",
+        "score_debug": {
+          "combined_score": 0.2970631792191235,
+          "semantic_score": 0.38567996,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3569779880478088
+        }
+      },
+      {
+        "memory": "In Split, the schedule features exploring Diocletian’s Palace, visiting the Mestrovic Gallery, optional day‑trip to Plitvice Lakes National Park, wandering the waterfront Riva, and trying local seafood risotto.",
+        "score": 0.29566906811988014,
+        "id": "53606a46-8707-4905-b2fa-5f2cfd5e1e4d",
+        "created_at": "2026-11-18T11:01:52.347061+00:00",
+        "updated_at": "2026-11-18T11:01:52.347061+00:00",
+        "score_debug": {
+          "combined_score": 0.29566906811988014,
+          "semantic_score": 0.37302297,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36614970029970034
+        }
+      },
+      {
+        "memory": "User mentions having a favorite pasta-related memory with their mom that they might recount in the personalized note.",
+        "score": 0.2951488595599604,
+        "id": "c168cfd8-2911-4990-9228-ffbe98e6e9b5",
+        "created_at": "2026-11-18T09:51:33.068049+00:00",
+        "updated_at": "2026-11-18T09:51:33.068049+00:00",
+        "score_debug": {
+          "combined_score": 0.2951488595599604,
+          "semantic_score": 0.45389536,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2839767888999009
+        }
+      },
+      {
+        "memory": "User participated in a track day on May 1, 2026 with a local car‑enthusiast group, testing their 2018 Honda Civic Si.",
+        "score": 0.2946368657142857,
+        "id": "4f8b6962-89f9-47c4-a349-cfd22c1f3235",
+        "created_at": "2026-11-18T11:08:31.103176+00:00",
+        "updated_at": "2026-11-18T11:08:31.103176+00:00",
+        "score_debug": {
+          "combined_score": 0.2946368657142857,
+          "semantic_score": 0.38598645,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3506057142857143
+        }
+      },
+      {
+        "memory": "When winter settled in, Jack found free time during his holiday break and felt a sudden urge to return to the museum for a full‑day exploration.",
+        "score": 0.28860830000000004,
+        "id": "7fe0c78b-f71f-460f-8410-63a0aa2197e6",
+        "created_at": "2026-11-18T10:13:55.449072+00:00",
+        "updated_at": "2026-11-18T10:13:55.449072+00:00",
+        "score_debug": {
+          "combined_score": 0.28860830000000004,
+          "semantic_score": 0.38854748,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33297327
+        }
+      },
+      {
+        "memory": "User specified that Jack's visit to the museum occurs after school during the fall season.",
+        "score": 0.28850971999999997,
+        "id": "bc6c7451-d553-4fbd-8e3b-692989751e7e",
+        "created_at": "2026-11-18T10:12:38.855983+00:00",
+        "updated_at": "2026-11-18T10:12:38.855983+00:00",
+        "score_debug": {
+          "combined_score": 0.28850971999999997,
+          "semantic_score": 0.42600235,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29527195
+        }
+      },
+      {
+        "memory": "User has been using Harry's Lap Timer on their phone to track lap times and obtain a rough performance overview.",
+        "score": 0.2884533758841159,
+        "id": "389be3e7-0263-4d85-b6a3-6564c3e3dd16",
+        "created_at": "2026-11-18T11:09:43.487842+00:00",
+        "updated_at": "2026-11-18T11:09:43.487842+00:00",
+        "score_debug": {
+          "combined_score": 0.2884533758841159,
+          "semantic_score": 0.41500315,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3061302897102897
+        }
+      },
+      {
+        "memory": "Jack's museum visits became less frequent in the fall because school assignments and homework took up most of his time, reducing his after‑school trips.",
+        "score": 0.28819209199999996,
+        "id": "fd4eea54-3f3d-4b68-9c82-1eb94c305ade",
+        "created_at": "2026-11-18T10:13:55.441288+00:00",
+        "updated_at": "2026-11-18T10:13:55.441288+00:00",
+        "score_debug": {
+          "combined_score": 0.28819209199999996,
+          "semantic_score": 0.43747675,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28300348
+        }
+      },
+      {
+        "memory": "Assistant advised booking tables in advance for popular spots like Septime and Le Pied de Cochon, suggesting reservation platforms such as La Fourchette or Bookatable.",
+        "score": 0.28761254,
+        "id": "3aef0b2a-2e44-4554-8ad1-5a9f9cb7ffa1",
+        "created_at": "2026-11-18T10:52:09.454980+00:00",
+        "updated_at": "2026-11-18T10:52:09.454980+00:00",
+        "score_debug": {
+          "combined_score": 0.28761254,
+          "semantic_score": 0.3734963,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34553505
+        }
+      },
+      {
+        "memory": "Assistant clarified that it is an AI without a physical presence and therefore does not host game nights.",
+        "score": 0.28667555474103584,
+        "id": "9c5cf41e-d5e1-4624-ad27-7c83b186fb8d",
+        "created_at": "2026-11-18T10:11:44.404651+00:00",
+        "updated_at": "2026-11-18T10:11:44.404651+00:00",
+        "score_debug": {
+          "combined_score": 0.28667555474103584,
+          "semantic_score": 0.4161606,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30052828685258964
+        }
+      },
+      {
+        "memory": "User has been taking weekly photos of Max to monitor his growth and is planning to compile them into a photo album that captures his development over time.",
+        "score": 0.2864335506253746,
+        "id": "e22c786a-d5fc-4dd9-9546-7749406b0693",
+        "created_at": "2026-11-18T11:39:57.210965+00:00",
+        "updated_at": "2026-11-18T11:39:57.210965+00:00",
+        "score_debug": {
+          "combined_score": 0.2864335506253746,
+          "semantic_score": 0.38077044,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3353134365634366
+        }
+      },
+      {
+        "memory": "User intends to rely mainly on the data logger for track days but also values its capability for daily driving analysis, and considers the Garmin Catalyst a good compromise.",
+        "score": 0.2861984543976024,
+        "id": "8edacaeb-2f63-48da-8820-e97ff4fd77d0",
+        "created_at": "2026-11-18T11:12:04.820577+00:00",
+        "updated_at": "2026-11-18T11:12:04.820577+00:00",
+        "score_debug": {
+          "combined_score": 0.2861984543976024,
+          "semantic_score": 0.37242213,
+          "bm25_score": 0.0,
+          "entity_boost": 0.343074005994006
+        }
+      },
+      {
+        "memory": "User is using a pet-specific calendar purchased online to track Max's veterinary appointments and vaccination schedule, helping stay organized with his health care",
+        "score": 0.285266186,
+        "id": "3e2a7b17-6625-4fd7-9399-ef21260b3ccf",
+        "created_at": "2026-11-18T11:38:00.752867+00:00",
+        "updated_at": "2026-11-18T11:38:00.752867+00:00",
+        "score_debug": {
+          "combined_score": 0.285266186,
+          "semantic_score": 0.41245884,
+          "bm25_score": 0.0,
+          "entity_boost": 0.300706625
+        }
+      },
+      {
+        "memory": "Assistant recommended Marché d'Aligre, an outdoor market at Place d'Aligre, 75012 Paris, open Tuesday, Friday, and Sunday, about a ten‑minute walk from Oberkampf Metro.",
+        "score": 0.28504915999999997,
+        "id": "45ae7b0d-19b6-4c43-8136-c338fc0e69b9",
+        "created_at": "2026-11-18T10:54:11.361806+00:00",
+        "updated_at": "2026-11-18T10:54:11.361806+00:00",
+        "score_debug": {
+          "combined_score": 0.28504915999999997,
+          "semantic_score": 0.2426017,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4700212
+        }
+      },
+      {
+        "memory": "Assistant explained why a personalized note adds thoughtfulness, emotional connection, and can inspire the mom to start her new hobby.",
+        "score": 0.28495879555996034,
+        "id": "14954784-fa42-48d5-9eda-5be993fa6d8e",
+        "created_at": "2026-11-18T09:51:33.070324+00:00",
+        "updated_at": "2026-11-18T09:51:33.070324+00:00",
+        "score_debug": {
+          "combined_score": 0.28495879555996034,
+          "semantic_score": 0.4284202,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2839767888999009
+        }
+      },
+      {
+        "memory": "User attended a one‑day music festival on May 10, 2026 at the Harvard Athletic Complex, noting it was a different event from the earlier Boston Calling festival.",
+        "score": 0.2848351997122877,
+        "id": "7ee08643-6480-4f20-b8f5-245e85dc9479",
+        "created_at": "2026-11-18T11:16:54.429858+00:00",
+        "updated_at": "2026-11-18T11:16:54.429858+00:00",
+        "score_debug": {
+          "combined_score": 0.2848351997122877,
+          "semantic_score": 0.38603228,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3260557192807193
+        }
+      },
+      {
+        "memory": "User is creating a photo album for Max and has been taking weekly photos to track his growth and development, planning to compile them into a keepsake album",
+        "score": 0.28350463862537467,
+        "id": "2f146cfb-16c7-4662-9aa5-85944bd6933b",
+        "created_at": "2026-11-18T11:38:27.838320+00:00",
+        "updated_at": "2026-11-18T11:38:27.838320+00:00",
+        "score_debug": {
+          "combined_score": 0.28350463862537467,
+          "semantic_score": 0.37344816,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3353134365634366
+        }
+      },
+      {
+        "memory": "User previously had a positive experience with the concierge at the Hilton in downtown Chicago, which arranged a last‑minute tour of Wrigley Field for them.",
+        "score": 0.28337117,
+        "id": "c2bb2adf-f88a-49e4-abd5-10c76b6f47ea",
+        "created_at": "2026-11-18T10:25:14.536007+00:00",
+        "updated_at": "2026-11-18T10:25:14.536007+00:00",
+        "score_debug": {
+          "combined_score": 0.28337117,
+          "semantic_score": 0.3969449,
+          "bm25_score": 0.0,
+          "entity_boost": 0.311483025
+        }
+      },
+      {
+        "memory": "User has visited Paris, France twice between May 2026 and November 2026, making them familiar with the city but still eager to discover new food spots.",
+        "score": 0.2828954294566254,
+        "id": "dd708a6f-17b2-4c24-8494-d660c65ae3c5",
+        "created_at": "2026-11-18T10:52:09.426949+00:00",
+        "updated_at": "2026-11-18T10:52:09.426949+00:00",
+        "score_debug": {
+          "combined_score": 0.2828954294566254,
+          "semantic_score": 0.37767375,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3295648236415634
+        }
+      },
+      {
+        "memory": "Assistant recommended placing the pet calendar in a visible location, such as on the fridge or near pet supplies, to ensure easy reference and consistent use",
+        "score": 0.282696332,
+        "id": "ad7bc7ec-c8bd-4c2a-bece-7a1664c38d33",
+        "created_at": "2026-11-18T11:38:00.778198+00:00",
+        "updated_at": "2026-11-18T11:38:00.778198+00:00",
+        "score_debug": {
+          "combined_score": 0.282696332,
+          "semantic_score": 0.40139595,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30534488
+        }
+      },
+      {
+        "memory": "User plans to take his dog Max on a 45-minute walk this weekend and asked for tips to ensure Max does not become too tired.",
+        "score": 0.2824778573067729,
+        "id": "d7413d97-76df-43b5-ae77-ab8679edb3fb",
+        "created_at": "2026-11-18T11:36:55.006681+00:00",
+        "updated_at": "2026-11-18T11:36:55.006681+00:00",
+        "score_debug": {
+          "combined_score": 0.2824778573067729,
+          "semantic_score": 0.40409046,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3021041832669323
+        }
+      },
+      {
+        "memory": "User is excited to spend a few days in Santorini, noting that visiting the island has been on their bucket list for a while.",
+        "score": 0.281308096,
+        "id": "e003740d-2b85-4def-990b-7a0b685a4da7",
+        "created_at": "2026-11-18T11:02:35.530945+00:00",
+        "updated_at": "2026-11-18T11:02:35.530945+00:00",
+        "score_debug": {
+          "combined_score": 0.281308096,
+          "semantic_score": 0.39147794,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3117923
+        }
+      },
+      {
+        "memory": "Assistant offers a Split‑specific budget tip: explore Diocletian’s Palace and the historic center on your own, visit the Mestrovic Gallery on Sundays for free admission, and stroll the Riva waterfront without spending money.",
+        "score": 0.28117923200000006,
+        "id": "09aa78f6-2de3-4a33-aa7d-d478e78beb22",
+        "created_at": "2026-11-18T11:02:35.587799+00:00",
+        "updated_at": "2026-11-18T11:02:35.587799+00:00",
+        "score_debug": {
+          "combined_score": 0.28117923200000006,
+          "semantic_score": 0.31823748,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3847106
+        }
+      },
+      {
+        "memory": "User received their study‑abroad visa at the Japanese embassy in New York City on 2026-11-18, feels relieved, and is preparing for a semester‑long program in Japan.",
+        "score": 0.28019958986466165,
+        "id": "efbf7030-400d-48d1-aa61-8cb319e4d54d",
+        "created_at": "2026-11-18T11:33:47.398730+00:00",
+        "updated_at": "2026-11-18T11:33:47.398730+00:00",
+        "score_debug": {
+          "combined_score": 0.28019958986466165,
+          "semantic_score": 0.39432186,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30617711466165415
+        }
+      },
+      {
+        "memory": "User currently uses Harry’s Lap Timer on their phone to record lap times and is looking to upgrade to a more advanced data logger, mentioning interest in AiM Sports and VBox Motorsport products.",
+        "score": 0.2789687038841159,
+        "id": "886b2d69-e288-42c0-91ac-bf74878918fc",
+        "created_at": "2026-11-18T11:12:04.810873+00:00",
+        "updated_at": "2026-11-18T11:12:04.810873+00:00",
+        "score_debug": {
+          "combined_score": 0.2789687038841159,
+          "semantic_score": 0.39129147,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3061302897102897
+        }
+      },
+      {
+        "memory": "User realized the Ritz‑Carlton is part of Marriott Bonvoy and now wants Hilton hotel recommendations in Manhattan within walking distance to Times Square for their upcoming New York City trip",
+        "score": 0.27851392640159844,
+        "id": "4a18c526-3393-4063-ba7c-09f8e40a2c43",
+        "created_at": "2026-11-18T10:23:07.937896+00:00",
+        "updated_at": "2026-11-18T10:23:07.937896+00:00",
+        "score_debug": {
+          "combined_score": 0.27851392640159844,
+          "semantic_score": 0.35914582,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33713899600399605
+        }
+      },
+      {
+        "memory": "Assistant advises choosing a weekday for the Versailles visit rather than a weekend to encounter fewer visitors.",
+        "score": 0.2772521368339768,
+        "id": "722af6a3-f811-4080-8dd8-cac35dc96660",
+        "created_at": "2026-11-18T10:27:57.310359+00:00",
+        "updated_at": "2026-11-18T10:27:57.310359+00:00",
+        "score_debug": {
+          "combined_score": 0.2772521368339768,
+          "semantic_score": 0.3842829,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3088474420849421
+        }
+      },
+      {
+        "memory": "User plans to start watching the Star Wars saga, having wanted to for ages but never had time; now that the Marvel marathon is finished, they see it as the perfect opportunity to begin a new marathon.",
+        "score": 0.277132612,
+        "id": "bbd0cae5-217c-45a6-9d2c-643b17ce0c9d",
+        "created_at": "2026-11-18T09:55:03.187959+00:00",
+        "updated_at": "2026-11-18T09:55:03.187959+00:00",
+        "score_debug": {
+          "combined_score": 0.277132612,
+          "semantic_score": 0.38754213,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3052894
+        }
+      },
+      {
+        "memory": "Assistant reminded the user to consult a doctor if arthritis pain becomes severe or interferes with daily activities, as a physician can suggest additional treatments or referrals.",
+        "score": 0.276823544,
+        "id": "cc76d5fb-dca3-401a-9b8a-dd302588a543",
+        "created_at": "2026-11-18T10:44:31.862047+00:00",
+        "updated_at": "2026-11-18T10:44:31.862047+00:00",
+        "score_debug": {
+          "combined_score": 0.276823544,
+          "semantic_score": 0.37431103,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31774783
+        }
+      },
+      {
+        "memory": "Assistant suggested multiple ways to find a good slow‑cooker deal: browse Amazon, Walmart, Best Buy; subscribe to retailer newsletters; seek bundle discounts; use price‑matching policies; consider last‑year models; watch Black Friday, Cyber Monday, and holiday sales; explore certified refurbished or used units, and noted popular brands such as Crock‑Pot, Instant Pot, Cuisinart, Hamilton Beach, and KitchenAid.",
+        "score": 0.27664046400000003,
+        "id": "b7bcea94-1ff1-4cc2-80b2-3ae75e15874d",
+        "created_at": "2026-11-18T10:29:40.542622+00:00",
+        "updated_at": "2026-11-18T10:29:40.542622+00:00",
+        "score_debug": {
+          "combined_score": 0.27664046400000003,
+          "semantic_score": 0.25612724,
+          "bm25_score": 0.0,
+          "entity_boost": 0.43547392
+        }
+      },
+      {
+        "memory": "User is considering including a personalized note or message with the pasta-making kit, expressing excitement for their mom's new hobby and possibly sharing a favorite pasta-related memory they share.",
+        "score": 0.2756684515599604,
+        "id": "697fa8f4-b8c6-42f6-afd4-3a7f83e074e4",
+        "created_at": "2026-11-18T09:51:33.065906+00:00",
+        "updated_at": "2026-11-18T09:51:33.065906+00:00",
+        "score_debug": {
+          "combined_score": 0.2756684515599604,
+          "semantic_score": 0.40519434,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2839767888999009
+        }
+      },
+      {
+        "memory": "Assistant advised that diners should be prepared for waits at popular fried‑chicken spots such as Mrs. Wilkes Dining Room and Parker's Urban Gourmet.",
+        "score": 0.2751013088311688,
+        "id": "b33f2b0d-2f22-4413-9c81-830a2ef85a25",
+        "created_at": "2026-11-18T10:07:17.255541+00:00",
+        "updated_at": "2026-11-18T10:07:17.255541+00:00",
+        "score_debug": {
+          "combined_score": 0.2751013088311688,
+          "semantic_score": 0.32252535,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3652279220779221
+        }
+      },
+      {
+        "memory": "User requested a production description for a retro lightning bolt pickleball paddle named The Pinky.",
+        "score": 0.274961234,
+        "id": "10e8c5a0-0f1f-40d5-8eca-a9a0fe4a158d",
+        "created_at": "2026-11-18T10:51:42.587016+00:00",
+        "updated_at": "2026-11-18T10:51:42.587016+00:00",
+        "score_debug": {
+          "combined_score": 0.274961234,
+          "semantic_score": 0.34587896,
+          "bm25_score": 0.0,
+          "entity_boost": 0.341524125
+        }
+      },
+      {
+        "memory": "User wants a more relaxed pace for the 14‑day Option 3 European trip, considering dropping one or two destinations to focus on fewer places and allow relaxation.",
+        "score": 0.2736351886303271,
+        "id": "ef30a166-adbc-495d-88f4-1eb24a38df68",
+        "created_at": "2026-11-18T11:01:52.334400+00:00",
+        "updated_at": "2026-11-18T11:01:52.334400+00:00",
+        "score_debug": {
+          "combined_score": 0.2736351886303271,
+          "semantic_score": 0.36558148,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3185064915758177
+        }
+      },
+      {
+        "memory": "User prefers milder weather for the upcoming trip.",
+        "score": 0.27348668296062995,
+        "id": "41001845-11de-4c47-907f-4a78c0dddf60",
+        "created_at": "2026-11-18T11:00:54.714169+00:00",
+        "updated_at": "2026-11-18T11:00:54.714169+00:00",
+        "score_debug": {
+          "combined_score": 0.27348668296062995,
+          "semantic_score": 0.38311592,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30060078740157486
+        }
+      },
+      {
+        "memory": "Assistant advised strolling the Chicago Riverwalk, exploring the Loop, and shopping on State Street as additional nearby activities.",
+        "score": 0.27263736400000005,
+        "id": "d869f28b-4a7a-48cf-869f-44be1e74ec42",
+        "created_at": "2026-11-18T11:06:01.037618+00:00",
+        "updated_at": "2026-11-18T11:06:01.037618+00:00",
+        "score_debug": {
+          "combined_score": 0.27263736400000005,
+          "semantic_score": 0.39056766,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29102575
+        }
+      },
+      {
+        "memory": "User is planning a trip to Chicago in the near future and is beginning to consider travel details for the upcoming visit.",
+        "score": 0.272503508,
+        "id": "b4ee63dc-f959-4f71-b45a-c86101e12903",
+        "created_at": "2026-11-18T11:04:37.605600+00:00",
+        "updated_at": "2026-11-18T11:04:37.605600+00:00",
+        "score_debug": {
+          "combined_score": 0.272503508,
+          "semantic_score": 0.36998424,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31127453
+        }
+      },
+      {
+        "memory": "User intends to sign up for Intelligentsia Rewards during their next visit to Chicago.",
+        "score": 0.27222433416451935,
+        "id": "d46a9e9a-e610-4443-af3a-9b3cb9f02822",
+        "created_at": "2026-11-18T11:08:31.091775+00:00",
+        "updated_at": "2026-11-18T11:08:31.091775+00:00",
+        "score_debug": {
+          "combined_score": 0.27222433416451935,
+          "semantic_score": 0.37428477,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30627606541129837
+        }
+      },
+      {
+        "memory": "As days grew shorter and winter's chill settled, Jack yearned for the peace and familiarity of the museum, feeling a strong desire to return despite his busy schedule.",
+        "score": 0.271558308,
+        "id": "515f7599-c3bc-4183-bacf-33b3207616ae",
+        "created_at": "2026-11-18T10:14:38.166500+00:00",
+        "updated_at": "2026-11-18T10:14:38.166500+00:00",
+        "score_debug": {
+          "combined_score": 0.271558308,
+          "semantic_score": 0.37088132,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30801445
+        }
+      },
+      {
+        "memory": "Assistant recommends Girl & the Goat, a Mediterranean‑inspired restaurant an 8‑minute walk from the Hilton Hotel, run by Top Chef winner Stephanie Izard and known for wood‑fired dishes and creative cocktails.",
+        "score": 0.270541024,
+        "id": "a4cad8c2-dd25-41d1-a173-389d43e2d252",
+        "created_at": "2026-11-18T11:04:37.619660+00:00",
+        "updated_at": "2026-11-18T11:04:37.619660+00:00",
+        "score_debug": {
+          "combined_score": 0.270541024,
+          "semantic_score": 0.27729666,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3990559
+        }
+      },
+      {
+        "memory": "He convinced his mother to let him spend his entire Christmas break at the museum, claiming it would help him get ahead on studies, but truly to be surrounded by the comforting artifacts.",
+        "score": 0.27052442064735266,
+        "id": "998b5534-2701-45c0-8c2b-b13f589173e1",
+        "created_at": "2026-11-18T10:14:38.178436+00:00",
+        "updated_at": "2026-11-18T10:14:38.178436+00:00",
+        "score_debug": {
+          "combined_score": 0.27052442064735266,
+          "semantic_score": 0.34844267,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32786838161838167
+        }
+      },
+      {
+        "memory": "Assistant advised trying 'Dixit', a creative storytelling game where players guess the storyteller’s card from imaginative clues, offering a light‑hearted contrast to Deception.",
+        "score": 0.270513522,
+        "id": "14d63d73-20d8-4a7e-a557-84abba939a37",
+        "created_at": "2026-11-18T10:11:10.006058+00:00",
+        "updated_at": "2026-11-18T10:11:10.006058+00:00",
+        "score_debug": {
+          "combined_score": 0.270513522,
+          "semantic_score": 0.34268802,
+          "bm25_score": 0.0,
+          "entity_boost": 0.333595785
+        }
+      },
+      {
+        "memory": "Jack remembers his dad enthusiastically showing him and his mom around the exhibits, speaking in a booming voice, while his mom quietly pointed out interesting details, recalling happier times before his dad fell ill.",
+        "score": 0.270096236,
+        "id": "0d378644-2705-4a0f-9a89-d6856a12e4c8",
+        "created_at": "2026-11-18T10:13:28.245963+00:00",
+        "updated_at": "2026-11-18T10:13:28.245963+00:00",
+        "score_debug": {
+          "combined_score": 0.270096236,
+          "semantic_score": 0.35656494,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31867565
+        }
+      },
+      {
+        "memory": "User has set a budget of $100 to $150 for a birthday gift for their mom, aiming to find something thoughtful within this price range.",
+        "score": 0.2698478,
+        "id": "1696aa3c-049c-42b0-a1e4-7dc0d532f098",
+        "created_at": "2026-11-18T09:49:49.580163+00:00",
+        "updated_at": "2026-11-18T09:49:49.580163+00:00",
+        "score_debug": {
+          "combined_score": 0.2698478,
+          "semantic_score": 0.3660376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3085819
+        }
+      },
+      {
+        "memory": "User plans to use a data logger mainly for track days but also wants daily driving analysis to improve driving skills and habits on both track and road, and is considering the Garmin Catalyst as a compromise while weighing its extra cost against high‑end systems.",
+        "score": 0.2697968903976024,
+        "id": "64c0d269-9bdf-4283-a080-b6693bf2ff7e",
+        "created_at": "2026-11-18T11:11:05.579592+00:00",
+        "updated_at": "2026-11-18T11:11:05.579592+00:00",
+        "score_debug": {
+          "combined_score": 0.2697968903976024,
+          "semantic_score": 0.33141822,
+          "bm25_score": 0.0,
+          "entity_boost": 0.343074005994006
+        }
+      },
+      {
+        "memory": "User and friends had intense discussions about the Avengers, focusing on the characters' motivations and actions; one friend criticized Tony Stark's decisions in Avengers: Age of Ultron while another defended his creation of Ultron, leading to great conversations.",
+        "score": 0.268506802,
+        "id": "58d0e589-cda5-4ca9-8204-ab477115992c",
+        "created_at": "2026-11-18T09:54:16.951206+00:00",
+        "updated_at": "2026-11-18T09:54:16.951206+00:00",
+        "score_debug": {
+          "combined_score": 0.268506802,
+          "semantic_score": 0.35688204,
+          "bm25_score": 0.0,
+          "entity_boost": 0.314384965
+        }
+      },
+      {
+        "memory": "User plans to read the Naomi Klein and Bill McKibben articles recommended earlier, indicating they will check out those pieces on climate justice and globalization's environmental impact.",
+        "score": 0.26847159014469774,
+        "id": "477b933f-30f0-4b5b-ab88-98ee509d88a7",
+        "created_at": "2026-11-18T11:48:41.068890+00:00",
+        "updated_at": "2026-11-18T11:48:41.068890+00:00",
+        "score_debug": {
+          "combined_score": 0.26847159014469774,
+          "semantic_score": 0.29345846,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3777205153617444
+        }
+      },
+      {
+        "memory": "User plans to sign up for Intelligentsia Rewards during their next visit to Chicago.",
+        "score": 0.26813942616451936,
+        "id": "128cc030-3929-443f-b40c-31c451e116f4",
+        "created_at": "2026-11-18T11:06:01.025479+00:00",
+        "updated_at": "2026-11-18T11:06:01.025479+00:00",
+        "score_debug": {
+          "combined_score": 0.26813942616451936,
+          "semantic_score": 0.3640725,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30627606541129837
+        }
+      },
+      {
+        "memory": "The plan includes a 1.5‑hour flight from Rome to Santorini and another 1.5‑hour flight from Santorini to Split, allowing efficient travel between the three destinations.",
+        "score": 0.2677182334634146,
+        "id": "1a0d83ad-3217-42f7-8307-8c3e3eb0188e",
+        "created_at": "2026-11-18T11:01:52.349516+00:00",
+        "updated_at": "2026-11-18T11:01:52.349516+00:00",
+        "score_debug": {
+          "combined_score": 0.2677182334634146,
+          "semantic_score": 0.36605233,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3032432536585366
+        }
+      },
+      {
+        "memory": "Assistant suggests booking flights well in advance, being flexible with travel dates, and considering flying into Rome and out of Split or using budget airlines and error fares to reduce airfare costs.",
+        "score": 0.26711594146341466,
+        "id": "9b73d5d4-0178-4824-aa8b-ac6d83e3fb4c",
+        "created_at": "2026-11-18T11:02:35.536551+00:00",
+        "updated_at": "2026-11-18T11:02:35.536551+00:00",
+        "score_debug": {
+          "combined_score": 0.26711594146341466,
+          "semantic_score": 0.3645466,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3032432536585366
+        }
+      },
+      {
+        "memory": "Jack recalls a childhood visit to the same museum with his parents, where his father lifted him to view paintings and his mother pointed out details he would have missed.",
+        "score": 0.2670340271168831,
+        "id": "844db227-4b08-4903-9da6-8ba5178b3629",
+        "created_at": "2026-11-18T10:12:38.873712+00:00",
+        "updated_at": "2026-11-18T10:12:38.873712+00:00",
+        "score_debug": {
+          "combined_score": 0.2670340271168831,
+          "semantic_score": 0.38722286,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28036220779220783
+        }
+      },
+      {
+        "memory": "Assistant revised Option 3 into a 14‑day itinerary focusing on three main destinations—Rome, Santorini, and Split—allocating roughly 3‑4 days per city for a relaxed exploration.",
+        "score": 0.2668366966303271,
+        "id": "dd8fd042-c7fe-467d-9d0c-7c5f57c6b924",
+        "created_at": "2026-11-18T11:01:52.337343+00:00",
+        "updated_at": "2026-11-18T11:01:52.337343+00:00",
+        "score_debug": {
+          "combined_score": 0.2668366966303271,
+          "semantic_score": 0.34858525,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3185064915758177
+        }
+      },
+      {
+        "memory": "User has been playing their Taylor GS Mini acoustic guitar more frequently since acquiring the Fender Mustang I V2 practice amp, and wants a more powerful amp to fully realize the guitar's potential.",
+        "score": 0.2667045632447553,
+        "id": "dc9071a5-8b67-4b7e-bbe1-3a71b74c61db",
+        "created_at": "2026-11-18T11:45:41.324496+00:00",
+        "updated_at": "2026-11-18T11:45:41.324496+00:00",
+        "score_debug": {
+          "combined_score": 0.2667045632447553,
+          "semantic_score": 0.25502452,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4117368881118882
+        }
+      },
+      {
+        "memory": "User suggests obtaining free personal information from the U.S. Social Security website as a solution to identity theft.",
+        "score": 0.266468182,
+        "id": "6629221b-74b0-4450-93e0-94066bd12e08",
+        "created_at": "2026-11-18T10:59:12.415531+00:00",
+        "updated_at": "2026-11-18T10:59:12.415531+00:00",
+        "score_debug": {
+          "combined_score": 0.266468182,
+          "semantic_score": 0.35883293,
+          "bm25_score": 0.0,
+          "entity_boost": 0.307337525
+        }
+      },
+      {
+        "memory": "Assistant recommended 'Monikers', a party guessing game where players describe movies, books, or other items for teammates to guess, providing a humorous, easy‑to‑learn addition to the game night.",
+        "score": 0.266226108,
+        "id": "521f8d4d-440d-451e-bf09-51d0c3e4c6b7",
+        "created_at": "2026-11-18T10:11:10.009753+00:00",
+        "updated_at": "2026-11-18T10:11:10.009753+00:00",
+        "score_debug": {
+          "combined_score": 0.266226108,
+          "semantic_score": 0.35706902,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30849625
+        }
+      },
+      {
+        "memory": "Assistant noted that Naomi Klein and Bill McKibben are influential voices on climate justice and addressing the negative environmental impacts of globalization.",
+        "score": 0.2659560861446978,
+        "id": "859ef0d7-4609-4139-a304-4b72edca02b7",
+        "created_at": "2026-11-18T11:48:41.073491+00:00",
+        "updated_at": "2026-11-18T11:48:41.073491+00:00",
+        "score_debug": {
+          "combined_score": 0.2659560861446978,
+          "semantic_score": 0.2871697,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3777205153617444
+        }
+      },
+      {
+        "memory": "Assistant advises buying Versailles tickets online in advance to avoid queuing at the ticket counter.",
+        "score": 0.26591730883397685,
+        "id": "07c58aa9-fe99-4abf-8c73-fd0dd1d8c997",
+        "created_at": "2026-11-18T10:27:57.317158+00:00",
+        "updated_at": "2026-11-18T10:27:57.317158+00:00",
+        "score_debug": {
+          "combined_score": 0.26591730883397685,
+          "semantic_score": 0.35594583,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3088474420849421
+        }
+      },
+      {
+        "memory": "User signs the message with the name Kim Terje R Grønli.",
+        "score": 0.265702632,
+        "id": "68629d7e-7310-4b09-b282-f5c80c3bebe1",
+        "created_at": "2026-11-18T10:59:12.432329+00:00",
+        "updated_at": "2026-11-18T10:59:12.432329+00:00",
+        "score_debug": {
+          "combined_score": 0.265702632,
+          "semantic_score": 0.33699483,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32726175
+        }
+      },
+      {
+        "memory": "User has attended several concerts in the recent past, indicating an active interest in live music.",
+        "score": 0.26548603800000004,
+        "id": "cf1e7c3b-e0a2-4cae-89a9-ec0cfaf877ff",
+        "created_at": "2026-11-18T11:17:50.525795+00:00",
+        "updated_at": "2026-11-18T11:17:50.525795+00:00",
+        "score_debug": {
+          "combined_score": 0.26548603800000004,
+          "semantic_score": 0.37718633,
+          "bm25_score": 0.0,
+          "entity_boost": 0.286528765
+        }
+      },
+      {
+        "memory": "That memory fills Jack with a bittersweet mix of happiness and sadness, and he wonders what his father would think of the museum today.",
+        "score": 0.26530611200000004,
+        "id": "12fc9e82-826c-46b1-a76b-5a7526eccb1d",
+        "created_at": "2026-11-18T10:13:55.459089+00:00",
+        "updated_at": "2026-11-18T10:13:55.459089+00:00",
+        "score_debug": {
+          "combined_score": 0.26530611200000004,
+          "semantic_score": 0.34100658,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3222587
+        }
+      },
+      {
+        "memory": "User is considering purchasing the board game Ticket to Ride and is undecided between the original North America version and the Ticket to Ride: Europe version.",
+        "score": 0.26519335745019923,
+        "id": "03d87e08-95a3-49a4-a5bb-ae549e7f7e4f",
+        "created_at": "2026-11-18T10:08:51.036654+00:00",
+        "updated_at": "2026-11-18T10:08:51.036654+00:00",
+        "score_debug": {
+          "combined_score": 0.26519335745019923,
+          "semantic_score": 0.3472443,
+          "bm25_score": 0.0,
+          "entity_boost": 0.315739093625498
+        }
+      },
+      {
+        "memory": "User requested a production description for a Retro pickleball paddle named The La Jolla to be used for marketing.",
+        "score": 0.265092944,
+        "id": "7bedaadf-d451-436c-a34e-0a3107bb40c3",
+        "created_at": "2026-11-18T10:51:06.453141+00:00",
+        "updated_at": "2026-11-18T10:51:06.453141+00:00",
+        "score_debug": {
+          "combined_score": 0.265092944,
+          "semantic_score": 0.34664166,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3160907
+        }
+      },
+      {
+        "memory": "User is excited to sample Savannah's Southern cuisine on the upcoming trip, specifically hoping to eat shrimp and grits and fried green tomatoes at local restaurants.",
+        "score": 0.2650684429606299,
+        "id": "7d5c3a99-484a-4904-b110-ecac7ccb9127",
+        "created_at": "2026-11-18T10:06:10.570346+00:00",
+        "updated_at": "2026-11-18T10:06:10.570346+00:00",
+        "score_debug": {
+          "combined_score": 0.2650684429606299,
+          "semantic_score": 0.36207032,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30060078740157486
+        }
+      },
+      {
+        "memory": "User is contemplating a mixed-methods approach that combines survey data with social network analysis, similar to the Burke et al. (2010) study",
+        "score": 0.26466132600000003,
+        "id": "16d41a16-c562-48f0-a32d-007eafbf8fcc",
+        "created_at": "2026-11-18T09:58:12.259027+00:00",
+        "updated_at": "2026-11-18T09:58:12.259027+00:00",
+        "score_debug": {
+          "combined_score": 0.26466132600000003,
+          "semantic_score": 0.31269044,
+          "bm25_score": 0.0,
+          "entity_boost": 0.348962875
+        }
+      },
+      {
+        "memory": "User is impressed by Professors Galit Shmueli and Peter Bruce's industry experience and believes their teaching approach will help develop practical data science and business analytics skills.",
+        "score": 0.26449804645669295,
+        "id": "cb87cb60-3da1-44a8-acf8-3d0625ebd5e9",
+        "created_at": "2026-11-18T11:21:20.121960+00:00",
+        "updated_at": "2026-11-18T11:21:20.121960+00:00",
+        "score_debug": {
+          "combined_score": 0.26449804645669295,
+          "semantic_score": 0.3481555,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3130896161417323
+        }
+      },
+      {
+        "memory": "Assistant recommended Camp Bisco in Scranton, PA, scheduled for July 14‑16, 2027, featuring electronic, jam band, and indie music with camping and outdoor activities.",
+        "score": 0.26441120117073175,
+        "id": "ee8e5f9b-0f00-4e77-b52b-4b0f730fef7a",
+        "created_at": "2026-11-18T11:15:44.915874+00:00",
+        "updated_at": "2026-11-18T11:15:44.915874+00:00",
+        "score_debug": {
+          "combined_score": 0.26441120117073175,
+          "semantic_score": 0.32293132,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3380966829268293
+        }
+      },
+      {
+        "memory": "User was eye‑checking minimalist vases at Target last weekend, believing the simple designs would complement the Neo‑Traditional and Mixed Metallics aesthetic they favor.",
+        "score": 0.263178132,
+        "id": "2330adb0-e511-40d7-a000-741a8a9fe2d9",
+        "created_at": "2026-11-18T10:29:40.535502+00:00",
+        "updated_at": "2026-11-18T10:29:40.535502+00:00",
+        "score_debug": {
+          "combined_score": 0.263178132,
+          "semantic_score": 0.34072638,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31721895
+        }
+      },
+      {
+        "memory": "User worked out at the Hilton Hotel's gym in downtown Chicago twice during their stay and found it really nice",
+        "score": 0.2628928314915503,
+        "id": "4cb4aa69-9ff0-4dd7-a21e-6e8b6656d446",
+        "created_at": "2026-11-18T11:07:07.337168+00:00",
+        "updated_at": "2026-11-18T11:07:07.337168+00:00",
+        "score_debug": {
+          "combined_score": 0.2628928314915503,
+          "semantic_score": 0.42420515,
+          "bm25_score": 0.0,
+          "entity_boost": 0.23302692872887584
+        }
+      },
+      {
+        "memory": "User will check the websites of the previously suggested Springfield art venues and contact them directly for information about current or upcoming exhibitions",
+        "score": 0.26267439655104063,
+        "id": "a918b720-d575-4d17-9255-4e151694e1b2",
+        "created_at": "2026-11-18T11:14:00.060637+00:00",
+        "updated_at": "2026-11-18T11:14:00.060637+00:00",
+        "score_debug": {
+          "combined_score": 0.26267439655104063,
+          "semantic_score": 0.3438817,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31280429137760163
+        }
+      },
+      {
+        "memory": "User plans to stroll through the Hall of Mirrors and explore the Royal Chapel at Versailles before heading to the gardens, and is deciding whether to prioritize the Grand Canal or the Petit Canal first.",
+        "score": 0.2619624860419581,
+        "id": "29d4bd61-6a3f-40ca-94fa-744c13da8780",
+        "created_at": "2026-11-18T10:29:08.657147+00:00",
+        "updated_at": "2026-11-18T10:29:08.657147+00:00",
+        "score_debug": {
+          "combined_score": 0.2619624860419581,
+          "semantic_score": 0.34485132,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31005489510489515
+        }
+      },
+      {
+        "memory": "User describes access and participation features of the ecosystem, such as a B2B/B2C marketplace, digital collaborative community, and rewards system that enable fractional ownership and KPI‑based impact verification.",
+        "score": 0.2618487031075697,
+        "id": "5eb2e202-dbf3-4f4c-974e-9b2fad3a9706",
+        "created_at": "2026-11-18T10:55:30.537760+00:00",
+        "updated_at": "2026-11-18T10:55:30.537760+00:00",
+        "score_debug": {
+          "combined_score": 0.2618487031075697,
+          "semantic_score": 0.3315112,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3231105577689243
+        }
+      },
+      {
+        "memory": "User is eyeing furniture pieces at H&M Home and plans to check out Zara Home later this week, hoping the home‑decor collections will be as impressive as the clothing lines they have previously enjoyed.",
+        "score": 0.2617068551238851,
+        "id": "3818579a-b74a-4e72-a577-1180003a9a71",
+        "created_at": "2026-11-18T10:31:19.189736+00:00",
+        "updated_at": "2026-11-18T10:31:19.189736+00:00",
+        "score_debug": {
+          "combined_score": 0.2617068551238851,
+          "semantic_score": 0.34485745,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3094096878097127
+        }
+      },
+      {
+        "memory": "User and friends became emotional during Avengers: Endgame, shedding tears during the scene where Tony Stark says goodbye to his daughter and feeling a powerful, satisfying conclusion to the Infinity Saga after the final battle, marking a culmination of the marathon.",
+        "score": 0.26118248,
+        "id": "c30dd083-861a-46e3-a118-f66c72b82303",
+        "created_at": "2026-11-18T09:54:16.954660+00:00",
+        "updated_at": "2026-11-18T09:54:16.954660+00:00",
+        "score_debug": {
+          "combined_score": 0.26118248,
+          "semantic_score": 0.33585775,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31709845
+        }
+      },
+      {
+        "memory": "User describes DOEVAA Holding Company DAO NFT collectable project as the first to incorporate identifiers with fake corp NFT 18 traits, providing access to driver’s licence PSD templates via withkoji.com.",
+        "score": 0.26013714,
+        "id": "5fdc09ff-092b-4115-a160-b9fde4428649",
+        "created_at": "2026-11-18T10:59:12.430524+00:00",
+        "updated_at": "2026-11-18T10:59:12.430524+00:00",
+        "score_debug": {
+          "combined_score": 0.26013714,
+          "semantic_score": 0.34387317,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30646968
+        }
+      },
+      {
+        "memory": "Assistant recommended Bernie's Oyster House, a casual waterfront venue known for seafood but also praised for its hidden‑gem fried chicken served with hushpuppies.",
+        "score": 0.25969735912887115,
+        "id": "0ac9a340-9aa7-4816-aded-cd08519731ad",
+        "created_at": "2026-11-18T10:07:17.242473+00:00",
+        "updated_at": "2026-11-18T10:07:17.242473+00:00",
+        "score_debug": {
+          "combined_score": 0.25969735912887115,
+          "semantic_score": 0.28162122,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3676221778221779
+        }
+      },
+      {
+        "memory": "Assistant suggested Option 3: a 14‑day itinerary covering Rome, Athens, Mykonos, Santorini, and Split, including Rome’s Colosseum and Vatican City, Athens’ Acropolis, Mykonos beaches, Santorini scenery, and Split’s Diocletian’s Palace plus a day trip to Plitvice Lakes National Park.",
+        "score": 0.259176892,
+        "id": "25471e6c-1acb-4e45-8323-8304a8d0432d",
+        "created_at": "2026-11-18T11:00:54.730734+00:00",
+        "updated_at": "2026-11-18T11:00:54.730734+00:00",
+        "score_debug": {
+          "combined_score": 0.259176892,
+          "semantic_score": 0.32655883,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3213834
+        }
+      },
+      {
+        "memory": "In Rome, the revised plan includes visits to the Colosseum, Roman Forum, Pantheon, Vatican City’s Sistine Chapel and St. Peter’s Basilica, plus strolling through Trastevere and Monti and enjoying Italian cuisine and gelato.",
+        "score": 0.25892245599999997,
+        "id": "0a97c617-06d1-47c5-8135-0a60462b8737",
+        "created_at": "2026-11-18T11:01:52.340750+00:00",
+        "updated_at": "2026-11-18T11:01:52.340750+00:00",
+        "score_debug": {
+          "combined_score": 0.25892245599999997,
+          "semantic_score": 0.30147004,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3458361
+        }
+      },
+      {
+        "memory": "User is leaning toward visiting Savannah, Georgia, attracted by its historic district and romantic atmosphere, and sees it as the perfect relaxed getaway after returning from Hawaii.",
+        "score": 0.2589208520279721,
+        "id": "6a79c8f3-d93f-4cdf-8af0-f2a94383ed61",
+        "created_at": "2026-11-18T10:05:29.447042+00:00",
+        "updated_at": "2026-11-18T10:05:29.447042+00:00",
+        "score_debug": {
+          "combined_score": 0.2589208520279721,
+          "semantic_score": 0.3070522,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34024993006993015
+        }
+      },
+      {
+        "memory": "User asks whether H&M Home and Zara Home provide any discounts or promotions for first‑time customers.",
+        "score": 0.25891938712388507,
+        "id": "b8ec51db-e51e-4fc0-bca3-708d4231057c",
+        "created_at": "2026-11-18T10:31:19.191949+00:00",
+        "updated_at": "2026-11-18T10:31:19.191949+00:00",
+        "score_debug": {
+          "combined_score": 0.25891938712388507,
+          "semantic_score": 0.33788878,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3094096878097127
+        }
+      },
+      {
+        "memory": "Assistant recommended three pasta cookbooks for the user's mom: \"The Essentials of Classic Italian Cooking\" by Marcella Hazan, \"Pasta Grannies\" by Vicky Bennison, and \"Flour + Water\" by Thomas McNaughton.",
+        "score": 0.2586618712207792,
+        "id": "609c5d8f-b4b2-4394-a9a2-5d4314a159a3",
+        "created_at": "2026-11-18T09:51:10.863904+00:00",
+        "updated_at": "2026-11-18T09:51:10.863904+00:00",
+        "score_debug": {
+          "combined_score": 0.2586618712207792,
+          "semantic_score": 0.24782273,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3988319480519481
+        }
+      },
+      {
+        "memory": "User plans to stroll through the Hall of Mirrors and explore the Royal Chapel at the Palace of Versailles before heading out to the gardens, and is deciding whether to prioritize the Grand Canal or the Petit Canal first.",
+        "score": 0.25856499804195804,
+        "id": "12e454f0-1b74-4066-9351-9a9e5276e96b",
+        "created_at": "2026-11-18T10:28:26.376777+00:00",
+        "updated_at": "2026-11-18T10:28:26.376777+00:00",
+        "score_debug": {
+          "combined_score": 0.25856499804195804,
+          "semantic_score": 0.3363576,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31005489510489515
+        }
+      },
+      {
+        "memory": "Assistant recommended that User check the websites of the previously suggested Springfield art venues for any current or upcoming street photography exhibitions.",
+        "score": 0.25850927655104067,
+        "id": "64c231d2-9661-4e71-9501-3ddb18732224",
+        "created_at": "2026-11-18T11:13:27.099579+00:00",
+        "updated_at": "2026-11-18T11:13:27.099579+00:00",
+        "score_debug": {
+          "combined_score": 0.25850927655104067,
+          "semantic_score": 0.3334689,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31280429137760163
+        }
+      },
+      {
+        "memory": "Assistant recommended several online packing‑list resources for a semester‑long study‑abroad trip to Japan: Japan Guide, Go Overseas’s ‘Study Abroad in Japan’ article, The Blonde Abroad by Kiersten Richards, Japan Today, Reddit’s r/StudyAbroadJapan thread, Lonely Planet’s Japan packing list, and Packing Pro’s customizable list.",
+        "score": 0.258028824,
+        "id": "bcdfc5ac-e076-4f82-ba6a-8d9d9221b5b0",
+        "created_at": "2026-11-18T11:33:47.405699+00:00",
+        "updated_at": "2026-11-18T11:33:47.405699+00:00",
+        "score_debug": {
+          "combined_score": 0.258028824,
+          "semantic_score": 0.24424644,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40082562
+        }
+      },
+      {
+        "memory": "Assistant says that upon completion, the user will be able to perform data-driven consulting, design data-driven solutions, and communicate insights and recommendations to clients, stakeholders, and team members.",
+        "score": 0.257791032,
+        "id": "0351c7d6-d6ba-4f67-b767-c1cd44c16cb6",
+        "created_at": "2026-11-18T11:22:01.791501+00:00",
+        "updated_at": "2026-11-18T11:22:01.791501+00:00",
+        "score_debug": {
+          "combined_score": 0.257791032,
+          "semantic_score": 0.30555803,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33891955
+        }
+      },
+      {
+        "memory": "User is planning to buy a new keyboard that offers more features and sounds than their current Yamaha P‑125, and is currently researching newer models from Korg and Roland but has not decided which to purchase yet.",
+        "score": 0.2577706352191235,
+        "id": "d43d381b-3cf2-43a4-a90d-e730cd8659ff",
+        "created_at": "2026-11-18T11:39:20.944919+00:00",
+        "updated_at": "2026-11-18T11:39:20.944919+00:00",
+        "score_debug": {
+          "combined_score": 0.2577706352191235,
+          "semantic_score": 0.2874486,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3569779880478088
+        }
+      },
+      {
+        "memory": "User describes synthetic identity creation within FAKECORP DAO, providing valid USA identifiers and a second SSN (2SSN) generated by members.",
+        "score": 0.2573186004143426,
+        "id": "60e112d3-9e50-4645-a2aa-711d774123e7",
+        "created_at": "2026-11-18T10:59:12.406221+00:00",
+        "updated_at": "2026-11-18T10:59:12.406221+00:00",
+        "score_debug": {
+          "combined_score": 0.2573186004143426,
+          "semantic_score": 0.32529426,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31800224103585656
+        }
+      },
+      {
+        "memory": "User has visited Paris several times recently and is familiar with the Metro system, and is seeking information on bike rentals and bus routes for navigating neighborhoods.",
+        "score": 0.2568990705798394,
+        "id": "6d13e265-5ae6-4f1c-9c68-6759fb68e4fd",
+        "created_at": "2026-11-18T10:56:02.675908+00:00",
+        "updated_at": "2026-11-18T10:56:02.675908+00:00",
+        "score_debug": {
+          "combined_score": 0.2568990705798394,
+          "semantic_score": 0.3645293,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27771837644959857
+        }
+      },
+      {
+        "memory": "User recently visited the Photography Museum in early November 2026 to see the \"Street Photography\" exhibition, which featured works by Henri Cartier-Bresson and Garry Winogrand.",
+        "score": 0.2566478494566254,
+        "id": "2fc5685c-0b7e-4e4d-8d0d-69a2f56b205f",
+        "created_at": "2026-11-18T11:13:27.097278+00:00",
+        "updated_at": "2026-11-18T11:13:27.097278+00:00",
+        "score_debug": {
+          "combined_score": 0.2566478494566254,
+          "semantic_score": 0.3120548,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3295648236415634
+        }
+      },
+      {
+        "memory": "A Paris Visite pass provides unlimited access to the Metro, bus, tram, and RER for a chosen duration (1, 2, 3, or 5 days), simplifying travel across the city.",
+        "score": 0.25642339253121904,
+        "id": "e532e3d7-bab1-4701-891e-778d7f6acfc3",
+        "created_at": "2026-11-18T10:53:47.355762+00:00",
+        "updated_at": "2026-11-18T10:53:47.355762+00:00",
+        "score_debug": {
+          "combined_score": 0.25642339253121904,
+          "semantic_score": 0.31787974,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32317874132804764
+        }
+      },
+      {
+        "memory": "User expressed enthusiasm for the party game 'What Do You Meme', describing it as an easy‑to‑learn, light‑hearted game where players combine caption cards with a random image to create the funniest meme, and noted it will pair well with Deception at their upcoming hosted game night.",
+        "score": 0.25632778,
+        "id": "9aec3467-5e25-4b81-8879-42e17a26c7a6",
+        "created_at": "2026-11-18T10:11:44.402351+00:00",
+        "updated_at": "2026-11-18T10:11:44.402351+00:00",
+        "score_debug": {
+          "combined_score": 0.25632778,
+          "semantic_score": 0.342145,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29867445
+        }
+      },
+      {
+        "memory": "Assistant indicated that a free night at the Ritz‑Carlton Battery Park typically requires approximately 60,000 to 80,000 Marriott Bonvoy points, depending on season and room type.",
+        "score": 0.2562586950569431,
+        "id": "d0b72475-ead9-4117-a9c1-5474fcd93f43",
+        "created_at": "2026-11-18T10:22:41.667712+00:00",
+        "updated_at": "2026-11-18T10:22:41.667712+00:00",
+        "score_debug": {
+          "combined_score": 0.2562586950569431,
+          "semantic_score": 0.33350438,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3071423576423577
+        }
+      },
+      {
+        "memory": "User describes the pseudo‑archetype utility token as granting holders access, participation, and rewards within the Fresh Earth ecosystem.",
+        "score": 0.25568037783266934,
+        "id": "96ee8620-3761-4aab-84c3-be67ac5f1b78",
+        "created_at": "2026-11-18T10:55:30.515705+00:00",
+        "updated_at": "2026-11-18T10:55:30.515705+00:00",
+        "score_debug": {
+          "combined_score": 0.25568037783266934,
+          "semantic_score": 0.31942084,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31978010458167333
+        }
+      },
+      {
+        "memory": "Assistant detailed Intelligentsia Rewards: sign‑up requires name, email, phone; earn 1 point per dollar spent; 100 points redeem for a $5 credit; birthday free drink; exclusive offers; mobile app (iOS/Android) for earning/redeeming points; members may get early product access, limited‑time offers, and event invitations.",
+        "score": 0.2555803061645193,
+        "id": "64e15889-c530-40c6-a6af-f91fc50991ea",
+        "created_at": "2026-11-18T11:05:43.357603+00:00",
+        "updated_at": "2026-11-18T11:05:43.357603+00:00",
+        "score_debug": {
+          "combined_score": 0.2555803061645193,
+          "semantic_score": 0.3326747,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30627606541129837
+        }
+      },
+      {
+        "memory": "Assistant recommended Mountain Jam at Hunter Mountain, NY, scheduled for June 16‑19, 2027, focusing on rock, jam band, and folk music in a mountain setting.",
+        "score": 0.2550286854671815,
+        "id": "73aa89f7-298d-4c5c-85ba-40c374dbd2a0",
+        "created_at": "2026-11-18T11:15:44.910819+00:00",
+        "updated_at": "2026-11-18T11:15:44.910819+00:00",
+        "score_debug": {
+          "combined_score": 0.2550286854671815,
+          "semantic_score": 0.29960376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3379679536679537
+        }
+      },
+      {
+        "memory": "Assistant provided an example personalized note: \"Dear Mom, I'm so excited to give you this pasta-making kit! I know how much you love cooking and trying new things, and I can't wait to see what delicious creations you'll come up with. Remember that time we made homemade spaghetti together when I was a kid? It was such a fun day, and I'm hoping this kit will bring back some of those same memories. Love you!\"",
+        "score": 0.254711792,
+        "id": "03f162bf-6373-4dc6-ac40-b73047a6c9cb",
+        "created_at": "2026-11-18T09:51:33.075173+00:00",
+        "updated_at": "2026-11-18T09:51:33.075173+00:00",
+        "score_debug": {
+          "combined_score": 0.254711792,
+          "semantic_score": 0.27964658,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3571329
+        }
+      },
+      {
+        "memory": "User’s product description offers identity document PSD file templates for SSN cards, paystubs, electric bills, and driver’s licences, available on demand.",
+        "score": 0.2544295768087215,
+        "id": "da10a410-80e6-4e2e-987a-cd8bf4010be4",
+        "created_at": "2026-11-18T10:59:12.391984+00:00",
+        "updated_at": "2026-11-18T10:59:12.391984+00:00",
+        "score_debug": {
+          "combined_score": 0.2544295768087215,
+          "semantic_score": 0.3320375,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3040364420218038
+        }
+      },
+      {
+        "memory": "User plans to see the Jonas Brothers at TD Garden in Boston on July 17, 2026.",
+        "score": 0.25420932917073175,
+        "id": "d2ba31fe-8441-46a0-aec7-22c3e9cb6964",
+        "created_at": "2026-11-18T11:17:50.528096+00:00",
+        "updated_at": "2026-11-18T11:17:50.528096+00:00",
+        "score_debug": {
+          "combined_score": 0.25420932917073175,
+          "semantic_score": 0.29742664,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3380966829268293
+        }
+      },
+      {
+        "memory": "Assistant recommended four Savannah spots for fried green tomatoes: The Olde Pink House (served with remoulade sauce and sweet potato fries), Mrs. Wilkes Dining Room (crispy appetizer often paired with fried chicken), Zunzi’s (topped with feta, olives, balsamic glaze), and The 5 Spot (breakfast plate with eggs and biscuits).",
+        "score": 0.25396917498501503,
+        "id": "4a3ae8dd-f558-48cb-9157-3437ada451dc",
+        "created_at": "2026-11-18T10:06:10.579116+00:00",
+        "updated_at": "2026-11-18T10:06:10.579116+00:00",
+        "score_debug": {
+          "combined_score": 0.25396917498501503,
+          "semantic_score": 0.2622354,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3726875374625375
+        }
+      },
+      {
+        "memory": "User asked for the pros and cons of each model—Toyota Corolla, Hyundai Elantra, and Mazda3—in terms of maintenance and repair costs.",
+        "score": 0.2539482846105055,
+        "id": "c22bf75d-9896-4728-b8f0-1fa49eb43064",
+        "created_at": "2026-11-18T10:37:58.936678+00:00",
+        "updated_at": "2026-11-18T10:37:58.936678+00:00",
+        "score_debug": {
+          "combined_score": 0.2539482846105055,
+          "semantic_score": 0.29321977,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3416509415262637
+        }
+      },
+      {
+        "memory": "Assistant notes that Naomi Klein's article \"The Fight Against Corporate Globalization and for Climate Justice\" encourages readers to support local movements, divest from fossil fuels, and back renewable energy initiatives.",
+        "score": 0.2537558461446977,
+        "id": "ccc48de0-e0fd-444b-b857-5744e0c9b47c",
+        "created_at": "2026-11-18T11:49:15.112498+00:00",
+        "updated_at": "2026-11-18T11:49:15.112498+00:00",
+        "score_debug": {
+          "combined_score": 0.2537558461446977,
+          "semantic_score": 0.2566691,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3777205153617444
+        }
+      },
+      {
+        "memory": "User plans to incorporate previously mentioned natural remedies and continue low‑impact exercises such as walking or swimming into their daily routine to help manage arthritis pain.",
+        "score": 0.253545408,
+        "id": "e7d13247-c803-4eac-a428-c0f204d72c60",
+        "created_at": "2026-11-18T10:44:31.845017+00:00",
+        "updated_at": "2026-11-18T10:44:31.845017+00:00",
+        "score_debug": {
+          "combined_score": 0.253545408,
+          "semantic_score": 0.30556822,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3282953
+        }
+      },
+      {
+        "memory": "User expressed interest in learning more about the instructors of the Data Science for Business Coursera course, Professors Galit Shmueli and Peter Bruce, and asked for details on their backgrounds and expertise.",
+        "score": 0.2532570823426295,
+        "id": "0195594a-0716-4d1a-9f6f-ef1097b4bfe6",
+        "created_at": "2026-11-18T11:20:31.414643+00:00",
+        "updated_at": "2026-11-18T11:20:31.414643+00:00",
+        "score_debug": {
+          "combined_score": 0.2532570823426295,
+          "semantic_score": 0.29652667,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3366160358565737
+        }
+      },
+      {
+        "memory": "User states that the community archetype of the Fresh Earth Token forms the basis for a strong digital collaborative community within the ecosystem.",
+        "score": 0.25321431510756975,
+        "id": "48bb81a5-5f6e-422a-bbc0-ccf66521e0b4",
+        "created_at": "2026-11-18T10:55:30.481650+00:00",
+        "updated_at": "2026-11-18T10:55:30.481650+00:00",
+        "score_debug": {
+          "combined_score": 0.25321431510756975,
+          "semantic_score": 0.30992523,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3231105577689243
+        }
+      },
+      {
+        "memory": "Assistant advises using public transportation, taxis, or shuttle services rather than renting a car, and walking or taking buses in Santorini and Split to keep transportation expenses low.",
+        "score": 0.2530218134634146,
+        "id": "6e9944c3-9303-481b-a735-d191f35abef2",
+        "created_at": "2026-11-18T11:02:35.541806+00:00",
+        "updated_at": "2026-11-18T11:02:35.541806+00:00",
+        "score_debug": {
+          "combined_score": 0.2530218134634146,
+          "semantic_score": 0.32931128,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3032432536585366
+        }
+      },
+      {
+        "memory": "Assistant suggested 'Junk Art', a fast‑paced dexterity game in which players build art pieces from random junk items, as a casual, low‑complexity option to pair with Deception.",
+        "score": 0.252982972,
+        "id": "6e477f5f-4811-4a93-b9b9-9f23ec505c5f",
+        "created_at": "2026-11-18T10:11:10.003445+00:00",
+        "updated_at": "2026-11-18T10:11:10.003445+00:00",
+        "score_debug": {
+          "combined_score": 0.252982972,
+          "semantic_score": 0.35497516,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27748227
+        }
+      },
+      {
+        "memory": "Assistant suggested Option 1: a 10‑day itinerary covering Rome, Florence, Venice, and Barcelona, highlighting ancient Rome sites (Colosseum, Vatican City), Florence art (Uffizi Gallery), Venice canals, and Barcelona attractions (Sagrada Família, Park Güell).",
+        "score": 0.2527608726073926,
+        "id": "1c86cb00-22ab-4d13-9fba-5d84a5dcc76f",
+        "created_at": "2026-11-18T11:00:54.723535+00:00",
+        "updated_at": "2026-11-18T11:00:54.723535+00:00",
+        "score_debug": {
+          "combined_score": 0.2527608726073926,
+          "semantic_score": 0.2927337,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33916848151848156
+        }
+      },
+      {
+        "memory": "Assistant gave specific advice for shopping at 'The Vintage Closet': ask the owner about each item's history, check condition and any restoration needs, feel free to ask questions, and keep an open mind to imperfections that add character.",
+        "score": 0.2527428343896104,
+        "id": "635c7d3e-ed1e-44f4-a97b-48530aa4f07e",
+        "created_at": "2026-11-18T10:31:55.781164+00:00",
+        "updated_at": "2026-11-18T10:31:55.781164+00:00",
+        "score_debug": {
+          "combined_score": 0.2527428343896104,
+          "semantic_score": 0.32498306,
+          "bm25_score": 0.0,
+          "entity_boost": 0.306874025974026
+        }
+      },
+      {
+        "memory": "Assistant recommended several strategies for splitting bills and expenses with roommates in a Japanese shared apartment: discuss and agree on a system, create a joint budget, split evenly or proportionally, appoint a bill collector, use a joint bank account or payment apps such as PayPay, Line Pay, Splitter, AnyPay, or shared Google Sheets/Excel, keep receipts, set boundaries, and review the budget regularly.",
+        "score": 0.25274271,
+        "id": "cf6ef9bf-4d22-4928-af25-3ff0df0b40b1",
+        "created_at": "2026-11-18T11:34:18.369752+00:00",
+        "updated_at": "2026-11-18T11:34:18.369752+00:00",
+        "score_debug": {
+          "combined_score": 0.25274271,
+          "semantic_score": 0.3160936,
+          "bm25_score": 0.0,
+          "entity_boost": 0.315763175
+        }
+      },
+      {
+        "memory": "Assistant recounts that Lord Krishna used the Sudarshana Chakra to slay Shishupala during the Rajasuya Yagna in the Mahabharata.",
+        "score": 0.25258161599999995,
+        "id": "c21aaad9-0439-43d0-84ea-26f33b19aa4c",
+        "created_at": "2026-11-18T10:56:02.705634+00:00",
+        "updated_at": "2026-11-18T10:56:02.705634+00:00",
+        "score_debug": {
+          "combined_score": 0.25258161599999995,
+          "semantic_score": 0.28681034,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3446437
+        }
+      },
+      {
+        "memory": "User lists the assets underpinning the Fresh Earth Token as real‑world assets, key performance indicators (KPIs), and access/participation rights that are tied to sustainable practices addressing climate change, health, and food security.",
+        "score": 0.2522191218326693,
+        "id": "68ce081e-25fc-4537-932a-37ab109b2da1",
+        "created_at": "2026-11-18T10:55:30.496117+00:00",
+        "updated_at": "2026-11-18T10:55:30.496117+00:00",
+        "score_debug": {
+          "combined_score": 0.2522191218326693,
+          "semantic_score": 0.3107677,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31978010458167333
+        }
+      },
+      {
+        "memory": "Assistant recommended several strategies for a 45-minute walk with a puppy: gradually increase duration, monitor Max’s body language, keep a comfortable pace, bring water and treats, walk during cooler times, watch for overheating, take regular breaks, and consider Max’s age and breed limitations.",
+        "score": 0.2522165,
+        "id": "756c32a4-7b1a-450b-9433-db296ff093bc",
+        "created_at": "2026-11-18T11:36:55.013275+00:00",
+        "updated_at": "2026-11-18T11:36:55.013275+00:00",
+        "score_debug": {
+          "combined_score": 0.2522165,
+          "semantic_score": 0.2774539,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35308735
+        }
+      },
+      {
+        "memory": "Assistant recommended additional resources: online tutorials such as Ukulele Tricks, Uke Lessons, and Ukulele Mike; join ukulele forums or social media groups; and use ukulele‑specific books and sheet music to expand repertoire",
+        "score": 0.25216990637362635,
+        "id": "7528e813-19e5-4bc0-ada6-bd169e3a66d9",
+        "created_at": "2026-11-18T10:34:59.293889+00:00",
+        "updated_at": "2026-11-18T10:34:59.293889+00:00",
+        "score_debug": {
+          "combined_score": 0.25216990637362635,
+          "semantic_score": 0.3237207,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30670406593406596
+        }
+      },
+      {
+        "memory": "Assistant clarified that the Ritz‑Carlton in Battery Park belongs to the Marriott Bonvoy loyalty program, so Hilton Honors points cannot be redeemed for a stay there.",
+        "score": 0.251896116,
+        "id": "c6253c7a-4ade-4d19-888b-00b7f392bc26",
+        "created_at": "2026-11-18T10:22:41.665277+00:00",
+        "updated_at": "2026-11-18T10:22:41.665277+00:00",
+        "score_debug": {
+          "combined_score": 0.251896116,
+          "semantic_score": 0.32362634,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30611395
+        }
+      },
+      {
+        "memory": "Assistant advises shoppers at H&M Home and Zara Home to measure their space before buying, inspect materials and quality, read online customer reviews, and ask sales associates any questions to ensure the items meet their expectations.",
+        "score": 0.25155995512388507,
+        "id": "21595987-6c92-4f2b-b534-56f69a01d301",
+        "created_at": "2026-11-18T10:31:19.203439+00:00",
+        "updated_at": "2026-11-18T10:31:19.203439+00:00",
+        "score_debug": {
+          "combined_score": 0.25155995512388507,
+          "semantic_score": 0.3194902,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3094096878097127
+        }
+      },
+      {
+        "memory": "Assistant recommended Freaknik Festival in Providence, RI, scheduled for June 18‑19, 2027, celebrating hip‑hop, R&B, and electronic music with a community focus.",
+        "score": 0.2512945852267733,
+        "id": "d719be76-9f95-4a2a-b855-3ed3afecfc7c",
+        "created_at": "2026-11-18T11:15:44.913339+00:00",
+        "updated_at": "2026-11-18T11:15:44.913339+00:00",
+        "score_debug": {
+          "combined_score": 0.2512945852267733,
+          "semantic_score": 0.28603953,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34219693306693316
+        }
+      },
+      {
+        "memory": "User proposes an anti‑NWO Rockefeller foundation and Rockefeller medicine trust as part of a broader DAO‑enabled trust and foundation ecosystem.",
+        "score": 0.25100090799999997,
+        "id": "706b1af8-645e-4f10-bd14-70c44ee6e7ac",
+        "created_at": "2026-11-18T10:59:12.427767+00:00",
+        "updated_at": "2026-11-18T10:59:12.427767+00:00",
+        "score_debug": {
+          "combined_score": 0.25100090799999997,
+          "semantic_score": 0.27546602,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35203625
+        }
+      },
+      {
+        "memory": "User has visited Paris a couple of times recently and is familiar with the city's Metro system.",
+        "score": 0.2503317105798394,
+        "id": "cc374455-732e-4c59-a09b-e76449b18de3",
+        "created_at": "2026-11-18T10:53:47.330873+00:00",
+        "updated_at": "2026-11-18T10:53:47.330873+00:00",
+        "score_debug": {
+          "combined_score": 0.2503317105798394,
+          "semantic_score": 0.3481109,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27771837644959857
+        }
+      },
+      {
+        "memory": "Assistant recommended sources of artistic inspiration such as observing natural forms, studying eco‑artists Andy Goldsworthy, Marina DeBris and Aurora Robson, and browsing sustainable design websites Inhabitat, Treehugger and Dezeen.",
+        "score": 0.24999612,
+        "id": "e7e1216e-fc0e-43a9-8710-b5b4231d64dc",
+        "created_at": "2026-11-18T11:27:22.087929+00:00",
+        "updated_at": "2026-11-18T11:27:22.087929+00:00",
+        "score_debug": {
+          "combined_score": 0.24999612,
+          "semantic_score": 0.22335555,
+          "bm25_score": 0.0,
+          "entity_boost": 0.40163475
+        }
+      },
+      {
+        "memory": "Assistant recommended The Lady & Sons, Paula Deen's famous restaurant, noted for its Southern comfort food and classic fried chicken.",
+        "score": 0.24988481999999998,
+        "id": "8bc5b5be-816d-4273-8f32-fd6978e1fd95",
+        "created_at": "2026-11-18T10:07:17.251840+00:00",
+        "updated_at": "2026-11-18T10:07:17.251840+00:00",
+        "score_debug": {
+          "combined_score": 0.24988481999999998,
+          "semantic_score": 0.2421735,
+          "bm25_score": 0.0,
+          "entity_boost": 0.38253855
+        }
+      },
+      {
+        "memory": "User is now asking whether the Hilton Garden Inn Times Square Central provides a similar concierge service to assist with reservations, tours, and other guest requests during their upcoming New York City trip.",
+        "score": 0.24987930186466167,
+        "id": "624a3d12-2ca6-4be3-96c3-94ace185bb92",
+        "created_at": "2026-11-18T10:25:14.538845+00:00",
+        "updated_at": "2026-11-18T10:25:14.538845+00:00",
+        "score_debug": {
+          "combined_score": 0.24987930186466167,
+          "semantic_score": 0.31852114,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30617711466165415
+        }
+      },
+      {
+        "memory": "Jack's school days were spent staring blankly at the chalkboard, his mind drifting, indicating he felt detached and lost in his own thoughts during class.",
+        "score": 0.24929883000000003,
+        "id": "7adb11a0-8391-418d-a965-8dec8ed3bb6d",
+        "created_at": "2026-11-18T10:14:38.169884+00:00",
+        "updated_at": "2026-11-18T10:14:38.169884+00:00",
+        "score_debug": {
+          "combined_score": 0.24929883000000003,
+          "semantic_score": 0.3434556,
+          "bm25_score": 0.0,
+          "entity_boost": 0.279791475
+        }
+      },
+      {
+        "memory": "Assistant advised to keep the microchip registration current, use additional ID methods such as a collar tag or GPS tracker, and remind veterinarians and shelters to scan Max for a chip during any visits or if found as a stray.",
+        "score": 0.24924251591836732,
+        "id": "596c49ed-f51e-4afa-b279-1c6d8c661c27",
+        "created_at": "2026-11-18T11:37:48.331036+00:00",
+        "updated_at": "2026-11-18T11:37:48.331036+00:00",
+        "score_debug": {
+          "combined_score": 0.24924251591836732,
+          "semantic_score": 0.3514164,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27168988979591835
+        }
+      },
+      {
+        "memory": "Assistant recommended Parker's Urban Gourmet, noted for its crispy, flavorful fried chicken paired with a side of spicy honey.",
+        "score": 0.24914672883116884,
+        "id": "6040de8e-dd78-4ada-8669-68192905749e",
+        "created_at": "2026-11-18T10:07:17.237736+00:00",
+        "updated_at": "2026-11-18T10:07:17.237736+00:00",
+        "score_debug": {
+          "combined_score": 0.24914672883116884,
+          "semantic_score": 0.2576389,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3652279220779221
+        }
+      },
+      {
+        "memory": "Assistant recommended DoubleTree by Hilton Hotel New York Times Square West, about a 10‑15 minute walk from Times Square, offering a slightly more laid‑back atmosphere",
+        "score": 0.24906337182817184,
+        "id": "a18f1393-ae1c-42bc-9183-eb131260dbd4",
+        "created_at": "2026-11-18T10:23:07.945553+00:00",
+        "updated_at": "2026-11-18T10:23:07.945553+00:00",
+        "score_debug": {
+          "combined_score": 0.24906337182817184,
+          "semantic_score": 0.292573,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33008542957042963
+        }
+      },
+      {
+        "memory": "User is planning to explore the nightlife in the Oberkampf area of Paris during their upcoming trip.",
+        "score": 0.24894790296062994,
+        "id": "a4ab22b8-4aa6-4c96-a2c4-05a1cf522341",
+        "created_at": "2026-11-18T10:54:47.344893+00:00",
+        "updated_at": "2026-11-18T10:54:47.344893+00:00",
+        "score_debug": {
+          "combined_score": 0.24894790296062994,
+          "semantic_score": 0.32176897,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30060078740157486
+        }
+      },
+      {
+        "memory": "Assistant suggested searching for pasta‑making cooking classes on platforms such as Cookpad, Masterclass, or Sur La Table, either locally or online, to complement the gift.",
+        "score": 0.2489045110489511,
+        "id": "92cf183f-667b-4026-bb37-5c2aa845cbc8",
+        "created_at": "2026-11-18T09:51:10.866878+00:00",
+        "updated_at": "2026-11-18T09:51:10.866878+00:00",
+        "score_debug": {
+          "combined_score": 0.2489045110489511,
+          "semantic_score": 0.3383889,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28387237762237766
+        }
+      },
+      {
+        "memory": "User asked the assistant to provide a parsable format of the list of high‑credibility global payment gateways (PayPal, Stripe, Authorize.Net, Amazon Pay, Skrill)",
+        "score": 0.24886856407968128,
+        "id": "1427fd86-c2d8-41dd-a994-977f764fb2c3",
+        "created_at": "2026-11-18T10:32:37.134145+00:00",
+        "updated_at": "2026-11-18T10:32:37.134145+00:00",
+        "score_debug": {
+          "combined_score": 0.24886856407968128,
+          "semantic_score": 0.30585146,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31631995019920317
+        }
+      },
+      {
+        "memory": "User is excited to try all the suggested Savannah dishes and specifically wants to experience authentic Southern-style fried chicken while visiting Savannah.",
+        "score": 0.2487988458100941,
+        "id": "9220750e-0bd1-4420-ac2a-99b8afd77321",
+        "created_at": "2026-11-18T10:07:17.232686+00:00",
+        "updated_at": "2026-11-18T10:07:17.232686+00:00",
+        "score_debug": {
+          "combined_score": 0.2487988458100941,
+          "semantic_score": 0.32505152,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2969455945252352
+        }
+      },
+      {
+        "memory": "Suica can be used for purchases at participating convenience stores like 7‑Eleven and Lawson.",
+        "score": 0.248776316,
+        "id": "da9467b6-5339-4605-88ad-776fd483fda5",
+        "created_at": "2026-11-18T11:34:39.441003+00:00",
+        "updated_at": "2026-11-18T11:34:39.441003+00:00",
+        "score_debug": {
+          "combined_score": 0.248776316,
+          "semantic_score": 0.27220577,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34973502
+        }
+      },
+      {
+        "memory": "User currently drives a 2015 Honda Civic and is looking to upgrade to a newer compact sedan, requesting information on the latest Toyota Corolla, Hyundai Elantra, and Mazda3 models.",
+        "score": 0.24869556861050546,
+        "id": "45249b2d-9d33-4517-84e5-66e89b855383",
+        "created_at": "2026-11-18T10:37:36.316727+00:00",
+        "updated_at": "2026-11-18T10:37:36.316727+00:00",
+        "score_debug": {
+          "combined_score": 0.24869556861050546,
+          "semantic_score": 0.28008798,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3416509415262637
+        }
+      },
+      {
+        "memory": "Assistant suggested wall‑installation services: Best Buy’s Geek Squad, Home Depot Pro, Lowe’s installation services, and local handymen or electricians.",
+        "score": 0.248498226,
+        "id": "c4085429-8c1c-4073-ab68-67d87ba1f0d8",
+        "created_at": "2026-11-18T10:30:17.017485+00:00",
+        "updated_at": "2026-11-18T10:30:17.017485+00:00",
+        "score_debug": {
+          "combined_score": 0.248498226,
+          "semantic_score": 0.27988428,
+          "bm25_score": 0.0,
+          "entity_boost": 0.341361285
+        }
+      },
+      {
+        "memory": "User states that the Fresh Earth Token has a symbiotic relationship with regenerated land and human health, and its integration with the Hashgraph HTS platform enables efficient, secure transactions.",
+        "score": 0.248299132,
+        "id": "b0750d2e-665c-4a4d-865c-6cbb2b79f38e",
+        "created_at": "2026-11-18T10:55:30.513261+00:00",
+        "updated_at": "2026-11-18T10:55:30.513261+00:00",
+        "score_debug": {
+          "combined_score": 0.248299132,
+          "semantic_score": 0.33446753,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2862803
+        }
+      },
+      {
+        "memory": "Assistant suggested replacing synthetic adhesives with natural alternatives such as cornstarch‑based glue, natural latex, or plant‑based adhesives like dandelion sap for eco‑friendly bonding.",
+        "score": 0.24825649831768234,
+        "id": "74a0bff7-52ce-44a5-82b1-3f368c9cb3b2",
+        "created_at": "2026-11-18T11:28:15.796189+00:00",
+        "updated_at": "2026-11-18T11:28:15.796189+00:00",
+        "score_debug": {
+          "combined_score": 0.24825649831768234,
+          "semantic_score": 0.28924704,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33139420579420586
+        }
+      },
+      {
+        "memory": "Assistant recommends checking the hotel's website or contacting the hotel directly to ask about bed types and comfort levels",
+        "score": 0.24799971999999998,
+        "id": "b65886ed-ab1b-4154-9a1a-7f4a11aff71e",
+        "created_at": "2026-11-18T10:23:38.240678+00:00",
+        "updated_at": "2026-11-18T10:23:38.240678+00:00",
+        "score_debug": {
+          "combined_score": 0.24799971999999998,
+          "semantic_score": 0.3322654,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2877339
+        }
+      },
+      {
+        "memory": "User requested a concise title and shortened response for the high‑credibility global payment gateways answer to share on WhatsApp and LinkedIn",
+        "score": 0.24748657999999998,
+        "id": "4371512e-acc8-4d43-811f-49246c66b329",
+        "created_at": "2026-11-18T10:33:05.284399+00:00",
+        "updated_at": "2026-11-18T10:33:05.284399+00:00",
+        "score_debug": {
+          "combined_score": 0.24748657999999998,
+          "semantic_score": 0.3384335,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28028295
+        }
+      },
+      {
+        "memory": "User explains that the Fresh Earth Token’s morphological domain includes a digital token form built on the Hashgraph HTS (Hedera Hashgraph Token Service) platform using Guardian nodes from the Hedera network.",
+        "score": 0.24733724,
+        "id": "852c6337-cf06-4ae8-8bd2-e501ddb47127",
+        "created_at": "2026-11-18T10:55:30.504646+00:00",
+        "updated_at": "2026-11-18T10:55:30.504646+00:00",
+        "score_debug": {
+          "combined_score": 0.24733724,
+          "semantic_score": 0.282395,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3359481
+        }
+      },
+      {
+        "memory": "Assistant also suggested additional experiences such as visiting Camden Market in London and Marché aux Puces de Saint‑Ouen in Paris, taking food tours for fish and chips or croissants, exploring Shoreditch and Le Marais neighborhoods, and visiting the Natural History Museum in London and the Musée d'Orsay in Paris.",
+        "score": 0.24731936000000002,
+        "id": "4ede87f0-e199-4541-807c-5d7adb2fb716",
+        "created_at": "2026-11-18T10:25:59.076662+00:00",
+        "updated_at": "2026-11-18T10:25:59.076662+00:00",
+        "score_debug": {
+          "combined_score": 0.24731936000000002,
+          "semantic_score": 0.27874005,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33955835
+        }
+      },
+      {
+        "memory": "User asked for recommendations on must‑see attractions and must‑try restaurants in Savannah to help plan the upcoming trip.",
+        "score": 0.24724776296062992,
+        "id": "612a2bbf-eae4-40fd-94cf-e966758d7a7b",
+        "created_at": "2026-11-18T10:05:29.452051+00:00",
+        "updated_at": "2026-11-18T10:05:29.452051+00:00",
+        "score_debug": {
+          "combined_score": 0.24724776296062992,
+          "semantic_score": 0.31751862,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30060078740157486
+        }
+      },
+      {
+        "memory": "User is planning a trip to Europe and is interested in visiting both London and Paris.",
+        "score": 0.2467905848339768,
+        "id": "3d3507f5-8ad4-41cd-a115-63e04a32e2a7",
+        "created_at": "2026-11-18T10:25:59.063517+00:00",
+        "updated_at": "2026-11-18T10:25:59.063517+00:00",
+        "score_debug": {
+          "combined_score": 0.2467905848339768,
+          "semantic_score": 0.34157902,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27539744208494205
+        }
+      },
+      {
+        "memory": "Assistant recommended two machine‑learning/NLP studies: Coppersmith et al. (2018) 'Quantifying mental health from social media with machine learning' and De Choudhury et al. (2013) 'Predicting depression via social media', both using algorithms to predict mental‑health outcomes from social‑media posts.",
+        "score": 0.24678610599999998,
+        "id": "02fe4b58-bb25-4355-b40d-36b1d3f74d58",
+        "created_at": "2026-11-18T09:57:47.635062+00:00",
+        "updated_at": "2026-11-18T09:57:47.635062+00:00",
+        "score_debug": {
+          "combined_score": 0.24678610599999998,
+          "semantic_score": 0.2777783,
+          "bm25_score": 0.0,
+          "entity_boost": 0.339186965
+        }
+      },
+      {
+        "memory": "Assistant recommended using the sculpting mat as a work surface for natural materials such as wood, bamboo, or recycled paper, supporting eco‑friendly construction.",
+        "score": 0.246785972,
+        "id": "12da0eae-704c-4420-b2a5-04341015077f",
+        "created_at": "2026-11-18T11:28:15.790708+00:00",
+        "updated_at": "2026-11-18T11:28:15.790708+00:00",
+        "score_debug": {
+          "combined_score": 0.246785972,
+          "semantic_score": 0.31848788,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29847705
+        }
+      },
+      {
+        "memory": "Assistant noted that model performance should be evaluated with metrics such as accuracy, precision, recall, F1-score, and area-under-the-ROC curve.",
+        "score": 0.246213244,
+        "id": "3ad082d4-a5ad-437e-b924-791b1f2bf63c",
+        "created_at": "2026-11-18T09:59:23.325999+00:00",
+        "updated_at": "2026-11-18T09:59:23.325999+00:00",
+        "score_debug": {
+          "combined_score": 0.246213244,
+          "semantic_score": 0.29871368,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31681943
+        }
+      },
+      {
+        "memory": "Assistant recommended two network analysis studies: Király et al. (2019) 'Problematic internet use and its relationship with symptoms of anxiety and depression in young adults: A network analysis' and Baker et al. (2016) 'Social network analysis of social media data: A systematic review', covering centrality measures, community detection, and network visualization.",
+        "score": 0.24616574,
+        "id": "b20c28cf-8d70-4975-b0d0-1d3a5fd4ce6d",
+        "created_at": "2026-11-18T09:57:47.631180+00:00",
+        "updated_at": "2026-11-18T09:57:47.631180+00:00",
+        "score_debug": {
+          "combined_score": 0.24616574,
+          "semantic_score": 0.28052923,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33488512
+        }
+      },
+      {
+        "memory": "Assistant explained that Intelligentsia Coffee offers a rewards program called \"Intelligentsia Rewards\" with sign‑up details for frequent customers.",
+        "score": 0.24586393016451935,
+        "id": "fcf27e81-97ee-4594-bb23-ae8794697a9e",
+        "created_at": "2026-11-18T11:08:31.107689+00:00",
+        "updated_at": "2026-11-18T11:08:31.107689+00:00",
+        "score_debug": {
+          "combined_score": 0.24586393016451935,
+          "semantic_score": 0.30838376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30627606541129837
+        }
+      },
+      {
+        "memory": "Assistant suggested Freaknik Festival in Providence, Rhode Island, taking place June 18‑19, 2027, which focuses on hip‑hop and R&B, emphasizing community, self‑expression, and a high‑energy atmosphere.",
+        "score": 0.24581793322677328,
+        "id": "a4621e5d-5952-497d-9764-e1b923505e21",
+        "created_at": "2026-11-18T11:17:50.538992+00:00",
+        "updated_at": "2026-11-18T11:17:50.538992+00:00",
+        "score_debug": {
+          "combined_score": 0.24581793322677328,
+          "semantic_score": 0.2723479,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34219693306693316
+        }
+      },
+      {
+        "memory": "Assistant suggested the following online furniture retailers for Neo‑Traditional pieces: West Elm, Crate & Barrel, Pottery Barn, AllModern, and Room & Board.",
+        "score": 0.245685016,
+        "id": "320bc66f-5bcc-4fc9-81a9-256f4927c1f8",
+        "created_at": "2026-11-18T10:30:47.810437+00:00",
+        "updated_at": "2026-11-18T10:30:47.810437+00:00",
+        "score_debug": {
+          "combined_score": 0.245685016,
+          "semantic_score": 0.25988477,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35432777
+        }
+      },
+      {
+        "memory": "Assistant recommended fingerpicking improvement tips: stay relaxed, develop finger independence, assign specific fingers to strings, start with simple two‑or‑three‑finger patterns, use fingertip plucking, optionally use nails for a brighter tone, practice with a metronome, listen to masters like James Taylor, experiment with different rhythms, and be patient.",
+        "score": 0.24550152,
+        "id": "3072bd9e-bf29-4752-969a-37a862fb098d",
+        "created_at": "2026-11-18T11:41:44.913585+00:00",
+        "updated_at": "2026-11-18T11:41:44.913585+00:00",
+        "score_debug": {
+          "combined_score": 0.24550152,
+          "semantic_score": 0.2646345,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3491193
+        }
+      },
+      {
+        "memory": "User is seeking movie recommendations featuring mind‑bending plots similar to 'Inception' for an upcoming friends' movie night.",
+        "score": 0.24535101800000003,
+        "id": "37f689a3-417f-4201-9c2f-debaf5ff7906",
+        "created_at": "2026-11-18T09:52:24.619076+00:00",
+        "updated_at": "2026-11-18T09:52:24.619076+00:00",
+        "score_debug": {
+          "combined_score": 0.24535101800000003,
+          "semantic_score": 0.29871193,
+          "bm25_score": 0.0,
+          "entity_boost": 0.314665615
+        }
+      },
+      {
+        "memory": "Assistant noted that both Korg and Roland are reputable keyboard brands with newer models that include a variety of advanced features.",
+        "score": 0.2452213472191235,
+        "id": "aecc49b3-e218-431d-a138-3a1aa105eb6b",
+        "created_at": "2026-11-18T11:39:20.947206+00:00",
+        "updated_at": "2026-11-18T11:39:20.947206+00:00",
+        "score_debug": {
+          "combined_score": 0.2452213472191235,
+          "semantic_score": 0.25607538,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3569779880478088
+        }
+      },
+      {
+        "memory": "As the holidays approached, Jack's mother took on a heavier workload at the museum, leaving her with less time to accompany him.",
+        "score": 0.2451836325897559,
+        "id": "bf6183c3-4911-432c-8371-032fb5c6cbbe",
+        "created_at": "2026-11-18T10:13:55.443867+00:00",
+        "updated_at": "2026-11-18T10:13:55.443867+00:00",
+        "score_debug": {
+          "combined_score": 0.2451836325897559,
+          "semantic_score": 0.4444008,
+          "bm25_score": 0.0,
+          "entity_boost": 0.16855828147438967
+        }
+      },
+      {
+        "memory": "User wants to know whether Panorama Music Festival offers single‑day tickets.",
+        "score": 0.24511577741458543,
+        "id": "2bbd4e6f-0d43-4908-b0ba-cba0330fde9b",
+        "created_at": "2026-11-18T11:18:44.416122+00:00",
+        "updated_at": "2026-11-18T11:18:44.416122+00:00",
+        "score_debug": {
+          "combined_score": 0.24511577741458543,
+          "semantic_score": 0.33117798,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28161146353646355
+        }
+      },
+      {
+        "memory": "Assistant recommended Clary's Cafe, a beloved breakfast spot serving a Southern‑style breakfast plate that includes fried chicken, eggs, and biscuits.",
+        "score": 0.24508923999999999,
+        "id": "a4a0b6c0-0852-4bcf-8e47-665d944f303f",
+        "created_at": "2026-11-18T10:07:17.244797+00:00",
+        "updated_at": "2026-11-18T10:07:17.244797+00:00",
+        "score_debug": {
+          "combined_score": 0.24508923999999999,
+          "semantic_score": 0.2884314,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3242917
+        }
+      },
+      {
+        "memory": "Assistant suggests additional party games for game nights, including Taboo, Pictionary, and Werewolf (also known as Mafia), as alternatives to Codenames.",
+        "score": 0.24497177554445554,
+        "id": "8de775ba-2674-4a46-8653-e7a8a8c829bf",
+        "created_at": "2026-11-18T10:08:51.047009+00:00",
+        "updated_at": "2026-11-18T10:08:51.047009+00:00",
+        "score_debug": {
+          "combined_score": 0.24497177554445554,
+          "semantic_score": 0.3050683,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3073611388611389
+        }
+      },
+      {
+        "memory": "Assistant also suggested activities like wandering the historic district’s streets and squares, taking a horse‑drawn carriage tour, visiting Savannah City Market or Forsyth Farmers’ Market, kayaking or paddle‑boarding the waterways, and relaxing in parks such as Chippewa Square or Monterey Square.",
+        "score": 0.24465877200000002,
+        "id": "e481a763-9b6c-4941-aaa4-6892b1ed024a",
+        "created_at": "2026-11-18T10:05:29.465658+00:00",
+        "updated_at": "2026-11-18T10:05:29.465658+00:00",
+        "score_debug": {
+          "combined_score": 0.24465877200000002,
+          "semantic_score": 0.29576543,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3158815
+        }
+      },
+      {
+        "memory": "Assistant recommended two survey and mixed‑methods studies: Burke et al. (2010) 'Social network activity and social well‑being' (combining survey data with network analysis) and Kaplan et al. (2018) 'The impact of social media on mental health: A systematic review' (survey‑based examination of mental‑health effects).",
+        "score": 0.24463773,
+        "id": "be454d35-8f0a-45ed-bff6-6cdea478c2b0",
+        "created_at": "2026-11-18T09:57:47.640701+00:00",
+        "updated_at": "2026-11-18T09:57:47.640701+00:00",
+        "score_debug": {
+          "combined_score": 0.24463773,
+          "semantic_score": 0.2711376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.340456725
+        }
+      },
+      {
+        "memory": "Assistant suggested alternative Hilton properties in New York City, such as Hilton New York Midtown and Conrad New York Downtown, as possible options for using Hilton points.",
+        "score": 0.24442427024975028,
+        "id": "4574199c-6acc-4083-87d8-3ce371bf44dc",
+        "created_at": "2026-11-18T10:22:41.670210+00:00",
+        "updated_at": "2026-11-18T10:22:41.670210+00:00",
+        "score_debug": {
+          "combined_score": 0.24442427024975028,
+          "semantic_score": 0.2859863,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32507437562437563
+        }
+      },
+      {
+        "memory": "User stayed at the Hilton Hotel in downtown Chicago in October 2026 for a business conference and appreciated the convenience of its central location.",
+        "score": 0.24432351600000005,
+        "id": "34432cc4-8bad-489d-be90-9a3d71fadae7",
+        "created_at": "2026-11-18T11:05:12.631338+00:00",
+        "updated_at": "2026-11-18T11:05:12.631338+00:00",
+        "score_debug": {
+          "combined_score": 0.24432351600000005,
+          "semantic_score": 0.32897657,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28183222
+        }
+      },
+      {
+        "memory": "User plans to stay in an Airbnb in the Oberkampf area of Paris and wants to know about nearby supermarkets or markets for grocery shopping.",
+        "score": 0.24426452947950433,
+        "id": "a05fa027-18ef-49d6-adf3-d5429bd78f9a",
+        "created_at": "2026-11-18T10:56:02.678479+00:00",
+        "updated_at": "2026-11-18T10:56:02.678479+00:00",
+        "score_debug": {
+          "combined_score": 0.24426452947950433,
+          "semantic_score": 0.33803344,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27262788369876073
+        }
+      },
+      {
+        "memory": "User plans to stay in an Airbnb in the Oberkampf area of Paris and wants to know about nearby supermarkets or markets for grocery shopping.",
+        "score": 0.24426452947950433,
+        "id": "99eec0f6-5b51-4c12-b633-414c88356c6f",
+        "created_at": "2026-11-18T10:54:11.351137+00:00",
+        "updated_at": "2026-11-18T10:54:11.351137+00:00",
+        "score_debug": {
+          "combined_score": 0.24426452947950433,
+          "semantic_score": 0.33803344,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27262788369876073
+        }
+      },
+      {
+        "memory": "Assistant recommended several gift ideas for the user's mom, including a personalized item such as custom jewelry or a monogrammed tote bag, an experience like a cooking class or spa day, a customized photo book, a subscription service, a sentimental keepsake, a practical item like a high‑quality kitchen appliance, a memory‑lane scavenger hunt, and a skill‑building class or equipment related to her hobbies.",
+        "score": 0.24424862799999997,
+        "id": "63475db0-a609-4f32-8b73-e96d0ebcc95a",
+        "created_at": "2026-11-18T09:49:01.129388+00:00",
+        "updated_at": "2026-11-18T09:49:01.129388+00:00",
+        "score_debug": {
+          "combined_score": 0.24424862799999997,
+          "semantic_score": 0.28249234,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32812923
+        }
+      }
+    ],
+    "search_latency_ms": 10329.7,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_200": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough. I don’t have a record of anything you did with Rachel on Wednesday, February 1, 2023.",
+      "judge_raw": "<judge_thinking>The correct answer is a specific action: started ukulele lessons with Rachel. The model response refuses to answer, claiming insufficient information and giving an unrelated date. It does not state the action, so it’s not equivalent.</judge_thinking>\nno",
+      "memories_evaluated": 200,
+      "reason": "Generated answer: The information provided is not enough. I don’t have a record of anything you did with Rachel on Wednesday, February 1, 2023."
+    },
+    "top_50": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough. I have no record with Rachel on Wednesday, Feb 1, 2023. The only Wednesday with Rachel I have is that you started ukulele lessons together on Nov 18, 2026.",
+      "judge_raw": "<judge_thinking>\n- Core answer: You started taking ukulele lessons with Rachel.\n- Model response abstains and cites different dates, not addressing \"two months ago Wednesday.\"\n- It does not provide the correct action for that time; instead claims insufficient info.\n- Therefore it does not semantically match the correct answer.\n</judge_thinking>\nno",
+      "memories_evaluated": 50,
+      "reason": "Generated answer: The information provided is not enough. I have no record with Rachel on Wednesday, Feb 1, 2023. The only Wednesday with Rachel I have is that you started ukulele lessons together on Nov 18, 2026."
+    },
+    "top_20": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough.",
+      "judge_raw": "<judge_thinking>\nCore claim in the correct answer: The user started taking ukulele lessons with Rachel on that Wednesday two months ago.\n\nDoes the model response address it? No. It abstains, saying there isn’t enough information.\n\nAbstention would only be correct if the ground truth were unanswerable, which it isn’t here. Therefore, the model response does not match the specific correct answer.\n\nConclusion: Not semantically equivalent.\n</judge_thinking>\nno",
+      "memories_evaluated": 20,
+      "reason": "Generated answer: The information provided is not enough."
+    },
+    "top_10": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough. I don’t have any record of you doing something with Rachel on Wednesday, February 1, 2023. Would you like to add what you did?",
+      "judge_raw": "<judge_thinking>The correct answer is a specific event: starting ukulele lessons with Rachel on that Wednesday. The model response refuses to answer, saying there's not enough information and giving an unrelated date, so it does not convey the correct fact. Therefore it does not match the correct answer.</judge_thinking>\nno",
+      "memories_evaluated": 10,
+      "reason": "Generated answer: The information provided is not enough. I don’t have any record of you doing something with Rachel on Wednesday, February 1, 2023. Would you like to add what you did?"
+    }
+  }
+}

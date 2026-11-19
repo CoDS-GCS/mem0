@@ -1,0 +1,2654 @@
+{
+  "question_id": "gpt4_2c50253f",
+  "question_type": "temporal-reasoning",
+  "question": "What time do I wake up on Tuesdays and Thursdays?",
+  "ground_truth_answer": "6:45 AM",
+  "question_date": "2023/05/27 (Sat) 19:21",
+  "is_abstention": false,
+  "user_id": "longmemeval_gpt4_2c50253f_8da3076b",
+  "answer_session_ids": [
+    "answer_9af4e346_1",
+    "answer_9af4e346_2"
+  ],
+  "retrieval": {
+    "search_query": "What time do I wake up on Tuesdays and Thursdays?",
+    "search_results": [
+      {
+        "memory": "User is creating a personalized morning routine that includes a 30‑minute walk before work each day, and on Tuesdays and Thursdays wakes up 15 minutes earlier to meditate and practice yoga, which makes them feel more centered and calm.",
+        "score": 0.8029492399948337,
+        "id": "4ebcc269-d9e8-49b1-b754-8117d652fcb3",
+        "created_at": "2026-11-18T17:33:07.230947+00:00",
+        "updated_at": "2026-11-18T17:33:07.230947+00:00",
+        "score_debug": {
+          "combined_score": 0.8029492399948337,
+          "semantic_score": 0.5073736,
+          "bm25_score": 0.9999999999870841,
+          "entity_boost": 0.4999995
+        }
+      },
+      {
+        "memory": "User is looking for guided meditation apps or resources to support their Tuesday and Thursday meditation sessions, hoping to stay focused and centered.",
+        "score": 0.7568605616817623,
+        "id": "3507eafa-1ac0-4ec1-a869-bf8868da5d62",
+        "created_at": "2026-11-18T17:34:10.320681+00:00",
+        "updated_at": "2026-11-18T17:34:10.320681+00:00",
+        "score_debug": {
+          "combined_score": 0.7568605616817623,
+          "semantic_score": 0.45061237,
+          "bm25_score": 0.9999998342044056,
+          "entity_boost": 0.4415392
+        }
+      },
+      {
+        "memory": "Assistant advises maintaining consistency by posting 3–5 times per week during peak hours such as lunchtime or dinner, while varying posting times to reach different audience segments and avoid sacrificing quality for quantity.",
+        "score": 0.6376690854758837,
+        "id": "bcb99c12-8df1-453c-9b7d-b9939a1e4016",
+        "created_at": "2026-11-18T18:49:04.198060+00:00",
+        "updated_at": "2026-11-18T18:49:04.198060+00:00",
+        "score_debug": {
+          "combined_score": 0.6376690854758837,
+          "semantic_score": 0.429687,
+          "bm25_score": 0.8455759234799192,
+          "entity_boost": 0.3189097902097902
+        }
+      },
+      {
+        "memory": "User recently began waking up at 7:00 AM (previously 8:30 AM) and wants healthy breakfast ideas that can be prepared the night before to fuel the earlier routine.",
+        "score": 0.6289648940585321,
+        "id": "b0627d90-b6e6-4ef9-a3ce-d0bac4b4c59f",
+        "created_at": "2026-11-18T18:33:09.536067+00:00",
+        "updated_at": "2026-11-18T18:33:09.536067+00:00",
+        "score_debug": {
+          "combined_score": 0.6289648940585321,
+          "semantic_score": 0.573115,
+          "bm25_score": 0.9992972351463301,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is considering setting up recurring tasks or calendar events for regular activities such as yoga sessions and reading time to build consistent habits.",
+        "score": 0.5985262380383828,
+        "id": "de6bf802-3f47-4499-899d-b459584dd09e",
+        "created_at": "2026-11-18T17:05:53.333208+00:00",
+        "updated_at": "2026-11-18T17:05:53.333208+00:00",
+        "score_debug": {
+          "combined_score": 0.5985262380383828,
+          "semantic_score": 0.42823726,
+          "bm25_score": 0.7223298114739098,
+          "entity_boost": 0.3457485236220473
+        }
+      },
+      {
+        "memory": "Assistant explained how to create recurring events in Google Calendar: select a time slot, add details, choose a recurrence pattern (daily, weekly, monthly), optionally use built‑in templates for activities like Yoga or Reading, and set reminders to ensure attendance.",
+        "score": 0.5884258621469571,
+        "id": "2a05cfc6-80f2-4a65-8549-06826fc57bb6",
+        "created_at": "2026-11-18T17:05:53.336536+00:00",
+        "updated_at": "2026-11-18T17:05:53.336536+00:00",
+        "score_debug": {
+          "combined_score": 0.5884258621469571,
+          "semantic_score": 0.42642644,
+          "bm25_score": 0.6957361836528242,
+          "entity_boost": 0.3489020317145689
+        }
+      },
+      {
+        "memory": "Assistant suggested Any.do, noting its Night Mode, Apple Watch companion, and voice‑command integration with Google Assistant and Amazon Alexa to minimize screen time at night.",
+        "score": 0.5844093110552742,
+        "id": "bc48791e-c467-44fc-adb9-11ad16e94b30",
+        "created_at": "2026-11-18T17:03:42.877760+00:00",
+        "updated_at": "2026-11-18T17:03:42.877760+00:00",
+        "score_debug": {
+          "combined_score": 0.5844093110552742,
+          "semantic_score": 0.40429494,
+          "bm25_score": 0.7276319340417818,
+          "entity_boost": 0.32909640359640363
+        }
+      },
+      {
+        "memory": "Assistant recommended setting up departure notifications to remind the user when it’s time to leave for the trip.",
+        "score": 0.5837337749442569,
+        "id": "84f9eb63-6753-421d-836e-30a46ac1e4b5",
+        "created_at": "2026-11-18T18:55:50.739852+00:00",
+        "updated_at": "2026-11-18T18:55:50.739852+00:00",
+        "score_debug": {
+          "combined_score": 0.5837337749442569,
+          "semantic_score": 0.41600868,
+          "bm25_score": 0.7460993273606423,
+          "entity_boost": 0.29722643
+        }
+      },
+      {
+        "memory": "User wants to double-check the schedules for Bus Route 12 and the Red Line Train to ensure arriving on time for today’s meeting at the downtown office.",
+        "score": 0.5821117095769739,
+        "id": "2a657e91-10be-49a4-a949-727837cc8304",
+        "created_at": "2026-11-18T18:56:04.066176+00:00",
+        "updated_at": "2026-11-18T18:56:04.066176+00:00",
+        "score_debug": {
+          "combined_score": 0.5821117095769739,
+          "semantic_score": 0.43823713,
+          "bm25_score": 0.7249821042992236,
+          "entity_boost": 0.29206003964321114
+        }
+      },
+      {
+        "memory": "User intends to view Rachel’s social‑media profile during scheduled break times or immediately after completing their daily meditation practice, integrating the check‑in as part of their self‑care routine.",
+        "score": 0.5820898892155343,
+        "id": "7780f728-3274-47bd-a5a0-9dbee6cd1771",
+        "created_at": "2026-11-18T17:31:59.760571+00:00",
+        "updated_at": "2026-11-18T17:31:59.760571+00:00",
+        "score_debug": {
+          "combined_score": 0.5820898892155343,
+          "semantic_score": 0.3885924,
+          "bm25_score": 0.7302794409209536,
+          "entity_boost": 0.33635288211788217
+        }
+      },
+      {
+        "memory": "Assistant recommended Todoist (task prioritization and built‑in time tracking), Trello (visual boards and customizable workflows), RescueTime (automatic time‑tracking insights), and Strides (habit and goal‑setting) as apps that can help the user stay organized during the day and support their evening unwind routine.",
+        "score": 0.5724436981546036,
+        "id": "65810e06-7b14-4918-84f3-75f7692ce9af",
+        "created_at": "2026-11-18T17:04:30.036858+00:00",
+        "updated_at": "2026-11-18T17:04:30.036858+00:00",
+        "score_debug": {
+          "combined_score": 0.5724436981546036,
+          "semantic_score": 0.41245383,
+          "bm25_score": 0.7037219188830125,
+          "entity_boost": 0.31493349650349656
+        }
+      },
+      {
+        "memory": "User commits to a daily meditation practice of at least 10 minutes, using Headspace and Insight Timer, meditating at the same time each day right after the morning walk to build a habit",
+        "score": 0.5662606286173272,
+        "id": "e2986344-8395-473c-a6ea-e9d3100afc86",
+        "created_at": "2026-11-18T17:35:18.131289+00:00",
+        "updated_at": "2026-11-18T17:35:18.131289+00:00",
+        "score_debug": {
+          "combined_score": 0.5662606286173272,
+          "semantic_score": 0.36550367,
+          "bm25_score": 0.7249821042992236,
+          "entity_boost": 0.3251657972440945
+        }
+      },
+      {
+        "memory": "Assistant suggested three ways to find the schedules: (1) visit the city transit website and use the schedule planner, (2) download a transit app such as Moovit, Transit, or Citymapper, and (3) use Google Maps to view route times for Bus Route 12 and the Red Line Train.",
+        "score": 0.5652998817140826,
+        "id": "f64cbf70-2ab2-420a-835d-ecf5259b3a2f",
+        "created_at": "2026-11-18T18:56:04.070113+00:00",
+        "updated_at": "2026-11-18T18:56:04.070113+00:00",
+        "score_debug": {
+          "combined_score": 0.5652998817140826,
+          "semantic_score": 0.39562324,
+          "bm25_score": 0.6877523942852066,
+          "entity_boost": 0.32987407
+        }
+      },
+      {
+        "memory": "Assistant suggested rewarding yourself after the walk with a favorite coffee, tea, healthy snack, or quiet time to read, reinforcing positive habit formation.",
+        "score": 0.5547457816167127,
+        "id": "81b0a8e7-4af1-48e1-8669-4d8048da79f1",
+        "created_at": "2026-11-18T18:35:27.326095+00:00",
+        "updated_at": "2026-11-18T18:35:27.326095+00:00",
+        "score_debug": {
+          "combined_score": 0.5547457816167127,
+          "semantic_score": 0.3336648,
+          "bm25_score": 0.7276319340417818,
+          "entity_boost": 0.32556772
+        }
+      },
+      {
+        "memory": "User is looking for a digital task‑management tool that offers task prioritization, time tracking, customizable workflows, reminders, and goal‑setting so they can stay organized during the day and enjoy a relaxed evening routine.",
+        "score": 0.554376144589564,
+        "id": "dc282424-5d59-4a4c-8a91-9595ac56e312",
+        "created_at": "2026-11-18T17:04:30.033244+00:00",
+        "updated_at": "2026-11-18T17:04:30.033244+00:00",
+        "score_debug": {
+          "combined_score": 0.554376144589564,
+          "semantic_score": 0.3683652,
+          "bm25_score": 0.7223298114739098,
+          "entity_boost": 0.29524535
+        }
+      },
+      {
+        "memory": "User attended their high school reunion about a month ago, seeing classmates they hadn't met in over a decade, and reflected on how quickly time passes.",
+        "score": 0.5541408318837717,
+        "id": "4e8f140b-573d-457f-baca-9843c1c90c9f",
+        "created_at": "2026-11-18T18:33:09.524993+00:00",
+        "updated_at": "2026-11-18T18:33:09.524993+00:00",
+        "score_debug": {
+          "combined_score": 0.5541408318837717,
+          "semantic_score": 0.32287142,
+          "bm25_score": 0.732924166202936,
+          "entity_boost": 0.3295564935064935
+        }
+      },
+      {
+        "memory": "User requests that the assistant follow up on every discussion thread and ask only one short question at a time",
+        "score": 0.5525782934042188,
+        "id": "bf63bcaf-a517-4085-86b9-f708740f48c7",
+        "created_at": "2026-11-18T18:21:53.542559+00:00",
+        "updated_at": "2026-11-18T18:21:53.542559+00:00",
+        "score_debug": {
+          "combined_score": 0.5525782934042188,
+          "semantic_score": 0.32350838,
+          "bm25_score": 0.7487230428212361,
+          "entity_boost": 0.30921431068931077
+        }
+      },
+      {
+        "memory": "Assistant advised that both spring (April‑May) and autumn (September‑October) are excellent times to visit Croatia: spring offers fewer tourists, mild 18‑22 °C weather, lower accommodation prices but some attractions may still be closed; autumn provides warmer 22‑25 °C weather, festivals such as the Dubrovnik Film Festival and Split Summer Festival, slightly higher prices, and reduced crowds.",
+        "score": 0.54714589468892,
+        "id": "cc6c1b5d-8733-4571-afb0-da9021dc65a1",
+        "created_at": "2026-11-18T18:27:48.976744+00:00",
+        "updated_at": "2026-11-18T18:27:48.976744+00:00",
+        "score_debug": {
+          "combined_score": 0.54714589468892,
+          "semantic_score": 0.33816063,
+          "bm25_score": 0.6797761346943281,
+          "entity_boost": 0.34992797202797205
+        }
+      },
+      {
+        "memory": "User is interested in visiting Croatia and is seeking advice on the best time of year to travel, noting concerns about peak-season crowds.",
+        "score": 0.5415425336167128,
+        "id": "986d65a6-224b-4186-9963-c4ffc33bfdc7",
+        "created_at": "2026-11-18T18:27:48.972269+00:00",
+        "updated_at": "2026-11-18T18:27:48.972269+00:00",
+        "score_debug": {
+          "combined_score": 0.5415425336167128,
+          "semantic_score": 0.31818655,
+          "bm25_score": 0.7276319340417818,
+          "entity_boost": 0.30803785
+        }
+      },
+      {
+        "memory": "Assistant highlighted benefits of integrating task‑management apps with Google Calendar and using recurring tasks: improved organization, dedicated time for self‑care like yoga and reading, higher productivity, and a smoother evening routine without unfinished tasks.",
+        "score": 0.5375444578472689,
+        "id": "a4592f99-6b0a-475f-9e23-2366af088d1c",
+        "created_at": "2026-11-18T17:05:53.345027+00:00",
+        "updated_at": "2026-11-18T17:05:53.345027+00:00",
+        "score_debug": {
+          "combined_score": 0.5375444578472689,
+          "semantic_score": 0.31177595,
+          "bm25_score": 0.7090438904843139,
+          "entity_boost": 0.3230413041338583
+        }
+      },
+      {
+        "memory": "Assistant designed One Time Offer 2 (OTO2) titled \"Video Marvels Elite Club: Stay Ahead of the Game with Exclusive Access & Monthly Updates!\" describing a recurring monthly subscription that delivers new agency templates, cutting‑edge features, and video marketing strategies each month.",
+        "score": 0.5359657158112084,
+        "id": "fc4adf99-796f-4892-9542-aa15624727b8",
+        "created_at": "2026-11-18T17:08:29.709631+00:00",
+        "updated_at": "2026-11-18T17:08:29.709631+00:00",
+        "score_debug": {
+          "combined_score": 0.5359657158112084,
+          "semantic_score": 0.3336947,
+          "bm25_score": 0.6877523942852066,
+          "entity_boost": 0.3184671952428147
+        }
+      },
+      {
+        "memory": "Assistant suggested tips for setting realistic goals with Freedom: start with short 1‑2 hour blocks, define specific measurable objectives, schedule blocks during focus periods, allow buffer time, stay flexible, monitor progress via analytics, and reward yourself for successful focus sessions.",
+        "score": 0.5358349239508379,
+        "id": "657283b8-be0f-497d-a8c6-9dd610de9736",
+        "created_at": "2026-11-18T17:30:20.975061+00:00",
+        "updated_at": "2026-11-18T17:30:20.975061+00:00",
+        "score_debug": {
+          "combined_score": 0.5358349239508379,
+          "semantic_score": 0.3104126,
+          "bm25_score": 0.6904132098770949,
+          "entity_boost": 0.3387615
+        }
+      },
+      {
+        "memory": "Assistant describes Jeffrey and Sarah spending their free time playing retro games on the CRT TV, finding that the shared activity brings them closer together.",
+        "score": 0.535001716589564,
+        "id": "1617ee3f-c6c0-4500-9373-0e1b84cbde6c",
+        "created_at": "2026-11-18T18:20:42.307276+00:00",
+        "updated_at": "2026-11-18T18:20:42.307276+00:00",
+        "score_debug": {
+          "combined_score": 0.535001716589564,
+          "semantic_score": 0.2790168,
+          "bm25_score": 0.7223298114739098,
+          "entity_boost": 0.33615768
+        }
+      },
+      {
+        "memory": "Assistant recommended the \"Carris/Metro\" app, available on iOS and Android, as the local tool for real-time bus, tram, and metro information, maps, schedules, fares, and service disruptions in the greater Lisbon area.",
+        "score": 0.5329880787872936,
+        "id": "2c642986-cf61-4e1b-b910-26652d47f80f",
+        "created_at": "2026-11-18T18:11:55.741692+00:00",
+        "updated_at": "2026-11-18T18:11:55.741692+00:00",
+        "score_debug": {
+          "combined_score": 0.5329880787872936,
+          "semantic_score": 0.30443487,
+          "bm25_score": 0.7117037610613952,
+          "entity_boost": 0.31633156590683853
+        }
+      },
+      {
+        "memory": "Assistant provided a step-by-step guide for customizing block sessions in Freedom: open the app, create a new block, select devices, choose a block list, set the duration, schedule start and end times (one‑time or recurring), add exceptions, name the block, and save it.",
+        "score": 0.5326698192095252,
+        "id": "2990a45a-cd6a-41dd-ab98-0929250e3282",
+        "created_at": "2026-11-18T17:30:20.971828+00:00",
+        "updated_at": "2026-11-18T17:30:20.971828+00:00",
+        "score_debug": {
+          "combined_score": 0.5326698192095252,
+          "semantic_score": 0.35492712,
+          "bm25_score": 0.6904132098770949,
+          "entity_boost": 0.2863342181467181
+        }
+      },
+      {
+        "memory": "Assistant notes Jeffrey committed to being a better partner to Sarah, dedicating time and energy to their relationship.",
+        "score": 0.5255423436784948,
+        "id": "299101d9-9ae9-4168-a262-18a50639ff74",
+        "created_at": "2026-11-18T18:19:58.933678+00:00",
+        "updated_at": "2026-11-18T18:19:58.933678+00:00",
+        "score_debug": {
+          "combined_score": 0.5255423436784948,
+          "semantic_score": 0.26781547,
+          "bm25_score": 0.743471564196237,
+          "entity_boost": 0.302568825
+        }
+      },
+      {
+        "memory": "Assistant created One Time Offer 4 (OTO4) titled \"Video Marvels Ultimate Traffic Booster: Drive Insane Amounts of Traffic to Your Videos!\" promising software that generates massive organic and viral traffic to maximize exposure and conversions.",
+        "score": 0.5241458456503308,
+        "id": "cfd89cd5-b80e-46c1-828a-e375f0e5fd3f",
+        "created_at": "2026-11-18T17:08:29.716120+00:00",
+        "updated_at": "2026-11-18T17:08:29.716120+00:00",
+        "score_debug": {
+          "combined_score": 0.5241458456503308,
+          "semantic_score": 0.2881755,
+          "bm25_score": 0.7037219188830125,
+          "entity_boost": 0.3184671952428147
+        }
+      },
+      {
+        "memory": "Assistant explained that linking task‑management apps to a calendar streamlines workflow by scheduling tasks as events, providing timely reminders, preventing double‑booking, enabling day planning, and supporting realistic goal setting.",
+        "score": 0.523843507553205,
+        "id": "607bacd9-421c-4785-9208-5f209ba79703",
+        "created_at": "2026-11-18T17:05:03.990789+00:00",
+        "updated_at": "2026-11-18T17:05:03.990789+00:00",
+        "score_debug": {
+          "combined_score": 0.523843507553205,
+          "semantic_score": 0.26242188,
+          "bm25_score": 0.7037219188830125,
+          "entity_boost": 0.34346497
+        }
+      },
+      {
+        "memory": "The university conducts workshops and seminars on well‑being topics such as stress management, time management, and other wellness subjects to promote overall student health.",
+        "score": 0.5200199577008776,
+        "id": "ed4afd14-1d68-41cb-aaf2-e4066c07cdbd",
+        "created_at": "2026-11-18T18:37:24.075002+00:00",
+        "updated_at": "2026-11-18T18:37:24.075002+00:00",
+        "score_debug": {
+          "combined_score": 0.5200199577008776,
+          "semantic_score": 0.25932944,
+          "bm25_score": 0.7355660042521941,
+          "entity_boost": 0.30515445
+        }
+      },
+      {
+        "memory": "After the performance, Harmony Hearts received many messages from fans thanking them for the song \"Rise Again\" and saying it helped them through difficult times.",
+        "score": 0.5184687243775693,
+        "id": "adb27379-490c-4279-938c-a3b6a07e39cb",
+        "created_at": "2026-11-18T16:43:32.773495+00:00",
+        "updated_at": "2026-11-18T16:43:32.773495+00:00",
+        "score_debug": {
+          "combined_score": 0.5184687243775693,
+          "semantic_score": 0.26685888,
+          "bm25_score": 0.7355660042521941,
+          "entity_boost": 0.2937469266917293
+        }
+      },
+      {
+        "memory": "User has no strict time constraint but wants to arrive with some time to spare before the meeting.",
+        "score": 0.5113872801299284,
+        "id": "37f323d4-5af5-4ab6-abfa-733dd9a7dfda",
+        "created_at": "2026-11-18T18:55:50.709596+00:00",
+        "updated_at": "2026-11-18T18:55:50.709596+00:00",
+        "score_debug": {
+          "combined_score": 0.5113872801299284,
+          "semantic_score": 0.4131186,
+          "bm25_score": 0.8653496003248209,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant drafted One Time Offer 1 (OTO1) titled \"Video Marvels Pro: Unlock Unlimited Possibilities & Boost Your Profits!\" highlighting premium features such as advanced editing tools, priority support, and an expanded library of agency templates.",
+        "score": 0.5068121426793872,
+        "id": "e9b5dedc-f984-4703-9113-0218408898d4",
+        "created_at": "2026-11-18T17:08:29.703602+00:00",
+        "updated_at": "2026-11-18T17:08:29.703602+00:00",
+        "score_debug": {
+          "combined_score": 0.5068121426793872,
+          "semantic_score": 0.24750295,
+          "bm25_score": 0.7010602114556536,
+          "entity_boost": 0.3184671952428147
+        }
+      },
+      {
+        "memory": "Assistant wrote One Time Offer 3 (OTO3) titled \"Video Marvels Agency License: Multiply Your Income by Selling Video Services to Clients!\" featuring a client‑management dashboard, done‑for‑you marketing materials, and white‑label rights for reselling videos.",
+        "score": 0.48923567765033094,
+        "id": "4c12dc45-2d1a-4e0b-be16-87d1ac618d3c",
+        "created_at": "2026-11-18T17:08:29.713122+00:00",
+        "updated_at": "2026-11-18T17:08:29.713122+00:00",
+        "score_debug": {
+          "combined_score": 0.48923567765033094,
+          "semantic_score": 0.20090008,
+          "bm25_score": 0.7037219188830125,
+          "entity_boost": 0.3184671952428147
+        }
+      },
+      {
+        "memory": "Assistant notes that the ongoing COVID-19 pandemic is already having a profound global impact and is likely to be regarded as a critical turning point in history, illustrating how current events can reshape societies over time.",
+        "score": 0.4861853965895639,
+        "id": "ca09e055-1c8b-4316-834b-caa2db3b4143",
+        "created_at": "2026-11-18T18:40:07.995746+00:00",
+        "updated_at": "2026-11-18T18:40:07.995746+00:00",
+        "score_debug": {
+          "combined_score": 0.4861853965895639,
+          "semantic_score": 0.19210848,
+          "bm25_score": 0.7223298114739098,
+          "entity_boost": 0.3010252
+        }
+      },
+      {
+        "memory": "Assistant interprets the lyric \"people wake from dreams, with voices in their ears, that will not go away\" as indicating the protagonist's reality is haunted by lingering dream sounds, possibly alluding to post‑traumatic stress disorder.",
+        "score": 0.47170353069100274,
+        "id": "6939ec86-4f3f-44fe-9ce3-24d84ac1fb8f",
+        "created_at": "2026-11-18T18:58:16.835893+00:00",
+        "updated_at": "2026-11-18T18:58:16.835893+00:00",
+        "score_debug": {
+          "combined_score": 0.47170353069100274,
+          "semantic_score": 0.18308255,
+          "bm25_score": 0.9961762767275067,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended practicing with a metronome, playing along with recordings, focusing on listening to each other, experimenting with different rhythms and time signatures, and recording rehearsals for analysis to improve timing and sync as a rhythm section",
+        "score": 0.47117430591337517,
+        "id": "2696fb7b-9613-440c-b0f6-9b54e5c4c59a",
+        "created_at": "2026-11-18T18:31:12.479753+00:00",
+        "updated_at": "2026-11-18T18:31:12.479753+00:00",
+        "score_debug": {
+          "combined_score": 0.47117430591337517,
+          "semantic_score": 0.33123058,
+          "bm25_score": 0.8467051847834378,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User requested suggestions to improve timing and synchronization for their rhythm section.",
+        "score": 0.4640412608499408,
+        "id": "a94285d2-8da4-412f-b1b1-00b07215abeb",
+        "created_at": "2026-11-18T18:33:09.529405+00:00",
+        "updated_at": "2026-11-18T18:33:09.529405+00:00",
+        "score_debug": {
+          "combined_score": 0.4640412608499408,
+          "semantic_score": 0.40614623,
+          "bm25_score": 0.753956922124852,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is seeking suggestions to improve timing and sync as a rhythm section",
+        "score": 0.46380250645547144,
+        "id": "91905957-8f09-4696-b019-9a82c9e76e92",
+        "created_at": "2026-11-18T18:31:12.476540+00:00",
+        "updated_at": "2026-11-18T18:31:12.476540+00:00",
+        "score_debug": {
+          "combined_score": 0.46380250645547144,
+          "semantic_score": 0.40816402,
+          "bm25_score": 0.7513422461386785,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User reflected that the reunion made them think about how fast time passes",
+        "score": 0.4511912584256657,
+        "id": "69c0a549-50a4-4201-9763-6ae3ccb55b4d",
+        "created_at": "2026-11-18T18:27:08.534148+00:00",
+        "updated_at": "2026-11-18T18:27:08.534148+00:00",
+        "score_debug": {
+          "combined_score": 0.4511912584256657,
+          "semantic_score": 0.37141132,
+          "bm25_score": 0.7565668260641643,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Users must be aware of time limits for each ride; exceeding limits can incur extra fees.",
+        "score": 0.44385310694425695,
+        "id": "b43b3d9d-aa69-4eb2-a838-7bb7d5e45c3a",
+        "created_at": "2026-11-18T17:26:57.747067+00:00",
+        "updated_at": "2026-11-18T17:26:57.747067+00:00",
+        "score_debug": {
+          "combined_score": 0.44385310694425695,
+          "semantic_score": 0.36353344,
+          "bm25_score": 0.7460993273606423,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant recommended practicing with a metronome and playing along with recordings to improve timing and sync within the rhythm section.",
+        "score": 0.44335535646935736,
+        "id": "db655ce4-e99d-4dc8-a7ee-d33cc1bb8bf2",
+        "created_at": "2026-11-18T18:33:09.540854+00:00",
+        "updated_at": "2026-11-18T18:33:09.540854+00:00",
+        "score_debug": {
+          "combined_score": 0.44335535646935736,
+          "semantic_score": 0.3675484,
+          "bm25_score": 0.7408399911733933,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant proposed setting a goal or challenge, like a distance, step count, or beating a previous time, to increase motivation on the walk.",
+        "score": 0.4427020563683815,
+        "id": "aed01e48-e82e-459d-a578-fb598ef0801a",
+        "created_at": "2026-11-18T18:35:27.314200+00:00",
+        "updated_at": "2026-11-18T18:35:27.314200+00:00",
+        "score_debug": {
+          "combined_score": 0.4427020563683815,
+          "semantic_score": 0.3764757,
+          "bm25_score": 0.7302794409209536,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is interested in integrating task‑management apps with their calendar to receive reminders and notifications at appropriate times, hoping it will help stay on track and make the most of the day.",
+        "score": 0.4419744163683815,
+        "id": "bcb698ba-415e-48dd-ba96-c364383ab661",
+        "created_at": "2026-11-18T17:05:03.987900+00:00",
+        "updated_at": "2026-11-18T17:05:03.987900+00:00",
+        "score_debug": {
+          "combined_score": 0.4419744163683815,
+          "semantic_score": 0.3746566,
+          "bm25_score": 0.7302794409209536,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advised using transit apps such as Moovit or Transit to locate the closest bus stop and plan the route in real time.",
+        "score": 0.43504705107488517,
+        "id": "944a5738-25a4-4261-b4a2-0825f912d44c",
+        "created_at": "2026-11-18T18:55:50.726197+00:00",
+        "updated_at": "2026-11-18T18:55:50.726197+00:00",
+        "score_debug": {
+          "combined_score": 0.43504705107488517,
+          "semantic_score": 0.3494129,
+          "bm25_score": 0.7382047276872129,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User wonders whether the symptoms of grief and loss can disappear on their own over time without actively managing them, questioning if passive healing is possible",
+        "score": 0.39802546970087765,
+        "id": "19b7ae6a-c733-4501-9581-9da01124751a",
+        "created_at": "2026-11-18T18:05:56.233674+00:00",
+        "updated_at": "2026-11-18T18:05:56.233674+00:00",
+        "score_debug": {
+          "combined_score": 0.39802546970087765,
+          "semantic_score": 0.25949767,
+          "bm25_score": 0.7355660042521941,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant explained that grief symptoms often lessen with time but active management is essential; some people feel better within weeks, while others may need months or years to fully process their loss",
+        "score": 0.3890770657196895,
+        "id": "4f30ec7d-e993-4f4c-a14c-508e1f04c318",
+        "created_at": "2026-11-18T18:05:56.236483+00:00",
+        "updated_at": "2026-11-18T18:05:56.236483+00:00",
+        "score_debug": {
+          "combined_score": 0.3890770657196895,
+          "semantic_score": 0.24771056,
+          "bm25_score": 0.7249821042992236,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User explained that most contract disputes arise from a breach of a term, which can occur through failure to perform on time, failure to meet an agreed standard, or refusal/inability to perform, and noted the severe impact on people and businesses.",
+        "score": 0.381872646679022,
+        "id": "bdd59381-8f16-482e-8d20-df5c20478169",
+        "created_at": "2026-11-18T17:24:54.180110+00:00",
+        "updated_at": "2026-11-18T17:24:54.180110+00:00",
+        "score_debug": {
+          "combined_score": 0.381872646679022,
+          "semantic_score": 0.24031916,
+          "bm25_score": 0.7143624566975549,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant suggested personalizing the garland by printing the baby's name and birthdate on custom onesies, creating a banner with the same details, or overlaying them on photos, optionally adding the baby's weight, length, or time of birth, and advised getting the cousin's approval before finalizing.",
+        "score": 0.3726584417140827,
+        "id": "1860220c-c40a-44bc-a9c5-d974c957ef38",
+        "created_at": "2026-11-18T17:02:00.857921+00:00",
+        "updated_at": "2026-11-18T17:02:00.857921+00:00",
+        "score_debug": {
+          "combined_score": 0.3726584417140827,
+          "semantic_score": 0.24389371,
+          "bm25_score": 0.6877523942852066,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant mentioned the city's public transportation operates from about 5:00 AM to 12:30 AM Monday‑Saturday and 6:00 AM to 12:30 AM on Sundays.",
+        "score": 0.3478556767232767,
+        "id": "3927b9d9-21ca-4f21-b69c-041030da8b05",
+        "created_at": "2026-11-18T18:55:50.728748+00:00",
+        "updated_at": "2026-11-18T18:55:50.728748+00:00",
+        "score_debug": {
+          "combined_score": 0.3478556767232767,
+          "semantic_score": 0.449511,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42012819180819183
+        }
+      },
+      {
+        "memory": "User plans to try the bike-sharing program during the upcoming weekend (around November 21-22, 2026) and seeks information before starting.",
+        "score": 0.32838484,
+        "id": "7111a418-5187-4adf-a0a6-8b2b423dfae9",
+        "created_at": "2026-11-18T17:26:57.726475+00:00",
+        "updated_at": "2026-11-18T17:26:57.726475+00:00",
+        "score_debug": {
+          "combined_score": 0.32838484,
+          "semantic_score": 0.4299388,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3910233
+        }
+      },
+      {
+        "memory": "Assistant warned that peak hours, typically 7‑9 AM and 4‑6 PM, may result in crowded buses and trains.",
+        "score": 0.324231098,
+        "id": "4be63b69-0e86-49d5-bb70-e71171db37b4",
+        "created_at": "2026-11-18T18:55:50.737561+00:00",
+        "updated_at": "2026-11-18T18:55:50.737561+00:00",
+        "score_debug": {
+          "combined_score": 0.324231098,
+          "semantic_score": 0.46974742,
+          "bm25_score": 0.0,
+          "entity_boost": 0.340830325
+        }
+      },
+      {
+        "memory": "Assistant advised walking during sunrise or early morning to get natural sunlight, helping regulate circadian rhythms and improve mood.",
+        "score": 0.30905565301498505,
+        "id": "5eff1fce-0d14-4e3f-b0b8-a7d3834b1bf6",
+        "created_at": "2026-11-18T18:35:27.321273+00:00",
+        "updated_at": "2026-11-18T18:35:27.321273+00:00",
+        "score_debug": {
+          "combined_score": 0.30905565301498505,
+          "semantic_score": 0.46625167,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3063874625374626
+        }
+      },
+      {
+        "memory": "User is planning to use the Freedom app to block social media during specific hours of the day and wants guidance on customizing block sessions and setting realistic goals.",
+        "score": 0.293602944,
+        "id": "2054589a-c151-41e9-8ab2-a5b07289da1c",
+        "created_at": "2026-11-18T17:30:20.967878+00:00",
+        "updated_at": "2026-11-18T17:30:20.967878+00:00",
+        "score_debug": {
+          "combined_score": 0.293602944,
+          "semantic_score": 0.40953976,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3244676
+        }
+      },
+      {
+        "memory": "User retired their old Nikes after completing a particularly grueling 10K on October 30, 2026 (three Sundays before the observation date), noting it as a marker of how far they have come.",
+        "score": 0.29255523672327677,
+        "id": "fab7feca-91db-453a-8087-291f7790f37b",
+        "created_at": "2026-11-18T18:46:11.815212+00:00",
+        "updated_at": "2026-11-18T18:46:11.815212+00:00",
+        "score_debug": {
+          "combined_score": 0.29255523672327677,
+          "semantic_score": 0.3112599,
+          "bm25_score": 0.0,
+          "entity_boost": 0.42012819180819183
+        }
+      },
+      {
+        "memory": "Assistant advises hosting virtual company events, for example virtual happy hours or team lunches, to create relaxed social settings that encourage remote workers to interact and bond.",
+        "score": 0.292492032,
+        "id": "6d617c09-5a3e-4172-b3e0-f6cdd990f971",
+        "created_at": "2026-11-18T18:54:39.992972+00:00",
+        "updated_at": "2026-11-18T18:54:39.992972+00:00",
+        "score_debug": {
+          "combined_score": 0.292492032,
+          "semantic_score": 0.37748158,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3537485
+        }
+      },
+      {
+        "memory": "Assistant suggested Trello, describing its Night Mode and an Apple Watch companion (with limited features) that lets visual planners manage tasks without bright screens before bedtime.",
+        "score": 0.2915245614385614,
+        "id": "62945949-48e1-4a9a-9dc4-423a419a88c1",
+        "created_at": "2026-11-18T17:03:42.880190+00:00",
+        "updated_at": "2026-11-18T17:03:42.880190+00:00",
+        "score_debug": {
+          "combined_score": 0.2915245614385614,
+          "semantic_score": 0.399715,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32909640359640363
+        }
+      },
+      {
+        "memory": "User is prioritizing self‑care and setting personal boundaries, lessons learned at a one‑day self‑care workshop held on February 27 2026 at the local wellness center.",
+        "score": 0.29106196870119516,
+        "id": "354f8e45-18be-453d-be12-343ff0c3a026",
+        "created_at": "2026-11-18T17:31:03.941327+00:00",
+        "updated_at": "2026-11-18T17:31:03.941327+00:00",
+        "score_debug": {
+          "combined_score": 0.29106196870119516,
+          "semantic_score": 0.35797036,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36968456175298803
+        }
+      },
+      {
+        "memory": "Assistant recommended traveling to Europe in summer (June‑August) for warm weather and long days, spring (April‑May) or autumn (September‑October) for milder weather and fewer tourists, and winter (November‑March) for Christmas markets, skiing, and quieter city breaks",
+        "score": 0.290546736,
+        "id": "e2fd62e6-ca34-4d3b-b959-fe82702bf02e",
+        "created_at": "2026-11-18T18:27:08.537464+00:00",
+        "updated_at": "2026-11-18T18:27:08.537464+00:00",
+        "score_debug": {
+          "combined_score": 0.290546736,
+          "semantic_score": 0.35932824,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3670386
+        }
+      },
+      {
+        "memory": "Assistant recommended the following apps and tools for weekly planning and task management: Task Management – Todoist, Trello, Asana, Wunderlist, Any.do; Calendar/Scheduling – Google Calendar, Microsoft Outlook, Fantastical, Calendly; Note‑taking – Evernote, OneNote, Simplenote, Bear; Planner/Goal‑Setting – Passion Planner, Erin Condren LifePlanner, Strides, Habitica; Other – RescueTime, Focus@Will, IFTTT.",
+        "score": 0.29026988068582754,
+        "id": "ee08a5f3-afc3-4862-b47f-c308b2daa21c",
+        "created_at": "2026-11-18T17:03:06.636957+00:00",
+        "updated_at": "2026-11-18T17:03:06.636957+00:00",
+        "score_debug": {
+          "combined_score": 0.29026988068582754,
+          "semantic_score": 0.37677267,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3489020317145689
+        }
+      },
+      {
+        "memory": "User set up a 20-gallon aquarium on February 10, 2026 and reports that the experience has been great so far",
+        "score": 0.2886385847011952,
+        "id": "3f8553c9-4bc2-44c4-b2bd-490b260b5033",
+        "created_at": "2026-11-18T17:14:02.338073+00:00",
+        "updated_at": "2026-11-18T17:14:02.338073+00:00",
+        "score_debug": {
+          "combined_score": 0.2886385847011952,
+          "semantic_score": 0.3519119,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36968456175298803
+        }
+      },
+      {
+        "memory": "User attended a one-day mindfulness and self-care workshop at a local wellness center on February 27, 2026, where they were introduced to mindfulness practices.",
+        "score": 0.28837379670119523,
+        "id": "ac7d89c0-13e9-4151-ac70-cb3b06e25ac1",
+        "created_at": "2026-11-18T17:29:51.276926+00:00",
+        "updated_at": "2026-11-18T17:29:51.276926+00:00",
+        "score_debug": {
+          "combined_score": 0.28837379670119523,
+          "semantic_score": 0.35124993,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36968456175298803
+        }
+      },
+      {
+        "memory": "User has been using Google Calendar for an extended period and is familiar with its features.",
+        "score": 0.2877453856535433,
+        "id": "da88d4aa-d5c3-4021-becc-9f1e7358bb36",
+        "created_at": "2026-11-18T17:05:53.328351+00:00",
+        "updated_at": "2026-11-18T17:05:53.328351+00:00",
+        "score_debug": {
+          "combined_score": 0.2877453856535433,
+          "semantic_score": 0.39632216,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3230413041338583
+        }
+      },
+      {
+        "memory": "User feels more energized and focused throughout the day since beginning their 30‑minute morning walks before work, noting improved concentration and vitality.",
+        "score": 0.28772005489763786,
+        "id": "337d53fd-2dbc-4fbc-8562-1d49dfeaa64e",
+        "created_at": "2026-11-18T17:33:46.504583+00:00",
+        "updated_at": "2026-11-18T17:33:46.504583+00:00",
+        "score_debug": {
+          "combined_score": 0.28772005489763786,
+          "semantic_score": 0.39413434,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3251657972440945
+        }
+      },
+      {
+        "memory": "Assistant proposed time‑management instruction, focusing on prioritization, scheduling, and time‑blocking methods to equip students with skills for efficient daily routines.",
+        "score": 0.28712456199999997,
+        "id": "e04faf1b-55b2-46d3-a211-c950c04976e7",
+        "created_at": "2026-11-18T18:43:18.256456+00:00",
+        "updated_at": "2026-11-18T18:43:18.256456+00:00",
+        "score_debug": {
+          "combined_score": 0.28712456199999997,
+          "semantic_score": 0.40171808,
+          "bm25_score": 0.0,
+          "entity_boost": 0.316093325
+        }
+      },
+      {
+        "memory": "Assistant suggested Day 5: start in Shibuya at Tower Records, have lunch in Ebisu with its famous ramen, and spend the afternoon in Kichijoji checking out the legendary jazz club Sometime and other live‑music venues (cover charge varies)",
+        "score": 0.2868188259389454,
+        "id": "923403c8-318d-4a1b-9d71-5adb8af05b19",
+        "created_at": "2026-11-18T17:10:31.258426+00:00",
+        "updated_at": "2026-11-18T17:10:31.258426+00:00",
+        "score_debug": {
+          "combined_score": 0.2868188259389454,
+          "semantic_score": 0.3565991,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "User is a local musician actively seeking upcoming festivals or events to showcase their music, planning to check event calendars and contact local music organizations for opportunities.",
+        "score": 0.2824686214488189,
+        "id": "b2581883-da7a-430e-a866-ac686640402b",
+        "created_at": "2026-11-18T17:38:09.452161+00:00",
+        "updated_at": "2026-11-18T17:38:09.452161+00:00",
+        "score_debug": {
+          "combined_score": 0.2824686214488189,
+          "semantic_score": 0.36042303,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3457485236220473
+        }
+      },
+      {
+        "memory": "User took Ethan to his first pediatrician appointment on 2026-11-18; Ethan is doing great after the visit.",
+        "score": 0.2811605208311688,
+        "id": "94fd52af-26f8-45c8-a160-3b6406fb7b97",
+        "created_at": "2026-11-18T17:02:00.854133+00:00",
+        "updated_at": "2026-11-18T17:02:00.854133+00:00",
+        "score_debug": {
+          "combined_score": 0.2811605208311688,
+          "semantic_score": 0.37209338,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33080792207792215
+        }
+      },
+      {
+        "memory": "User plans to overlay the baby's name and birthdate onto a photo of the baby for the cousin's celebration, intending to try this around November 18, 2026",
+        "score": 0.28026817609514376,
+        "id": "30ff0448-4fa4-4dfe-8cb1-230de3b42f07",
+        "created_at": "2026-11-18T17:02:25.791948+00:00",
+        "updated_at": "2026-11-18T17:02:25.791948+00:00",
+        "score_debug": {
+          "combined_score": 0.28026817609514376,
+          "semantic_score": 0.3455488,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35512164023785936
+        }
+      },
+      {
+        "memory": "User is interested in trying peanut butter banana overnight oats and asked for recommendations on which type of milk and what kind of peanut butter to use",
+        "score": 0.2797420602814668,
+        "id": "21d98110-8443-417e-867b-9371a3b55077",
+        "created_at": "2026-11-18T18:34:31.450742+00:00",
+        "updated_at": "2026-11-18T18:34:31.450742+00:00",
+        "score_debug": {
+          "combined_score": 0.2797420602814668,
+          "semantic_score": 0.37447634,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32487881070366703
+        }
+      },
+      {
+        "memory": "By mid‑November 2026, Mr. Smith noticed that Jeffrey had not reported to work for an extended period, prompting concern.",
+        "score": 0.27953022266165417,
+        "id": "b8ff74f7-0426-4950-a97f-ece1fb94f532",
+        "created_at": "2026-11-18T18:21:16.638833+00:00",
+        "updated_at": "2026-11-18T18:21:16.638833+00:00",
+        "score_debug": {
+          "combined_score": 0.27953022266165417,
+          "semantic_score": 0.39920777,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29961778665413535
+        }
+      },
+      {
+        "memory": "User wants information about upcoming festivals or events that local musicians should consider participating in, indicating a desire to find performance opportunities for their music group.",
+        "score": 0.27917962733399404,
+        "id": "10cc8f16-7dcb-442b-ae9a-528d8d0d4c1d",
+        "created_at": "2026-11-18T17:35:48.511787+00:00",
+        "updated_at": "2026-11-18T17:35:48.511787+00:00",
+        "score_debug": {
+          "combined_score": 0.27917962733399404,
+          "semantic_score": 0.37562555,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3223235183349852
+        }
+      },
+      {
+        "memory": "User winds down each night by watching an episode of their favorite TV show before bed, with reading a good book as a close second bedtime activity.",
+        "score": 0.278769302,
+        "id": "7d733c6a-ae5a-43e7-b778-a5f645b8a348",
+        "created_at": "2026-11-18T17:04:30.030147+00:00",
+        "updated_at": "2026-11-18T17:04:30.030147+00:00",
+        "score_debug": {
+          "combined_score": 0.278769302,
+          "semantic_score": 0.38162258,
+          "bm25_score": 0.0,
+          "entity_boost": 0.315300675
+        }
+      },
+      {
+        "memory": "User took Ethan to his first pediatrician appointment on 2026-11-18 and reports that Ethan is doing great",
+        "score": 0.27827415283116885,
+        "id": "bf9ce6c3-d410-4c4e-83ba-b6e04e3f3341",
+        "created_at": "2026-11-18T17:00:00.173654+00:00",
+        "updated_at": "2026-11-18T17:00:00.173654+00:00",
+        "score_debug": {
+          "combined_score": 0.27827415283116885,
+          "semantic_score": 0.36487746,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33080792207792215
+        }
+      },
+      {
+        "memory": "User met social‑media influencer Rachel at a marketing‑strategies workshop in October 2026 and worries that fully blocking social media might cause her to miss Rachel’s updates.",
+        "score": 0.27786553153617444,
+        "id": "e5c5e360-b24e-4b7d-836c-ec866229d6f3",
+        "created_at": "2026-11-18T17:31:03.944556+00:00",
+        "updated_at": "2026-11-18T17:31:03.944556+00:00",
+        "score_debug": {
+          "combined_score": 0.27786553153617444,
+          "semantic_score": 0.3342837,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36038012884043613
+        }
+      },
+      {
+        "memory": "Assistant suggested Day 2: explore Harajuku’s fashion district and Takeshita Street, have lunch at Tsukiji Fish Market for fresh sushi, and spend the afternoon in Daikanyama’s upscale boutiques and trendy cafés",
+        "score": 0.2759982659389454,
+        "id": "18eb3fda-2d5f-4bba-9041-25c47d1e9593",
+        "created_at": "2026-11-18T17:10:31.248913+00:00",
+        "updated_at": "2026-11-18T17:10:31.248913+00:00",
+        "score_debug": {
+          "combined_score": 0.2759982659389454,
+          "semantic_score": 0.3295477,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "Assistant mentioned that Any.do syncs with Google Calendar, Apple Calendar, and Microsoft Outlook, creating calendar entries for tasks.",
+        "score": 0.2757954091508492,
+        "id": "c03d9e7b-2157-40a2-b1ab-6a8e72604faf",
+        "created_at": "2026-11-18T17:05:03.997651+00:00",
+        "updated_at": "2026-11-18T17:05:03.997651+00:00",
+        "score_debug": {
+          "combined_score": 0.2757954091508492,
+          "semantic_score": 0.3632614,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32622712287712297
+        }
+      },
+      {
+        "memory": "Assistant outlined how to create recurring cards in Trello by adding a card, setting its due date, and activating the Recurring Cards Power‑Up to automatically regenerate the card on the chosen schedule.",
+        "score": 0.27519842,
+        "id": "ee155468-ce6a-4af9-822c-2277293babc7",
+        "created_at": "2026-11-18T17:05:53.342202+00:00",
+        "updated_at": "2026-11-18T17:05:53.342202+00:00",
+        "score_debug": {
+          "combined_score": 0.27519842,
+          "semantic_score": 0.33921945,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3487766
+        }
+      },
+      {
+        "memory": "User will check event calendars and contact local music organizations to look for upcoming festivals or events where they can showcase their music",
+        "score": 0.2748248894488189,
+        "id": "9841f202-08e9-46ec-a763-fdd9d40c3519",
+        "created_at": "2026-11-18T17:36:10.019207+00:00",
+        "updated_at": "2026-11-18T17:36:10.019207+00:00",
+        "score_debug": {
+          "combined_score": 0.2748248894488189,
+          "semantic_score": 0.3413137,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3457485236220473
+        }
+      },
+      {
+        "memory": "User follows a structured marathon training plan that includes scheduled running days, cross‑training sessions such as spin classes at the gym, and designated rest days, noting that the spin classes have been especially helpful for overall fitness",
+        "score": 0.272334372,
+        "id": "e5c376d8-86b8-44a3-ad59-0af999459072",
+        "created_at": "2026-11-18T18:44:37.863149+00:00",
+        "updated_at": "2026-11-18T18:44:37.863149+00:00",
+        "score_debug": {
+          "combined_score": 0.272334372,
+          "semantic_score": 0.31494635,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36588958
+        }
+      },
+      {
+        "memory": "User reported flying to New York, Chicago, San Francisco, London, Atlanta (three separate trips), Boston, and Denver over the past three months, averaging two to three flights per month.",
+        "score": 0.27228019215064425,
+        "id": "7d0595f3-8298-4d27-97c1-cce83735c431",
+        "created_at": "2026-11-18T17:21:50.179654+00:00",
+        "updated_at": "2026-11-18T17:21:50.179654+00:00",
+        "score_debug": {
+          "combined_score": 0.27228019215064425,
+          "semantic_score": 0.3532983,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32740218037661056
+        }
+      },
+      {
+        "memory": "Assistant recommended an afternoon snack of masala chai spiced with cinnamon, cardamom, and ginger, served with a handful of roasted almonds and roasted spiced pumpkin seeds.",
+        "score": 0.27196036474325674,
+        "id": "afb84f10-6c76-46f8-bbe8-1806981832ee",
+        "created_at": "2026-11-18T17:58:01.448952+00:00",
+        "updated_at": "2026-11-18T17:58:01.448952+00:00",
+        "score_debug": {
+          "combined_score": 0.27196036474325674,
+          "semantic_score": 0.37239277,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3075081418581419
+        }
+      },
+      {
+        "memory": "Assistant explained that the overall lyrical themes of 'Just Another Day' focus on the monotony of daily life, fear and violence, and dreams and nightmares.",
+        "score": 0.27172074593894546,
+        "id": "1f7eaee8-0ab5-4164-9735-a1442f19277f",
+        "created_at": "2026-11-18T18:57:46.305581+00:00",
+        "updated_at": "2026-11-18T18:57:46.305581+00:00",
+        "score_debug": {
+          "combined_score": 0.27172074593894546,
+          "semantic_score": 0.3188539,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "User attended their high school reunion around October 2026, about a month before the conversation, and saw people they hadn't seen in over a decade",
+        "score": 0.27129347953617444,
+        "id": "4bc6e2f2-6048-43cc-8183-dfd03c902760",
+        "created_at": "2026-11-18T18:27:08.532283+00:00",
+        "updated_at": "2026-11-18T18:27:08.532283+00:00",
+        "score_debug": {
+          "combined_score": 0.27129347953617444,
+          "semantic_score": 0.31785357,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36038012884043613
+        }
+      },
+      {
+        "memory": "Assistant recommended that User check local event calendars, browse social‑media pages, and contact local music organizations or venues to discover upcoming festivals and performance opportunities.",
+        "score": 0.271061788,
+        "id": "2fe8815d-3e11-4750-90fb-b54b9aeea1a4",
+        "created_at": "2026-11-18T17:35:48.514288+00:00",
+        "updated_at": "2026-11-18T17:35:48.514288+00:00",
+        "score_debug": {
+          "combined_score": 0.271061788,
+          "semantic_score": 0.33451685,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34313762
+        }
+      },
+      {
+        "memory": "User requests additional strategies to maintain mental toughness throughout marathon training and on race day.",
+        "score": 0.270647468,
+        "id": "294b7158-7374-4c4e-9a30-f3f605a3fb10",
+        "created_at": "2026-11-18T18:46:11.821363+00:00",
+        "updated_at": "2026-11-18T18:46:11.821363+00:00",
+        "score_debug": {
+          "combined_score": 0.270647468,
+          "semantic_score": 0.32476982,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35184885
+        }
+      },
+      {
+        "memory": "Assistant recommended podcasts across several genres: news (The Daily, Pod Save America, NPR's Up First), self‑improvement (The Tim Ferriss Show, The Happiness Lab, How I Built This), true crime (My Favorite Murder, Crime Junkie, Last Podcast on the Left), and comedy (My Brother, My Brother and Me, How Did This Get Made?, The Dollop).",
+        "score": 0.268696762,
+        "id": "a8f03a75-bd36-4d63-ac92-6b4bed647774",
+        "created_at": "2026-11-18T18:36:04.750598+00:00",
+        "updated_at": "2026-11-18T18:36:04.750598+00:00",
+        "score_debug": {
+          "combined_score": 0.268696762,
+          "semantic_score": 0.30018038,
+          "bm25_score": 0.0,
+          "entity_boost": 0.371561525
+        }
+      },
+      {
+        "memory": "User wants Freedom to permit specific people or accounts—such as Rachel’s profile—to bypass block sessions, seeking a way to add exceptions while maintaining focus goals.",
+        "score": 0.26806064884715286,
+        "id": "19a14190-c846-4a5d-90e9-5aeba095f7bc",
+        "created_at": "2026-11-18T17:31:03.947256+00:00",
+        "updated_at": "2026-11-18T17:31:03.947256+00:00",
+        "score_debug": {
+          "combined_score": 0.26806064884715286,
+          "semantic_score": 0.33379874,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33635288211788217
+        }
+      },
+      {
+        "memory": "Assistant summarizes that \"Just Another Day\" by Oingo Boingo has a complex structure with multiple surprising elements that add depth and intrigue to its lyrics.",
+        "score": 0.26738644593894545,
+        "id": "2e89118c-fbeb-4713-adde-6486d3f6b80a",
+        "created_at": "2026-11-18T18:58:16.841481+00:00",
+        "updated_at": "2026-11-18T18:58:16.841481+00:00",
+        "score_debug": {
+          "combined_score": 0.26738644593894545,
+          "semantic_score": 0.30801815,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "Assistant recommends planning the public‑transport trip in advance and leaving a bit earlier than usual to allow for unexpected delays.",
+        "score": 0.26690566000000004,
+        "id": "e851eaac-a5bc-4e73-a71c-5e3a73960aa0",
+        "created_at": "2026-11-18T18:56:16.666786+00:00",
+        "updated_at": "2026-11-18T18:56:16.666786+00:00",
+        "score_debug": {
+          "combined_score": 0.26690566000000004,
+          "semantic_score": 0.3620661,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30519805
+        }
+      },
+      {
+        "memory": "Assistant identified the most unexpected theme in the Oingo Boingo song 'Just Another Day' as the line 'razors in my bed', describing it as a metaphor that stands out from the song’s other content.",
+        "score": 0.2668907379389454,
+        "id": "67a0186e-e65c-4c04-8e96-f2afb5d5a4e9",
+        "created_at": "2026-11-18T18:57:46.302929+00:00",
+        "updated_at": "2026-11-18T18:57:46.302929+00:00",
+        "score_debug": {
+          "combined_score": 0.2668907379389454,
+          "semantic_score": 0.30677888,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "Backpack programs typically involve identification of eligible children by school staff or social workers, preparation of backpacks by volunteers or staff, distribution on Fridays or before breaks, and partnerships with schools, food banks, and community organizations to secure donations.",
+        "score": 0.266736072,
+        "id": "0d4a5e95-b603-42cd-903b-548782d4bfea",
+        "created_at": "2026-11-18T16:51:25.816827+00:00",
+        "updated_at": "2026-11-18T16:51:25.816827+00:00",
+        "score_debug": {
+          "combined_score": 0.266736072,
+          "semantic_score": 0.22135258,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4454876
+        }
+      },
+      {
+        "memory": "User intends to begin listening to music and paying attention to the sights and sounds during their 30‑minute morning walk, and plans to set a distance or step count goal to stay motivated.",
+        "score": 0.2648242388976378,
+        "id": "d7400d7b-d8d6-47d5-bff1-029f1d8937fb",
+        "created_at": "2026-11-18T18:36:04.740433+00:00",
+        "updated_at": "2026-11-18T18:36:04.740433+00:00",
+        "score_debug": {
+          "combined_score": 0.2648242388976378,
+          "semantic_score": 0.3368948,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3251657972440945
+        }
+      },
+      {
+        "memory": "User plans to add specific stretches and exercises to their 30‑minute morning walks, aiming to improve flexibility and overall well‑being.",
+        "score": 0.26468803889763776,
+        "id": "5ad815ee-2918-42fe-9907-efb3fa0c2933",
+        "created_at": "2026-11-18T17:34:10.318175+00:00",
+        "updated_at": "2026-11-18T17:34:10.318175+00:00",
+        "score_debug": {
+          "combined_score": 0.26468803889763776,
+          "semantic_score": 0.3365543,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3251657972440945
+        }
+      },
+      {
+        "memory": "User plans to integrate their task‑management apps Todoist and Trello with Google Calendar to synchronize tasks and events.",
+        "score": 0.26402433268582753,
+        "id": "f438a887-fdad-4504-a0c4-4c8ec027db3f",
+        "created_at": "2026-11-18T17:05:53.330774+00:00",
+        "updated_at": "2026-11-18T17:05:53.330774+00:00",
+        "score_debug": {
+          "combined_score": 0.26402433268582753,
+          "semantic_score": 0.3111588,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3489020317145689
+        }
+      },
+      {
+        "memory": "User is training for a marathon and retired their old Nikes after completing a particularly grueling 10K on October 25, 2026.",
+        "score": 0.2638695555361744,
+        "id": "e4ea7746-f13b-49a8-87ea-84e972f020f8",
+        "created_at": "2026-11-18T18:43:52.776391+00:00",
+        "updated_at": "2026-11-18T18:43:52.776391+00:00",
+        "score_debug": {
+          "combined_score": 0.2638695555361744,
+          "semantic_score": 0.29929376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36038012884043613
+        }
+      },
+      {
+        "memory": "Pricing structures vary, with daily, weekly, monthly, or annual membership fees plus per-ride or per-hour charges; users should review the program’s cost before signing up.",
+        "score": 0.26350480000000004,
+        "id": "08b1d97c-932b-469a-b201-4b7036274cfe",
+        "created_at": "2026-11-18T17:26:57.740138+00:00",
+        "updated_at": "2026-11-18T17:26:57.740138+00:00",
+        "score_debug": {
+          "combined_score": 0.26350480000000004,
+          "semantic_score": 0.3400709,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3186911
+        }
+      },
+      {
+        "memory": "User is eager to try a local coffee shop within walking distance, anticipating it could become a regular spot for daily visits.",
+        "score": 0.26234838800000004,
+        "id": "5aa2188a-c3b0-4249-98b7-96240dde607e",
+        "created_at": "2026-11-18T18:56:40.186423+00:00",
+        "updated_at": "2026-11-18T18:56:40.186423+00:00",
+        "score_debug": {
+          "combined_score": 0.26234838800000004,
+          "semantic_score": 0.3081364,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34773457
+        }
+      },
+      {
+        "memory": "Assistant recommended ten healthy breakfast ideas that can be prepped the night before: Overnight Oats, a Breakfast Burrito with eggs, black beans, cheese and veggies, a Mason Jar Parfait with Greek yogurt, granola and berries, Avocado Toast with optional egg, Smoothie Packs with frozen fruit and spinach, a Quinoa Breakfast Bowl with milk and toppings, Hard‑Boiled Eggs, Chia Seed Pudding, Cottage Cheese with fruit, and a Green Smoothie.",
+        "score": 0.26175446428146676,
+        "id": "eb51f37d-31a3-452b-967a-91d3b6173309",
+        "created_at": "2026-11-18T17:33:07.238268+00:00",
+        "updated_at": "2026-11-18T17:33:07.238268+00:00",
+        "score_debug": {
+          "combined_score": 0.26175446428146676,
+          "semantic_score": 0.32950735,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32487881070366703
+        }
+      },
+      {
+        "memory": "User shares tip 79: when starting a sentence with the word \"This\", follow it with a subject to keep the reader's attention.",
+        "score": 0.26120686600000004,
+        "id": "262c7be2-d411-4bdd-8dbb-bc58d77bf7f6",
+        "created_at": "2026-11-18T18:55:08.135477+00:00",
+        "updated_at": "2026-11-18T18:55:08.135477+00:00",
+        "score_debug": {
+          "combined_score": 0.26120686600000004,
+          "semantic_score": 0.29029,
+          "bm25_score": 0.0,
+          "entity_boost": 0.362727165
+        }
+      },
+      {
+        "memory": "User plans to try the Headspace and Insight Timer apps because they offer a variety of guided meditations and tracking features.",
+        "score": 0.2609869645354331,
+        "id": "dbda198d-aec7-44ab-b757-01f007729a27",
+        "created_at": "2026-11-18T17:34:48.744628+00:00",
+        "updated_at": "2026-11-18T17:34:48.744628+00:00",
+        "score_debug": {
+          "combined_score": 0.2609869645354331,
+          "semantic_score": 0.34811187,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3043555413385827
+        }
+      },
+      {
+        "memory": "User flew to New York (2 flights), Chicago (1), San Francisco (1), Atlanta (3), Boston (1), and Denver (1) domestically, and to London (2 flights) internationally, over the three months preceding November 18, 2026, averaging 2-3 flights per month.",
+        "score": 0.26052979209514376,
+        "id": "3ebc7dc9-c9b6-4853-bf20-d4563109cdaf",
+        "created_at": "2026-11-18T17:20:48.297038+00:00",
+        "updated_at": "2026-11-18T17:20:48.297038+00:00",
+        "score_debug": {
+          "combined_score": 0.26052979209514376,
+          "semantic_score": 0.29620284,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35512164023785936
+        }
+      },
+      {
+        "memory": "Assistant recommended SpanishDict, Duolingo, SpanishPod101, Quizlet, and language‑exchange sites (Conversation Exchange, Tandem, HelloTalk) as resources for practicing Spanish subjunctive verb conjugations.",
+        "score": 0.26033686692507496,
+        "id": "59e28604-7afd-44d5-81a7-0e8baaf88e79",
+        "created_at": "2026-11-18T17:42:19.247907+00:00",
+        "updated_at": "2026-11-18T17:42:19.247907+00:00",
+        "score_debug": {
+          "combined_score": 0.26033686692507496,
+          "semantic_score": 0.32297948,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32786268731268736
+        }
+      },
+      {
+        "memory": "Assistant advised walking with a buddy—friend, family member, or neighbor—to add social interaction and accountability to the morning walk.",
+        "score": 0.2595854588976378,
+        "id": "7ac2a5cf-3211-4f80-9c68-0ceee00b7fe9",
+        "created_at": "2026-11-18T18:35:27.309500+00:00",
+        "updated_at": "2026-11-18T18:35:27.309500+00:00",
+        "score_debug": {
+          "combined_score": 0.2595854588976378,
+          "semantic_score": 0.32379785,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3251657972440945
+        }
+      },
+      {
+        "memory": "User helped at the church's annual holiday food drive on December 10, 2025, sorting donations and packing boxes for families in need, and found the experience rewarding.",
+        "score": 0.25922207999999997,
+        "id": "146470d6-e0d3-4cd7-9c6b-55125c1d85c0",
+        "created_at": "2026-11-18T16:49:17.871141+00:00",
+        "updated_at": "2026-11-18T16:49:17.871141+00:00",
+        "score_debug": {
+          "combined_score": 0.25922207999999997,
+          "semantic_score": 0.2717896,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3762656
+        }
+      },
+      {
+        "memory": "Assistant suggested mellow electronic music (Tycho, Four Tet, M83), classical or instrumental selections (Mozart, Beethoven, Ludovico Einaudi), and nature sound recordings (rain, ocean waves, forest sounds) as calming options for the walk.",
+        "score": 0.257982792,
+        "id": "e5249321-0b03-417f-8e7b-51abbb9da7fd",
+        "created_at": "2026-11-18T18:36:04.746225+00:00",
+        "updated_at": "2026-11-18T18:36:04.746225+00:00",
+        "score_debug": {
+          "combined_score": 0.257982792,
+          "semantic_score": 0.29843488,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3465221
+        }
+      },
+      {
+        "memory": "User plans to check the Bus Route 12 and Red Line Train schedules using the suggested online options before the meeting.",
+        "score": 0.2571447238572845,
+        "id": "f1959cd0-c4ef-4752-9f22-073a269eb4af",
+        "created_at": "2026-11-18T18:56:16.664544+00:00",
+        "updated_at": "2026-11-18T18:56:16.664544+00:00",
+        "score_debug": {
+          "combined_score": 0.2571447238572845,
+          "semantic_score": 0.35080177,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29206003964321114
+        }
+      },
+      {
+        "memory": "Assistant suggested using Google Calendar, Fantastical, or Microsoft Outlook as calendar apps because they integrate seamlessly with Todoist, Trello, and Any.do for comprehensive task‑and‑event management.",
+        "score": 0.25686683600000004,
+        "id": "448d2011-4efe-48c2-9d83-79fd8e3d61f9",
+        "created_at": "2026-11-18T17:05:04.000211+00:00",
+        "updated_at": "2026-11-18T17:05:04.000211+00:00",
+        "score_debug": {
+          "combined_score": 0.25686683600000004,
+          "semantic_score": 0.30305022,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33911687
+        }
+      },
+      {
+        "memory": "User plans to incorporate visualization exercises into their daily routine to calm nerves before going on stage and will keep previous performance‑preparation tips in mind",
+        "score": 0.256838604,
+        "id": "3a5b98ce-7ccd-4e9f-b216-a777f044c6c7",
+        "created_at": "2026-11-18T17:37:10.281401+00:00",
+        "updated_at": "2026-11-18T17:37:10.281401+00:00",
+        "score_debug": {
+          "combined_score": 0.256838604,
+          "semantic_score": 0.29889256,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34320395
+        }
+      },
+      {
+        "memory": "Assistant noted that Todoist integrates with Google Calendar, Apple Calendar, and Microsoft Outlook, allowing automatic creation of calendar events for tasks.",
+        "score": 0.25659906144881894,
+        "id": "67db1fe8-258c-4101-a8e0-093accb66412",
+        "created_at": "2026-11-18T17:05:03.993149+00:00",
+        "updated_at": "2026-11-18T17:05:03.993149+00:00",
+        "score_debug": {
+          "combined_score": 0.25659906144881894,
+          "semantic_score": 0.29574913,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3457485236220473
+        }
+      },
+      {
+        "memory": "Bus services such as FlixBus, Libertas, and Autotrans run between Dubrovnik and Plitvice Lakes National Park, with journeys lasting roughly 8–10 hours depending on route and stops.",
+        "score": 0.25551325199999997,
+        "id": "9a502af6-ee9c-4fe5-931a-3b1e0bdb93d1",
+        "created_at": "2026-11-18T18:28:29.828028+00:00",
+        "updated_at": "2026-11-18T18:28:29.828028+00:00",
+        "score_debug": {
+          "combined_score": 0.25551325199999997,
+          "semantic_score": 0.32022688,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31855625
+        }
+      },
+      {
+        "memory": "Assistant suggested walking to the nearest bus stop serving Bus Route 12, which connects to Central Station, as the first leg of the commute.",
+        "score": 0.25548189213586414,
+        "id": "756bcb08-28cb-4d57-9a0d-32604b2e191b",
+        "created_at": "2026-11-18T18:55:50.719273+00:00",
+        "updated_at": "2026-11-18T18:55:50.719273+00:00",
+        "score_debug": {
+          "combined_score": 0.25548189213586414,
+          "semantic_score": 0.31606507,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32263966033966035
+        }
+      },
+      {
+        "memory": "User is planning another solo trip to South America as of November 18, 2026, is still undecided between a group tour or traveling independently, has been reviewing various itineraries, feels excited about the possibilities, and is looking for the right option",
+        "score": 0.2554758560951437,
+        "id": "6f7c7094-76f1-42b3-97b9-17a1c0226958",
+        "created_at": "2026-11-18T16:55:25.200138+00:00",
+        "updated_at": "2026-11-18T16:55:25.200138+00:00",
+        "score_debug": {
+          "combined_score": 0.2554758560951437,
+          "semantic_score": 0.283568,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35512164023785936
+        }
+      },
+      {
+        "memory": "User asked the assistant to generate a multiple‑choice question (MCQ) for educational purposes on a topic.",
+        "score": 0.25474828474900396,
+        "id": "044577c3-b5f6-4a28-84f5-910ba551c5dd",
+        "created_at": "2026-11-18T16:56:55.952561+00:00",
+        "updated_at": "2026-11-18T16:56:55.952561+00:00",
+        "score_debug": {
+          "combined_score": 0.25474828474900396,
+          "semantic_score": 0.33259118,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30427953187250995
+        }
+      },
+      {
+        "memory": "User shares tip 86: cash‑flow considerations—grant writing takes 4‑8 weeks, agency decisions 6‑12 weeks, reimbursement 3‑6 months; risk of writer leaving; recommend upfront payment and incentive to secure commitment.",
+        "score": 0.253594508,
+        "id": "709cfc13-cfad-4955-873b-15b221e50ffe",
+        "created_at": "2026-11-18T18:55:08.155432+00:00",
+        "updated_at": "2026-11-18T18:55:08.155432+00:00",
+        "score_debug": {
+          "combined_score": 0.253594508,
+          "semantic_score": 0.31243,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32155627
+        }
+      },
+      {
+        "memory": "Assistant suggested milk options for peanut butter banana overnight oats: almond milk (low‑calorie, nutty), whole milk (creamy, richer texture), coconut milk (distinct flavor, creamy; full‑fat or low‑fat), and oat milk (dairy‑free, neutral flavor)",
+        "score": 0.2533526442814668,
+        "id": "9e5a70be-500f-4313-8091-2a89261457e0",
+        "created_at": "2026-11-18T18:34:31.454181+00:00",
+        "updated_at": "2026-11-18T18:34:31.454181+00:00",
+        "score_debug": {
+          "combined_score": 0.2533526442814668,
+          "semantic_score": 0.3085028,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32487881070366703
+        }
+      },
+      {
+        "memory": "User is attempting to establish a daily meditation practice but is having trouble finding a quiet, comfortable spot at home for meditation.",
+        "score": 0.2531585997928287,
+        "id": "e88d1af9-e7fc-465b-8092-0dc946b97d4b",
+        "created_at": "2026-11-18T17:31:31.897268+00:00",
+        "updated_at": "2026-11-18T17:31:31.897268+00:00",
+        "score_debug": {
+          "combined_score": 0.2531585997928287,
+          "semantic_score": 0.34012887,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2927676294820717
+        }
+      },
+      {
+        "memory": "Assistant added a breakfast of Rava upma—a semolina porridge cooked with onion, tomato, carrot, and peas, seasoned with mustard seeds, curry leaves, and green chili.",
+        "score": 0.25228744000000003,
+        "id": "6ac835c2-a909-4abf-bc27-562322d76488",
+        "created_at": "2026-11-18T17:58:40.403513+00:00",
+        "updated_at": "2026-11-18T17:58:40.403513+00:00",
+        "score_debug": {
+          "combined_score": 0.25228744000000003,
+          "semantic_score": 0.30234915,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32836945
+        }
+      },
+      {
+        "memory": "User requests a song suggestion with lyrics for Harmony Hearts, noting that in chapter 4 a member wrote a song for the upcoming performance.",
+        "score": 0.25223588254980084,
+        "id": "0d77500e-fc27-459b-a395-2005fb1db9f2",
+        "created_at": "2026-11-18T16:42:19.634570+00:00",
+        "updated_at": "2026-11-18T16:42:19.634570+00:00",
+        "score_debug": {
+          "combined_score": 0.25223588254980084,
+          "semantic_score": 0.3097713,
+          "bm25_score": 0.0,
+          "entity_boost": 0.320818406374502
+        }
+      },
+      {
+        "memory": "Assistant suggested the recurring Video Marvels Elite Club (OTO2) be priced at $27 to $47 per month.",
+        "score": 0.2521737940944882,
+        "id": "e77ebf26-9770-4b2f-8ad3-5ffaf284f815",
+        "created_at": "2026-11-18T17:08:53.167184+00:00",
+        "updated_at": "2026-11-18T17:08:53.167184+00:00",
+        "score_debug": {
+          "combined_score": 0.2521737940944882,
+          "semantic_score": 0.3185445,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3118899852362205
+        }
+      },
+      {
+        "memory": "User intends to take a day trip to Sintra from Lisbon, following advice, and is seeking recommendations for sights to see there",
+        "score": 0.25185536285714283,
+        "id": "fed53c55-b881-45d0-a6f5-3b8912a44afa",
+        "created_at": "2026-11-18T18:12:53.958511+00:00",
+        "updated_at": "2026-11-18T18:12:53.958511+00:00",
+        "score_debug": {
+          "combined_score": 0.25185536285714283,
+          "semantic_score": 0.31453305,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31510535714285715
+        }
+      },
+      {
+        "memory": "User will incorporate the previously discussed rhythm section tips into their rehearsal routine",
+        "score": 0.25181517200000003,
+        "id": "48f6e77a-416c-446b-ac82-6c26c0d0e309",
+        "created_at": "2026-11-18T18:32:20.614309+00:00",
+        "updated_at": "2026-11-18T18:32:20.614309+00:00",
+        "score_debug": {
+          "combined_score": 0.25181517200000003,
+          "semantic_score": 0.33074003,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2987979
+        }
+      },
+      {
+        "memory": "Assistant suggested pricing Video Marvels Ultimate Traffic Booster (OTO4) between $47 and $97.",
+        "score": 0.2513229901978022,
+        "id": "972e8458-c817-432f-988b-8beb59ca6d6a",
+        "created_at": "2026-11-18T17:08:53.171570+00:00",
+        "updated_at": "2026-11-18T17:08:53.171570+00:00",
+        "score_debug": {
+          "combined_score": 0.2513229901978022,
+          "semantic_score": 0.32351297,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30479450549450554
+        }
+      },
+      {
+        "memory": "User plans to allow exceptions for Rachel's social media profile and several other important accounts when using the Freedom app to block social media, ensuring they can still see updates from those contacts.",
+        "score": 0.25126527527559056,
+        "id": "fd448511-78ae-479e-a2c9-a25076f57f98",
+        "created_at": "2026-11-18T17:31:31.894582+00:00",
+        "updated_at": "2026-11-18T17:31:31.894582+00:00",
+        "score_debug": {
+          "combined_score": 0.25126527527559056,
+          "semantic_score": 0.3014437,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3267194881889764
+        }
+      },
+      {
+        "memory": "Assistant listed resources for learning new musical styles, including free online tutorials on YouTube and paid courses on platforms like Udemy and Skillshare.",
+        "score": 0.25100037999999997,
+        "id": "f4d06fcb-120b-4ccc-9ff1-cbfaf44332e6",
+        "created_at": "2026-11-18T18:33:09.545675+00:00",
+        "updated_at": "2026-11-18T18:33:09.545675+00:00",
+        "score_debug": {
+          "combined_score": 0.25100037999999997,
+          "semantic_score": 0.3337232,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29377775
+        }
+      },
+      {
+        "memory": "User is excited to make peanut butter banana overnight oats, planning to use almond milk, creamy peanut butter, sliced banana as a topping, and a sprinkle of cinnamon for added flavor.",
+        "score": 0.2494659882814668,
+        "id": "34b2c6f8-1b31-46ed-aa7f-ed50087b5dd3",
+        "created_at": "2026-11-18T18:34:49.223845+00:00",
+        "updated_at": "2026-11-18T18:34:49.223845+00:00",
+        "score_debug": {
+          "combined_score": 0.2494659882814668,
+          "semantic_score": 0.29878616,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32487881070366703
+        }
+      },
+      {
+        "memory": "User was recommended Ta Koupia, a trendy Psirri neighborhood spot serving meze plates like taramosalata, grilled octopus, and fried cheese drizzled with honey.",
+        "score": 0.24942444000000003,
+        "id": "c66483be-2cfa-42bf-8700-52f09417ed25",
+        "created_at": "2026-11-18T18:19:08.608883+00:00",
+        "updated_at": "2026-11-18T18:19:08.608883+00:00",
+        "score_debug": {
+          "combined_score": 0.24942444000000003,
+          "semantic_score": 0.29265875,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33090235
+        }
+      },
+      {
+        "memory": "Assistant gave a basic overnight oats recipe: 1/2 cup rolled oats, 1/2 cup milk (dairy or non‑dairy), 1 tablespoon chia seeds (optional), pinch of salt, plus optional toppings. Combine, stir, refrigerate overnight (at least 4 hours), then stir before eating. Variations include fruit lovers (mixed berries, sliced banana, or diced mango), nutty delight (1 tbsp chopped walnuts/almonds/pecans + cinnamon), peanut butter banana (1 tbsp peanut butter + banana), and cinnamon apple (½ tsp cinnamon + diced apple).",
+        "score": 0.249313638,
+        "id": "bf49e457-6628-4e86-b4ba-e13018a17fe1",
+        "created_at": "2026-11-18T18:34:00.285707+00:00",
+        "updated_at": "2026-11-18T18:34:00.285707+00:00",
+        "score_debug": {
+          "combined_score": 0.249313638,
+          "semantic_score": 0.30790108,
+          "bm25_score": 0.0,
+          "entity_boost": 0.315383015
+        }
+      },
+      {
+        "memory": "User asked the assistant to continue the song lyrics for 'Rise Again'.",
+        "score": 0.24871917067669172,
+        "id": "4d344a95-6dd4-469c-bc65-6c1adda5d221",
+        "created_at": "2026-11-18T16:42:55.781989+00:00",
+        "updated_at": "2026-11-18T16:42:55.781989+00:00",
+        "score_debug": {
+          "combined_score": 0.24871917067669172,
+          "semantic_score": 0.328051,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2937469266917293
+        }
+      },
+      {
+        "memory": "Assistant explained that '¿Cómo estás?' is a more formal, widely used phrase across Spanish‑speaking countries, while '¿Cómo andas?' is informal and common in Caribbean, Central American, and some South American regions; in the US, Mexican‑influenced Southwest and West Coast favor '¿Cómo estás?', Caribbean‑influenced East Coast (NYC, Miami, Boston) favor '¿Cómo andas?', and Florida uses both, with '¿Cómo andas?' more prevalent in South Florida.",
+        "score": 0.248479258,
+        "id": "05e395ea-4aee-47ae-aa1b-975bc451d416",
+        "created_at": "2026-11-18T17:42:35.584602+00:00",
+        "updated_at": "2026-11-18T17:42:35.584602+00:00",
+        "score_debug": {
+          "combined_score": 0.248479258,
+          "semantic_score": 0.28119376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.340004385
+        }
+      },
+      {
+        "memory": "Blue Note Tokyo in Aoyama is a world‑famous jazz club; affordable options such as lunchtime shows start at about ¥5,500 (approximately $50 USD)",
+        "score": 0.24839371200000002,
+        "id": "152275a7-1d85-4ed5-bbc2-0a7d401a2c33",
+        "created_at": "2026-11-18T17:11:01.829190+00:00",
+        "updated_at": "2026-11-18T17:11:01.829190+00:00",
+        "score_debug": {
+          "combined_score": 0.24839371200000002,
+          "semantic_score": 0.30135378,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3196305
+        }
+      },
+      {
+        "memory": "User admits they never follow up on every discussion thread, despite previously requesting the assistant to do so",
+        "score": 0.24805634827572431,
+        "id": "b4b5d5fa-3ad6-42d6-8173-dfeed5cc7298",
+        "created_at": "2026-11-18T18:22:22.959412+00:00",
+        "updated_at": "2026-11-18T18:22:22.959412+00:00",
+        "score_debug": {
+          "combined_score": 0.24805634827572431,
+          "semantic_score": 0.31092656,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30921431068931077
+        }
+      },
+      {
+        "memory": "User states that Thomas stumbles upon Mr. Smith and Jeffrey, jumps to conclusions about Jeffrey being in trouble, and Mr. Smith calls Thomas out on his biases.",
+        "score": 0.2478856659370079,
+        "id": "f25596aa-ca1f-4501-859c-910e4078fd14",
+        "created_at": "2026-11-18T18:21:45.983361+00:00",
+        "updated_at": "2026-11-18T18:21:45.983361+00:00",
+        "score_debug": {
+          "combined_score": 0.2478856659370079,
+          "semantic_score": 0.28670853,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33300563484251966
+        }
+      },
+      {
+        "memory": "User plans to try the bike-sharing program for their daily commute and is seeking safety tips for riding in the city.",
+        "score": 0.24704911200000002,
+        "id": "5afaa031-d914-44a8-a4b8-728919f923bd",
+        "created_at": "2026-11-18T17:27:57.500524+00:00",
+        "updated_at": "2026-11-18T17:27:57.500524+00:00",
+        "score_debug": {
+          "combined_score": 0.24704911200000002,
+          "semantic_score": 0.27037853,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34724425
+        }
+      },
+      {
+        "memory": "Assistant explained that Headspace provides engaging animations, personalized meditation plans, gentle guidance, and sessions targeting stress, anxiety, and sleep.",
+        "score": 0.24701629653543308,
+        "id": "85bfba7c-4c64-4a17-8454-cfb527e5548c",
+        "created_at": "2026-11-18T17:34:48.753142+00:00",
+        "updated_at": "2026-11-18T17:34:48.753142+00:00",
+        "score_debug": {
+          "combined_score": 0.24701629653543308,
+          "semantic_score": 0.3131852,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3043555413385827
+        }
+      },
+      {
+        "memory": "Assistant recommended a series of warm‑up, walking, and cool‑down stretches for the user's 30‑minute walks: neck stretch, shoulder rolls, chest opener, leg swings, arm circles, hip openers, glute squeezes, core engagements, calf stretch, hamstring stretch, and quad stretch.",
+        "score": 0.2455958057702298,
+        "id": "6abc8586-3a42-428a-999e-4d02cc27970f",
+        "created_at": "2026-11-18T17:33:46.510739+00:00",
+        "updated_at": "2026-11-18T17:33:46.510739+00:00",
+        "score_debug": {
+          "combined_score": 0.2455958057702298,
+          "semantic_score": 0.30089894,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3130905744255745
+        }
+      },
+      {
+        "memory": "From that day forward, Harmony Hearts became known as rising stars in the local music scene, eagerly anticipating what the future holds for their music.",
+        "score": 0.24536306400000002,
+        "id": "2ed436d0-bd6a-498e-8123-58a3d13c3d43",
+        "created_at": "2026-11-18T16:44:04.744587+00:00",
+        "updated_at": "2026-11-18T16:44:04.744587+00:00",
+        "score_debug": {
+          "combined_score": 0.24536306400000002,
+          "semantic_score": 0.29289186,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3205158
+        }
+      },
+      {
+        "memory": "Assistant mentions project‑management software including Jira, Basecamp, and Monday.com, which let teams set deadlines, assign tasks, and track progress, supporting accountability in remote environments.",
+        "score": 0.245264294,
+        "id": "be31772f-baf2-466f-b248-5892dd252994",
+        "created_at": "2026-11-18T18:53:52.973995+00:00",
+        "updated_at": "2026-11-18T18:53:52.973995+00:00",
+        "score_debug": {
+          "combined_score": 0.245264294,
+          "semantic_score": 0.2521534,
+          "bm25_score": 0.0,
+          "entity_boost": 0.361007335
+        }
+      },
+      {
+        "memory": "User wonders how different the world would be today if the New World had never been discovered, expressing curiosity about alternate historical outcomes.",
+        "score": 0.24520173131668335,
+        "id": "058b9a26-10bd-4b26-abfe-8a7c05650b92",
+        "created_at": "2026-11-18T18:39:18.540561+00:00",
+        "updated_at": "2026-11-18T18:39:18.540561+00:00",
+        "score_debug": {
+          "combined_score": 0.24520173131668335,
+          "semantic_score": 0.29924262,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31376170829170835
+        }
+      },
+      {
+        "memory": "Assistant notes that Mr. Smith tells Thomas he is not firing Jeffrey and that they are merely discussing Jeffrey's recent work absence.",
+        "score": 0.24449418593700786,
+        "id": "f53d0710-823a-4d9a-8253-a6c7cfdb41ce",
+        "created_at": "2026-11-18T18:21:45.989400+00:00",
+        "updated_at": "2026-11-18T18:21:45.989400+00:00",
+        "score_debug": {
+          "combined_score": 0.24449418593700786,
+          "semantic_score": 0.27822983,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33300563484251966
+        }
+      },
+      {
+        "memory": "Assistant records that Thomas feels embarrassed, apologizes to Mr. Smith and Jeffrey, realizes he jumped to conclusions, feels guilty, and learns the importance of being understanding and less judgmental.",
+        "score": 0.24421768193700782,
+        "id": "3d918ea9-2566-4e89-ba9f-74686f36591f",
+        "created_at": "2026-11-18T18:21:45.993579+00:00",
+        "updated_at": "2026-11-18T18:21:45.993579+00:00",
+        "score_debug": {
+          "combined_score": 0.24421768193700782,
+          "semantic_score": 0.27753857,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33300563484251966
+        }
+      },
+      {
+        "memory": "Assistant could not locate any literary reference for the lyric \"There's a golden coin, that reflects the sun\" in \"Just Another Day\" by Oingo Boingo, and suggested it may be a metaphor for hope and light shining through darkness",
+        "score": 0.24387860993894545,
+        "id": "d6954465-3461-4996-b1ea-632e0aa77bad",
+        "created_at": "2026-11-18T18:58:56.865222+00:00",
+        "updated_at": "2026-11-18T18:58:56.865222+00:00",
+        "score_debug": {
+          "combined_score": 0.24387860993894545,
+          "semantic_score": 0.24924856,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "User plans to start the tank with Java Moss and Anacharis and asks how often to trim them to keep the plants healthy and prevent overgrowth.",
+        "score": 0.24348956810810812,
+        "id": "f9434e04-389e-42c2-9341-ea2b46784370",
+        "created_at": "2026-11-18T17:17:39.882179+00:00",
+        "updated_at": "2026-11-18T17:17:39.882179+00:00",
+        "score_debug": {
+          "combined_score": 0.24348956810810812,
+          "semantic_score": 0.3036074,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30511652027027025
+        }
+      },
+      {
+        "memory": "Assistant suggested free guided meditation resources including YouTube channels (Guided Meditation, Meditation Oasis, The Honest Guys), UCLA Mindful Awareness Research Center, Mindful.org, Tara Brach’s website, and Omvana.",
+        "score": 0.24283982799999998,
+        "id": "7dd626d4-9a7e-4ce7-b183-f2c5382d92b2",
+        "created_at": "2026-11-18T17:34:10.326040+00:00",
+        "updated_at": "2026-11-18T17:34:10.326040+00:00",
+        "score_debug": {
+          "combined_score": 0.24283982799999998,
+          "semantic_score": 0.28247342,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32462615
+        }
+      },
+      {
+        "memory": "Assistant stated that Trello offers Power‑Ups for Google Calendar, Microsoft Outlook, and iCal, enabling cards and boards to appear as calendar events.",
+        "score": 0.24217289268582753,
+        "id": "5b592e73-3c58-4e29-89e9-535b88843de2",
+        "created_at": "2026-11-18T17:05:03.995516+00:00",
+        "updated_at": "2026-11-18T17:05:03.995516+00:00",
+        "score_debug": {
+          "combined_score": 0.24217289268582753,
+          "semantic_score": 0.2565302,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3489020317145689
+        }
+      },
+      {
+        "memory": "User's downtown office is located at 123 Main St in the city.",
+        "score": 0.241350152,
+        "id": "44fc0564-303e-42e1-aec3-61385a82cb24",
+        "created_at": "2026-11-18T18:55:50.704790+00:00",
+        "updated_at": "2026-11-18T18:55:50.704790+00:00",
+        "score_debug": {
+          "combined_score": 0.241350152,
+          "semantic_score": 0.28834003,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31503535
+        }
+      },
+      {
+        "memory": "Assistant suggested including 3 or 6 months of free access to the Video Marvels Elite Club for bundle purchasers, after which the regular monthly fee would apply",
+        "score": 0.241004052,
+        "id": "6b96727a-9c0e-417c-ae5d-8fe3ab920bd7",
+        "created_at": "2026-11-18T17:09:34.042391+00:00",
+        "updated_at": "2026-11-18T17:09:34.042391+00:00",
+        "score_debug": {
+          "combined_score": 0.241004052,
+          "semantic_score": 0.29186875,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31064138
+        }
+      },
+      {
+        "memory": "User was recommended O Thanasis, a Monastiraki neighborhood restaurant famous for its juicy souvlaki served with fresh bread, tomatoes, onions, and tzatziki sauce.",
+        "score": 0.24053692,
+        "id": "802d2737-40da-4ab5-acc1-2ec3958cbf4c",
+        "created_at": "2026-11-18T18:19:08.601102+00:00",
+        "updated_at": "2026-11-18T18:19:08.601102+00:00",
+        "score_debug": {
+          "combined_score": 0.24053692,
+          "semantic_score": 0.2707123,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33063
+        }
+      },
+      {
+        "memory": "Assistant describes Thomas being on his way to the studio when he encounters Mr. Smith and Jeffrey in a heated conversation, mistakenly assuming Mr. Smith will fire Jeffrey.",
+        "score": 0.24001419393700787,
+        "id": "d595a8e3-5992-4a0e-878f-ac7c3fbd847c",
+        "created_at": "2026-11-18T18:21:45.986923+00:00",
+        "updated_at": "2026-11-18T18:21:45.986923+00:00",
+        "score_debug": {
+          "combined_score": 0.24001419393700787,
+          "semantic_score": 0.26702985,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33300563484251966
+        }
+      },
+      {
+        "memory": "Assistant encouraged paying attention to surroundings, observing seasonal changes and natural sounds, to feel more connected during the walk.",
+        "score": 0.239935484,
+        "id": "2bf3f97b-ca79-4aeb-b893-1ea8682e5281",
+        "created_at": "2026-11-18T18:35:27.311742+00:00",
+        "updated_at": "2026-11-18T18:35:27.311742+00:00",
+        "score_debug": {
+          "combined_score": 0.239935484,
+          "semantic_score": 0.29024673,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30959198
+        }
+      },
+      {
+        "memory": "User switched to a sulfate‑free shampoo from Green Earth, has been using it for about four weeks, and says their hair feels healthier and softer.",
+        "score": 0.23979611425774228,
+        "id": "44967bf8-afee-411c-bd44-7bb6a3be3c8a",
+        "created_at": "2026-11-18T17:38:09.459111+00:00",
+        "updated_at": "2026-11-18T17:38:09.459111+00:00",
+        "score_debug": {
+          "combined_score": 0.23979611425774228,
+          "semantic_score": 0.28731593,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3121743556443557
+        }
+      },
+      {
+        "memory": "User feels more confident about the upcoming performance after learning the visualization exercises.",
+        "score": 0.2394066425498008,
+        "id": "2769e2b1-065b-4fe1-a4bc-cbc6dd451914",
+        "created_at": "2026-11-18T17:39:28.598197+00:00",
+        "updated_at": "2026-11-18T17:39:28.598197+00:00",
+        "score_debug": {
+          "combined_score": 0.2394066425498008,
+          "semantic_score": 0.2776982,
+          "bm25_score": 0.0,
+          "entity_boost": 0.320818406374502
+        }
+      },
+      {
+        "memory": "User intends to add photos of the baby's first smile and first laugh as milestone pictures on the onesie garland for the cousin's celebration.",
+        "score": 0.23921552999999998,
+        "id": "63edcf25-1acf-4f0b-bd83-c1258f8fb72e",
+        "created_at": "2026-11-18T17:02:00.851670+00:00",
+        "updated_at": "2026-11-18T17:02:00.851670+00:00",
+        "score_debug": {
+          "combined_score": 0.23921552999999998,
+          "semantic_score": 0.28978515,
+          "bm25_score": 0.0,
+          "entity_boost": 0.308253675
+        }
+      },
+      {
+        "memory": "User said they will definitely check out the Spanish learning resources previously recommended (SpanishDict, Duolingo, SpanishPod101, Quizlet, Conversation Exchange, Tandem, HelloTalk).",
+        "score": 0.23900202692507494,
+        "id": "76261cec-c5b0-4bfb-8937-229c496640de",
+        "created_at": "2026-11-18T17:42:35.578673+00:00",
+        "updated_at": "2026-11-18T17:42:35.578673+00:00",
+        "score_debug": {
+          "combined_score": 0.23900202692507494,
+          "semantic_score": 0.26964238,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32786268731268736
+        }
+      },
+      {
+        "memory": "Assistant suggested taking a route with fresh air, such as a park or trail, to boost mood and energy during the walk.",
+        "score": 0.23896192200000002,
+        "id": "1a274478-c9cc-4d7e-a25a-8f4bbd9a70eb",
+        "created_at": "2026-11-18T18:35:27.307002+00:00",
+        "updated_at": "2026-11-18T18:35:27.307002+00:00",
+        "score_debug": {
+          "combined_score": 0.23896192200000002,
+          "semantic_score": 0.28717923,
+          "bm25_score": 0.0,
+          "entity_boost": 0.310225575
+        }
+      },
+      {
+        "memory": "User finds it fascinating how technology shapes the world and is eager to see future ways it will affect election outcomes.",
+        "score": 0.23868765239246778,
+        "id": "95b8bb40-65e3-4687-b0bc-06d862bd3311",
+        "created_at": "2026-11-18T18:17:23.396325+00:00",
+        "updated_at": "2026-11-18T18:17:23.396325+00:00",
+        "score_debug": {
+          "combined_score": 0.23868765239246778,
+          "semantic_score": 0.29611424,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3006048909811695
+        }
+      },
+      {
+        "memory": "Assistant recommended upbeat pop and rock music for the walk, citing artists such as Taylor Swift, Katy Perry, and Imagine Dragons to provide an energetic atmosphere.",
+        "score": 0.238589122,
+        "id": "18953884-4ad5-4a8c-b4ca-5939cbd78920",
+        "created_at": "2026-11-18T18:36:04.743044+00:00",
+        "updated_at": "2026-11-18T18:36:04.743044+00:00",
+        "score_debug": {
+          "combined_score": 0.238589122,
+          "semantic_score": 0.30271462,
+          "bm25_score": 0.0,
+          "entity_boost": 0.293758185
+        }
+      },
+      {
+        "memory": "User asks whether a person with such a Sight actually exists.",
+        "score": 0.23855281920879126,
+        "id": "9896f49d-6e7c-4658-bb64-8ca2d534c128",
+        "created_at": "2026-11-18T18:07:45.665156+00:00",
+        "updated_at": "2026-11-18T18:07:45.665156+00:00",
+        "score_debug": {
+          "combined_score": 0.23855281920879126,
+          "semantic_score": 0.29269007,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30369197802197806
+        }
+      },
+      {
+        "memory": "User is looking for the app that locals use to navigate public transportation in the greater Lisbon area.",
+        "score": 0.23832540835164834,
+        "id": "74cbf309-5b08-420f-8766-faa82966ee42",
+        "created_at": "2026-11-18T18:11:55.738220+00:00",
+        "updated_at": "2026-11-18T18:11:55.738220+00:00",
+        "score_debug": {
+          "combined_score": 0.23832540835164834,
+          "semantic_score": 0.2844594,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31135412087912095
+        }
+      },
+      {
+        "memory": "Assistant encouraged the user to explore city neighborhoods and attractions via public transport to discover hidden gems.",
+        "score": 0.23813527199999998,
+        "id": "71d1ea4b-fca2-4cf2-9db1-e6b5cff78604",
+        "created_at": "2026-11-18T18:55:50.735038+00:00",
+        "updated_at": "2026-11-18T18:55:50.735038+00:00",
+        "score_debug": {
+          "combined_score": 0.23813527199999998,
+          "semantic_score": 0.28259468,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3127435
+        }
+      },
+      {
+        "memory": "User expresses gratitude for the inspiration and guidance received from Rachel and other mentors, acknowledging their role in shaping the user’s vision for a successful online presence.",
+        "score": 0.23809247527559058,
+        "id": "dff19d69-8d87-456c-a8b0-c2a27e349cfc",
+        "created_at": "2026-11-18T17:32:29.860570+00:00",
+        "updated_at": "2026-11-18T17:32:29.860570+00:00",
+        "score_debug": {
+          "combined_score": 0.23809247527559058,
+          "semantic_score": 0.2685117,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3267194881889764
+        }
+      },
+      {
+        "memory": "User asked how to handle the OTO2 recurring subscription when customers purchase the Video Marvels Ultimate Bundle",
+        "score": 0.2376837540944882,
+        "id": "6bc3fd45-70b0-4552-86fd-fe822f689da9",
+        "created_at": "2026-11-18T17:09:34.037046+00:00",
+        "updated_at": "2026-11-18T17:09:34.037046+00:00",
+        "score_debug": {
+          "combined_score": 0.2376837540944882,
+          "semantic_score": 0.2823194,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3118899852362205
+        }
+      },
+      {
+        "memory": "User wants assistance enhancing a service page about \"contract lawyer\" and will provide multiple pieces of information such as top‑ranking page content and target keywords for incorporation.",
+        "score": 0.237464238,
+        "id": "a9c908c7-756e-4918-ac0c-16009d79f159",
+        "created_at": "2026-11-18T17:22:47.648363+00:00",
+        "updated_at": "2026-11-18T17:22:47.648363+00:00",
+        "score_debug": {
+          "combined_score": 0.237464238,
+          "semantic_score": 0.28704086,
+          "bm25_score": 0.0,
+          "entity_boost": 0.306619735
+        }
+      },
+      {
+        "memory": "User wants recommendations for authentic Greek dishes to try while in Athens.",
+        "score": 0.23667266569472706,
+        "id": "74ed0ace-cd2c-4bd8-a6b8-c6489131ab03",
+        "created_at": "2026-11-18T18:18:42.177909+00:00",
+        "updated_at": "2026-11-18T18:18:42.177909+00:00",
+        "score_debug": {
+          "combined_score": 0.23667266569472706,
+          "semantic_score": 0.29419184,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29748982423681775
+        }
+      },
+      {
+        "memory": "Assistant suggested offering a discounted recurring rate of $17‑$37 per month for the Video Marvels Elite Club (OTO2) to bundle purchasers, lower than the standalone $27‑$47 rate",
+        "score": 0.23658372609448822,
+        "id": "8b42397e-9d86-4c21-8762-9a3330907db1",
+        "created_at": "2026-11-18T17:09:34.039970+00:00",
+        "updated_at": "2026-11-18T17:09:34.039970+00:00",
+        "score_debug": {
+          "combined_score": 0.23658372609448822,
+          "semantic_score": 0.27956933,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3118899852362205
+        }
+      },
+      {
+        "memory": "Assistant recommended several popular hydration belt brands for runners: Nathan Sports, FuelBelt, Amphipod, and CamelBak.",
+        "score": 0.235949994,
+        "id": "bcf9fb0c-991d-4026-8366-c3fda73b09e1",
+        "created_at": "2026-11-18T18:46:47.642397+00:00",
+        "updated_at": "2026-11-18T18:46:47.642397+00:00",
+        "score_debug": {
+          "combined_score": 0.235949994,
+          "semantic_score": 0.26547012,
+          "bm25_score": 0.0,
+          "entity_boost": 0.324404865
+        }
+      },
+      {
+        "memory": "User plans to try several of the recommended restaurants in Sintra during their visit to the town.",
+        "score": 0.23587054285714287,
+        "id": "0e8a37fb-6ce0-4ec7-9bb1-3be22c52895a",
+        "created_at": "2026-11-18T18:13:49.774367+00:00",
+        "updated_at": "2026-11-18T18:13:49.774367+00:00",
+        "score_debug": {
+          "combined_score": 0.23587054285714287,
+          "semantic_score": 0.274571,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31510535714285715
+        }
+      },
+      {
+        "memory": "Assistant suggested Day 1: visit the Ghibli Museum in Mitaka (entrance fee ¥1,000), then explore Koenji’s thrift stores and jazz at Pit Inn (cover charge varies), ending with a stroll through Shimokitazawa’s bohemian scene",
+        "score": 0.23584087793894543,
+        "id": "e5ea9344-4fe6-4dd6-a0e5-e8039994b3ef",
+        "created_at": "2026-11-18T17:10:31.246009+00:00",
+        "updated_at": "2026-11-18T17:10:31.246009+00:00",
+        "score_debug": {
+          "combined_score": 0.23584087793894543,
+          "semantic_score": 0.22915423,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "Assistant suggested Day 3: visit Asakusa’s Senso‑ji Temple and Nakamise Shopping Street, then go to Ueno Park to see museums such as the Tokyo National Museum (entrance fees vary), and finish in Yanaka’s traditional narrow‑street area",
+        "score": 0.23575594593894542,
+        "id": "d34396ee-e7ea-465a-81ad-f0fc5a365a2a",
+        "created_at": "2026-11-18T17:10:31.252075+00:00",
+        "updated_at": "2026-11-18T17:10:31.252075+00:00",
+        "score_debug": {
+          "combined_score": 0.23575594593894542,
+          "semantic_score": 0.2289419,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "User expressed interest in learning about summer programs linked to backpack programs, asking what activities and services are typically provided and how they support children during the summer months.",
+        "score": 0.23564428799999998,
+        "id": "0a843ea5-bf48-404b-82d4-6b7aadac39e1",
+        "created_at": "2026-11-18T16:51:49.873103+00:00",
+        "updated_at": "2026-11-18T16:51:49.873103+00:00",
+        "score_debug": {
+          "combined_score": 0.23564428799999998,
+          "semantic_score": 0.25283772,
+          "bm25_score": 0.0,
+          "entity_boost": 0.336273
+        }
+      },
+      {
+        "memory": "Assistant recommended the following guided meditation apps: Headspace, Calm, Insight Timer, Meditation Studio, and Buddhify, noting their features and subscription options.",
+        "score": 0.2354625125354331,
+        "id": "8b7c7e51-cce8-45a6-8f87-a89eaa070f03",
+        "created_at": "2026-11-18T17:34:10.323113+00:00",
+        "updated_at": "2026-11-18T17:34:10.323113+00:00",
+        "score_debug": {
+          "combined_score": 0.2354625125354331,
+          "semantic_score": 0.28430074,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3043555413385827
+        }
+      },
+      {
+        "memory": "User is seeking recommendations for Kenilworth cafés that offer outdoor seating options.",
+        "score": 0.23543841891633469,
+        "id": "44c8af3c-e06b-4882-8811-893fc7a06a11",
+        "created_at": "2026-11-18T18:01:15.712880+00:00",
+        "updated_at": "2026-11-18T18:01:15.712880+00:00",
+        "score_debug": {
+          "combined_score": 0.23543841891633469,
+          "semantic_score": 0.27827787,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31031817729083666
+        }
+      },
+      {
+        "memory": "User is planning a 5‑day Tokyo trip and likes jazz, live music, fashion, and anime; prefers low‑key neighborhoods and hidden gems but is also open to famous tourist destinations, and wants entrance fee or cover‑charge details for activities",
+        "score": 0.2353137,
+        "id": "5a75a393-394d-4bd3-b634-6344874a47df",
+        "created_at": "2026-11-18T17:10:31.242493+00:00",
+        "updated_at": "2026-11-18T17:10:31.242493+00:00",
+        "score_debug": {
+          "combined_score": 0.2353137,
+          "semantic_score": 0.2921156,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29616865
+        }
+      },
+      {
+        "memory": "Mutual respect—treating each remote team member’s strengths and contributions with respect—reinforces trust and accountability.",
+        "score": 0.23526112000000002,
+        "id": "6f784779-f69f-45c2-95b9-aaa02e53fd65",
+        "created_at": "2026-11-18T18:53:12.786870+00:00",
+        "updated_at": "2026-11-18T18:53:12.786870+00:00",
+        "score_debug": {
+          "combined_score": 0.23526112000000002,
+          "semantic_score": 0.2689517,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3192011
+        }
+      },
+      {
+        "memory": "User announced a Financial Management final exam scheduled for 2026-11-19 that will cover calculations of cost of debt, cost of capital using the CAPM method, WACC, NPV, and DCF, and indicated that sample questions would be provided for the assistant to answer.",
+        "score": 0.2350457,
+        "id": "9e97db15-9cd7-4518-8ed7-50983bfaf551",
+        "created_at": "2026-11-18T18:51:13.591306+00:00",
+        "updated_at": "2026-11-18T18:51:13.591306+00:00",
+        "score_debug": {
+          "combined_score": 0.2350457,
+          "semantic_score": 0.291559,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29605525
+        }
+      },
+      {
+        "memory": "User asked how the discovery of the New World impacted European trade and colonization",
+        "score": 0.23494195499613899,
+        "id": "df8e4ad3-e674-450b-a6ae-e9f6b2b3c8fc",
+        "created_at": "2026-11-18T18:38:11.623611+00:00",
+        "updated_at": "2026-11-18T18:38:11.623611+00:00",
+        "score_debug": {
+          "combined_score": 0.23494195499613899,
+          "semantic_score": 0.27507704,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3122778474903475
+        }
+      },
+      {
+        "memory": "User describes Rachel’s posts as inspiring because she shares valuable tips and behind‑the‑scenes insights into her creative process as a social‑media influencer, which helps the user stay focused and reinforces the importance of consistency and patience for building a successful online presence.",
+        "score": 0.23485644727559057,
+        "id": "24daf19c-9bfe-4ad7-9c67-1dfbf74f66e3",
+        "created_at": "2026-11-18T17:31:59.763754+00:00",
+        "updated_at": "2026-11-18T17:31:59.763754+00:00",
+        "score_debug": {
+          "combined_score": 0.23485644727559057,
+          "semantic_score": 0.26042163,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3267194881889764
+        }
+      },
+      {
+        "memory": "Assistant described setting up recurring tasks in Todoist by creating a new task, enabling the 'Repeat' option with the desired frequency, and optionally using Todoist's Templates feature to apply the same structure to multiple recurring items.",
+        "score": 0.23483499292430282,
+        "id": "94aacde4-6f26-4979-9e93-2c1b5b51190f",
+        "created_at": "2026-11-18T17:05:53.339532+00:00",
+        "updated_at": "2026-11-18T17:05:53.339532+00:00",
+        "score_debug": {
+          "combined_score": 0.23483499292430282,
+          "semantic_score": 0.28335556,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30373192231075696
+        }
+      },
+      {
+        "memory": "Assistant recommended various ways to make solo mealtime enjoyable, including eating at hostel cafes or communal kitchens, visiting food courts or markets, trying street‑food stalls, using meal‑sharing apps like Eatwith or MealSharing, joining traveler meetups or hostel‑organized meals, bringing a book or journal, people‑watching, trying new dishes, taking photos, scheduling video calls, and sharing experiences via blog or social media.",
+        "score": 0.23469364303696305,
+        "id": "45724282-a66c-4f8c-8e22-bf0a566eb461",
+        "created_at": "2026-11-18T16:56:11.564790+00:00",
+        "updated_at": "2026-11-18T16:56:11.564790+00:00",
+        "score_debug": {
+          "combined_score": 0.23469364303696305,
+          "semantic_score": 0.2467117,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34002240759240765
+        }
+      },
+      {
+        "memory": "Assistant advised creating a onesie garland with various sizes of onesies, optionally personalized with the baby's name or initials",
+        "score": 0.2345339249950446,
+        "id": "8bac08c4-82d0-4eee-b345-9a845907fb2b",
+        "created_at": "2026-11-18T17:00:00.180501+00:00",
+        "updated_at": "2026-11-18T17:00:00.180501+00:00",
+        "score_debug": {
+          "combined_score": 0.2345339249950446,
+          "semantic_score": 0.2817862,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30454861248761156
+        }
+      },
+      {
+        "memory": "User requests that Chapter 5 include Harmony Hearts performing a song at the local music festival, with a suggested song title and full lyrics, and that on the day of the performance they introduce themselves and the song.",
+        "score": 0.23432931350649353,
+        "id": "07505680-fc6f-4204-925d-27fb3fe60905",
+        "created_at": "2026-11-18T16:44:04.747602+00:00",
+        "updated_at": "2026-11-18T16:44:04.747602+00:00",
+        "score_debug": {
+          "combined_score": 0.23432931350649353,
+          "semantic_score": 0.27088705,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31493623376623386
+        }
+      },
+      {
+        "memory": "Assistant reports that Jeffrey began attending church regularly and became actively involved in the church community.",
+        "score": 0.23382657999999998,
+        "id": "7dbc3416-344e-41b6-80e1-445c68455e54",
+        "created_at": "2026-11-18T18:19:58.929308+00:00",
+        "updated_at": "2026-11-18T18:19:58.929308+00:00",
+        "score_debug": {
+          "combined_score": 0.23382657999999998,
+          "semantic_score": 0.28827453,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29629192
+        }
+      },
+      {
+        "memory": "Assistant recommended using baby‑themed tableware, including plates, cups, and napkins, to enhance the party atmosphere",
+        "score": 0.23348944,
+        "id": "d0fad848-e1ab-46ad-ae77-ecc65513926d",
+        "created_at": "2026-11-18T17:00:00.186974+00:00",
+        "updated_at": "2026-11-18T17:00:00.186974+00:00",
+        "score_debug": {
+          "combined_score": 0.23348944,
+          "semantic_score": 0.2656816,
+          "bm25_score": 0.0,
+          "entity_boost": 0.318042
+        }
+      },
+      {
+        "memory": "User asked the assistant to complete the question paper by adding content after the 14th multiple‑choice question.",
+        "score": 0.23300659599999998,
+        "id": "0f1b7332-54b3-4932-8ee0-0bad4155aea5",
+        "created_at": "2026-11-18T16:58:32.515390+00:00",
+        "updated_at": "2026-11-18T16:58:32.515390+00:00",
+        "score_debug": {
+          "combined_score": 0.23300659599999998,
+          "semantic_score": 0.28312832,
+          "bm25_score": 0.0,
+          "entity_boost": 0.29938817
+        }
+      },
+      {
+        "memory": "User finds it fascinating how technology is shaping the world and is eager to see additional ways it will influence election outcomes in the future, expressing curiosity about future impacts on voting.",
+        "score": 0.23274627639246778,
+        "id": "e538ccd0-0eb5-4a57-a86f-a4ece355c858",
+        "created_at": "2026-11-18T18:16:11.083981+00:00",
+        "updated_at": "2026-11-18T18:16:11.083981+00:00",
+        "score_debug": {
+          "combined_score": 0.23274627639246778,
+          "semantic_score": 0.2812608,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3006048909811695
+        }
+      },
+      {
+        "memory": "Verse 2 of 'Rise Again' says: 'We'll take all the pieces of our broken dreams / And we'll build them up into something new / We'll chase our dreams and we'll make them real / We'll be the change that we want to see'.",
+        "score": 0.232654664,
+        "id": "16c8384f-249d-4996-9ed7-672f79613511",
+        "created_at": "2026-11-18T16:42:55.777405+00:00",
+        "updated_at": "2026-11-18T16:42:55.777405+00:00",
+        "score_debug": {
+          "combined_score": 0.232654664,
+          "semantic_score": 0.27231306,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3093236
+        }
+      },
+      {
+        "memory": "User is interested in exploring the free resources UCLA Mindful Awareness Research Center and Tara Brach's website as part of their beginner meditation practice.",
+        "score": 0.23259021713147413,
+        "id": "d59810ed-11d5-4f67-8bd3-dbab8444c7e8",
+        "created_at": "2026-11-18T17:34:48.749087+00:00",
+        "updated_at": "2026-11-18T17:34:48.749087+00:00",
+        "score_debug": {
+          "combined_score": 0.23259021713147413,
+          "semantic_score": 0.27463,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30684554282868526
+        }
+      },
+      {
+        "memory": "Assistant suggested Day 4: return to Shimokitazawa and visit the Setagaya Art Museum (entrance fee ¥500), then wander Kagurazaka’s winding streets and old‑fashioned shops, ending in Nakameguro’s canals, trendy shops, and hip restaurants",
+        "score": 0.2322798459389454,
+        "id": "7a2cdbac-29a0-4aba-bc74-cb3bb7ea25b7",
+        "created_at": "2026-11-18T17:10:31.255269+00:00",
+        "updated_at": "2026-11-18T17:10:31.255269+00:00",
+        "score_debug": {
+          "combined_score": 0.2322798459389454,
+          "semantic_score": 0.22025165,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3604479648473636
+        }
+      },
+      {
+        "memory": "User clarified that the song \"Altar in the Sun\" is not existential but rather hedonistic",
+        "score": 0.23219301539442228,
+        "id": "d4310217-2c3c-489f-83b7-0815b44b6ffa",
+        "created_at": "2026-11-18T17:57:22.820607+00:00",
+        "updated_at": "2026-11-18T17:57:22.820607+00:00",
+        "score_debug": {
+          "combined_score": 0.23219301539442228,
+          "semantic_score": 0.26537716,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31510537848605574
+        }
+      },
+      {
+        "memory": "User indicates that they previously gave the assistant song lyrics and now asks what the most unexpected theme in those lyrics might be.",
+        "score": 0.23212780764035967,
+        "id": "4bea7677-d790-472d-bbd1-91f8eb99591f",
+        "created_at": "2026-11-18T18:57:31.265735+00:00",
+        "updated_at": "2026-11-18T18:57:31.265735+00:00",
+        "score_debug": {
+          "combined_score": 0.23212780764035967,
+          "semantic_score": 0.26701862,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31330089910089914
+        }
+      },
+      {
+        "memory": "Assistant recommended the following mindfulness and focus apps for reducing social media distractions: Freedom, StayFocused, Headspace, Calm, Moment, Forest, and Focus@Will.",
+        "score": 0.23159164,
+        "id": "ff04f9e1-8d5d-4971-8612-ca6d8a46510b",
+        "created_at": "2026-11-18T17:29:51.282008+00:00",
+        "updated_at": "2026-11-18T17:29:51.282008+00:00",
+        "score_debug": {
+          "combined_score": 0.23159164,
+          "semantic_score": 0.2585187,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3204604
+        }
+      },
+      {
+        "memory": "User is seeking restaurant recommendations in Sintra, indicating they want suggestions for places to eat while visiting the town.",
+        "score": 0.23112339085714284,
+        "id": "3f38b06c-bf84-4f2b-ab55-8815e8625064",
+        "created_at": "2026-11-18T18:13:24.186690+00:00",
+        "updated_at": "2026-11-18T18:13:24.186690+00:00",
+        "score_debug": {
+          "combined_score": 0.23112339085714284,
+          "semantic_score": 0.26270312,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31510535714285715
+        }
+      },
+      {
+        "memory": "The University Health Service (UHS) at HKU offers medical services, including general health check‑ups, immunizations, and health consultations for students.",
+        "score": 0.230934816,
+        "id": "980ca368-99ee-414a-961a-7f541117c708",
+        "created_at": "2026-11-18T18:37:24.064679+00:00",
+        "updated_at": "2026-11-18T18:37:24.064679+00:00",
+        "score_debug": {
+          "combined_score": 0.230934816,
+          "semantic_score": 0.24498534,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3323517
+        }
+      },
+      {
+        "memory": "Assistant added MCQ 19 asking which type of clinical trial involves administering the test drug and comparing results to a control group, with options Phase I, Phase II, Phase III, Phase IV.",
+        "score": 0.23065732800000002,
+        "id": "d071337d-f6d9-4c01-b391-b25d14d2afaf",
+        "created_at": "2026-11-18T16:57:49.226985+00:00",
+        "updated_at": "2026-11-18T16:57:49.226985+00:00",
+        "score_debug": {
+          "combined_score": 0.23065732800000002,
+          "semantic_score": 0.24068467,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33595865
+        }
+      },
+      {
+        "memory": "User wonders whether the lyric \"Some faces I know… I see you\" refers to his fans at concerts or a particular person, noting the lines mention locations like London, Tokyo, LA, Monaco and suggest the subject is recognized everywhere",
+        "score": 0.23065589599999997,
+        "id": "4ed172e7-cea6-44b4-8b14-0f7aa2c3e8e6",
+        "created_at": "2026-11-18T17:53:29.412835+00:00",
+        "updated_at": "2026-11-18T17:53:29.412835+00:00",
+        "score_debug": {
+          "combined_score": 0.23065589599999997,
+          "semantic_score": 0.24531832,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33132142
+        }
+      },
+      {
+        "memory": "Assistant recommended the following Kenilworth cafés with outdoor seating: Talulah's Sippy Cow Cafe, Muffin House Cafe, The Perfect Blend Cafe, Kenilworth Bagels & Cafe, and Fleur De Lys Restaurant & Cafe, and advised that seating availability may vary and to call ahead.",
+        "score": 0.23056545839370077,
+        "id": "3753dc6f-95c2-417e-9709-84c22d62e89e",
+        "created_at": "2026-11-18T18:01:15.716690+00:00",
+        "updated_at": "2026-11-18T18:01:15.716690+00:00",
+        "score_debug": {
+          "combined_score": 0.23056545839370077,
+          "semantic_score": 0.25296652,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32344712598425196
+        }
+      },
+      {
+        "memory": "User is looking for ideas on what food and drinks to serve at the baby celebration, indicating a desire for easy‑to‑grab finger foods, sweet treats, and a variety of beverages",
+        "score": 0.23053423728271732,
+        "id": "930861a6-ef34-4a09-8046-c2d44b99deda",
+        "created_at": "2026-11-18T17:02:25.794763+00:00",
+        "updated_at": "2026-11-18T17:02:25.794763+00:00",
+        "score_debug": {
+          "combined_score": 0.23053423728271732,
+          "semantic_score": 0.2714088,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3049267932067932
+        }
+      },
+      {
+        "memory": "User will serve a mix of finger foods and sweet treats with a variety of drinks at the baby celebration and will label all food items so guests know what they're eating",
+        "score": 0.23025495728271733,
+        "id": "eeed8c65-aa97-44cd-a2ed-041dd25356f0",
+        "created_at": "2026-11-18T17:02:47.510097+00:00",
+        "updated_at": "2026-11-18T17:02:47.510097+00:00",
+        "score_debug": {
+          "combined_score": 0.23025495728271733,
+          "semantic_score": 0.2707106,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3049267932067932
+        }
+      },
+      {
+        "memory": "User is looking for affordable live jazz or music performances in Tokyo and asked for venue suggestions with low cover charges",
+        "score": 0.22955281200000002,
+        "id": "2c9ff929-a465-43ee-9655-0430a34e0487",
+        "created_at": "2026-11-18T17:11:01.821476+00:00",
+        "updated_at": "2026-11-18T17:11:01.821476+00:00",
+        "score_debug": {
+          "combined_score": 0.22955281200000002,
+          "semantic_score": 0.2640795,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30980253
+        }
+      },
+      {
+        "memory": "Assistant suggested a hybrid hydration strategy, using a belt for shorter runs or hot conditions and relying on aid stations for longer distances or when a refill is needed.",
+        "score": 0.22936839199999998,
+        "id": "f05f4d44-e219-4fad-b055-9d22ac3c5500",
+        "created_at": "2026-11-18T18:46:47.645571+00:00",
+        "updated_at": "2026-11-18T18:46:47.645571+00:00",
+        "score_debug": {
+          "combined_score": 0.22936839199999998,
+          "semantic_score": 0.26657578,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3068452
+        }
+      },
+      {
+        "memory": "Assistant specifically suggested the Aquaclear 20 and the Tetra Tech EX20 hang‑on‑back filters as good choices for the user’s 20‑gallon aquarium, noting their combined mechanical and biological filtration capabilities.",
+        "score": 0.22929966,
+        "id": "8d241b34-b409-4003-80cf-9e5e17a0f701",
+        "created_at": "2026-11-18T17:16:20.488439+00:00",
+        "updated_at": "2026-11-18T17:16:20.488439+00:00",
+        "score_debug": {
+          "combined_score": 0.22929966,
+          "semantic_score": 0.2161873,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35706185
+        }
+      }
+    ],
+    "search_latency_ms": 2647.9,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_200": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "6:45 AM.",
+      "judge_raw": "yes",
+      "memories_evaluated": 200,
+      "reason": "Generated answer: 6:45 AM."
+    },
+    "top_50": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "6:45 AM.",
+      "judge_raw": "yes",
+      "memories_evaluated": 50,
+      "reason": "Generated answer: 6:45 AM."
+    },
+    "top_20": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "6:45 AM.",
+      "judge_raw": "yes",
+      "memories_evaluated": 20,
+      "reason": "Generated answer: 6:45 AM."
+    },
+    "top_10": {
+      "judgment": "PASS",
+      "score": 1.0,
+      "generated_answer": "6:45 AM.",
+      "judge_raw": "<judge_thinking>omitted</judge_thinking>\nyes",
+      "memories_evaluated": 10,
+      "reason": "Generated answer: 6:45 AM."
+    }
+  }
+}

@@ -1,0 +1,2748 @@
+{
+  "metadata": {
+    "benchmark": "longmemeval",
+    "project_name": "lme_check_1q_b",
+    "run_id": "f73532c1",
+    "timestamp": "20261118_011815",
+    "mode": "answerer",
+    "answerer_model": "gpt-5",
+    "judge_model": "gpt-5",
+    "provider": "openai",
+    "top_k": 200,
+    "top_k_cutoffs": [
+      "top_200",
+      "top_50",
+      "top_20",
+      "top_10"
+    ],
+    "total_questions": 1,
+    "question_types": [
+      "temporal-reasoning"
+    ],
+    "all_questions": false,
+    "per_type": 1,
+    "seed": 42
+  },
+  "metrics_by_cutoff": {
+    "top_200": {
+      "overall": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 100.0,
+        "avg_score": 100.0
+      },
+      "by_question_type": {
+        "temporal-reasoning": {
+          "total": 1,
+          "correct": 1,
+          "accuracy": 100.0,
+          "avg_score": 100.0
+        }
+      }
+    },
+    "top_50": {
+      "overall": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 100.0,
+        "avg_score": 100.0
+      },
+      "by_question_type": {
+        "temporal-reasoning": {
+          "total": 1,
+          "correct": 1,
+          "accuracy": 100.0,
+          "avg_score": 100.0
+        }
+      }
+    },
+    "top_20": {
+      "overall": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 100.0,
+        "avg_score": 100.0
+      },
+      "by_question_type": {
+        "temporal-reasoning": {
+          "total": 1,
+          "correct": 1,
+          "accuracy": 100.0,
+          "avg_score": 100.0
+        }
+      }
+    },
+    "top_10": {
+      "overall": {
+        "total": 1,
+        "correct": 1,
+        "accuracy": 100.0,
+        "avg_score": 100.0
+      },
+      "by_question_type": {
+        "temporal-reasoning": {
+          "total": 1,
+          "correct": 1,
+          "accuracy": 100.0,
+          "avg_score": 100.0
+        }
+      }
+    }
+  },
+  "evaluations": [
+    {
+      "question_id": "b29f3365",
+      "question_type": "temporal-reasoning",
+      "question": "How long had I been taking guitar lessons when I bought the new guitar amp?",
+      "ground_truth_answer": "Four weeks",
+      "question_date": "2023/05/25 (Thu) 19:07",
+      "is_abstention": false,
+      "user_id": "longmemeval_b29f3365_f73532c1",
+      "answer_session_ids": [
+        "answer_436d4309_2",
+        "answer_436d4309_1"
+      ],
+      "retrieval": {
+        "search_query": "How long had I been taking guitar lessons when I bought the new guitar amp?",
+        "search_results": [
+          {
+            "memory": "User is still experimenting with different tones on their new guitar amplifier and really likes its sound; they purchased it around November 4, 2026, and report a major improvement in sound quality compared to their previous borrowed amp.",
+            "score": 0.9011704136933772,
+            "id": "dde03226-e8ef-4d55-b396-c3acec5cdb60",
+            "created_at": "2026-11-18T00:47:44.105508+00:00",
+            "updated_at": "2026-11-18T00:47:44.105508+00:00",
+            "score_debug": {
+              "combined_score": 0.9011704136933772,
+              "semantic_score": 0.76567143,
+              "bm25_score": 0.999997736101575,
+              "entity_boost": 0.4872568681318682
+            }
+          },
+          {
+            "memory": "User bought a new guitar amplifier around November 3, 2026, and says it has made a huge difference in their sound quality, noticeably improving their tone and the overall impact of their practice sessions.",
+            "score": 0.8854540322511324,
+            "id": "b3907c5c-60ce-4887-aecb-a739b5b84efc",
+            "created_at": "2026-11-17T23:44:23.738275+00:00",
+            "updated_at": "2026-11-17T23:44:23.738275+00:00",
+            "score_debug": {
+              "combined_score": 0.8854540322511324,
+              "semantic_score": 0.72640884,
+              "bm25_score": 0.9999693724959631,
+              "entity_boost": 0.4872568681318682
+            }
+          },
+          {
+            "memory": "User has been taking weekly guitar lessons with a new instructor named Alex for six weeks (since approximately October 6, 2026), which has helped the user understand music theory better.",
+            "score": 0.8680672368709527,
+            "id": "43912336-78d4-41b2-9e78-3fa1d5fa9a14",
+            "created_at": "2026-11-17T23:43:05.710860+00:00",
+            "updated_at": "2026-11-17T23:43:05.710860+00:00",
+            "score_debug": {
+              "combined_score": 0.8680672368709527,
+              "semantic_score": 0.71904385,
+              "bm25_score": 0.9999999621773815,
+              "entity_boost": 0.45112428
+            }
+          },
+          {
+            "memory": "Since starting guitar lessons with instructor Alex, the user has practiced at least 30 minutes every day, building a consistent routine that reinforces both technique and theory during daily sessions.",
+            "score": 0.8449289529585619,
+            "id": "9f9b87dd-0336-4a04-9f2b-0f875c122277",
+            "created_at": "2026-11-17T23:43:36.333644+00:00",
+            "updated_at": "2026-11-17T23:43:36.333644+00:00",
+            "score_debug": {
+              "combined_score": 0.8449289529585619,
+              "semantic_score": 0.61380947,
+              "bm25_score": 0.9985137473964046,
+              "entity_boost": 0.499999165
+            }
+          },
+          {
+            "memory": "Since around mid-October 2026, the user has been taking online ukulele lessons to learn the basics and finds the ukulele surprisingly easy to pick up.",
+            "score": 0.7916524085699002,
+            "id": "4326d3d7-751d-475d-8c16-7d8eff9178d6",
+            "created_at": "2026-11-17T23:45:07.846862+00:00",
+            "updated_at": "2026-11-17T23:45:07.846862+00:00",
+            "score_debug": {
+              "combined_score": 0.7916524085699002,
+              "semantic_score": 0.57587284,
+              "bm25_score": 0.9995861814247504,
+              "entity_boost": 0.403672
+            }
+          },
+          {
+            "memory": "User was recommended platforms for studying and practicing chord progressions: The Music Theory Academy (video lessons, articles, exercises), ChordPro (generates progressions by key, chord types, and length), Hooktheory (interactive lessons, exercises, quizzes), and Guitar Tricks (guitar courses covering chord progressions).",
+            "score": 0.7515507346713125,
+            "id": "2b3084c4-6827-47e0-9fc9-489686372cfc",
+            "created_at": "2026-11-17T23:43:05.718304+00:00",
+            "updated_at": "2026-11-17T23:43:05.718304+00:00",
+            "score_debug": {
+              "combined_score": 0.7515507346713125,
+              "semantic_score": 0.42873332,
+              "bm25_score": 0.9996421366782815,
+              "entity_boost": 0.45050138
+            }
+          },
+          {
+            "memory": "User replaced their old headphones around mid-November 2026 after they stopped working properly, buying a new pair from Amazon that arrived on November 17, 2026.",
+            "score": 0.7311402462826633,
+            "id": "9323e476-0f2d-4f84-b2bf-8d52c85a8f9c",
+            "created_at": "2026-11-18T00:21:14.126055+00:00",
+            "updated_at": "2026-11-18T00:21:14.126055+00:00",
+            "score_debug": {
+              "combined_score": 0.7311402462826633,
+              "semantic_score": 0.55594224,
+              "bm25_score": 0.9953745111648254,
+              "entity_boost": 0.27653386454183265
+            }
+          },
+          {
+            "memory": "In November 2026, the user has been especially enjoying blues music and is actively trying to incorporate more bluesy tones into their guitar playing.",
+            "score": 0.7257362235192149,
+            "id": "46276640-e485-454a-81d6-479e72367880",
+            "created_at": "2026-11-18T00:48:04.691567+00:00",
+            "updated_at": "2026-11-18T00:48:04.691567+00:00",
+            "score_debug": {
+              "combined_score": 0.7257362235192149,
+              "semantic_score": 0.58186746,
+              "bm25_score": 0.814426098798037,
+              "entity_boost": 0.418047
+            }
+          },
+          {
+            "memory": "The user has begun studying basic music theory, which has clarified how notes and rhythm work and made their guitar practice more intentional and musically informed.",
+            "score": 0.7251865235192148,
+            "id": "cb592de5-245b-473e-8a4a-21992d4ab4a3",
+            "created_at": "2026-11-17T23:43:36.341422+00:00",
+            "updated_at": "2026-11-17T23:43:36.341422+00:00",
+            "score_debug": {
+              "combined_score": 0.7251865235192148,
+              "semantic_score": 0.57979816,
+              "bm25_score": 0.814426098798037,
+              "entity_boost": 0.41874205
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user plans to buy a simple, compact headphone case or pouch to protect their new headphones and keep them organized in their backpack.",
+            "score": 0.7121719298693018,
+            "id": "21247a65-2015-433d-8b0a-1e6082a789ff",
+            "created_at": "2026-11-18T00:22:03.896781+00:00",
+            "updated_at": "2026-11-18T00:22:03.896781+00:00",
+            "score_debug": {
+              "combined_score": 0.7121719298693018,
+              "semantic_score": 0.44517922,
+              "bm25_score": 0.9901226346732543,
+              "entity_boost": 0.34512797
+            }
+          },
+          {
+            "memory": "User bought their new backpack on March 10 at an outlet store in the mall for $80 and says it has been a great purchase so far.",
+            "score": 0.7014641169436752,
+            "id": "4b096275-0dc9-4cdf-90f1-d94ea1f4f231",
+            "created_at": "2026-11-18T00:20:25.028868+00:00",
+            "updated_at": "2026-11-18T00:20:25.028868+00:00",
+            "score_debug": {
+              "combined_score": 0.7014641169436752,
+              "semantic_score": 0.46390694,
+              "bm25_score": 0.9905761823591879,
+              "entity_boost": 0.29917717
+            }
+          },
+          {
+            "memory": "At the blues workshop, a professional blues guitarist instructor gave the user practical tips on expressive technique—especially bending strings and playing with more feeling—to add emotion and nuance to their blues guitar sound.",
+            "score": 0.6998036516241738,
+            "id": "4c179c6c-28c3-4ca2-a437-41a9e749150f",
+            "created_at": "2026-11-17T23:44:49.021553+00:00",
+            "updated_at": "2026-11-17T23:44:49.021553+00:00",
+            "score_debug": {
+              "combined_score": 0.6998036516241738,
+              "semantic_score": 0.5363896,
+              "bm25_score": 0.7929372990604345,
+              "entity_boost": 0.42018223
+            }
+          },
+          {
+            "memory": "User bought a used ukulele from a local music store around mid-October 2026 to begin learning the instrument.",
+            "score": 0.696537448803102,
+            "id": "732a941d-32a8-45d7-8298-c3a4aa961e3a",
+            "created_at": "2026-11-17T23:45:07.843908+00:00",
+            "updated_at": "2026-11-17T23:45:07.843908+00:00",
+            "score_debug": {
+              "combined_score": 0.696537448803102,
+              "semantic_score": 0.65161777,
+              "bm25_score": 0.748111217007755,
+              "entity_boost": 0.341614635
+            }
+          },
+          {
+            "memory": "User feels deeply connected to the saxophonist’s music, being especially drawn to his improvisational skills and the emotional depth of his solos. The album the user bought feels introspective; its melodies and harmonies transport the user to a different time and place and convey a strong sense of longing and nostalgia.",
+            "score": 0.6962466976938813,
+            "id": "4503f2d1-1418-424a-937f-9bb664dfead1",
+            "created_at": "2026-11-18T01:11:25.654530+00:00",
+            "updated_at": "2026-11-18T01:11:25.654530+00:00",
+            "score_debug": {
+              "combined_score": 0.6962466976938813,
+              "semantic_score": 0.46293974,
+              "bm25_score": 0.9960062842347033,
+              "entity_boost": 0.28167072
+            }
+          },
+          {
+            "memory": "User has a soprano ukulele and loves its bright, cheerful tone. When buying it, User didn’t try many ukuleles but chose this one for its warm sunburst finish and how comfortable it felt in their hands.",
+            "score": 0.6952252889641384,
+            "id": "e815fd27-20c2-41ef-9e4c-37692050aa95",
+            "created_at": "2026-11-18T00:49:23.649340+00:00",
+            "updated_at": "2026-11-18T00:49:23.649340+00:00",
+            "score_debug": {
+              "combined_score": 0.6952252889641384,
+              "semantic_score": 0.5277672,
+              "bm25_score": 0.864718122410346,
+              "entity_boost": 0.3455779
+            }
+          },
+          {
+            "memory": "In early November 2026, the user attended a blues guitar workshop that was fun and collaborative; they met other musicians and jammed for a few hours, playing classic blues songs including 'Sweet Home Chicago' and 'Pride and Joy'.",
+            "score": 0.6791868938631171,
+            "id": "be4b6357-ca6b-48d3-b45b-3afb6198d9e8",
+            "created_at": "2026-11-17T23:44:49.017078+00:00",
+            "updated_at": "2026-11-17T23:44:49.017078+00:00",
+            "score_debug": {
+              "combined_score": 0.6791868938631171,
+              "semantic_score": 0.49912316,
+              "bm25_score": 0.7905029946577928,
+              "entity_boost": 0.40834108
+            }
+          },
+          {
+            "memory": "The user participates in spin classes and takes tennis lessons and is considering tracking these alongside Sunday soccer games at the local community center to build a holistic view of fitness and monitor progress across activities.",
+            "score": 0.6772179860827953,
+            "id": "fac0fafa-6be5-4114-9437-31ca728ffb03",
+            "created_at": "2026-11-18T01:00:13.258064+00:00",
+            "updated_at": "2026-11-18T01:00:13.258064+00:00",
+            "score_debug": {
+              "combined_score": 0.6772179860827953,
+              "semantic_score": 0.37827665,
+              "bm25_score": 0.9986313331352752,
+              "entity_boost": 0.31613698207171315
+            }
+          },
+          {
+            "memory": "User received guidance for selecting electric guitar strings: align strings with genre, tone preference, and playing style (heavy strumming/bends vs fingerstyle/legato). Typical gauge range is 0.008–0.052, with a widely recommended starting set of 0.010–0.046 for most players.",
+            "score": 0.6623674661448703,
+            "id": "679fe9c0-5351-428e-8d6f-8b5e40296e80",
+            "created_at": "2026-11-18T00:47:24.379284+00:00",
+            "updated_at": "2026-11-18T00:47:24.379284+00:00",
+            "score_debug": {
+              "combined_score": 0.6623674661448703,
+              "semantic_score": 0.48177198,
+              "bm25_score": 0.7806824853621759,
+              "entity_boost": 0.3934642
+            }
+          },
+          {
+            "memory": "Around mid-November 2026, the user added a new credit card, which made their long-used wallet feel bulky; they are seeking advice on wallet organizers and are considering switching to a smaller wallet to keep only essential items.",
+            "score": 0.6623553011406467,
+            "id": "4a9c1298-f51c-4f80-aafb-03a2f094f15f",
+            "created_at": "2026-11-18T00:19:46.592030+00:00",
+            "updated_at": "2026-11-18T00:19:46.592030+00:00",
+            "score_debug": {
+              "combined_score": 0.6623553011406467,
+              "semantic_score": 0.39054185,
+              "bm25_score": 0.9760723028516164,
+              "entity_boost": 0.2892741
+            }
+          },
+          {
+            "memory": "User plans to try polyrhythmic and subdivision practice to strengthen timing and rhythm specifically in their blues guitar playing, building on prior metronome drills. The user intends to integrate these techniques into daily practice to develop tighter groove, syncopation, and rhythmic precision.",
+            "score": 0.6340701741448703,
+            "id": "14034fcb-7dbb-45a6-a7de-be10ae5b8c61",
+            "created_at": "2026-11-17T23:44:49.011974+00:00",
+            "updated_at": "2026-11-17T23:44:49.011974+00:00",
+            "score_debug": {
+              "combined_score": 0.6340701741448703,
+              "semantic_score": 0.4389981,
+              "bm25_score": 0.7806824853621759,
+              "entity_boost": 0.36549485
+            }
+          },
+          {
+            "memory": "User requested a long-form, George Lois–style piece on OSHA forklift certification titled 'Why Traditional OSHA Certification Programs Are Outdated and Ineffective,' seeking exploration of competing schools of thought, practical tactics and strategies, impactful figures in the field, and actionable lessons.",
+            "score": 0.6336398190203242,
+            "id": "f0f5e403-b978-495f-83f2-f358fcb02377",
+            "created_at": "2026-11-17T23:37:00.472210+00:00",
+            "updated_at": "2026-11-17T23:37:00.472210+00:00",
+            "score_debug": {
+              "combined_score": 0.6336398190203242,
+              "semantic_score": 0.28040552,
+              "bm25_score": 0.9937027275508103,
+              "entity_boost": 0.3099913
+            }
+          },
+          {
+            "memory": "User requested a long-form, George Lois–style piece on OSHA forklift certification titled 'The Shocking Statistics That Prove Online OSHA Forklift Certification Is More Efficient Than In-Person Training,' seeking exploration of competing schools of thought, practical tactics and strategies, impactful figures, and key lessons.",
+            "score": 0.6302477112416262,
+            "id": "5ebc015c-08d3-4db1-9c9d-13db54337cd7",
+            "created_at": "2026-11-17T23:37:22.288019+00:00",
+            "updated_at": "2026-11-17T23:37:22.288019+00:00",
+            "score_debug": {
+              "combined_score": 0.6302477112416262,
+              "semantic_score": 0.27310252,
+              "bm25_score": 0.9932445881040654,
+              "entity_boost": 0.30927217
+            }
+          },
+          {
+            "memory": "User attended a local jazz concert around October 2026 at a neighborhood venue and bought the saxophonist’s album after the show; since then, the user has been especially enjoying the local jazz scene and is eager to attend more events.",
+            "score": 0.6291774277801485,
+            "id": "28284a48-dc22-43f5-9f7b-9a6bb6b8b13e",
+            "created_at": "2026-11-18T01:10:21.346183+00:00",
+            "updated_at": "2026-11-18T01:10:21.346183+00:00",
+            "score_debug": {
+              "combined_score": 0.6291774277801485,
+              "semantic_score": 0.5547117,
+              "bm25_score": 0.7231582430767448,
+              "entity_boost": 0.2950736263736264
+            }
+          },
+          {
+            "memory": "The user was recommended electric guitar string sets suited for warm, balanced blues tone: Ernie Ball Blues Slinky (0.010–0.046), D'Addario NYXL1046 (0.010–0.046), and Gibson Vintage Reissue (0.010–0.046).",
+            "score": 0.6239406225065716,
+            "id": "144bb650-0e17-4abf-b986-c718bc3eb608",
+            "created_at": "2026-11-18T00:48:04.694853+00:00",
+            "updated_at": "2026-11-18T00:48:04.694853+00:00",
+            "score_debug": {
+              "combined_score": 0.6239406225065716,
+              "semantic_score": 0.4163534,
+              "bm25_score": 0.807351756266429,
+              "entity_boost": 0.3361464
+            }
+          },
+          {
+            "memory": "User received chord progression practice strategies: start with I–IV–V; practice in multiple keys; analyze songs; improvise and try substitutions; use a metronome; apply progressions to guitar pieces or accompaniment; learn chord functions (tonic, dominant, subdominant); break complex progressions into parts; practice regularly; and seek personalized guidance from instructor Alex.",
+            "score": 0.6233399566764036,
+            "id": "4d8a82ad-d497-4ac2-9e30-2400f0f18c4e",
+            "created_at": "2026-11-17T23:43:05.730625+00:00",
+            "updated_at": "2026-11-17T23:43:05.730625+00:00",
+            "score_debug": {
+              "combined_score": 0.6233399566764036,
+              "semantic_score": 0.45603907,
+              "bm25_score": 0.753087146691009,
+              "entity_boost": 0.349223675
+            }
+          },
+          {
+            "memory": "User prefers bold, George Lois–style copywriting and is researching online OSHA forklift certification. The user requested a long-form piece titled 'The Untold Benefits of Online OSHA Forklift Certification You Never Knew Existed' that explores schools of thought, tactics and strategies, impactful figures, and key lessons.",
+            "score": 0.6173643152416262,
+            "id": "d27334e5-ee56-4df0-86ff-3e6e236e4d2a",
+            "created_at": "2026-11-17T23:36:32.866597+00:00",
+            "updated_at": "2026-11-17T23:36:32.866597+00:00",
+            "score_debug": {
+              "combined_score": 0.6173643152416262,
+              "semantic_score": 0.2802945,
+              "bm25_score": 0.9932445881040654,
+              "entity_boost": 0.2698717
+            }
+          },
+          {
+            "memory": "User was advised that bulgur grind affects kibbeh texture and cooking time: fine (#1) yields a tender, smooth result and cooks faster; medium (#2) produces a slightly denser, rustic texture; coarse (#3) creates a chunkier texture and takes longer. Recommendation: start with fine (#1) and adjust cook time accordingly.",
+            "score": 0.6167289405260508,
+            "id": "f079b756-4ed0-40a5-9fb6-5116939d8f8e",
+            "created_at": "2026-11-18T00:06:33.679475+00:00",
+            "updated_at": "2026-11-18T00:06:33.679475+00:00",
+            "score_debug": {
+              "combined_score": 0.6167289405260508,
+              "semantic_score": 0.25335413,
+              "bm25_score": 0.9973282213151269,
+              "entity_boost": 0.29114
+            }
+          },
+          {
+            "memory": "User was informed that travel time from London to Stonehenge is typically around 2–3 hours depending on traffic and mode; the train from London Waterloo to Salisbury takes about 1.5 hours followed by roughly a 30-minute bus ride, and guided tours may run longer due to scenic stops.",
+            "score": 0.613185305279728,
+            "id": "4fea2eba-3b49-4d15-bcbb-4502f078e783",
+            "created_at": "2026-11-18T00:43:09.891993+00:00",
+            "updated_at": "2026-11-18T00:43:09.891993+00:00",
+            "score_debug": {
+              "combined_score": 0.613185305279728,
+              "semantic_score": 0.25610662,
+              "bm25_score": 0.9978858140284906,
+              "entity_boost": 0.2789708291708292
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user is considering buying a yoga mat to improve grip and comfort for Pilates and yoga classes and requested recommendations, emphasizing strong grip and adequate cushioning as priorities.",
+            "score": 0.6123723696762182,
+            "id": "7788ab83-32ee-47ce-958c-77aefe6cc5d7",
+            "created_at": "2026-11-18T00:32:57.180968+00:00",
+            "updated_at": "2026-11-18T00:32:57.180968+00:00",
+            "score_debug": {
+              "combined_score": 0.6123723696762182,
+              "semantic_score": 0.37714797,
+              "bm25_score": 0.8580155891905453,
+              "entity_boost": 0.295767365
+            }
+          },
+          {
+            "memory": "User is considering taking a one-day trip to Paris from London during their 10-day visit.",
+            "score": 0.6066984405106968,
+            "id": "31478e14-cb7c-4ee8-9a77-79af7c0422a4",
+            "created_at": "2026-11-18T00:42:27.217540+00:00",
+            "updated_at": "2026-11-18T00:42:27.217540+00:00",
+            "score_debug": {
+              "combined_score": 0.6066984405106968,
+              "semantic_score": 0.31472704,
+              "bm25_score": 0.936280561276742,
+              "entity_boost": 0.2657385
+            }
+          },
+          {
+            "memory": "User bought a black backpack with multiple compartments around October 28, 2026, and has been using it daily for their commute to work; so far they report it is working great.",
+            "score": 0.5938414258635157,
+            "id": "cbc1a9c7-f34a-4d0c-8e8b-d696977dfd7b",
+            "created_at": "2026-11-18T00:19:46.595404+00:00",
+            "updated_at": "2026-11-18T00:19:46.595404+00:00",
+            "score_debug": {
+              "combined_score": 0.5938414258635157,
+              "semantic_score": 0.4695654,
+              "bm25_score": 0.7370646646587894,
+              "entity_boost": 0.2779735
+            }
+          },
+          {
+            "memory": "The user reports significant improvement in fingerpicking precision and smoother chord changes, crediting steady daily 30-minute practice combined with weekly lessons with Alex for accelerating their progress and confidence.",
+            "score": 0.5914043662250635,
+            "id": "0480b9d5-efa2-449c-ba05-e1d9452c727a",
+            "created_at": "2026-11-17T23:43:36.337791+00:00",
+            "updated_at": "2026-11-17T23:43:36.337791+00:00",
+            "score_debug": {
+              "combined_score": 0.5914043662250635,
+              "semantic_score": 0.52641356,
+              "bm25_score": 0.6289795355626587,
+              "entity_boost": 0.32311782
+            }
+          },
+          {
+            "memory": "Additional selection factors provided: longer scale length (around 25.5 inches or more) may require heavier gauges to maintain tension; alternate or drop tunings benefit from thicker strings; and frequent players may prefer strings designed for longer lifespan.",
+            "score": 0.5759749815582914,
+            "id": "c81662b4-631d-4fd4-a0c0-5a29fa678001",
+            "created_at": "2026-11-18T00:47:24.389467+00:00",
+            "updated_at": "2026-11-18T00:47:24.389467+00:00",
+            "score_debug": {
+              "combined_score": 0.5759749815582914,
+              "semantic_score": 0.39212507,
+              "bm25_score": 0.7285055407388853,
+              "entity_boost": 0.3193068431568432
+            }
+          },
+          {
+            "memory": "User plans to incorporate the assistant’s metronome techniques into their daily guitar practice routine to strengthen timing and rhythm.",
+            "score": 0.550450225126531,
+            "id": "36117a26-7f17-460a-a350-e91c1feac49e",
+            "created_at": "2026-11-17T23:44:00.349885+00:00",
+            "updated_at": "2026-11-17T23:44:00.349885+00:00",
+            "score_debug": {
+              "combined_score": 0.550450225126531,
+              "semantic_score": 0.55472124,
+              "bm25_score": 0.8214043228163275,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user will use Strava to track their spin classes and tennis lessons, choosing it due to existing familiarity, multi-activity support, built-in goal and challenge features, and its social connections with fitness-minded friends.",
+            "score": 0.5186177917743869,
+            "id": "d723c227-9b85-4b90-b389-f418d232e6d7",
+            "created_at": "2026-11-18T01:03:23.098880+00:00",
+            "updated_at": "2026-11-18T01:03:23.098880+00:00",
+            "score_debug": {
+              "combined_score": 0.5186177917743869,
+              "semantic_score": 0.36031944,
+              "bm25_score": 0.6200880573642542,
+              "entity_boost": 0.31613698207171315
+            }
+          },
+          {
+            "memory": "User’s crime novel takes place in a fictional world where women have no rights. The main character, Sub05, has been brainwashed and is extremely loyal to Dom, aligning herself completely with his directives.",
+            "score": 0.5137636520739288,
+            "id": "8c65a7c4-f5af-48cf-9259-7f3df19d799b",
+            "created_at": "2026-11-17T23:26:14.854340+00:00",
+            "updated_at": "2026-11-17T23:26:14.854340+00:00",
+            "score_debug": {
+              "combined_score": 0.5137636520739288,
+              "semantic_score": 0.18083042,
+              "bm25_score": 0.8378753012883294,
+              "entity_boost": 0.26570340889649274
+            }
+          },
+          {
+            "memory": "User plans to use Strava to track their spin classes and tennis lessons because they are already familiar with the app, value its multi-activity support, enjoy goal and challenge features, and like connecting with fitness-minded friends. This marks a decision to commit to Strava for spin and tennis rather than just considering tracking these activities.",
+            "score": 0.5125399131774874,
+            "id": "9052ae14-cb6a-4655-9094-d8053b31fbe7",
+            "created_at": "2026-11-18T01:00:57.358592+00:00",
+            "updated_at": "2026-11-18T01:00:57.358592+00:00",
+            "score_debug": {
+              "combined_score": 0.5125399131774874,
+              "semantic_score": 0.36855835,
+              "bm25_score": 0.5966544508720053,
+              "entity_boost": 0.31613698207171315
+            }
+          },
+          {
+            "memory": "User was advised general ways to purchase a monthly transit pass: check the local transit agency website under Fares/Tickets; buy online via the website or mobile app (account may be required); purchase at customer service centers or ticket vending machines; or use authorized retailers such as convenience stores or pharmacies.",
+            "score": 0.5066099818299037,
+            "id": "12c2f597-ab45-4ee1-a72f-36cb282e1601",
+            "created_at": "2026-11-17T23:59:09.706672+00:00",
+            "updated_at": "2026-11-17T23:59:09.706672+00:00",
+            "score_debug": {
+              "combined_score": 0.5066099818299037,
+              "semantic_score": 0.28679442,
+              "bm25_score": 0.6839093845747592,
+              "entity_boost": 0.29582115
+            }
+          },
+          {
+            "memory": "The user was informed that macroevolution refers to long-term, large-scale evolutionary change that can yield new species or higher taxa, arising from accumulated microevolution plus factors like geographic isolation, hybridization, and major environmental shifts; examples include whales evolving from land mammals and birds from theropod dinosaurs.",
+            "score": 0.49106286814506256,
+            "id": "48c68d3a-86b8-4b9c-8a99-f631c7084d35",
+            "created_at": "2026-11-18T00:46:47.686734+00:00",
+            "updated_at": "2026-11-18T00:46:47.686734+00:00",
+            "score_debug": {
+              "combined_score": 0.49106286814506256,
+              "semantic_score": 0.25852126,
+              "bm25_score": 0.9691359103626564,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User was advised to rebuild community in the U.S. by connecting with local Syrian/Middle Eastern groups (cultural centers, mosques, community organizations), joining online forums or social media groups for Syrians/Middle Eastern expats, and volunteering or taking classes (cooking, language, or art) to meet like-minded people.",
+            "score": 0.4773685360294581,
+            "id": "e15f4386-07bc-4544-b124-769d505bb900",
+            "created_at": "2026-11-18T00:07:22.021027+00:00",
+            "updated_at": "2026-11-18T00:07:22.021027+00:00",
+            "score_debug": {
+              "combined_score": 0.4773685360294581,
+              "semantic_score": 0.27602497,
+              "bm25_score": 0.9173963700736453,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "Assistant recommended intercity transport in Cuba by taking buses or hiring taxis between destinations throughout the month-long route (Havana → Viñales → Cienfuegos → Trinidad → Camagüey → Santiago de Cuba → Baracoa → Havana) to keep logistics simple while focusing on small-town experiences.",
+            "score": 0.47580950939089417,
+            "id": "6233289c-ae90-490f-b99c-ea9d9113cd52",
+            "created_at": "2026-11-17T23:36:08.196339+00:00",
+            "updated_at": "2026-11-17T23:36:08.196339+00:00",
+            "score_debug": {
+              "combined_score": 0.47580950939089417,
+              "semantic_score": 0.19032961,
+              "bm25_score": 0.9991941634772354,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User was recommended additional step-boosting habits: get 1,000–2,000 steps in the first hour after waking; take short lunchtime walks; walk during phone calls; choose longer routes at work (to the water cooler or on different floors); hold walking meetings; get off transit one stop early; walk to a coworker’s car to rideshare.",
+            "score": 0.4704322471793203,
+            "id": "916eb7e9-3180-48fd-8580-925993852156",
+            "created_at": "2026-11-18T01:05:26.552702+00:00",
+            "updated_at": "2026-11-18T01:05:26.552702+00:00",
+            "score_debug": {
+              "combined_score": 0.4704322471793203,
+              "semantic_score": 0.35631865,
+              "bm25_score": 0.5275845879483007,
+              "entity_boost": 0.29217738
+            }
+          },
+          {
+            "memory": "The user was recommended technique-focused ways to increase tennis serve speed: solid mechanics (consistent toss, smooth take-back, powerful forward swing), a continental grip, coordinated footwork with weight transfer, strong leg drive, higher racquet-head speed, refined toss height, a full follow-through, and considering lessons with a coach.",
+            "score": 0.4672489559599341,
+            "id": "5e2c8bcd-d40e-4ab7-a326-7ad71f370d93",
+            "created_at": "2026-11-17T23:47:50.423571+00:00",
+            "updated_at": "2026-11-17T23:47:50.423571+00:00",
+            "score_debug": {
+              "combined_score": 0.4672489559599341,
+              "semantic_score": 0.2615368,
+              "bm25_score": 0.5908675648998352,
+              "entity_boost": 0.315718025
+            }
+          },
+          {
+            "memory": "User finds Mitsui’s sustainability efforts in agriculture and energy impressive and is specifically interested in whether other companies can learn from and emulate Mitsui’s approach, signaling interest in cross‑industry adoption of Mitsui’s sustainability practices and strategic lessons.",
+            "score": 0.45639035263027594,
+            "id": "6c40288a-c4ca-404a-901a-281c28a3e132",
+            "created_at": "2026-11-17T23:51:49.550285+00:00",
+            "updated_at": "2026-11-17T23:51:49.550285+00:00",
+            "score_debug": {
+              "combined_score": 0.45639035263027594,
+              "semantic_score": 0.19316857,
+              "bm25_score": 0.6319541915756899,
+              "entity_boost": 0.31585312
+            }
+          },
+          {
+            "memory": "User was recommended slip-casting tutorial websites: Ceramics Monthly (articles, videos, webinars on slip-casting), Pottery Making Illustrated (step-by-step guides, videos, pro tips), The Ceramic School (beginner guides plus mold and cast tutorials), and ClayShare (community platform with lessons and articles on ceramic techniques).",
+            "score": 0.4533904660823733,
+            "id": "226f27b5-36cf-43ea-9ec3-cf55a045118f",
+            "created_at": "2026-11-18T00:53:20.796096+00:00",
+            "updated_at": "2026-11-18T00:53:20.796096+00:00",
+            "score_debug": {
+              "combined_score": 0.4533904660823733,
+              "semantic_score": 0.25125802,
+              "bm25_score": 0.5879859252059332,
+              "entity_boost": 0.29423222
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user's new headphones are a big upgrade over their old pair, with much better sound quality and improved comfort during use.",
+            "score": 0.44554828458239076,
+            "id": "a879ba46-dfac-4c03-b421-f57e4f920086",
+            "created_at": "2026-11-18T00:21:41.630879+00:00",
+            "updated_at": "2026-11-18T00:21:41.630879+00:00",
+            "score_debug": {
+              "combined_score": 0.44554828458239076,
+              "semantic_score": 0.50849915,
+              "bm25_score": 0.28140141145597686,
+              "entity_boost": 0.32397015
+            }
+          },
+          {
+            "memory": "User was advised on ongoing fiddle leaf fig maintenance: fertilize in spring/summer with a balanced water-soluble feed at half strength; prune dead/damaged leaves and long stems to encourage branching; use a well-draining tropical potting mix; monitor for spider mites, mealybugs, and scale and isolate/treat if found; repot every 1–2 years into a slightly larger pot with fresh mix; expect slow growth.",
+            "score": 0.44028998833471295,
+            "id": "24ef4c03-f016-459e-9072-f08c1c681a85",
+            "created_at": "2026-11-17T23:24:07.241623+00:00",
+            "updated_at": "2026-11-17T23:24:07.241623+00:00",
+            "score_debug": {
+              "combined_score": 0.44028998833471295,
+              "semantic_score": 0.30839238,
+              "bm25_score": 0.4890818608367823,
+              "entity_boost": 0.30325073
+            }
+          },
+          {
+            "memory": "User was informed that Eurostar runs direct high-speed trains from London St Pancras International to Paris Gare du Nord, taking about 2 hours 15 minutes with frequent daily departures, and tickets can be booked on the Eurostar website.",
+            "score": 0.44001058687879785,
+            "id": "91f04f82-7bd6-4332-bd6a-9dc69b686dd7",
+            "created_at": "2026-11-18T00:42:27.222349+00:00",
+            "updated_at": "2026-11-18T00:42:27.222349+00:00",
+            "score_debug": {
+              "combined_score": 0.44001058687879785,
+              "semantic_score": 0.17528482,
+              "bm25_score": 0.9247416471969947,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "Assistant described Sub05 as a young woman in her early 20s with long blonde hair, piercing blue eyes, a slender figure, and porcelain skin that lends her an ethereal beauty.",
+            "score": 0.4307650757102667,
+            "id": "7c0b8af5-c0c5-452a-9409-0f7e1582c5c6",
+            "created_at": "2026-11-17T23:26:14.858266+00:00",
+            "updated_at": "2026-11-17T23:26:14.858266+00:00",
+            "score_debug": {
+              "combined_score": 0.4307650757102667,
+              "semantic_score": 0.24077177,
+              "bm25_score": 0.5684731870079344,
+              "entity_boost": 0.2676677322677323
+            }
+          },
+          {
+            "memory": "The assistant described Sub05’s humiliating outfit for the scene: a tight, revealing miniskirt with a low-cut top, high heels, heavy makeup to make her look older, and long blonde hair in loose waves; Dom instructs her to keep seductive body language and obey to avoid punishment.",
+            "score": 0.4240519970976468,
+            "id": "924d6ecc-09d8-4d47-97f6-4136966c3e40",
+            "created_at": "2026-11-17T23:27:56.747001+00:00",
+            "updated_at": "2026-11-17T23:27:56.747001+00:00",
+            "score_debug": {
+              "combined_score": 0.4240519970976468,
+              "semantic_score": 0.2412054,
+              "bm25_score": 0.5390367677441171,
+              "entity_boost": 0.279887825
+            }
+          },
+          {
+            "memory": "User was advised that when a child is caught lying, punishment should be a last resort; first listen to the child’s explanation to understand motives, discuss how dishonesty harms trust, use logical behavior-related consequences (e.g., finish homework before other activities), and positively reinforce honesty after the child takes responsibility.",
+            "score": 0.4229694194010484,
+            "id": "728f0de5-f265-4600-b144-5e67999e0531",
+            "created_at": "2026-11-18T00:36:13.657589+00:00",
+            "updated_at": "2026-11-18T00:36:13.657589+00:00",
+            "score_debug": {
+              "combined_score": 0.4229694194010484,
+              "semantic_score": 0.24377221,
+              "bm25_score": 0.813651338502621,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User has been listening heavily to indie rock and electronic music around November 2026 and is seeking new recommendations in those genres.",
+            "score": 0.4222989797041003,
+            "id": "ac0b05a1-a2f4-40d7-8ce5-45318fb90aea",
+            "created_at": "2026-11-18T01:08:29.972156+00:00",
+            "updated_at": "2026-11-18T01:08:29.972156+00:00",
+            "score_debug": {
+              "combined_score": 0.4222989797041003,
+              "semantic_score": 0.42402685,
+              "bm25_score": 0.2832773992602507,
+              "entity_boost": 0.3484432
+            }
+          },
+          {
+            "memory": "User was advised to use a protective headphone case or pouch to keep their new headphones safe and organized in their backpack when not in use.",
+            "score": 0.41468649063732616,
+            "id": "21db7866-dae3-4571-8af7-d44e98ba6ef8",
+            "created_at": "2026-11-18T00:21:41.636237+00:00",
+            "updated_at": "2026-11-18T00:21:41.636237+00:00",
+            "score_debug": {
+              "combined_score": 0.41468649063732616,
+              "semantic_score": 0.43350193,
+              "bm25_score": 0.28708169659331545,
+              "entity_boost": 0.3161326
+            }
+          },
+          {
+            "memory": "User was informed that 'From Crook to Cook: Platinum Recipes from Tha Boss Dogg's Kitchen' mirrors Snoop Dogg’s journey from the streets to stardom through food, highlighting his early passion for cooking, pride in Long Beach and West Coast culture, and reinterpretations of Southern dishes from his upbringing—framing the cookbook’s cultural significance in his personal history and community identity.",
+            "score": 0.4130502103561229,
+            "id": "213bbbb3-7c6c-4130-b499-b20a6de96ad7",
+            "created_at": "2026-11-18T00:57:16.066707+00:00",
+            "updated_at": "2026-11-18T00:57:16.066707+00:00",
+            "score_debug": {
+              "combined_score": 0.4130502103561229,
+              "semantic_score": 0.24035485,
+              "bm25_score": 0.5107753314021183,
+              "entity_boost": 0.281495344488189
+            }
+          },
+          {
+            "memory": "As of September 2021, travelers entering Bulgaria were required to present either a negative COVID-19 test taken within 72 hours before arrival or a valid vaccination certificate. These health-document requirements operated alongside the country risk lists and were periodically adjusted by Bulgarian authorities in response to epidemiological trends.",
+            "score": 0.40955078141190315,
+            "id": "82cc43f1-89d0-4fd3-95a4-459429186c2a",
+            "created_at": "2026-11-17T23:39:15.765530+00:00",
+            "updated_at": "2026-11-17T23:39:15.765530+00:00",
+            "score_debug": {
+              "combined_score": 0.40955078141190315,
+              "semantic_score": 0.21249054,
+              "bm25_score": 0.8113864135297578,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User was informed that Mitsui’s sustainability approach can serve as a model for other companies, with key lessons to: adopt a holistic, stakeholder‑value strategy; invest in technology and innovation; collaborate with customers, suppliers, regulators, and local communities; and focus on measurable impact that creates long‑term value for business and society beyond CSR.",
+            "score": 0.39940773558198606,
+            "id": "597d28f8-fd8c-4fa0-b2a7-29dc246e3d0b",
+            "created_at": "2026-11-17T23:51:49.557077+00:00",
+            "updated_at": "2026-11-17T23:51:49.557077+00:00",
+            "score_debug": {
+              "combined_score": 0.39940773558198606,
+              "semantic_score": 0.13916078,
+              "bm25_score": 0.6141898089549652,
+              "entity_boost": 0.24516875
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user decided to replace the water bottle they currently carry in their backpack and wants a new one that is easy to clean and reliably leak-proof for everyday use.",
+            "score": 0.3906369721962957,
+            "id": "65619daa-eee3-49ed-ae90-c66d4bf3b40f",
+            "created_at": "2026-11-18T00:20:56.103965+00:00",
+            "updated_at": "2026-11-18T00:20:56.103965+00:00",
+            "score_debug": {
+              "combined_score": 0.3906369721962957,
+              "semantic_score": 0.41917598,
+              "bm25_score": 0.2740680488923375,
+              "entity_boost": 0.28334840159840163
+            }
+          },
+          {
+            "memory": "User was involved with a charity kitchen in early to mid-November 2026, where they learned new cooking skills they can apply to food-focused charity events and competitions.",
+            "score": 0.3878898387019392,
+            "id": "6667ba21-6959-4b1b-a104-169b0fbcba25",
+            "created_at": "2026-11-18T00:29:24.296643+00:00",
+            "updated_at": "2026-11-18T00:29:24.296643+00:00",
+            "score_debug": {
+              "combined_score": 0.3878898387019392,
+              "semantic_score": 0.4108491,
+              "bm25_score": 0.27770089675484794,
+              "entity_boost": 0.2811746
+            }
+          },
+          {
+            "memory": "User is considering joining a recreational soccer league in fall 2026 and is seeking advice to regain soccer fitness after a long break.",
+            "score": 0.38516805468073834,
+            "id": "32057d10-5ede-44a9-9c7d-3e6fdde21dcd",
+            "created_at": "2026-11-17T23:49:04.960655+00:00",
+            "updated_at": "2026-11-17T23:49:04.960655+00:00",
+            "score_debug": {
+              "combined_score": 0.38516805468073834,
+              "semantic_score": 0.38540757,
+              "bm25_score": 0.5775125667018458,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User received study tips for using Spanish media: begin with slower-paced shows, start with English subtitles then switch to Spanish or none, repeat phrases aloud for pronunciation practice, and take notes on new vocabulary.",
+            "score": 0.3849530127709594,
+            "id": "5c537b0f-0b5a-44bc-b878-fd718e35709b",
+            "created_at": "2026-11-18T01:02:36.646929+00:00",
+            "updated_at": "2026-11-18T01:02:36.646929+00:00",
+            "score_debug": {
+              "combined_score": 0.3849530127709594,
+              "semantic_score": 0.3702081,
+              "bm25_score": 0.26874276192739843,
+              "entity_boost": 0.32343167
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user plans to try new Pilates exercises at home and is seeking online videos and resources to guide routines and improve exercise form.",
+            "score": 0.38156963955693496,
+            "id": "7cc941fb-95d1-4f0b-a82e-2364e2422830",
+            "created_at": "2026-11-18T00:33:30.993484+00:00",
+            "updated_at": "2026-11-18T00:33:30.993484+00:00",
+            "score_debug": {
+              "combined_score": 0.38156963955693496,
+              "semantic_score": 0.39018005,
+              "bm25_score": 0.2740680488923375,
+              "entity_boost": 0.289676
+            }
+          },
+          {
+            "memory": "On November 17, 2026, the user is planning a trip to Universal Studios Japan and asked for advice on the best times to visit the Wizarding World of Harry Potter to avoid long lines and minimize wait times.",
+            "score": 0.3702578859492388,
+            "id": "9d983b78-8b71-45a6-9752-da270ca47349",
+            "created_at": "2026-11-17T23:32:51.158191+00:00",
+            "updated_at": "2026-11-17T23:32:51.158191+00:00",
+            "score_debug": {
+              "combined_score": 0.3702578859492388,
+              "semantic_score": 0.37202865,
+              "bm25_score": 0.5536160648730971,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User gave sister-in-law Rachel a personalized baby blanket for her newborn nephew Ethan, and Rachel was very happy with the gift; this positive experience reinforces the user's preference for meaningful, customized presents for new parents.",
+            "score": 0.36398546962969175,
+            "id": "a75202e9-b36d-4676-bdd0-62f3dffff7e2",
+            "created_at": "2026-11-18T00:11:49.365305+00:00",
+            "updated_at": "2026-11-18T00:11:49.365305+00:00",
+            "score_debug": {
+              "combined_score": 0.36398546962969175,
+              "semantic_score": 0.35600317,
+              "bm25_score": 0.26700014550849244,
+              "entity_boost": 0.28696035856573704
+            }
+          },
+          {
+            "memory": "User just finished binge-watching a TV series around November 18, 2026 and is looking for recommendations for something new to watch, indicating they enjoy bingeable television and are open to exploring different genres.",
+            "score": 0.36040890594312963,
+            "id": "228b0f0f-0719-4a17-8583-3847b25e4e98",
+            "created_at": "2026-11-18T00:34:16.304709+00:00",
+            "updated_at": "2026-11-18T00:34:16.304709+00:00",
+            "score_debug": {
+              "combined_score": 0.36040890594312963,
+              "semantic_score": 0.34739292,
+              "bm25_score": 0.26527351985782405,
+              "entity_boost": 0.288355825
+            }
+          },
+          {
+            "memory": "User has been experimenting on ukulele with alternate tunings and capo positions, and has started exploring fingerpicking and using a ukulele slide, finding it impressive how much tonal variety is possible from such a small instrument.",
+            "score": 0.35853612,
+            "id": "6c4bee67-0e4f-44a2-a958-1d401d0d5d56",
+            "created_at": "2026-11-18T00:49:23.652351+00:00",
+            "updated_at": "2026-11-18T00:49:23.652351+00:00",
+            "score_debug": {
+              "combined_score": 0.35853612,
+              "semantic_score": 0.5395559,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3567844
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user asked about new materials being developed for housing construction, indicating a specific interest in innovative building materials for future home design and construction.",
+            "score": 0.3562320711496997,
+            "id": "3b0418ca-e099-4817-a154-bf0d4bf13407",
+            "created_at": "2026-11-18T01:14:00.419491+00:00",
+            "updated_at": "2026-11-18T01:14:00.419491+00:00",
+            "score_debug": {
+              "combined_score": 0.3562320711496997,
+              "semantic_score": 0.34181765,
+              "bm25_score": 0.2722766137883352,
+              "entity_boost": 0.27648591408591416
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user asked for practical tips to participate in the Songkran Festival in Bangkok, indicating active interest in attending the Thai New Year celebrations.",
+            "score": 0.35581808007904064,
+            "id": "42d3a749-bcf1-4972-b7e9-bf4bd4943b97",
+            "created_at": "2026-11-18T00:38:38.523220+00:00",
+            "updated_at": "2026-11-18T00:38:38.523220+00:00",
+            "score_debug": {
+              "combined_score": 0.35581808007904064,
+              "semantic_score": 0.33049682,
+              "bm25_score": 0.2722766137883352,
+              "entity_boost": 0.2867717664092664
+            }
+          },
+          {
+            "memory": "User was recommended YouTube channels for music theory and chord progression tutorials: Marty Music, GuitarLessons365, and Music Theory Fundamentals.",
+            "score": 0.35538905,
+            "id": "2fb4453f-2675-4b7b-a154-cdf0f9aa34a1",
+            "created_at": "2026-11-17T23:43:05.722486+00:00",
+            "updated_at": "2026-11-17T23:43:05.722486+00:00",
+            "score_debug": {
+              "combined_score": 0.35538905,
+              "semantic_score": 0.4419154,
+              "bm25_score": 0.0,
+              "entity_boost": 0.446557225
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user asked about the difference between microevolution and macroevolution, reflecting continued interest in evolutionary biology and how scientists distinguish small-scale changes within species from large-scale changes that produce new species.",
+            "score": 0.34469047474192116,
+            "id": "3e8cdfee-7e7a-4dc2-8324-51155abb2586",
+            "created_at": "2026-11-18T00:46:47.674182+00:00",
+            "updated_at": "2026-11-18T00:46:47.674182+00:00",
+            "score_debug": {
+              "combined_score": 0.34469047474192116,
+              "semantic_score": 0.3159855,
+              "bm25_score": 0.26356270185480285,
+              "entity_boost": 0.282177985
+            }
+          },
+          {
+            "memory": "On November 17, 2026, the user clarified they are planning to visit Disneyland Resort in California (Anaheim), not Tokyo, and asked which new attractions or upcoming events there they should prioritize to avoid missing highlights.",
+            "score": 0.3413614807709594,
+            "id": "a0ba9a9f-dc33-46aa-aacd-55b79d34604c",
+            "created_at": "2026-11-17T23:33:56.255540+00:00",
+            "updated_at": "2026-11-17T23:33:56.255540+00:00",
+            "score_debug": {
+              "combined_score": 0.3413614807709594,
+              "semantic_score": 0.29302114,
+              "bm25_score": 0.26874276192739843,
+              "entity_boost": 0.2916398
+            }
+          },
+          {
+            "memory": "User was recommended breakfast and snack items suitable for new parents: baked muffins or bread, individual overnight oats in jars, and homemade granola bars for quick energy.",
+            "score": 0.338405019556935,
+            "id": "376ef8f8-1a0e-480e-b6fa-ee26fecfa0c0",
+            "created_at": "2026-11-17T23:45:27.408306+00:00",
+            "updated_at": "2026-11-17T23:45:27.408306+00:00",
+            "score_debug": {
+              "combined_score": 0.338405019556935,
+              "semantic_score": 0.2611605,
+              "bm25_score": 0.2740680488923375,
+              "entity_boost": 0.310784
+            }
+          },
+          {
+            "memory": "User has been listening non-stop to the album by the local saxophonist whose concert they attended in October 2026 at a neighborhood venue, is really enjoying it, and describes him as incredibly talented with a unique sound despite not being widely known.",
+            "score": 0.337353448,
+            "id": "a0ae628c-c497-4413-9aac-e74414dbe130",
+            "created_at": "2026-11-18T01:10:53.716558+00:00",
+            "updated_at": "2026-11-18T01:10:53.716558+00:00",
+            "score_debug": {
+              "combined_score": 0.337353448,
+              "semantic_score": 0.51367617,
+              "bm25_score": 0.0,
+              "entity_boost": 0.32970745
+            }
+          },
+          {
+            "memory": "User plans to personalize the Blanket Unfolding Ceremony by sharing a brief anecdote about newborn nephew Ethan—whom the user saw recently and described as tiny at 7 pounds—to highlight celebrating new life and love and make the gift reveal more meaningful for their friends.",
+            "score": 0.3370026779012257,
+            "id": "bcbcd460-b041-45ec-b49a-d0f604c327c0",
+            "created_at": "2026-11-18T00:13:17.448818+00:00",
+            "updated_at": "2026-11-18T00:13:17.448818+00:00",
+            "score_debug": {
+              "combined_score": 0.3370026779012257,
+              "semantic_score": 0.29867175,
+              "bm25_score": 0.25687458618732717,
+              "entity_boost": 0.28696035856573704
+            }
+          },
+          {
+            "memory": "User has been attending many live music events in November 2026; at a local jazz concert they thought the saxophonist was amazing and purchased his album after the show.",
+            "score": 0.3365367185494506,
+            "id": "381fdeb2-282b-4f3e-be7f-44a5f889d916",
+            "created_at": "2026-11-18T01:08:29.978905+00:00",
+            "updated_at": "2026-11-18T01:08:29.978905+00:00",
+            "score_debug": {
+              "combined_score": 0.3365367185494506,
+              "semantic_score": 0.54626817,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2950736263736264
+            }
+          },
+          {
+            "memory": "User is seeking new workout routines to increase their daily step count and prefers simple exercises they can do at home or at the office to keep moving more throughout the workday.",
+            "score": 0.3333549147019391,
+            "id": "880835fd-57dc-410c-a731-b4b2703c4fd5",
+            "created_at": "2026-11-18T01:04:41.358280+00:00",
+            "updated_at": "2026-11-18T01:04:41.358280+00:00",
+            "score_debug": {
+              "combined_score": 0.3333549147019391,
+              "semantic_score": 0.27368096,
+              "bm25_score": 0.27770089675484794,
+              "entity_boost": 0.28200543
+            }
+          },
+          {
+            "memory": "Despite mitigation efforts, Bulgaria faces ongoing concerns about pandemic-related learning loss and the potential long-term impacts on students’ educational attainment and future career prospects.",
+            "score": 0.33235293480317374,
+            "id": "1bcfd51c-01eb-4df1-819f-79f458f94a84",
+            "created_at": "2026-11-17T23:39:32.434564+00:00",
+            "updated_at": "2026-11-17T23:39:32.434564+00:00",
+            "score_debug": {
+              "combined_score": 0.33235293480317374,
+              "semantic_score": 0.26240915,
+              "bm25_score": 0.5684731870079344,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user expressed excitement about trying Bangkok street food during Songkran (Thai New Year in mid-April) and asked for must-try dishes, indicating strong interest in local cuisine while participating in the festival.",
+            "score": 0.3317473026812285,
+            "id": "cfeeb49f-e14b-4f54-a955-7f12b980371f",
+            "created_at": "2026-11-18T00:39:01.314232+00:00",
+            "updated_at": "2026-11-18T00:39:01.314232+00:00",
+            "score_debug": {
+              "combined_score": 0.3317473026812285,
+              "semantic_score": 0.30075407,
+              "bm25_score": 0.2585236667030712,
+              "entity_boost": 0.27009052
+            }
+          },
+          {
+            "memory": "The user was recommended follow-up questions about auction fund usage: detailed allocations to outreach and programs for low-income kids; plans to hire staff or partners; develop new services; bolster existing programs with scholarships, materials, or technology; and ensure efficient, effective use to maximize impact.",
+            "score": 0.33163097860056756,
+            "id": "87ed7b55-6729-4112-a55a-49432443a051",
+            "created_at": "2026-11-18T00:26:54.866031+00:00",
+            "updated_at": "2026-11-18T00:26:54.866031+00:00",
+            "score_debug": {
+              "combined_score": 0.33163097860056756,
+              "semantic_score": 0.30410448,
+              "bm25_score": 0.2504277415014189,
+              "entity_boost": 0.274545225
+            }
+          },
+          {
+            "memory": "User received ukulele practice guidance: practice consistently for 10–15 minutes daily, develop finger independence with dexterity exercises, experiment with varied strumming patterns (downstrokes, upstrokes, combinations), and learn simple chord progressions to play songs.",
+            "score": 0.328636278,
+            "id": "98b7eb6c-f9ba-40c6-b391-a7bee77d3755",
+            "created_at": "2026-11-18T00:48:32.256680+00:00",
+            "updated_at": "2026-11-18T00:48:32.256680+00:00",
+            "score_debug": {
+              "combined_score": 0.328636278,
+              "semantic_score": 0.48207176,
+              "bm25_score": 0.0,
+              "entity_boost": 0.339518935
+            }
+          },
+          {
+            "memory": "User recently got into Tame Impala's album 'Slow Rush' around November 2026 as part of exploring indie rock and electronic sounds, and is eager to find similar artists and albums.",
+            "score": 0.32840199400000003,
+            "id": "b24e50ca-47b0-45a0-8a63-77da9c58b402",
+            "created_at": "2026-11-18T01:08:29.976227+00:00",
+            "updated_at": "2026-11-18T01:08:29.976227+00:00",
+            "score_debug": {
+              "combined_score": 0.32840199400000003,
+              "semantic_score": 0.46413356,
+              "bm25_score": 0.0,
+              "entity_boost": 0.356871425
+            }
+          },
+          {
+            "memory": "As of November 17, 2026, the user is focusing on learning music theory with an emphasis on mastering chord progressions and is seeking resources and practice methods to improve.",
+            "score": 0.3261637714422311,
+            "id": "da95f838-3004-4c09-9060-391ee84056cb",
+            "created_at": "2026-11-17T23:43:05.706491+00:00",
+            "updated_at": "2026-11-17T23:43:05.706491+00:00",
+            "score_debug": {
+              "combined_score": 0.3261637714422311,
+              "semantic_score": 0.48053408,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3348753486055777
+            }
+          },
+          {
+            "memory": "As of mid-November 2026, the user has been using their new headphones a lot, especially during their commute.",
+            "score": 0.32579294940828873,
+            "id": "d0c13184-9418-4523-be90-d1eb571bf1d5",
+            "created_at": "2026-11-18T00:21:14.128443+00:00",
+            "updated_at": "2026-11-18T00:21:14.128443+00:00",
+            "score_debug": {
+              "combined_score": 0.32579294940828873,
+              "semantic_score": 0.51957846,
+              "bm25_score": 0.2949039135207218,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "The user was advised to experiment with alternate ukulele tunings and capo positions, try ukulele-specific techniques like fingerpicking and using a ukulele slide, and consider sharing performances with online or in-person ukulele communities for support and feedback.",
+            "score": 0.323011818,
+            "id": "b9a7991e-8d0a-4891-b091-a479342c0193",
+            "created_at": "2026-11-18T00:48:52.913675+00:00",
+            "updated_at": "2026-11-18T00:48:52.913675+00:00",
+            "score_debug": {
+              "combined_score": 0.323011818,
+              "semantic_score": 0.45004702,
+              "bm25_score": 0.0,
+              "entity_boost": 0.357482525
+            }
+          },
+          {
+            "memory": "User was recommended concrete support tasks for the new parents: do grocery shopping or place delivery orders; batch-cook reheatable meals (soups, stews, casseroles); pick up diapers, formula, and essentials; run laundry; handle light cleaning (dishes, surfaces, trash); provide pet care; babysit for a few hours; take on light maintenance/plant care/yard work; and coordinate a meal train.",
+            "score": 0.3222761812910956,
+            "id": "b62629f1-67d5-492c-89db-8996fd1a4153",
+            "created_at": "2026-11-17T23:46:29.407142+00:00",
+            "updated_at": "2026-11-17T23:46:29.407142+00:00",
+            "score_debug": {
+              "combined_score": 0.3222761812910956,
+              "semantic_score": 0.29382706,
+              "bm25_score": 0.23386784322773893,
+              "entity_boost": 0.27799555
+            }
+          },
+          {
+            "memory": "User was provided Bangkok festival/event recommendations: Songkran (Thai New Year, mid-April), Loy Krathong (November), Chinese New Year (February), Bangkok International Festival of Dance and Music (September–October), Bangkok Street Show (January), Royal Ploughing Ceremony (May, varies), Vegetarian Festival (October, Chinatown), Children’s Day (second Saturday of January), Bangkok Jazz Festival (January–February), and Thailand International Kite Festival (March, nearby Hua Hin).",
+            "score": 0.3186194132422516,
+            "id": "8649d884-7aa3-4b1d-a8f3-0e86b5d5a9d6",
+            "created_at": "2026-11-18T00:37:56.659903+00:00",
+            "updated_at": "2026-11-18T00:37:56.659903+00:00",
+            "score_debug": {
+              "combined_score": 0.3186194132422516,
+              "semantic_score": 0.12017536,
+              "bm25_score": 0.3487778481056291,
+              "entity_boost": 0.327595325
+            }
+          },
+          {
+            "memory": "The user was advised to try slightly heavier gauges (0.011–0.050 or 0.012–0.052) to achieve a fuller, more robust blues tone, starting with lighter gauges if not accustomed to avoid hand fatigue.",
+            "score": 0.318614664,
+            "id": "5f26288f-150c-440b-8a2d-4ce4a960d42f",
+            "created_at": "2026-11-18T00:48:04.698277+00:00",
+            "updated_at": "2026-11-18T00:48:04.698277+00:00",
+            "score_debug": {
+              "combined_score": 0.318614664,
+              "semantic_score": 0.46272376,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3338129
+            }
+          },
+          {
+            "memory": "User was given Instagram tips for sharing ukulele music: use high-quality visuals, add relevant hashtags such as #ukulele, #ukulelemusic, and #ukulelelove, post at least weekly without sacrificing quality, and engage followers via comments and behind-the-scenes Stories.",
+            "score": 0.31856054,
+            "id": "3e819a97-3a0f-4f75-bd4d-84a3c7d2b200",
+            "created_at": "2026-11-18T00:49:23.667109+00:00",
+            "updated_at": "2026-11-18T00:49:23.667109+00:00",
+            "score_debug": {
+              "combined_score": 0.31856054,
+              "semantic_score": 0.47117117,
+              "bm25_score": 0.0,
+              "entity_boost": 0.32523018
+            }
+          },
+          {
+            "memory": "User practices with a metronome to improve timing but is unsure they are using it to its full potential and asked for guidance on effective metronome practice on November 17, 2026.",
+            "score": 0.31569086,
+            "id": "eba164b2-1737-4446-bf5a-0363dc51c009",
+            "created_at": "2026-11-17T23:44:00.333698+00:00",
+            "updated_at": "2026-11-17T23:44:00.333698+00:00",
+            "score_debug": {
+              "combined_score": 0.31569086,
+              "semantic_score": 0.482194,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30703315
+            }
+          },
+          {
+            "memory": "Regarding the rediscovered bike, the user was advised to get a tune-up at a local bike shop or, if comfortable, follow online DIY maintenance tutorials.",
+            "score": 0.3134957,
+            "id": "bcf8a0cc-0db4-41b5-9a08-0b39ee823677",
+            "created_at": "2026-11-17T23:52:48.736227+00:00",
+            "updated_at": "2026-11-17T23:52:48.736227+00:00",
+            "score_debug": {
+              "combined_score": 0.3134957,
+              "semantic_score": 0.47565305,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3080862
+            }
+          },
+          {
+            "memory": "For improving blues feel, the user was advised to experiment with wrist/arm/finger vibrato, study phrasing by listening to B.B. King, Albert King, and Eric Clapton, and use dynamic contrast by varying volume and intensity.",
+            "score": 0.313132678,
+            "id": "b685458a-8ac2-4789-a2b3-4165bbeba5f0",
+            "created_at": "2026-11-18T00:48:04.702045+00:00",
+            "updated_at": "2026-11-18T00:48:04.702045+00:00",
+            "score_debug": {
+              "combined_score": 0.313132678,
+              "semantic_score": 0.46217617,
+              "bm25_score": 0.0,
+              "entity_boost": 0.320655525
+            }
+          },
+          {
+            "memory": "The user was given a structured daily chord-progression practice plan: 5–10 minutes warm-ups (finger stretches, chromatic scales, arpeggios) and chord review; 15–20 minutes looping a weekly progression (start with I–IV–V or ii–V–I), slow-to-fast, chunking, metronome, and rhythm/strum/7th–sus variations; 10–15 minutes applying to songs, improvising, and writing; 5 minutes to review and reflect.",
+            "score": 0.30910294,
+            "id": "7bffc5e9-1ce2-4a33-a7a1-b0f85d6277fc",
+            "created_at": "2026-11-17T23:43:36.351805+00:00",
+            "updated_at": "2026-11-17T23:43:36.351805+00:00",
+            "score_debug": {
+              "combined_score": 0.30910294,
+              "semantic_score": 0.4166302,
+              "bm25_score": 0.0,
+              "entity_boost": 0.35612715
+            }
+          },
+          {
+            "memory": "User was given an overview of crochet hook target markets: crafters, hobbyists, seniors, parents and grandparents making items for family, DIY enthusiasts, fashion lovers creating personalized clothing and accessories, and people seeking to learn a new skill; overall, crochet hooks appeal across ages and backgrounds interested in crafting, DIY, fashion, personal development, and self-expression.",
+            "score": 0.3072180556601013,
+            "id": "ac9630fb-5e18-4a7b-8b07-c7dbe2a02554",
+            "created_at": "2026-11-18T00:02:52.293702+00:00",
+            "updated_at": "2026-11-18T00:02:52.293702+00:00",
+            "score_debug": {
+              "combined_score": 0.3072180556601013,
+              "semantic_score": 0.24218962,
+              "bm25_score": 0.23244300180634825,
+              "entity_boost": 0.2934125173439049
+            }
+          },
+          {
+            "memory": "User was given metronome practice fundamentals: start very slow (40–60 BPM), set a clear tempo goal for a passage, gradually increase speed, alternate playing with and without the click, record sessions to spot issues, gamify challenges, and integrate the metronome into songs and exercises.",
+            "score": 0.304781808,
+            "id": "eeaeb491-cf9d-4561-8d55-c128fa0bb834",
+            "created_at": "2026-11-17T23:44:00.338188+00:00",
+            "updated_at": "2026-11-17T23:44:00.338188+00:00",
+            "score_debug": {
+              "combined_score": 0.304781808,
+              "semantic_score": 0.44600362,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3159509
+            }
+          },
+          {
+            "memory": "User's biggest hurdle in maintaining a daily learning routine is staying motivated and avoiding boredom; to keep it fresh, the user mixes Crash Course videos, podcasts, and books but still feels progress isn’t fast enough as of November 17, 2026.",
+            "score": 0.304760504,
+            "id": "79449407-c16f-43bd-bcd6-7a243af296b6",
+            "created_at": "2026-11-17T23:41:09.785697+00:00",
+            "updated_at": "2026-11-17T23:41:09.785697+00:00",
+            "score_debug": {
+              "combined_score": 0.304760504,
+              "semantic_score": 0.45473856,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3071627
+            }
+          },
+          {
+            "memory": "User was given YouTube tips for ukulele content: ensure clear video and audio, keep videos 3–5 minutes, optimize titles and tags with keywords like “ukulele cover,” “ukulele tutorial,” and “ukulele music,” and engage commenters while encouraging subscriptions.",
+            "score": 0.30463715999999996,
+            "id": "23e2cfb7-a69d-4bf3-961a-507970d03a33",
+            "created_at": "2026-11-18T00:49:23.660940+00:00",
+            "updated_at": "2026-11-18T00:49:23.660940+00:00",
+            "score_debug": {
+              "combined_score": 0.30463715999999996,
+              "semantic_score": 0.44324705,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31834585
+            }
+          },
+          {
+            "memory": "User is trying to create a consistent daily study routine—setting aside time each day to learn something new—but finds it hard to stick to as of November 17, 2026.",
+            "score": 0.30185860551533406,
+            "id": "2717600b-6fbd-4d5a-9ff2-42725c968b6f",
+            "created_at": "2026-11-17T23:40:43.330252+00:00",
+            "updated_at": "2026-11-17T23:40:43.330252+00:00",
+            "score_debug": {
+              "combined_score": 0.30185860551533406,
+              "semantic_score": 0.4823699,
+              "bm25_score": 0.2722766137883352,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User recently learned about Python in a free online lecture around early November 2026.",
+            "score": 0.29938172,
+            "id": "b841fd09-c407-47ed-b161-06b8c4a6a0a2",
+            "created_at": "2026-11-18T00:50:32.405054+00:00",
+            "updated_at": "2026-11-18T00:50:32.405054+00:00",
+            "score_debug": {
+              "combined_score": 0.29938172,
+              "semantic_score": 0.46291953,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28553477
+            }
+          },
+          {
+            "memory": "User was informed that technology has transformed the art world through digital art (painting, sculpture, video), digital photography with editing software, 3D printing enabling new sculptural forms, virtual reality for immersive artworks, and social media for broader audience reach and networking.",
+            "score": 0.2990901408035265,
+            "id": "9cb26da7-588e-48d8-8519-8d88112ac47d",
+            "created_at": "2026-11-17T23:22:30.773175+00:00",
+            "updated_at": "2026-11-17T23:22:30.773175+00:00",
+            "score_debug": {
+              "combined_score": 0.2990901408035265,
+              "semantic_score": 0.23037866,
+              "bm25_score": 0.25201732137944566,
+              "entity_boost": 0.2653293706293707
+            }
+          },
+          {
+            "memory": "User is considering starting a YouTube channel or an Instagram account to share ukulele performances and connect with other ukulele enthusiasts.",
+            "score": 0.297883652,
+            "id": "bedafd4c-d2e1-42f4-b1e1-a97eb878bd4d",
+            "created_at": "2026-11-18T00:49:23.654511+00:00",
+            "updated_at": "2026-11-18T00:49:23.654511+00:00",
+            "score_debug": {
+              "combined_score": 0.297883652,
+              "semantic_score": 0.45968425,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28502488
+            }
+          },
+          {
+            "memory": "User plans to attend more jazz concerts locally and is seeking recommendations for good jazz venues and upcoming events in their city, reflecting a growing interest in live jazz alongside their recent pattern of frequent live music attendance.",
+            "score": 0.293807016,
+            "id": "952fa084-b21a-4a83-9e69-95b70818e5b6",
+            "created_at": "2026-11-18T01:09:37.747333+00:00",
+            "updated_at": "2026-11-18T01:09:37.747333+00:00",
+            "score_debug": {
+              "combined_score": 0.293807016,
+              "semantic_score": 0.41415894,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3203586
+            }
+          },
+          {
+            "memory": "The user was informed that major opportunities in the desert Southwest include abundant solar and wind resources for clean generation, rising energy demand from population growth, local job creation through new facilities, and greater energy independence by reducing reliance on nonrenewable sources.",
+            "score": 0.2913527055595782,
+            "id": "d1d41c01-8959-427c-9f17-0d9a10778d87",
+            "created_at": "2026-11-18T01:15:13.151132+00:00",
+            "updated_at": "2026-11-18T01:15:13.151132+00:00",
+            "score_debug": {
+              "combined_score": 0.2913527055595782,
+              "semantic_score": 0.19797052,
+              "bm25_score": 0.2536215938989455,
+              "entity_boost": 0.27678965
+            }
+          },
+          {
+            "memory": "User was advised on accurate Exergen Temporal Artery thermometer use: follow the manual; place at the forehead center and slide along the temporal artery while maintaining skin contact; take multiple readings and use the highest; avoid interference from metal objects, electrical devices, and high humidity; ensure firm contact/fit during scans.",
+            "score": 0.289162848,
+            "id": "dcf1dce8-a238-4d45-8980-f07c22b2ae74",
+            "created_at": "2026-11-18T01:06:59.277063+00:00",
+            "updated_at": "2026-11-18T01:06:59.277063+00:00",
+            "score_debug": {
+              "combined_score": 0.289162848,
+              "semantic_score": 0.3794372,
+              "bm25_score": 0.0,
+              "entity_boost": 0.34346992
+            }
+          },
+          {
+            "memory": "User ordered string lights from Amazon for ambient bedroom lighting and is open to additional ideas to enhance the room’s atmosphere.",
+            "score": 0.287988592,
+            "id": "8fc1debd-7ddc-4740-9386-a9e6dc73d708",
+            "created_at": "2026-11-17T23:22:50.499462+00:00",
+            "updated_at": "2026-11-17T23:22:50.499462+00:00",
+            "score_debug": {
+              "combined_score": 0.287988592,
+              "semantic_score": 0.42221963,
+              "bm25_score": 0.0,
+              "entity_boost": 0.29775185
+            }
+          },
+          {
+            "memory": "In November 2026, the user has been gravitating toward upbeat tracks and curates a 'Morning Motivation' playlist for energizing starts to the day; they are seeking additional upbeat songs to add.",
+            "score": 0.28704887599999995,
+            "id": "244211e2-d50d-45e5-a58b-27cbbc8d0f64",
+            "created_at": "2026-11-18T01:09:11.201152+00:00",
+            "updated_at": "2026-11-18T01:09:11.201152+00:00",
+            "score_debug": {
+              "combined_score": 0.28704887599999995,
+              "semantic_score": 0.40261817,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31500402
+            }
+          },
+          {
+            "memory": "After receiving tailored advice and resources, the user feels more confident about creating a consistent daily study routine and tracking progress, strengthening motivation for their self-directed learning as of November 17, 2026.",
+            "score": 0.286818458,
+            "id": "056061ed-bee0-493b-a113-60c70fa89a0c",
+            "created_at": "2026-11-17T23:42:31.572173+00:00",
+            "updated_at": "2026-11-17T23:42:31.572173+00:00",
+            "score_debug": {
+              "combined_score": 0.286818458,
+              "semantic_score": 0.44583923,
+              "bm25_score": 0.0,
+              "entity_boost": 0.271206915
+            }
+          },
+          {
+            "memory": "The user is considering joining an online community or finding a learning buddy to boost motivation and accountability for their daily learning efforts.",
+            "score": 0.286743588,
+            "id": "299b0eb9-65bd-4dd7-9a9e-32dc1dc55fe1",
+            "created_at": "2026-11-17T23:41:35.293614+00:00",
+            "updated_at": "2026-11-17T23:41:35.293614+00:00",
+            "score_debug": {
+              "combined_score": 0.286743588,
+              "semantic_score": 0.43835962,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27849935
+            }
+          },
+          {
+            "memory": "User was recommended popular electric string sets to try: Ernie Ball Regular Slinky (0.010–0.046), D'Addario EXL110 (0.010–0.046), and Elixir strings in various gauges noted for extended lifespan and a bright, crisp tone.",
+            "score": 0.286681138,
+            "id": "f3e8b910-d0b6-48dd-80fb-afbed6e90f4a",
+            "created_at": "2026-11-18T00:47:24.392566+00:00",
+            "updated_at": "2026-11-18T00:47:24.392566+00:00",
+            "score_debug": {
+              "combined_score": 0.286681138,
+              "semantic_score": 0.36661556,
+              "bm25_score": 0.0,
+              "entity_boost": 0.350087285
+            }
+          },
+          {
+            "memory": "User was informed that Mitsui’s global business strategy centers on four pillars: expanding existing businesses, developing new businesses, expanding its global footprint, and investing in human capital.",
+            "score": 0.28549231994312957,
+            "id": "0f0ce647-867f-445f-8e03-de389a926d5d",
+            "created_at": "2026-11-17T23:50:36.756683+00:00",
+            "updated_at": "2026-11-17T23:50:36.756683+00:00",
+            "score_debug": {
+              "combined_score": 0.28549231994312957,
+              "semantic_score": 0.20328853,
+              "bm25_score": 0.26527351985782405,
+              "entity_boost": 0.24516875
+            }
+          },
+          {
+            "memory": "User was informed that plant adaptations include: thorns/spines for defense (e.g., cacti); long, fibrous roots to anchor in sandy soils (beach grasses); thick, waxy leaves to retain water in deserts and high altitudes; bright, nectar-rich flowers to attract pollinators; and wind-dispersed seeds with parachutes (dandelions).",
+            "score": 0.28437966454592867,
+            "id": "0e848f12-79f5-4a80-9783-bcfc01c01ad5",
+            "created_at": "2026-11-18T00:18:19.615416+00:00",
+            "updated_at": "2026-11-18T00:18:19.615416+00:00",
+            "score_debug": {
+              "combined_score": 0.28437966454592867,
+              "semantic_score": 0.18619741,
+              "bm25_score": 0.5247517513648217,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "Assistant outlined bike tune-up options: a local shop offers expertise, time savings, and high-quality, safety-checked work but costs money and may involve a wait; DIY saves money, builds skills, and offers control but is time-consuming, risks mistakes, and safety issues. Recommendation: use a shop if not comfortable; DIY with online tutorials if mechanically inclined.",
+            "score": 0.28046227386613387,
+            "id": "c69859d0-e5c0-4bca-8d01-f321da19924a",
+            "created_at": "2026-11-17T23:54:53.399584+00:00",
+            "updated_at": "2026-11-17T23:54:53.399584+00:00",
+            "score_debug": {
+              "combined_score": 0.28046227386613387,
+              "semantic_score": 0.38399035,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3171653346653347
+            }
+          },
+          {
+            "memory": "User started assembling the bed frame on November 15, 2026, and feels it has already transformed the bedroom space.",
+            "score": 0.280104766,
+            "id": "26eae964-7eb2-4f56-b792-4262fc748a55",
+            "created_at": "2026-11-17T23:22:50.502694+00:00",
+            "updated_at": "2026-11-17T23:22:50.502694+00:00",
+            "score_debug": {
+              "combined_score": 0.280104766,
+              "semantic_score": 0.4210408,
+              "bm25_score": 0.0,
+              "entity_boost": 0.279221115
+            }
+          },
+          {
+            "memory": "User was advised to ask the museum about age ranges and skill levels, class duration and meeting frequency, total sessions, what materials are provided and any supply fees, instructor qualifications, and to check the education department or website for current schedules.",
+            "score": 0.276512628,
+            "id": "a4ae7634-783b-407f-910c-7422b98a5732",
+            "created_at": "2026-11-18T00:24:58.345042+00:00",
+            "updated_at": "2026-11-18T00:24:58.345042+00:00",
+            "score_debug": {
+              "combined_score": 0.276512628,
+              "semantic_score": 0.39023322,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30104835
+            }
+          },
+          {
+            "memory": "As of November 17, 2026, the user has dedicated their free time to self-directed educational content for three months (starting around August 2026) to make the most of their time.",
+            "score": 0.27553662,
+            "id": "d982d847-1ecc-4f21-88a8-85768d2ef8c6",
+            "created_at": "2026-11-17T23:39:53.318556+00:00",
+            "updated_at": "2026-11-17T23:39:53.318556+00:00",
+            "score_debug": {
+              "combined_score": 0.27553662,
+              "semantic_score": 0.4073153,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28152625
+            }
+          },
+          {
+            "memory": "User was advised to select a fitness tracker based on budget (under $100 to 300+), desired features (GPS, heart rate, music storage), phone compatibility (iOS or Android), and design, and to read reviews, try devices on, and set goals/challenges for motivation.",
+            "score": 0.27482342885114885,
+            "id": "96171ef3-67cc-4799-80cd-62b2156a289c",
+            "created_at": "2026-11-18T00:31:50.361423+00:00",
+            "updated_at": "2026-11-18T00:31:50.361423+00:00",
+            "score_debug": {
+              "combined_score": 0.27482342885114885,
+              "semantic_score": 0.3841807,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30287787212787215
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user has been using an Accu-Chek Guide blood glucose monitor more frequently, including post-meal checks, to track blood sugar and identify patterns for dietary adjustments.",
+            "score": 0.2740099288591408,
+            "id": "1715de42-7f35-4e5f-a0db-37097cbca6c2",
+            "created_at": "2026-11-18T01:05:56.347757+00:00",
+            "updated_at": "2026-11-18T01:05:56.347757+00:00",
+            "score_debug": {
+              "combined_score": 0.2740099288591408,
+              "semantic_score": 0.40610197,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2789228521478522
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user plans to check recommended online resources and visit local art supply stores to source wire mesh materials and tools, focusing on experimenting with different gauges and mesh types to create unique textures and sculptural forms.",
+            "score": 0.2733832510449551,
+            "id": "cf445b9f-fb5e-464d-9d0d-652ed77892c6",
+            "created_at": "2026-11-18T00:55:58.654898+00:00",
+            "updated_at": "2026-11-18T00:55:58.654898+00:00",
+            "score_debug": {
+              "combined_score": 0.2733832510449551,
+              "semantic_score": 0.40389574,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27956238761238766
+            }
+          },
+          {
+            "memory": "User was recommended ways to discover local jazz shows: Eventbrite, Songkick, and Bandsintown; checking local music blogs/newspapers and jazz club or society calendars; and following local jazz musicians, promoters, and venues on social media for timely announcements.",
+            "score": 0.27334373,
+            "id": "ac39f829-3dc1-425b-a528-6d3519fef6ef",
+            "created_at": "2026-11-18T01:09:37.753139+00:00",
+            "updated_at": "2026-11-18T01:09:37.753139+00:00",
+            "score_debug": {
+              "combined_score": 0.27334373,
+              "semantic_score": 0.37394935,
+              "bm25_score": 0.0,
+              "entity_boost": 0.309409975
+            }
+          },
+          {
+            "memory": "On November 17, 2026, the user sought advice to increase tennis serve speed, indicating they play tennis and want to improve their serve power and effectiveness.",
+            "score": 0.27322418800000003,
+            "id": "29398a63-8d40-4e91-9385-d75e659a2100",
+            "created_at": "2026-11-17T23:47:50.417570+00:00",
+            "updated_at": "2026-11-17T23:47:50.417570+00:00",
+            "score_debug": {
+              "combined_score": 0.27322418800000003,
+              "semantic_score": 0.35109854,
+              "bm25_score": 0.0,
+              "entity_boost": 0.33196193
+            }
+          },
+          {
+            "memory": "On November 17, 2026, the user is planning to get a bedroom humidifier to improve their comfort and to support their fiddle leaf fig (Ficus lyrata) by maintaining higher humidity.",
+            "score": 0.270994044,
+            "id": "90979213-6f6f-4f95-bc01-3e82547efd99",
+            "created_at": "2026-11-17T23:24:38.495282+00:00",
+            "updated_at": "2026-11-17T23:24:38.495282+00:00",
+            "score_debug": {
+              "combined_score": 0.270994044,
+              "semantic_score": 0.36668843,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31079668
+            }
+          },
+          {
+            "memory": "User has been regularly tracking blood pressure with an Omron Evolv BP monitor as of November 18, 2026, aiming to identify patterns and adjust diet and lifestyle to keep their blood pressure under control.",
+            "score": 0.27092239344655344,
+            "id": "3a020f9f-7075-4237-ad6b-b0e0f2f611dc",
+            "created_at": "2026-11-18T01:06:23.661523+00:00",
+            "updated_at": "2026-11-18T01:06:23.661523+00:00",
+            "score_debug": {
+              "combined_score": 0.27092239344655344,
+              "semantic_score": 0.3944196,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28288638361638363
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user planned to start by listening to Mild High Club's 'Skiptracing' and Glass Animals' 'How to Be a Human Being' from earlier recommendations as their next upbeat selections.",
+            "score": 0.26998759982017984,
+            "id": "d91624b9-ceb2-4004-aa2d-5b853b12d5e6",
+            "created_at": "2026-11-18T01:09:11.205279+00:00",
+            "updated_at": "2026-11-18T01:09:11.205279+00:00",
+            "score_debug": {
+              "combined_score": 0.26998759982017984,
+              "semantic_score": 0.36423355,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31073544955044957
+            }
+          },
+          {
+            "memory": "User was recommended a 10–15 minute pre-game dynamic warm-up: leg swings (forward/back) to loosen hips and legs, high knees running in place to elevate heart rate, and arm circles to mobilize shoulders for midfield demands.",
+            "score": 0.26904659443756246,
+            "id": "7681c8e0-1da8-473a-b355-84d1fa812a6c",
+            "created_at": "2026-11-18T00:58:27.762444+00:00",
+            "updated_at": "2026-11-18T00:58:27.762444+00:00",
+            "score_debug": {
+              "combined_score": 0.26904659443756246,
+              "semantic_score": 0.36419758,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30841890609390615
+            }
+          },
+          {
+            "memory": "User was recommended calming audio and mindfulness options for pre-sleep wind-down: soft classical music, nature sounds or white noise, ASMR videos, meditation or mindfulness using apps like Headspace or Calm, and a simple 4-4-4 deep breathing exercise.",
+            "score": 0.26895388000000003,
+            "id": "d7cbe854-82cc-4d30-a102-5e0ad11ef486",
+            "created_at": "2026-11-18T00:16:57.474083+00:00",
+            "updated_at": "2026-11-18T00:16:57.474083+00:00",
+            "score_debug": {
+              "combined_score": 0.26895388000000003,
+              "semantic_score": 0.3600885,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3122962
+            }
+          },
+          {
+            "memory": "User was advised on choosing a bike shop: check reputation via friends and Yelp/Google/Facebook reviews; look for certified mechanics (NBDA, PBMA); ensure experience with their bike type; confirm needed services (tune-ups, fittings, custom builds, wheel building); compare prices; evaluate communication and cleanliness; ask about warranties; take a test ride; and trust their gut.",
+            "score": 0.268495702,
+            "id": "ff82043c-9b34-45a8-b52c-628b26033531",
+            "created_at": "2026-11-17T23:55:18.334071+00:00",
+            "updated_at": "2026-11-17T23:55:18.334071+00:00",
+            "score_debug": {
+              "combined_score": 0.268495702,
+              "semantic_score": 0.33712834,
+              "bm25_score": 0.0,
+              "entity_boost": 0.334110915
+            }
+          },
+          {
+            "memory": "User was recommended targeted tutorials and guides: 'The Wire Mesh Sculpture Guide' by Sculpture by Design; 'Wire Mesh Sculpture Tutorial' by Art by LTM; and 'Wire Working 101' by The Wire Wizard, covering mesh manipulation, weaving, shaping, texturing, and essential tools.",
+            "score": 0.26827884,
+            "id": "fa3a5839-a93a-4dd4-ae8f-59fe481a3eda",
+            "created_at": "2026-11-18T00:54:31.191397+00:00",
+            "updated_at": "2026-11-18T00:54:31.191397+00:00",
+            "score_debug": {
+              "combined_score": 0.26827884,
+              "semantic_score": 0.332286,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3384111
+            }
+          },
+          {
+            "memory": "As of November 17, 2026, the user is researching volleyball training and seeking tips to improve their hitting technique, indicating active interest in developing more power, control, and effectiveness as a hitter.",
+            "score": 0.267693494,
+            "id": "8f8eaf20-da02-47fc-9e6a-37bb1aa4f6a7",
+            "created_at": "2026-11-17T23:48:17.577913+00:00",
+            "updated_at": "2026-11-17T23:48:17.577913+00:00",
+            "score_debug": {
+              "combined_score": 0.267693494,
+              "semantic_score": 0.3666951,
+              "bm25_score": 0.0,
+              "entity_boost": 0.302538635
+            }
+          },
+          {
+            "memory": "The assistant advised the user to practice consistently by listening to a Spanish-learning podcast at least once per week to build comprehension and confidence ahead of the Spain trip.",
+            "score": 0.26768022399999997,
+            "id": "61349b93-b614-45b4-aa05-2358c9a65c8a",
+            "created_at": "2026-11-18T01:01:25.136485+00:00",
+            "updated_at": "2026-11-18T01:01:25.136485+00:00",
+            "score_debug": {
+              "combined_score": 0.26768022399999997,
+              "semantic_score": 0.40352166,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2656789
+            }
+          },
+          {
+            "memory": "User expressed specific interest in learning about the Magna Carta and was attracted to the Salisbury Cathedral stop on the tour, seeking context on the document’s history and significance.",
+            "score": 0.2666596256343657,
+            "id": "35c4145d-7e2b-49cc-9af3-2133b7da1a5b",
+            "created_at": "2026-11-18T00:44:25.925747+00:00",
+            "updated_at": "2026-11-18T00:44:25.925747+00:00",
+            "score_debug": {
+              "combined_score": 0.2666596256343657,
+              "semantic_score": 0.39016315,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27648591408591416
+            }
+          },
+          {
+            "memory": "User was recommended communities and platforms to meet learners: Reddit subreddits (r/learnprogramming, r/personalfinance, r/history), Discord servers, Stack Overflow and Quora forums, social groups on Facebook/LinkedIn/Twitter, and course forums on Coursera, edX, and Udemy.",
+            "score": 0.2663148503984143,
+            "id": "62cf8f04-9674-44ae-99b4-991b042ea6c2",
+            "created_at": "2026-11-17T23:41:35.300990+00:00",
+            "updated_at": "2026-11-17T23:41:35.300990+00:00",
+            "score_debug": {
+              "combined_score": 0.2663148503984143,
+              "semantic_score": 0.36861557,
+              "bm25_score": 0.0,
+              "entity_boost": 0.29717155599603573
+            }
+          },
+          {
+            "memory": "The user uses an Accu-Chek Guide blood glucose monitor and has increased testing frequency, especially after meals, to identify patterns and adjust diet based on post-prandial readings.",
+            "score": 0.26626606085914084,
+            "id": "209c5063-0dde-4ab7-8258-d708aafc705a",
+            "created_at": "2026-11-18T01:07:35.275163+00:00",
+            "updated_at": "2026-11-18T01:07:35.275163+00:00",
+            "score_debug": {
+              "combined_score": 0.26626606085914084,
+              "semantic_score": 0.3867423,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2789228521478522
+            }
+          },
+          {
+            "memory": "The user was recommended online learning platforms Coursera, edX, and Udemy to explore expert-led courses in history, science, and philosophy as part of their educational goals.",
+            "score": 0.265695668,
+            "id": "9c9abc1c-3e20-4905-a5e9-e0c08f2013c7",
+            "created_at": "2026-11-17T23:39:53.334861+00:00",
+            "updated_at": "2026-11-17T23:39:53.334861+00:00",
+            "score_debug": {
+              "combined_score": 0.265695668,
+              "semantic_score": 0.33939964,
+              "bm25_score": 0.0,
+              "entity_boost": 0.32483953
+            }
+          },
+          {
+            "memory": "User intends to use event discovery resources—Eventbrite, Songkick, Bandsintown, and local jazz club or society calendars—to find upcoming jazz shows in their area, acting on earlier recommendations.",
+            "score": 0.2649008566953047,
+            "id": "15be0613-23c4-4c40-b1e7-332b16478b18",
+            "created_at": "2026-11-18T01:10:21.342900+00:00",
+            "updated_at": "2026-11-18T01:10:21.342900+00:00",
+            "score_debug": {
+              "combined_score": 0.2649008566953047,
+              "semantic_score": 0.36061388,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30163826173826175
+            }
+          },
+          {
+            "memory": "User received rhythm-development metronome drills: subdivide beats into eighths and sixteenths; practice varied time signatures (3/4, 6/8, 5/4); emphasize upbeats (the “and” of beat 1); and explore polyrhythms/beat placements (e.g., accents on beats 1 and 3 versus 2 and 4).",
+            "score": 0.264747792,
+            "id": "0bd9465b-7d14-4725-b283-af7275a10c26",
+            "created_at": "2026-11-17T23:44:00.347370+00:00",
+            "updated_at": "2026-11-17T23:44:00.347370+00:00",
+            "score_debug": {
+              "combined_score": 0.264747792,
+              "semantic_score": 0.34679568,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3150738
+            }
+          },
+          {
+            "memory": "In early to mid-November 2026, the user volunteered at an event’s registration desk, processing participant registrations and answering questions, and found it a great experience for meeting new people.",
+            "score": 0.26325658477095937,
+            "id": "26a1a6fb-b641-49f6-b8a7-5c025c92e0c0",
+            "created_at": "2026-11-18T00:27:13.263433+00:00",
+            "updated_at": "2026-11-18T00:27:13.263433+00:00",
+            "score_debug": {
+              "combined_score": 0.26325658477095937,
+              "semantic_score": 0.3893987,
+              "bm25_score": 0.26874276192739843,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "User was recommended Pilates classes via apps/sites: Peloton Digital (large library including beginner and advanced), Alo Moves (varied Pilates with experienced instructors and high-quality production), and Pilates Anytime (extensive classes focused on proper form and technique).",
+            "score": 0.26291110399999995,
+            "id": "55d7e8b1-44d6-46ba-a36d-3aab0228aed3",
+            "created_at": "2026-11-18T00:33:31.001414+00:00",
+            "updated_at": "2026-11-18T00:33:31.001414+00:00",
+            "score_debug": {
+              "combined_score": 0.26291110399999995,
+              "semantic_score": 0.35385674,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30342102
+            }
+          },
+          {
+            "memory": "User was advised strategies to find local wire mesh suppliers: search for “art supply stores near me” or “wire mesh suppliers near me,” check local craft/bead/jewelry-making shops, visit industrial supply or hardware stores, and ask local artists or sculptors—and store staff—about in-stock options and special orders.",
+            "score": 0.262517224,
+            "id": "bdff13ba-6272-41ea-96d0-c2c2b4ac5d11",
+            "created_at": "2026-11-18T00:55:19.715468+00:00",
+            "updated_at": "2026-11-18T00:55:19.715468+00:00",
+            "score_debug": {
+              "combined_score": 0.262517224,
+              "semantic_score": 0.35592866,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3003644
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user plans to start experimenting with different gauges of hexagonal wire mesh to create organic, natural forms and intricate, lace-like textures, inspired by hex-mesh sculptures they have seen.",
+            "score": 0.262297292,
+            "id": "12ac861b-77d6-4ac4-874e-0a9566447fef",
+            "created_at": "2026-11-18T00:56:31.673472+00:00",
+            "updated_at": "2026-11-18T00:56:31.673472+00:00",
+            "score_debug": {
+              "combined_score": 0.262297292,
+              "semantic_score": 0.37768453,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2780587
+            }
+          },
+          {
+            "memory": "User was recommended jazz/fusion and instrumental artists: Thundercat ('Drunk'), Robert Glasper ('Black Radio'), and BADBADNOTGOOD ('IV').",
+            "score": 0.26047699399999996,
+            "id": "5e98a032-c87e-4cb3-8a2b-0341332d15cb",
+            "created_at": "2026-11-18T01:08:29.988574+00:00",
+            "updated_at": "2026-11-18T01:08:29.988574+00:00",
+            "score_debug": {
+              "combined_score": 0.26047699399999996,
+              "semantic_score": 0.31499982,
+              "bm25_score": 0.0,
+              "entity_boost": 0.336192665
+            }
+          },
+          {
+            "memory": "User was advised on string materials and tones: nickel for warm, smooth sound (good for jazz and blues), stainless steel for bright, crisp attack (rock and metal), coated strings to reduce corrosion and preserve tone, and flatwounds for a smooth, mellow feel often used in jazz and R&B.",
+            "score": 0.260087548,
+            "id": "3ed9cbca-fcc6-4efe-a4e1-4ea3ca06617c",
+            "created_at": "2026-11-18T00:47:24.384069+00:00",
+            "updated_at": "2026-11-18T00:47:24.384069+00:00",
+            "score_debug": {
+              "combined_score": 0.260087548,
+              "semantic_score": 0.35822737,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2919915
+            }
+          },
+          {
+            "memory": "The user received practical tips for wire mesh work: bend, shape, and twist to manipulate texture; layer different meshes and gauges; optionally add fabric, paper, or found objects; keep mesh clean and dry to prevent corrosion; use purpose-built cutters and pliers; and practice patience and persistence.",
+            "score": 0.25958805199999996,
+            "id": "ea890aaa-7d7e-480f-a946-1aefad039bf5",
+            "created_at": "2026-11-18T00:55:58.670218+00:00",
+            "updated_at": "2026-11-18T00:55:58.670218+00:00",
+            "score_debug": {
+              "combined_score": 0.25958805199999996,
+              "semantic_score": 0.3444798,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30449033
+            }
+          },
+          {
+            "memory": "User loves the houseplants purchased from The Sill; the plants make the bedroom feel more alive, and the user enjoys caring for them as part of creating a cozy, relaxing space.",
+            "score": 0.25947938722477526,
+            "id": "75806cd7-5dcc-42d5-b5fa-df6c44d2f122",
+            "created_at": "2026-11-17T23:24:07.220102+00:00",
+            "updated_at": "2026-11-17T23:24:07.220102+00:00",
+            "score_debug": {
+              "combined_score": 0.25947938722477526,
+              "semantic_score": 0.34663653,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30206193806193815
+            }
+          },
+          {
+            "memory": "User was recommended auditory activities for newborns to 3-month-olds: calming music with gentle swaying or bouncing, sound exploration using rattles, squeaky toys, or a simple instrument, and story time with board or cloth books featuring high-contrast images and textures.",
+            "score": 0.259238956,
+            "id": "c62be14e-8993-4bf5-81be-87cc2dc1a6d8",
+            "created_at": "2026-11-17T23:45:49.945891+00:00",
+            "updated_at": "2026-11-17T23:45:49.945891+00:00",
+            "score_debug": {
+              "combined_score": 0.259238956,
+              "semantic_score": 0.32788774,
+              "bm25_score": 0.0,
+              "entity_boost": 0.32020965
+            }
+          },
+          {
+            "memory": "On November 17, 2026, the user decided to start redecorating the living room by focusing on lighting first and asked for cozy table and floor lamp recommendations to create a warm, inviting atmosphere.",
+            "score": 0.25921354,
+            "id": "cc9294f4-0103-42f9-abec-1f82f0104ac3",
+            "created_at": "2026-11-17T23:53:57.331887+00:00",
+            "updated_at": "2026-11-17T23:53:57.331887+00:00",
+            "score_debug": {
+              "combined_score": 0.25921354,
+              "semantic_score": 0.3629453,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28508855
+            }
+          },
+          {
+            "memory": "Around November 17, 2026, the user plans to catch up with their brother and sister-in-law about their experience with newborn Lucas and wants to approach the conversation sensitively, avoiding intrusive or prying questions.",
+            "score": 0.2585345082059104,
+            "id": "568995f3-035e-4f3b-a26e-7065a98397f1",
+            "created_at": "2026-11-17T23:46:06.512720+00:00",
+            "updated_at": "2026-11-17T23:46:06.512720+00:00",
+            "score_debug": {
+              "combined_score": 0.2585345082059104,
+              "semantic_score": 0.37151873,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27481754051477597
+            }
+          },
+          {
+            "memory": "Additional support methods recommended: record swings to analyze form; build power, speed, and agility with squats, lunges, and box jumps; and simulate game-like scenarios by hitting under defender pressure and aiming at defined targets to improve transfer from practice to matches.",
+            "score": 0.25760063200000005,
+            "id": "c9426863-a08e-49d4-a775-c68604bef25e",
+            "created_at": "2026-11-17T23:48:17.598496+00:00",
+            "updated_at": "2026-11-17T23:48:17.598496+00:00",
+            "score_debug": {
+              "combined_score": 0.25760063200000005,
+              "semantic_score": 0.34620053,
+              "bm25_score": 0.0,
+              "entity_boost": 0.29780105
+            }
+          },
+          {
+            "memory": "User received general creator guidance: be authentic, keep tone, style, and quality consistent across platforms, promote content on social media, forums, and communities to boost visibility, and remember to have fun while sharing music.",
+            "score": 0.25699278,
+            "id": "e65b75f3-bb95-4e81-964b-bcff2545f2eb",
+            "created_at": "2026-11-18T00:49:23.670177+00:00",
+            "updated_at": "2026-11-18T00:49:23.670177+00:00",
+            "score_debug": {
+              "combined_score": 0.25699278,
+              "semantic_score": 0.3304987,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31198325
+            }
+          },
+          {
+            "memory": "The user was recommended educational podcasts—'Stuff You Should Know', 'How I Built This', 'The TED Radio Hour', and 'Hardcore History'—to complement their self-directed learning focus.",
+            "score": 0.25605353,
+            "id": "c6fc02b7-b1b9-437c-b88f-d1f7e3b83aba",
+            "created_at": "2026-11-17T23:39:53.330347+00:00",
+            "updated_at": "2026-11-17T23:39:53.330347+00:00",
+            "score_debug": {
+              "combined_score": 0.25605353,
+              "semantic_score": 0.35918444,
+              "bm25_score": 0.0,
+              "entity_boost": 0.280949385
+            }
+          },
+          {
+            "memory": "User was advised to log each blood pressure reading with time of day, diet, physical activity, medications, stress, and sleep quality; analyze trends across times and meals; be consistent with the schedule; and use apps such as Omron HeartAdvisor or Blood Pressure Diary to review patterns.",
+            "score": 0.25598723999999995,
+            "id": "064a3c94-328a-43e4-884f-96f0d2f4b3e1",
+            "created_at": "2026-11-18T01:06:23.670430+00:00",
+            "updated_at": "2026-11-18T01:06:23.670430+00:00",
+            "score_debug": {
+              "combined_score": 0.25598723999999995,
+              "semantic_score": 0.36208278,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27788532
+            }
+          },
+          {
+            "memory": "User received fertilization timing and usage guidance: before planting apply compost or a balanced mix; during growth side‑dress with a high‑nitrogen feed; after harvest replenish with compost or balanced fertilizer; plus tips to get a soil test, follow label rates, and combine fertilizer with compost.",
+            "score": 0.25502168,
+            "id": "8774a7cb-9bea-4aa1-85c1-c76ad28e42f1",
+            "created_at": "2026-11-17T23:57:51.799711+00:00",
+            "updated_at": "2026-11-17T23:57:51.799711+00:00",
+            "score_debug": {
+              "combined_score": 0.25502168,
+              "semantic_score": 0.32499668,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31255752
+            }
+          },
+          {
+            "memory": "On November 17, 2026, the user voiced concern about how their brother and sister-in-law are managing newborn Lucas’s schedule as the brother returns to work soon, and intends to support them during the transition by helping with errands and household chores.",
+            "score": 0.25447361620591036,
+            "id": "76e130df-98b9-4458-8c2a-92e668b0b526",
+            "created_at": "2026-11-17T23:46:29.398008+00:00",
+            "updated_at": "2026-11-17T23:46:29.398008+00:00",
+            "score_debug": {
+              "combined_score": 0.25447361620591036,
+              "semantic_score": 0.3613665,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27481754051477597
+            }
+          },
+          {
+            "memory": "User previously gave coworker Lisa a personalized baby blanket as a baby shower gift, reflecting a preference for meaningful, customized presents for new parents.",
+            "score": 0.2541953086759241,
+            "id": "beb0c3be-ffb2-4967-84fd-494d667d1885",
+            "created_at": "2026-11-18T00:11:10.132467+00:00",
+            "updated_at": "2026-11-18T00:11:10.132467+00:00",
+            "score_debug": {
+              "combined_score": 0.2541953086759241,
+              "semantic_score": 0.35961217,
+              "bm25_score": 0.27587610168981025,
+              "entity_boost": 0.0
+            }
+          },
+          {
+            "memory": "The assistant advised considering lamp scale, materials (wood, metal, ceramic), and preferred lighting style (warm, soft vs brighter) when shopping, and recommended brands known for cozy lighting: Pottery Barn, Crate & Barrel, and West Elm.",
+            "score": 0.25417424,
+            "id": "f06daa7d-e00d-465f-8a32-c3d6bd109049",
+            "created_at": "2026-11-17T23:53:57.348448+00:00",
+            "updated_at": "2026-11-17T23:53:57.348448+00:00",
+            "score_debug": {
+              "combined_score": 0.25417424,
+              "semantic_score": 0.3113776,
+              "bm25_score": 0.0,
+              "entity_boost": 0.324058
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user, who sells crochet hooks, requested detailed information about the interests and hobbies of people who use crochet hooks to refine their target audience understanding.",
+            "score": 0.25394579856573707,
+            "id": "2935b5d3-c5a6-466d-b7ef-8fabba399ed4",
+            "created_at": "2026-11-18T00:04:41.830048+00:00",
+            "updated_at": "2026-11-18T00:04:41.830048+00:00",
+            "score_debug": {
+              "combined_score": 0.25394579856573707,
+              "semantic_score": 0.3581136,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27675089641434264
+            }
+          },
+          {
+            "memory": "User was recommended study habit strategies to build a daily learning routine: start small (15–20 minutes/day), schedule a fixed time, set specific learning targets, use implementation intentions (e.g., after breakfast open laptop and read), and track progress with a habit tracker, journal, or spreadsheet.",
+            "score": 0.2538766,
+            "id": "54e7dfee-1abc-4194-82a7-060f0a2d5858",
+            "created_at": "2026-11-17T23:40:43.340056+00:00",
+            "updated_at": "2026-11-17T23:40:43.340056+00:00",
+            "score_debug": {
+              "combined_score": 0.2538766,
+              "semantic_score": 0.3474362,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2872553
+            }
+          },
+          {
+            "memory": "User attended the baby shower celebrating Lucas a few weeks before he was born and plans to reference that event when chatting with his parents.",
+            "score": 0.25368601620591036,
+            "id": "9ed4365b-f776-48e8-9d98-377f0220aff7",
+            "created_at": "2026-11-17T23:47:04.676943+00:00",
+            "updated_at": "2026-11-17T23:47:04.676943+00:00",
+            "score_debug": {
+              "combined_score": 0.25368601620591036,
+              "semantic_score": 0.3593975,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27481754051477597
+            }
+          },
+          {
+            "memory": "On November 17, 2026, the user requested a personalized comparison of local transit agencies’ monthly passes to identify which option best fits their needs and budget.",
+            "score": 0.25357570799999996,
+            "id": "0848959f-7ae3-4b92-9ff9-2769b93ed64b",
+            "created_at": "2026-11-17T23:59:43.615702+00:00",
+            "updated_at": "2026-11-17T23:59:43.615702+00:00",
+            "score_debug": {
+              "combined_score": 0.25357570799999996,
+              "semantic_score": 0.35080782,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28313145
+            }
+          },
+          {
+            "memory": "User is seeking local art supply stores that stock a wide variety of wire mesh materials and tools, as the user wants to experiment with different mesh types and gauges for wire mesh sculpture projects.",
+            "score": 0.2535711670449551,
+            "id": "c1eb36b3-6552-4245-8565-4ce3d9195ec8",
+            "created_at": "2026-11-18T00:55:19.705916+00:00",
+            "updated_at": "2026-11-18T00:55:19.705916+00:00",
+            "score_debug": {
+              "combined_score": 0.2535711670449551,
+              "semantic_score": 0.35436553,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27956238761238766
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user is considering purchasing a Pilates ball for at-home workouts to support their Pilates practice and asked whether it would be a worthwhile investment.",
+            "score": 0.2534004290909091,
+            "id": "5f461708-9c34-43c5-b94b-e73bfad202b8",
+            "created_at": "2026-11-18T00:33:59.165718+00:00",
+            "updated_at": "2026-11-18T00:33:59.165718+00:00",
+            "score_debug": {
+              "combined_score": 0.2534004290909091,
+              "semantic_score": 0.3906343,
+              "bm25_score": 0.0,
+              "entity_boost": 0.24286677272727272
+            }
+          },
+          {
+            "memory": "User is considering purchasing a table lamp with a warm-toned metal shade, specifically a bronze or copper finish, to enhance a cozy atmosphere in the living room as part of their lighting-focused redecoration.",
+            "score": 0.2526777706053946,
+            "id": "4b58e6cb-86fe-486e-a136-20e9a2bb67ab",
+            "created_at": "2026-11-17T23:54:23.157455+00:00",
+            "updated_at": "2026-11-17T23:54:23.157455+00:00",
+            "score_debug": {
+              "combined_score": 0.2526777706053946,
+              "semantic_score": 0.32445094,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30724348651348654
+            }
+          },
+          {
+            "memory": "User received safety guidance for working with wire mesh: handle mesh carefully due to sharp edges, wear protective gloves and eye protection, and follow appropriate safety practices when cutting, shaping, or weaving different gauges and mesh types.",
+            "score": 0.25253951199999997,
+            "id": "311100d9-0534-4610-8d27-0cbf8fe6a401",
+            "created_at": "2026-11-18T00:55:19.720291+00:00",
+            "updated_at": "2026-11-18T00:55:19.720291+00:00",
+            "score_debug": {
+              "combined_score": 0.25253951199999997,
+              "semantic_score": 0.35189313,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27945565
+            }
+          },
+          {
+            "memory": "As of November 17, 2026, the user plans to build a personal knowledge graph and set SMART goals to better visualize learning progress and stay focused in their self-directed study routine.",
+            "score": 0.252334288,
+            "id": "394db826-53a7-4239-a977-4cbb1f029626",
+            "created_at": "2026-11-17T23:41:35.290473+00:00",
+            "updated_at": "2026-11-17T23:41:35.290473+00:00",
+            "score_debug": {
+              "combined_score": 0.252334288,
+              "semantic_score": 0.35429707,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27653865
+            }
+          },
+          {
+            "memory": "User prefers analogy-based, practical explanations and requested OSHA forklift certification to be explained through a cooking-with-a-recipe metaphor, suggesting a learning style that values step-by-step, recipe-like guidance over abstract theory.",
+            "score": 0.25185811999999996,
+            "id": "c9a28a13-b6e6-4946-9e69-59ccc967b275",
+            "created_at": "2026-11-17T23:37:40.837455+00:00",
+            "updated_at": "2026-11-17T23:37:40.837455+00:00",
+            "score_debug": {
+              "combined_score": 0.25185811999999996,
+              "semantic_score": 0.31296635,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31667895
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user asked to understand the differences between Castilian (European) Spanish and Latin American Spanish—specifically accent, vocabulary, and grammar—to better prepare for their upcoming Spain trip and language practice.",
+            "score": 0.251499926,
+            "id": "1ce7d4b3-fb50-4e5d-b10b-c2f8d6569053",
+            "created_at": "2026-11-18T01:03:23.102523+00:00",
+            "updated_at": "2026-11-18T01:03:23.102523+00:00",
+            "score_debug": {
+              "combined_score": 0.251499926,
+              "semantic_score": 0.33132678,
+              "bm25_score": 0.0,
+              "entity_boost": 0.297423035
+            }
+          },
+          {
+            "memory": "The user tracks blood pressure regularly with an Omron Evolv BP monitor and is working to identify patterns and make diet and lifestyle adjustments to keep blood pressure under control.",
+            "score": 0.25143163344655345,
+            "id": "0a2a6bf8-a754-4915-9f2c-6713e7299599",
+            "created_at": "2026-11-18T01:07:35.277797+00:00",
+            "updated_at": "2026-11-18T01:07:35.277797+00:00",
+            "score_debug": {
+              "combined_score": 0.25143163344655345,
+              "semantic_score": 0.3456927,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28288638361638363
+            }
+          },
+          {
+            "memory": "User was recommended compact headphone cases/pouches: Caseology Hardshell ($10–$15) for rigid protection, Incipio Neoprene Pouch ($5–$10) as a super-compact soft option, Fintie Headphone Case ($5–$10) with padded interior, and Tom Bihn Nylon Pouch ($10–$15) for durable build.",
+            "score": 0.250994288,
+            "id": "610987a7-85d6-41ea-9120-8f0e839df62b",
+            "created_at": "2026-11-18T00:22:03.903343+00:00",
+            "updated_at": "2026-11-18T00:22:03.903343+00:00",
+            "score_debug": {
+              "combined_score": 0.250994288,
+              "semantic_score": 0.28378162,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3437041
+            }
+          },
+          {
+            "memory": "User was also advised to reduce friction and boost motivation: block distractions (social media, email, notifications), study in a quiet dedicated space, vary content (books, articles, podcasts, videos, online courses), make sessions enjoyable, practice self-compassion after misses, celebrate milestones, and use accountability with a friend or family member.",
+            "score": 0.250880632191235,
+            "id": "d2bb5075-1ba5-47ea-ad51-1ee3b8361383",
+            "created_at": "2026-11-17T23:40:43.348851+00:00",
+            "updated_at": "2026-11-17T23:40:43.348851+00:00",
+            "score_debug": {
+              "combined_score": 0.250880632191235,
+              "semantic_score": 0.33455545,
+              "bm25_score": 0.0,
+              "entity_boost": 0.29264613047808763
+            }
+          },
+          {
+            "memory": "Assistant described that Sub05 underwent multiple surgeries and cosmetic procedures: her formerly blonde hair was dyed a deep, rich red and styled in elaborate curls; her porcelain skin was tightened over her slender frame; and her eyes were enlarged and enhanced with artificial coloration.",
+            "score": 0.250509428,
+            "id": "17eee8d6-2161-4a88-ac20-3425d11d8e44",
+            "created_at": "2026-11-17T23:26:46.643900+00:00",
+            "updated_at": "2026-11-17T23:26:46.643900+00:00",
+            "score_debug": {
+              "combined_score": 0.250509428,
+              "semantic_score": 0.33223104,
+              "bm25_score": 0.0,
+              "entity_boost": 0.29404253
+            }
+          },
+          {
+            "memory": "User was advised to avoid leading or overly personal questions (e.g., “Are you getting enough sleep?”, “Is parenting harder than you expected?”, “How’s your relationship changed?”), to practice active listening (eye contact, acknowledgment, empathetic follow-ups), and to respect boundaries (don’t push for details, avoid unsolicited advice, don’t compare experiences).",
+            "score": 0.25013104799999997,
+            "id": "4ce79c05-7743-4302-be78-6ebb1274d5a3",
+            "created_at": "2026-11-17T23:46:06.526725+00:00",
+            "updated_at": "2026-11-17T23:46:06.526725+00:00",
+            "score_debug": {
+              "combined_score": 0.25013104799999997,
+              "semantic_score": 0.3586846,
+              "bm25_score": 0.0,
+              "entity_boost": 0.26664302
+            }
+          },
+          {
+            "memory": "Assistant itinerary concluded: Days 23–26 in Baracoa (El Yunque mountain, Catedral de Nuestra Señora de la Asunción, Playa Maguana, and Playa Blanca); Days 27–30 back in Havana to relax, enjoy the music scene, and revisit or catch any missed sites before departure.",
+            "score": 0.24919202000000001,
+            "id": "859a1646-cfb0-450f-bb94-d2bcc0991eff",
+            "created_at": "2026-11-17T23:36:08.189233+00:00",
+            "updated_at": "2026-11-17T23:36:08.189233+00:00",
+            "score_debug": {
+              "combined_score": 0.24919202000000001,
+              "semantic_score": 0.3081405,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31483955
+            }
+          },
+          {
+            "memory": "User owns a fiddle leaf fig (Ficus lyrata) and is seeking guidance to keep it healthy and thriving, reflecting an active interest in proper plant care and maintenance.",
+            "score": 0.24844486911488514,
+            "id": "318da5f5-e430-4cd9-9c0d-258a2e360be7",
+            "created_at": "2026-11-17T23:24:07.223474+00:00",
+            "updated_at": "2026-11-17T23:24:07.223474+00:00",
+            "score_debug": {
+              "combined_score": 0.24844486911488514,
+              "semantic_score": 0.33867496,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28243721278721284
+            }
+          },
+          {
+            "memory": "User uses a Philips Respironics InnoSpire portable nebulizer as part of their asthma treatment and is seeking guidance on proper cleaning and maintenance to keep the device hygienic and effective.",
+            "score": 0.24839851542857144,
+            "id": "61f3a302-a1e0-4d97-9e7f-1bb47278202e",
+            "created_at": "2026-11-18T01:06:42.845224+00:00",
+            "updated_at": "2026-11-18T01:06:42.845224+00:00",
+            "score_debug": {
+              "combined_score": 0.24839851542857144,
+              "semantic_score": 0.33124486,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2897514285714286
+            }
+          },
+          {
+            "memory": "Additional strength-training guidance for swimming was provided: start with lighter weights and 12–15 reps to engrain technique, progressively increase load and move toward 8–10 reps, warm up and stretch, include core and leg work, and consider a personal trainer or swimming coach for a tailored plan.",
+            "score": 0.24839440000000002,
+            "id": "61d5d98a-48fd-4d6f-837c-07c4ca833131",
+            "created_at": "2026-11-17T23:48:35.078481+00:00",
+            "updated_at": "2026-11-17T23:48:35.078481+00:00",
+            "score_debug": {
+              "combined_score": 0.24839440000000002,
+              "semantic_score": 0.3480143,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2729717
+            }
+          },
+          {
+            "memory": "User plays soccer as a midfielder in Sunday games at the local community center and is seeking stretching exercises to protect muscles and prevent soreness.",
+            "score": 0.24736563725896415,
+            "id": "975087da-3756-4fd7-ace7-078809d3030d",
+            "created_at": "2026-11-18T00:58:27.757395+00:00",
+            "updated_at": "2026-11-18T00:58:27.757395+00:00",
+            "score_debug": {
+              "combined_score": 0.24736563725896415,
+              "semantic_score": 0.34980488,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2686092131474104
+            }
+          },
+          {
+            "memory": "User was guided to add agility and soccer-specific practice: zigzag runs, cone figure-eights, and reaction training with a partner; plus dribbling through cones, passing against a wall or with a partner, and shooting with both feet from varied distances and angles. Progress training load gradually, sleep 7–9 hours, eat a balanced diet, and consider a pre-season program or training partner.",
+            "score": 0.24653454,
+            "id": "bcacacf9-84ed-4067-be18-4473c6b9f30e",
+            "created_at": "2026-11-17T23:49:04.983720+00:00",
+            "updated_at": "2026-11-17T23:49:04.983720+00:00",
+            "score_debug": {
+              "combined_score": 0.24653454,
+              "semantic_score": 0.31998748,
+              "bm25_score": 0.0,
+              "entity_boost": 0.29634887
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user has trouble sleeping on Sunday nights and suspects it is triggered by anticipatory thoughts about work and responsibilities. The user asked for coping strategies to manage Sunday anxiety and improve sleep.",
+            "score": 0.24641604,
+            "id": "2633b443-889e-4a2b-a0f3-20bc31fd6fbb",
+            "created_at": "2026-11-18T00:14:16.499630+00:00",
+            "updated_at": "2026-11-18T00:14:16.499630+00:00",
+            "score_debug": {
+              "combined_score": 0.24641604,
+              "semantic_score": 0.33930415,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27673595
+            }
+          },
+          {
+            "memory": "User was recommended online Pilates tutorial sites: Pilates Plank (free tutorials with videos/photos to refine form), Pilatesology (classical Pilates focus), and Do You Pilates (beginner-friendly to challenging routines emphasizing proper form).",
+            "score": 0.24624153199999999,
+            "id": "19cbfedd-2e74-4b76-a266-17f147592d77",
+            "created_at": "2026-11-18T00:33:31.005352+00:00",
+            "updated_at": "2026-11-18T00:33:31.005352+00:00",
+            "score_debug": {
+              "combined_score": 0.24624153199999999,
+              "semantic_score": 0.28518435,
+              "bm25_score": 0.0,
+              "entity_boost": 0.33041948
+            }
+          },
+          {
+            "memory": "User was provided a detailed profile of crochet hook users’ interests: adjacent crafts (knitting, sewing, embroidery); creating handmade gifts and unique home items; using crochet for relaxation and meditation to reduce stress and support well-being; and pursuing personal development through skill-building, dexterity, and fine motor improvement.",
+            "score": 0.246226156,
+            "id": "89668842-aca5-4847-9223-b6da315dda77",
+            "created_at": "2026-11-18T00:05:16.802823+00:00",
+            "updated_at": "2026-11-18T00:05:16.802823+00:00",
+            "score_debug": {
+              "combined_score": 0.246226156,
+              "semantic_score": 0.31070486,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30486053
+            }
+          },
+          {
+            "memory": "User has not played The Witcher video games or read the Witcher books and will begin the TV series without prior knowledge as of November 18, 2026.",
+            "score": 0.24612848,
+            "id": "33c86c6a-86a6-42c2-b7e4-051bfb7f2337",
+            "created_at": "2026-11-18T00:35:08.120090+00:00",
+            "updated_at": "2026-11-18T00:35:08.120090+00:00",
+            "score_debug": {
+              "combined_score": 0.24612848,
+              "semantic_score": 0.34676635,
+              "bm25_score": 0.0,
+              "entity_boost": 0.26855485
+            }
+          },
+          {
+            "memory": "User is seeking affordable local art classes for kids and wants nearby programs that allow children to explore creativity while keeping costs low.",
+            "score": 0.24583510400000003,
+            "id": "ec8f537d-4c5c-4373-b04f-bd20919dc962",
+            "created_at": "2026-11-18T00:24:27.773037+00:00",
+            "updated_at": "2026-11-18T00:24:27.773037+00:00",
+            "score_debug": {
+              "combined_score": 0.24583510400000003,
+              "semantic_score": 0.30522928,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30935848
+            }
+          },
+          {
+            "memory": "The user was advised strength and drill strategies to boost serve speed: build core strength (planks, Russian twists, rotational moves), add resistance by serving with weights or a heavier racquet, and use serve drills—partner behind to hit over, bucket/cone targets for placement, and a radar gun to track speed and accuracy.",
+            "score": 0.24560417,
+            "id": "15ceae5f-e0a7-4295-889b-7ba33a1d6f6f",
+            "created_at": "2026-11-17T23:47:50.432996+00:00",
+            "updated_at": "2026-11-17T23:47:50.432996+00:00",
+            "score_debug": {
+              "combined_score": 0.24560417,
+              "semantic_score": 0.29983655,
+              "bm25_score": 0.0,
+              "entity_boost": 0.314173875
+            }
+          },
+          {
+            "memory": "The user rode 'Star Wars: Rise of the Resistance' at Disneyland on January 15 with their family and found it very fun, noting it as a memorable shared experience.",
+            "score": 0.245537808,
+            "id": "de76c17e-f5b8-41ff-ba16-ad11e9c5d7a5",
+            "created_at": "2026-11-17T23:33:56.260565+00:00",
+            "updated_at": "2026-11-17T23:33:56.260565+00:00",
+            "score_debug": {
+              "combined_score": 0.245537808,
+              "semantic_score": 0.32729557,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28654895
+            }
+          },
+          {
+            "memory": "The user was recommended sleep-habit strategies: set a specific, achievable bedtime goal; create a calming pre-sleep routine (reading, meditation, gentle yoga, warm bath); shift bedtime gradually by 15–30 minutes every few days; keep a consistent sleep–wake schedule including weekends; and optimize the bedroom (dark, quiet, comfortable temperature) with blackout curtains, earplugs, or a white-noise machine.",
+            "score": 0.24543467999999996,
+            "id": "a4c709f5-089d-4468-bb0c-5c7c0491c579",
+            "created_at": "2026-11-18T00:13:42.337290+00:00",
+            "updated_at": "2026-11-18T00:13:42.337290+00:00",
+            "score_debug": {
+              "combined_score": 0.24543467999999996,
+              "semantic_score": 0.26432148,
+              "bm25_score": 0.0,
+              "entity_boost": 0.34926522
+            }
+          },
+          {
+            "memory": "User intends to book a guided Stonehenge tour that includes transportation from London because it seems the most convenient option.",
+            "score": 0.244756794,
+            "id": "6d34df00-1756-4acf-a1af-e423879c1db0",
+            "created_at": "2026-11-18T00:43:47.561879+00:00",
+            "updated_at": "2026-11-18T00:43:47.561879+00:00",
+            "score_debug": {
+              "combined_score": 0.244756794,
+              "semantic_score": 0.32910776,
+              "bm25_score": 0.0,
+              "entity_boost": 0.282784225
+            }
+          },
+          {
+            "memory": "The user was given examples of healthier quick options to look for after games: salad/sandwich shops (Subway, Jimmy John's, Jason's Deli); smoothie/juice bars (Smoothie King, Jamba Juice); health-conscious cafes with bowls, wraps, or soups; and Asian or Mediterranean spots offering stir-fries, grilled meats, and whole grains.",
+            "score": 0.244462888,
+            "id": "ad79193b-f5a8-409e-aebb-49f6f4cd68c0",
+            "created_at": "2026-11-18T00:58:56.858585+00:00",
+            "updated_at": "2026-11-18T00:58:56.858585+00:00",
+            "score_debug": {
+              "combined_score": 0.244462888,
+              "semantic_score": 0.30516037,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30599685
+            }
+          },
+          {
+            "memory": "The user received maintenance guidance for the Philips Respironics InnoSpire nebulizer, including daily cleaning practices such as washing hands before handling the device to ensure hygiene and effective performance.",
+            "score": 0.24424141142857145,
+            "id": "8872af12-7154-4d13-b4fe-825c4ccc01bd",
+            "created_at": "2026-11-18T01:07:35.287700+00:00",
+            "updated_at": "2026-11-18T01:07:35.287700+00:00",
+            "score_debug": {
+              "combined_score": 0.24424141142857145,
+              "semantic_score": 0.3208521,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2897514285714286
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user asked whether Snoop Dogg’s 'From Crook to Cook' has faced criticisms or controversy, signaling interest in the book’s critical reception, and noted finding it interesting how Snoop uses cooking to express his background and cultural identity.",
+            "score": 0.24392319134661355,
+            "id": "dad41b4a-3475-4a2f-bb0e-657625e1b8a3",
+            "created_at": "2026-11-18T00:57:38.430574+00:00",
+            "updated_at": "2026-11-18T00:57:38.430574+00:00",
+            "score_debug": {
+              "combined_score": 0.24392319134661355,
+              "semantic_score": 0.31926757,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2905404083665339
+            }
+          },
+          {
+            "memory": "User is interested in learning abstract sculpting techniques and asked for online resources to study and practice abstract sculpture.",
+            "score": 0.24371210664535464,
+            "id": "db6a3976-a6b3-4e83-a47e-18b9183718fc",
+            "created_at": "2026-11-18T00:53:59.385469+00:00",
+            "updated_at": "2026-11-18T00:53:59.385469+00:00",
+            "score_debug": {
+              "combined_score": 0.24371210664535464,
+              "semantic_score": 0.33631688,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27296338661338665
+            }
+          },
+          {
+            "memory": "User is researching the artist Maia, seeking details about how Maia's artistic process evolved over time and the specific techniques she experimented with, reflecting a focused interest in Maia's creative development and technical experimentation.",
+            "score": 0.24349786,
+            "id": "49edf9cd-e4f5-43f6-9836-83658c5f2f16",
+            "created_at": "2026-11-17T23:21:11.137217+00:00",
+            "updated_at": "2026-11-17T23:21:11.137217+00:00",
+            "score_debug": {
+              "combined_score": 0.24349786,
+              "semantic_score": 0.3290361,
+              "bm25_score": 0.0,
+              "entity_boost": 0.27970855
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user set an image-prompt response preference: translate the user’s description into natural English, place it in an 'INPUT =' line, return the generated image link, and avoid displaying the word 'output' in responses.",
+            "score": 0.243374148,
+            "id": "c2534eac-8223-4527-b558-72d37ce8b2d7",
+            "created_at": "2026-11-18T01:07:35.295345+00:00",
+            "updated_at": "2026-11-18T01:07:35.295345+00:00",
+            "score_debug": {
+              "combined_score": 0.243374148,
+              "semantic_score": 0.32021907,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2882163
+            }
+          },
+          {
+            "memory": "Additional stretching tips recommended: stretch both sides even if one feels tighter; hold each stretch 20–30 seconds without bouncing; use gentle, controlled movements; breathe deeply and naturally; include dynamic moves (leg swings, high knees) in warm-ups; and stop if pain or discomfort occurs.",
+            "score": 0.24332136243756244,
+            "id": "b9863955-e7aa-4c91-b655-f36eb47e874c",
+            "created_at": "2026-11-18T00:58:27.773682+00:00",
+            "updated_at": "2026-11-18T00:58:27.773682+00:00",
+            "score_debug": {
+              "combined_score": 0.24332136243756244,
+              "semantic_score": 0.2998845,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30841890609390615
+            }
+          },
+          {
+            "memory": "User was recommended low-stimulation creative or leisure activities before bed: gentle puzzles or games (crossword, Sudoku, solitaire) and light drawing, coloring, or painting accompanied by calming music.",
+            "score": 0.24317788823176825,
+            "id": "540ba914-9b53-4d74-8f7b-d73db44853e5",
+            "created_at": "2026-11-18T00:16:57.479096+00:00",
+            "updated_at": "2026-11-18T00:16:57.479096+00:00",
+            "score_debug": {
+              "combined_score": 0.24317788823176825,
+              "semantic_score": 0.3178953,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2900494205794206
+            }
+          },
+          {
+            "memory": "User is intentionally creating a relaxing, cozy bedroom ambiance, featuring a reclaimed wood bed frame and numerous houseplants purchased from The Sill to bring natural warmth and serenity into the space.",
+            "score": 0.24312023922477524,
+            "id": "fb2ae948-68d0-43fd-93da-0f6b16970e43",
+            "created_at": "2026-11-17T23:23:25.066539+00:00",
+            "updated_at": "2026-11-17T23:23:25.066539+00:00",
+            "score_debug": {
+              "combined_score": 0.24312023922477524,
+              "semantic_score": 0.30573866,
+              "bm25_score": 0.0,
+              "entity_boost": 0.30206193806193815
+            }
+          },
+          {
+            "memory": "User was recommended electronic/indie acts: Mild High Club ('Skiptracing'), Glass Animals ('How to Be a Human Being'), and M83 ('Hurry Up, We're Dreaming').",
+            "score": 0.24252778,
+            "id": "2798d15a-a76f-4bfb-b353-e2032214b3b0",
+            "created_at": "2026-11-18T01:08:29.985863+00:00",
+            "updated_at": "2026-11-18T01:08:29.985863+00:00",
+            "score_debug": {
+              "combined_score": 0.24252778,
+              "semantic_score": 0.2880104,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31830905
+            }
+          },
+          {
+            "memory": "To confirm the volunteer spot, the event organizers need the user's name, email address, and phone number to be shared with them; the assistant also plans to send the user a reminder a few days before the event.",
+            "score": 0.2424111842157842,
+            "id": "f6750785-cfd3-40e8-9d19-dfef370f49d5",
+            "created_at": "2026-11-18T00:28:17.343417+00:00",
+            "updated_at": "2026-11-18T00:28:17.343417+00:00",
+            "score_debug": {
+              "combined_score": 0.2424111842157842,
+              "semantic_score": 0.3215385,
+              "bm25_score": 0.0,
+              "entity_boost": 0.28448946053946056
+            }
+          },
+          {
+            "memory": "User received Eurostar day-trip planning tips: book tickets early to save, choose a seat with power outlet in a quieter carriage, arrive early for security and border checks, pack snacks/water and a small umbrella, and check for restrictions or engineering works.",
+            "score": 0.24222162000000003,
+            "id": "48d1ff5e-d8c8-4a88-8bde-e2aa912d5d83",
+            "created_at": "2026-11-18T00:42:27.227788+00:00",
+            "updated_at": "2026-11-18T00:42:27.227788+00:00",
+            "score_debug": {
+              "combined_score": 0.24222162000000003,
+              "semantic_score": 0.2687375,
+              "bm25_score": 0.0,
+              "entity_boost": 0.33681655
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user plans to incorporate the suggested stretching exercises into their regular routine to support midfield play during Sunday games at the local community center, aiming to protect muscles and reduce post-game soreness.",
+            "score": 0.24200605725896418,
+            "id": "ae677d35-7d82-4915-b7ae-327fd451164a",
+            "created_at": "2026-11-18T00:58:56.842524+00:00",
+            "updated_at": "2026-11-18T00:58:56.842524+00:00",
+            "score_debug": {
+              "combined_score": 0.24200605725896418,
+              "semantic_score": 0.33640593,
+              "bm25_score": 0.0,
+              "entity_boost": 0.2686092131474104
+            }
+          },
+          {
+            "memory": "User was recommended Spanish-learning podcasts: 'Coffee Break Spanish', 'Spanish Obsessed', 'SpanishDict', 'News in Slow Spanish', 'Spanish Pod 101', 'Learn Spanish with Carlos', 'Mi Vida en Español', 'Spanishland School', 'Easy Spanish', and the 'Duolingo Spanish Podcast', available on Apple Podcasts, Spotify, and Google Podcasts.",
+            "score": 0.24168643966033967,
+            "id": "300770b6-1bcb-48fa-925b-079e6eb373d6",
+            "created_at": "2026-11-18T01:01:25.133812+00:00",
+            "updated_at": "2026-11-18T01:01:25.133812+00:00",
+            "score_debug": {
+              "combined_score": 0.24168643966033967,
+              "semantic_score": 0.29218525,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31203084915084917
+            }
+          },
+          {
+            "memory": "Assistant shared getting-started tips for Plotly: begin with official docs/tutorials, experiment with plot types and customization, draw inspiration from the Gallery and example repositories, and seek help on the Plotly community forum, Kaggle, or Reddit.",
+            "score": 0.24136067199999997,
+            "id": "1c2491cf-86b6-40a5-8ca0-47520ff98647",
+            "created_at": "2026-11-18T00:51:42.762614+00:00",
+            "updated_at": "2026-11-18T00:51:42.762614+00:00",
+            "score_debug": {
+              "combined_score": 0.24136067199999997,
+              "semantic_score": 0.2895044,
+              "bm25_score": 0.0,
+              "entity_boost": 0.31389728
+            }
+          },
+          {
+            "memory": "On November 18, 2026, the user expressed fascination with Snoop Dogg’s passion for cooking and asked about his future culinary projects, specifically whether he plans to release another cookbook or potentially open his own restaurant.",
+            "score": 0.2406621617952756,
+            "id": "901d5ed5-e17d-415e-ae8a-b24f02105a22",
+            "created_at": "2026-11-18T00:58:00.912258+00:00",
+            "updated_at": "2026-11-18T00:58:00.912258+00:00",
+            "score_debug": {
+              "combined_score": 0.2406621617952756,
+              "semantic_score": 0.32016006,
+              "bm25_score": 0.0,
+              "entity_boost": 0.281495344488189
+            }
+          },
+          {
+            "memory": "As of November 18, 2026, the user is seeking online tutorials and resources to learn slip-casting, a ceramics technique, showing interest in pottery processes and practical guidance for mold-making, casting, and related workflow steps.",
+            "score": 0.2405469498661339,
+            "id": "c533c138-5ec1-40a1-9b0a-f21f35de7eb2",
+            "created_at": "2026-11-18T00:53:20.791043+00:00",
+            "updated_at": "2026-11-18T00:53:20.791043+00:00",
+            "score_debug": {
+              "combined_score": 0.2405469498661339,
+              "semantic_score": 0.28420204,
+              "bm25_score": 0.0,
+              "entity_boost": 0.3171653346653347
+            }
+          }
+        ],
+        "search_latency_ms": 796.2,
+        "total_results": 200
+      },
+      "cutoff_results": {
+        "top_200": {
+          "judgment": "PASS",
+          "score": 1.0,
+          "generated_answer": "About 4 weeks (started ~Oct 6, 2026; bought the amp ~Nov 4, 2026 → ~29 days).",
+          "judge_raw": "<judge_thinking>\nThe model response states \"About 4 weeks,\" which matches \"Four weeks.\" Extra date details don't contradict the duration.\n</judge_thinking>\nyes",
+          "memories_evaluated": 200,
+          "reason": "Generated answer: About 4 weeks (started ~Oct 6, 2026; bought the amp ~Nov 4, 2026 → ~29 days)."
+        },
+        "top_50": {
+          "judgment": "PASS",
+          "score": 1.0,
+          "generated_answer": "About 4 weeks (roughly 29 days).",
+          "judge_raw": "<judge_thinking>Deliberate reasoning omitted for safety.</judge_thinking>\nyes",
+          "memories_evaluated": 50,
+          "reason": "Generated answer: About 4 weeks (roughly 29 days)."
+        },
+        "top_20": {
+          "judgment": "PASS",
+          "score": 1.0,
+          "generated_answer": "About four weeks (29 days)—from around Oct 6, 2026 to Nov 4, 2026.",
+          "judge_raw": "<judge_thinking>\nCore claim is the duration. Correct answer: four weeks. Model says “about four weeks (29 days)” with added dates. That matches the required meaning; extra detail is fine.\n</judge_thinking>\nyes",
+          "memories_evaluated": 20,
+          "reason": "Generated answer: About four weeks (29 days)—from around Oct 6, 2026 to Nov 4, 2026."
+        },
+        "top_10": {
+          "judgment": "PASS",
+          "score": 1.0,
+          "generated_answer": "About four weeks (roughly 29 days).",
+          "judge_raw": "yes",
+          "memories_evaluated": 10,
+          "reason": "Generated answer: About four weeks (roughly 29 days)."
+        }
+      }
+    }
+  ]
+}

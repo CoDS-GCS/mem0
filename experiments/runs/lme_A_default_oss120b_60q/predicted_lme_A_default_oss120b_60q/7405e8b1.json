@@ -1,0 +1,2654 @@
+{
+  "question_id": "7405e8b1",
+  "question_type": "multi-session",
+  "question": "Did I receive a higher percentage discount on my first order from HelloFresh, compared to my first UberEats order?",
+  "ground_truth_answer": "Yes.",
+  "question_date": "2023/05/30 (Tue) 21:33",
+  "is_abstention": false,
+  "user_id": "longmemeval_7405e8b1_8da3076b",
+  "answer_session_ids": [
+    "answer_80323f3f_1",
+    "answer_80323f3f_2"
+  ],
+  "retrieval": {
+    "search_query": "Did I receive a higher percentage discount on my first order from HelloFresh, compared to my first UberEats order?",
+    "search_results": [
+      {
+        "memory": "User recently tried HelloFresh and received a 40% discount on the first order, which they described as a great deal.",
+        "score": 0.9203644682516746,
+        "id": "7d315f31-4f6a-4a6b-9869-3e1a516df83f",
+        "created_at": "2026-11-18T12:24:52.196808+00:00",
+        "updated_at": "2026-11-18T12:24:52.196808+00:00",
+        "score_debug": {
+          "combined_score": 0.9203644682516746,
+          "semantic_score": 0.8014118,
+          "bm25_score": 0.9999999999998157,
+          "entity_boost": 0.49949937062937066
+        }
+      },
+      {
+        "memory": "Assistant noted that HelloFresh frequently runs promotions and that users can refer friends or family to receive $20 off their next order.",
+        "score": 0.9141299081707679,
+        "id": "b7f8cd46-4504-438e-8090-7cb9eb9be103",
+        "created_at": "2026-11-18T12:24:52.204163+00:00",
+        "updated_at": "2026-11-18T12:24:52.204163+00:00",
+        "score_debug": {
+          "combined_score": 0.9141299081707679,
+          "semantic_score": 0.7858254,
+          "bm25_score": 0.9999999997975488,
+          "entity_boost": 0.49949937062937066
+        }
+      },
+      {
+        "memory": "User received a 20% discount on an UberEats order around November 11, 2026.",
+        "score": 0.8725928119995713,
+        "id": "bcab11a7-a6ab-4374-a6de-05d16370bcb9",
+        "created_at": "2026-11-18T13:21:37.678416+00:00",
+        "updated_at": "2026-11-18T13:21:37.678416+00:00",
+        "score_debug": {
+          "combined_score": 0.8725928119995713,
+          "semantic_score": 0.68148303,
+          "bm25_score": 0.9999999999989282,
+          "entity_boost": 0.499999
+        }
+      },
+      {
+        "memory": "User is interested in finding discounts specifically on UberEats delivery fees rather than just food item discounts.",
+        "score": 0.8592897505416005,
+        "id": "cb6d1d7d-8b47-4756-9ad8-852815bed8bf",
+        "created_at": "2026-11-18T13:24:55.453775+00:00",
+        "updated_at": "2026-11-18T13:24:55.453775+00:00",
+        "score_debug": {
+          "combined_score": 0.8592897505416005,
+          "semantic_score": 0.67830026,
+          "bm25_score": 0.9999993043239258,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant listed UberEats offers: first‑time users get $5 off the first order with code EATS5, a referral program awarding $5 credit per referral, periodic promo codes, and the Uber Rewards program where ride points can be redeemed for UberEats credits.",
+        "score": 0.8513635446575168,
+        "id": "585d1af3-e28a-449d-82b6-7ee924f63300",
+        "created_at": "2026-11-18T12:26:04.702069+00:00",
+        "updated_at": "2026-11-18T12:26:04.702069+00:00",
+        "score_debug": {
+          "combined_score": 0.8513635446575168,
+          "semantic_score": 0.65848434,
+          "bm25_score": 0.9999997096137172,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant explained that on UberEats, most promo codes and discounts are applied to the total order amount, covering all items—including the veggie lasagna—and any fees, rather than to a single dish.",
+        "score": 0.8471419242703689,
+        "id": "25f30c0c-88f1-4f88-b2f2-e61a12478e68",
+        "created_at": "2026-11-18T13:24:10.405753+00:00",
+        "updated_at": "2026-11-18T13:24:10.405753+00:00",
+        "score_debug": {
+          "combined_score": 0.8471419242703689,
+          "semantic_score": 0.64793,
+          "bm25_score": 0.9999999986458474,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant noted that some restaurants may run dish-specific promotions such as “Buy one get one free” or a percentage discount like “10% off our veggie lasagna,” which are usually advertised on the restaurant’s UberEats page or its own marketing channels.",
+        "score": 0.8461891798645794,
+        "id": "a1d9aa8b-6bb7-4cdc-8ae2-7a628b948f5d",
+        "created_at": "2026-11-18T13:24:10.409202+00:00",
+        "updated_at": "2026-11-18T13:24:10.409202+00:00",
+        "score_debug": {
+          "combined_score": 0.8461891798645794,
+          "semantic_score": 0.6154736,
+          "bm25_score": 0.9999999996614486,
+          "entity_boost": 0.49999935
+        }
+      },
+      {
+        "memory": "Assistant recommended the user look for a veggie-lasagna discount by checking the restaurant’s UberEats listing, its social‑media pages, official website, or by contacting the restaurant directly to inquire about any special offers.",
+        "score": 0.8339080440214708,
+        "id": "8303b5d5-4dfe-49ec-91ab-247a71ae5a46",
+        "created_at": "2026-11-18T13:24:10.415045+00:00",
+        "updated_at": "2026-11-18T13:24:10.415045+00:00",
+        "score_debug": {
+          "combined_score": 0.8339080440214708,
+          "semantic_score": 0.6148484,
+          "bm25_score": 0.9999968980236023,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant noted DoorDash new‑user discount of $5 off the first order with code DOORDASH5, along with a referral program and daily deals similar to other services.",
+        "score": 0.8298477270716902,
+        "id": "f7639013-7a99-4196-8b71-d3284a1d809a",
+        "created_at": "2026-11-18T12:26:04.704699+00:00",
+        "updated_at": "2026-11-18T12:26:04.704699+00:00",
+        "score_debug": {
+          "combined_score": 0.8298477270716902,
+          "semantic_score": 0.66011643,
+          "bm25_score": 0.9999530376792255,
+          "entity_boost": 0.41454985
+        }
+      },
+      {
+        "memory": "User is actively trying to reduce dining‑out frequency and has been applying coupons when ordering from online food‑delivery platforms such as Grubhub and UberEats.",
+        "score": 0.8255796065692689,
+        "id": "555d3c00-e01d-4162-90ee-783888453872",
+        "created_at": "2026-11-18T12:26:04.695588+00:00",
+        "updated_at": "2026-11-18T12:26:04.695588+00:00",
+        "score_debug": {
+          "combined_score": 0.8255796065692689,
+          "semantic_score": 0.5940245,
+          "bm25_score": 0.9999997043930969,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant suggested using the UberEats app or website to filter by \"Deals\", checking restaurant social‑media pages or websites, and signing up for restaurant loyalty programs or email newsletters to increase chances of finding promo codes.",
+        "score": 0.8244236684992796,
+        "id": "4321212e-9166-4b6f-898e-25037e64cac6",
+        "created_at": "2026-11-18T13:22:19.201299+00:00",
+        "updated_at": "2026-11-18T13:22:19.201299+00:00",
+        "score_debug": {
+          "combined_score": 0.8244236684992796,
+          "semantic_score": 0.59366107,
+          "bm25_score": 0.9974732892181236,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant recommended several ways to find UberEats deals: check the UberEats app or website for a Deals section, sign up for email newsletters, follow UberEats on social media, use referral codes from friends, search coupon sites like RetailMeNot, use cashback apps such as Rakuten, and look for personalized email offers.",
+        "score": 0.8091829500814882,
+        "id": "ca94a929-163a-48a8-9939-b77fd90d4d3b",
+        "created_at": "2026-11-18T13:21:37.682163+00:00",
+        "updated_at": "2026-11-18T13:21:37.682163+00:00",
+        "score_debug": {
+          "combined_score": 0.8091829500814882,
+          "semantic_score": 0.5532984,
+          "bm25_score": 0.9997341631736452,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant noted that newly added restaurants, large chain restaurants, fast‑food or quick‑service venues, Asian cuisine restaurants, vegetarian/vegan eateries, breakfast or brunch spots, and local independent restaurants are generally more likely to have promo codes or discounts on UberEats.",
+        "score": 0.8074827725284444,
+        "id": "59b09369-5e74-4def-8539-b17045ede916",
+        "created_at": "2026-11-18T13:22:19.198493+00:00",
+        "updated_at": "2026-11-18T13:22:19.198493+00:00",
+        "score_debug": {
+          "combined_score": 0.8074827725284444,
+          "semantic_score": 0.6282785,
+          "bm25_score": 0.999996311321111,
+          "entity_boost": 0.39043212
+        }
+      },
+      {
+        "memory": "Assistant provided Grubhub promotions: new users receive 15% off the first order with code GRUB15, a referral program granting $10 credit per referred friend, daily deal listings, and a Perks loyalty program offering exclusive discounts and free delivery.",
+        "score": 0.8052859524184008,
+        "id": "22c0fc3e-76dd-4952-a9d7-51b78d2c27c3",
+        "created_at": "2026-11-18T12:26:04.698848+00:00",
+        "updated_at": "2026-11-18T12:26:04.698848+00:00",
+        "score_debug": {
+          "combined_score": 0.8052859524184008,
+          "semantic_score": 0.59550536,
+          "bm25_score": 0.9999998107562914,
+          "entity_boost": 0.4177097102897104
+        }
+      },
+      {
+        "memory": "Assistant described subscription services such as UberEats Pass that grant unlimited free delivery on eligible orders, effectively reducing or eliminating delivery fees for subscribers.",
+        "score": 0.7984667894880164,
+        "id": "90de2ab7-df12-4b9f-9fe7-306877ee779b",
+        "created_at": "2026-11-18T13:24:55.468766+00:00",
+        "updated_at": "2026-11-18T13:24:55.468766+00:00",
+        "score_debug": {
+          "combined_score": 0.7984667894880164,
+          "semantic_score": 0.55649245,
+          "bm25_score": 0.9999988237200409,
+          "entity_boost": 0.4396757
+        }
+      },
+      {
+        "memory": "Assistant shared Postmates promotion: first‑time users receive $10 off the first order using code POSTMATES10, plus a referral program and occasional limited‑time promotions.",
+        "score": 0.7900885361504915,
+        "id": "92399dc9-3607-4dd2-8097-d2cd8bb950d0",
+        "created_at": "2026-11-18T12:26:04.707967+00:00",
+        "updated_at": "2026-11-18T12:26:04.707967+00:00",
+        "score_debug": {
+          "combined_score": 0.7900885361504915,
+          "semantic_score": 0.6168897,
+          "bm25_score": 0.9999267053762287,
+          "entity_boost": 0.358404935
+        }
+      },
+      {
+        "memory": "Assistant explained that some food‑delivery platforms offer first‑time user discounts on the delivery fee, which are typically applied automatically at checkout.",
+        "score": 0.7896251870136735,
+        "id": "a99d4d62-83b6-46af-9565-5e65065e8599",
+        "created_at": "2026-11-18T13:24:55.456214+00:00",
+        "updated_at": "2026-11-18T13:24:55.456214+00:00",
+        "score_debug": {
+          "combined_score": 0.7896251870136735,
+          "semantic_score": 0.6442949,
+          "bm25_score": 0.9124131875341837,
+          "entity_boost": 0.41735488
+        }
+      },
+      {
+        "memory": "Assistant reported Caviar new‑user discount of 20% off the first order with code CAVIAR20, a referral program, and exclusive deals for members.",
+        "score": 0.7847120797129524,
+        "id": "02909639-8994-44b1-a26d-8c044a9ada17",
+        "created_at": "2026-11-18T12:26:04.710399+00:00",
+        "updated_at": "2026-11-18T12:26:04.710399+00:00",
+        "score_debug": {
+          "combined_score": 0.7847120797129524,
+          "semantic_score": 0.590537,
+          "bm25_score": 0.9999547792823812,
+          "entity_boost": 0.37128842
+        }
+      },
+      {
+        "memory": "Assistant suggested the user research the veggie lasagna by reading UberEats, Yelp, or Google Reviews, reviewing the menu description, contacting the restaurant directly through UberEats or its website, and checking the restaurant's social‑media posts for photos or details.",
+        "score": 0.7778703022731326,
+        "id": "ae28c53f-91ab-4bc1-b736-80e67f727e28",
+        "created_at": "2026-11-18T13:23:21.169439+00:00",
+        "updated_at": "2026-11-18T13:23:21.169439+00:00",
+        "score_debug": {
+          "combined_score": 0.7778703022731326,
+          "semantic_score": 0.4752379,
+          "bm25_score": 0.9995130436527563,
+          "entity_boost": 0.4699248120300752
+        }
+      },
+      {
+        "memory": "Assistant reported that Blue Apron offers new customers $60 off their first three orders (20% off each order) with the promotional code DELIVERY60.",
+        "score": 0.7751500862657156,
+        "id": "b62d1654-b3bd-4f8c-9ae8-a870459d143c",
+        "created_at": "2026-11-18T12:24:52.199308+00:00",
+        "updated_at": "2026-11-18T12:24:52.199308+00:00",
+        "score_debug": {
+          "combined_score": 0.7751500862657156,
+          "semantic_score": 0.58387,
+          "bm25_score": 0.986570115664289,
+          "entity_boost": 0.3674351
+        }
+      },
+      {
+        "memory": "Assistant reported that Green Chef offers first‑time customers 50% off the first order (up to $50) with code GREEN50 and focuses on organic, non‑GMO ingredients.",
+        "score": 0.7698503553321043,
+        "id": "5a219ecd-8a33-47b9-8f8e-f1732decd041",
+        "created_at": "2026-11-18T12:24:52.212671+00:00",
+        "updated_at": "2026-11-18T12:24:52.212671+00:00",
+        "score_debug": {
+          "combined_score": 0.7698503553321043,
+          "semantic_score": 0.5606639,
+          "bm25_score": 0.9592352650535377,
+          "entity_boost": 0.4047267232767233
+        }
+      },
+      {
+        "memory": "User asks if discounts can be applied to the delivery fee itself, noting that most food‑delivery platforms usually discount food items rather than delivery charges.",
+        "score": 0.7639558824596793,
+        "id": "5c59d0dc-c839-4250-9050-5c402c026995",
+        "created_at": "2026-11-18T13:26:03.342472+00:00",
+        "updated_at": "2026-11-18T13:26:03.342472+00:00",
+        "score_debug": {
+          "combined_score": 0.7639558824596793,
+          "semantic_score": 0.5881454,
+          "bm25_score": 0.9647061561491981,
+          "entity_boost": 0.35703815
+        }
+      },
+      {
+        "memory": "User is interested in knowing which restaurant types or cuisines typically offer more promo codes or discounts on food‑delivery platforms.",
+        "score": 0.7527689827496555,
+        "id": "8c255e1e-a7b9-4739-bb58-0a924181e69b",
+        "created_at": "2026-11-18T13:22:19.195217+00:00",
+        "updated_at": "2026-11-18T13:22:19.195217+00:00",
+        "score_debug": {
+          "combined_score": 0.7527689827496555,
+          "semantic_score": 0.57465917,
+          "bm25_score": 0.9109738868741388,
+          "entity_boost": 0.3962894
+        }
+      },
+      {
+        "memory": "User will check the new Italian restaurant's social media pages and its website for any promotions before ordering.",
+        "score": 0.7490253721486255,
+        "id": "b0288de3-89ea-4d46-941c-f484c5130282",
+        "created_at": "2026-11-18T13:23:21.163335+00:00",
+        "updated_at": "2026-11-18T13:23:21.163335+00:00",
+        "score_debug": {
+          "combined_score": 0.7490253721486255,
+          "semantic_score": 0.5844609,
+          "bm25_score": 0.986915550371564,
+          "entity_boost": 0.30118698
+        }
+      },
+      {
+        "memory": "User plans to order from the new Italian restaurant downtown again and is looking for any promotions or discounts that might be available for that restaurant",
+        "score": 0.7448712268378277,
+        "id": "88ee5026-186c-49c0-922c-ad26a3e09742",
+        "created_at": "2026-11-18T13:23:05.034477+00:00",
+        "updated_at": "2026-11-18T13:23:05.034477+00:00",
+        "score_debug": {
+          "combined_score": 0.7448712268378277,
+          "semantic_score": 0.5497861,
+          "bm25_score": 0.9999547792823812,
+          "entity_boost": 0.3124371878121878
+        }
+      },
+      {
+        "memory": "Assistant reported that Home Chef gives new customers $30 off the first order with code HOME30 and provides a wide range of recipes with flexible subscription plans.",
+        "score": 0.7446840214480199,
+        "id": "b0a0ac14-ee49-4cc6-b7a7-0199a09068e0",
+        "created_at": "2026-11-18T12:24:52.210105+00:00",
+        "updated_at": "2026-11-18T12:24:52.210105+00:00",
+        "score_debug": {
+          "combined_score": 0.7446840214480199,
+          "semantic_score": 0.55413306,
+          "bm25_score": 0.9560316936200501,
+          "entity_boost": 0.3515453
+        }
+      },
+      {
+        "memory": "Assistant reported that Plated provides first‑time customers 50% off the first order (up to $40) and often includes free shipping on initial orders.",
+        "score": 0.7401275325631592,
+        "id": "11e29137-d437-4fbe-bd34-f55b6dacd8f0",
+        "created_at": "2026-11-18T12:24:52.201881+00:00",
+        "updated_at": "2026-11-18T12:24:52.201881+00:00",
+        "score_debug": {
+          "combined_score": 0.7401275325631592,
+          "semantic_score": 0.509786,
+          "bm25_score": 0.9867436879816033,
+          "entity_boost": 0.3537891434262948
+        }
+      },
+      {
+        "memory": "Assistant advised reading multiple reviews, checking dietary restriction compatibility, comparing pricing and plan flexibility, and understanding cancellation and refund policies before committing to a meal‑kit subscription.",
+        "score": 0.7363893430043281,
+        "id": "835dcfb8-f5bf-4e87-8187-4e9b03a6cb55",
+        "created_at": "2026-11-18T12:24:52.215252+00:00",
+        "updated_at": "2026-11-18T12:24:52.215252+00:00",
+        "score_debug": {
+          "combined_score": 0.7363893430043281,
+          "semantic_score": 0.54208124,
+          "bm25_score": 0.9364355590692618,
+          "entity_boost": 0.3624565584415585
+        }
+      },
+      {
+        "memory": "Assistant mentioned that many restaurants or platforms offer free delivery on orders exceeding a specific amount or on particular menu items, allowing customers to avoid delivery fees.",
+        "score": 0.7315234746200332,
+        "id": "89342a73-5b3f-406c-8b14-71097473d81c",
+        "created_at": "2026-11-18T13:24:55.461514+00:00",
+        "updated_at": "2026-11-18T13:24:55.461514+00:00",
+        "score_debug": {
+          "combined_score": 0.7315234746200332,
+          "semantic_score": 0.51312786,
+          "bm25_score": 0.9543676247518811,
+          "entity_boost": 0.3613132017982018
+        }
+      },
+      {
+        "memory": "New customers can receive a discount ranging from $20 to $40 off their first Sun Basket order.",
+        "score": 0.7290678474958179,
+        "id": "d70706d2-3afe-4fc9-a59e-fed7d18e8c57",
+        "created_at": "2026-11-18T12:28:02.714723+00:00",
+        "updated_at": "2026-11-18T12:28:02.714723+00:00",
+        "score_debug": {
+          "combined_score": 0.7290678474958179,
+          "semantic_score": 0.49740106,
+          "bm25_score": 0.9999999337395447,
+          "entity_boost": 0.325268625
+        }
+      },
+      {
+        "memory": "Assistant said limited‑time offers during peak hours, special events, or holidays may include discounts on delivery fees to encourage orders.",
+        "score": 0.728012961700035,
+        "id": "819acdb8-ca00-4af7-88b6-aeb453569fdc",
+        "created_at": "2026-11-18T13:24:55.471985+00:00",
+        "updated_at": "2026-11-18T13:24:55.471985+00:00",
+        "score_debug": {
+          "combined_score": 0.728012961700035,
+          "semantic_score": 0.49870843,
+          "bm25_score": 0.9999530376792255,
+          "entity_boost": 0.3213709365708623
+        }
+      },
+      {
+        "memory": "User wonders whether a discount could be applied specifically to the veggie lasagna dish or if discounts are typically offered on the entire order.",
+        "score": 0.7255896190542195,
+        "id": "d767fa88-6ac9-4325-8f13-5115e550c6a6",
+        "created_at": "2026-11-18T13:26:03.340051+00:00",
+        "updated_at": "2026-11-18T13:26:03.340051+00:00",
+        "score_debug": {
+          "combined_score": 0.7255896190542195,
+          "semantic_score": 0.5571678,
+          "bm25_score": 0.9999834622024779,
+          "entity_boost": 0.2568227854330709
+        }
+      },
+      {
+        "memory": "Assistant reported that Sun Basket offers $40 off the first order with code SUN40 and caters to various dietary needs, including vegan, gluten‑free, and low‑carb options.",
+        "score": 0.7250085178596465,
+        "id": "d8cc6881-0acf-43a2-93d8-f3b0441fe4e3",
+        "created_at": "2026-11-18T12:24:52.207587+00:00",
+        "updated_at": "2026-11-18T12:24:52.207587+00:00",
+        "score_debug": {
+          "combined_score": 0.7250085178596465,
+          "semantic_score": 0.52001333,
+          "bm25_score": 0.95765411849527,
+          "entity_boost": 0.3348538461538462
+        }
+      },
+      {
+        "memory": "User plans to check the reviews and menu description for the veggie lasagna at the new downtown Italian restaurant before ordering.",
+        "score": 0.7191745182657157,
+        "id": "cc02d7e3-9e2a-4679-9cd6-6a761ff11e0e",
+        "created_at": "2026-11-18T13:24:10.402597+00:00",
+        "updated_at": "2026-11-18T13:24:10.402597+00:00",
+        "score_debug": {
+          "combined_score": 0.7191745182657157,
+          "semantic_score": 0.49527293,
+          "bm25_score": 0.986570115664289,
+          "entity_boost": 0.31609325
+        }
+      },
+      {
+        "memory": "User plans to order from a new Italian restaurant downtown, intends to try its veggie lasagna, and will look at the restaurant’s social‑media pages, website, reviews, and menu description for any promotions or discounts.",
+        "score": 0.7185200050511951,
+        "id": "18769cec-e581-4db7-a4bf-9f2f7f4dad3f",
+        "created_at": "2026-11-18T13:26:03.337646+00:00",
+        "updated_at": "2026-11-18T13:26:03.337646+00:00",
+        "score_debug": {
+          "combined_score": 0.7185200050511951,
+          "semantic_score": 0.4839215,
+          "bm25_score": 0.9999413248158,
+          "entity_boost": 0.3124371878121878
+        }
+      },
+      {
+        "memory": "Online shoppers receive a 10% off discount on household essentials, including cleaning supplies and paper products.",
+        "score": 0.7159269468599481,
+        "id": "a991ce15-42ba-40ce-92ff-98159f61e247",
+        "created_at": "2026-11-18T13:46:04.074991+00:00",
+        "updated_at": "2026-11-18T13:46:04.074991+00:00",
+        "score_debug": {
+          "combined_score": 0.7159269468599481,
+          "semantic_score": 0.44506013,
+          "bm25_score": 0.999834597707639,
+          "entity_boost": 0.34492263944223106
+        }
+      },
+      {
+        "memory": "Free shipping is offered on online Walgreens orders over $35.",
+        "score": 0.7110036459213449,
+        "id": "1ab8da1b-8600-4bad-80db-30e5f2a46797",
+        "created_at": "2026-11-18T13:46:04.072789+00:00",
+        "updated_at": "2026-11-18T13:46:04.072789+00:00",
+        "score_debug": {
+          "combined_score": 0.7110036459213449,
+          "semantic_score": 0.4592706,
+          "bm25_score": 0.9644493713770675,
+          "entity_boost": 0.3537891434262948
+        }
+      },
+      {
+        "memory": "Assistant advises reading the fine print, regularly checking account settings and upcoming orders, and communicating with customer service to manage meal‑kit subscriptions and avoid unwanted deliveries.",
+        "score": 0.7078354379945899,
+        "id": "683d6063-818f-4497-a4bc-b30ce3d16086",
+        "created_at": "2026-11-18T12:25:27.038864+00:00",
+        "updated_at": "2026-11-18T12:25:27.038864+00:00",
+        "score_debug": {
+          "combined_score": 0.7078354379945899,
+          "semantic_score": 0.49654397,
+          "bm25_score": 0.9526616249864748,
+          "entity_boost": 0.320383
+        }
+      },
+      {
+        "memory": "Buying Groups aggregate orders so suppliers can bid on bulk volumes, creating more efficient and cost‑effective procurement for the ecosystem.",
+        "score": 0.6970307540214151,
+        "id": "08d1c9eb-6e27-43e5-9dd8-f743c0c0c0d2",
+        "created_at": "2026-11-18T12:41:10.809714+00:00",
+        "updated_at": "2026-11-18T12:41:10.809714+00:00",
+        "score_debug": {
+          "combined_score": 0.6970307540214151,
+          "semantic_score": 0.46898952,
+          "bm25_score": 0.9592352650535377,
+          "entity_boost": 0.3143521
+        }
+      },
+      {
+        "memory": "Assistant noted that promo codes can sometimes provide a discount on the delivery fee, though they are often limited to certain restaurants, geographic areas, or time periods.",
+        "score": 0.6957967012134708,
+        "id": "61121a1d-82e8-490d-8b08-07b0f79ae3aa",
+        "created_at": "2026-11-18T13:24:55.459013+00:00",
+        "updated_at": "2026-11-18T13:24:55.459013+00:00",
+        "score_debug": {
+          "combined_score": 0.6957967012134708,
+          "semantic_score": 0.46879634,
+          "bm25_score": 0.9080543423165456,
+          "entity_boost": 0.3626410707171315
+        }
+      },
+      {
+        "memory": "Sun Basket provides free shipping on any order exceeding $60.",
+        "score": 0.6955973225423382,
+        "id": "54c4ac0d-97f8-4ed8-9e49-d0cb1f8709c0",
+        "created_at": "2026-11-18T12:28:02.712268+00:00",
+        "updated_at": "2026-11-18T12:28:02.712268+00:00",
+        "score_debug": {
+          "combined_score": 0.6955973225423382,
+          "semantic_score": 0.42219433,
+          "bm25_score": 0.9630098329295506,
+          "entity_boost": 0.3537891434262948
+        }
+      },
+      {
+        "memory": "The Market Network serves as a central hub for developing and managing projects, sharing knowledge, building user profiles, sharing data, and receiving rewards within the Fresh Earth community.",
+        "score": 0.6935054854922712,
+        "id": "2f5b3eec-4d48-42a0-9644-853f740972a2",
+        "created_at": "2026-11-18T12:41:10.807536+00:00",
+        "updated_at": "2026-11-18T12:41:10.807536+00:00",
+        "score_debug": {
+          "combined_score": 0.6935054854922712,
+          "semantic_score": 0.44479126,
+          "bm25_score": 0.938853222961447,
+          "entity_boost": 0.35011923076923085
+        }
+      },
+      {
+        "memory": "Assistant states Sun Basket lets customers skip or cancel orders up to five days before the scheduled delivery without fees, using the online account or by contacting support.",
+        "score": 0.6873252854480201,
+        "id": "032dae4b-305c-4933-8cce-15c45d16e79a",
+        "created_at": "2026-11-18T12:25:27.025257+00:00",
+        "updated_at": "2026-11-18T12:25:27.025257+00:00",
+        "score_debug": {
+          "combined_score": 0.6873252854480201,
+          "semantic_score": 0.4166985,
+          "bm25_score": 0.9560316936200501,
+          "entity_boost": 0.34558302
+        }
+      },
+      {
+        "memory": "Assistant explains Home Chef permits skipping or canceling orders up to 12 pm CST on the Friday before delivery, via the online account or by contacting customer service.",
+        "score": 0.6842270166030912,
+        "id": "1988270e-5190-4b70-9f67-f7277ea559e1",
+        "created_at": "2026-11-18T12:25:27.033511+00:00",
+        "updated_at": "2026-11-18T12:25:27.033511+00:00",
+        "score_debug": {
+          "combined_score": 0.6842270166030912,
+          "semantic_score": 0.42950886,
+          "bm25_score": 0.953519898612991,
+          "entity_boost": 0.32753878289473687
+        }
+      },
+      {
+        "memory": "Fresh Earth Industry Network optimizes collaborative networking between users, serving as a central hub for developing and managing projects, sharing knowledge, building profiles, sharing data, and receiving rewards.",
+        "score": 0.6754832214910319,
+        "id": "14d84c95-51e5-4867-a5d7-9e7f61159bc0",
+        "created_at": "2026-11-18T12:42:46.586964+00:00",
+        "updated_at": "2026-11-18T12:42:46.586964+00:00",
+        "score_debug": {
+          "combined_score": 0.6754832214910319,
+          "semantic_score": 0.4063592,
+          "bm25_score": 0.9370020037275797,
+          "entity_boost": 0.34534685
+        }
+      },
+      {
+        "memory": "Sun Basket's Low‑Carb meal plan costs $11.49 per serving, requiring a minimum order of three meals for two people each week (total $68.94), which works out to roughly $34.47 per meal for a two‑person plan.",
+        "score": 0.6752305374911097,
+        "id": "f901c352-88fb-4515-b786-b0360346d69d",
+        "created_at": "2026-11-18T12:28:02.702946+00:00",
+        "updated_at": "2026-11-18T12:28:02.702946+00:00",
+        "score_debug": {
+          "combined_score": 0.6752305374911097,
+          "semantic_score": 0.39506227,
+          "bm25_score": 0.9552048737277744,
+          "entity_boost": 0.3378092
+        }
+      },
+      {
+        "memory": "A 20% off discount is offered on all household cleaning supplies, featuring brands like Lysol, Clorox, and Scrubbing Bubbles.",
+        "score": 0.6744406309266182,
+        "id": "758eda5d-c31c-441b-a28a-6aea89f9ae45",
+        "created_at": "2026-11-18T13:46:04.060252+00:00",
+        "updated_at": "2026-11-18T13:46:04.060252+00:00",
+        "score_debug": {
+          "combined_score": 0.6744406309266182,
+          "semantic_score": 0.4399935,
+          "bm25_score": 0.9080543423165456,
+          "entity_boost": 0.338053735
+        }
+      },
+      {
+        "memory": "Assistant advised ways to earn more points and save money using the app: load digital coupons to the Balance Rewards card, check the app daily for bonus‑point offers and exclusive sales, use the barcode scanner to find prices and earn points on select items, create a shopping list, refill or transfer prescriptions through the app, order photo prints, store rewards and coupons in the app, and monitor points, rewards and expiration dates.",
+        "score": 0.667269050558736,
+        "id": "d1e9d4bf-27c1-47ce-8757-c286505bb16b",
+        "created_at": "2026-11-18T13:47:31.287358+00:00",
+        "updated_at": "2026-11-18T13:47:31.287358+00:00",
+        "score_debug": {
+          "combined_score": 0.667269050558736,
+          "semantic_score": 0.36890024,
+          "bm25_score": 0.9265635684750096,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "$1 off discount is available for select household batteries, light bulbs, and air filters.",
+        "score": 0.6601436411170795,
+        "id": "e02f1ac2-2d12-46c2-97d9-78256f42641c",
+        "created_at": "2026-11-18T13:46:04.062294+00:00",
+        "updated_at": "2026-11-18T13:46:04.062294+00:00",
+        "score_debug": {
+          "combined_score": 0.6601436411170795,
+          "semantic_score": 0.46947485,
+          "bm25_score": 0.9152508527926987,
+          "entity_boost": 0.2656334
+        }
+      },
+      {
+        "memory": "Many retailers are adding technology to physical stores, such as offering in‑store pickup for online orders and implementing augmented‑reality experiences to enhance the shopping experience.",
+        "score": 0.6571650026197362,
+        "id": "39204572-ca36-43a6-871b-6d62ad375678",
+        "created_at": "2026-11-18T12:38:41.891157+00:00",
+        "updated_at": "2026-11-18T12:38:41.891157+00:00",
+        "score_debug": {
+          "combined_score": 0.6571650026197362,
+          "semantic_score": 0.3385477,
+          "bm25_score": 0.9568480915493403,
+          "entity_boost": 0.347516715
+        }
+      },
+      {
+        "memory": "Assistant recommends Sun Basket as a slightly better fit for the user's low‑carb and low‑sugar preferences compared to Home Chef.",
+        "score": 0.6542616725423978,
+        "id": "15f5d6aa-2129-4fee-80f1-53a3a534af4c",
+        "created_at": "2026-11-18T12:27:29.670932+00:00",
+        "updated_at": "2026-11-18T12:27:29.670932+00:00",
+        "score_debug": {
+          "combined_score": 0.6542616725423978,
+          "semantic_score": 0.43976128,
+          "bm25_score": 0.8683541184612575,
+          "entity_boost": 0.32753878289473687
+        }
+      },
+      {
+        "memory": "Assistant recommended that User track their carpool expenses using a spreadsheet or budgeting app and compare monthly savings to previous months to monitor cost reductions",
+        "score": 0.6423664383019927,
+        "id": "fac4df20-b80d-4621-b609-4e142bb2258d",
+        "created_at": "2026-11-18T12:05:20.727161+00:00",
+        "updated_at": "2026-11-18T12:05:20.727161+00:00",
+        "score_debug": {
+          "combined_score": 0.6423664383019927,
+          "semantic_score": 0.40519747,
+          "bm25_score": 0.8586259907549817,
+          "entity_boost": 0.342092635
+        }
+      },
+      {
+        "memory": "User is seeking a travel wallet or organizer to keep receipts and papers tidy while getting travel documents in order",
+        "score": 0.637405576938498,
+        "id": "4f65d2be-83ed-4fbb-9f3e-fad7e108813f",
+        "created_at": "2026-11-18T13:35:58.714319+00:00",
+        "updated_at": "2026-11-18T13:35:58.714319+00:00",
+        "score_debug": {
+          "combined_score": 0.637405576938498,
+          "semantic_score": 0.31056097,
+          "bm25_score": 0.9592352650535377,
+          "entity_boost": 0.3237177072927073
+        }
+      },
+      {
+        "memory": "User plans to order food from UberEats during the week of November 14–20, 2026.",
+        "score": 0.6217840396715537,
+        "id": "4bcc5515-85ff-4226-b41b-59da3b769466",
+        "created_at": "2026-11-18T13:21:37.676280+00:00",
+        "updated_at": "2026-11-18T13:21:37.676280+00:00",
+        "score_debug": {
+          "combined_score": 0.6217840396715537,
+          "semantic_score": 0.55446076,
+          "bm25_score": 0.9999993391788845,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Spend $20 on select household and personal care items to receive an additional 2,000 Balance Rewards points.",
+        "score": 0.61612629906427,
+        "id": "f4fb5748-21d3-43ae-bdea-75d28d162708",
+        "created_at": "2026-11-18T13:46:04.070836+00:00",
+        "updated_at": "2026-11-18T13:46:04.070836+00:00",
+        "score_debug": {
+          "combined_score": 0.61612629906427,
+          "semantic_score": 0.3544876,
+          "bm25_score": 0.8735466976606747,
+          "entity_boost": 0.31228145
+        }
+      },
+      {
+        "memory": "Assistant explained that Balance Rewards points can be used on sale items, including discounted or BOGO offers, with the point value unchanged; points can be stacked with digital coupons by applying the coupon first and then using points on the remaining amount, but points cannot be applied to sales tax or other fees.",
+        "score": 0.6157659652973959,
+        "id": "bfc0aa77-9031-4667-837a-6bb28cd04093",
+        "created_at": "2026-11-18T13:46:33.248973+00:00",
+        "updated_at": "2026-11-18T13:46:33.248973+00:00",
+        "score_debug": {
+          "combined_score": 0.6157659652973959,
+          "semantic_score": 0.28224865,
+          "bm25_score": 0.8844574453216596,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "Assistant notes that the larger‑width versions may have slightly different interior cabinet dimensions and shelf configurations compared to the original model.",
+        "score": 0.5984748556417896,
+        "id": "1e975fd2-ce93-4cee-9d65-d7aabbe6e242",
+        "created_at": "2026-11-18T12:32:58.279934+00:00",
+        "updated_at": "2026-11-18T12:32:58.279934+00:00",
+        "score_debug": {
+          "combined_score": 0.5984748556417896,
+          "semantic_score": 0.29871058,
+          "bm25_score": 0.8664351341044741,
+          "entity_boost": 0.331041425
+        }
+      },
+      {
+        "memory": "Assistant suggested using an online calculator or a ruler to measure and compare the dimensions of a 1.9 ft³ microwave versus a 1.7 ft³ microwave to visualize the 0.2 ft³ size difference.",
+        "score": 0.5871040023019927,
+        "id": "5f25f2da-1a82-43c6-8aaa-d6802b03b1b8",
+        "created_at": "2026-11-18T12:07:21.187679+00:00",
+        "updated_at": "2026-11-18T12:07:21.187679+00:00",
+        "score_debug": {
+          "combined_score": 0.5871040023019927,
+          "semantic_score": 0.308649,
+          "bm25_score": 0.8586259907549817,
+          "entity_boost": 0.300485015
+        }
+      },
+      {
+        "memory": "Assistant suggested several strategies to cut commute costs, including carpooling or ride‑share, using public transportation, walking or biking, buying discounted transit passes, flexible work arrangements or telecommuting, carpooling services like Waze Carpool, park‑and‑ride options, optimizing routes for fuel efficiency, and using budgeting apps such as Mint or Personal Capital.",
+        "score": 0.5818172005941501,
+        "id": "dcfc62d4-c711-40b9-925f-8625f5de54eb",
+        "created_at": "2026-11-18T12:04:46.493548+00:00",
+        "updated_at": "2026-11-18T12:04:46.493548+00:00",
+        "score_debug": {
+          "combined_score": 0.5818172005941501,
+          "semantic_score": 0.21851745,
+          "bm25_score": 0.8671338364853752,
+          "entity_boost": 0.368891715
+        }
+      },
+      {
+        "memory": "Assistant suggests specific high-value items that often carry bonus point offers, including Tide Pods laundry packets, Crest Whitestrips teeth‑whitening strips, Oral‑B electric toothbrushes, Pantene Pro‑V shampoo and conditioner, and Febreze Air Effects air fresheners.",
+        "score": 0.551344438727167,
+        "id": "9ab76ff5-0514-40fa-8762-28d0008aeecd",
+        "created_at": "2026-11-18T13:47:00.083654+00:00",
+        "updated_at": "2026-11-18T13:47:00.083654+00:00",
+        "score_debug": {
+          "combined_score": 0.551344438727167,
+          "semantic_score": 0.3996384,
+          "bm25_score": 0.6291068268179173,
+          "entity_boost": 0.34961587
+        }
+      },
+      {
+        "memory": "Assistant recommends focusing on high-point earning brands such as Crest toothpaste and toothbrushes, Oral‑B dental products, Pantene shampoo and conditioner, Tide laundry detergent and fabric softener, and Febreze air fresheners, each offering 20 points per $1 spent.",
+        "score": 0.5437744249643205,
+        "id": "99147de4-037f-45a9-a4c7-8a6f69285679",
+        "created_at": "2026-11-18T13:47:00.079280+00:00",
+        "updated_at": "2026-11-18T13:47:00.079280+00:00",
+        "score_debug": {
+          "combined_score": 0.5437744249643205,
+          "semantic_score": 0.36519194,
+          "bm25_score": 0.6261672492839282,
+          "entity_boost": 0.36807687312687315
+        }
+      },
+      {
+        "memory": "User has been reading extensively about various religions and their perspectives on the afterlife, indicating a strong interest in comparative religious studies.",
+        "score": 0.5407656514972313,
+        "id": "0b1265eb-d365-442e-979f-f7c0e7825264",
+        "created_at": "2026-11-18T12:52:07.061209+00:00",
+        "updated_at": "2026-11-18T12:52:07.061209+00:00",
+        "score_debug": {
+          "combined_score": 0.5407656514972313,
+          "semantic_score": 0.22390531,
+          "bm25_score": 0.8645026748869343,
+          "entity_boost": 0.2635061438561439
+        }
+      },
+      {
+        "memory": "Assistant explained that Walgreens Balance Rewards awards 10 points per $1 spent on qualifying purchases, with higher rates for vitamins and supplements (20 points/$1), healthcare and wellness (20 points/$1), baby and childcare (15 points/$1), and beauty/personal care (15 points/$1); points can be boosted with digital coupons, weekly‑ad items, and bonus‑point offers, and 1,000 points can be redeemed for $1 off future purchases.",
+        "score": 0.5263282640197913,
+        "id": "97b404a4-1e40-4142-9ec1-52b090999bd8",
+        "created_at": "2026-11-18T13:45:40.425351+00:00",
+        "updated_at": "2026-11-18T13:45:40.425351+00:00",
+        "score_debug": {
+          "combined_score": 0.5263282640197913,
+          "semantic_score": 0.34024948,
+          "bm25_score": 0.6028623621276479,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "Assistant noted Nepal‑specific considerations: the Himalayas exceed 10,000 ft (3,000 m), popular routes like Everest Base Camp, Annapurna Circuit, and Langtang Valley involve high altitude, and medical facilities may be limited in rural areas.",
+        "score": 0.4964452477401179,
+        "id": "767ddeef-0d07-4c94-998b-495e2bb2116e",
+        "created_at": "2026-11-18T13:39:11.070707+00:00",
+        "updated_at": "2026-11-18T13:39:11.070707+00:00",
+        "score_debug": {
+          "combined_score": 0.4964452477401179,
+          "semantic_score": 0.30351922,
+          "bm25_score": 0.6438776793502947,
+          "entity_boost": 0.29371622
+        }
+      },
+      {
+        "memory": "Assistant recommended looking at pictures or videos of microwaves online to compare their sizes and better understand the 0.2 ft³ volume difference.",
+        "score": 0.49206437504613776,
+        "id": "71a3f672-98f2-4813-b84e-6fb0569e007a",
+        "created_at": "2026-11-18T12:07:21.190027+00:00",
+        "updated_at": "2026-11-18T12:07:21.190027+00:00",
+        "score_debug": {
+          "combined_score": 0.49206437504613776,
+          "semantic_score": 0.36760405,
+          "bm25_score": 0.8625568876153444,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User requested a post-apocalyptic quest in which they must rescue a village's children from mutant creatures, with the promise of receiving a powerful weapon as a reward.",
+        "score": 0.491609131356822,
+        "id": "571ce167-9ec9-4444-908a-806ab14584e4",
+        "created_at": "2026-11-18T12:43:34.258623+00:00",
+        "updated_at": "2026-11-18T12:43:34.258623+00:00",
+        "score_debug": {
+          "combined_score": 0.491609131356822,
+          "semantic_score": 0.28482684,
+          "bm25_score": 0.9441959883920549,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User believes social media companies should prioritize regulating hate speech and fake news while still allowing a diversity of viewpoints, in order to protect the integrity of democratic institutions.",
+        "score": 0.4905898994451964,
+        "id": "aeb8cf2f-c9bc-43de-a42c-7bad107cc690",
+        "created_at": "2026-11-18T12:49:06.427733+00:00",
+        "updated_at": "2026-11-18T12:49:06.427733+00:00",
+        "score_debug": {
+          "combined_score": 0.4905898994451964,
+          "semantic_score": 0.27295485,
+          "bm25_score": 0.953519898612991,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant indicates Home Chef's customer service is highly rated, offering phone, email, and chat support that is helpful and responsive to users.",
+        "score": 0.4848319281330042,
+        "id": "e4b5a013-0776-4d4b-b816-3fc64b7c1000",
+        "created_at": "2026-11-18T12:25:27.030793+00:00",
+        "updated_at": "2026-11-18T12:25:27.030793+00:00",
+        "score_debug": {
+          "combined_score": 0.4848319281330042,
+          "semantic_score": 0.5473608,
+          "bm25_score": 0.6647190203325104,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant indicated that Palm Springs in March typically has an average high of 79 °F (26 °C) and an average low of 54 °F (12 °C), with cool desert evenings that may require layered clothing.",
+        "score": 0.48331499974011793,
+        "id": "a7485f98-58b8-4a72-ba1c-ba14ceae9b76",
+        "created_at": "2026-11-18T13:53:05.091359+00:00",
+        "updated_at": "2026-11-18T13:53:05.091359+00:00",
+        "score_debug": {
+          "combined_score": 0.48331499974011793,
+          "semantic_score": 0.23516557,
+          "bm25_score": 0.6438776793502947,
+          "entity_boost": 0.32924425
+        }
+      },
+      {
+        "memory": "Comfort features of the Corolla Hybrid include heated seats on higher trims, a power‑adjustable driver’s seat, lumbar support, dual‑zone climate control, premium fabric or leather trim, and 60/40 split‑folding rear seats for flexible cargo and passenger space.",
+        "score": 0.48239860387033673,
+        "id": "e9dcdc7a-8342-458d-b4a9-819643047929",
+        "created_at": "2026-11-18T12:37:38.301877+00:00",
+        "updated_at": "2026-11-18T12:37:38.301877+00:00",
+        "score_debug": {
+          "combined_score": 0.48239860387033673,
+          "semantic_score": 0.23567113,
+          "bm25_score": 0.6409144905649528,
+          "entity_boost": 0.32941088911088917
+        }
+      },
+      {
+        "memory": "Assistant advised selecting a durable material (stone, ceramic, or metal), an appropriate size, a design that complements the garden, a color that blends or holds personal meaning, and to proofread the inscription before ordering.",
+        "score": 0.47567264374250706,
+        "id": "15387808-c7be-4eda-97b9-a9787e7994e5",
+        "created_at": "2026-11-18T13:59:28.678130+00:00",
+        "updated_at": "2026-11-18T13:59:28.678130+00:00",
+        "score_debug": {
+          "combined_score": 0.47567264374250706,
+          "semantic_score": 0.20425187,
+          "bm25_score": 0.9849297393562676,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User expressed amazement that the Mongols were able to adapt and govern a highly diverse population, highlighting admiration for their inclusive rule",
+        "score": 0.46910625830973646,
+        "id": "7054a3ae-1c96-4d64-bf5b-b605833d2852",
+        "created_at": "2026-11-18T12:11:59.192220+00:00",
+        "updated_at": "2026-11-18T12:11:59.192220+00:00",
+        "score_debug": {
+          "combined_score": 0.46910625830973646,
+          "semantic_score": 0.2418302,
+          "bm25_score": 0.6706978457743411,
+          "entity_boost": 0.2602376
+        }
+      },
+      {
+        "memory": "Assistant described the Peak Design Everyday Backpack as a highly regarded camera bag featuring comfortable ergonomic design with padded shoulder straps and hip belt, a spacious modular interior with customizable dividers, durable weather‑resistant materials, and a sleek modern aesthetic, while noting its premium price and heavier weight when fully loaded.",
+        "score": 0.4660015108510591,
+        "id": "ee866dba-0286-4f07-8b39-fd7fdaebcb94",
+        "created_at": "2026-11-18T12:01:52.983456+00:00",
+        "updated_at": "2026-11-18T12:01:52.983456+00:00",
+        "score_debug": {
+          "combined_score": 0.4660015108510591,
+          "semantic_score": 0.20028713,
+          "bm25_score": 0.6028623621276479,
+          "entity_boost": 0.361854285
+        }
+      },
+      {
+        "memory": "Toyota Corolla Hybrid infotainment is Entune 3.0 Audio with an 8‑inch touchscreen, Apple CarPlay, Android Auto, Amazon Alexa, six speakers, USB and auxiliary inputs, and Bluetooth; an optional premium JBL 9‑speaker 800‑W system with Clari‑Fi is available. Additional features include Qi‑compatible wireless charging, an optional moonroof, heated seats on higher trims, and LED headlights. The model is offered in LE, XLE, and Limited trims.",
+        "score": 0.46226269576032697,
+        "id": "2a27895b-96bd-4d75-a5ae-519395843c79",
+        "created_at": "2026-11-18T12:36:39.543216+00:00",
+        "updated_at": "2026-11-18T12:36:39.543216+00:00",
+        "score_debug": {
+          "combined_score": 0.46226269576032697,
+          "semantic_score": 0.21179004,
+          "bm25_score": 0.5913716244008176,
+          "entity_boost": 0.352495075
+        }
+      },
+      {
+        "memory": "Compression stockings are specially designed garments that apply graduated pressure, highest at the ankle and decreasing up the leg, to improve venous return, reduce blood pooling, and lower the risk of clot formation.",
+        "score": 0.4509480147943279,
+        "id": "a92462a0-1624-4128-8075-668c4b19e7f3",
+        "created_at": "2026-11-18T13:18:10.570412+00:00",
+        "updated_at": "2026-11-18T13:18:10.570412+00:00",
+        "score_debug": {
+          "combined_score": 0.4509480147943279,
+          "semantic_score": 0.20788392,
+          "bm25_score": 0.6468449669858198,
+          "entity_boost": 0.27264115
+        }
+      },
+      {
+        "memory": "Assistant explained that altitude sickness, also called Acute Mountain Sickness (AMS), occurs when the body cannot adapt quickly enough to lower air pressure and reduced oxygen at high elevations, leading to symptoms ranging from mild headache and nausea to severe confusion and breathing difficulty.",
+        "score": 0.44231743617191716,
+        "id": "7083cde5-8957-4da3-8ebb-2562bb211b43",
+        "created_at": "2026-11-18T13:39:11.054215+00:00",
+        "updated_at": "2026-11-18T13:39:11.054215+00:00",
+        "score_debug": {
+          "combined_score": 0.44231743617191716,
+          "semantic_score": 0.22740631,
+          "bm25_score": 0.6203045304297927,
+          "entity_boost": 0.25808275
+        }
+      },
+      {
+        "memory": "Spring Awakening received three Outer Critics Circle Awards, such as Outstanding New Broadway Musical and Outstanding Director of a Musical.",
+        "score": 0.4364544190212631,
+        "id": "31e1c31c-1bca-4976-9e01-026745cf5991",
+        "created_at": "2026-11-18T12:16:50.145198+00:00",
+        "updated_at": "2026-11-18T12:16:50.145198+00:00",
+        "score_debug": {
+          "combined_score": 0.4364544190212631,
+          "semantic_score": 0.221339,
+          "bm25_score": 0.8697970475531577,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "Assistant advised saving strategies for food‑delivery apps: stack promo codes with referral credits or daily deals, look for local restaurant‑specific offers, and follow the services’ social‑media channels for limited‑time promotions, while always reviewing terms and conditions.",
+        "score": 0.383433,
+        "id": "deec25de-49b5-4f08-8220-8414464248e6",
+        "created_at": "2026-11-18T12:26:04.713434+00:00",
+        "updated_at": "2026-11-18T12:26:04.713434+00:00",
+        "score_debug": {
+          "combined_score": 0.383433,
+          "semantic_score": 0.5819987,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3765838
+        }
+      },
+      {
+        "memory": "User suggests that hell could be a metaphor for spiritual suffering or separation from a higher power, emphasizing the importance of spiritual growth and connection with something greater than oneself.",
+        "score": 0.3694998281330042,
+        "id": "88e0e9fd-a527-4b12-bbe2-b99228aaf387",
+        "created_at": "2026-11-18T12:55:08.342680+00:00",
+        "updated_at": "2026-11-18T12:55:08.342680+00:00",
+        "score_debug": {
+          "combined_score": 0.3694998281330042,
+          "semantic_score": 0.25903055,
+          "bm25_score": 0.6647190203325104,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User intends to take a closer look at Sun Basket and Home Chef meal‑kit services, evaluating them as potential options.",
+        "score": 0.3656992,
+        "id": "3b2d70dd-3839-43bf-88b8-f39a669655f6",
+        "created_at": "2026-11-18T12:25:27.003277+00:00",
+        "updated_at": "2026-11-18T12:25:27.003277+00:00",
+        "score_debug": {
+          "combined_score": 0.3656992,
+          "semantic_score": 0.5259453,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3883027
+        }
+      },
+      {
+        "memory": "Assistant recommended checking the platform’s website, app, or social‑media channels for delivery‑fee promotions, signing up for email newsletters, and using cashback apps or browser extensions that rebate delivery fees.",
+        "score": 0.364512764,
+        "id": "caa71fbc-beae-424d-ba44-24730335eabb",
+        "created_at": "2026-11-18T13:24:55.474863+00:00",
+        "updated_at": "2026-11-18T13:24:55.474863+00:00",
+        "score_debug": {
+          "combined_score": 0.364512764,
+          "semantic_score": 0.55727893,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35400298
+        }
+      },
+      {
+        "memory": "User used to swim competitively in high school and is now considering taking up swimming again as a recreational sport, missing the feeling of being in the water.",
+        "score": 0.36089613490538647,
+        "id": "a2b4d08d-9292-4c44-9293-cca957175aad",
+        "created_at": "2026-11-18T13:51:36.089359+00:00",
+        "updated_at": "2026-11-18T13:51:36.089359+00:00",
+        "score_debug": {
+          "combined_score": 0.36089613490538647,
+          "semantic_score": 0.23453297,
+          "bm25_score": 0.6677073672634662,
+          "entity_boost": 0.0
+        }
+      },
+      {
+        "memory": "User is considering trying meal kit delivery services and is seeking recommendations and promotions for popular brands such as Blue Apron and Plated.",
+        "score": 0.35924008,
+        "id": "8d335e9a-e65f-4e13-ae5a-c1efe53f8bc4",
+        "created_at": "2026-11-18T12:24:52.194313+00:00",
+        "updated_at": "2026-11-18T12:24:52.194313+00:00",
+        "score_debug": {
+          "combined_score": 0.35924008,
+          "semantic_score": 0.4976709,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4004293
+        }
+      },
+      {
+        "memory": "User will closely examine the customer service quality and order‑cancellation flexibility of Sun Basket and Home Chef before deciding on a meal‑kit subscription, emphasizing those aspects in the evaluation.",
+        "score": 0.3480557651578947,
+        "id": "614fcc88-7d20-4eb4-a178-54e9c5279dd3",
+        "created_at": "2026-11-18T12:26:04.692948+00:00",
+        "updated_at": "2026-11-18T12:26:04.692948+00:00",
+        "score_debug": {
+          "combined_score": 0.3480557651578947,
+          "semantic_score": 0.54260063,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32753878289473687
+        }
+      },
+      {
+        "memory": "Assistant recommended Green Chef as a meal‑kit provider emphasizing organic, non‑GMO ingredients and offering options for various dietary preferences.",
+        "score": 0.3445330293106893,
+        "id": "49c24d23-946d-49a3-a2c9-f70d2634d7b2",
+        "created_at": "2026-11-18T12:26:37.595769+00:00",
+        "updated_at": "2026-11-18T12:26:37.595769+00:00",
+        "score_debug": {
+          "combined_score": 0.3445330293106893,
+          "semantic_score": 0.45660585,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4047267232767233
+        }
+      },
+      {
+        "memory": "Assistant suggests the user explore both Sun Basket and Home Chef menus, review nutritional information, and contact their customer service teams to confirm low‑carb and low‑sugar options.",
+        "score": 0.341047792,
+        "id": "54e7a027-73f6-48bd-a0d4-30d0458c2c0d",
+        "created_at": "2026-11-18T12:27:29.673555+00:00",
+        "updated_at": "2026-11-18T12:27:29.673555+00:00",
+        "score_debug": {
+          "combined_score": 0.341047792,
+          "semantic_score": 0.45536438,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3972551
+        }
+      },
+      {
+        "memory": "Assistant describes Home Chef's flexible subscription options, allowing users to skip weeks, pause, cancel anytime, and use the 'Customize It' feature to swap ingredients or recipes.",
+        "score": 0.340966084,
+        "id": "fbec3138-71c8-422f-af39-9a8796631704",
+        "created_at": "2026-11-18T12:25:27.036340+00:00",
+        "updated_at": "2026-11-18T12:25:27.036340+00:00",
+        "score_debug": {
+          "combined_score": 0.340966084,
+          "semantic_score": 0.52379316,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32862205
+        }
+      },
+      {
+        "memory": "Assistant recommended Native Foods Cafe, a vegan chain restaurant in Palm Springs offering plant‑based dishes including burgers, salads, bowls, and sandwiches.",
+        "score": 0.34093495799999995,
+        "id": "49540eb7-ef16-434f-a44a-f28e0989af60",
+        "created_at": "2026-11-18T13:54:23.285939+00:00",
+        "updated_at": "2026-11-18T13:54:23.285939+00:00",
+        "score_debug": {
+          "combined_score": 0.34093495799999995,
+          "semantic_score": 0.45938686,
+          "bm25_score": 0.0,
+          "entity_boost": 0.392950535
+        }
+      },
+      {
+        "memory": "User is weighing whether to prioritize meal‑kit services that provide greater recipe variety or those that specifically accommodate dietary needs such as vegan, gluten‑free, or low‑carb options.",
+        "score": 0.3356195193766234,
+        "id": "2bd6cba9-4b00-4c0c-96ad-05cc3f0f1b91",
+        "created_at": "2026-11-18T12:26:37.591033+00:00",
+        "updated_at": "2026-11-18T12:26:37.591033+00:00",
+        "score_debug": {
+          "combined_score": 0.3356195193766234,
+          "semantic_score": 0.47659224,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3624565584415585
+        }
+      },
+      {
+        "memory": "Assistant recommended Purple Carrot as a meal‑kit service that focuses exclusively on vegan recipes, catering to users seeking plant‑based meals.",
+        "score": 0.335414208,
+        "id": "bac6f546-2f08-4574-b92a-3673c8143975",
+        "created_at": "2026-11-18T12:26:37.593356+00:00",
+        "updated_at": "2026-11-18T12:26:37.593356+00:00",
+        "score_debug": {
+          "combined_score": 0.335414208,
+          "semantic_score": 0.48022962,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3583059
+        }
+      },
+      {
+        "memory": "Assistant suggested checking the Happy Cow website and app for additional vegan‑friendly restaurant listings in Palm Springs.",
+        "score": 0.335390528,
+        "id": "3a2ba6c2-0bc9-4f1d-a320-d5d500cb7fb4",
+        "created_at": "2026-11-18T13:54:23.300456+00:00",
+        "updated_at": "2026-11-18T13:54:23.300456+00:00",
+        "score_debug": {
+          "combined_score": 0.335390528,
+          "semantic_score": 0.46619317,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37228315
+        }
+      },
+      {
+        "memory": "Assistant noted Uber's 2017 data breach that exposed personal information of 57 million customers and drivers, resulting from a hacker accessing code from a third‑party vendor on an open‑source platform; Uber paid a $148 million settlement.",
+        "score": 0.3344728,
+        "id": "f3e7ce00-67a5-4f34-b059-d53978e28b5c",
+        "created_at": "2026-11-18T11:57:32.567743+00:00",
+        "updated_at": "2026-11-18T11:57:32.567743+00:00",
+        "score_debug": {
+          "combined_score": 0.3344728,
+          "semantic_score": 0.4338665,
+          "bm25_score": 0.0,
+          "entity_boost": 0.4023155
+        }
+      },
+      {
+        "memory": "Assistant recommended Nature's Health Food & Cafe, a health‑food store and café in Palm Springs serving vegetarian and vegan options such as salads, sandwiches, wraps, and smoothies.",
+        "score": 0.33416408400000003,
+        "id": "0529bf04-f359-49bc-8d1d-c0a2e8ec3b18",
+        "created_at": "2026-11-18T13:54:23.283530+00:00",
+        "updated_at": "2026-11-18T13:54:23.283530+00:00",
+        "score_debug": {
+          "combined_score": 0.33416408400000003,
+          "semantic_score": 0.43859896,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39681125
+        }
+      },
+      {
+        "memory": "Assistant notes Sun Basket provides a flexible subscription, including a 'Flexible Plan' that lets users choose weekly meal and recipe counts and pause or cancel anytime.",
+        "score": 0.333148448,
+        "id": "124533f4-da73-47a7-8888-3a76ce13d025",
+        "created_at": "2026-11-18T12:25:27.028383+00:00",
+        "updated_at": "2026-11-18T12:25:27.028383+00:00",
+        "score_debug": {
+          "combined_score": 0.333148448,
+          "semantic_score": 0.46882397,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36404715
+        }
+      },
+      {
+        "memory": "Assistant recommended Chef Tanya's Kitchen, a vegan restaurant in Palm Springs offering plant‑based sushi, bowls, and wraps.",
+        "score": 0.332592214,
+        "id": "081c0370-25f1-4a82-85ff-ea0f65189452",
+        "created_at": "2026-11-18T13:54:23.295840+00:00",
+        "updated_at": "2026-11-18T13:54:23.295840+00:00",
+        "score_debug": {
+          "combined_score": 0.332592214,
+          "semantic_score": 0.4654423,
+          "bm25_score": 0.0,
+          "entity_boost": 0.366038235
+        }
+      },
+      {
+        "memory": "Digital coupon provides $1 off household essentials like toilet paper, paper towels, and trash bags.",
+        "score": 0.3323048277768924,
+        "id": "97aa6e2f-16d5-40ed-afba-625fc03ce86c",
+        "created_at": "2026-11-18T13:46:04.064418+00:00",
+        "updated_at": "2026-11-18T13:46:04.064418+00:00",
+        "score_debug": {
+          "combined_score": 0.3323048277768924,
+          "semantic_score": 0.48583943,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34492263944223106
+        }
+      },
+      {
+        "memory": "Assistant advises combining digital coupons and sales for items like Crest toothpaste, Tide laundry detergent, and Pantene shampoo and conditioner to maximize point earnings and savings.",
+        "score": 0.3318880391687321,
+        "id": "b11161c3-739a-45c3-aa77-3517f1b80306",
+        "created_at": "2026-11-18T13:47:00.086209+00:00",
+        "updated_at": "2026-11-18T13:47:00.086209+00:00",
+        "score_debug": {
+          "combined_score": 0.3318880391687321,
+          "semantic_score": 0.45701128,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "User intends to take a closer look at Sun Basket's low‑carb meal plan and asked for details about its pricing and delivery options.",
+        "score": 0.33136460171828175,
+        "id": "f9e50d53-3ea4-4332-9291-752aa3897c87",
+        "created_at": "2026-11-18T12:28:02.699393+00:00",
+        "updated_at": "2026-11-18T12:28:02.699393+00:00",
+        "score_debug": {
+          "combined_score": 0.33136460171828175,
+          "semantic_score": 0.5602658,
+          "bm25_score": 0.0,
+          "entity_boost": 0.26814570429570433
+        }
+      },
+      {
+        "memory": "Digital coupon provides $2 off select cleaning supplies and laundry detergent.",
+        "score": 0.33057125200000004,
+        "id": "394369cd-e6d8-4770-87ae-2bf21852b56f",
+        "created_at": "2026-11-18T13:46:04.066498+00:00",
+        "updated_at": "2026-11-18T13:46:04.066498+00:00",
+        "score_debug": {
+          "combined_score": 0.33057125200000004,
+          "semantic_score": 0.49259943,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3338287
+        }
+      },
+      {
+        "memory": "User shared that a chef requested an Indian restaurant recipe with protein marination; AI omitted yogurt, gave a decent dish rated 8/10, but the chef noted missing creativity, viewing AI as close but not sufficient.",
+        "score": 0.32896638,
+        "id": "3d2f5936-80cd-445e-a3fe-1dfcf5a06ab2",
+        "created_at": "2026-11-18T13:48:24.316101+00:00",
+        "updated_at": "2026-11-18T13:48:24.316101+00:00",
+        "score_debug": {
+          "combined_score": 0.32896638,
+          "semantic_score": 0.47163153,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35078442
+        }
+      },
+      {
+        "memory": "Home Chef allows users to customize their meal plan by selecting \"Low‑Carb\" as a dietary preference, delivering recipes that meet low‑carb needs.",
+        "score": 0.3274136344777007,
+        "id": "8c511e05-a5df-48c1-ab30-bc35ae4e79a7",
+        "created_at": "2026-11-18T12:27:29.666694+00:00",
+        "updated_at": "2026-11-18T12:27:29.666694+00:00",
+        "score_debug": {
+          "combined_score": 0.3274136344777007,
+          "semantic_score": 0.46559033,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35294375619425183
+        }
+      },
+      {
+        "memory": "Fresh Earth Rewards (FER) is a rewards system that distributes Fresh Earth Tokens to stakeholders based on their participation and impact in the ecosystem.",
+        "score": 0.3273289922868526,
+        "id": "6bf501c4-3489-459f-ae2e-e00e19237d6e",
+        "created_at": "2026-11-18T12:42:04.420677+00:00",
+        "updated_at": "2026-11-18T12:42:04.420677+00:00",
+        "score_debug": {
+          "combined_score": 0.3273289922868526,
+          "semantic_score": 0.45956516,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35875732071713146
+        }
+      },
+      {
+        "memory": "User asked for recommendations for vegan-friendly restaurants in Palm Springs.",
+        "score": 0.326529888,
+        "id": "bb3eef56-f20e-4e0f-8286-b01d28ac2330",
+        "created_at": "2026-11-18T13:54:23.280414+00:00",
+        "updated_at": "2026-11-18T13:54:23.280414+00:00",
+        "score_debug": {
+          "combined_score": 0.326529888,
+          "semantic_score": 0.46597642,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3503483
+        }
+      },
+      {
+        "memory": "Assistant recommended Palm Greens Cafe, a vegetarian café in Palm Springs that provides many vegan choices such as salads, bowls, and sandwiches.",
+        "score": 0.32337032,
+        "id": "c896c765-eb41-4515-908a-108e80aaf91d",
+        "created_at": "2026-11-18T13:54:23.290928+00:00",
+        "updated_at": "2026-11-18T13:54:23.290928+00:00",
+        "score_debug": {
+          "combined_score": 0.32337032,
+          "semantic_score": 0.4283774,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3800484
+        }
+      },
+      {
+        "memory": "Fresh Earth Token (FET) is a digital token that serves as a reward for positive impact on the environment, economy, food quality, and health within the Fresh Earth ecosystem.",
+        "score": 0.32194576399999997,
+        "id": "abea7c19-575c-43d0-8a06-b2fbd026b164",
+        "created_at": "2026-11-18T12:42:04.416243+00:00",
+        "updated_at": "2026-11-18T12:42:04.416243+00:00",
+        "score_debug": {
+          "combined_score": 0.32194576399999997,
+          "semantic_score": 0.44254136,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36232305
+        }
+      },
+      {
+        "memory": "monday.com functions as a database that provides APIs linking all components together within the Fresh Earth community and sandbox environment.",
+        "score": 0.3204519253946054,
+        "id": "84246685-3d29-4df8-ae86-e40551db06e7",
+        "created_at": "2026-11-18T12:41:10.817982+00:00",
+        "updated_at": "2026-11-18T12:41:10.817982+00:00",
+        "score_debug": {
+          "combined_score": 0.3204519253946054,
+          "semantic_score": 0.4708433,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3302865134865135
+        }
+      },
+      {
+        "memory": "Assistant gave an example of a dish-specific code, “VEGGLASAGNA20,” which would grant 20% off the veggie lasagna, and clarified that such codes are typically limited to particular restaurants or menu items.",
+        "score": 0.31911564000000003,
+        "id": "e14a188c-a58e-4cba-947e-e33b00ea3922",
+        "created_at": "2026-11-18T13:24:10.412185+00:00",
+        "updated_at": "2026-11-18T13:24:10.412185+00:00",
+        "score_debug": {
+          "combined_score": 0.31911564000000003,
+          "semantic_score": 0.52354825,
+          "bm25_score": 0.0,
+          "entity_boost": 0.27424085
+        }
+      },
+      {
+        "memory": "Buying Groups provide a mechanism for suppliers to bid for aggregated costs, making procurement more efficient and less costly for all stakeholders in the Fresh Earth ecosystem.",
+        "score": 0.3180962069090909,
+        "id": "73d4a723-acb8-49f4-834b-599dadffdf11",
+        "created_at": "2026-11-18T12:42:04.437131+00:00",
+        "updated_at": "2026-11-18T12:42:04.437131+00:00",
+        "score_debug": {
+          "combined_score": 0.3180962069090909,
+          "semantic_score": 0.46876404,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3264764772727273
+        }
+      },
+      {
+        "memory": "Assistant recommended Wilma & Frieda's Cafe, a breakfast and brunch spot in Palm Springs that includes vegan options such as tofu scrambles, pancakes, and sandwiches.",
+        "score": 0.31806662,
+        "id": "e34a3d4a-8107-4f9d-9001-41a538978aa9",
+        "created_at": "2026-11-18T13:54:23.298393+00:00",
+        "updated_at": "2026-11-18T13:54:23.298393+00:00",
+        "score_debug": {
+          "combined_score": 0.31806662,
+          "semantic_score": 0.4244921,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37067445
+        }
+      },
+      {
+        "memory": "User is looking for healthy breakfast options that will provide an energy boost.",
+        "score": 0.317565188,
+        "id": "fc70c2f5-8f9f-4b3b-b872-679bca549a76",
+        "created_at": "2026-11-18T14:02:31.590670+00:00",
+        "updated_at": "2026-11-18T14:02:31.590670+00:00",
+        "score_debug": {
+          "combined_score": 0.317565188,
+          "semantic_score": 0.42359897,
+          "bm25_score": 0.0,
+          "entity_boost": 0.370314
+        }
+      },
+      {
+        "memory": "User shared that a copywriter for a vegan McDonald’s campaign asked AI for taglines; AI produced several ideas, some usable, but the copywriter felt they needed refinement.",
+        "score": 0.317187924,
+        "id": "eff8c204-23b7-48d5-aada-3f8050161ab2",
+        "created_at": "2026-11-18T13:48:24.304563+00:00",
+        "updated_at": "2026-11-18T13:48:24.304563+00:00",
+        "score_debug": {
+          "combined_score": 0.317187924,
+          "semantic_score": 0.40000486,
+          "bm25_score": 0.0,
+          "entity_boost": 0.39296495
+        }
+      },
+      {
+        "memory": "User signed up for a ride-sharing program around November 11, 2026, and colleague Rachel agreed to carpool with them on Fridays, which should help reduce commute costs",
+        "score": 0.31642419,
+        "id": "500532b3-d534-43c1-8ad8-91192378c7c2",
+        "created_at": "2026-11-18T12:05:20.724578+00:00",
+        "updated_at": "2026-11-18T12:05:20.724578+00:00",
+        "score_debug": {
+          "combined_score": 0.31642419,
+          "semantic_score": 0.42000955,
+          "bm25_score": 0.0,
+          "entity_boost": 0.371050925
+        }
+      },
+      {
+        "memory": "Earn 2,000 Balance Rewards points when spending $10 on participating household essentials, boosting point earnings.",
+        "score": 0.315809066,
+        "id": "b0b4e47b-38bd-40e9-b882-c89b22e34d5d",
+        "created_at": "2026-11-18T13:46:04.068571+00:00",
+        "updated_at": "2026-11-18T13:46:04.068571+00:00",
+        "score_debug": {
+          "combined_score": 0.315809066,
+          "semantic_score": 0.4455898,
+          "bm25_score": 0.0,
+          "entity_boost": 0.343932865
+        }
+      },
+      {
+        "memory": "Fresh Earth Rewards (FER) is a rewards system that redistributes tokens and wealth among stakeholders based on their impact and participation in the ecosystem.",
+        "score": 0.31554406028685256,
+        "id": "8fa9dedb-6a30-4370-ad21-75958e119153",
+        "created_at": "2026-11-18T12:42:46.571626+00:00",
+        "updated_at": "2026-11-18T12:42:46.571626+00:00",
+        "score_debug": {
+          "combined_score": 0.31554406028685256,
+          "semantic_score": 0.43010283,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35875732071713146
+        }
+      },
+      {
+        "memory": "User states that the Fresh Earth community and the Expert Network operate as a single community, empowered by the tools defined in the FEE components.",
+        "score": 0.3149986523076923,
+        "id": "0aec13fd-4dcd-466e-9372-ccdc33871ffc",
+        "created_at": "2026-11-18T12:41:10.822696+00:00",
+        "updated_at": "2026-11-18T12:41:10.822696+00:00",
+        "score_debug": {
+          "combined_score": 0.3149986523076923,
+          "semantic_score": 0.4373774,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35011923076923085
+        }
+      },
+      {
+        "memory": "User has been having oatmeal with banana and honey on weekends, and it has become a favorite breakfast of theirs.",
+        "score": 0.31421409029370634,
+        "id": "8076ebcf-8f80-4f63-ab78-8dfd937d228a",
+        "created_at": "2026-11-18T14:02:51.118077+00:00",
+        "updated_at": "2026-11-18T14:02:51.118077+00:00",
+        "score_debug": {
+          "combined_score": 0.31421409029370634,
+          "semantic_score": 0.42532596,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36020926573426576
+        }
+      },
+      {
+        "memory": "User reports that on weekends he regularly eats oatmeal topped with banana and honey, which has become his favorite breakfast.",
+        "score": 0.3125480342937063,
+        "id": "b72c6772-2a59-4964-a7b1-4f1ea88b636b",
+        "created_at": "2026-11-18T14:03:36.050202+00:00",
+        "updated_at": "2026-11-18T14:03:36.050202+00:00",
+        "score_debug": {
+          "combined_score": 0.3125480342937063,
+          "semantic_score": 0.42116082,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36020926573426576
+        }
+      },
+      {
+        "memory": "Sun Basket sources high‑quality, sustainable ingredients, including organic produce and responsibly sourced meats.",
+        "score": 0.31184754,
+        "id": "c46f6ad2-37f8-4120-b93f-abdda04795da",
+        "created_at": "2026-11-18T12:28:02.721243+00:00",
+        "updated_at": "2026-11-18T12:28:02.721243+00:00",
+        "score_debug": {
+          "combined_score": 0.31184754,
+          "semantic_score": 0.4259231,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35369575
+        }
+      },
+      {
+        "memory": "Fresh Earth Rewards (FER) is a rewards system that redistributes tokens, wealth, and participation as incentives, driving greater impact and stakeholder ownership.",
+        "score": 0.3095850882868526,
+        "id": "f2335f77-ae8c-4614-ab35-25680beacaeb",
+        "created_at": "2026-11-18T12:41:10.793805+00:00",
+        "updated_at": "2026-11-18T12:41:10.793805+00:00",
+        "score_debug": {
+          "combined_score": 0.3095850882868526,
+          "semantic_score": 0.4152054,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35875732071713146
+        }
+      },
+      {
+        "memory": "Other Sun Basket meal plans are priced between $9.99 and $12.99 per serving.",
+        "score": 0.30864056399999995,
+        "id": "c305829d-7334-42dd-b440-af08c48f396e",
+        "created_at": "2026-11-18T12:28:02.705039+00:00",
+        "updated_at": "2026-11-18T12:28:02.705039+00:00",
+        "score_debug": {
+          "combined_score": 0.30864056399999995,
+          "semantic_score": 0.39858356,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37301785
+        }
+      },
+      {
+        "memory": "Fresh Earth Consumer Movement is an app that digitizes consumer demand, desires, preferences, and participation, informing and orienting the ecosystem based on aggregated consumer input.",
+        "score": 0.307581188,
+        "id": "2f84d041-0b0d-479f-b49b-99c89e058083",
+        "created_at": "2026-11-18T12:42:46.596181+00:00",
+        "updated_at": "2026-11-18T12:42:46.596181+00:00",
+        "score_debug": {
+          "combined_score": 0.307581188,
+          "semantic_score": 0.42440867,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3445443
+        }
+      },
+      {
+        "memory": "Assistant recommended Luscious Lorraine's Organic Cafe, an organic café in Palm Springs with vegan and gluten‑free options like smoothies, salads, sandwiches, and entrees.",
+        "score": 0.306062664,
+        "id": "6e532b09-9826-4ce4-9fbe-57cb86ac8ca2",
+        "created_at": "2026-11-18T13:54:23.288568+00:00",
+        "updated_at": "2026-11-18T13:54:23.288568+00:00",
+        "score_debug": {
+          "combined_score": 0.306062664,
+          "semantic_score": 0.37868086,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3864758
+        }
+      },
+      {
+        "memory": "Assistant provides shopping tips: purchase items in bulk, stack digital coupons, sales, and point bonuses, regularly check the Walgreens app for extra offers, and use cashback apps such as Ibotta, Fetch Rewards, or Checkout 51.",
+        "score": 0.30530103116873214,
+        "id": "d0a723a9-036a-4a22-a590-6f30dc779fcf",
+        "created_at": "2026-11-18T13:47:00.089287+00:00",
+        "updated_at": "2026-11-18T13:47:00.089287+00:00",
+        "score_debug": {
+          "combined_score": 0.30530103116873214,
+          "semantic_score": 0.39054376,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "Buy One, Get One Free (BOGO) promotion applies to certain laundry detergents, air fresheners, and paper towels.",
+        "score": 0.304971108,
+        "id": "c8be1bf2-d82a-49fa-a4b5-93e475e16a21",
+        "created_at": "2026-11-18T13:46:04.057919+00:00",
+        "updated_at": "2026-11-18T13:46:04.057919+00:00",
+        "score_debug": {
+          "combined_score": 0.304971108,
+          "semantic_score": 0.42387947,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3385483
+        }
+      },
+      {
+        "memory": "Fresh Earth Token (FET) is a digital token used as a unit of account within the Fresh Earth ecosystem, tradable on open markets, and employed to reward positive impact and incentivize participation.",
+        "score": 0.3039627413545817,
+        "id": "fee286b3-f14a-45cc-ad83-6496c7986446",
+        "created_at": "2026-11-18T12:42:46.568958+00:00",
+        "updated_at": "2026-11-18T12:42:46.568958+00:00",
+        "score_debug": {
+          "combined_score": 0.3039627413545817,
+          "semantic_score": 0.4290577,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3308491533864542
+        }
+      },
+      {
+        "memory": "User shared that a bartender asked AI for a Sage Negroni twist; AI provided a recipe but lacked creativity and follow‑up questions, so the bartender felt AI was insufficient.",
+        "score": 0.30347027,
+        "id": "61aa5755-f312-4e9f-9509-792e72694405",
+        "created_at": "2026-11-18T13:48:24.293492+00:00",
+        "updated_at": "2026-11-18T13:48:24.293492+00:00",
+        "score_debug": {
+          "combined_score": 0.30347027,
+          "semantic_score": 0.4064715,
+          "bm25_score": 0.0,
+          "entity_boost": 0.352204175
+        }
+      },
+      {
+        "memory": "User signed up for a ride‑sharing program last week and arranged to carpool with colleague Rachel on Fridays.",
+        "score": 0.30159925000000004,
+        "id": "b3e3b384-64ad-468c-b3f3-74c44fcc13e2",
+        "created_at": "2026-11-18T12:07:21.180123+00:00",
+        "updated_at": "2026-11-18T12:07:21.180123+00:00",
+        "score_debug": {
+          "combined_score": 0.30159925000000004,
+          "semantic_score": 0.3891932,
+          "bm25_score": 0.0,
+          "entity_boost": 0.364804925
+        }
+      },
+      {
+        "memory": "User bought a new lamp from IKEA on the weekend of November 14‑15, 2026, which they find convenient for charging their phone while watching TV.",
+        "score": 0.30148167601998005,
+        "id": "b74ac512-2752-4dea-902a-ae46f7b756d7",
+        "created_at": "2026-11-18T12:33:25.676686+00:00",
+        "updated_at": "2026-11-18T12:33:25.676686+00:00",
+        "score_debug": {
+          "combined_score": 0.30148167601998005,
+          "semantic_score": 0.39848924,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3552149500499501
+        }
+      },
+      {
+        "memory": "Fresh Earth B2B Marketplace Sandbox is a four‑sided e‑commerce platform connecting consumers, farmers (produce), designers (programs), and manufacturers (products) with the supply chain (packers, drivers, physical stores), centering around these four player groups.",
+        "score": 0.30125136,
+        "id": "9592b64c-e3d5-46a0-8eec-3b764b5efbd5",
+        "created_at": "2026-11-18T12:42:46.590788+00:00",
+        "updated_at": "2026-11-18T12:42:46.590788+00:00",
+        "score_debug": {
+          "combined_score": 0.30125136,
+          "semantic_score": 0.39495325,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35817515
+        }
+      },
+      {
+        "memory": "Fresh Earth Supply Chain (FESC) includes farmers, manufacturers, packers, drivers, and physical stores, forming the integrated supply chain for the ecosystem.",
+        "score": 0.300570984,
+        "id": "aa4b9d54-06d6-4706-9b73-79a9e4cec65f",
+        "created_at": "2026-11-18T12:42:46.598674+00:00",
+        "updated_at": "2026-11-18T12:42:46.598674+00:00",
+        "score_debug": {
+          "combined_score": 0.300570984,
+          "semantic_score": 0.37035286,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3810746
+        }
+      },
+      {
+        "memory": "Assistant recommended Watercress Vietnamese Bistro, a Vietnamese restaurant in Palm Springs featuring a separate vegan menu with dishes like vegan pho, summer rolls, and tofu stir‑fry.",
+        "score": 0.300414562,
+        "id": "47252565-853c-412f-8363-2b0a266e9511",
+        "created_at": "2026-11-18T13:54:23.293493+00:00",
+        "updated_at": "2026-11-18T13:54:23.293493+00:00",
+        "score_debug": {
+          "combined_score": 0.300414562,
+          "semantic_score": 0.38973093,
+          "bm25_score": 0.0,
+          "entity_boost": 0.361305475
+        }
+      },
+      {
+        "memory": "User bought a Canon EF 50mm f/1.8 STM prime lens at Best Buy for $150, describing it as a game‑changer for their photography.",
+        "score": 0.299530172,
+        "id": "ee8b5e85-033b-4783-a0d3-08566017a29f",
+        "created_at": "2026-11-18T12:00:41.227929+00:00",
+        "updated_at": "2026-11-18T12:00:41.227929+00:00",
+        "score_debug": {
+          "combined_score": 0.299530172,
+          "semantic_score": 0.36758763,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3812378
+        }
+      },
+      {
+        "memory": "User mentions that widgets, programs, and farm plans are additional components that should be part of the Fresh Earth ecosystem description.",
+        "score": 0.2988807208111888,
+        "id": "c6244829-fb24-4af2-9b61-5c2334ac79fc",
+        "created_at": "2026-11-18T12:41:10.829512+00:00",
+        "updated_at": "2026-11-18T12:41:10.829512+00:00",
+        "score_debug": {
+          "combined_score": 0.2988807208111888,
+          "semantic_score": 0.40407383,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3431279720279721
+        }
+      },
+      {
+        "memory": "Fresh Earth Token (FET) is a unique digital token that represents the value of impact created by the Fresh Earth ecosystem.",
+        "score": 0.29877747735458166,
+        "id": "05d15932-633e-4c28-bb49-6c05bc7232a5",
+        "created_at": "2026-11-18T12:41:10.791212+00:00",
+        "updated_at": "2026-11-18T12:41:10.791212+00:00",
+        "score_debug": {
+          "combined_score": 0.29877747735458166,
+          "semantic_score": 0.41609454,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3308491533864542
+        }
+      },
+      {
+        "memory": "User shared that a personal trainer asked AI to design a fat‑burning weekly at‑home workout; AI gave a full‑body plan with sets and reps, but the trainer noted lack of form feedback, deeming AI inadequate.",
+        "score": 0.298135808,
+        "id": "baae6871-be0a-4733-8ed5-22f6773b3218",
+        "created_at": "2026-11-18T13:48:24.287953+00:00",
+        "updated_at": "2026-11-18T13:48:24.287953+00:00",
+        "score_debug": {
+          "combined_score": 0.298135808,
+          "semantic_score": 0.41412872,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3312108
+        }
+      },
+      {
+        "memory": "The Consumer Movement is an app that digitizes consumer demand, desires, preferences, and participation, feeding that information back into the Fresh Earth ecosystem.",
+        "score": 0.2976039023776224,
+        "id": "4ef82646-9e88-4798-81cc-7ff4dfd22178",
+        "created_at": "2026-11-18T12:41:10.801613+00:00",
+        "updated_at": "2026-11-18T12:41:10.801613+00:00",
+        "score_debug": {
+          "combined_score": 0.2976039023776224,
+          "semantic_score": 0.4136907,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33031905594405603
+        }
+      },
+      {
+        "memory": "Fresh Earth Impact Validation (FEIV) uses the Guardian Authentication platform to source and validate impact data, calculating the Fresh Earth Index (FESI) across health, economy, food quality, and environment key performance indicators.",
+        "score": 0.2957054048511488,
+        "id": "9484c4e1-6a1c-4c80-962a-f08513ffdde5",
+        "created_at": "2026-11-18T12:42:46.575643+00:00",
+        "updated_at": "2026-11-18T12:42:46.575643+00:00",
+        "score_debug": {
+          "combined_score": 0.2957054048511488,
+          "semantic_score": 0.39258564,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34667787212787216
+        }
+      },
+      {
+        "memory": "Sun Basket provides a \"Sugar‑Conscious\" filter on its website to help users find recipes low in added sugars, supporting low‑sugar dietary goals.",
+        "score": 0.295686876,
+        "id": "58564947-70dc-4810-b510-b516c3aff083",
+        "created_at": "2026-11-18T12:27:29.659508+00:00",
+        "updated_at": "2026-11-18T12:27:29.659508+00:00",
+        "score_debug": {
+          "combined_score": 0.295686876,
+          "semantic_score": 0.36644784,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37276935
+        }
+      },
+      {
+        "memory": "Assistant noted that both Sun Basket and Home Chef deliver a broad selection of recipes while also supporting multiple dietary requirements, making them suitable for users who want variety and specific nutrition needs.",
+        "score": 0.29560210515789476,
+        "id": "6185910b-533b-4a50-8651-4c1c04d22d6a",
+        "created_at": "2026-11-18T12:26:37.598505+00:00",
+        "updated_at": "2026-11-18T12:26:37.598505+00:00",
+        "score_debug": {
+          "combined_score": 0.29560210515789476,
+          "semantic_score": 0.41146648,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32753878289473687
+        }
+      },
+      {
+        "memory": "The Fresh Earth Ecosystem offers a suite of tools—FET, FER, FEIV, Expert Community, Market Network, Industry Network, B2B Marketplace Sandbox, Projects, Consumer Movement, and Buying Groups—that enable transparent, decentralized participation, reduce costs, increase impact, and build a sustainable food system.",
+        "score": 0.2954852667076313,
+        "id": "39ff424e-d69e-4b72-b7ba-196499b46a6f",
+        "created_at": "2026-11-18T12:42:04.440672+00:00",
+        "updated_at": "2026-11-18T12:42:04.440672+00:00",
+        "score_debug": {
+          "combined_score": 0.2954852667076313,
+          "semantic_score": 0.39652503,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34218813676907833
+        }
+      },
+      {
+        "memory": "Fresh Earth Index (FESI) is a score that measures the ecosystem's impact against four KPIs—Health, Economy, Food Quality, and Environment—providing a quantitative assessment of overall performance.",
+        "score": 0.2952802888511489,
+        "id": "3945b736-e7cc-4b26-b99d-e275cc8ab9c5",
+        "created_at": "2026-11-18T12:42:46.578614+00:00",
+        "updated_at": "2026-11-18T12:42:46.578614+00:00",
+        "score_debug": {
+          "combined_score": 0.2952802888511489,
+          "semantic_score": 0.39152285,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34667787212787216
+        }
+      },
+      {
+        "memory": "User bought new tops from Target priced at $10 each and plans to style the Gucci silk scarf with these affordable pieces",
+        "score": 0.295068944,
+        "id": "ce558e5d-7626-46bc-8bca-663de3c831b6",
+        "created_at": "2026-11-18T13:56:48.207241+00:00",
+        "updated_at": "2026-11-18T13:56:48.207241+00:00",
+        "score_debug": {
+          "combined_score": 0.295068944,
+          "semantic_score": 0.41330186,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3243705
+        }
+      },
+      {
+        "memory": "Assistant advised the user to keep the Walgreens app updated, note that multiple Balance Rewards cards can be linked to one account, and earn points by scanning the physical card or entering the associated phone number at checkout.",
+        "score": 0.2945826853765491,
+        "id": "ad2123eb-b98f-4137-9f77-81cbbc6d8259",
+        "created_at": "2026-11-18T13:45:10.389999+00:00",
+        "updated_at": "2026-11-18T13:45:10.389999+00:00",
+        "score_debug": {
+          "combined_score": 0.2945826853765491,
+          "semantic_score": 0.4018876,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33456911344137275
+        }
+      },
+      {
+        "memory": "Assistant offers to suggest other brands or models of console tables or TV stands with storage, asking the user to specify desired features, style, or budget.",
+        "score": 0.29437515599999997,
+        "id": "08ae870b-07ec-4700-be8c-8942bc722a71",
+        "created_at": "2026-11-18T12:32:58.282420+00:00",
+        "updated_at": "2026-11-18T12:32:58.282420+00:00",
+        "score_debug": {
+          "combined_score": 0.29437515599999997,
+          "semantic_score": 0.40059292,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33534497
+        }
+      },
+      {
+        "memory": "Current weekly promotion includes a Buy One, Get One 50% Off (BOGO 50%) on select household essentials such as paper products, trash bags, and cleaning supplies.",
+        "score": 0.29267880799999996,
+        "id": "fb4f79dc-160d-4f5d-ba1e-143acea71d7f",
+        "created_at": "2026-11-18T13:46:04.055648+00:00",
+        "updated_at": "2026-11-18T13:46:04.055648+00:00",
+        "score_debug": {
+          "combined_score": 0.29267880799999996,
+          "semantic_score": 0.38357037,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34812665
+        }
+      },
+      {
+        "memory": "Fresh Earth Expert Community is an autonomous, decentralized, transparent, community‑governed network that provides open‑sourced, independently verifiable impact measures and facilitates local collaborations to optimize each stakeholder in the supply chain.",
+        "score": 0.292536736,
+        "id": "3ccf89ae-e96f-4391-88d0-6f988dfeb4d9",
+        "created_at": "2026-11-18T12:42:46.584227+00:00",
+        "updated_at": "2026-11-18T12:42:46.584227+00:00",
+        "score_debug": {
+          "combined_score": 0.292536736,
+          "semantic_score": 0.39037067,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34097117
+        }
+      },
+      {
+        "memory": "In October 2026, User attended an Islamic prayer service downtown and later joined an iftar dinner at Amir's house, stepping out of their comfort zone.",
+        "score": 0.29238019,
+        "id": "723d23e7-5f05-408c-a9fe-d55ac491ca67",
+        "created_at": "2026-11-18T13:07:02.438587+00:00",
+        "updated_at": "2026-11-18T13:07:02.438587+00:00",
+        "score_debug": {
+          "combined_score": 0.29238019,
+          "semantic_score": 0.3621161,
+          "bm25_score": 0.0,
+          "entity_boost": 0.368834375
+        }
+      },
+      {
+        "memory": "Sun Basket’s referral program awards $25 in credit for each friend who successfully signs up using the user’s referral link.",
+        "score": 0.29220155958041955,
+        "id": "bac84f93-ddcd-4ac0-abd6-b29b908ad627",
+        "created_at": "2026-11-18T12:28:02.717097+00:00",
+        "updated_at": "2026-11-18T12:28:02.717097+00:00",
+        "score_debug": {
+          "combined_score": 0.29220155958041955,
+          "semantic_score": 0.4107416,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3197622989510489
+        }
+      },
+      {
+        "memory": "Assistant recommended tracking specific metrics per channel: Social Media – engagement rate, reach, impressions, follower growth rate, conversion rate; Email – open rate, click‑through rate, conversion rate, bounce rate, unsubscribe rate; Content Marketing – page views, unique visitors, bounce rate, average time on site, conversion rate; Paid Advertising – cost per click, cost per conversion, return on ad spend, click‑through rate, conversion rate; Overall – ROI, customer acquisition cost, customer lifetime value, overall conversion rate, net promoter score.",
+        "score": 0.29177980000000003,
+        "id": "e58417aa-0c4c-4b9e-8611-066538e14ccb",
+        "created_at": "2026-11-18T13:16:11.064432+00:00",
+        "updated_at": "2026-11-18T13:16:11.064432+00:00",
+        "score_debug": {
+          "combined_score": 0.29177980000000003,
+          "semantic_score": 0.3766475,
+          "bm25_score": 0.0,
+          "entity_boost": 0.352802
+        }
+      },
+      {
+        "memory": "Fresh Earth Impact Validation (FEIV) uses the Guardian Authentication platform to collect data, calculate the Fresh Earth Index, and measures four key performance indicators: Health, Economy, Food Quality, and Environment.",
+        "score": 0.2917131474103586,
+        "id": "ec86b3bf-9237-4dd4-bec4-0a4d7d335a1a",
+        "created_at": "2026-11-18T12:42:04.423553+00:00",
+        "updated_at": "2026-11-18T12:42:04.423553+00:00",
+        "score_debug": {
+          "combined_score": 0.2917131474103586,
+          "semantic_score": 0.39725,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3320328685258964
+        }
+      },
+      {
+        "memory": "User shared that a software engineer requested HTML, CSS, and Flask code for a craft‑beer locator website; AI produced runnable code that the engineer praised as a notable achievement.",
+        "score": 0.291436196,
+        "id": "5d6c5084-0a4c-4af8-8035-29fb12fb1082",
+        "created_at": "2026-11-18T13:48:24.271968+00:00",
+        "updated_at": "2026-11-18T13:48:24.271968+00:00",
+        "score_debug": {
+          "combined_score": 0.291436196,
+          "semantic_score": 0.38309282,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34549767
+        }
+      },
+      {
+        "memory": "User signed up for the Walgreens Balance Rewards loyalty program on 2026-11-18 and is looking to earn points on purchases.",
+        "score": 0.29099456999999995,
+        "id": "8289f12f-dd7d-48b7-bfff-ca2e5c5f9cdf",
+        "created_at": "2026-11-18T13:45:10.378932+00:00",
+        "updated_at": "2026-11-18T13:45:10.378932+00:00",
+        "score_debug": {
+          "combined_score": 0.29099456999999995,
+          "semantic_score": 0.3973931,
+          "bm25_score": 0.0,
+          "entity_boost": 0.330093325
+        }
+      },
+      {
+        "memory": "Projects is a feature allowing all stakeholders to validate programs, link them, manage health validation plans, farm health validation, farm plans, and create widgets and programs that can be attached to projects for expert collaboration.",
+        "score": 0.2903561608111888,
+        "id": "01210f79-26f1-408f-a4d4-34728aad7818",
+        "created_at": "2026-11-18T12:42:04.434705+00:00",
+        "updated_at": "2026-11-18T12:42:04.434705+00:00",
+        "score_debug": {
+          "combined_score": 0.2903561608111888,
+          "semantic_score": 0.38276243,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3431279720279721
+        }
+      },
+      {
+        "memory": "Assistant recommended checking online review sites such as Yelp and Google Reviews to evaluate pool cleanliness, staff friendliness, and overall atmosphere before visiting.",
+        "score": 0.29020466682917084,
+        "id": "5634ae72-c841-452e-b7b8-59060e497399",
+        "created_at": "2026-11-18T13:52:37.699619+00:00",
+        "updated_at": "2026-11-18T13:52:37.699619+00:00",
+        "score_debug": {
+          "combined_score": 0.29020466682917084,
+          "semantic_score": 0.34343874,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3820729270729271
+        }
+      },
+      {
+        "memory": "User bought a beautiful floor-length gown from ASOS for $80 and plans to wear it to a black-tie event.",
+        "score": 0.290167022,
+        "id": "4d4f536a-4a51-4f31-becd-58b2b225e092",
+        "created_at": "2026-11-18T13:57:20.745726+00:00",
+        "updated_at": "2026-11-18T13:57:20.745726+00:00",
+        "score_debug": {
+          "combined_score": 0.290167022,
+          "semantic_score": 0.35546863,
+          "bm25_score": 0.0,
+          "entity_boost": 0.369948925
+        }
+      },
+      {
+        "memory": "User requested that the ecosystem description also include the problem, cost, solution, opportunity, auditing, digital twin, and FE impact sandbox, and that the supply chain be referred to as the FESC Fresh Earth Supply Chain.",
+        "score": 0.289202552,
+        "id": "70bc547a-abbd-43db-bbd9-f41547308742",
+        "created_at": "2026-11-18T12:42:04.443785+00:00",
+        "updated_at": "2026-11-18T12:42:04.443785+00:00",
+        "score_debug": {
+          "combined_score": 0.289202552,
+          "semantic_score": 0.34704673,
+          "bm25_score": 0.0,
+          "entity_boost": 0.37595965
+        }
+      },
+      {
+        "memory": "User volunteered at the local synagogue's community outreach program on Saturday, January 23, 2026, serving meals to the homeless, found the experience humbling, and now plans to organize a food drive and sandwich‑making station to continue making a difference in the community",
+        "score": 0.2890182572908367,
+        "id": "2bcb93b5-241c-4a81-9eb4-d3555fbc0958",
+        "created_at": "2026-11-18T13:10:36.920397+00:00",
+        "updated_at": "2026-11-18T13:10:36.920397+00:00",
+        "score_debug": {
+          "combined_score": 0.2890182572908367,
+          "semantic_score": 0.35300645,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36953919322709167
+        }
+      },
+      {
+        "memory": "User shared that a graphic designer asked AI to rebrand the McDonald’s logo as vegan; AI generated four image variations with organic colors but struggled with text, so the designer viewed AI as a brainstorming aid, not a replacement.",
+        "score": 0.28842859,
+        "id": "298879d5-f830-4714-aa7d-b674a58d6bb7",
+        "created_at": "2026-11-18T13:48:24.275179+00:00",
+        "updated_at": "2026-11-18T13:48:24.275179+00:00",
+        "score_debug": {
+          "combined_score": 0.28842859,
+          "semantic_score": 0.3250966,
+          "bm25_score": 0.0,
+          "entity_boost": 0.395974875
+        }
+      },
+      {
+        "memory": "Sun Basket offers a \"Low‑Carb\" meal plan featuring recipes with fewer than 35 g net carbs per serving and provides carb counts for each recipe.",
+        "score": 0.28816229447770075,
+        "id": "69245d32-f25b-4615-ac60-2ed340a5c1f7",
+        "created_at": "2026-11-18T12:27:29.657010+00:00",
+        "updated_at": "2026-11-18T12:27:29.657010+00:00",
+        "score_debug": {
+          "combined_score": 0.28816229447770075,
+          "semantic_score": 0.36746198,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35294375619425183
+        }
+      },
+      {
+        "memory": "Assistant recommended popular sculpture styles (geometric, abstract, nature‑inspired, industrial chic) and decorative bowl styles (simple ceramic, glass, woven/rattan, metal) for a minimalist coffee table, noting materials like marble, ceramic, glass, metal and suggesting designers/brands such as Muuto, Menu, L'Objet, and John Pawson.",
+        "score": 0.28713615052147856,
+        "id": "57404fc0-89bf-4de1-9fba-752af85d70db",
+        "created_at": "2026-11-18T11:58:39.276429+00:00",
+        "updated_at": "2026-11-18T11:58:39.276429+00:00",
+        "score_debug": {
+          "combined_score": 0.28713615052147856,
+          "semantic_score": 0.36008668,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35775369630369636
+        }
+      },
+      {
+        "memory": "Home Chef provides some sugar‑free and low‑sugar recipes and is working to expand its low‑sugar options.",
+        "score": 0.287006046,
+        "id": "d2279b10-1afc-4bb0-8b87-b87bef42d36d",
+        "created_at": "2026-11-18T12:27:29.668730+00:00",
+        "updated_at": "2026-11-18T12:27:29.668730+00:00",
+        "score_debug": {
+          "combined_score": 0.287006046,
+          "semantic_score": 0.38234413,
+          "bm25_score": 0.0,
+          "entity_boost": 0.335170985
+        }
+      },
+      {
+        "memory": "User believes that many traditional retailers are struggling to compete with e‑commerce giants such as Amazon.",
+        "score": 0.28525585,
+        "id": "eb8a3faf-d05a-42ef-bbad-eaaffb2a8357",
+        "created_at": "2026-11-18T12:40:11.902020+00:00",
+        "updated_at": "2026-11-18T12:40:11.902020+00:00",
+        "score_debug": {
+          "combined_score": 0.28525585,
+          "semantic_score": 0.3958835,
+          "bm25_score": 0.0,
+          "entity_boost": 0.317256125
+        }
+      },
+      {
+        "memory": "User expressed interest in the Eagle Creek Travel Wallet and asked for more information about its RFID‑blocking material and its effectiveness in preventing credit card skimming",
+        "score": 0.2851672289243028,
+        "id": "a1a5f04e-7f18-4dea-9252-7829e1cf982f",
+        "created_at": "2026-11-18T13:36:49.290187+00:00",
+        "updated_at": "2026-11-18T13:36:49.290187+00:00",
+        "score_debug": {
+          "combined_score": 0.2851672289243028,
+          "semantic_score": 0.39796615,
+          "bm25_score": 0.0,
+          "entity_boost": 0.31495192231075697
+        }
+      },
+      {
+        "memory": "User asked whether Walgreens Balance Rewards points can be redeemed on sale items or on items that have digital coupons.",
+        "score": 0.2848944631687321,
+        "id": "e1ed898a-1f8f-4491-82e6-a522640973d6",
+        "created_at": "2026-11-18T13:46:33.245199+00:00",
+        "updated_at": "2026-11-18T13:46:33.245199+00:00",
+        "score_debug": {
+          "combined_score": 0.2848944631687321,
+          "semantic_score": 0.33952734,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "Assistant reports that Sun Basket offers responsive customer service through phone, email, and chat, with generally quick replies to inquiries.",
+        "score": 0.28380307958041956,
+        "id": "d18f558b-6a22-476f-9bf0-94e1ec9988b8",
+        "created_at": "2026-11-18T12:25:27.022433+00:00",
+        "updated_at": "2026-11-18T12:25:27.022433+00:00",
+        "score_debug": {
+          "combined_score": 0.28380307958041956,
+          "semantic_score": 0.3897454,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3197622989510489
+        }
+      },
+      {
+        "memory": "User is interested in obtaining statistics on whether cremation popularity has increased or decreased in their local area",
+        "score": 0.2830989071728272,
+        "id": "5145a994-217f-47d3-9abd-503d20781995",
+        "created_at": "2026-11-18T13:20:03.120758+00:00",
+        "updated_at": "2026-11-18T13:20:03.120758+00:00",
+        "score_debug": {
+          "combined_score": 0.2830989071728272,
+          "semantic_score": 0.3791652,
+          "bm25_score": 0.0,
+          "entity_boost": 0.328582067932068
+        }
+      },
+      {
+        "memory": "Assistant proposes a brief educational talk on the impact of food drives, how the sandwiches will be distributed, and encouraging the children to consider the people they are helping.",
+        "score": 0.28302117329083665,
+        "id": "7420ff9b-70c2-4d49-8807-67061d8af8d1",
+        "created_at": "2026-11-18T13:11:48.769653+00:00",
+        "updated_at": "2026-11-18T13:11:48.769653+00:00",
+        "score_debug": {
+          "combined_score": 0.28302117329083665,
+          "semantic_score": 0.33801374,
+          "bm25_score": 0.0,
+          "entity_boost": 0.36953919322709167
+        }
+      },
+      {
+        "memory": "User purchased a new IKEA lamp last weekend that doubles as a phone‑charging station while watching TV.",
+        "score": 0.28238814001998,
+        "id": "c213ef93-5adb-4718-a4c0-152b918ca196",
+        "created_at": "2026-11-18T12:35:21.037338+00:00",
+        "updated_at": "2026-11-18T12:35:21.037338+00:00",
+        "score_debug": {
+          "combined_score": 0.28238814001998,
+          "semantic_score": 0.3507554,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3552149500499501
+        }
+      },
+      {
+        "memory": "User has spent $240 on commute expenses so far in November 2026 and is looking for ways to reduce that amount.",
+        "score": 0.2813164,
+        "id": "fb67a655-9dec-49c1-833c-e1694c3f8bef",
+        "created_at": "2026-11-18T12:04:46.489422+00:00",
+        "updated_at": "2026-11-18T12:04:46.489422+00:00",
+        "score_debug": {
+          "combined_score": 0.2813164,
+          "semantic_score": 0.37040073,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33289027
+        }
+      },
+      {
+        "memory": "Home Chef offers a \"Low‑Carb\" meal plan with recipes containing fewer than 30 g net carbs per serving.",
+        "score": 0.28086497047770076,
+        "id": "abbb06cc-2e40-454f-ac4b-dec392e98f3f",
+        "created_at": "2026-11-18T12:27:29.664255+00:00",
+        "updated_at": "2026-11-18T12:27:29.664255+00:00",
+        "score_debug": {
+          "combined_score": 0.28086497047770076,
+          "semantic_score": 0.34921867,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35294375619425183
+        }
+      },
+      {
+        "memory": "Assistant recommends Cottonwood Spring Oasis as a short walkable desert oasis with picnic tables and restrooms, making it an ideal spot for a picnic lunch.",
+        "score": 0.280477972,
+        "id": "c5994421-c4dc-45bb-b9b0-18cf8a5f783c",
+        "created_at": "2026-11-18T13:55:47.928212+00:00",
+        "updated_at": "2026-11-18T13:55:47.928212+00:00",
+        "score_debug": {
+          "combined_score": 0.280477972,
+          "semantic_score": 0.33987683,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3613181
+        }
+      },
+      {
+        "memory": "Assistant advised users to verify pool schedules, prices, membership requirements, pool rules, lane availability, swim caps, and shower facilities before visiting, and to inquire about beginner or intermediate programs to improve technique.",
+        "score": 0.280058624,
+        "id": "425b37f0-f511-4108-9057-8d2bfaa1f8b9",
+        "created_at": "2026-11-18T13:51:36.108836+00:00",
+        "updated_at": "2026-11-18T13:51:36.108836+00:00",
+        "score_debug": {
+          "combined_score": 0.280058624,
+          "semantic_score": 0.36687303,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33327353
+        }
+      },
+      {
+        "memory": "Sun Basket has a \"Diabetic‑Friendly\" meal plan, created with the American Diabetes Association, offering balanced, low‑carb, low‑sugar, and low‑saturated‑fat recipes.",
+        "score": 0.2797279504777007,
+        "id": "73e6cf1e-3dd7-4943-9e8d-fa2eb099c6e4",
+        "created_at": "2026-11-18T12:27:29.662076+00:00",
+        "updated_at": "2026-11-18T12:27:29.662076+00:00",
+        "score_debug": {
+          "combined_score": 0.2797279504777007,
+          "semantic_score": 0.34637612,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35294375619425183
+        }
+      },
+      {
+        "memory": "Assistant explained that the Walgreens app includes features such as loading digital coupons to the Balance Rewards card, browsing the weekly ad and creating shopping lists, a points tracker for rewards and expiration dates, a store locator, pharmacy functions for refilling and transferring prescriptions, a photo printing service, exclusive deals and bonus‑point offers, a barcode scanner for price and review lookup, and push notifications for personalized offers and reminders.",
+        "score": 0.2780428591687321,
+        "id": "68cad435-26e4-47d2-9571-adcf813455cd",
+        "created_at": "2026-11-18T13:47:31.282739+00:00",
+        "updated_at": "2026-11-18T13:47:31.282739+00:00",
+        "score_debug": {
+          "combined_score": 0.2780428591687321,
+          "semantic_score": 0.32239833,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "Assistant recommends identifying content channels for the campaign, including Facebook, Twitter, Instagram, LinkedIn, email newsletters, blog posts, video content, paid advertising, influencer partnerships, and guest blogging.",
+        "score": 0.277330804,
+        "id": "733ec829-5e34-4c88-b55c-5e5a3ba01548",
+        "created_at": "2026-11-18T13:14:58.276688+00:00",
+        "updated_at": "2026-11-18T13:14:58.276688+00:00",
+        "score_debug": {
+          "combined_score": 0.277330804,
+          "semantic_score": 0.39269686,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30063015
+        }
+      },
+      {
+        "memory": "Assistant recommended several energy‑boosting breakfast ideas: oatmeal with fruit and nuts; avocado toast with egg; Greek yogurt with honey and berries; smoothie bowl; whole‑grain waffles with fruit and yogurt; green smoothie; peanut butter banana toast; breakfast burrito; cottage cheese with fruit and nuts; and green eggs with spinach.",
+        "score": 0.27724962,
+        "id": "4b2d4b7c-04da-4bb1-bfdc-bbf4472543b3",
+        "created_at": "2026-11-18T14:02:31.595572+00:00",
+        "updated_at": "2026-11-18T14:02:31.595572+00:00",
+        "score_debug": {
+          "combined_score": 0.27724962,
+          "semantic_score": 0.31953025,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3735938
+        }
+      },
+      {
+        "memory": "User expressed frustration and impatience, saying they don't have time and demanding cremation popularity statistics for their local area",
+        "score": 0.2768965311728272,
+        "id": "587c9e16-4d45-472b-9b10-374dcdea88e8",
+        "created_at": "2026-11-18T13:20:49.479303+00:00",
+        "updated_at": "2026-11-18T13:20:49.479303+00:00",
+        "score_debug": {
+          "combined_score": 0.2768965311728272,
+          "semantic_score": 0.36365926,
+          "bm25_score": 0.0,
+          "entity_boost": 0.328582067932068
+        }
+      },
+      {
+        "memory": "User is finalizing a report and asks for help calculating the total amount spent on monthly commute expenses up to now",
+        "score": 0.27574692,
+        "id": "a66593e3-8938-4b61-a0b7-bb87dbae4db6",
+        "created_at": "2026-11-18T12:04:29.445982+00:00",
+        "updated_at": "2026-11-18T12:04:29.445982+00:00",
+        "score_debug": {
+          "combined_score": 0.27574692,
+          "semantic_score": 0.36569285,
+          "bm25_score": 0.0,
+          "entity_boost": 0.32367445
+        }
+      },
+      {
+        "memory": "User shared that an influencer asked AI for an Instagram caption for a photo atop the Matra in Paris; AI produced a caption with emojis that didn’t match the influencer’s voice, so the influencer felt AI fell short.",
+        "score": 0.27563828,
+        "id": "01febd58-a4d3-429e-af93-07e2822a7c17",
+        "created_at": "2026-11-18T13:48:24.313260+00:00",
+        "updated_at": "2026-11-18T13:48:24.313260+00:00",
+        "score_debug": {
+          "combined_score": 0.27563828,
+          "semantic_score": 0.34637845,
+          "bm25_score": 0.0,
+          "entity_boost": 0.34271725
+        }
+      },
+      {
+        "memory": "Assistant states that many retailers are adopting hybrid models that combine online and offline channels to deliver a seamless shopping experience, integrating new technologies to enhance the in‑store environment.",
+        "score": 0.275580016,
+        "id": "4e9f90b7-6f64-444c-a365-1f51f00835c3",
+        "created_at": "2026-11-18T12:39:23.713403+00:00",
+        "updated_at": "2026-11-18T12:39:23.713403+00:00",
+        "score_debug": {
+          "combined_score": 0.275580016,
+          "semantic_score": 0.33716404,
+          "bm25_score": 0.0,
+          "entity_boost": 0.351786
+        }
+      },
+      {
+        "memory": "Assistant notes that traditional retailers are expanding their online presence by building dedicated e‑commerce platforms, investing in digital marketing, using social media, and adding services such as same‑day delivery and in‑store pickup.",
+        "score": 0.27509634,
+        "id": "1fe1b7f5-45a6-4a6d-b9f2-2fc24c99f428",
+        "created_at": "2026-11-18T12:40:11.907791+00:00",
+        "updated_at": "2026-11-18T12:40:11.907791+00:00",
+        "score_debug": {
+          "combined_score": 0.27509634,
+          "semantic_score": 0.31244615,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3752947
+        }
+      },
+      {
+        "memory": "The Data Comms Platform collects, manages, and analyses data from the Fresh Earth Index, tracking impact delivery, growth, milestones, and platform participation.",
+        "score": 0.27396206741035856,
+        "id": "8900f74a-1a12-4de6-94d5-d058f9688bc2",
+        "created_at": "2026-11-18T12:41:10.812965+00:00",
+        "updated_at": "2026-11-18T12:41:10.812965+00:00",
+        "score_debug": {
+          "combined_score": 0.27396206741035856,
+          "semantic_score": 0.3528723,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3320328685258964
+        }
+      },
+      {
+        "memory": "Assistant lists key reasons consumers still prefer in‑store shopping: ability to physically see and touch products, immediate gratification of taking items home, and the social experience of shopping with family or friends.",
+        "score": 0.2736109,
+        "id": "1952b0de-64d7-4e46-a6c4-b8a8cdcee636",
+        "created_at": "2026-11-18T12:39:23.707905+00:00",
+        "updated_at": "2026-11-18T12:39:23.707905+00:00",
+        "score_debug": {
+          "combined_score": 0.2736109,
+          "semantic_score": 0.3321268,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35190045
+        }
+      },
+      {
+        "memory": "Assistant mentioned specialized camera marketplaces such as KEH Camera, B&H Photo, and Adorama, which may offer better prices for used gear.",
+        "score": 0.27348765999999997,
+        "id": "5e39f404-e7e0-49ee-a33c-d76f3860e06f",
+        "created_at": "2026-11-18T12:03:04.844577+00:00",
+        "updated_at": "2026-11-18T12:03:04.844577+00:00",
+        "score_debug": {
+          "combined_score": 0.27348765999999997,
+          "semantic_score": 0.3031558,
+          "bm25_score": 0.0,
+          "entity_boost": 0.38056335
+        }
+      },
+      {
+        "memory": "User is exploring selling the Canon Rebel T5i on Craigslist or Facebook Marketplace and wants to know if a good price can be obtained.",
+        "score": 0.27342769,
+        "id": "2ccdf257-b406-4ca6-abf6-9a7567b1a80f",
+        "created_at": "2026-11-18T12:03:04.829937+00:00",
+        "updated_at": "2026-11-18T12:03:04.829937+00:00",
+        "score_debug": {
+          "combined_score": 0.27342769,
+          "semantic_score": 0.3781074,
+          "bm25_score": 0.0,
+          "entity_boost": 0.305461825
+        }
+      },
+      {
+        "memory": "The rise of e‑commerce in developed countries has shifted consumer purchasing behavior toward online shopping, creating a significant threat to traditional brick‑and‑mortar retail stores.",
+        "score": 0.273408486953047,
+        "id": "e38bc061-b8c9-42b9-b3e4-85672abf4b83",
+        "created_at": "2026-11-18T12:38:41.882791+00:00",
+        "updated_at": "2026-11-18T12:38:41.882791+00:00",
+        "score_debug": {
+          "combined_score": 0.273408486953047,
+          "semantic_score": 0.3242886,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3592326173826174
+        }
+      },
+      {
+        "memory": "Assistant advises identifying personal most productive hours of the day and scheduling the most important tasks during that peak period.",
+        "score": 0.27315680000000003,
+        "id": "8b4b194d-50e0-432a-99f0-63565bcbc347",
+        "created_at": "2026-11-18T13:13:29.147214+00:00",
+        "updated_at": "2026-11-18T13:13:29.147214+00:00",
+        "score_debug": {
+          "combined_score": 0.27315680000000003,
+          "semantic_score": 0.4166315,
+          "bm25_score": 0.0,
+          "entity_boost": 0.2662605
+        }
+      },
+      {
+        "memory": "Assistant recommends demonstrating the sandwich‑making process beforehand and providing simple recipes such as turkey, ham, or peanut‑butter‑and‑jelly, using pre‑sliced meats, cheeses, and bread to keep the activity quick and easy.",
+        "score": 0.27296354,
+        "id": "39256f5a-bb8b-4217-b071-79b425f9d2fa",
+        "created_at": "2026-11-18T13:11:48.763752+00:00",
+        "updated_at": "2026-11-18T13:11:48.763752+00:00",
+        "score_debug": {
+          "combined_score": 0.27296354,
+          "semantic_score": 0.3431821,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33922675
+        }
+      },
+      {
+        "memory": "User wants more information about the safety features and infotainment system of the Toyota Corolla Hybrid.",
+        "score": 0.2727932088421053,
+        "id": "ef2d1be5-76b8-440a-8ba7-c2ee77c106d5",
+        "created_at": "2026-11-18T12:36:39.531215+00:00",
+        "updated_at": "2026-11-18T12:36:39.531215+00:00",
+        "score_debug": {
+          "combined_score": 0.2727932088421053,
+          "semantic_score": 0.37600118,
+          "bm25_score": 0.0,
+          "entity_boost": 0.30598184210526314
+        }
+      },
+      {
+        "memory": "Tips include stacking sales, digital coupons, and points bonuses; checking the Walgreens app for extra offers; and using cashback apps such as Ibotta, Fetch Rewards, or Checkout 51.",
+        "score": 0.2720879031687321,
+        "id": "e4c29d29-e1e2-4cd3-835c-dd7cd4761765",
+        "created_at": "2026-11-18T13:46:04.077798+00:00",
+        "updated_at": "2026-11-18T13:46:04.077798+00:00",
+        "score_debug": {
+          "combined_score": 0.2720879031687321,
+          "semantic_score": 0.30751094,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3727088179218303
+        }
+      },
+      {
+        "memory": "User has formed a clear idea of what to look for in a new pair of gardening gloves and plans to check out the recommended options.",
+        "score": 0.271234516,
+        "id": "36780cae-24c4-4d7e-be80-fac717257fcb",
+        "created_at": "2026-11-18T13:00:22.097066+00:00",
+        "updated_at": "2026-11-18T13:00:22.097066+00:00",
+        "score_debug": {
+          "combined_score": 0.271234516,
+          "semantic_score": 0.32630914,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35177715
+        }
+      },
+      {
+        "memory": "Walgreens typically releases its weekly advertisement on Sundays, providing the latest sales and promotions for that week.",
+        "score": 0.270478964,
+        "id": "e19facfb-12e4-4bba-9e65-a5aea178b981",
+        "created_at": "2026-11-18T13:46:04.052986+00:00",
+        "updated_at": "2026-11-18T13:46:04.052986+00:00",
+        "score_debug": {
+          "combined_score": 0.270478964,
+          "semantic_score": 0.33948338,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33671403
+        }
+      },
+      {
+        "memory": "Assistant emphasizes evaluating a vendor’s experience, looking for a solid track record of serving other reputable businesses within the same industry.",
+        "score": 0.26965728,
+        "id": "20b2137c-04aa-4958-a460-d9aab6f51df5",
+        "created_at": "2026-11-18T11:58:00.776190+00:00",
+        "updated_at": "2026-11-18T11:58:00.776190+00:00",
+        "score_debug": {
+          "combined_score": 0.26965728,
+          "semantic_score": 0.3677473,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3063959
+        }
+      },
+      {
+        "memory": "User asked for five Instagram ad taglines tailored for a seller of New Era clothing.",
+        "score": 0.26930291447752247,
+        "id": "dd7a7229-a0e1-48f0-89fb-e113f3a15e0d",
+        "created_at": "2026-11-18T13:56:06.431910+00:00",
+        "updated_at": "2026-11-18T13:56:06.431910+00:00",
+        "score_debug": {
+          "combined_score": 0.26930291447752247,
+          "semantic_score": 0.33446348,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3387938061938062
+        }
+      },
+      {
+        "memory": "Fresh Earth Projects are initiatives developed by agri‑food professionals, scientists, researchers, creators, farmers, manufacturers, and supply‑chain entities who self‑organize around a common goal.",
+        "score": 0.26837366300899107,
+        "id": "e6cbd6f7-1679-4ce0-ba32-b453bdb59297",
+        "created_at": "2026-11-18T12:42:46.593529+00:00",
+        "updated_at": "2026-11-18T12:42:46.593529+00:00",
+        "score_debug": {
+          "combined_score": 0.26837366300899107,
+          "semantic_score": 0.32163668,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3492974775224776
+        }
+      },
+      {
+        "memory": "Subscribers may skip weeks, pause, or cancel their Sun Basket subscription at any time, extending flexibility beyond the previously noted five‑day cancellation window.",
+        "score": 0.26703047999999996,
+        "id": "e8d26b2c-0368-4c32-9c99-493aabf5df52",
+        "created_at": "2026-11-18T12:28:02.723864+00:00",
+        "updated_at": "2026-11-18T12:28:02.723864+00:00",
+        "score_debug": {
+          "combined_score": 0.26703047999999996,
+          "semantic_score": 0.33615565,
+          "bm25_score": 0.0,
+          "entity_boost": 0.33142055
+        }
+      },
+      {
+        "memory": "Assistant recommended searching online for \"recreational swimming pools near me\" to find nearby options with addresses, phone numbers, and reviews.",
+        "score": 0.266934632,
+        "id": "0bb155b5-33a1-4cc1-aa67-3d4b57ce0976",
+        "created_at": "2026-11-18T13:51:36.094640+00:00",
+        "updated_at": "2026-11-18T13:51:36.094640+00:00",
+        "score_debug": {
+          "combined_score": 0.266934632,
+          "semantic_score": 0.3095659,
+          "bm25_score": 0.0,
+          "entity_boost": 0.35777068
+        }
+      },
+      {
+        "memory": "User notes that the B2B Marketplace Sandbox was omitted from the original list and should be included as a distinct component.",
+        "score": 0.266854032,
+        "id": "c55ad485-afca-4cfc-a33b-9d6fd79462d0",
+        "created_at": "2026-11-18T12:41:10.825130+00:00",
+        "updated_at": "2026-11-18T12:41:10.825130+00:00",
+        "score_debug": {
+          "combined_score": 0.266854032,
+          "semantic_score": 0.3844031,
+          "bm25_score": 0.0,
+          "entity_boost": 0.28273198
+        }
+      },
+      {
+        "memory": "User had a heated discussion with friend Alex about the existence of God around October 18, 2026",
+        "score": 0.26647859637795274,
+        "id": "7848f3ae-4385-498c-9998-ca7f2f0b8bf7",
+        "created_at": "2026-11-18T12:53:52.519675+00:00",
+        "updated_at": "2026-11-18T12:53:52.519675+00:00",
+        "score_debug": {
+          "combined_score": 0.26647859637795274,
+          "semantic_score": 0.33240655,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3337899409448819
+        }
+      },
+      {
+        "memory": "User is aware that some credit cards are more vulnerable to skimming and is seeking advice on which card types to avoid and what precautions to take for a 10‑day trekking trip to Nepal.",
+        "score": 0.265115077185332,
+        "id": "2500dc86-8d53-43b5-bcf5-b6e6af4d3bf1",
+        "created_at": "2026-11-18T13:37:21.440752+00:00",
+        "updated_at": "2026-11-18T13:37:21.440752+00:00",
+        "score_debug": {
+          "combined_score": 0.265115077185332,
+          "semantic_score": 0.3591758,
+          "bm25_score": 0.0,
+          "entity_boost": 0.3036118929633301
+        }
+      }
+    ],
+    "search_latency_ms": 2816.0,
+    "total_results": 200
+  },
+  "cutoff_results": {
+    "top_200": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough. I have 40% off your first HelloFresh order, but no record of the discount on your first UberEats order. If the 20% on Nov 11 was your first UberEats order, then yes—HelloFresh was higher. If not, tell me the first-order discount and I’ll confirm.",
+      "judge_raw": "<judge_thinking>\nCore claim: The correct answer is definitively \"Yes\" — the HelloFresh first-order discount was higher than the UberEats first-order discount.\n\nModel response analysis:\n- It refuses to give a definitive answer, stating \"not enough information.\"\n- Provides a conditional \"yes\" only if a specific event was the first UberEats order.\n- This contradicts the definitive nature of the correct answer.\n\nConclusion: The model response does not assert the required \"Yes\" and is therefore not correct.\n</judge_thinking>\nno",
+      "memories_evaluated": 200,
+      "reason": "Generated answer: The information provided is not enough. I have 40% off your first HelloFresh order, but no record of the discount on your first UberEats order. If the 20% on Nov 11 was your first UberEats order, then yes—HelloFresh was higher. If not, tell me the first-order discount and I’ll confirm."
+    },
+    "top_50": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough. I know your HelloFresh first order was 40% off, but I don’t have the discount (percentage) from your first UberEats order. What promo or discount did you use on that first UberEats order?",
+      "judge_raw": "<judge_thinking>Incorrect because it abstains despite the correct answer being “Yes.”</judge_thinking>\nno",
+      "memories_evaluated": 50,
+      "reason": "Generated answer: The information provided is not enough. I know your HelloFresh first order was 40% off, but I don’t have the discount (percentage) from your first UberEats order. What promo or discount did you use on that first UberEats order?"
+    },
+    "top_20": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough. We know you got 40% off your first HelloFresh order, but we don’t have the discount for your first UberEats order—only a 20% discount on an order around Nov 11, 2026. If that 20% was your first UberEats order, then yes, 40% was higher. Otherwise, I can’t confirm.",
+      "judge_raw": "<judge_thinking>Conclusion: The correct answer is “Yes,” but the model response withholds a definitive answer and treats it as unknown, so it does not match.</judge_thinking>\nno",
+      "memories_evaluated": 20,
+      "reason": "Generated answer: The information provided is not enough. We know you got 40% off your first HelloFresh order, but we don’t have the discount for your first UberEats order—only a 20% discount on an order around Nov 11, 2026. If that 20% was your first UberEats order, then yes, 40% was higher. Otherwise, I can’t confirm."
+    },
+    "top_10": {
+      "judgment": "FAIL",
+      "score": 0.0,
+      "generated_answer": "The information provided is not enough. I only have 40% off for your first HelloFresh order. If your first UberEats order was the one with 20% off (around Nov 11, 2026), then yes—HelloFresh was higher (40% vs 20%). Otherwise, what discount did you get on your first UberEats order?",
+      "judge_raw": "<judge_thinking>\nCore claim: The correct answer states definitively that the user received a higher percentage discount on their first HelloFresh order than on their first UberEats order.\n\nModel response: It says insufficient information, provides a conditional yes only if UberEats was 20%, and asks for more info. This is an abstention/conditional answer, not a definitive \"yes.\"\n\nSince the ground truth is a definite \"Yes,\" and not an abstention, the model's response does not match. Therefore, it is incorrect.\n</judge_thinking>\nno",
+      "memories_evaluated": 10,
+      "reason": "Generated answer: The information provided is not enough. I only have 40% off for your first HelloFresh order. If your first UberEats order was the one with 20% off (around Nov 11, 2026), then yes—HelloFresh was higher (40% vs 20%). Otherwise, what discount did you get on your first UberEats order?"
+    }
+  }
+}
