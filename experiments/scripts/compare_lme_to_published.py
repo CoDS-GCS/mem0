@@ -153,19 +153,26 @@ def accuracy_table(qids, qtype, our_verd, their_maps):
     return rows
 
 
-def pub_setup_col(data, extraction_label):
-    """Setup-table column for a published run. 'not recorded' where its file is silent."""
+def pub_setup_col(data, extraction_label, extraction_provider):
+    """Setup-table column for a published run.
+
+    Cells come from the run's result file; where that is silent, from Mem0's benchmarks
+    README L242 ("All runs use the same embedder (Qwen 600M via SageMaker), the same
+    Qdrant vector store, and GPT-5 as the answerer and judge"), cited in brackets.
+    "not recorded" is kept only where neither the result file nor the README says anything.
+    """
     meta = (data or {}).get("metadata", {})
     n_scored = len(published_verdicts(data)) if data else 0
     return {
         "extraction model": extraction_label,
-        "extraction provider": "not recorded",
+        "extraction provider": extraction_provider,
         "reasoning": "not recorded",
         "extraction max_tokens": "not recorded",
-        "embedder": "not recorded",
-        "embedding dims": "not recorded",
-        "answerer": meta.get("answerer_model") or "not recorded",
-        "judge": meta.get("judge_model") or "not recorded",
+        "embedder": "Qwen 600M via SageMaker [README L242]",
+        "embedding dims": "not stated; their sagemaker_embedder.py defaults to 768",
+        "vector store": "Qdrant [README L242]",
+        "answerer": meta.get("answerer_model") or "GPT-5 [README L242]",
+        "judge": meta.get("judge_model") or "GPT-5 [README L242]",
         "answerer/judge provider": meta.get("provider") or "not recorded",
         "top_k": meta.get("top_k") or "not recorded",
         "cutoffs": ", ".join(meta.get("top_k_cutoffs", [])) or "not recorded",
@@ -352,7 +359,10 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_d
     # ---------- 1. setup ----------
     lines.append("## 1. Setup — ours vs the two published runs")
     lines.append("")
-    lines.append("`not recorded` = the published run's file does not state it. The published columns "
+    lines.append("Published cells come from the run's **result file**; where it is silent, from "
+                 "Mem0's **benchmarks README L242** (same embedder / vector store / answerer / judge "
+                 "for all their LongMemEval OSS rows), cited in brackets. `not recorded` is kept only "
+                 "where neither the result file nor the README says anything. The published columns "
                  "share the same answerer/judge (GPT-5) as ours; they differ in the **extraction** model.")
     lines.append("")
     ours_map = {
@@ -362,6 +372,7 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_d
         "extraction max_tokens": manifest.get("extraction_max_tokens"),
         "embedder": manifest.get("embedder_label") or manifest.get("embedder"),
         "embedding dims": manifest.get("embedding_dims"),
+        "vector store": "Qdrant",
         "answerer": manifest.get("answerer_model"),
         "judge": manifest.get("judge_model"),
         "answerer/judge provider": manifest.get("provider"),
@@ -371,8 +382,13 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_d
         "dataset": f"{os.path.basename(manifest.get('dataset_path', '') or '')} "
                    f"(sha {str(manifest.get('dataset_sha256', ''))[:12]}…)",
     }
-    matched_col = pub_setup_col(pub_data, matched_extraction)
-    gpt5_col = pub_setup_col(gpt5_data, "gpt-5")
+    pub_meta_m = (pub_data or {}).get("metadata", {})
+    matched_provider = (
+        f"Parasail [{choice['file']}, project {pub_meta_m.get('project_name', '?')}]"
+        if choice["file"] == "longmemeval_parasail_120b.json" else "not recorded"
+    )
+    matched_col = pub_setup_col(pub_data, matched_extraction, matched_provider)
+    gpt5_col = pub_setup_col(gpt5_data, "gpt-5", "not recorded")
     col_h = (matched_label if choice["path"] else "matched (none)")
     lines.append(f"| field | ours | {col_h} | Mem0 gpt-5 run |")
     lines.append("|---|---|---|---|")

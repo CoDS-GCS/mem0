@@ -8,16 +8,17 @@ LongMemEval run, **60 questions** (`--per-type 10 --seed 42`). Compared like-wit
 
 ## 1. Setup — ours vs the two published runs
 
-`not recorded` = the published run's file does not state it. The published columns share the same answerer/judge (GPT-5) as ours; they differ in the **extraction** model.
+Published cells come from the run's **result file**; where it is silent, from Mem0's **benchmarks README L242** (same embedder / vector store / answerer / judge for all their LongMemEval OSS rows), cited in brackets. `not recorded` is kept only where neither the result file nor the README says anything. The published columns share the same answerer/judge (GPT-5) as ours; they differ in the **extraction** model.
 
 | field | ours | Mem0 published — parasail gpt-120b | Mem0 gpt-5 run |
 |---|---|---|---|
 | extraction model | gpt-oss-120b | parasail gpt-120b | gpt-5 |
-| extraction provider | Parasail via OpenRouter (allow_fallbacks=false) | not recorded | not recorded |
+| extraction provider | Parasail via OpenRouter (allow_fallbacks=false) | Parasail [longmemeval_parasail_120b.json, project longmem-gpt120b] | not recorded |
 | reasoning | default (mem0 sends none; GPT-OSS/OpenRouter default) | not recorded | not recorded |
 | extraction max_tokens | 16000 (raised; GPT-OSS reasoning counts against it) | not recorded | not recorded |
-| embedder | Qwen/Qwen3-Embedding-0.6B @ 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3 (768d) via real HuggingFace TEI | not recorded | not recorded |
-| embedding dims | 768 | not recorded | not recorded |
+| embedder | Qwen/Qwen3-Embedding-0.6B @ 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3 (768d) via real HuggingFace TEI | Qwen 600M via SageMaker [README L242] | Qwen 600M via SageMaker [README L242] |
+| embedding dims | 768 | not stated; their sagemaker_embedder.py defaults to 768 | not stated; their sagemaker_embedder.py defaults to 768 |
+| vector store | Qdrant | Qdrant [README L242] | Qdrant [README L242] |
 | answerer | gpt-5 | gpt-5 | gpt-5 |
 | judge | gpt-5 | gpt-5 | gpt-5 |
 | answerer/judge provider | openai | azure | openai |

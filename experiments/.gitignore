@@ -8,3 +8,6 @@ monitor/longmemeval.sqlite
 # Monitor run-trace index (incremental byte-offset cache over experiments/runs/*
 # traces, rebuilt on demand) — large and run-specific, never committed.
 monitor/cache/
+
+# Monitor server runtime log — stray output, not source.
+monitor/monitor.out
