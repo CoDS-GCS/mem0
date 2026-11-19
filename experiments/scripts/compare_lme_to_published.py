@@ -304,6 +304,62 @@ def large_artifacts(run_dir):
     return sorted(out)
 
 
+def memory_store_section(run_dir):
+    """Render a '## Memory store' section from <run>/store_facts.json, if present.
+
+    store_facts.json is written by run_longmemeval.sh at the end of a run (and can be
+    refreshed by re-querying Qdrant + the mem0_history volume). Returns [] if absent so
+    the READMEs degrade gracefully.
+    """
+    path = os.path.join(run_dir, "store_facts.json")
+    if not os.path.exists(path):
+        return []
+    try:
+        sf = load_json(path)
+    except Exception:
+        return []
+    q = sf.get("qdrant", {})
+    h = sf.get("history_db", {})
+    a = sf.get("adds", {})
+    tr = sf.get("trace", {})
+    L = ["## Memory store", "",
+         f"Measured {sf.get('measured_utc', '')}. " + (sf.get("note") or ""), ""]
+    if q:
+        L.append("**Qdrant** (collection dedicated to this run):")
+        L.append("")
+        L.append(f"- memories: **{_n(q.get('memories'))}** in `{q.get('memories_collection')}`"
+                 + (f" (the trace's add-responses summed to {_n(tr.get('memories_from_add_responses'))}; "
+                    f"+{_n(tr.get('qdrant_surplus_over_trace'))} surplus, see adds below)" if tr else ""))
+        et = q.get("entity_types") or {}
+        et_str = " · ".join(f"{k} {v:,}" for k, v in et.items())
+        uniq = (f", **{q['entities_unique_text']:,}** unique by text"
+                if q.get("entities_unique_text") is not None else "")
+        L.append(f"- entities: **{_n(q.get('entities'))}** points in `{q.get('entities_collection')}`"
+                 + uniq + (f" ({et_str})" if et_str else "")
+                 + ". Mem0 stores entities in a parallel `<collection>_entities` collection, each "
+                 "linking back to memory ids.")
+        L.append("")
+    if h:
+        L.append(f"**History DB** ({h.get('location', 'mem0_history volume')}):")
+        L.append("")
+        L.append(f"- `history` table: **{_n(h.get('history_table_rows_this_run'))}** rows for this run — "
+                 + (h.get("history_row_meaning") or ""))
+        L.append(f"- `messages` table: **{_n(h.get('messages_table_rows_this_run'))}** rows for this run — "
+                 + (h.get("stores_raw_messages") or ""))
+        L.append("")
+    if a:
+        L.append("**Add reconciliation** (calls vs stored):")
+        L.append("")
+        L.append(f"- {_n(a.get('add_calls'))} add calls, {_n(a.get('add_responses'))} with a traced "
+                 f"response, {_n(a.get('missing_responses'))} without: "
+                 f"**{_n(a.get('failed_llm_error'))} failed on an LLM error**, "
+                 f"{_n(a.get('no_llm_call'))} had no LLM call (failed early), and "
+                 f"{_n(a.get('successful_llm_untraced_response'))} had a successful LLM call but no "
+                 "recorded response (their vectors explain the Qdrant surplus above).")
+        L.append("")
+    return L
+
+
 def _n(x):
     return "—" if x is None else f"{x:,}"
 
@@ -545,6 +601,9 @@ def build_readme(run_dir, manifest, run_file, run_data, choice, pub_data, gpt5_d
             lines.append(f"| `{rel}` | {sz:,} bytes ({sz / 1e6:.1f} MB) | `{sha}` |")
         lines.append("")
 
+    # ---------- memory store (from store_facts.json, if present) ----------
+    lines += memory_store_section(run_dir)
+
     # ---------- observations ----------
     lines.append("## Observations")
     lines.append("")
@@ -722,6 +781,8 @@ def build_two_run_readme(run_dir, manifest, run_file, run_data, ref_dir):
         for rel, sz, sha in big:
             L.append(f"| `{rel}` | {sz:,} bytes ({sz / 1e6:.1f} MB) | `{sha}` |")
         L.append("")
+
+    L += memory_store_section(run_dir)
 
     L.append("## Observations")
     L.append("")

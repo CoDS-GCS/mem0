@@ -108,6 +108,24 @@ These stay on the machine; recorded here by path / size / sha256 so they can be 
 |---|---|---|
 | `mem0_trace.jsonl.gz` | 324,791,343 bytes (324.8 MB) | `303fdffab97d2f4daa3567dc3dba32a80cd824862473c402e986530fee3f762c` |
 
+## Memory store
+
+Measured 2026-11-19. From the live Qdrant store and the mem0_history docker volume after the run. The Qdrant collection is dedicated to this run; the history/messages tables live in the shared mem0_history volume and are filtered to this run.
+
+**Qdrant** (collection dedicated to this run):
+
+- memories: **67,108** in `lme_A_default_oss120b_60q_q768` (the trace's add-responses summed to 67,004; +104 surplus, see adds below)
+- entities: **214,457** points in `lme_A_default_oss120b_60q_q768_entities`, **154,065** unique by text (TOPIC 146,006 · PROPER 64,617 · QUOTED 3,496 · IDENTIFIER 338). Mem0 stores entities in a parallel `<collection>_entities` collection, each linking back to memory ids.
+
+**History DB** (mem0_history docker volume -> /app/history/history.db (SQLite)):
+
+- `history` table: **67,004** rows for this run — one ADD row per stored memory: (memory_id, old_memory=null, new_memory=<fact text>, event=ADD, created_at); no raw conversation
+- `messages` table: **600** rows for this run — messages table holds raw user/assistant text (role, content, session_scope=user_id) but only a bounded recent buffer (~10 rows per question), NOT the full haystack
+
+**Add reconciliation** (calls vs stored):
+
+- 15,101 add calls, 15,083 with a traced response, 18 without: **11 failed on an LLM error**, 3 had no LLM call (failed early), and 4 had a successful LLM call but no recorded response (their vectors explain the Qdrant surplus above).
+
 ## Observations
 
 <!-- written by hand -->

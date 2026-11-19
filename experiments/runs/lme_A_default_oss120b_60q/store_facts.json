@@ -1,0 +1,32 @@
+{
+  "measured_utc": "2026-11-19",
+  "note": "From the live Qdrant store and the mem0_history docker volume after the run. The Qdrant collection is dedicated to this run; the history/messages tables live in the shared mem0_history volume and are filtered to this run.",
+  "qdrant": {
+    "memories_collection": "lme_A_default_oss120b_60q_q768",
+    "memories": 67108,
+    "entities_collection": "lme_A_default_oss120b_60q_q768_entities",
+    "entities": 214457,
+    "entities_unique_text": 154065,
+    "entity_types": {"TOPIC": 146006, "PROPER": 64617, "QUOTED": 3496, "IDENTIFIER": 338}
+  },
+  "trace": {
+    "memories_from_add_responses": 67004,
+    "qdrant_surplus_over_trace": 104
+  },
+  "history_db": {
+    "location": "mem0_history docker volume -> /app/history/history.db (SQLite)",
+    "history_table_rows_this_run": 67004,
+    "history_row_meaning": "one ADD row per stored memory: (memory_id, old_memory=null, new_memory=<fact text>, event=ADD, created_at); no raw conversation",
+    "messages_table_rows_this_run": 600,
+    "messages_per_user_approx": 10,
+    "stores_raw_messages": "messages table holds raw user/assistant text (role, content, session_scope=user_id) but only a bounded recent buffer (~10 rows per question), NOT the full haystack"
+  },
+  "adds": {
+    "add_calls": 15101,
+    "add_responses": 15083,
+    "missing_responses": 18,
+    "failed_llm_error": 11,
+    "no_llm_call": 3,
+    "successful_llm_untraced_response": 4
+  }
+}
