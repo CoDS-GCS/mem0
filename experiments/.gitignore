@@ -11,3 +11,15 @@ monitor/cache/
 
 # Monitor server runtime log — stray output, not source.
 monitor/monitor.out
+
+# Smoke-test runs — kept on the VM, not worth tracking.
+runs/lme_check_*/
+
+# Per-run docker image listing — image names/tags/ids are recorded in each run's
+# manifest.json ("docker_images") instead.
+runs/*/docker_images.txt
+
+# Per-question predicted outputs are byte-for-byte duplicates of the unified results
+# JSON, and _progress_* are runtime markers; keep only the ingestion provenance.
+runs/*/predicted_*/*
+!runs/*/predicted_*/_ingestion_*.json
